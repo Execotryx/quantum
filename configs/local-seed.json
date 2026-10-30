@@ -1,0 +1,5 @@
+{
+  "role": "official_local",
+  "salt": "qcompile-public-development-salt-2026-10-30",
+  "distribution": "Unmodified pinned official verifier distribution; public local salt, independent of private Kaggle salts. Never reuse for confirmation."
+}

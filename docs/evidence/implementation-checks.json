@@ -1,0 +1,78 @@
+{
+  "checks": {
+    "contract_validation": "blocked, expected exit code 2",
+    "dependency_lock": "passed",
+    "ruff_format": "passed",
+    "ruff_lint": "passed",
+    "sdist_and_wheel_build": "passed"
+  },
+  "date": "2026-10-30",
+  "negative_diagnostic_note": "Executed during development on a dirty tree. Completed does not mean feasible. This is not an opportunity-screen experiment or official compatibility evidence.",
+  "negative_numerical_diagnostic": {
+    "completed": 1024,
+    "elapsed_seconds": 0.024510263000138366,
+    "expected": 1024,
+    "first": 1,
+    "full_domain": false,
+    "kind": "independent_numerical_bound",
+    "last": 1024,
+    "margin_histogram_eighths_of_tolerance": [
+      1024,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "minimum_margin_phase64_units": -9.223370937343148e+18,
+    "minimum_margin_turns": -0.4999999403953552,
+    "minimum_margin_units_2_pow_minus_88": -154742486463928460652838912,
+    "nonpositive_margin_count": 1024,
+    "official_compatible": false,
+    "worst_input": 1
+  },
+  "official_baseline": {
+    "blocker": "competition data API returned HTTP 401; reference/verifier/backend assets not acquired",
+    "status": "not_run"
+  },
+  "scope": "Independent checks and official notebook NPZ preflight only; no accepted quantum circuit or baseline.",
+  "source_files_sha256": {
+    "src/qcompile/__init__.py": "030946b770f73d1277c179e165d236c490466cd91dfe7c86c1ad4e36e261998d",
+    "src/qcompile/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/qcompile/artifacts.py": "35c751b395e20bb96fc26b941cb4e3c6bc6e4de7dad8033061ae99340df7cfc4",
+    "src/qcompile/assets.py": "a547eaa0d39d395e51cb0f1c8402621588634386a800b9b869feab2d58a0af17",
+    "src/qcompile/chemistry/__init__.py": "9eaf7f776bd7be930e856c1178c34efd19e1e288e8a25eb94417bebf27b52647",
+    "src/qcompile/chemistry/representation.py": "66031849c8610c475e7a41032525dcb3f8a7a020f167fc099467c41c73e3d76d",
+    "src/qcompile/chemistry/schema.py": "5d5eb4063836a2f7079de8bb97fb66f443d8d27219be0e125fa9bb7dbced3d5f",
+    "src/qcompile/cli.py": "45082adfb71b4a7c9fd621d79885673880b494458aed2e5b377a3424d890c986",
+    "src/qcompile/contract.py": "c7ab0ff458c6d9167b1d9ee80339f4a7bf8bba8bb5b27fbbd2794ee0133fb447",
+    "src/qcompile/dqi/__init__.py": "d05e013193dd913a480c35b9944ec2dcd649315561e35e5a1cb84586f7b2ab2a",
+    "src/qcompile/dqi/decoder.py": "f823e2640fc8193a1a963cc583a3f04fde12b438e5c046e98a479d339d194a04",
+    "src/qcompile/dqi/field.py": "8669c691af4649eb58fba39d55842f2dd9cbdd2bbe6eb32bdc6321cf6836beaa",
+    "src/qcompile/environment.py": "f0811014240f7af0316160db60f2485756449ed21842788cef2cbb865b0d5f9e",
+    "src/qcompile/errors.py": "865d6380b202877ef52cece83149ec0db40934957080ad490b20d0e4a6c5f5d3",
+    "src/qcompile/experiments.py": "6a142bc58ae629a1653d5279b09c19e1d6366d9d6303fb044f0c27cf9c36890c",
+    "src/qcompile/invsqrt/__init__.py": "3f46fb3bb61dee99da93fa7a824b57f01883cbaa7dee9f1bf646c4ea80277adb",
+    "src/qcompile/invsqrt/fixed.py": "9974b498ee3203d47d472ea0e95002cc22b746cd7df42b3ca288b93bf3565cfb",
+    "src/qcompile/io.py": "3e57d2157e53bcb123782f31ab1337b33fea3f5a7a467587fc919f4743c279d5",
+    "src/qcompile/official.py": "77fd5e4aaf11dace5ca613aa0a78ce457ddc6477b45f8acfeec571a27cb59c54",
+    "src/qcompile/reference/__init__.py": "f1a82567355803f88b95fdc0fa216cdb68a635ae393bf61305d2dd4927341881",
+    "src/qcompile/reference/field.py": "0a3cfd505b69a20742152728bf8290368f0ccd553433418da505b13844e30247",
+    "src/qcompile/reference/invsqrt.py": "1951c906e2eabed6dc33e5eea615a1f7d19ec33a7e2593ccaf7d50efaff03217",
+    "src/qcompile/reference/scoring.py": "1c95cd1f109772be8069a50e14628411b7da9bc52e1f3011b3c98b66e9fe4383",
+    "src/qcompile/release.py": "7f4d257081a7ed664ea920fbb289b8af32a8fd8a1945b76911a9b301fe05decc",
+    "src/qcompile/worker.py": "4bc91cb6e91235e8eb19cdbbd6ce873cbd68530b36ea5431445973cf436502d8"
+  },
+  "tests": {
+    "elapsed_seconds": 18.86,
+    "environment": "Linux x86_64, CPython 3.12.14; uv locked dependencies",
+    "errors": 0,
+    "exhaustive_control_inputs": 3133452,
+    "exhaustive_control_is_candidate_verification": false,
+    "failures": 0,
+    "skipped": 0,
+    "tests": 267
+  }
+}

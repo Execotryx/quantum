@@ -1,0 +1,385 @@
+{
+  "schema_version": 1,
+  "fields": {
+    "invsqrt.domain": {
+      "value": [
+        1,
+        3133452
+      ],
+      "status": "report_derived",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "invsqrt.input_bits": {
+      "value": 22,
+      "status": "report_derived",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "invsqrt.phase_accumulator_bits": {
+      "value": 64,
+      "status": "report_derived",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "invsqrt.trajectories_per_input": {
+      "value": 64,
+      "status": "report_derived",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "invsqrt.tolerance_relative_turns": {
+      "value": "2^-24",
+      "status": "report_derived",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "invsqrt.rotation_price": {
+      "value": "0.56*log2(n_rot/(pi*minimum_margin_turns))+5.3",
+      "status": "report_derived",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "invsqrt.accumulator_rounding": {
+      "value": null,
+      "status": "unresolved",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "invsqrt.circuit_rotation_encoding": {
+      "value": null,
+      "status": "unresolved",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "dqi.parameters": {
+      "value": {
+        "m": 4095,
+        "n": 70,
+        "b": 12,
+        "r": 2016
+      },
+      "status": "report_derived",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "dqi.modulus": {
+      "value": 4179,
+      "status": "report_derived",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "dqi.shots": {
+      "value": 102400,
+      "status": "report_derived",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "dqi.delta": {
+      "value": "2^-128",
+      "status": "report_derived",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "dqi.weight_distribution": {
+      "value": null,
+      "status": "unresolved",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "dqi.classical_binding": {
+      "value": null,
+      "status": "unresolved",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "chemistry.orbitals": {
+      "value": 76,
+      "status": "report_derived",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "chemistry.electrons": {
+      "value": 113,
+      "status": "report_derived",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "chemistry.residual_bound": {
+      "value": 0.02,
+      "status": "report_derived",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "chemistry.fixed_symmetry": {
+      "value": null,
+      "status": "unresolved",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "chemistry.energy_upper": {
+      "value": -22140.27335,
+      "status": "report_derived",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "chemistry.full_cost_accounting": {
+      "value": null,
+      "status": "unresolved",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "chemistry.angle_units": {
+      "value": null,
+      "status": "unresolved",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "chemistry.tree_root_and_order": {
+      "value": null,
+      "status": "unresolved",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "chemistry.one_electron_matching": {
+      "value": null,
+      "status": "unresolved",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "chemistry.unused_address_behavior": {
+      "value": null,
+      "status": "unresolved",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "runtime_limits": {
+      "value": null,
+      "status": "unresolved",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "baseline.acceptance": {
+      "value": null,
+      "status": "unresolved",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "baseline.component_profiles": {
+      "value": null,
+      "status": "unresolved",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "competition.open_status": {
+      "value": null,
+      "status": "unresolved",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "correctness.primitive_composition_evidence": {
+      "value": null,
+      "status": "unresolved",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md sections 3, 5, 6",
+      "official": null
+    },
+    "archive.encoding": {
+      "value": "canonical .kmb chosen; official permits .kmb or .kmx",
+      "status": "reconciled",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md section 3",
+      "official": {
+        "path": "vendor/metric/google-quantum-ai-metric.ipynb",
+        "sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+        "location": "read_circuit / generate_standard_submission",
+        "version": 10
+      }
+    },
+    "chemistry.npz_schema": {
+      "value": {
+        "U": [
+          "R",
+          "B",
+          "ORBITALS"
+        ],
+        "W": [
+          "R",
+          "B",
+          "C"
+        ],
+        "H2_I": [
+          "R",
+          "C"
+        ],
+        "H1_I": [],
+        "Hsym_lower": [
+          "ORBITALS*(ORBITALS+1)//2"
+        ],
+        "tree_edges": [
+          "ORBITALS-1",
+          2
+        ]
+      },
+      "status": "reconciled",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md section 3",
+      "official": {
+        "path": "vendor/metric/google-quantum-ai-metric.ipynb",
+        "sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+        "location": "generate_standard_submission / npz_spec; ORBITALS imported from unavailable verifier, concrete dimensions remain report-derived",
+        "version": 10
+      }
+    },
+    "preflight.allowed_instructions": {
+      "value": [
+        "X",
+        "CX",
+        "CCX",
+        "Z",
+        "CZ",
+        "CCZ",
+        "Z_POW",
+        "NEG",
+        "SWAP",
+        "CSWAP",
+        "R",
+        "HMR",
+        "BIT_INVERT",
+        "BIT_STORE0",
+        "BIT_STORE1",
+        "PUSH_CONDITION",
+        "POP_CONDITION",
+        "INFO_TAG",
+        "DEBUG_PRINT"
+      ],
+      "status": "reconciled",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md section 3",
+      "official": {
+        "path": "vendor/metric/google-quantum-ai-metric.ipynb",
+        "sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+        "location": "ALLOWED_INSTRUCTIONS",
+        "version": 10
+      }
+    },
+    "preflight.max_npz_bytes": {
+      "value": 67108864,
+      "status": "reconciled",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md section 3",
+      "official": {
+        "path": "vendor/metric/google-quantum-ai-metric.ipynb",
+        "sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+        "location": "MAX_NPZ_BYTES",
+        "version": 10
+      }
+    },
+    "preflight.max_qubit_or_bit_id": {
+      "value": 699050,
+      "status": "reconciled",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md section 3",
+      "official": {
+        "path": "vendor/metric/google-quantum-ai-metric.ipynb",
+        "sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+        "location": "MAX_QUBIT_OR_BIT_ID",
+        "version": 10
+      }
+    },
+    "release.coverage": {
+      "value": null,
+      "status": "unresolved",
+      "release_critical": true,
+      "report_location": "docs/implementation-plan.md section 10.2; chemistry address count depends on acquired factors",
+      "official": null
+    }
+  },
+  "sources": {
+    "metric": {
+      "path": "vendor/metric/google-quantum-ai-metric.ipynb",
+      "sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+      "version": 10,
+      "origin": "https://www.kaggle.com/api/v1/kernels/pull/metric/google-quantum-ai-metric",
+      "acquired_at": "2026-10-30",
+      "redistribution": "not redistributed; retrieve from official source"
+    }
+  },
+  "correctness_scope": {
+    "valid_inputs": "Report-defined only; official verifier reconciliation outstanding",
+    "initialization": null,
+    "measurements": null,
+    "composition": null,
+    "unused_addresses": null
+  },
+  "discrepancies": [
+    {
+      "id": "chemistry-baseline-validity",
+      "status": "open",
+      "release_critical": true
+    },
+    {
+      "id": "chemistry-full-cost-and-residual-conventions",
+      "status": "open",
+      "release_critical": true
+    },
+    {
+      "id": "dqi-sampler-and-classical-record",
+      "status": "open",
+      "release_critical": true
+    },
+    {
+      "id": "rotation-rounding-and-pricing",
+      "status": "open",
+      "release_critical": true
+    },
+    {
+      "id": "serialization-hash-semantics",
+      "status": "open",
+      "release_critical": true
+    },
+    {
+      "id": "runtime-and-submission-limits",
+      "status": "open",
+      "release_critical": true
+    },
+    {
+      "id": "official-reference-and-verifier-acquisition",
+      "status": "open",
+      "release_critical": true
+    },
+    {
+      "id": "coverage-counters-and-confirmation-protocol",
+      "status": "open",
+      "release_critical": true
+    }
+  ]
+}

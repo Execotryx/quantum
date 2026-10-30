@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "metric": {
+      "path": "vendor/metric/google-quantum-ai-metric.ipynb",
+      "sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+      "version": 10,
+      "origin": "https://www.kaggle.com/api/v1/kernels/pull/metric/google-quantum-ai-metric",
+      "acquired_at": "2026-10-30",
+      "redistribution": "not redistributed; retrieve from official source"
+    }
+  },
+  "acquisition_attempts": [
+    {
+      "role": "competition_data",
+      "origin": "https://www.kaggle.com/api/v1/competitions/data/list/google-verifiable-quantum-circuit-compilation",
+      "observed": "HTTP 401 Unauthorized",
+      "date": "2026-10-30"
+    }
+  ]
+}

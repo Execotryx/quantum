@@ -1,0 +1,13 @@
+{
+  "kind": "independent_numerical_diagnostic",
+  "hypothesis": "A deliberately crude constant initial model fails the engineering phase margin; exercise rejection before synthesis.",
+  "parameter_ranges": {"family": "constant polynomial", "coefficients": ["1/2"], "newton_steps": 0},
+  "correctness_conditions": "Every visited input has a strictly positive independent conservative phase margin.",
+  "objective": "Numerical diagnostic only; no official cost or improvement claim.",
+  "stop_rule": "One bounded model; preserve negative evidence; never synthesize this diagnostic.",
+  "budget": {"max_experiments": 1, "max_wall_seconds": 30, "max_compute_seconds": 30, "engineer_hours": 0.25},
+  "minimum_gain": 0,
+  "first": 1,
+  "last": 1024,
+  "model": {"format": {"width": 68, "fractional": 60, "signed": true, "rounding": "nearest_even", "overflow": "reject"}, "coefficients": [["1/2"]], "newton_steps": 0}
+}
