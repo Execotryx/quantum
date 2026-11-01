@@ -1,4 +1,21 @@
-# Implementation status — 1 November 2026
+# Implementation status — 2 November 2026
+
+**Current result: step 2 is complete. The clean-source A,A,B full-reference
+campaign passed and its versioned evidence bundle is frozen and verified.**
+
+All three runs completed 200,540,928 inverse-square-root, 102,400 DQI and 254,464
+chemistry shots each. Same-salt costs match exactly; official local normalization
+is 1.0 for A1/A2 and 0.9999998235773496 for B1. Stage/resource profiles and measured
+headroom budgets are retained, along with diagnostics for excluded interrupted
+attempts. Two independently built 91-member bundles are byte-identical; all member
+hashes and a clean source-bundle restore passed. The Linux suite passed 291 tests.
+
+See the [completion report](baseline-completion-02-11-2026-03-02-06.md) and
+[machine-readable audit](evidence/step2-baseline-campaign-20261102.json).
+Primitive/negative-control reviews and opportunity decisions remain prerequisites
+for optimization. No optimized artifact or remote acceptance is claimed.
+
+## Step 1 completion — 1 November 2026
 
 **Current result: official contract ready and full original reference baseline
 accepted locally. All 35 fields are reconciled; contract validation has zero
