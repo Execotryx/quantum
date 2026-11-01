@@ -128,5 +128,8 @@ return/exception identities, dirty committed-source rejection, stale/incomplete
 coverage/role/identity rejection and archive mutation/path controls. Full suite,
 The Linux suite passed 291 tests. Pyright reported zero errors, lint and format
 checks passed, and both OpenSpec changes passed strict validation before commit.
-The three full-strength measured runs and final frozen-bundle audit follow that
-commit; implementation/test fixtures are never substituted for those runs.
+The three full-strength measured runs and final frozen-bundle audit subsequently
+passed from source commit `4ff6c1e`. See the
+[completion report](baseline-completion-02-11-2026-03-02-06.md) for actual counters,
+profiles, budgets and bundle identity. Implementation/test fixtures were not
+substituted for those runs.

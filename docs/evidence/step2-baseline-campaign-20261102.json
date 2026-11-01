@@ -1,0 +1,1069 @@
+{
+  "analysis": {
+    "cost_observed_ranges": {
+      "dfthcsos": {
+        "max": 3355599588.3155375,
+        "min": 3355599588.3155375,
+        "relative_range": 0.0
+      },
+      "dqi": {
+        "max": 24439474367740.598,
+        "min": 24439461432712.35,
+        "relative_range": 5.292681379950601e-07
+      },
+      "invsqrt": {
+        "max": 2076774.233715282,
+        "min": 2076774.233715282,
+        "relative_range": 0.0
+      }
+    },
+    "cpu_observed_seconds": {
+      "max": 1863.0700000000002,
+      "min": 1284.0200000000004
+    },
+    "normalization": [
+      {
+        "details": {
+          "dfthcsos": {
+            "cost": 3355599588.3155375,
+            "improvement_over_baseline": 1.0,
+            "seconds": 83.96175573000005
+          },
+          "dqi": {
+            "cost": 24439461432712.35,
+            "improvement_over_baseline": 1.0,
+            "seconds": 308.2820633519999
+          },
+          "invsqrt": {
+            "cost": 2076774.233715282,
+            "improvement_over_baseline": 1.0,
+            "seconds": 648.938117907
+          }
+        },
+        "scope": "exact official score function; local A1 reference costs, no private-split baseline",
+        "score": 1.0
+      },
+      {
+        "details": {
+          "dfthcsos": {
+            "cost": 3355599588.3155375,
+            "improvement_over_baseline": 1.0,
+            "seconds": 63.225188146000164
+          },
+          "dqi": {
+            "cost": 24439461432712.35,
+            "improvement_over_baseline": 1.0,
+            "seconds": 198.09502928200027
+          },
+          "invsqrt": {
+            "cost": 2076774.233715282,
+            "improvement_over_baseline": 1.0,
+            "seconds": 735.840690111
+          }
+        },
+        "scope": "exact official score function; local A1 reference costs, no private-split baseline",
+        "score": 1.0
+      },
+      {
+        "details": {
+          "dfthcsos": {
+            "cost": 3355599588.3155375,
+            "improvement_over_baseline": 1.0,
+            "seconds": 59.58105970100041
+          },
+          "dqi": {
+            "cost": 24439474367740.598,
+            "improvement_over_baseline": 0.9999994707321421,
+            "seconds": 177.2406081529998
+          },
+          "invsqrt": {
+            "cost": 2076774.233715282,
+            "improvement_over_baseline": 1.0,
+            "seconds": 461.53538352600026
+          }
+        },
+        "scope": "exact official score function; local A1 reference costs, no private-split baseline",
+        "score": 0.9999998235773496
+      }
+    ],
+    "planning_budget": {
+      "cpu_cores": 2,
+      "cpu_seconds_per_full_run": 3807,
+      "disk_bytes_per_retained_run": 1820788012,
+      "memory_reservation_bytes": 12088289280,
+      "policy": "observed maxima times preregistered headroom; not official limits, measured minima, or statistical quantiles",
+      "wall_seconds_per_full_run": 2292
+    },
+    "same_salt_costs_identical": true,
+    "sampled_pss_observed_bytes": {
+      "max": 7576582144,
+      "min": 7509057536
+    },
+    "scope": "three serial observations; order/cache effects are recorded, not controlled; sampled memory can miss short peaks",
+    "throughput": {
+      "A1": {
+        "dfthcsos": {
+          "simulation_and_checks_seconds": 48.122461535,
+          "verified_shots_per_second": 5287.842555911765
+        },
+        "dqi": {
+          "simulation_and_checks_seconds": 212.924675055,
+          "verified_shots_per_second": 480.9212458516108
+        },
+        "invsqrt": {
+          "simulation_and_checks_seconds": 646.475068125,
+          "verified_shots_per_second": 310206.7471552115
+        }
+      },
+      "A2": {
+        "dfthcsos": {
+          "simulation_and_checks_seconds": 35.111849338,
+          "verified_shots_per_second": 7247.240028585019
+        },
+        "dqi": {
+          "simulation_and_checks_seconds": 147.621764742,
+          "verified_shots_per_second": 693.6646515435273
+        },
+        "invsqrt": {
+          "simulation_and_checks_seconds": 733.184716217,
+          "verified_shots_per_second": 273520.33336800506
+        }
+      },
+      "B1": {
+        "dfthcsos": {
+          "simulation_and_checks_seconds": 34.022971509,
+          "verified_shots_per_second": 7479.182114727614
+        },
+        "dqi": {
+          "simulation_and_checks_seconds": 141.368323052,
+          "verified_shots_per_second": 724.3489757060629
+        },
+        "invsqrt": {
+          "simulation_and_checks_seconds": 459.618021099,
+          "verified_shots_per_second": 436320.8551320146
+        }
+      }
+    },
+    "wall_observed_seconds": {
+      "max": 1145.505685665,
+      "min": 800.774686745
+    }
+  },
+  "artifact_hashes": {
+    "dfthcsos/angle_k_0.kmb": "7bfb3983accc6ff97d6ab41a88deae924f1d1c97cf30e60879d0bff5688a8e25",
+    "dfthcsos/angle_k_1.kmb": "a04b6d0d57ce851b123af265066aaab2ab33353ea049d26acd534727466d72b6",
+    "dfthcsos/angle_k_2.kmb": "5c1b8987bc3fa1a4b8607e470f8c8f1392c22e7a7dbcb228f0ce9ec986e18058",
+    "dfthcsos/angle_k_3.kmb": "16ac67cdcaf3e2c6abdd98c4138ff1ae8a56cfc4ae15622bcdb3d3a3ba1e22cf",
+    "dfthcsos/angle_k_4.kmb": "d21cdd4c7e94196654aab15ebcabfe10ce8d343151a5e8dc3672e76684b6628d",
+    "dfthcsos/angle_k_5.kmb": "63b8d4cba36955e6098321f3b2ef3e34401dd276fa629b2e490d043b1743880b",
+    "dfthcsos/angle_k_6.kmb": "5bf740428e661d035fda860142578f421969e35e0df2e4e024fbf01a7340b378",
+    "dfthcsos/angle_k_7.kmb": "606009582111a22bd549b795c8d115ac8bbeb124bc8da24a80380eca6d34163d",
+    "dfthcsos/angle_k_8.kmb": "57c7cc51f5922fff6e95d76e1f723d4c2d029a241da643b95684d6322157a8fe",
+    "dfthcsos/angle_k_9.kmb": "22cbe2828988ff954fc07fd971a25e6bc04a02c302bf2cc642e4c3535daaad65",
+    "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+    "dqi.kmb": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+    "invsqrt.kmb": "e2bf8eb64350a4460a271fc7f1d591ef125b1e276377e9a0f64b96ab3ca321e1"
+  },
+  "backend_hash": "064b3f583a668ab10bbcdaef6b238e202c66a2d1a9cc164e581d1431798553f7",
+  "campaign_directory": "/mnt/e/sources/python/quantum/runs/baseline-campaign-v1-retry3",
+  "campaign_sha256": "54e1d281fbed132496e38f6a14a955623366d76d5b14db5c50b0c99bddb6f85f",
+  "complete": true,
+  "completion_checks": {
+    "all_bundle_members_rehashed": true,
+    "all_required_coverage": true,
+    "alternate_salt_observations": true,
+    "bundled_source_clean_restore": true,
+    "clean_locked_full_acceptance": true,
+    "independent_bundle_bytes_identical": true,
+    "measured_headroom_budgets": true,
+    "official_normalization": true,
+    "raw_files_rehashed": true,
+    "same_salt_exact_costs": true,
+    "separate_stage_and_resource_profiles": true
+  },
+  "configuration": {
+    "assets_root": "/mnt/e/sources/python/quantum/vendor",
+    "cache_policy": "No cache clearing; observe and report actual order/cache effects.",
+    "cpu_cores": 2,
+    "planning_disk_multiplier": 2.0,
+    "planning_memory_multiplier": 1.25,
+    "planning_wall_multiplier": 2.0,
+    "runs": [
+      {
+        "id": "A1",
+        "salt": "qcompile-public-development-salt-2026-10-30"
+      },
+      {
+        "id": "A2",
+        "salt": "qcompile-public-development-salt-2026-10-30"
+      },
+      {
+        "id": "B1",
+        "salt": "qcompile-public-baseline-salt-B-2026-11-02"
+      }
+    ],
+    "sample_interval_seconds": 0.5,
+    "schema_version": 1,
+    "seed_role": "official_local",
+    "timeout_seconds_per_run": 3600,
+    "version": "baseline-v1-20261102"
+  },
+  "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+  "cpu_affinity": [
+    0,
+    1
+  ],
+  "created_at_utc": "2026-11-01T22:01:13.411009+00:00",
+  "dependency_lock_sha256": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+  "environment": {
+    "cpu_count": 16,
+    "dependencies": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scipy": "1.17.0"
+    },
+    "dependency_lock_sha256": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+    "dirty": false,
+    "numpy_backend": {
+      "Build Dependencies": {
+        "blas": {
+          "detection method": "pkgconfig",
+          "found": true,
+          "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+          "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+          "name": "scipy-openblas",
+          "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+          "pc file directory": "/project/.openblas",
+          "version": "0.3.30"
+        },
+        "lapack": {
+          "detection method": "pkgconfig",
+          "found": true,
+          "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+          "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+          "name": "scipy-openblas",
+          "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+          "pc file directory": "/project/.openblas",
+          "version": "0.3.30"
+        }
+      },
+      "Compilers": {
+        "c": {
+          "commands": "cc",
+          "linker": "ld.bfd",
+          "name": "gcc",
+          "version": "14.2.1"
+        },
+        "c++": {
+          "commands": "c++",
+          "linker": "ld.bfd",
+          "name": "gcc",
+          "version": "14.2.1"
+        },
+        "cython": {
+          "commands": "cython",
+          "linker": "cython",
+          "name": "cython",
+          "version": "3.2.1"
+        }
+      },
+      "Machine Information": {
+        "build": {
+          "cpu": "x86_64",
+          "endian": "little",
+          "family": "x86_64",
+          "system": "linux"
+        },
+        "host": {
+          "cpu": "x86_64",
+          "endian": "little",
+          "family": "x86_64",
+          "system": "linux"
+        }
+      },
+      "Python Information": {
+        "path": "/tmp/build-env-w_be3r90/bin/python",
+        "version": "3.13"
+      },
+      "SIMD Extensions": {
+        "baseline": [
+          "SSE",
+          "SSE2",
+          "SSE3"
+        ],
+        "found": [
+          "SSSE3",
+          "SSE41",
+          "POPCNT",
+          "SSE42",
+          "AVX",
+          "F16C",
+          "FMA3",
+          "AVX2"
+        ],
+        "not found": [
+          "AVX512F",
+          "AVX512CD",
+          "AVX512_KNL",
+          "AVX512_KNM",
+          "AVX512_SKX",
+          "AVX512_CLX",
+          "AVX512_CNL",
+          "AVX512_ICL",
+          "AVX512_SPR"
+        ]
+      }
+    },
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "processor": "",
+    "python": "3.13.15 (main, Aug 14 2026, 15:34:59) [Clang 22.1.3 ]",
+    "source_revision": "4ff6c1e6080053e66459e08441a2777002c02cfa",
+    "thread_settings": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "frozen_bundle": {
+    "bundle": "/mnt/e/sources/python/quantum/releases/baseline-v1/baseline-v1.zip",
+    "bytes": 130899391,
+    "clean_source_restore_verified": true,
+    "independent_build_identical": true,
+    "members": 91,
+    "sha256": "d9e58a24e40117a2024920547204a636ce90247a06c75a7b5398b17141760e53",
+    "status": "frozen",
+    "verified_all_members": true,
+    "version": "baseline-v1-20261102"
+  },
+  "host_cpuinfo_first_processor": "processor\t: 0\nvendor_id\t: GenuineIntel\ncpu family\t: 6\nmodel\t\t: 154\nmodel name\t: 12th Gen Intel(R) Core(TM) i7-12650H\nstepping\t: 3\nmicrocode\t: 0xffffffff\ncpu MHz\t\t: 2688.009\ncache size\t: 24576 KB\nphysical id\t: 0\nsiblings\t: 16\ncore id\t\t: 0\ncpu cores\t: 8\napicid\t\t: 0\ninitial apicid\t: 0\nfpu\t\t: yes\nfpu_exception\t: yes\ncpuid level\t: 28\nwp\t\t: yes\nflags\t\t: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni vnmi umip waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize ibt flush_l1d arch_capabilities\nvmx flags\t: vnmi invvpid ept_x_only ept_ad ept_1gb tsc_offset vtpr ept vpid unrestricted_guest ept_mode_based_exec tsc_scaling usr_wait_pause\nbugs\t\t: spectre_v1 spectre_v2 spec_store_bypass swapgs retbleed eibrs_pbrsb rfds bhi spectre_v2_user\nbogomips\t: 5376.01\nclflush size\t: 64\ncache_alignment\t: 64\naddress sizes\t: 39 bits physical, 48 bits virtual\npower management:",
+  "host_meminfo": "MemTotal:        7937696 kB\nMemFree:         5725532 kB\nMemAvailable:    7177336 kB\nBuffers:           68444 kB\nCached:          1511384 kB\nSwapCached:            0 kB\nActive:           319336 kB\nInactive:        1493924 kB\nActive(anon):       3052 kB\nInactive(anon):   233988 kB\nActive(file):     316284 kB\nInactive(file):  1259936 kB\nUnevictable:           0 kB\nMlocked:               0 kB\nSwapTotal:      10485756 kB\nSwapFree:       10485756 kB\nDirty:              5112 kB\nWriteback:             0 kB\nAnonPages:        234104 kB\nMapped:           241756 kB\nShmem:              3660 kB\nKReclaimable:      30320 kB\nSlab:             109380 kB\nSReclaimable:      30320 kB\nSUnreclaim:        79060 kB\nKernelStack:        6000 kB\nPageTables:         6024 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:    14454604 kB\nCommitted_AS:    1729344 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       40628 kB\nVmallocChunk:          0 kB\nPercpu:             7552 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:      8192 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nBalloon:               0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:       78848 kB\nDirectMap2M:     7065600 kB\nDirectMap1G:     9437184 kB\n",
+  "interrupted_attempts_excluded": [
+    {
+      "directory": "baseline-campaign-v1",
+      "kernel_log_sha256": "0a10b52551b6f3bea27116a9bdc05281a2935dd166fecff13f44805d11562ee2",
+      "record": {
+        "completed_benchmark_receipts": [
+          "dfthcsos",
+          "invsqrt"
+        ],
+        "completed_campaign_runs": [],
+        "kernel_evidence": "kernel-after-interruption.log",
+        "launcher_exit_code": 1,
+        "launcher_session": 96213,
+        "not_accepted": true,
+        "reason": "Linux kernel confirmed global out-of-memory kill of the verifier; WSL distro shutdown followed",
+        "recovery": "retain failed attempt; add temporary disk-backed swap and start a separate complete A,A,B campaign",
+        "status": "incomplete"
+      },
+      "record_sha256": "96eba22a16da33bc5233319f498ae70107147a3ceebad6ad3171c5d00c18c39a"
+    },
+    {
+      "directory": "baseline-campaign-v1-retry1",
+      "kernel_log_sha256": "33ed4f0fa4fcf89c19e762a6f335162a8fdae0a38fc8af383305a9b5865d0114",
+      "record": {
+        "completed_campaign_runs": [],
+        "kernel_evidence": "kernel-after-interruption.log",
+        "launcher_session": 53994,
+        "new_oom_observed": false,
+        "not_accepted": true,
+        "reason": "Launcher exited 1 and the WSL distro process namespace restarted during low-memory reference copying; exact lifecycle cause unconfirmed",
+        "recovery": "retain attempt; launch ordinary-user foreground TTY with a live heartbeat monitor",
+        "status": "incomplete"
+      },
+      "record_sha256": "1594a02a534e4905edfbad5945c6f87c7e88eb41faf1c8c800351da893a20b3d"
+    },
+    {
+      "directory": "baseline-campaign-v1-retry2",
+      "kernel_log_sha256": "99c48532befa6669ccbb76aecac596e0b0e383275b0b28e57d46abdd9dabd2df",
+      "record": {
+        "completed_campaign_runs": [],
+        "kernel_evidence": "kernel-after-interruption.log",
+        "launcher_session": 45120,
+        "not_accepted": true,
+        "reason": "WSL init.scope remained deactivating with Result=oom-kill and memory.events oom_kill=1 across distro namespace starts after the original OOM",
+        "recovery": "Confirmed both registered distros stopped; reset idle WSL VM to clear stale cgroup OOM state, then reactivate temporary swap",
+        "status": "incomplete"
+      },
+      "record_sha256": "ed1d647c7a5879db9b50be8fc707948a9bfda51872dc8b4fa27cc8e331bdb36a"
+    }
+  ],
+  "kind": "completed_step2_reference_baseline_campaign",
+  "limitations": [
+    "Three serial local observations do not establish statistical tail bounds.",
+    "Order/cache effects remain observed rather than controlled.",
+    "Memory is sampled process-tree PSS plus proportional swap; OS overhead is separate.",
+    "Storage counters are WSL process counters, not physical host-disk measurements.",
+    "The local baseline bundle is not a competition submission or private-split result.",
+    "Backend absolute paths require explicit review if relocating the bundle."
+  ],
+  "original_archive_sha256": "908ed2e587ca4ed500ddac7b6da4b473af3c8779c983d5022de620b357791a30",
+  "registration_sha256": "93d33380b40ba01df63fc5e23673a2d21ac55929c4b1cf49d367a6ba4bee83fc",
+  "runs": [
+    {
+      "complete": true,
+      "costs": {
+        "dfthcsos": 3355599588.3155375,
+        "dqi": 24439461432712.35,
+        "invsqrt": 2076774.233715282
+      },
+      "coverage": {
+        "dfthcsos": {
+          "completed": 254464,
+          "expected": 254464
+        },
+        "dqi": {
+          "completed": 102400,
+          "expected": 102400
+        },
+        "invsqrt": {
+          "completed": 200540928,
+          "expected": 200540928
+        }
+      },
+      "execution": {
+        "cpu_seconds": 1863.0700000000002,
+        "elapsed_seconds": 1145.505685665,
+        "exit_code": 0,
+        "resources": {
+          "attempted_memory_reads": 7282,
+          "by_benchmark": {
+            "all": {
+              "peak_pss_bytes": 1027323904,
+              "samples": 153
+            },
+            "dfthcsos": {
+              "peak_pss_bytes": 2092673024,
+              "samples": 163
+            },
+            "dqi": {
+              "peak_pss_bytes": 7509057536,
+              "samples": 581
+            },
+            "invsqrt": {
+              "peak_pss_bytes": 1531773952,
+              "samples": 1184
+            },
+            "unattributed": {
+              "peak_pss_bytes": 192060416,
+              "samples": 31
+            }
+          },
+          "by_stage": {
+            "adapter_final_integrity": {
+              "peak_pss_bytes": 17364992,
+              "samples": 24
+            },
+            "adapter_input_integrity": {
+              "peak_pss_bytes": 80094208,
+              "samples": 17
+            },
+            "hashing:dqi:_circuit_sha256": {
+              "peak_pss_bytes": 3608588288,
+              "samples": 31
+            },
+            "metric_notebook_loading": {
+              "peak_pss_bytes": 174132224,
+              "samples": 9
+            },
+            "official_metric": {
+              "peak_pss_bytes": 1027323904,
+              "samples": 1
+            },
+            "parse:angle_k_3.kmb": {
+              "peak_pss_bytes": 1070105600,
+              "samples": 1
+            },
+            "parse:dqi.kmb": {
+              "peak_pss_bytes": 1064915968,
+              "samples": 20
+            },
+            "parse:submission.npz": {
+              "peak_pss_bytes": 1085355008,
+              "samples": 1
+            },
+            "reference_artifact_copy": {
+              "peak_pss_bytes": 174136320,
+              "samples": 69
+            },
+            "reference_loading:dfthcsos:load_inputs": {
+              "peak_pss_bytes": 1188901888,
+              "samples": 40
+            },
+            "reference_manifest_hashing": {
+              "peak_pss_bytes": 80182272,
+              "samples": 16
+            },
+            "scoring:dfthcsos:evaluate_words": {
+              "peak_pss_bytes": 2092673024,
+              "samples": 27
+            },
+            "simulation:dfthcsos:recover_words_from_circuits": {
+              "peak_pss_bytes": 1983473664,
+              "samples": 93
+            },
+            "simulation:dqi:_run_parallel": {
+              "peak_pss_bytes": 1383773184,
+              "samples": 385
+            },
+            "simulation:invsqrt:_run_parallel": {
+              "peak_pss_bytes": 1257252864,
+              "samples": 1180
+            },
+            "startup_or_unattributed": {
+              "peak_pss_bytes": 192060416,
+              "samples": 31
+            },
+            "targets:invsqrt:reference_values": {
+              "peak_pss_bytes": 1531773952,
+              "samples": 4
+            },
+            "verify:dfthcsos": {
+              "peak_pss_bytes": 943570944,
+              "samples": 1
+            },
+            "verify:dqi": {
+              "peak_pss_bytes": 7509057536,
+              "samples": 145
+            },
+            "worker_input_integrity": {
+              "peak_pss_bytes": 146275328,
+              "samples": 17
+            }
+          },
+          "interval_seconds": 0.5,
+          "limitations": "sampled peaks can miss short events; processes can exit during a sample; WSL storage counters may not include host I/O",
+          "memory_scope": "sampled live CLI process and descendants; PSS apportions shared pages; summed RSS double-counts sharing",
+          "missing_memory_reads": 0,
+          "observed_mean_interval_seconds": 0.5425699836504027,
+          "peak_process_count": 4,
+          "peak_pss_bytes": 7509057536,
+          "peak_pss_plus_swap_bytes": 9670631424,
+          "peak_summed_rss_bytes": 7511101440,
+          "peak_swap_pss_bytes": 2161573888,
+          "profiler_cpu_seconds": 40.248422733000005,
+          "root_identity": {
+            "parent": 617,
+            "pid": 740,
+            "start_ticks": 11058
+          },
+          "samples": 2112
+        }
+      },
+      "id": "A1",
+      "metric_seconds": {
+        "dfthcsos": 83.96175573000005,
+        "dqi": 308.2820633519999,
+        "invsqrt": 648.938117907
+      },
+      "raw_files_rehashed": 38,
+      "retained_disk_bytes": 910394006,
+      "salt": "qcompile-public-development-salt-2026-10-30",
+      "source_clean": true,
+      "stage_categories": {
+        "copying": {
+          "events": 1,
+          "self_cpu_seconds_exclusive": 2.1075072759999998,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 35.330036681
+        },
+        "hashing": {
+          "events": 7,
+          "self_cpu_seconds_exclusive": 20.995828774000007,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 53.536349656
+        },
+        "orchestration": {
+          "events": 1,
+          "self_cpu_seconds_exclusive": 0.2098695679999878,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 1.0467338200000995
+        },
+        "parsing": {
+          "events": 14,
+          "self_cpu_seconds_exclusive": 1.9089944549999993,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 14.764941499999999
+        },
+        "reference_loading": {
+          "events": 1,
+          "self_cpu_seconds_exclusive": 12.446403223999994,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 21.347279887
+        },
+        "scoring": {
+          "events": 5,
+          "self_cpu_seconds_exclusive": 13.812636276999992,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 14.006286341
+        },
+        "simulation": {
+          "events": 3,
+          "self_cpu_seconds_exclusive": 52.749809129999996,
+          "waited_children_cpu_seconds_exclusive": 1674.3899999999999,
+          "wall_seconds_exclusive": 907.5222047149999
+        },
+        "targets": {
+          "events": 1,
+          "self_cpu_seconds_exclusive": 2.243571309000001,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 2.257448572
+        },
+        "verification": {
+          "events": 3,
+          "self_cpu_seconds_exclusive": 77.29146206700003,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 79.80841330799997
+        }
+      },
+      "status": "passed",
+      "verifier_order": [
+        "invsqrt",
+        "dqi",
+        "dfthcsos"
+      ]
+    },
+    {
+      "complete": true,
+      "costs": {
+        "dfthcsos": 3355599588.3155375,
+        "dqi": 24439461432712.35,
+        "invsqrt": 2076774.233715282
+      },
+      "coverage": {
+        "dfthcsos": {
+          "completed": 254464,
+          "expected": 254464
+        },
+        "dqi": {
+          "completed": 102400,
+          "expected": 102400
+        },
+        "invsqrt": {
+          "completed": 200540928,
+          "expected": 200540928
+        }
+      },
+      "execution": {
+        "cpu_seconds": 1840.6499999999999,
+        "elapsed_seconds": 1112.8672025889998,
+        "exit_code": 0,
+        "resources": {
+          "attempted_memory_reads": 7186,
+          "by_benchmark": {
+            "all": {
+              "peak_pss_bytes": 1023210496,
+              "samples": 167
+            },
+            "dfthcsos": {
+              "peak_pss_bytes": 2088181760,
+              "samples": 123
+            },
+            "dqi": {
+              "peak_pss_bytes": 7525087232,
+              "samples": 374
+            },
+            "invsqrt": {
+              "peak_pss_bytes": 1563354112,
+              "samples": 1331
+            },
+            "unattributed": {
+              "peak_pss_bytes": 189948928,
+              "samples": 40
+            }
+          },
+          "by_stage": {
+            "adapter_final_integrity": {
+              "peak_pss_bytes": 17991680,
+              "samples": 25
+            },
+            "adapter_input_integrity": {
+              "peak_pss_bytes": 98862080,
+              "samples": 20
+            },
+            "hashing:dqi:_circuit_sha256": {
+              "peak_pss_bytes": 3497769984,
+              "samples": 18
+            },
+            "metric_notebook_loading": {
+              "peak_pss_bytes": 187362304,
+              "samples": 9
+            },
+            "official_metric": {
+              "peak_pss_bytes": 1023210496,
+              "samples": 2
+            },
+            "parse:angle_k_1.kmb": {
+              "peak_pss_bytes": 1080427520,
+              "samples": 1
+            },
+            "parse:angle_k_7.kmb": {
+              "peak_pss_bytes": 1092183040,
+              "samples": 1
+            },
+            "parse:dqi.kmb": {
+              "peak_pss_bytes": 1078428672,
+              "samples": 18
+            },
+            "reference_artifact_copy": {
+              "peak_pss_bytes": 187567104,
+              "samples": 73
+            },
+            "reference_loading:dfthcsos:load_inputs": {
+              "peak_pss_bytes": 1181920256,
+              "samples": 35
+            },
+            "reference_manifest_hashing": {
+              "peak_pss_bytes": 98828288,
+              "samples": 16
+            },
+            "scoring:dfthcsos:evaluate_words": {
+              "peak_pss_bytes": 2088181760,
+              "samples": 18
+            },
+            "scoring:dqi:clopper_pearson_upper_bound": {
+              "peak_pss_bytes": 1122659328,
+              "samples": 1
+            },
+            "simulation:dfthcsos:recover_words_from_circuits": {
+              "peak_pss_bytes": 1979068416,
+              "samples": 68
+            },
+            "simulation:dqi:_run_parallel": {
+              "peak_pss_bytes": 1337544704,
+              "samples": 273
+            },
+            "simulation:invsqrt:_run_parallel": {
+              "peak_pss_bytes": 1269636096,
+              "samples": 1326
+            },
+            "startup_or_unattributed": {
+              "peak_pss_bytes": 189948928,
+              "samples": 40
+            },
+            "targets:invsqrt:reference_values": {
+              "peak_pss_bytes": 1563354112,
+              "samples": 5
+            },
+            "verify:dqi": {
+              "peak_pss_bytes": 7525087232,
+              "samples": 64
+            },
+            "worker_input_integrity": {
+              "peak_pss_bytes": 159989760,
+              "samples": 22
+            }
+          },
+          "interval_seconds": 0.5,
+          "limitations": "sampled peaks can miss short events; processes can exit during a sample; WSL storage counters may not include host I/O",
+          "memory_scope": "sampled live CLI process and descendants; PSS apportions shared pages; summed RSS double-counts sharing",
+          "missing_memory_reads": 0,
+          "observed_mean_interval_seconds": 0.5470315677944937,
+          "peak_process_count": 4,
+          "peak_pss_bytes": 7525087232,
+          "peak_pss_plus_swap_bytes": 9603837952,
+          "peak_summed_rss_bytes": 7527260160,
+          "peak_swap_pss_bytes": 2185273344,
+          "profiler_cpu_seconds": 38.433407165,
+          "root_identity": {
+            "parent": 617,
+            "pid": 818,
+            "start_ticks": 126734
+          },
+          "samples": 2035
+        }
+      },
+      "id": "A2",
+      "metric_seconds": {
+        "dfthcsos": 63.225188146000164,
+        "dqi": 198.09502928200027,
+        "invsqrt": 735.840690111
+      },
+      "raw_files_rehashed": 38,
+      "retained_disk_bytes": 910374241,
+      "salt": "qcompile-public-development-salt-2026-10-30",
+      "source_clean": true,
+      "stage_categories": {
+        "copying": {
+          "events": 1,
+          "self_cpu_seconds_exclusive": 2.498384885,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 38.089856398
+        },
+        "hashing": {
+          "events": 7,
+          "self_cpu_seconds_exclusive": 15.408438439000005,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 52.318349251
+        },
+        "orchestration": {
+          "events": 1,
+          "self_cpu_seconds_exclusive": 0.15208877500000995,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 0.9674101750000546
+        },
+        "parsing": {
+          "events": 14,
+          "self_cpu_seconds_exclusive": 2.3240863560000005,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 14.726511148
+        },
+        "reference_loading": {
+          "events": 1,
+          "self_cpu_seconds_exclusive": 9.701548045000003,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 18.186753305
+        },
+        "scoring": {
+          "events": 5,
+          "self_cpu_seconds_exclusive": 9.351295134000003,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 9.581791270999998
+        },
+        "simulation": {
+          "events": 3,
+          "self_cpu_seconds_exclusive": 40.26388853,
+          "waited_children_cpu_seconds_exclusive": 1716.73,
+          "wall_seconds_exclusive": 915.9183302969999
+        },
+        "targets": {
+          "events": 1,
+          "self_cpu_seconds_exclusive": 2.363410442,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 2.387548907
+        },
+        "verification": {
+          "events": 3,
+          "self_cpu_seconds_exclusive": 36.71695333999999,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 41.024006953000054
+        }
+      },
+      "status": "passed",
+      "verifier_order": [
+        "invsqrt",
+        "dqi",
+        "dfthcsos"
+      ]
+    },
+    {
+      "complete": true,
+      "costs": {
+        "dfthcsos": 3355599588.3155375,
+        "dqi": 24439474367740.598,
+        "invsqrt": 2076774.233715282
+      },
+      "coverage": {
+        "dfthcsos": {
+          "completed": 254464,
+          "expected": 254464
+        },
+        "dqi": {
+          "completed": 102400,
+          "expected": 102400
+        },
+        "invsqrt": {
+          "completed": 200540928,
+          "expected": 200540928
+        }
+      },
+      "execution": {
+        "cpu_seconds": 1284.0200000000004,
+        "elapsed_seconds": 800.774686745,
+        "exit_code": 0,
+        "resources": {
+          "attempted_memory_reads": 5146,
+          "by_benchmark": {
+            "all": {
+              "peak_pss_bytes": 1082388480,
+              "samples": 151
+            },
+            "dfthcsos": {
+              "peak_pss_bytes": 2243620864,
+              "samples": 115
+            },
+            "dqi": {
+              "peak_pss_bytes": 7576582144,
+              "samples": 340
+            },
+            "invsqrt": {
+              "peak_pss_bytes": 1495105536,
+              "samples": 855
+            },
+            "unattributed": {
+              "peak_pss_bytes": 1436086272,
+              "samples": 37
+            }
+          },
+          "by_stage": {
+            "adapter_final_integrity": {
+              "peak_pss_bytes": 17490944,
+              "samples": 29
+            },
+            "adapter_input_integrity": {
+              "peak_pss_bytes": 98626560,
+              "samples": 19
+            },
+            "hashing:dqi:_circuit_sha256": {
+              "peak_pss_bytes": 3352010752,
+              "samples": 8
+            },
+            "metric_notebook_loading": {
+              "peak_pss_bytes": 187318272,
+              "samples": 6
+            },
+            "official_metric": {
+              "peak_pss_bytes": 1082388480,
+              "samples": 2
+            },
+            "parse:dqi.kmb": {
+              "peak_pss_bytes": 1078878208,
+              "samples": 12
+            },
+            "parse:submission.npz": {
+              "peak_pss_bytes": 1097437184,
+              "samples": 1
+            },
+            "reference_artifact_copy": {
+              "peak_pss_bytes": 188002304,
+              "samples": 66
+            },
+            "reference_loading:dfthcsos:load_inputs": {
+              "peak_pss_bytes": 1356480512,
+              "samples": 30
+            },
+            "reference_manifest_hashing": {
+              "peak_pss_bytes": 98589696,
+              "samples": 12
+            },
+            "scoring:dfthcsos:evaluate_words": {
+              "peak_pss_bytes": 2243620864,
+              "samples": 18
+            },
+            "simulation:dfthcsos:recover_words_from_circuits": {
+              "peak_pss_bytes": 2136260608,
+              "samples": 66
+            },
+            "simulation:dqi:_run_parallel": {
+              "peak_pss_bytes": 1409455104,
+              "samples": 262
+            },
+            "simulation:invsqrt:_run_parallel": {
+              "peak_pss_bytes": 1270032384,
+              "samples": 852
+            },
+            "startup_or_unattributed": {
+              "peak_pss_bytes": 1436086272,
+              "samples": 37
+            },
+            "targets:invsqrt:reference_values": {
+              "peak_pss_bytes": 1495105536,
+              "samples": 3
+            },
+            "verify:dqi": {
+              "peak_pss_bytes": 7576582144,
+              "samples": 58
+            },
+            "worker_input_integrity": {
+              "peak_pss_bytes": 160186368,
+              "samples": 17
+            }
+          },
+          "interval_seconds": 0.5,
+          "limitations": "sampled peaks can miss short events; processes can exit during a sample; WSL storage counters may not include host I/O",
+          "memory_scope": "sampled live CLI process and descendants; PSS apportions shared pages; summed RSS double-counts sharing",
+          "missing_memory_reads": 4,
+          "observed_mean_interval_seconds": 0.5348483539245157,
+          "peak_process_count": 4,
+          "peak_pss_bytes": 7576582144,
+          "peak_pss_plus_swap_bytes": 9657823232,
+          "peak_summed_rss_bytes": 7578939392,
+          "peak_swap_pss_bytes": 2136293376,
+          "profiler_cpu_seconds": 20.450856532,
+          "root_identity": {
+            "parent": 617,
+            "pid": 862,
+            "start_ticks": 238748
+          },
+          "samples": 1498
+        }
+      },
+      "id": "B1",
+      "metric_seconds": {
+        "dfthcsos": 59.58105970100041,
+        "dqi": 177.2406081529998,
+        "invsqrt": 461.53538352600026
+      },
+      "raw_files_rehashed": 38,
+      "retained_disk_bytes": 910205003,
+      "salt": "qcompile-public-baseline-salt-B-2026-11-02",
+      "source_clean": true,
+      "stage_categories": {
+        "copying": {
+          "events": 1,
+          "self_cpu_seconds_exclusive": 1.847791446,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 33.930596284
+        },
+        "hashing": {
+          "events": 7,
+          "self_cpu_seconds_exclusive": 9.280797325999991,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 43.817776800000004
+        },
+        "orchestration": {
+          "events": 1,
+          "self_cpu_seconds_exclusive": 0.16930735599999025,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 1.0841103850000309
+        },
+        "parsing": {
+          "events": 14,
+          "self_cpu_seconds_exclusive": 1.5615944050000001,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 9.480127762
+        },
+        "reference_loading": {
+          "events": 1,
+          "self_cpu_seconds_exclusive": 9.257600278,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 15.767677863
+        },
+        "scoring": {
+          "events": 5,
+          "self_cpu_seconds_exclusive": 9.545880050999989,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 9.625463631999999
+        },
+        "simulation": {
+          "events": 3,
+          "self_cpu_seconds_exclusive": 37.50143150700001,
+          "waited_children_cpu_seconds_exclusive": 1177.6599999999999,
+          "wall_seconds_exclusive": 635.00931566
+        },
+        "targets": {
+          "events": 1,
+          "self_cpu_seconds_exclusive": 1.7925197810000002,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 1.804707514
+        },
+        "verification": {
+          "events": 3,
+          "self_cpu_seconds_exclusive": 31.31879228900002,
+          "waited_children_cpu_seconds_exclusive": 0.0,
+          "wall_seconds_exclusive": 31.783234133000057
+        }
+      },
+      "status": "passed",
+      "verifier_order": [
+        "invsqrt",
+        "dfthcsos",
+        "dqi"
+      ]
+    }
+  ],
+  "schema_version": 1,
+  "source_bundle_sha256": "5b5c07481a9e398181afffce3e26732fcb58d79b22d0926408b9ec1ae656ea27",
+  "source_revision": "4ff6c1e6080053e66459e08441a2777002c02cfa",
+  "source_tree": "546cf5644423c492e7fadf84bd9a19400b181274",
+  "status": "passed"
+}

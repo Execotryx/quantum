@@ -4,12 +4,15 @@ A Python toolchain implementing the independently executable parts of the
 [implementation plan](docs/implementation-plan.md) for Google's Verifiable Quantum
 Circuit Compilation competition.
 
-**Current status: official contract ready; full reference baseline accepted locally.
+**Current status: official contract ready; step-2 reference campaign completed and frozen.
 No optimized submission or remote acceptance is claimed.**
 All 34 competition files are available locally and byte-checked. The supplied
 backend runs in Ubuntu WSL with Python 3.13. See the
 [contract reconciliation](docs/contract-reconciliation-01-11-2026-22-50-00.md)
 for source evidence and the completed baseline measurements.
+The [step-2 completion report](docs/baseline-completion-02-11-2026-03-02-06.md)
+records three clean-source full runs, exact same-salt costs, salt variation,
+stage/resource profiles, planning budgets and the verified frozen-bundle identity.
 
 The original competition-data API attempt returned HTTP 401. Manual acquisition
 resolved that access blocker. The pinned v10 metric has now accepted the original
@@ -52,6 +55,7 @@ candidate circuit.
 | `dqi` / `reference.field` | Independent table/polynomial field backends; classical BM and EEA locator controls; syndrome recovery and variable-mask parity |
 | `chemistry` | Bounded NPZ schema preflight, ordered rooted trees, parameterized angle reconstruction, XOR batching/reversal, streamed shifted residual norms and workspace accounting |
 | `official` / `worker` | Subprocess calls to the actual pinned metric; raw diagnostics, actual verifier returns, local seed roles, source/environment identity and timeout handling |
+| `campaign` / `profiling` | Preregistered clean-source A,A,B baseline runs, nested stage and external process-tree measurements, measured budgets and verified frozen evidence bundles |
 | `experiments` | Candidate states, immutable artifact identities/provenance, bounded diagnostic registration, opportunity decisions and one-use confirmation history |
 | `artifacts` / `release` | Deterministic NPZ/ZIP, bounded safe extraction, two independent recipe builds, extracted-archive verification and guarded local certification |
 
