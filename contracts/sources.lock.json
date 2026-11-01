@@ -1,13 +1,105 @@
 {
   "schema_version": 1,
   "sources": {
+    "rules": {
+      "path": "vendor/pages/rules.md",
+      "sha256": "7989f8f3a3de9600f163df4174d1b8ce16ff3c9ec14d7007ad1a6d437c3f81ba",
+      "location": "complete acquired file",
+      "origin": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/rules",
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed"
+    },
+    "data": {
+      "path": "vendor/competition_data.zip",
+      "sha256": "908ed2e587ca4ed500ddac7b6da4b473af3c8779c983d5022de620b357791a30",
+      "location": "complete acquired file",
+      "origin": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/data",
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed"
+    },
+    "evaluation": {
+      "path": "vendor/pages/evaluation.md",
+      "sha256": "43495e31f97ceda4fc881908e17f97d8049b9ad6931eed7e27a30f252d271b63",
+      "location": "complete acquired file",
+      "origin": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/overview/evaluation",
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed"
+    },
     "metric": {
       "path": "vendor/metric/google-quantum-ai-metric.ipynb",
       "sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
-      "version": 10,
+      "location": "complete acquired file",
       "origin": "https://www.kaggle.com/api/v1/kernels/pull/metric/google-quantum-ai-metric",
-      "acquired_at": "2026-10-30",
-      "redistribution": "not redistributed; retrieve from official source"
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed",
+      "version": 10
+    },
+    "starter_kit": {
+      "path": "vendor/starter_kit/pyproject.toml",
+      "sha256": "4442ba8a2e538d6414cc5ced3049e7d5a70314013d4eb3ba4d4893f5f4f1b401",
+      "location": "complete acquired file",
+      "origin": "https://www.kaggle.com/datasets/sohier/verifiable-circuit-compilation-starter-kit/versions/4",
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed",
+      "version": 4,
+      "scope": "Exact v4 pyproject.toml only; no claim that the entire 464 MB kit is acquired or installed",
+      "qualtran_revision": "c58703d00b01c346d3e77d3913cf2d6e9e556be3"
+    },
+    "reference": {
+      "path": "vendor/acquisition-checks.json",
+      "sha256": "df3b2940c5d6164bd30fd9f7509d99d4a4e1c1a7fa3568e26b952b271c25417c",
+      "location": "complete acquired file",
+      "origin": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/data#sample_submission",
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed"
+    },
+    "paper": {
+      "path": "vendor/official/verifiable_circuit_compilation.pdf",
+      "sha256": "1aa5e545e641338a7a40d9f689e78d2805766848fa650f0d40da839fbab40618",
+      "location": "complete acquired file",
+      "origin": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/data#verifiable_circuit_compilation.pdf",
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed"
+    },
+    "backend": {
+      "path": "vendor/official/kickmix/kickmix.so",
+      "sha256": "c66b3216c4029e0cdfd09054306aa0feadf53ab2f50c1164e37f752874e5005e",
+      "location": "complete acquired file",
+      "origin": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/data#kickmix",
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed"
+    },
+    "verifiers": {
+      "path": "vendor/backend.json",
+      "sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+      "location": "complete acquired file",
+      "origin": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/data#verifiers",
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed"
+    },
+    "data_description": {
+      "path": "vendor/pages/data-description.md",
+      "sha256": "688dea1c756d20131843d0d745d9aea42b9b16a14ffa35b15d5c6a0586e8b2fa",
+      "location": "complete acquired file",
+      "origin": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/data",
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed"
+    },
+    "correctness_context": {
+      "path": "vendor/pages/domain-context.md",
+      "sha256": "a120d33bea1e56120647b26ec97557dc98eeb67f1b57bf8b69eed63252b910b1",
+      "location": "complete acquired file",
+      "origin": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/overview/domain-context",
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed"
+    },
+    "baseline_execution": {
+      "path": "docs/evidence/official-baseline-20261101.json",
+      "sha256": "1fbc229f8bf97c731e73cc4db91759736d6a47d515661249ccc8add8516625b6",
+      "origin": "local full-strength execution of https://www.kaggle.com/code/metric/google-quantum-ai-metric version 10",
+      "acquired_at": "2026-11-01",
+      "location": "complete local reference execution receipt",
+      "redistribution": "project-generated local execution evidence only"
     }
   },
   "acquisition_attempts": [
@@ -16,6 +108,12 @@
       "origin": "https://www.kaggle.com/api/v1/competitions/data/list/google-verifiable-quantum-circuit-compilation",
       "observed": "HTTP 401 Unauthorized",
       "date": "2026-10-30"
+    },
+    {
+      "role": "competition_data",
+      "origin": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/data",
+      "observed": "user-downloaded archive; 34 extracted files byte-identical; SHA-256 inventory preserved",
+      "date": "2026-11-01"
     }
   ]
 }

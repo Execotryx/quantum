@@ -72,9 +72,13 @@ def test_release_cannot_use_incomplete_or_smoke_verification(artifact_set):
         certify_release(release, report, contract, supporting_evidence={})
 
 
-def test_cli_blocked_contract_exits_nonzero_and_help_is_real(project_root):
+def test_cli_blocked_contract_exits_nonzero_and_help_is_real(project_root, tmp_path):
+    # A fixed unresolved fixture keeps this regression valid after the real G0 contract resolves.
+    contracts = tmp_path / "contracts"
+    contracts.mkdir()
+    (contracts / "contract.json").write_text(json.dumps({"schema_version": 1, "fields": {}}))
     run = subprocess.run(
-        [sys.executable, "-m", "qcompile", "contract", "validate"],
+        [sys.executable, "-m", "qcompile", "--root", str(tmp_path), "contract", "validate"],
         cwd=project_root,
         capture_output=True,
         text=True,
@@ -105,7 +109,7 @@ def test_release_certificate_requires_actual_counters_and_cost_improvement(artif
         "artifact_hashes": hashes(artifact_set),
         "contract_hash": contract.hash,
     }
-    supporting = {
+    supporting: dict[str, object] = {
         key: {"test_only": "synthetic receipt"}
         for key in (
             "cost_breakdown",

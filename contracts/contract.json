@@ -6,211 +6,669 @@
         1,
         3133452
       ],
-      "status": "report_derived",
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/invsqrt/verify_submission_invsqrt.py",
+        "sha256": "ddef520dec6b68d1cf0a6f328ddd36d79eb84570b9192cf3f7acaf073f06733a",
+        "location": "ProblemSpecInvSqrt.for_n_p(10); N_P=10"
+      },
+      "evidence_kind": "official_source_inspection",
+      "supplementary_official": [
+        {
+          "path": "vendor/metric/google-quantum-ai-metric.ipynb",
+          "sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+          "location": "generate_standard_submission: ProblemSpecInvSqrt.for_n_p(10)"
+        }
+      ]
     },
     "invsqrt.input_bits": {
       "value": 22,
-      "status": "report_derived",
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/invsqrt/verify_submission_invsqrt.py",
+        "sha256": "ddef520dec6b68d1cf0a6f328ddd36d79eb84570b9192cf3f7acaf073f06733a",
+        "location": "ProblemSpecInvSqrt.for_n_p: width=2*n_p+2; validate_registers"
+      },
+      "evidence_kind": "official_source_inspection"
     },
     "invsqrt.phase_accumulator_bits": {
       "value": 64,
-      "status": "report_derived",
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/invsqrt/verify_submission_invsqrt.py",
+        "sha256": "ddef520dec6b68d1cf0a6f328ddd36d79eb84570b9192cf3f7acaf073f06733a",
+        "location": "MASK64; reference_values; half_turns_to_units; verify.theta"
+      },
+      "evidence_kind": "official_source_inspection"
     },
     "invsqrt.trajectories_per_input": {
       "value": 64,
-      "status": "report_derived",
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/invsqrt/verify_submission_invsqrt.py",
+        "sha256": "ddef520dec6b68d1cf0a6f328ddd36d79eb84570b9192cf3f7acaf073f06733a",
+        "location": "DEFAULT_SHOTS_PER_X; ProblemSpecInvSqrt.for_n_p; sample_shots"
+      },
+      "evidence_kind": "official_source_inspection"
     },
     "invsqrt.tolerance_relative_turns": {
       "value": "2^-24",
-      "status": "report_derived",
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/invsqrt/verify_submission_invsqrt.py",
+        "sha256": "ddef520dec6b68d1cf0a6f328ddd36d79eb84570b9192cf3f7acaf073f06733a",
+        "location": "ProblemSpecInvSqrt.for_n_p.precision_bits; reference_values tolerance flooring"
+      },
+      "evidence_kind": "official_source_inspection"
     },
     "invsqrt.rotation_price": {
-      "value": "0.56*log2(n_rot/(pi*minimum_margin_turns))+5.3",
-      "status": "report_derived",
+      "value": {
+        "fine_rotation_T": "0.56*log2(1/eps)+5.3",
+        "eps": "pi*minimum_margin_phase64_units/2^64/mean_fine_rotations",
+        "zero_fine_rotations": "eps=None; no synthesis charge",
+        "C": "mean_toffoli_like+(mean_T_like+mean_fine_rotations*fine_rotation_T)/4",
+        "score": "circuit.num_qubits*C",
+        "aggregation": "unrounded floating-point means over actual executed shots",
+        "Q": "circuit.num_qubits only; the carried spec.system_qubits value is not added by this verifier"
+      },
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/invsqrt/verify_submission_invsqrt.py",
+        "sha256": "ddef520dec6b68d1cf0a6f328ddd36d79eb84570b9192cf3f7acaf073f06733a",
+        "location": "z_pow_class; rotation_t_count; verify cost block"
+      },
+      "evidence_kind": "official_source_inspection"
     },
     "invsqrt.accumulator_rounding": {
-      "value": null,
-      "status": "unresolved",
+      "value": {
+        "target": "r=isqrt((beta.numerator^2<<130)//(beta.denominator^2*x)); sign(beta)*((r+1)>>1) modulo 2^64",
+        "tracked_phase": "(((numerator<<64)//denominator+1)>>1) modulo 2^64 for simulator phase in half-turns",
+        "rounding": "nearest; exact half ties toward positive infinity for tracked rational phase; target rounds magnitude then applies sign",
+        "tolerance": "min(r>>(precision_bits+1),2^63) for default positive shift",
+        "acceptance": "absolute signed circular uint64 difference <= floored tolerance; fine rotations additionally require strictly positive remaining margin"
+      },
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/invsqrt/verify_submission_invsqrt.py",
+        "sha256": "ddef520dec6b68d1cf0a6f328ddd36d79eb84570b9192cf3f7acaf073f06733a",
+        "location": "reference_values; half_turns_to_units; verify error, used, bad, min_margin"
+      },
+      "evidence_kind": "official_source_inspection"
     },
     "invsqrt.circuit_rotation_encoding": {
-      "value": null,
-      "status": "unresolved",
+      "value": {
+        "Z_POW_exponent": "rational half-turns; tracked phase returned by Simulator.read_shot_phase is in half-turns",
+        "classification": "multiples of 1/2 are Clifford; remaining multiples of 1/4 are T; all others fine rotations",
+        "registers": "exactly x: 22 distinct little-endian qubits; x restored; all other qubits start/end zero"
+      },
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/invsqrt/verify_submission_invsqrt.py",
+        "sha256": "ddef520dec6b68d1cf0a6f328ddd36d79eb84570b9192cf3f7acaf073f06733a",
+        "location": "half_turns_to_units; z_pow_class; validate_registers; verify"
+      },
+      "evidence_kind": "official_source_inspection"
     },
     "dqi.parameters": {
       "value": {
         "m": 4095,
         "n": 70,
         "b": 12,
-        "r": 2016
+        "r": 2016,
+        "max_errors": 35,
+        "code": "RS(4095,4025)"
       },
-      "status": "report_derived",
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/dqi/verify_submission_dqi.py",
+        "sha256": "f14274bc0943fb9769ddb01131be6063191a15009fe1caf1d4bdd9fd25194e65",
+        "location": "DEFAULT_M; DEFAULT_N; DEFAULT_DEGREE; DEFAULT_R; ProblemSpecDQI.benchmark_instance"
+      },
+      "evidence_kind": "official_source_inspection"
     },
     "dqi.modulus": {
       "value": 4179,
-      "status": "report_derived",
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/kickmix/kickmix.so",
+        "sha256": "c66b3216c4029e0cdfd09054306aa0feadf53ab2f50c1164e37f752874e5005e",
+        "location": "GF2Field(12).modulus=0x1053; primitive_element=2"
+      },
+      "evidence_kind": "actual_official_backend_introspection_and_exhaustive_field_differential",
+      "supplementary_official": [
+        {
+          "path": "docs/evidence/contract-differential-20261101.json",
+          "sha256": "2b771fb17844514b7728b7d3cb67773babfdf838995c00300b44b3690b667f43",
+          "location": "field: 4096 squares and 4095 inverses compared to actual backend"
+        }
+      ]
     },
     "dqi.shots": {
       "value": 102400,
-      "status": "report_derived",
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/dqi/verify_submission_dqi.py",
+        "sha256": "f14274bc0943fb9769ddb01131be6063191a15009fe1caf1d4bdd9fd25194e65",
+        "location": "DEFAULT_NUM_SHOTS; verify._validate_inputs"
+      },
+      "evidence_kind": "official_source_inspection",
+      "supplementary_official": [
+        {
+          "path": "vendor/metric/google-quantum-ai-metric.ipynb",
+          "sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+          "location": "generate_standard_submission: full-strength shot_divisor=1"
+        }
+      ]
     },
     "dqi.delta": {
       "value": "2^-128",
-      "status": "report_derived",
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/dqi/verify_submission_dqi.py",
+        "sha256": "f14274bc0943fb9769ddb01131be6063191a15009fe1caf1d4bdd9fd25194e65",
+        "location": "DEFAULT_LOG2_DELTA; clopper_pearson_upper_bound; verify"
+      },
+      "evidence_kind": "official_source_inspection"
     },
     "dqi.weight_distribution": {
-      "value": null,
-      "status": "unresolved",
+      "value": {
+        "weights": "principal eigenvector of tridiagonal A, normalized; probabilities w_k^2, k=0..35",
+        "diagonal": "A[k,k]=k*(q-2*r)/sqrt(r*(q-r))",
+        "off_diagonal": "A[k-1,k]=sqrt(k*(m-k+1))",
+        "positions": "uniform distinct positions in 0..4094",
+        "nonzero_values": "uniform 1..4095",
+        "masks": "independent uniform M_j in 0..4095",
+        "rng": "per-batch NumPy default_rng; SeedSequence(base_seed,pool_size=8) derives separate sampling and simulation seeds",
+        "batch_size": 256
+      },
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/dqi/verify_submission_dqi.py",
+        "sha256": "f14274bc0943fb9769ddb01131be6063191a15009fe1caf1d4bdd9fd25194e65",
+        "location": "optimal_dqi_weights; sample_shots; verify seeds/tasks"
+      },
+      "evidence_kind": "official_source_inspection"
     },
     "dqi.classical_binding": {
-      "value": null,
-      "status": "unresolved",
+      "value": {
+        "syndromes": "S_i = XOR_j e_j*alpha^((i+1)*j), i=0..69",
+        "phase": "(-1)^(sum_j popcount(e_j & M_j))",
+        "registers": "S0..S69: distinct little-endian 12-qubit registers; E0..E4094: disjoint little-endian 12-classical-bit registers, supplied with M",
+        "failure_union": "value_errors=syndrome_changed OR scratch_nonzero; phase_errors=wrong_phase AND NOT value_error; total=value_errors+phase_errors",
+        "classical_record": "verifier supplies masks; does not assert restoration of E registers; input mask still determines the expected phase",
+        "forbidden": "Z_POW",
+        "score": "R(eps_plus)*Q^2*mean_toffoli_like; eps_plus<1/16; one-sided CP upper bound at delta=2^-128",
+        "Q": "circuit.num_qubits only; classical bits are reported separately and are not included in Q^2"
+      },
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/dqi/verify_submission_dqi.py",
+        "sha256": "f14274bc0943fb9769ddb01131be6063191a15009fe1caf1d4bdd9fd25194e65",
+        "location": "validate_registers; sample_shots; verify.run_batch; clopper_pearson_upper_bound; repetition_overhead"
+      },
+      "evidence_kind": "official_source_inspection"
     },
     "chemistry.orbitals": {
       "value": 76,
-      "status": "report_derived",
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/dfthcsos/scoreinfra/reference.py",
+        "sha256": "a2d5a63191d655729e29f0fde1e85fe4630bf896a91a63bb894d8d7daf71ed39",
+        "location": "ORBITALS; SYSTEM"
+      },
+      "evidence_kind": "official_source_inspection"
     },
     "chemistry.electrons": {
       "value": 113,
-      "status": "report_derived",
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/dfthcsos/scoreinfra/reference.py",
+        "sha256": "a2d5a63191d655729e29f0fde1e85fe4630bf896a91a63bb894d8d7daf71ed39",
+        "location": "ELECTRONS; SYSTEM"
+      },
+      "evidence_kind": "official_source_inspection"
     },
     "chemistry.residual_bound": {
-      "value": 0.02,
-      "status": "report_derived",
+      "value": {
+        "error_1_max": 0.02,
+        "error_2_max": 0.02,
+        "units": "Hartree; inclusive <= bounds",
+        "Lambda_floor": 49.0,
+        "E_gap_floor": 3.914898,
+        "floors": "strict >, equality rejected",
+        "gap_domain_executable": "0<E_gap<=2*Lambda; finite lambda_eff and independent high-precision radicand check required",
+        "angle_qubit_cap": 128,
+        "metric_upper_endpoint": "The verifier domain permits E_gap=2*Lambda, but lambda_eff=0 then produces cost=0, rejected by metric.generate_standard_submission; overall positive-cost acceptance therefore excludes equality."
+      },
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/dfthcsos/verify.py",
+        "sha256": "0775be7a528922367caebe9e4d051d6199811f1aefeaa4b793eaaa4621b8ec9d",
+        "location": "ERROR_1_THRESHOLD; ERROR_2_THRESHOLD; LAMBDA_FLOOR; E_GAP_FLOOR; passes_accuracy; QUBIT_CAP"
+      },
+      "evidence_kind": "official_source_inspection",
+      "supplementary_official": [
+        {
+          "path": "vendor/official/verifiers/dfthcsos/scoreinfra/dfthc_math.py",
+          "sha256": "ae82898d47a7a86b96378fb906e0f8a9f46003065cf19c7c09952a123b5b5af8",
+          "location": "evaluate_dfthc_vectors.gap_in_domain; _exact_lambda_eff"
+        }
+      ]
     },
     "chemistry.fixed_symmetry": {
-      "value": null,
-      "status": "unresolved",
+      "value": {
+        "policy": "replace submitted H1_I and Hsym_lower with packaged fixed shifts before deriving S and beta_1",
+        "S": "symmetric_from_lower rounds to float32 then cast float64",
+        "beta_1": "H1_I - trace(S)/2",
+        "fixed_shifts_sha256": "7b7facf63fe35a9d9d3d00787ffdb700c863fa845fe4724d7f7c54778151cd87",
+        "reference_tei": "FCIDUMP two-electron coefficients rounded to float32 before tensor expansion"
+      },
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/dfthcsos/verify.py",
+        "sha256": "0775be7a528922367caebe9e4d051d6199811f1aefeaa4b793eaaa4621b8ec9d",
+        "location": "load_inputs; native_inputs"
+      },
+      "evidence_kind": "official_source_inspection",
+      "supplementary_official": [
+        {
+          "path": "vendor/official/verifiers/dfthcsos/scoreinfra/reference.py",
+          "sha256": "a2d5a63191d655729e29f0fde1e85fe4630bf896a91a63bb894d8d7daf71ed39",
+          "location": "load_fixed_shifts; load_reference"
+        },
+        {
+          "path": "vendor/official/verifiers/dfthcsos/scoreinfra/dfthc_math.py",
+          "sha256": "ae82898d47a7a86b96378fb906e0f8a9f46003065cf19c7c09952a123b5b5af8",
+          "location": "symmetric_from_lower"
+        }
+      ]
     },
     "chemistry.energy_upper": {
       "value": -22140.27335,
-      "status": "report_derived",
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/dfthcsos/scoreinfra/reference.py",
+        "sha256": "a2d5a63191d655729e29f0fde1e85fe4630bf896a91a63bb894d8d7daf71ed39",
+        "location": "UPPER_ENERGY (Hartree)"
+      },
+      "evidence_kind": "official_source_inspection"
     },
     "chemistry.full_cost_accounting": {
-      "value": null,
-      "status": "unresolved",
+      "value": {
+        "score": "lambda_eff*T_total*Q_total",
+        "lambda_eff": "sqrt(E_gap*(2*Lambda-E_gap)); no independent lambda_eff floor",
+        "T_total": "mean ANGLES forward+reverse Toffoli-like + outer_state_prep + inner_state_prep + 2*(N-1)*(2*brot-1)",
+        "Q_total": "outer_persistent+inner_persistent+J*brot+max(outer_temp,inner_temp,angle_temp)",
+        "angle_temp": "max_k circuit.num_qubits - selection_width - J*brot",
+        "model": "SpinFreeData_V1(R,B,C,N,chi=10,beta=brot)",
+        "width_cap": "each ANGLE circuit <=128; full Q_total may exceed 128",
+        "raw_Lambda": "sum(abs(h1_prime eigenvalues)) + 1/4*sum_rc(abs(H2_I)+sum_b abs(W))^2",
+        "E_SOS": "ecore-electrons*beta_1-(sum(abs(eigenvalues))-sum(eigenvalues))-0.5*sum(W_native^2)",
+        "W_native": "H2_I-sum_b W",
+        "model_defaults": {
+          "optimize_qubits": true,
+          "outer_size": "N+R*C",
+          "inner_word_width": "ceil(log2(B))+chi+1",
+          "source_model_corrections": "inner k2 is decremented one per step; exact B=2^k2 blocks allowed; +1 word bit used in both Toffoli and qubit models"
+        }
+      },
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/dfthcsos/verify.py",
+        "sha256": "0775be7a528922367caebe9e4d051d6199811f1aefeaa4b793eaaa4621b8ec9d",
+        "location": "angles_costs; heuristic_costs; resource_costs; score_from_metrics"
+      },
+      "evidence_kind": "official_source_inspection",
+      "supplementary_official": [
+        {
+          "path": "vendor/official/verifiers/dfthcsos/scoreinfra/dfthc_math.py",
+          "sha256": "ae82898d47a7a86b96378fb906e0f8a9f46003065cf19c7c09952a123b5b5af8",
+          "location": "lambda_h2; evaluate_dfthc_vectors"
+        },
+        {
+          "path": "vendor/official/verifiers/dfthcsos/scoreinfra/costs_prepare.py",
+          "sha256": "7f1e190c42fc5325f3e6689fbbef51f95b0cb12f1c828cda92b6c088e72206da",
+          "location": "SpinFreeData_V1"
+        }
+      ]
     },
     "chemistry.angle_units": {
-      "value": null,
-      "status": "unresolved",
+      "value": {
+        "word": "unsigned integer 0..2^brot-1; little-endian",
+        "brot": "1..63",
+        "theta_over_pi": "word/2^(brot-1)",
+        "theta_radians": "pi*word/2^(brot-1)",
+        "vector_rows": "first N one-body rows, then R*B two-body rows",
+        "oracle": "K=ceil((N-1)/J) sequential XOR delta circuits; zero padding to J words; reverse traversal clears words"
+      },
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/dfthcsos/scoreinfra/dfthc_math.py",
+        "sha256": "ae82898d47a7a86b96378fb906e0f8a9f46003065cf19c7c09952a123b5b5af8",
+        "location": "evaluate_dfthc_angle_words; reconstruct_u_vectors; split_u_vectors"
+      },
+      "evidence_kind": "official_source_inspection",
+      "supplementary_official": [
+        {
+          "path": "vendor/official/verifiers/dfthcsos/scoreinfra/circuits.py",
+          "sha256": "fc027b52fdcebe14404f403a089122485d097ed65d03e6d989623d620b1ab68c",
+          "location": "recover_words_from_circuits"
+        }
+      ]
     },
     "chemistry.tree_root_and_order": {
-      "value": null,
-      "status": "unresolved",
+      "value": {
+        "root": 0,
+        "edges": "N-1 integer parent-child pairs; each parent already visited and child not yet visited; all vertices 0..N-1",
+        "application": "ordered Givens rotations applied to e_0; parent=c*parent-s*child; child=s*parent+c*child",
+        "norms": "decoded vector rows normalized before metrics"
+      },
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/dfthcsos/scoreinfra/dfthc_math.py",
+        "sha256": "ae82898d47a7a86b96378fb906e0f8a9f46003065cf19c7c09952a123b5b5af8",
+        "location": "evaluate_dfthc_angle_words; reconstruct_u_vectors; evaluate_dfthc_vectors"
+      },
+      "evidence_kind": "official_source_inspection"
     },
     "chemistry.one_electron_matching": {
-      "value": null,
-      "status": "unresolved",
+      "value": {
+        "h1_prime": "h1_thc - electrons*S/2 + beta_1*I - sum_rc W_native*X_decoded",
+        "assignment": "np.linalg.eigh(h1_prime); abs(decoded_one_body_rows @ ideal_eigenvector_columns); scipy.optimize.linear_sum_assignment(-overlaps)",
+        "reconstruction": "assign matched exact eigenvalues, reconstruct quadratic forms, then invert shift; signed/permuted rows allowed subject to residual",
+        "two_body": "X from decoded two-body vectors and W; symmetrize from lower triangle; error_2=Frobenius norm of sum X tensor X - tei - (S tensor I+I tensor S)/2"
+      },
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/dfthcsos/scoreinfra/dfthc_math.py",
+        "sha256": "ae82898d47a7a86b96378fb906e0f8a9f46003065cf19c7c09952a123b5b5af8",
+        "location": "build_h1_prime; reconstruct_h1_thc; evaluate_dfthc_vectors"
+      },
+      "evidence_kind": "official_source_inspection"
     },
     "chemistry.unused_address_behavior": {
-      "value": null,
-      "status": "unresolved",
+      "value": {
+        "valid_addresses": "0<=a<N+R*B",
+        "unused_binary_addresses": "never simulated; no verifier constraint beyond valid domain",
+        "selection_width": "exactly ceil(log2(N+R*B))",
+        "padding_words": "all slots beyond N-1 angles must be zero",
+        "initialization": "word registers initially zero; scratch zero; selection unchanged, phase unflipped and scratch clean after each forward/reverse circuit",
+        "scope": "sampled input-state behavior; not proof of arbitrary-z XOR behavior or every measurement branch"
+      },
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/official/verifiers/dfthcsos/scoreinfra/circuits.py",
+        "sha256": "fc027b52fdcebe14404f403a089122485d097ed65d03e6d989623d620b1ab68c",
+        "location": "recover_words_from_circuits; _check_state"
+      },
+      "evidence_kind": "official_source_inspection"
     },
     "runtime_limits": {
-      "value": null,
-      "status": "unresolved",
+      "value": {
+        "published_hard_runtime_seconds": null,
+        "published_runtime_statement": "Scoring takes roughly 45 minutes; estimate, not a hard timeout",
+        "max_npz_declared_bytes": 67108864,
+        "max_qubit_or_bit_id_exclusive": 699050,
+        "max_registers": {
+          "invsqrt": 1,
+          "dqi": 4165,
+          "ANGLE": 128
+        },
+        "submissions_per_day": 5,
+        "final_submissions": 2,
+        "max_team_size": 5,
+        "archive": "ZIP containing all three benchmarks; exactly one circuit encoding per component; contiguous angle indices; local packaging deliberately uses stricter no-extra-path layout",
+        "native_backend": "supplied Linux x86-64 kickmix.so requires CPython 3.13; native Windows unsupported"
+      },
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/pages/evaluation.md",
+        "sha256": "43495e31f97ceda4fc881908e17f97d8049b9ad6931eed7e27a30f252d271b63",
+        "location": "Submission File; approximate scoring duration"
+      },
+      "evidence_kind": "official_source_inspection",
+      "supplementary_official": [
+        {
+          "path": "vendor/pages/rules.md",
+          "sha256": "7989f8f3a3de9600f163df4174d1b8ce16ff3c9ec14d7007ad1a6d437c3f81ba",
+          "location": "B.1 TEAM LIMITS; B.2 SUBMISSION LIMITS"
+        },
+        {
+          "path": "vendor/metric/google-quantum-ai-metric.ipynb",
+          "sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+          "location": "read_circuit; read_npz; find_one; generate_standard_submission"
+        }
+      ]
     },
     "baseline.acceptance": {
-      "value": null,
-      "status": "unresolved",
+      "value": {
+        "status": "passed",
+        "tier": "full",
+        "components": {
+          "invsqrt": {
+            "status": "PASS",
+            "verified_shots": 200540928,
+            "cost": 2076774.233715282
+          },
+          "dqi": {
+            "status": "PASS",
+            "verified_shots": 102400,
+            "cost": 24439461432712.35
+          },
+          "dfthcsos": {
+            "status": "PASS",
+            "verified_shots": 254464,
+            "cost": 3355599588.3155375
+          }
+        },
+        "original_archive_sha256": "908ed2e587ca4ed500ddac7b6da4b473af3c8779c983d5022de620b357791a30",
+        "public_local_salt": "qcompile-public-development-salt-2026-10-30",
+        "remote_accepted": false,
+        "normalization": "local official-score self-normalization control = 1.0; private-split costs unknown"
+      },
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "docs/evidence/official-baseline-20261101.json",
+        "sha256": "1fbc229f8bf97c731e73cc4db91759736d6a47d515661249ccc8add8516625b6",
+        "location": "verification: status, complete, tier, artifact_hashes, official_results; normalization_control"
+      },
+      "evidence_kind": "actual_official_metric_execution"
     },
     "baseline.component_profiles": {
-      "value": null,
-      "status": "unresolved",
+      "value": {
+        "components": {
+          "invsqrt": {
+            "elapsed_seconds": 635.8821525650001,
+            "verified_shots": 200540928,
+            "score": 2076774.233715282,
+            "num_qubits": 260,
+            "num_ops": 62160,
+            "toffoli_count": 7735.0,
+            "reaction_depth": 4005
+          },
+          "dqi": {
+            "elapsed_seconds": 290.773158337,
+            "verified_shots": 102400,
+            "score": 24439461432712.35,
+            "num_qubits": 1893,
+            "num_ops": 86051014,
+            "toffoli_count": 5725107.878232422,
+            "reaction_depth": 170757
+          },
+          "dfthcsos": {
+            "elapsed_seconds": 76.04103225099999,
+            "verified_shots": 254464,
+            "score": 3355599588.3155375,
+            "num_qubits": 730,
+            "num_ops": 2060743,
+            "toffoli_count": 93237.0,
+            "reaction_depth": 110,
+            "resources": {
+              "angles_persistent_qubits": 96,
+              "angles_qubits": 119,
+              "angles_selection_qubits": 12,
+              "angles_temporary_qubits": 11,
+              "angles_toffoli": 79480.0,
+              "angles_toffoli_per_pass": 39740.0,
+              "angles_within_cap": true,
+              "brot": 12,
+              "givens_rotations_toffoli": 3450,
+              "heuristic_persistent_qubits": 90,
+              "heuristic_qubits": 634,
+              "heuristic_temporary_qubits": 544,
+              "heuristic_toffoli": 13757,
+              "inner_state_prep_persistent_qubits": 44,
+              "inner_state_prep_qubits": 588,
+              "inner_state_prep_temporary_qubits": 544,
+              "inner_state_prep_toffoli": 9461,
+              "keep_bits": 10,
+              "outer_state_prep_persistent_qubits": 46,
+              "outer_state_prep_qubits": 416,
+              "outer_state_prep_temporary_qubits": 370,
+              "outer_state_prep_toffoli": 846,
+              "persistent_qubits": 186,
+              "qubits": 730,
+              "temporary_qubits": 544,
+              "toffoli": 93237.0
+            }
+          }
+        },
+        "total_metric_wall_seconds": 1076.590489996,
+        "load_copy_hash_and_orchestration_seconds": 73.89414684300004,
+        "peak_worker_rss_kib": 7383588,
+        "peak_rss_scope": "RUSAGE_SELF high-water mark for the metric worker; not summed concurrent parent/child physical memory",
+        "cpu_affinity": [
+          0,
+          1
+        ],
+        "numerical_threads": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        },
+        "environment_ref": "verification.environment"
+      },
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "docs/evidence/official-baseline-20261101.json",
+        "sha256": "1fbc229f8bf97c731e73cc4db91759736d6a47d515661249ccc8add8516625b6",
+        "location": "profiles: actual per-benchmark elapsed time, counts, operations, resource costs and environment; verification.official_results.max_rss_platform_units"
+      },
+      "evidence_kind": "actual_official_metric_execution"
     },
     "competition.open_status": {
-      "value": null,
-      "status": "unresolved",
+      "value": {
+        "checked_at_utc": "2026-11-01T17:52:57.072160+00:00",
+        "start": "2026-10-22",
+        "entry_deadline_utc": "2027-01-13T23:59:00Z",
+        "final_deadline_utc": "2027-01-20T23:59:00Z",
+        "open_at_check": true,
+        "revalidate_before_submission": true
+      },
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/pages/timeline.md",
+        "sha256": "b70c2a41defda6e2c2c6928f30dbb67679ba68da751b8435feb9de56f4359203",
+        "location": "Start Date; Entry Deadline; Final Submission Deadline"
+      },
+      "evidence_kind": "official_source_inspection",
+      "supplementary_official": [
+        {
+          "path": "vendor/competition_metadata.json",
+          "sha256": "ac71ed24a0d2a13881c56efc62d679a1d1adee708b2323478759273e98bdea5b",
+          "location": "enabled_date; new_entrant_deadline; deadline"
+        }
+      ]
     },
     "correctness.primitive_composition_evidence": {
-      "value": null,
-      "status": "unresolved",
+      "value": {
+        "claim": "official contract definition and basis-state/sampled trajectory verification only",
+        "requirements": "restore input registers and zero scratch; correct tracked phase; branch-dependent cleanup must be correct; chemistry checks after each circuit in forward/reverse order",
+        "proof_scope": "an exhaustive basis map with phase and appropriate branch behavior extends linearly on its declared subspace; sampled trajectory acceptance alone is not an all-input/all-branch proof",
+        "candidate_obligation": "optimized primitive algebraic/coherent evidence and initialization/composition assumptions remain per-candidate release requirements; no optimized candidate proof asserted"
+      },
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md sections 3, 5, 6",
-      "official": null
+      "official": {
+        "path": "vendor/pages/domain-context.md",
+        "sha256": "a120d33bea1e56120647b26ec97557dc98eeb67f1b57bf8b69eed63252b910b1",
+        "location": "Why these circuits can be verified automatically"
+      },
+      "evidence_kind": "official_source_inspection",
+      "supplementary_official": [
+        {
+          "path": "vendor/official/verifiers/invsqrt/verify_submission_invsqrt.py",
+          "sha256": "ddef520dec6b68d1cf0a6f328ddd36d79eb84570b9192cf3f7acaf073f06733a",
+          "location": "module contract; verify"
+        },
+        {
+          "path": "vendor/official/verifiers/dqi/verify_submission_dqi.py",
+          "sha256": "f14274bc0943fb9769ddb01131be6063191a15009fe1caf1d4bdd9fd25194e65",
+          "location": "module contract; verify.run_batch"
+        },
+        {
+          "path": "vendor/official/verifiers/dfthcsos/scoreinfra/circuits.py",
+          "sha256": "fc027b52fdcebe14404f403a089122485d097ed65d03e6d989623d620b1ab68c",
+          "location": "module contract; recover_words_from_circuits"
+        }
+      ]
     },
     "archive.encoding": {
       "value": "canonical .kmb chosen; official permits .kmb or .kmx",
@@ -226,28 +684,47 @@
     },
     "chemistry.npz_schema": {
       "value": {
-        "U": [
-          "R",
-          "B",
-          "ORBITALS"
-        ],
-        "W": [
-          "R",
-          "B",
-          "C"
-        ],
-        "H2_I": [
-          "R",
-          "C"
-        ],
-        "H1_I": [],
-        "Hsym_lower": [
-          "ORBITALS*(ORBITALS+1)//2"
-        ],
-        "tree_edges": [
-          "ORBITALS-1",
-          2
-        ]
+        "U": {
+          "shape": [
+            "R",
+            "B",
+            76
+          ],
+          "kind": "f"
+        },
+        "W": {
+          "shape": [
+            "R",
+            "B",
+            "C"
+          ],
+          "kind": "f"
+        },
+        "H2_I": {
+          "shape": [
+            "R",
+            "C"
+          ],
+          "kind": "f"
+        },
+        "H1_I": {
+          "shape": [],
+          "kind": "f"
+        },
+        "Hsym_lower": {
+          "shape": [
+            2926
+          ],
+          "kind": "f"
+        },
+        "tree_edges": {
+          "shape": [
+            75,
+            2
+          ],
+          "kind": "iu"
+        },
+        "arrays": "plain little/native-endian numeric .npy v1.0; dimensions positive and consistent; total declared bytes<=2^26; finite values required by factorization loader"
       },
       "status": "reconciled",
       "release_critical": true,
@@ -255,9 +732,16 @@
       "official": {
         "path": "vendor/metric/google-quantum-ai-metric.ipynb",
         "sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
-        "location": "generate_standard_submission / npz_spec; ORBITALS imported from unavailable verifier, concrete dimensions remain report-derived",
-        "version": 10
-      }
+        "location": "read_npz; generate_standard_submission.npz_spec"
+      },
+      "evidence_kind": "official_source_inspection",
+      "supplementary_official": [
+        {
+          "path": "vendor/official/verifiers/dfthcsos/scoreinfra/reference.py",
+          "sha256": "a2d5a63191d655729e29f0fde1e85fe4630bf896a91a63bb894d8d7daf71ed39",
+          "location": "ORBITALS; FACTORIZATION_KEYS; load_factorization"
+        }
+      ]
     },
     "preflight.allowed_instructions": {
       "value": [
@@ -316,70 +800,283 @@
       }
     },
     "release.coverage": {
-      "value": null,
-      "status": "unresolved",
+      "value": {
+        "invsqrt": 200540928,
+        "dqi": 102400,
+        "dfthcsos": 254464
+      },
+      "status": "reconciled",
       "release_critical": true,
       "report_location": "docs/implementation-plan.md section 10.2; chemistry address count depends on acquired factors",
-      "official": null
+      "official": {
+        "path": "vendor/metric/google-quantum-ai-metric.ipynb",
+        "sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+        "location": "generate_standard_submission.verifications; score verification_shot_divisor"
+      },
+      "evidence_kind": "official_source_inspection",
+      "supplementary_official": [
+        {
+          "path": "vendor/official/verifiers/invsqrt/verify_submission_invsqrt.py",
+          "sha256": "ddef520dec6b68d1cf0a6f328ddd36d79eb84570b9192cf3f7acaf073f06733a",
+          "location": "verify.verified_shots"
+        },
+        {
+          "path": "vendor/official/verifiers/dqi/verify_submission_dqi.py",
+          "sha256": "f14274bc0943fb9769ddb01131be6063191a15009fe1caf1d4bdd9fd25194e65",
+          "location": "verify.verified_shots"
+        },
+        {
+          "path": "vendor/official/verifiers/dfthcsos/verify.py",
+          "sha256": "0775be7a528922367caebe9e4d051d6199811f1aefeaa4b793eaaa4621b8ec9d",
+          "location": "verify.verified_shots"
+        },
+        {
+          "path": "vendor/official/verifiers/dfthcsos/scoreinfra/circuits.py",
+          "sha256": "fc027b52fdcebe14404f403a089122485d097ed65d03e6d989623d620b1ab68c",
+          "location": "recover_words_from_circuits"
+        },
+        {
+          "path": "vendor/official/verifiers/dfthcsos/scoreinfra/reference.py",
+          "sha256": "a2d5a63191d655729e29f0fde1e85fe4630bf896a91a63bb894d8d7daf71ed39",
+          "location": "BASELINE_SHAPE"
+        }
+      ],
+      "conventions": {
+        "invsqrt": {
+          "valid_inputs": 3133452,
+          "shots_per_input": 64,
+          "verified_shots": 200540928
+        },
+        "dqi": {
+          "verified_shots": 102400,
+          "batch_size": 256,
+          "log2_delta": -128,
+          "failure_acceptance": "CP(value_errors+phase_errors,N)<1/16"
+        },
+        "dfthcsos": {
+          "valid_addresses": "76+R*B",
+          "shots_per_address": 64,
+          "verified_shots": "(76+R*B)*64",
+          "baseline_R": 65,
+          "baseline_B": 60,
+          "baseline_addresses": 3976,
+          "baseline_verified_shots": 254464,
+          "traversal": "all K forward and reverse; scratch/selection/phase after each circuit; zero final words"
+        },
+        "official_divisor": 1,
+        "confirmation": "fresh preregistered public-local salt and protocol for frozen bytes; never infer private-salt acceptance from local checks"
+      },
+      "shape_binding": {
+        "R": 65,
+        "B": 60,
+        "N": 76,
+        "policy": "Update expected chemistry count to (76+R*B)*64 with source-backed candidate shape before validation; changed contract invalidates prior comparisons."
+      }
     }
   },
   "sources": {
+    "rules": {
+      "path": "vendor/pages/rules.md",
+      "sha256": "7989f8f3a3de9600f163df4174d1b8ce16ff3c9ec14d7007ad1a6d437c3f81ba",
+      "location": "complete acquired file",
+      "origin": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/rules",
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed"
+    },
+    "data": {
+      "path": "vendor/competition_data.zip",
+      "sha256": "908ed2e587ca4ed500ddac7b6da4b473af3c8779c983d5022de620b357791a30",
+      "location": "complete acquired file",
+      "origin": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/data",
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed"
+    },
+    "evaluation": {
+      "path": "vendor/pages/evaluation.md",
+      "sha256": "43495e31f97ceda4fc881908e17f97d8049b9ad6931eed7e27a30f252d271b63",
+      "location": "complete acquired file",
+      "origin": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/overview/evaluation",
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed"
+    },
     "metric": {
       "path": "vendor/metric/google-quantum-ai-metric.ipynb",
       "sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
-      "version": 10,
+      "location": "complete acquired file",
       "origin": "https://www.kaggle.com/api/v1/kernels/pull/metric/google-quantum-ai-metric",
-      "acquired_at": "2026-10-30",
-      "redistribution": "not redistributed; retrieve from official source"
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed",
+      "version": 10
+    },
+    "starter_kit": {
+      "path": "vendor/starter_kit/pyproject.toml",
+      "sha256": "4442ba8a2e538d6414cc5ced3049e7d5a70314013d4eb3ba4d4893f5f4f1b401",
+      "location": "complete acquired file",
+      "origin": "https://www.kaggle.com/datasets/sohier/verifiable-circuit-compilation-starter-kit/versions/4",
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed",
+      "version": 4,
+      "scope": "Exact v4 pyproject.toml only; no claim that the entire 464 MB kit is acquired or installed",
+      "qualtran_revision": "c58703d00b01c346d3e77d3913cf2d6e9e556be3"
+    },
+    "reference": {
+      "path": "vendor/acquisition-checks.json",
+      "sha256": "df3b2940c5d6164bd30fd9f7509d99d4a4e1c1a7fa3568e26b952b271c25417c",
+      "location": "complete acquired file",
+      "origin": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/data#sample_submission",
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed"
+    },
+    "paper": {
+      "path": "vendor/official/verifiable_circuit_compilation.pdf",
+      "sha256": "1aa5e545e641338a7a40d9f689e78d2805766848fa650f0d40da839fbab40618",
+      "location": "complete acquired file",
+      "origin": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/data#verifiable_circuit_compilation.pdf",
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed"
+    },
+    "backend": {
+      "path": "vendor/official/kickmix/kickmix.so",
+      "sha256": "c66b3216c4029e0cdfd09054306aa0feadf53ab2f50c1164e37f752874e5005e",
+      "location": "complete acquired file",
+      "origin": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/data#kickmix",
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed"
+    },
+    "verifiers": {
+      "path": "vendor/backend.json",
+      "sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+      "location": "complete acquired file",
+      "origin": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/data#verifiers",
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed"
+    },
+    "data_description": {
+      "path": "vendor/pages/data-description.md",
+      "sha256": "688dea1c756d20131843d0d745d9aea42b9b16a14ffa35b15d5c6a0586e8b2fa",
+      "location": "complete acquired file",
+      "origin": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/data",
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed"
+    },
+    "correctness_context": {
+      "path": "vendor/pages/domain-context.md",
+      "sha256": "a120d33bea1e56120647b26ec97557dc98eeb67f1b57bf8b69eed63252b910b1",
+      "location": "complete acquired file",
+      "origin": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/overview/domain-context",
+      "acquired_at": "2026-11-01",
+      "redistribution": "local only; not redistributed"
+    },
+    "baseline_execution": {
+      "path": "docs/evidence/official-baseline-20261101.json",
+      "sha256": "1fbc229f8bf97c731e73cc4db91759736d6a47d515661249ccc8add8516625b6",
+      "origin": "local full-strength execution of https://www.kaggle.com/code/metric/google-quantum-ai-metric version 10",
+      "acquired_at": "2026-11-01",
+      "location": "complete local reference execution receipt",
+      "redistribution": "project-generated local execution evidence only"
     }
   },
   "correctness_scope": {
-    "valid_inputs": "Report-defined only; official verifier reconciliation outstanding",
-    "initialization": null,
-    "measurements": null,
-    "composition": null,
-    "unused_addresses": null
+    "valid_inputs": "invsqrt x=1..3133452; DQI official principal-eigenvector error distribution and independent masks; chemistry a=0..76+R*B-1",
+    "initialization": "official simulators initialize scratch zero; syndrome/x or selection/word registers supplied exactly as verifier sources describe",
+    "measurements": "R/HMR seeded from canonical submission digest plus salt; sampled outcomes; local salts are not private Kaggle salts",
+    "composition": "contracts concern declared kickmix subspaces; basis-state phase behavior with correct branch cleanup is required; candidate primitive proof/test evidence remains separate from sampled acceptance",
+    "unused_addresses": "chemistry addresses outside 0..76+R*B-1 are untested; padded angle word slots must be zero"
   },
   "discrepancies": [
     {
       "id": "chemistry-baseline-validity",
-      "status": "open",
-      "release_critical": true
+      "status": "resolved",
+      "release_critical": true,
+      "resolution": "Original reference chemistry passed 254464 shots in the unmodified metric v10 full-strength run; both residuals, strict floors, circuit width and complete cost passed. This resolves the report ambiguity without asserting completion of other components.",
+      "official": {
+        "path": "docs/evidence/baseline-chemistry-20261101.json",
+        "sha256": "92d73c6a72c79846bd31909b61dd7b476b01a144bb380b79e68d5208677523b0",
+        "location": "receipt.result: status, verified_shots, metrics, resources, score"
+      }
     },
     {
       "id": "chemistry-full-cost-and-residual-conventions",
-      "status": "open",
-      "release_critical": true
+      "status": "resolved",
+      "release_critical": true,
+      "resolution": "Executable verifier uses 0<E_gap<=2*Lambda; equality yields zero lambda_eff/cost and is rejected by the metric positive-cost check. Shifted Frobenius residuals, strict floors and full resources are source-defined.",
+      "official": {
+        "path": "vendor/official/verifiers/dfthcsos/scoreinfra/dfthc_math.py",
+        "sha256": "ae82898d47a7a86b96378fb906e0f8a9f46003065cf19c7c09952a123b5b5af8",
+        "location": "evaluate_dfthc_vectors; gap_in_domain"
+      }
     },
     {
       "id": "dqi-sampler-and-classical-record",
-      "status": "open",
-      "release_critical": true
+      "status": "resolved",
+      "release_critical": true,
+      "resolution": "Official principal-eigenvector sampler and mask binding inspected; phase errors exclude value-error shots.",
+      "official": {
+        "path": "vendor/official/verifiers/dqi/verify_submission_dqi.py",
+        "sha256": "f14274bc0943fb9769ddb01131be6063191a15009fe1caf1d4bdd9fd25194e65",
+        "location": "optimal_dqi_weights; sample_shots; verify.run_batch"
+      }
     },
     {
       "id": "rotation-rounding-and-pricing",
-      "status": "open",
-      "release_critical": true
+      "status": "resolved",
+      "release_critical": true,
+      "resolution": "Official target and rational tracked phase rounding differ from nearest-even diagnostic; preserve independent model as diagnostic.",
+      "official": {
+        "path": "vendor/official/verifiers/invsqrt/verify_submission_invsqrt.py",
+        "sha256": "ddef520dec6b68d1cf0a6f328ddd36d79eb84570b9192cf3f7acaf073f06733a",
+        "location": "reference_values; half_turns_to_units; verify cost"
+      }
     },
     {
       "id": "serialization-hash-semantics",
-      "status": "open",
-      "release_critical": true
+      "status": "resolved",
+      "release_critical": true,
+      "resolution": "Circuit seed hashes canonical kmb serialization; chemistry additionally hashes ordered raw npy entries; packaging metadata is excluded.",
+      "official": {
+        "path": "vendor/official/verifiers/dfthcsos/scoreinfra/circuits.py",
+        "sha256": "fc027b52fdcebe14404f403a089122485d097ed65d03e6d989623d620b1ab68c",
+        "location": "submission_sha256; initial_seed"
+      }
     },
     {
       "id": "runtime-and-submission-limits",
-      "status": "open",
-      "release_critical": true
+      "status": "resolved",
+      "release_critical": true,
+      "resolution": "Pinned pages and metric define explicit limits; 45-minute scoring is approximate and no hard timeout is published in these sources.",
+      "official": {
+        "path": "vendor/pages/evaluation.md",
+        "sha256": "43495e31f97ceda4fc881908e17f97d8049b9ad6931eed7e27a30f252d271b63",
+        "location": "Submission File"
+      }
     },
     {
       "id": "official-reference-and-verifier-acquisition",
-      "status": "open",
-      "release_critical": true
+      "status": "resolved",
+      "release_critical": true,
+      "resolution": "All 34 extracted files match original archive inventory; metric hash matches reviewed v10.",
+      "official": {
+        "path": "vendor/acquisition-checks.json",
+        "sha256": "df3b2940c5d6164bd30fd9f7509d99d4a4e1c1a7fa3568e26b952b271c25417c",
+        "location": "files; mismatches"
+      }
     },
     {
       "id": "coverage-counters-and-confirmation-protocol",
-      "status": "open",
-      "release_critical": true
+      "status": "resolved",
+      "release_critical": true,
+      "resolution": "Actual verified_shots counters and DQI disjoint error counts inspected; confirmation protocol remains a candidate operation.",
+      "official": {
+        "path": "vendor/official/verifiers/dfthcsos/verify.py",
+        "sha256": "0775be7a528922367caebe9e4d051d6199811f1aefeaa4b793eaaa4621b8ec9d",
+        "location": "verify return dictionary"
+      }
     }
-  ]
+  ],
+  "reconciliation": {
+    "created_at_utc": "2026-11-01T17:52:57.103557+00:00",
+    "scope": "official executable contract reconciled with full local unmodified reference acceptance; no optimized submission or remote result",
+    "report": "docs/contract-reconciliation-01-11-2026-22-50-00.md",
+    "completed_at_utc": "2026-11-01T18:30:01.708330+00:00"
+  }
 }

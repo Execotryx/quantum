@@ -91,19 +91,31 @@ identity and timing. Map actual integer fields after inspecting those returns:
 ```json
 {
   "coverage_mapping": {
-    "dqi": {"completed": "ACTUAL_COMPLETED_FIELD", "expected": "ACTUAL_EXPECTED_FIELD"}
+    "invsqrt": {"completed": "verified_shots", "expected": "verified_shots"},
+    "dqi": {"completed": "verified_shots", "expected": "verified_shots"},
+    "dfthcsos": {"completed": "verified_shots", "expected": "verified_shots"}
   },
   "confirmation_mapping": {
-    "benchmark": "dqi", "n": "ACTUAL_SAMPLE_COUNT_FIELD", "k": "ACTUAL_FAILURE_COUNT_FIELD"
+    "benchmark": "dqi", "n": "verified_shots", "k": ["value_errors", "phase_errors"]
   }
 }
 ```
 
-The names above are placeholders, not alleged upstream API names. Dot paths can
-traverse nested dictionaries. Missing fields or noninteger counters are errors;
-no counts are synthesized. For release, supply mappings for all three benchmarks
-and reconcile expected counts in `fields["release.coverage"].value` in the contract.
+These names are reconciled against the acquired official verifiers. The two DQI
+failure counters are disjoint: phase failures exclude value failures. A list of
+distinct paths is summed; the single-path string form remains supported. Dot paths
+can traverse nested dictionaries. Missing, negative or noninteger counters and
+failure totals above completed shots are errors.
+
+Both coverage aliases read the actual returned `verified_shots`; they do not
+create an independent expectation from success. Release certification separately
+compares that count to `fields["release.coverage"].value`, whose three values are
+full expected shot counts. Chemistry's value must match the selected R/B shape.
 Raw official costs remain separate from the independent estimate functions.
+
+Each completed benchmark also writes a `benchmark-NAME.json` receipt with its
+actual return dictionary and elapsed wall time. Such a receipt does not establish
+overall metric completion; that still requires the final verification report.
 
 ## Confirmation
 

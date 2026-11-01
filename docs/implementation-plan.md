@@ -2,7 +2,7 @@
 
 **Prepared:** 26 October 2026  
 **Revised:** 27 October 2026 — aligned with the v2 research report  
-**Status:** implementation started 30 October 2026; G0 remains blocked on official data access. See [implementation status](implementation-status.md) for measured scope and outstanding gates.
+**Status:** official assets acquired and the contract reconciled on 1 November 2026; the unmodified full local reference baseline passes. Primitive/negative-control reviews and opportunity gates still precede optimization. See [implementation status](implementation-status.md) for measured scope and outstanding work.
 **Source:** `deep-research-report-v2.md`, revision dated 27 October 2026  
 **Source SHA-256:** `b8ae2954bfdeee3d583afa3eba43a34c8dfcec3adcd3f35f61a833401d2ce5e4`
 

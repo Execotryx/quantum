@@ -4,20 +4,29 @@ A Python toolchain implementing the independently executable parts of the
 [implementation plan](docs/implementation-plan.md) for Google's Verifiable Quantum
 Circuit Compilation competition.
 
-**Current status: G0 blocked; no optimized submission or accepted baseline yet.**
-The official metric notebook v10 was downloaded and pinned. The competition-data
-API returned HTTP 401 in this environment, so reference circuits, verifiers,
-chemistry data, and the supplied kickmix backend have not been obtained. The plan
-requires those assets and baseline reconciliation before circuit optimization.
-The code reports this condition explicitly and prevents candidate/release promotion.
+**Current status: official contract ready; full reference baseline accepted locally.
+No optimized submission or remote acceptance is claimed.**
+All 34 competition files are available locally and byte-checked. The supplied
+backend runs in Ubuntu WSL with Python 3.13. See the
+[contract reconciliation](docs/contract-reconciliation-01-11-2026-22-50-00.md)
+for source evidence and the completed baseline measurements.
+
+The original competition-data API attempt returned HTTP 401. Manual acquisition
+resolved that access blocker. The pinned v10 metric has now accepted the original
+references at full strength, with complete coverage counters and retained costs.
+Optimization still requires the plan's independent primitive/negative-control
+checks and opportunity decision; this is a verified baseline, not an improvement.
 See [implementation status](docs/implementation-status.md) for completed and deferred work.
 
 ## Install and check
 
-From the repository root, using Python 3.12 and [uv](https://docs.astral.sh/uv/):
+Run these commands from the repository root in Linux (Ubuntu WSL on Windows),
+using [uv](https://docs.astral.sh/uv/). Independent checks also support Python 3.12
+on Linux/macOS; the supplied official backend requires Linux and Python 3.13:
 
 ```bash
-uv sync --frozen
+export UV_PROJECT_ENVIRONMENT=vendor/linux-env
+uv sync --frozen --python 3.13
 uv run qcompile test --tier unit
 uv run qcompile test --tier extended
 uv run ruff check src tests
@@ -25,8 +34,9 @@ uv run ruff format --check src tests
 uv run qcompile contract validate
 ```
 
-Contract validation currently returns exit code **2**, with named unresolved fields,
-source pins, and discrepancies. This is the intended blocked result. The extended
+Contract validation returns exit code **0** with the acquired pinned inputs and
+completed baseline evidence. A checkout without those ignored official assets
+returns **2** and names the missing source pins. The extended
 tier also scans every one of the 3,133,452 inverse-square-root inputs as a harness
 control. Feeding the mathematical target into that control does not validate a
 candidate circuit.
@@ -45,11 +55,11 @@ candidate circuit.
 | `experiments` | Candidate states, immutable artifact identities/provenance, bounded diagnostic registration, opportunity decisions and one-use confirmation history |
 | `artifacts` / `release` | Deterministic NPZ/ZIP, bounded safe extraction, two independent recipe builds, extracted-archive verification and guarded local certification |
 
-Mathematical cost functions return **estimates** until their conventions are
-reconciled with the acquired verifiers. Chemistry helpers take explicit tree roots
-and angular conversions; they do not assume those unresolved official conventions.
-The 76-orbital concrete schema is still report-derived; the metric pins the symbolic
-schema while importing `ORBITALS` from the unavailable verifier.
+Mathematical helpers remain **independent models**, not circuit acceptance evidence.
+Their phase, field, selected scoring and angle conventions have been checked
+against the pinned official sources. Chemistry helpers still take explicit tree
+roots and angular conversions; the official contract uses root 0 and radians =
+pi*word/2^(brot-1). The concrete 76-orbital schema is now source-reconciled.
 
 ## Acquire and reconcile official inputs
 
@@ -147,4 +157,4 @@ remote-submit command.
 See [operator formats](docs/operator-formats.md) for JSON records and the exact
 limits of these infrastructure checks. The circuit generators, official-distribution
 sampler, full chemistry reconstruction/matching and optimization searches remain
-blocked implementation work; none is replaced with a mock backend.
+remaining implementation work; none is replaced with a mock backend.
