@@ -15,6 +15,7 @@ from .artifacts import hashes, validate_manifest
 from .environment import capture
 from .errors import BlockedError, ValidationError
 from .io import identity, read_json, sha256, write_json
+from .profiling import recorder
 
 METRIC_V10_SHA256 = "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73"
 
@@ -62,8 +63,9 @@ def verify_candidate(artifacts, contract, tier, seed_policy, backend, output_dir
         raise ValidationError(
             "local seed policy requires a salt of >=32 characters and distribution description"
         )
-    validate_manifest(artifacts)
-    validate_backend(backend)
+    with recorder().stage("adapter_input_integrity", "hashing", benchmark="all"):
+        validate_manifest(artifacts)
+        validate_backend(backend)
     output_dir = Path(output_dir).resolve()
     output_dir.mkdir(parents=True, exist_ok=False)
     environment = capture(Path(backend.get("project_root", Path(__file__).resolve().parents[2])))
@@ -103,8 +105,9 @@ def verify_candidate(artifacts, contract, tier, seed_policy, backend, output_dir
     worker_path = output_dir / "worker-result.json"
     worker = read_json(worker_path) if worker_path.is_file() else None
     # Recheck identities after execution to catch byte/source mutation during a run.
-    validate_manifest(artifacts)
-    validate_backend(backend)
+    with recorder().stage("adapter_final_integrity", "hashing", benchmark="all"):
+        validate_manifest(artifacts)
+        validate_backend(backend)
     complete = status == "passed" and worker is not None and worker.get("completed") is True
     report = {
         "schema_version": 1,

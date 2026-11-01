@@ -15,3 +15,12 @@
   For the isolated environment, pass `--pythonpath vendor/linux-env/bin/python`
   to Pyright instead of relying on automatic environment discovery.
 - Preserve dated Markdown change logs under `docs/`; use OpenSpec for plans.
+- Step-2 campaigns require clean committed Linux source and frozen dependencies.
+  Preregister A,A,B baseline salts and run serially at full strength; never reuse
+  them as candidate confirmation. Profile by delegation to pinned upstream code.
+- Keep the resource sampler outside the forking verifier worker. Report sampled
+  process-tree PSS separately from summed RSS, with sampling/race limitations.
+  Budgets include explicit measured headroom, not claims of minimum hardware.
+- Frozen baseline bundles retain raw records and original inputs by hash, include
+  one original archive rather than duplicate per-run input copies, and verify
+  independent deterministic builds plus a clean Git source-bundle restore.

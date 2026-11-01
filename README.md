@@ -111,6 +111,13 @@ pi*word/2^(brot-1). The concrete 76-orbital schema is now source-reconciled.
 
 ## Development and release
 
+Step-2 profiling uses `qcompile baseline campaign` from a clean committed Linux
+checkout, followed by `qcompile baseline freeze`. The campaign preregisters A,A,B
+salts, full-strength coverage and resource limits; it delegates to the actual
+pinned metric and retains raw stage/process-tree measurements. See the
+[campaign guide](docs/baseline-campaign-02-11-2026-01-19-10.md) for the exact scope,
+sampling limits and frozen-bundle format.
+
 A runnable **negative numerical diagnostic** is provided:
 
 ```bash
