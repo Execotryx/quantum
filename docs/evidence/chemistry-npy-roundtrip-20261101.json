@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "scope": "provided baseline npy entries versus metric in-memory reserialization; not arbitrary future encodings",
+  "entries_identical": {
+    "U": true,
+    "W": true,
+    "H2_I": true,
+    "H1_I": true,
+    "Hsym_lower": true,
+    "tree_edges": true
+  }
+}

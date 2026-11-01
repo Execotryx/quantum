@@ -1,0 +1,464 @@
+{
+  "schema_version": 1,
+  "kind": "completed_official_reference_baseline",
+  "created_at_utc": "2026-11-01T18:30:01.693041+00:00",
+  "scope": "original provided reference bytes; actual pinned metric v10, full strength, public local salt; no remote acceptance or optimized candidate proof",
+  "original_archive_sha256": "908ed2e587ca4ed500ddac7b6da4b473af3c8779c983d5022de620b357791a30",
+  "source_report_sha256": "0278b3e35ad6f1763bf9fb5638ae8599f2a3cf67f64d69312d557fcdefaec58d",
+  "source_request_sha256": "f426d495f528c4e871a1c46f6be68ffe2b619c21ae83e6741e8a02ce5ace2046",
+  "source_metric_sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+  "source_backend": {
+    "kickmix_files": {
+      "LICENSE.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "kickmix.so": "c66b3216c4029e0cdfd09054306aa0feadf53ab2f50c1164e37f752874e5005e"
+    },
+    "kickmix_root": "/mnt/e/sources/python/quantum/vendor/official/kickmix",
+    "metric_notebook": "/mnt/e/sources/python/quantum/vendor/metric/google-quantum-ai-metric.ipynb",
+    "metric_sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+    "metric_version": 10,
+    "verifiers_files": {
+      "LICENSE.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "dfthcsos/FeMoCo76o113e.fcidump": "e5a48af746fd075026dec9e8f5df2d363802a121e8c53af9a0b984bde695e1bd",
+      "dfthcsos/FeMoCo76o113e.fixed_shifts.npz": "7b7facf63fe35a9d9d3d00787ffdb700c863fa845fe4724d7f7c54778151cd87",
+      "dfthcsos/SCORING_README.md": "c2228569f96e58e118419bc32be2be9e33d6abffb8117cb0b91e1fc25b2a0230",
+      "dfthcsos/__init__.py": "81915e324cc0cade67f52a54b7a51991fd96abaea94d1f8a4d423dae20e57348",
+      "dfthcsos/example_submission/angle_k_reference_circuit.py": "8daccdca69f2d718b0176cd9281803df84a988ea5ac6c167fbb02e461ac2b371",
+      "dfthcsos/scoreinfra/__init__.py": "be90e0d503d5c20dcac0102af638b9a4ccad0341daa5baa5d49216a259e4516f",
+      "dfthcsos/scoreinfra/circuits.py": "fc027b52fdcebe14404f403a089122485d097ed65d03e6d989623d620b1ab68c",
+      "dfthcsos/scoreinfra/costs_prepare.py": "7f1e190c42fc5325f3e6689fbbef51f95b0cb12f1c828cda92b6c088e72206da",
+      "dfthcsos/scoreinfra/dfthc_math.py": "ae82898d47a7a86b96378fb906e0f8a9f46003065cf19c7c09952a123b5b5af8",
+      "dfthcsos/scoreinfra/reference.py": "a2d5a63191d655729e29f0fde1e85fe4630bf896a91a63bb894d8d7daf71ed39",
+      "dfthcsos/verify.py": "0775be7a528922367caebe9e4d051d6199811f1aefeaa4b793eaaa4621b8ec9d",
+      "dqi/__init__.py": "01c870aa9763f4e4357fc6654bff1d3296cec995bd0943f87b4a48946ada5b40",
+      "dqi/dqi_reference_circuit.py": "2b8e1b80a806157c333a7e308eaf2499ee09de499efbc05875202c327959959e",
+      "dqi/verify_submission_dqi.py": "f14274bc0943fb9769ddb01131be6063191a15009fe1caf1d4bdd9fd25194e65",
+      "invsqrt/__init__.py": "e9a6ecf253c343528578be5fa92eb820ccade63333aebb784552fb4ae75dbc0b",
+      "invsqrt/nr_reference_circuit.py": "bb90330dcf774f7b502de471293facba67f27952cc8808fe4a9970a9b1322e23",
+      "invsqrt/verify_submission_invsqrt.py": "ddef520dec6b68d1cf0a6f328ddd36d79eb84570b9192cf3f7acaf073f06733a"
+    },
+    "verifiers_root": "/mnt/e/sources/python/quantum/vendor/official/verifiers",
+    "coverage_mapping": {
+      "invsqrt": {
+        "completed": "verified_shots",
+        "expected": "verified_shots"
+      },
+      "dqi": {
+        "completed": "verified_shots",
+        "expected": "verified_shots"
+      },
+      "dfthcsos": {
+        "completed": "verified_shots",
+        "expected": "verified_shots"
+      }
+    },
+    "coverage_mapping_note": "Both raw aliases are actual returned verified_shots; the independent required count is in contract.release.coverage; never infer success from exit status.",
+    "confirmation_mapping": {
+      "benchmark": "dqi",
+      "n": "verified_shots",
+      "k": [
+        "value_errors",
+        "phase_errors"
+      ]
+    }
+  },
+  "verification": {
+    "artifact_hashes": {
+      "dfthcsos/angle_k_0.kmb": "7bfb3983accc6ff97d6ab41a88deae924f1d1c97cf30e60879d0bff5688a8e25",
+      "dfthcsos/angle_k_1.kmb": "a04b6d0d57ce851b123af265066aaab2ab33353ea049d26acd534727466d72b6",
+      "dfthcsos/angle_k_2.kmb": "5c1b8987bc3fa1a4b8607e470f8c8f1392c22e7a7dbcb228f0ce9ec986e18058",
+      "dfthcsos/angle_k_3.kmb": "16ac67cdcaf3e2c6abdd98c4138ff1ae8a56cfc4ae15622bcdb3d3a3ba1e22cf",
+      "dfthcsos/angle_k_4.kmb": "d21cdd4c7e94196654aab15ebcabfe10ce8d343151a5e8dc3672e76684b6628d",
+      "dfthcsos/angle_k_5.kmb": "63b8d4cba36955e6098321f3b2ef3e34401dd276fa629b2e490d043b1743880b",
+      "dfthcsos/angle_k_6.kmb": "5bf740428e661d035fda860142578f421969e35e0df2e4e024fbf01a7340b378",
+      "dfthcsos/angle_k_7.kmb": "606009582111a22bd549b795c8d115ac8bbeb124bc8da24a80380eca6d34163d",
+      "dfthcsos/angle_k_8.kmb": "57c7cc51f5922fff6e95d76e1f723d4c2d029a241da643b95684d6322157a8fe",
+      "dfthcsos/angle_k_9.kmb": "22cbe2828988ff954fc07fd971a25e6bc04a02c302bf2cc642e4c3535daaad65",
+      "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "dqi.kmb": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+      "invsqrt.kmb": "e2bf8eb64350a4460a271fc7f1d591ef125b1e276377e9a0f64b96ab3ca321e1"
+    },
+    "backend_hash": "064b3f583a668ab10bbcdaef6b238e202c66a2d1a9cc164e581d1431798553f7",
+    "complete": true,
+    "contract_hash": "f7e18f28c131f8000965a019a107aadfce3bcc619bacf3f2c15aa09c7b1664b4",
+    "coverage": "unmodified official verifier completed",
+    "diagnostic": "worker exit code 0",
+    "elapsed_seconds": 1076.590489996,
+    "environment": {
+      "cpu_count": 16,
+      "dependencies": {
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "scipy": "1.17.0"
+      },
+      "dependency_lock_sha256": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+      "dirty": true,
+      "numpy_backend": {
+        "Build Dependencies": {
+          "blas": {
+            "detection method": "pkgconfig",
+            "found": true,
+            "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+            "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+            "name": "scipy-openblas",
+            "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+            "pc file directory": "/project/.openblas",
+            "version": "0.3.30"
+          },
+          "lapack": {
+            "detection method": "pkgconfig",
+            "found": true,
+            "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+            "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+            "name": "scipy-openblas",
+            "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+            "pc file directory": "/project/.openblas",
+            "version": "0.3.30"
+          }
+        },
+        "Compilers": {
+          "c": {
+            "commands": "cc",
+            "linker": "ld.bfd",
+            "name": "gcc",
+            "version": "14.2.1"
+          },
+          "c++": {
+            "commands": "c++",
+            "linker": "ld.bfd",
+            "name": "gcc",
+            "version": "14.2.1"
+          },
+          "cython": {
+            "commands": "cython",
+            "linker": "cython",
+            "name": "cython",
+            "version": "3.2.1"
+          }
+        },
+        "Machine Information": {
+          "build": {
+            "cpu": "x86_64",
+            "endian": "little",
+            "family": "x86_64",
+            "system": "linux"
+          },
+          "host": {
+            "cpu": "x86_64",
+            "endian": "little",
+            "family": "x86_64",
+            "system": "linux"
+          }
+        },
+        "Python Information": {
+          "path": "/tmp/build-env-w_be3r90/bin/python",
+          "version": "3.13"
+        },
+        "SIMD Extensions": {
+          "baseline": [
+            "SSE",
+            "SSE2",
+            "SSE3"
+          ],
+          "found": [
+            "SSSE3",
+            "SSE41",
+            "POPCNT",
+            "SSE42",
+            "AVX",
+            "F16C",
+            "FMA3",
+            "AVX2"
+          ],
+          "not found": [
+            "AVX512F",
+            "AVX512CD",
+            "AVX512_KNL",
+            "AVX512_KNM",
+            "AVX512_SKX",
+            "AVX512_CLX",
+            "AVX512_CNL",
+            "AVX512_ICL",
+            "AVX512_SPR"
+          ]
+        }
+      },
+      "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+      "processor": "",
+      "python": "3.13.15 (main, Aug 14 2026, 15:34:59) [Clang 22.1.3 ]",
+      "source_revision": "5b4efa88796889623434b9120eac39b72ebc8bf3",
+      "thread_settings": {
+        "MKL_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      }
+    },
+    "kind": "official_metric_execution",
+    "logs": {
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout.log": "a4c0842919460749949b51e393bcf7a5e7f2ca69fbae54984a4c904a636f041f"
+    },
+    "official_results": {
+      "claim": "sampled circuit acceptance under local salt and official metric; no coherent proof",
+      "completed": true,
+      "confirmation_observed": {
+        "k": 0,
+        "n": 102400
+      },
+      "costs": {
+        "dfthcsos": 3355599588.3155375,
+        "dqi": 24439461432712.35,
+        "invsqrt": 2076774.233715282
+      },
+      "counts_note": "Counters require explicit source-reconciled mappings into real verifier returns.",
+      "coverage_counts": {
+        "dfthcsos": {
+          "completed": 254464,
+          "expected": 254464
+        },
+        "dqi": {
+          "completed": 102400,
+          "expected": 102400
+        },
+        "invsqrt": {
+          "completed": 200540928,
+          "expected": 200540928
+        }
+      },
+      "max_rss_platform_units": 7383588,
+      "pid": 735,
+      "raw_verifier_results": {
+        "dfthcsos": {
+          "batch_size": 8,
+          "brot": 12,
+          "lambda_eff": 49.301369250574396,
+          "metrics": {
+            "E_SOS": -22144.23882724429,
+            "E_gap": 3.965477244291833,
+            "Lambda": 308.4559397330945,
+            "error_1": 0.0031851950317996216,
+            "error_2": 0.018639570630974368,
+            "gap_in_domain": true,
+            "lambda_eff": 49.301369250574396
+          },
+          "num_circuits": 10,
+          "num_ops": 2060743,
+          "num_qubits": 730,
+          "reaction_depth": 110,
+          "resources": {
+            "angles_persistent_qubits": 96,
+            "angles_qubits": 119,
+            "angles_selection_qubits": 12,
+            "angles_temporary_qubits": 11,
+            "angles_toffoli": 79480.0,
+            "angles_toffoli_per_pass": 39740.0,
+            "angles_within_cap": true,
+            "brot": 12,
+            "givens_rotations_toffoli": 3450,
+            "heuristic_persistent_qubits": 90,
+            "heuristic_qubits": 634,
+            "heuristic_temporary_qubits": 544,
+            "heuristic_toffoli": 13757,
+            "inner_state_prep_persistent_qubits": 44,
+            "inner_state_prep_qubits": 588,
+            "inner_state_prep_temporary_qubits": 544,
+            "inner_state_prep_toffoli": 9461,
+            "keep_bits": 10,
+            "outer_state_prep_persistent_qubits": 46,
+            "outer_state_prep_qubits": 416,
+            "outer_state_prep_temporary_qubits": 370,
+            "outer_state_prep_toffoli": 846,
+            "persistent_qubits": 186,
+            "qubits": 730,
+            "temporary_qubits": 544,
+            "toffoli": 93237.0
+          },
+          "score": 3355599588.3155375,
+          "status": "PASS",
+          "submission_sha256": "276d464ff14da828b6b33e8487d99975494cbdf0c3cb2bd37dd3c3ddc4002695",
+          "toffoli_count": 93237.0,
+          "verified_shots": 254464
+        },
+        "dqi": {
+          "circuit_sha256": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+          "degree": 12,
+          "effective_error_rate": 0.0008660587301657926,
+          "empirical_error_rate": 0.0,
+          "log2_delta": -128.0,
+          "m": 4095,
+          "max_toffoli_count": 5725461,
+          "mean_error_weight": 31.046737331746634,
+          "n": 70,
+          "num_bits": 49154,
+          "num_ops": 86051014,
+          "num_qubits": 1893,
+          "phase_errors": 0,
+          "r": 2016,
+          "reaction_depth": 170757,
+          "repetition_factor": 1.1912604648115832,
+          "score": 24439461432712.35,
+          "shot_operation_counts": {
+            "BIT_INVERT": 331739043670,
+            "BIT_STORE0": 70593904746,
+            "BIT_STORE1": 2515931794,
+            "CCX": 466175168331,
+            "CSWAP": 120075878400,
+            "CX": 5515947359671,
+            "CZ": 483333616634,
+            "HMR": 125697571548,
+            "INFO_TAG": 333529702400,
+            "NEG": 66658936,
+            "POP_CONDITION": 4331212800,
+            "PUSH_CONDITION": 4331212800,
+            "R": 125697571548,
+            "SWAP": 320927113152,
+            "X": 84821986288,
+            "Z": 1727634862
+          },
+          "status": "PASS",
+          "toffoli_count": 5725107.878232422,
+          "value_errors": 0,
+          "verified_shots": 102400
+        },
+        "invsqrt": {
+          "circuit_sha256": "e2bf8eb64350a4460a271fc7f1d591ef125b1e276377e9a0f64b96ab3ca321e1",
+          "max_toffoli_count": 7735,
+          "num_ops": 62160,
+          "num_qubits": 260,
+          "reaction_depth": 4005,
+          "rotation_count": 37.0,
+          "rotation_eps": 1.5289254939242122e-12,
+          "score": 2076774.233715282,
+          "status": "PASS",
+          "t_count": 1.0,
+          "toffoli_count": 7735.0,
+          "toffoli_equivalent": 7987.593206597238,
+          "verified_shots": 200540928,
+          "worst_error_over_tolerance": 0.4769116097939472,
+          "worst_x": 2588411
+        }
+      },
+      "rss_units": "bytes on macOS, KiB on Linux",
+      "verification_shot_divisor": 1
+    },
+    "remote_accepted": false,
+    "request_hash": "f426d495f528c4e871a1c46f6be68ffe2b619c21ae83e6741e8a02ce5ace2046",
+    "role": "official_local",
+    "schema_version": 1,
+    "seed_policy": {
+      "distribution": "Unmodified pinned official verifier distribution; public local salt, independent of private Kaggle salts. Never reuse for confirmation.",
+      "role": "official_local",
+      "salt": "qcompile-public-development-salt-2026-10-30"
+    },
+    "status": "passed",
+    "tier": "full"
+  },
+  "profiles": {
+    "components": {
+      "invsqrt": {
+        "elapsed_seconds": 635.8821525650001,
+        "verified_shots": 200540928,
+        "score": 2076774.233715282,
+        "num_qubits": 260,
+        "num_ops": 62160,
+        "toffoli_count": 7735.0,
+        "reaction_depth": 4005
+      },
+      "dqi": {
+        "elapsed_seconds": 290.773158337,
+        "verified_shots": 102400,
+        "score": 24439461432712.35,
+        "num_qubits": 1893,
+        "num_ops": 86051014,
+        "toffoli_count": 5725107.878232422,
+        "reaction_depth": 170757
+      },
+      "dfthcsos": {
+        "elapsed_seconds": 76.04103225099999,
+        "verified_shots": 254464,
+        "score": 3355599588.3155375,
+        "num_qubits": 730,
+        "num_ops": 2060743,
+        "toffoli_count": 93237.0,
+        "reaction_depth": 110,
+        "resources": {
+          "angles_persistent_qubits": 96,
+          "angles_qubits": 119,
+          "angles_selection_qubits": 12,
+          "angles_temporary_qubits": 11,
+          "angles_toffoli": 79480.0,
+          "angles_toffoli_per_pass": 39740.0,
+          "angles_within_cap": true,
+          "brot": 12,
+          "givens_rotations_toffoli": 3450,
+          "heuristic_persistent_qubits": 90,
+          "heuristic_qubits": 634,
+          "heuristic_temporary_qubits": 544,
+          "heuristic_toffoli": 13757,
+          "inner_state_prep_persistent_qubits": 44,
+          "inner_state_prep_qubits": 588,
+          "inner_state_prep_temporary_qubits": 544,
+          "inner_state_prep_toffoli": 9461,
+          "keep_bits": 10,
+          "outer_state_prep_persistent_qubits": 46,
+          "outer_state_prep_qubits": 416,
+          "outer_state_prep_temporary_qubits": 370,
+          "outer_state_prep_toffoli": 846,
+          "persistent_qubits": 186,
+          "qubits": 730,
+          "temporary_qubits": 544,
+          "toffoli": 93237.0
+        }
+      }
+    },
+    "total_metric_wall_seconds": 1076.590489996,
+    "load_copy_hash_and_orchestration_seconds": 73.89414684300004,
+    "peak_worker_rss_kib": 7383588,
+    "peak_rss_scope": "RUSAGE_SELF high-water mark for the metric worker; not summed concurrent parent/child physical memory",
+    "cpu_affinity": [
+      0,
+      1
+    ],
+    "numerical_threads": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "environment_ref": "verification.environment"
+  },
+  "benchmark_receipts": {
+    "invsqrt": {
+      "path": "runs/baseline-g0-20261101-retry/benchmark-invsqrt.json",
+      "sha256": "ead4a9ea941cc4cf8ef4fadc49568f8ef5e3dc30536a7ef5d849cc60f94c6c2c"
+    },
+    "dqi": {
+      "path": "runs/baseline-g0-20261101-retry/benchmark-dqi.json",
+      "sha256": "b0c5ea8c28375b0b0408e4b5a043cdd3229075ec0d453966ae053b96962033b7"
+    },
+    "dfthcsos": {
+      "path": "runs/baseline-g0-20261101-retry/benchmark-dfthcsos.json",
+      "sha256": "a4fa106851d4fea4e452ca7d583ac3bfdc7ebc2aa4cc3d52715a79300d67fac4"
+    }
+  },
+  "normalization_control": {
+    "score": 1.0,
+    "details": {
+      "invsqrt": {
+        "cost": 2076774.233715282,
+        "improvement_over_baseline": 1.0,
+        "seconds": 635.903052834
+      },
+      "dqi": {
+        "cost": 24439461432712.35,
+        "improvement_over_baseline": 1.0,
+        "seconds": 290.848732086
+      },
+      "dfthcsos": {
+        "cost": 3355599588.315537,
+        "improvement_over_baseline": 1.0000000000000002,
+        "seconds": 76.05415293800002
+      }
+    },
+    "scope": "official score() called with measured local reference costs as its own normalization; 1.0 is a self-normalization control, not an observed private-split score"
+  },
+  "contract_binding_note": "The execution request records the pre-finalization contract hash. Finalization adds measured baseline evidence and resolves source-backed details without changing official metric/backend/artifact bytes. This baseline is not a candidate/release verification under the new final contract hash."
+}

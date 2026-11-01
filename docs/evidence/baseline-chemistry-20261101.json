@@ -1,0 +1,83 @@
+{
+  "kind": "official_full_strength_component_evidence",
+  "benchmark": "dfthcsos",
+  "scope": "completed chemistry component inside actual metric v10; overall baseline remains pending",
+  "tier": "full",
+  "seed_policy": {
+    "distribution": "Unmodified pinned official verifier distribution; public local salt, independent of private Kaggle salts. Never reuse for confirmation.",
+    "role": "official_local",
+    "salt": "qcompile-public-development-salt-2026-10-30"
+  },
+  "metric_sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+  "request_sha256": "f426d495f528c4e871a1c46f6be68ffe2b619c21ae83e6741e8a02ce5ace2046",
+  "artifact_hashes": {
+    "dfthcsos/angle_k_0.kmb": "7bfb3983accc6ff97d6ab41a88deae924f1d1c97cf30e60879d0bff5688a8e25",
+    "dfthcsos/angle_k_1.kmb": "a04b6d0d57ce851b123af265066aaab2ab33353ea049d26acd534727466d72b6",
+    "dfthcsos/angle_k_2.kmb": "5c1b8987bc3fa1a4b8607e470f8c8f1392c22e7a7dbcb228f0ce9ec986e18058",
+    "dfthcsos/angle_k_3.kmb": "16ac67cdcaf3e2c6abdd98c4138ff1ae8a56cfc4ae15622bcdb3d3a3ba1e22cf",
+    "dfthcsos/angle_k_4.kmb": "d21cdd4c7e94196654aab15ebcabfe10ce8d343151a5e8dc3672e76684b6628d",
+    "dfthcsos/angle_k_5.kmb": "63b8d4cba36955e6098321f3b2ef3e34401dd276fa629b2e490d043b1743880b",
+    "dfthcsos/angle_k_6.kmb": "5bf740428e661d035fda860142578f421969e35e0df2e4e024fbf01a7340b378",
+    "dfthcsos/angle_k_7.kmb": "606009582111a22bd549b795c8d115ac8bbeb124bc8da24a80380eca6d34163d",
+    "dfthcsos/angle_k_8.kmb": "57c7cc51f5922fff6e95d76e1f723d4c2d029a241da643b95684d6322157a8fe",
+    "dfthcsos/angle_k_9.kmb": "22cbe2828988ff954fc07fd971a25e6bc04a02c302bf2cc642e4c3535daaad65",
+    "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69"
+  },
+  "receipt": {
+    "benchmark": "dfthcsos",
+    "claim": "actual verifier return; overall metric completion is recorded separately",
+    "elapsed_seconds": 76.04103225099999,
+    "kind": "official_benchmark_execution",
+    "result": {
+      "batch_size": 8,
+      "brot": 12,
+      "lambda_eff": 49.301369250574396,
+      "metrics": {
+        "E_SOS": -22144.23882724429,
+        "E_gap": 3.965477244291833,
+        "Lambda": 308.4559397330945,
+        "error_1": 0.0031851950317996216,
+        "error_2": 0.018639570630974368,
+        "gap_in_domain": true,
+        "lambda_eff": 49.301369250574396
+      },
+      "num_circuits": 10,
+      "num_ops": 2060743,
+      "num_qubits": 730,
+      "reaction_depth": 110,
+      "resources": {
+        "angles_persistent_qubits": 96,
+        "angles_qubits": 119,
+        "angles_selection_qubits": 12,
+        "angles_temporary_qubits": 11,
+        "angles_toffoli": 79480.0,
+        "angles_toffoli_per_pass": 39740.0,
+        "angles_within_cap": true,
+        "brot": 12,
+        "givens_rotations_toffoli": 3450,
+        "heuristic_persistent_qubits": 90,
+        "heuristic_qubits": 634,
+        "heuristic_temporary_qubits": 544,
+        "heuristic_toffoli": 13757,
+        "inner_state_prep_persistent_qubits": 44,
+        "inner_state_prep_qubits": 588,
+        "inner_state_prep_temporary_qubits": 544,
+        "inner_state_prep_toffoli": 9461,
+        "keep_bits": 10,
+        "outer_state_prep_persistent_qubits": 46,
+        "outer_state_prep_qubits": 416,
+        "outer_state_prep_temporary_qubits": 370,
+        "outer_state_prep_toffoli": 846,
+        "persistent_qubits": 186,
+        "qubits": 730,
+        "temporary_qubits": 544,
+        "toffoli": 93237.0
+      },
+      "score": 3355599588.3155375,
+      "status": "PASS",
+      "submission_sha256": "276d464ff14da828b6b33e8487d99975494cbdf0c3cb2bd37dd3c3ddc4002695",
+      "toffoli_count": 93237.0,
+      "verified_shots": 254464
+    }
+  }
+}

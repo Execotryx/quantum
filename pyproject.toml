@@ -13,7 +13,12 @@ dependencies = ["numpy==2.3.5", "scipy==1.17.0", "pandas==2.2.3"]
 qcompile = "qcompile.cli:main"
 
 [dependency-groups]
-dev = ["pytest==9.0.2", "mpmath==1.3.0", "ruff==0.14.3"]
+dev = [
+    "pytest==9.0.2",
+    "mpmath==1.3.0",
+    "ruff==0.14.3",
+    "pyright>=1.1.414",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]

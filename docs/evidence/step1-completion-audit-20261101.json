@@ -1,0 +1,117 @@
+{
+  "created_at_utc": "2026-11-01T18:49:33.785908+00:00",
+  "status": "complete",
+  "scope": "user step 1: official contract reconciliation",
+  "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+  "contract_status": "ready",
+  "contract_exit_code": 0,
+  "blockers": [],
+  "reconciled_fields": 35,
+  "resolved_critical_discrepancies": 8,
+  "requirements": [
+    {
+      "objective": "Establish exact official requirements for every benchmark",
+      "evidence": [
+        "contracts/contract.json",
+        "docs/evidence/official-baseline-20261101.json"
+      ],
+      "status": "verified"
+    },
+    {
+      "objective": "Confirm input domains, registers, initialization and cleanup",
+      "evidence": [
+        "contracts/contract.json:correctness_scope",
+        "contracts/contract.json:invsqrt.circuit_rotation_encoding,dqi.classical_binding,chemistry.unused_address_behavior"
+      ],
+      "status": "verified"
+    },
+    {
+      "objective": "Resolve inverse-square-root encoding, rounding, tolerance and pricing",
+      "evidence": [
+        "contracts/contract.json:invsqrt.*",
+        "docs/evidence/contract-differential-20261101.json"
+      ],
+      "status": "verified"
+    },
+    {
+      "objective": "Resolve DQI field, sampler, failures and statistical scoring",
+      "evidence": [
+        "contracts/contract.json:dqi.*",
+        "docs/evidence/contract-differential-20261101.json",
+        "docs/evidence/official-baseline-20261101.json:verification.official_results.raw_verifier_results.dqi"
+      ],
+      "status": "verified"
+    },
+    {
+      "objective": "Resolve chemistry formats, reconstruction, symmetry and thresholds",
+      "evidence": [
+        "contracts/contract.json:chemistry.*",
+        "docs/evidence/baseline-chemistry-20261101.json",
+        "docs/evidence/chemistry-npy-roundtrip-20261101.json"
+      ],
+      "status": "verified"
+    },
+    {
+      "objective": "Confirm complete costs and published runtime/submission requirements",
+      "evidence": [
+        "contracts/contract.json:runtime_limits,invsqrt.rotation_price,chemistry.full_cost_accounting",
+        "docs/evidence/official-baseline-20261101.json:profiles"
+      ],
+      "status": "verified"
+    },
+    {
+      "objective": "Pin source versions/hashes and field-level provenance",
+      "evidence": [
+        "contracts/sources.lock.json",
+        "contracts/contract.json:official,supplementary_official",
+        "src/qcompile/contract.py"
+      ],
+      "status": "verified"
+    },
+    {
+      "objective": "Resolve critical discrepancies and pass contract validation",
+      "evidence": [
+        "contracts/contract.json:discrepancies",
+        "contract validation:ready,exit0,no blockers"
+      ],
+      "status": "verified"
+    }
+  ],
+  "checks": {
+    "pytest": {
+      "result": "272 passed",
+      "elapsed_seconds": 38.43,
+      "command": "OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 vendor/linux-env/bin/python -m pytest -q -p no:cacheprovider"
+    },
+    "pyright": {
+      "result": "0 errors, 0 warnings",
+      "command": "vendor/linux-env/bin/pyright --pythonpath vendor/linux-env/bin/python src/qcompile/contract.py src/qcompile/worker.py tests/test_contract_official.py tests/test_release_cli.py"
+    },
+    "ruff_lint": "passed",
+    "ruff_format": "34 files already formatted",
+    "openspec": "validate --all --strict: 1 passed, 0 failed",
+    "git_diff_check": "passed"
+  },
+  "full_baseline": {
+    "status": "passed",
+    "tier": "full",
+    "verified_shots": {
+      "invsqrt": 200540928,
+      "dqi": 102400,
+      "dfthcsos": 254464
+    },
+    "wall_seconds": 1076.590489996,
+    "source_report_sha256": "0278b3e35ad6f1763bf9fb5638ae8599f2a3cf67f64d69312d557fcdefaec58d"
+  },
+  "source_files_sha256": {
+    "src/qcompile/contract.py": "d0eef46c4c7e273b5cee6be0cadf44c1272818f965c20e344307108d716c50d8",
+    "src/qcompile/worker.py": "c53a751d6c5b8924d23610d26e64e99a952ac9054247d46fb521ff7be42aa5a2",
+    "tests/test_contract_official.py": "c03fe074b0a638ad9a1336e8ef513edc34352e45501c33d4234c04e8bb2473f6",
+    "tests/test_release_cli.py": "7bf1d07387952cd260014b61bd77d7b02eecd5fef61440b8f616616e9121d76e",
+    "pyproject.toml": "800e1627f298e79ee43699804e117b24d0329f693980499be3f01c09a21e0b94",
+    "uv.lock": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+    "contracts/contract.json": "9a2e0016cd6bdb1519cac904574ba2f8dfc0e01969a2d1129ce0f0d836852a8f",
+    "contracts/sources.lock.json": "853fed1590dd7d1b5579ebfcf19e3c6be357b2752655f678a5870ffb2dd8b1d4"
+  },
+  "scope_boundaries": "Local unmodified reference acceptance and reconciled contract; optimized candidate proofs, negative-control campaigns, opportunity selection, release certification and remote submission are subsequent work."
+}

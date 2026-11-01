@@ -1,0 +1,70 @@
+{
+  "status": "passed",
+  "scope": "official-source and backend differential controls; not full circuit acceptance",
+  "field": {
+    "degree": 12,
+    "modulus": 4179,
+    "primitive_element": 2,
+    "square_checks": 4096,
+    "inverse_checks": 4095
+  },
+  "invsqrt_phase_target_inputs": 3133452,
+  "invsqrt_tolerance_inputs": 3133452,
+  "tracked_phase_half_ties": {
+    "positive": 1,
+    "negative": 0
+  },
+  "cp_fixtures": [
+    {
+      "k": 0,
+      "n": 102400,
+      "official_upper": 0.0008660587301657926,
+      "independent_upper": 0.0008660587301657926
+    },
+    {
+      "k": 1,
+      "n": 102400,
+      "official_upper": 0.0009104197583220583,
+      "independent_upper": 0.0009104197583220583
+    },
+    {
+      "k": 7,
+      "n": 102400,
+      "official_upper": 0.0011066102023661202,
+      "independent_upper": 0.0011066102023661202
+    },
+    {
+      "k": 150,
+      "n": 102400,
+      "official_upper": 0.003629689869117568,
+      "independent_upper": 0.0036296898691175585
+    },
+    {
+      "k": 4500,
+      "n": 102400,
+      "official_upper": 0.05282491131892883,
+      "independent_upper": 0.0528249113189322
+    },
+    {
+      "k": 5000,
+      "n": 102400,
+      "official_upper": 0.0581314034517224,
+      "independent_upper": 0.05813140345172568
+    },
+    {
+      "k": 5500,
+      "n": 102400,
+      "official_upper": 0.06341360598848346,
+      "independent_upper": 0.06341360598848537
+    },
+    {
+      "k": 6000,
+      "n": 102400,
+      "official_upper": 0.06867459736656005,
+      "independent_upper": 0.0686745973665633
+    }
+  ],
+  "rotation_price_fixtures": 3,
+  "chemistry_givens_vectors": 3,
+  "elapsed_seconds": 11.147073314999943
+}

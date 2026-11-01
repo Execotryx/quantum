@@ -22,7 +22,7 @@ jobs:
       - run: uv run ruff check src tests
       - run: uv run ruff format --check src tests
       - run: uv run qcompile test --tier extended
-      - name: Confirm unresolved contract blocks release
+      - name: Confirm checkout without official assets blocks release
         shell: bash
         run: |
           set +e

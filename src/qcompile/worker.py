@@ -6,7 +6,9 @@ import os
 import resource
 import shutil
 import sys
+import time
 from pathlib import Path
+from typing import Any
 
 from .artifacts import validate_manifest
 from .io import read_json, write_json
@@ -49,7 +51,18 @@ def mapped_coverage(results, mapping):
 def mapped_confirmation(results, mapping):
     if mapping is None:
         return None
-    return {key: mapped_value(results[mapping["benchmark"]], mapping[key]) for key in ("n", "k")}
+    result = results[mapping["benchmark"]]
+    count_fields = mapping["k"]
+    if isinstance(count_fields, list):
+        if not count_fields or len(set(count_fields)) != len(count_fields):
+            raise ValueError("confirmation failure fields must be nonempty and distinct")
+        failures = sum(mapped_value(result, path) for path in count_fields)
+    else:
+        failures = mapped_value(result, count_fields)
+    observed = {"n": mapped_value(result, mapping["n"]), "k": failures}
+    if observed["k"] > observed["n"]:
+        raise ValueError("confirmation failures exceed completed shots")
+    return observed
 
 
 def main():
@@ -61,7 +74,7 @@ def main():
         sys.path.insert(0, str(Path(backend[role + "_root"]).resolve()))
     notebook = read_json(Path(backend["metric_notebook"]))
     source = "\n\n".join("".join(c["source"]) for c in notebook["cells"] if c["cell_type"] == "code")
-    scope = {"__name__": "qcompile_pinned_official_metric"}
+    scope: dict[str, Any] = {"__name__": "qcompile_pinned_official_metric"}
     exec(compile(source, backend["metric_notebook"], "exec"), scope)
     root = Path.cwd()
     inputs = root / "evaluation_inputs"
@@ -97,18 +110,36 @@ def main():
         "dfthcsos": "dfthcsos.verify",
     }.items():
         module = importlib.import_module(module_name)
-        if not Path(module.__file__).resolve().is_relative_to(Path(backend["verifiers_root"]).resolve()):
+        module_file = module.__file__
+        if module_file is None or not Path(module_file).resolve().is_relative_to(
+            Path(backend["verifiers_root"]).resolve()
+        ):
             raise ValueError(f"verifier import escaped pinned source root: {module_name}")
         original = module.verify
 
         def observe(*args, _original=original, _benchmark=benchmark, **kwargs):
+            started = time.monotonic()
             actual = _original(*args, **kwargs)
             raw_results[_benchmark] = actual
+            write_json(
+                root / f"benchmark-{_benchmark}.json",
+                {
+                    "kind": "official_benchmark_execution",
+                    "benchmark": _benchmark,
+                    "elapsed_seconds": time.monotonic() - started,
+                    "result": jsonable(actual),
+                    "claim": "actual verifier return; overall metric completion is recorded separately",
+                },
+            )
+            print(f"official benchmark completed: {_benchmark}", flush=True)
             return actual
 
-        module.verify = observe
+        setattr(module, "verify", observe)
     kickmix = importlib.import_module("kickmix")
-    if not Path(kickmix.__file__).resolve().is_relative_to(Path(backend["kickmix_root"]).resolve()):
+    kickmix_file = kickmix.__file__
+    if kickmix_file is None or not Path(kickmix_file).resolve().is_relative_to(
+        Path(backend["kickmix_root"]).resolve()
+    ):
         raise ValueError("kickmix import escaped pinned backend root")
     # Official reader, preflight, full traversal, scoring, exception behavior.
     scope["generate_standard_submission"](str(submission))

@@ -1,4 +1,43 @@
-# Implementation status — 30 October 2026
+# Implementation status — 1 November 2026
+
+**Current result: official contract ready and full original reference baseline
+accepted locally. All 35 fields are reconciled; contract validation has zero
+blockers and returns exit code 0.**
+
+- Inverse square root: 200540928 verified trajectories, cost 2076774.233715282.
+- DQI: 102400 verified shots, zero value/phase failures, cost 24439461432712.35.
+- Chemistry: 254464 verified shots, both residuals pass, cost 3355599588.3155375.
+- Full metric wall time: 1076.590 seconds; worker peak RSS: 7383588 KiB.
+- 272 tests pass; Pyright for all four changed Python files, Ruff lint/format and
+  strict OpenSpec validation pass.
+
+Evidence: [completed baseline](evidence/official-baseline-20261101.json) and
+[contract reconciliation](contract-reconciliation-01-11-2026-22-50-00.md).
+Step 1 is complete. Primitive/negative-control reviews and opportunity decisions
+remain prerequisites for optimization; no optimized artifact or remote result has
+been produced.
+
+## Earlier updates — 1 November 2026
+
+The entries below preserve progress observations made before the full run finished.
+
+**Contract reconciliation update — 1 November 2026:** all 33 source-defined
+contract/coverage fields are reconciled with pinned acquired source bytes. All
+270 tests and Pyright for changed Python files pass. Full baseline acceptance,
+measured profiles and chemistry baseline-validity evidence remain unresolved.
+The initial full execution was interrupted by a WSL shutdown/restart without a
+completion report. See the [reconciliation log](contract-reconciliation-01-11-2026-22-50-00.md)
+for exact conventions, differential evidence and execution status boundaries.
+
+**Update — 1 November 2026:** official competition data is now acquired locally;
+all 34 extracted files match the downloaded archive. Metric v10 is restored and
+hash-verified. The supplied Linux backend loads with Python 3.13 in Ubuntu WSL,
+a bounded 256-shot inverse-square-root reference check passes, and all 267 tests
+pass there. Full baseline acceptance and G0 reconciliation remain outstanding.
+The acquisition-blocker statements below describe the original implementation
+environment. See [acquisition evidence](asset-acquisition-01-11-2026-22-31-15.md).
+
+## Historical implementation record — 30 October 2026
 
 **The independent toolchain is implemented and tested. The research program and
 first improved competition release are not complete. G0 remains blocked.**

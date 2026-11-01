@@ -57,6 +57,14 @@ class Contract:
 
     def blockers(self, root: Path) -> list[str]:
         problems = []
+        source_hashes: dict[Path, str | None] = {}
+
+        def matches_source(source):
+            path = root / source.get("path", "")
+            if path not in source_hashes:
+                source_hashes[path] = sha256(path) if path.is_file() else None
+            return bool(source.get("sha256")) and source_hashes[path] == source["sha256"]
+
         if self.data.get("schema_version") != 1:
             problems.append("unsupported contract schema")
         for name in sorted(REQUIRED_FIELDS - self.data.get("fields", {}).keys()):
@@ -70,19 +78,35 @@ class Contract:
                 problems.append(f"required contract field cannot be optional: {name}")
             if field.get("status") == "reconciled":
                 source = field.get("official") or {}
-                path = root / source.get("path", "")
-                if not source.get("location") or not path.is_file() or sha256(path) != source.get("sha256"):
+                if not source.get("location") or not matches_source(source):
                     problems.append(f"missing or changed official provenance: {name}")
+                for source in field.get("supplementary_official", []):
+                    if not source.get("location") or not matches_source(source):
+                        problems.append(f"missing or changed supplementary provenance: {name}")
         for key in ("valid_inputs", "initialization", "measurements", "composition", "unused_addresses"):
             if not self.data.get("correctness_scope", {}).get(key):
                 problems.append(f"undeclared correctness assumption: {key}")
         for item in self.data.get("discrepancies", []):
-            if item.get("release_critical", True) and item.get("status") != "resolved":
-                problems.append(f"open discrepancy: {item['id']}")
-        for role in ("rules", "data", "evaluation", "metric", "starter_kit", "reference", "paper", "backend"):
+            if item.get("release_critical", True):
+                if item.get("status") != "resolved":
+                    problems.append(f"open discrepancy: {item['id']}")
+                else:
+                    source = item.get("official") or {}
+                    if not item.get("resolution") or not source.get("location") or not matches_source(source):
+                        problems.append(f"unverified discrepancy resolution: {item['id']}")
+        source_roles = {
+            "rules",
+            "data",
+            "evaluation",
+            "metric",
+            "starter_kit",
+            "reference",
+            "paper",
+            "backend",
+        } | self.data.get("sources", {}).keys()
+        for role in sorted(source_roles):
             source = self.data.get("sources", {}).get(role, {})
-            path = root / source.get("path", "")
-            if not source.get("origin") or not path.is_file() or sha256(path) != source.get("sha256"):
+            if not source.get("origin") or not matches_source(source):
                 problems.append(f"unpinned source: {role}")
         if not self.data.get("fields"):
             problems.append("contract contains no fields")
