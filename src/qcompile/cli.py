@@ -15,6 +15,7 @@ from .experiments import CandidateStore, validate_budget
 from .invsqrt.fixed import polynomial_model
 from .io import identity, read_json, sha256, write_json
 from .official import verify_candidate
+from .profiling import recorder
 from .reference.invsqrt import scan
 from .release import certify_release, package_release
 
@@ -36,6 +37,12 @@ def parser():
     base_verify = baseline.add_parser("verify")
     base_verify.add_argument("--artifact-dir", type=Path, required=True)
     _verification_options(base_verify)
+    campaign = baseline.add_parser("campaign")
+    campaign.add_argument("--config", required=True, type=Path)
+    campaign.add_argument("--output", required=True, type=Path)
+    freeze = baseline.add_parser("freeze")
+    freeze.add_argument("--campaign", required=True, type=Path)
+    freeze.add_argument("--output", required=True, type=Path)
     test = groups.add_parser("test")
     test.add_argument("--tier", choices=["unit", "extended", "official"], default="unit")
     experiment = groups.add_parser("experiment").add_subparsers(dest="action", required=True)
@@ -168,11 +175,18 @@ def dispatch(args):
             return acquire_metric(root / args.output, source["sha256"], source["version"])
         return pin_backend(args.metric, args.verifiers, args.kickmix, args.output)
     if args.group == "baseline":
-        artifacts = manifest(
-            args.artifact_dir,
-            origin="retained_reference",
-            provenance="unmodified acquired official reference; acceptance pending this run",
-        )
+        if args.action in {"campaign", "freeze"}:
+            from .campaign import freeze_campaign, run_campaign
+
+            if args.action == "campaign":
+                return run_campaign(root, read_json(args.config), args.output)
+            return freeze_campaign(args.campaign, args.output)
+        with recorder().stage("reference_manifest_hashing", "hashing", benchmark="all"):
+            artifacts = manifest(
+                args.artifact_dir,
+                origin="retained_reference",
+                provenance="unmodified acquired official reference; acceptance pending this run",
+            )
         return verify_candidate(
             artifacts,
             contract,

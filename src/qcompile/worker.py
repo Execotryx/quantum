@@ -13,6 +13,7 @@ from typing import Any
 from .artifacts import validate_manifest
 from .io import read_json, write_json
 from .official import validate_backend
+from .profiling import recorder
 from .reference.scoring import finite_positive
 
 
@@ -66,16 +67,19 @@ def mapped_confirmation(results, mapping):
 
 
 def main():
+    profile = recorder()
     request = read_json(Path(sys.argv[1]))
     backend = request["backend"]
-    validate_backend(backend)
-    validate_manifest(request["artifacts"])
+    with profile.stage("worker_input_integrity", "hashing", benchmark="all"):
+        validate_backend(backend)
+        validate_manifest(request["artifacts"])
     for role in ("kickmix", "verifiers"):
         sys.path.insert(0, str(Path(backend[role + "_root"]).resolve()))
-    notebook = read_json(Path(backend["metric_notebook"]))
-    source = "\n\n".join("".join(c["source"]) for c in notebook["cells"] if c["cell_type"] == "code")
-    scope: dict[str, Any] = {"__name__": "qcompile_pinned_official_metric"}
-    exec(compile(source, backend["metric_notebook"], "exec"), scope)
+    with profile.stage("metric_notebook_loading", "parsing", benchmark="all"):
+        notebook = read_json(Path(backend["metric_notebook"]))
+        source = "\n\n".join("".join(c["source"]) for c in notebook["cells"] if c["cell_type"] == "code")
+        scope: dict[str, Any] = {"__name__": "qcompile_pinned_official_metric"}
+        exec(compile(source, backend["metric_notebook"], "exec"), scope)
     root = Path.cwd()
     inputs = root / "evaluation_inputs"
     inputs.mkdir()
@@ -98,10 +102,24 @@ def main():
             )
     submission = root / "submission"
     submission.mkdir()
-    for name, record in request["artifacts"].items():
-        path = submission / name
-        path.parent.mkdir(parents=True, exist_ok=True)
-        shutil.copyfile(record["path"], path)
+    with profile.stage("reference_artifact_copy", "copying", benchmark="all"):
+        for name, record in request["artifacts"].items():
+            path = submission / name
+            path.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(record["path"], path)
+    if profile.directory is not None:
+        for reader_name in ("read_circuit", "read_npz"):
+            original_reader = scope[reader_name]
+
+            def observed_reader(path, *args, _reader=original_reader, **kwargs):
+                path = Path(path)
+                benchmark = path.stem if path.stem in {"invsqrt", "dqi"} else "dfthcsos"
+                with profile.stage(
+                    f"parse:{path.name}", "parsing", benchmark=benchmark, input_bytes=path.stat().st_size
+                ):
+                    return _reader(path, *args, **kwargs)
+
+            scope[reader_name] = observed_reader
     # Observe real return dictionaries without replacing any verifier arithmetic.
     raw_results = {}
     for benchmark, module_name in {
@@ -116,10 +134,44 @@ def main():
         ):
             raise ValueError(f"verifier import escaped pinned source root: {module_name}")
         original = module.verify
+        if profile.directory is not None:
+            helpers = {
+                "invsqrt": [
+                    ("_circuit_sha256", "hashing"),
+                    ("reference_values", "targets"),
+                    ("_run_parallel", "simulation"),
+                    ("rotation_t_count", "scoring"),
+                ],
+                "dqi": [
+                    ("_circuit_sha256", "hashing"),
+                    ("_run_parallel", "simulation"),
+                    ("clopper_pearson_upper_bound", "scoring"),
+                    ("repetition_overhead", "scoring"),
+                ],
+                "dfthcsos": [
+                    ("submission_sha256", "hashing"),
+                    ("load_inputs", "reference_loading"),
+                    ("recover_words_from_circuits", "simulation"),
+                    ("evaluate_words", "scoring"),
+                    ("resource_costs", "scoring"),
+                ],
+            }[benchmark]
+            for helper_name, category in helpers:
+                setattr(
+                    module,
+                    helper_name,
+                    profile.wrap(
+                        getattr(module, helper_name),
+                        f"{category}:{benchmark}:{helper_name}",
+                        category,
+                        benchmark=benchmark,
+                    ),
+                )
 
         def observe(*args, _original=original, _benchmark=benchmark, **kwargs):
             started = time.monotonic()
-            actual = _original(*args, **kwargs)
+            with profile.stage(f"verify:{_benchmark}", "verification", benchmark=_benchmark):
+                actual = _original(*args, **kwargs)
             raw_results[_benchmark] = actual
             write_json(
                 root / f"benchmark-{_benchmark}.json",
@@ -142,7 +194,8 @@ def main():
     ):
         raise ValueError("kickmix import escaped pinned backend root")
     # Official reader, preflight, full traversal, scoring, exception behavior.
-    scope["generate_standard_submission"](str(submission))
+    with profile.stage("official_metric", "orchestration", benchmark="all"):
+        scope["generate_standard_submission"](str(submission))
     with (root / "submission.csv").open(newline="") as stream:
         rows = list(csv.DictReader(stream))
     if len(rows) != 3 or {int(row["row_id"]) for row in rows} != {0, 1, 2}:
