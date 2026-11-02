@@ -1,0 +1,26 @@
+{
+  "scope": "x=1 bounded diagnostic problem with the actual verifier",
+  "seed": 3103,
+  "records": [
+    {
+      "fixture": "valid_x1",
+      "observed": "PASS",
+      "verified_shots": 64
+    },
+    {
+      "fixture": "phase",
+      "expected": "phase error",
+      "observed": "x=1: phase error -5.000e-01 turns exceeds tolerance 5.960e-08."
+    },
+    {
+      "fixture": "input",
+      "expected": "x was not restored",
+      "observed": "x was not restored."
+    },
+    {
+      "fixture": "scratch",
+      "expected": "did not return to",
+      "observed": "Scratch qubit q6 did not return to |0>."
+    }
+  ]
+}

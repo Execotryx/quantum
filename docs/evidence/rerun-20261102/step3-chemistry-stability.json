@@ -1,0 +1,39 @@
+{
+  "words_sha256": "6271ed6e5c00183df1baf78b7d7135ba3264b9e0a41e9c9e08725032ce972ff2",
+  "full_reference_controls": [
+    {
+      "transformation": "sign_and_one_body_permutation",
+      "absolute_tolerance": 2e-09,
+      "metric_absolute_differences": {
+        "error_1": 9.540979117872439e-17,
+        "error_2": 0.0,
+        "Lambda": 0.0,
+        "E_SOS": 0.0,
+        "E_gap": 0.0,
+        "lambda_eff": 0.0
+      }
+    },
+    {
+      "transformation": "single_component_perturbation_1e-12",
+      "absolute_tolerance": 2e-08,
+      "metric_absolute_differences": {
+        "error_1": 9.377481430261625e-15,
+        "error_2": 0.0,
+        "Lambda": 0.0,
+        "E_SOS": 0.0,
+        "E_gap": 0.0,
+        "lambda_eff": 0.0
+      }
+    }
+  ],
+  "near_degenerate_eigenvalue_separation": 1e-12,
+  "near_degenerate_reconstruction_errors": [
+    0.0,
+    0.0
+  ],
+  "zero_component_vector": [
+    1.0,
+    0.0,
+    0.0
+  ]
+}

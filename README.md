@@ -1,33 +1,19 @@
 # Quantum compilation experiments
 
-A Python toolchain implementing the independently executable parts of the
-[implementation plan](docs/implementation-plan.md) for Google's Verifiable Quantum
-Circuit Compilation competition.
+A Python toolchain for reproducible quantum-circuit compilation experiments,
+independent mathematical checks, and local verification against pinned evaluators.
 
-**Current status: G0/G1 independent validation passed; step-3 evidence frozen.
-No optimized submission or remote acceptance is claimed.**
-See the [step-3 completion audit](docs/step3-completion-02-11-2026-13-20-23.md)
-for objective coverage, native defect controls and the frozen artifact identity.
-All 34 competition files are available locally and byte-checked. The supplied
-backend runs in Ubuntu WSL with Python 3.13. See the
-[contract reconciliation](docs/contract-reconciliation-01-11-2026-22-50-00.md)
-for source evidence and the completed baseline measurements.
-The [step-2 completion report](docs/baseline-completion-02-11-2026-03-02-06.md)
-records three clean-source full runs, exact same-salt costs, salt variation,
-stage/resource profiles, planning budgets and the verified frozen-bundle identity.
-
-The original competition-data API attempt returned HTTP 401. Manual acquisition
-resolved that access blocker. The pinned v10 metric has now accepted the original
-references at full strength, with complete coverage counters and retained costs.
-Optimization still requires the plan's independent primitive/negative-control
-checks and opportunity decision; this is a verified baseline, not an improvement.
-See [implementation status](docs/implementation-status.md) for completed and deferred work.
+**Current status: G0/G1 independent validation passed; step-3 evidence frozen.**
+The [completion audit](docs/step3-completion-02-11-2026-13-20-23.md) records
+validation coverage, native defect controls, and the frozen artifact identity.
+The [implementation status](docs/implementation-status.md) describes completed
+work and the remaining optimization stages.
 
 ## Install and check
 
-Run these commands from the repository root in Linux (Ubuntu WSL on Windows),
-using [uv](https://docs.astral.sh/uv/). Independent checks also support Python 3.12
-on Linux/macOS; the supplied official backend requires Linux and Python 3.13:
+Run from the repository root in Linux or Ubuntu WSL using
+[uv](https://docs.astral.sh/uv/). The native backend requires Linux and Python 3.13.
+Independent checks also support Python 3.12 on Linux/macOS.
 
 ```bash
 export UV_PROJECT_ENVIRONMENT=vendor/linux-env
@@ -39,110 +25,81 @@ uv run ruff format --check src tests
 uv run qcompile contract validate
 ```
 
-Contract validation returns exit code **0** with the acquired pinned inputs and
-completed baseline evidence. A checkout without those ignored official assets
-returns **2** and names the missing source pins. The extended
-tier also scans every one of the 3,133,452 inverse-square-root inputs as a harness
-control. Feeding the mathematical target into that control does not validate a
-candidate circuit.
+Contract validation returns exit code **0** when the pinned inputs and required
+evidence are available. It returns **2** and identifies missing or changed inputs
+when provenance checks fail. The extended tier scans all 3,133,452 valid
+inverse-square-root inputs as a numerical harness control.
 
-## What is implemented
+## Implemented components
 
-| Module | Behavior |
+| Component | Behavior |
 |---|---|
-| `contract` / `assets` | Per-field provenance, source hashes, immutable official-metric acquisition and backend inventories, explicit G0 blockers |
-| `reference.invsqrt` | Integer brackets and nearest-even diagnostic, circular phase comparison, Decimal checks, chunked exhaustive conservative margin scan |
-| `invsqrt.fixed` | Explicit signedness, widths, rounding, overflow, Horner models and optional Newton step |
-| `reference.scoring` | Margin-aware rotation price; stable extreme-tail Clopper–Pearson bound and repetition penalty; constrained chemistry and three-task objectives |
-| `dqi` / `reference.field` | Independent table/polynomial field backends; classical BM and EEA locator controls; syndrome recovery and variable-mask parity |
-| `chemistry` | Bounded NPZ schema preflight, ordered rooted trees, parameterized angle reconstruction, XOR batching/reversal, streamed shifted residual norms and workspace accounting |
-| `official` / `worker` | Subprocess calls to the actual pinned metric; raw diagnostics, actual verifier returns, local seed roles, source/environment identity and timeout handling |
-| `campaign` / `profiling` | Preregistered clean-source A,A,B baseline runs, nested stage and external process-tree measurements, measured budgets and verified frozen evidence bundles |
-| `experiments` | Candidate states, immutable artifact identities/provenance, bounded diagnostic registration, opportunity decisions and one-use confirmation history |
-| `artifacts` / `release` | Deterministic NPZ/ZIP, bounded safe extraction, two independent recipe builds, extracted-archive verification and guarded local certification |
+| Contracts and assets | Source hashes, per-field provenance, backend inventories, and validation gates |
+| Inverse square root | Integer target brackets, circular phase comparison, high-precision checks, and exhaustive margin scans |
+| Fixed-point arithmetic | Explicit widths, signedness, rounding, overflow, Horner models, and Newton steps |
+| Resource models | Margin-aware rotation pricing, confidence bounds, repetition penalties, and complete modeled costs |
+| DQI | Independent finite-field backends, BM/EEA decoder controls, syndrome recovery, and variable-mask parity |
+| Chemistry | NPZ preflight, ordered trees, angle reconstruction, XOR batching, residual calculations, and workspace accounting |
+| Verification adapters | Pinned native execution, raw diagnostics, actual coverage counters, environment identity, and timeouts |
+| Profiling | Preregistered baseline repetitions, stage timings, process-tree memory, planning budgets, and frozen evidence |
+| Experiments | Candidate registration, evidence-bound state transitions, bounded experiments, and fresh confirmation history |
+| Artifact builds | Deterministic NPZ/ZIP output, safe extraction, independent recipe builds, and local verification certificates |
 
-Mathematical helpers remain **independent models**, not circuit acceptance evidence.
-Their phase, field, selected scoring and angle conventions have been checked
-against the pinned official sources. Chemistry helpers still take explicit tree
-roots and angular conversions; the official contract uses root 0 and radians =
-pi*word/2^(brot-1). The concrete 76-orbital schema is now source-reconciled.
+Mathematical and native checks retain their input assumptions, coverage, and
+provenance. The validation tools under `tools/` compare independent calculations
+with the pinned evaluators and exercise known-invalid fixtures.
 
-## Acquire and reconcile official inputs
+## Configure local inputs
 
-1. Download the assets from the official
-   [competition Data page](https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/data)
-   using an account with access. Preserve the original archive and its bytes. Keep
-   credentials outside this repository. Acquisition is not competition submission.
-2. Retrieve the exact reviewed metric:
+Install the reviewed evaluator notebook, verifier sources, compatible native
+backend, and reference artifacts at local paths. Preserve their original bytes
+and match the source identities in `contracts/sources.lock.json`. Input files
+are kept in ignored local storage.
 
-   ```bash
-   uv run qcompile assets acquire-metric
-   ```
+```bash
+uv run qcompile assets pin-backend \
+  --metric /absolute/path/to/metric.ipynb \
+  --verifiers /absolute/path/to/verifiers \
+  --kickmix /absolute/path/to/kickmix \
+  --output vendor/backend.json
 
-   Existing files are preserved. A changed notebook version or hash is rejected
-   until explicitly reviewed. The pinned origin and hash are in
-   `contracts/sources.lock.json`; upstream assets are not redistributed here.
-3. Install the actual compatible kickmix build, then inventory the acquired code:
+uv run qcompile baseline verify \
+  --artifact-dir /absolute/path/to/reference-artifacts \
+  --backend vendor/backend.json --tier full \
+  --seed-policy configs/local-seed.json --output runs/baseline-full
+```
 
-   ```bash
-   uv run qcompile assets pin-backend \
-     --metric vendor/metric/google-quantum-ai-metric.ipynb \
-     --verifiers /absolute/path/to/official/verifiers \
-     --kickmix /absolute/path/to/official/kickmix \
-     --output vendor/backend.json
-   ```
+Native binary compatibility must be established on the target machine. Keep
+actual coverage counters and raw verifier results with each run. Full-strength
+verification provides the baseline evidence used by later experiment gates.
+See [operator formats](docs/operator-formats.md) for configuration and record schemas.
 
-   The backend configuration must identify the actual importable directories.
-   Native binary compatibility must be established on the target machine. The
-   independent Python dependency lock is not an official kickmix environment lock.
-4. Run the **unmodified reference components**, preserving all verifier diagnostics:
+## Experiments and profiling
 
-   ```bash
-   uv run qcompile baseline verify \
-     --artifact-dir /absolute/path/to/official/sample_submission \
-     --backend vendor/backend.json --tier full \
-     --seed-policy configs/local-seed.json --output runs/baseline-full
-   ```
-
-   This intentionally works before contract reconciliation so G0 can obtain its
-   evidence. `smoke` reduces only the official metric's DQI/chemistry shot counts;
-   inverse square root retains its full official coverage. Smoke never qualifies
-   as release evidence. All salts here are local, unrelated to private Kaggle salts.
-5. Resolve each contract field against actual source symbols and measured baseline
-   results. Preserve disagreements. Pin every required source, compiler/backend
-   identity, actual coverage counters and array/sampler conventions. Populate
-   `coverage_mapping` / `confirmation_mapping` in the backend only after inspecting
-   the real return dictionaries; [operator formats](docs/operator-formats.md) explains
-   their structure. Never infer missing counters from a successful process alone.
-
-## Development and release
-
-Step-2 profiling uses `qcompile baseline campaign` from a clean committed Linux
+Baseline profiling uses `qcompile baseline campaign` from a clean committed Linux
 checkout, followed by `qcompile baseline freeze`. The campaign preregisters A,A,B
-salts, full-strength coverage and resource limits; it delegates to the actual
-pinned metric and retains raw stage/process-tree measurements. See the
-[campaign guide](docs/baseline-campaign-02-11-2026-01-19-10.md) for the exact scope,
-sampling limits and frozen-bundle format.
+salts, coverage, and resource limits. It retains stage/process-tree measurements
+and verifies deterministic evidence archives. The
+[campaign guide](docs/baseline-campaign-02-11-2026-01-19-10.md) explains measurement
+scope, sampling limits, and archive contents.
 
-A runnable **negative numerical diagnostic** is provided:
+A deliberately inaccurate numerical model provides a diagnostic example.
 
 ```bash
 uv run qcompile experiment run --config configs/invsqrt-initial.json
 ```
 
-It evaluates a deliberately inaccurate constant model over inputs 1–1024 and
-records nonpositive margins. `numerical_diagnostic_completed` means the experiment
-finished, not that the model passed. Registrations, failures, environment details,
-and reports are retained under a content-derived run ID; identical registrations
-are not overwritten. This is not the plan's post-G0 opportunity screen.
+It evaluates a constant model over inputs 1–1024 and records nonpositive margins.
+Registrations, failures, environment details, and reports use content-derived run
+identities. The next research stage is the bounded opportunity screen in the
+[implementation plan](docs/implementation-plan.md).
 
-Candidate commands support registration, state changes with evidence, actual
-verification, and preregistered confirmation. `candidate advance` consumes the
-hash-bound report, while `candidate verify` records a run without silently selecting
-it. Confirmation currently supports **one optimized benchmark per candidate**, the
-first-release scope; all other components retain validated reference bytes.
-Combining multiple independently optimized benchmarks needs an additional composition
-workflow. Do not relabel generated bytes as references to bypass confirmation.
+## Candidate verification and reproducible builds
+
+Candidate commands register artifacts, consume evidence for state changes, run
+verification, and record preregistered confirmation. The first build workflow
+supports one optimized benchmark per candidate, with validated references for
+the other components.
 
 ```bash
 uv run qcompile candidate register --selection /path/to/candidate-selection.json
@@ -158,16 +115,7 @@ uv run qcompile release verify --release releases/RELEASE_ID --tier full \
   --supporting-evidence /path/to/supporting-evidence.json --output runs/release-full
 ```
 
-These commands block until their prerequisites are satisfied. The release builder
-reruns each generated component's pinned recipe in two new directories; it cannot
-count two copies of generated files as independent builds. It copies retained
-reference bytes unchanged. It then builds deterministic ZIPs, compares them, and
-verifies a fresh extraction of the frozen ZIP. A local certificate requires actual
-coverage, cost improvement and supporting numerical, mutation, primitive, stability
-and opportunity evidence. It cannot assert Kaggle acceptance. There is no automatic
-remote-submit command.
-
-See [operator formats](docs/operator-formats.md) for JSON records and the exact
-limits of these infrastructure checks. The circuit generators, official-distribution
-sampler, full chemistry reconstruction/matching and optimization searches remain
-remaining implementation work; none is replaced with a mock backend.
+The builder runs each pinned recipe in two fresh directories, compares the
+resulting archives, and verifies a fresh extraction. Local certification requires
+complete coverage, measured cost improvement, and supporting numerical, primitive,
+mutation, stability, confirmation, and opportunity evidence.
