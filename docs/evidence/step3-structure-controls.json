@@ -1,0 +1,35 @@
+{
+  "entry_point": "evaluate_dfthc_angle_words",
+  "controls": [
+    {
+      "fixture": "floating_words",
+      "expected": "integers",
+      "observed": "angle_words must contain integers"
+    },
+    {
+      "fixture": "word_out_of_range",
+      "expected": "[0, 2**brot)",
+      "observed": "angle_words must lie in [0, 2**brot)"
+    },
+    {
+      "fixture": "missing_angle",
+      "expected": "shape",
+      "observed": "angle_words must have shape (N + R*B, N - 1)"
+    },
+    {
+      "fixture": "child_before_parent",
+      "expected": "parent-before-child",
+      "observed": "tree_edges must form a tree rooted at 0 in parent-before-child order"
+    },
+    {
+      "fixture": "cycle",
+      "expected": "parent-before-child",
+      "observed": "tree_edges must form a tree rooted at 0 in parent-before-child order"
+    },
+    {
+      "fixture": "illegal_vertex",
+      "expected": "[0, N)",
+      "observed": "tree_edges vertices must lie in [0, N)"
+    }
+  ]
+}

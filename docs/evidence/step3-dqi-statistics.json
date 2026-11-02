@@ -1,0 +1,68 @@
+{
+  "verifier_sha256": "f14274bc0943fb9769ddb01131be6063191a15009fe1caf1d4bdd9fd25194e65",
+  "shots": 102400,
+  "bounds": [
+    {
+      "failures": 0,
+      "independent": 0.0008660587301657926,
+      "official": 0.0008660587301657926
+    },
+    {
+      "failures": 1,
+      "independent": 0.0009104197583220583,
+      "official": 0.0009104197583220583
+    },
+    {
+      "failures": 2,
+      "independent": 0.0009488155716079552,
+      "official": 0.0009488155716079551
+    },
+    {
+      "failures": 35,
+      "independent": 0.0017390831928681522,
+      "official": 0.0017390831928681522
+    },
+    {
+      "failures": 100,
+      "independent": 0.0028647595124074053,
+      "official": 0.002864759512407409
+    },
+    {
+      "failures": 4000,
+      "independent": 0.0474901769853525,
+      "official": 0.0474901769853491
+    },
+    {
+      "failures": 6400,
+      "independent": 0.072869783925978,
+      "official": 0.07286978392597411
+    },
+    {
+      "failures": 102400,
+      "independent": 1,
+      "official": 1
+    }
+  ],
+  "penalties": [
+    {
+      "epsilon": 0,
+      "independent": 1,
+      "official": 1
+    },
+    {
+      "epsilon": 0.0008660587301657926,
+      "independent": 1.1912604648115832,
+      "official": 1.1912604648115832
+    },
+    {
+      "epsilon": 0.05,
+      "independent": 12.781462739579444,
+      "official": 12.781462739579426
+    },
+    {
+      "epsilon": 0.062499999068677425,
+      "independent": 186065278.44900247,
+      "official": 186065279.14214966
+    }
+  ]
+}
