@@ -1,5 +1,8 @@
 # Project guidance
 
+Step-3 tools under `tools/` bind differential and primitive evidence to pinned
+upstream hashes. Keep fixture coverage and expected mutation diagnostics explicit.
+
 Follow `AGENTS.md` for contract provenance, measured gate boundaries, official DQI
 failure-counter mappings, Python 3.13/WSL validation and dated change logs.
 

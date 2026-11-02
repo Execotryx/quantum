@@ -4,8 +4,10 @@ A Python toolchain implementing the independently executable parts of the
 [implementation plan](docs/implementation-plan.md) for Google's Verifiable Quantum
 Circuit Compilation competition.
 
-**Current status: official contract ready; step-2 reference campaign completed and frozen.
+**Current status: G0/G1 independent validation passed; step-3 evidence frozen.
 No optimized submission or remote acceptance is claimed.**
+See the [step-3 completion audit](docs/step3-completion-02-11-2026-13-20-23.md)
+for objective coverage, native defect controls and the frozen artifact identity.
 All 34 competition files are available locally and byte-checked. The supplied
 backend runs in Ubuntu WSL with Python 3.13. See the
 [contract reconciliation](docs/contract-reconciliation-01-11-2026-22-50-00.md)

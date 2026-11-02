@@ -1,0 +1,11 @@
+{
+  "all_members_verified": true,
+  "bundle": "/mnt/e/sources/python/quantum/releases/step3-validation-v1/validation.zip",
+  "gates": {
+    "G0": "passed",
+    "G1": "passed"
+  },
+  "members": 29,
+  "sha256": "bc7c5216b9dd589974eabbcbc791742d2b4207e2943b3998f08ecf9ced516745",
+  "status": "frozen"
+}

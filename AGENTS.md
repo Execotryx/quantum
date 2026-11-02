@@ -1,5 +1,9 @@
 # Project instructions
 
+- Step-3 differential tools pin upstream/native hashes and retain explicit fixture
+  coverage. Primitive evidence must state initialization, phase and composition
+  assumptions and record expected mutation diagnostics before closing gates.
+
 - Official verifier sources are authoritative; record file hashes and defining
   symbols in `contracts/contract.json`, including supplementary sources for
   imported constants or cross-file conventions.

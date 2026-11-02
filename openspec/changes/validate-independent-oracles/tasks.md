@@ -1,0 +1,6 @@
+- [x] Compare inverse-square-root phases across the full domain and reconcile rotation prices.
+- [x] Compare field, decoder, mask and extreme-tail cost fixtures with official DQI behavior.
+- [x] Reconstruct reference chemistry words, tensors, residuals, energy and costs and exercise legal representation variations.
+- [x] Validate primitive phase, register, cleanup and composition assumptions.
+- [x] Run known-invalid fixtures and retain expected and observed diagnostics.
+- [x] Freeze evidence and audit each G0/G1 exit condition.
