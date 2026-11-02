@@ -1,0 +1,274 @@
+{
+  "step2_bundle": {
+    "bundle": "/mnt/e/sources/python/quantum/vendor/rerun-source-20261102-retry1/releases/baseline-v1/baseline-v1.zip",
+    "bytes": 130517653,
+    "clean_source_restore_verified": true,
+    "independent_build_identical": true,
+    "members": 91,
+    "sha256": "b1da1f4068cd00265014308a3488329a7a38a16883d309b5591ed99f52a097fe",
+    "status": "frozen",
+    "verified_all_members": true,
+    "version": "baseline-v1-20261102"
+  },
+  "orchestration_sha256": "2c6a07863a7cb810b8edd2637c4459d8d00f340eebe76665557093f35ba8034c",
+  "archive_sha256": "908ed2e587ca4ed500ddac7b6da4b473af3c8779c983d5022de620b357791a30",
+  "verified_asset_count": 34,
+  "contract_status": "ready",
+  "test_suite": {
+    "junit_path": "vendor/rerun-source-20261102-retry1/runs/step3-tests.xml",
+    "skipped": 0,
+    "errors": 0,
+    "failures": 0,
+    "passed": 291
+  },
+  "runs": [
+    {
+      "peak_pss_plus_swap_bytes": 9596366848,
+      "id": "A1",
+      "costs_identical_to_prior": true,
+      "wall_seconds": 737.515262011,
+      "costs": {
+        "dfthcsos": 3355599588.3155375,
+        "dqi": 24439461432712.35,
+        "invsqrt": 2076774.233715282
+      },
+      "complete": true,
+      "coverage": {
+        "dfthcsos": {
+          "completed": 254464,
+          "expected": 254464
+        },
+        "dqi": {
+          "completed": 102400,
+          "expected": 102400
+        },
+        "invsqrt": {
+          "completed": 200540928,
+          "expected": 200540928
+        }
+      },
+      "status": "passed"
+    },
+    {
+      "peak_pss_plus_swap_bytes": 9591779328,
+      "id": "A2",
+      "costs_identical_to_prior": true,
+      "wall_seconds": 719.3532194709999,
+      "costs": {
+        "dfthcsos": 3355599588.3155375,
+        "dqi": 24439461432712.35,
+        "invsqrt": 2076774.233715282
+      },
+      "complete": true,
+      "coverage": {
+        "dfthcsos": {
+          "completed": 254464,
+          "expected": 254464
+        },
+        "dqi": {
+          "completed": 102400,
+          "expected": 102400
+        },
+        "invsqrt": {
+          "completed": 200540928,
+          "expected": 200540928
+        }
+      },
+      "status": "passed"
+    },
+    {
+      "peak_pss_plus_swap_bytes": 9597223936,
+      "id": "B1",
+      "costs_identical_to_prior": true,
+      "wall_seconds": 786.112130281,
+      "costs": {
+        "dfthcsos": 3355599588.3155375,
+        "dqi": 24439474367740.598,
+        "invsqrt": 2076774.233715282
+      },
+      "complete": true,
+      "coverage": {
+        "dfthcsos": {
+          "completed": 254464,
+          "expected": 254464
+        },
+        "dqi": {
+          "completed": 102400,
+          "expected": 102400
+        },
+        "invsqrt": {
+          "completed": 200540928,
+          "expected": 200540928
+        }
+      },
+      "status": "passed"
+    }
+  ],
+  "step3_bundle": {
+    "all_members_verified": true,
+    "bundle": "/mnt/e/sources/python/quantum/vendor/rerun-source-20261102-retry1/releases/step3-validation-v1/validation.zip",
+    "gates": {
+      "G0": "passed",
+      "G1": "passed"
+    },
+    "members": 29,
+    "sha256": "dade7adcb99c5da69a4c41b2a0feab00622d15c6a367ff690014dc65361c6578",
+    "status": "frozen"
+  },
+  "created_at": "2026-11-02T14:43:44.8630180+05:00",
+  "temporary_swap_removed": true,
+  "status": "passed",
+  "source_revision": "cc828f9a87ee5751602684c5780c678915deab49",
+  "runtime_allocation": "7.6 GiB RAM plus 10 GiB swap during execution; original 2 GiB swap restored afterward",
+  "analysis": {
+    "cost_observed_ranges": {
+      "dfthcsos": {
+        "max": 3355599588.3155375,
+        "min": 3355599588.3155375,
+        "relative_range": 0.0
+      },
+      "dqi": {
+        "max": 24439474367740.598,
+        "min": 24439461432712.35,
+        "relative_range": 5.292681379950601E-07
+      },
+      "invsqrt": {
+        "max": 2076774.233715282,
+        "min": 2076774.233715282,
+        "relative_range": 0.0
+      }
+    },
+    "cpu_observed_seconds": {
+      "max": 1275.3200000000004,
+      "min": 1218.6599999999996
+    },
+    "normalization": [
+      {
+        "details": {
+          "dfthcsos": {
+            "cost": 3355599588.3155375,
+            "improvement_over_baseline": 1.0,
+            "seconds": 58.80992390799997
+          },
+          "dqi": {
+            "cost": 24439461432712.35,
+            "improvement_over_baseline": 1.0,
+            "seconds": 162.13161788600019
+          },
+          "invsqrt": {
+            "cost": 2076774.233715282,
+            "improvement_over_baseline": 1.0,
+            "seconds": 437.8864196940001
+          }
+        },
+        "scope": "exact official score function; local A1 reference costs, no private-split baseline",
+        "score": 1.0
+      },
+      {
+        "details": {
+          "dfthcsos": {
+            "cost": 3355599588.3155375,
+            "improvement_over_baseline": 1.0,
+            "seconds": 58.54987976100006
+          },
+          "dqi": {
+            "cost": 24439461432712.35,
+            "improvement_over_baseline": 1.0,
+            "seconds": 154.88548020500002
+          },
+          "invsqrt": {
+            "cost": 2076774.233715282,
+            "improvement_over_baseline": 1.0,
+            "seconds": 434.05007156099987
+          }
+        },
+        "scope": "exact official score function; local A1 reference costs, no private-split baseline",
+        "score": 1.0
+      },
+      {
+        "details": {
+          "dfthcsos": {
+            "cost": 3355599588.3155375,
+            "improvement_over_baseline": 1.0,
+            "seconds": 59.13207508100004
+          },
+          "dqi": {
+            "cost": 24439474367740.598,
+            "improvement_over_baseline": 0.9999994707321421,
+            "seconds": 222.1200966219999
+          },
+          "invsqrt": {
+            "cost": 2076774.233715282,
+            "improvement_over_baseline": 1.0,
+            "seconds": 437.1366899900004
+          }
+        },
+        "scope": "exact official score function; local A1 reference costs, no private-split baseline",
+        "score": 0.9999998235773496
+      }
+    ],
+    "planning_budget": {
+      "cpu_cores": 2,
+      "cpu_seconds_per_full_run": 2591,
+      "disk_bytes_per_retained_run": 1820376322,
+      "memory_reservation_bytes": 11996529920,
+      "policy": "observed maxima times preregistered headroom; not official limits, measured minima, or statistical quantiles",
+      "wall_seconds_per_full_run": 1573
+    },
+    "same_salt_costs_identical": true,
+    "sampled_pss_observed_bytes": {
+      "max": 7538587648,
+      "min": 7485409280
+    },
+    "scope": "three serial observations; order/cache effects are recorded, not controlled; sampled memory can miss short peaks",
+    "throughput": {
+      "A1": {
+        "dfthcsos": {
+          "simulation_and_checks_seconds": 33.819857161,
+          "verified_shots_per_second": 7524.100376551558
+        },
+        "dqi": {
+          "simulation_and_checks_seconds": 139.547078206,
+          "verified_shots_per_second": 733.8025368674267
+        },
+        "invsqrt": {
+          "simulation_and_checks_seconds": 435.945160673,
+          "verified_shots_per_second": 460014.1166618538
+        }
+      },
+      "A2": {
+        "dfthcsos": {
+          "simulation_and_checks_seconds": 33.748560996,
+          "verified_shots_per_second": 7539.99555803757
+        },
+        "dqi": {
+          "simulation_and_checks_seconds": 138.50356148,
+          "verified_shots_per_second": 739.3311688579691
+        },
+        "invsqrt": {
+          "simulation_and_checks_seconds": 432.174144196,
+          "verified_shots_per_second": 464028.05603532476
+        }
+      },
+      "B1": {
+        "dfthcsos": {
+          "simulation_and_checks_seconds": 34.212045842,
+          "verified_shots_per_second": 7437.848095234643
+        },
+        "dqi": {
+          "simulation_and_checks_seconds": 163.562605852,
+          "verified_shots_per_second": 626.0599693102033
+        },
+        "invsqrt": {
+          "simulation_and_checks_seconds": 435.338482868,
+          "verified_shots_per_second": 460655.18186869426
+        }
+      }
+    },
+    "wall_observed_seconds": {
+      "max": 786.112130281,
+      "min": 719.3532194709999
+    }
+  },
+  "raw_job_directory": "runs/rerun-steps-20261102-retry1"
+}
