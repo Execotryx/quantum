@@ -1,0 +1,11 @@
+{
+  "vectors": 3976,
+  "angles_per_vector": 75,
+  "shots_per_address": 64,
+  "seed": 3103,
+  "brot": 12,
+  "forward_reverse_mean_toffoli": 79480.0,
+  "max_vector_discrepancy": 0.0,
+  "words_sha256": "6271ed6e5c00183df1baf78b7d7135ba3264b9e0a41e9c9e08725032ce972ff2",
+  "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69"
+}

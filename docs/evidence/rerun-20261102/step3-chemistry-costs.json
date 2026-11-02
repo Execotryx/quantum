@@ -1,0 +1,95 @@
+{
+  "independent_components": {
+    "outer_state_prep_toffoli": 846,
+    "inner_state_prep_toffoli": 9461,
+    "givens_rotations_toffoli": 3450,
+    "outer_state_prep_persistent_qubits": 46,
+    "outer_state_prep_temporary_qubits": 370,
+    "inner_state_prep_persistent_qubits": 44,
+    "inner_state_prep_temporary_qubits": 544,
+    "persistent_qubits": 186,
+    "temporary_qubits": 544,
+    "toffoli": 93237.0,
+    "qubits": 730
+  },
+  "official_components": {
+    "brot": 12,
+    "keep_bits": 10,
+    "angles_toffoli_per_pass": 39740.0,
+    "angles_toffoli": 79480.0,
+    "angles_qubits": 119,
+    "angles_selection_qubits": 12,
+    "angles_persistent_qubits": 96,
+    "angles_temporary_qubits": 11,
+    "outer_state_prep_toffoli": 846,
+    "inner_state_prep_toffoli": 9461,
+    "givens_rotations_toffoli": 3450,
+    "outer_state_prep_persistent_qubits": 46,
+    "outer_state_prep_temporary_qubits": 370,
+    "outer_state_prep_qubits": 416,
+    "inner_state_prep_persistent_qubits": 44,
+    "inner_state_prep_temporary_qubits": 544,
+    "inner_state_prep_qubits": 588,
+    "heuristic_persistent_qubits": 90,
+    "heuristic_temporary_qubits": 544,
+    "heuristic_toffoli": 13757,
+    "heuristic_qubits": 634,
+    "persistent_qubits": 186,
+    "temporary_qubits": 544,
+    "toffoli": 93237.0,
+    "qubits": 730,
+    "angles_within_cap": true
+  },
+  "score": 3355599588.3155365,
+  "qrom_exhaustive_selected_blocks": [
+    4,
+    5,
+    5
+  ],
+  "dimensions": [
+    65,
+    60,
+    60,
+    76
+  ],
+  "all_compared_components_equal": true,
+  "rejection_controls": [
+    {
+      "field": "error_1",
+      "value": "0.021",
+      "expected": "error_1",
+      "observed": "error_1 = 21.0000 mHa > 20 mHa"
+    },
+    {
+      "field": "error_2",
+      "value": "0.021",
+      "expected": "error_2",
+      "observed": "error_2 = 21.0000 mHa > 20 mHa"
+    },
+    {
+      "field": "Lambda",
+      "value": "49.0",
+      "expected": "strict floor",
+      "observed": "Lambda = 49 must be finite and > 49.0 (strict floor)"
+    },
+    {
+      "field": "E_gap",
+      "value": "3.914898",
+      "expected": "strict floor",
+      "observed": "E_gap = 3.914898 must be finite and > 3.914898 (strict floor)"
+    },
+    {
+      "field": "Lambda",
+      "value": "nan",
+      "expected": "strict floor",
+      "observed": "Lambda = nan must be finite and > 49.0 (strict floor)"
+    },
+    {
+      "field": "angles_qubits",
+      "value": "129",
+      "expected": "width",
+      "observed": "an ANGLE_k circuit uses 129 qubits > 128"
+    }
+  ],
+  "residual_equality_positive_control": "passed"
+}

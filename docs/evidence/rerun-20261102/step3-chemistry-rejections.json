@@ -1,0 +1,41 @@
+{
+  "controls": [
+    {
+      "field": "error_1",
+      "value": "0.021",
+      "expected": "error_1",
+      "observed": "error_1 = 21.0000 mHa > 20 mHa"
+    },
+    {
+      "field": "error_2",
+      "value": "0.021",
+      "expected": "error_2",
+      "observed": "error_2 = 21.0000 mHa > 20 mHa"
+    },
+    {
+      "field": "Lambda",
+      "value": "49.0",
+      "expected": "strict floor",
+      "observed": "Lambda = 49 must be finite and > 49.0 (strict floor)"
+    },
+    {
+      "field": "E_gap",
+      "value": "3.914898",
+      "expected": "strict floor",
+      "observed": "E_gap = 3.914898 must be finite and > 3.914898 (strict floor)"
+    },
+    {
+      "field": "Lambda",
+      "value": "nan",
+      "expected": "strict floor",
+      "observed": "Lambda = nan must be finite and > 49.0 (strict floor)"
+    },
+    {
+      "field": "angles_qubits",
+      "value": "129",
+      "expected": "width",
+      "observed": "an ANGLE_k circuit uses 129 qubits > 128"
+    }
+  ],
+  "positive_control": "passed"
+}

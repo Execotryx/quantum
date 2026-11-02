@@ -1,0 +1,11 @@
+{
+  "all_members_verified": true,
+  "bundle": "/mnt/e/sources/python/quantum/vendor/rerun-source-20261102-retry1/releases/step3-validation-v1/validation.zip",
+  "gates": {
+    "G0": "passed",
+    "G1": "passed"
+  },
+  "members": 29,
+  "sha256": "dade7adcb99c5da69a4c41b2a0feab00622d15c6a367ff690014dc65361c6578",
+  "status": "frozen"
+}
