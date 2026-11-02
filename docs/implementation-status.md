@@ -1,5 +1,14 @@
 # Implementation status — 2 November 2026
 
+**Step 3 is complete. G0/G1 independent reference validation passed and the
+29-member evidence bundle is frozen and verified.**
+The [step-3 audit](step3-completion-02-11-2026-13-20-23.md) maps every objective
+to its differential, primitive, representation and rejection evidence. The
+291-test suite, Pyright, Ruff and strict OpenSpec checks passed. Subsequent
+opportunity screening can use this validated baseline and reference layer.
+
+## Step 2 completion
+
 **Current result: step 2 is complete. The clean-source A,A,B full-reference
 campaign passed and its versioned evidence bundle is frozen and verified.**
 
