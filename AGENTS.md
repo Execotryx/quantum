@@ -8,6 +8,9 @@
   arguments. Relocation proposals must not silently rewrite pinned evidence.
 - Keep the Cloud Shell provisioner's resource defaults and JSON output aligned
   with the operations plugin. Verify preview and rerun behavior without cloud writes.
+- Inverse-square-root opportunity screens freeze the protocol before simulation,
+  run the reference control first, and retain each parallel lane separately.
+  Full verification and fresh confirmation must use the same frozen KMB bytes.
 
 - Step-3 differential tools pin upstream/native hashes and retain explicit fixture
   coverage. Primitive evidence must state initialization, phase and composition
