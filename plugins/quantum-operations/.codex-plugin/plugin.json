@@ -1,0 +1,14 @@
+{
+  "name": "quantum-operations",
+  "version": "0.1.0",
+  "description": "Run auditable quantum compilation validation and cloud experiments.",
+  "author": {"name": "Execotryx"},
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "requires_local_executor": true,
+  "interface": {
+    "displayName": "Quantum Operations",
+    "shortDescription": "Validate, profile and run quantum experiments locally or on Google Cloud",
+    "category": "Developer Tools"
+  }
+}

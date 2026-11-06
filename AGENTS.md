@@ -1,5 +1,14 @@
 # Project instructions
 
+- The Codex operations plugin under `plugins/quantum-operations` delegates project
+  commands; keep its catalog synchronized with the CLI. Its MCP dependency lock
+  is separate from the scientific lock. Test its actual stdio protocol and Linux
+  job lifecycle, including detached descendants and reconnects. Cloud actions
+  preview by default; keep account settings ignored and credentials out of tool
+  arguments. Relocation proposals must not silently rewrite pinned evidence.
+- Keep the Cloud Shell provisioner's resource defaults and JSON output aligned
+  with the operations plugin. Verify preview and rerun behavior without cloud writes.
+
 - Step-3 differential tools pin upstream/native hashes and retain explicit fixture
   coverage. Primitive evidence must state initialization, phase and composition
   assumptions and record expected mutation diagnostics before closing gates.

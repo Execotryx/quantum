@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "quantum-operations": {
+      "command": "uv",
+      "args": ["run", "--frozen", "--no-dev", "python", "server.py"],
+      "cwd": "."
+    }
+  }
+}

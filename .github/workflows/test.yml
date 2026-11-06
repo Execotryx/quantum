@@ -6,6 +6,29 @@ on:
 permissions:
   contents: read
 jobs:
+  plugin:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install uv==0.11.32
+      - run: uv sync --frozen --python 3.13
+        env:
+          UV_PROJECT_ENVIRONMENT: vendor/linux-env
+      - run: uv sync --project plugins/quantum-operations --frozen --python 3.13
+        env:
+          UV_PROJECT_ENVIRONMENT: vendor/plugin-linux-env
+      - run: vendor/plugin-linux-env/bin/ruff check plugins/quantum-operations
+      - run: vendor/plugin-linux-env/bin/ruff format --check plugins/quantum-operations
+      - run: vendor/plugin-linux-env/bin/pyright --pythonpath vendor/plugin-linux-env/bin/python plugins/quantum-operations
+      - run: vendor/plugin-linux-env/bin/python -m pytest -p no:cacheprovider -c plugins/quantum-operations/pyproject.toml plugins/quantum-operations/tests --junitxml=plugin-tests.xml
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: plugin-tests
+          path: plugin-tests.xml
   test:
     strategy:
       fail-fast: false
