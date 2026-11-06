@@ -11,3 +11,4 @@ dist/
 !/vendor/README.md
 /runs/
 /releases/
+/configs/cloud.local.json

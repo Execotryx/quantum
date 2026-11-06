@@ -1,0 +1,14 @@
+{
+  "project": "",
+  "region": "",
+  "zone": "",
+  "vm": "",
+  "service_account": "",
+  "bucket": "",
+  "prefix": "quantum",
+  "remote_root": "/var/tmp/quantum",
+  "machine_type": "e2-highmem-2",
+  "gcloud": "",
+  "wsl_distribution": "Ubuntu",
+  "python": "vendor/linux-env/bin/python"
+}

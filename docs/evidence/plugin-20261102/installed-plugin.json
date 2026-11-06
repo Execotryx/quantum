@@ -1,0 +1,40 @@
+{
+  "installed_path": "C:\\Users\\Execotryx\\.codex\\plugins\\cache\\quantum-local\\quantum-operations\\0.1.0",
+  "tools": [
+    "project_catalog",
+    "project_status",
+    "project_run",
+    "project_job_status",
+    "project_job_logs",
+    "project_job_cancel",
+    "project_evidence",
+    "cloud_vm",
+    "cloud_vm_prepare",
+    "cloud_snapshot",
+    "cloud_relocation_plan",
+    "cloud_project_run",
+    "cloud_project_job",
+    "cloud_storage",
+    "cloud_project_collect",
+    "cloud_batch_prepare",
+    "cloud_batch"
+  ],
+  "job": {
+    "job_id": "490bf8c641d84d449f964ad48eaec8a8",
+    "status": "starting",
+    "directory": "/mnt/e/sources/python/quantum/runs/plugin-jobs/490bf8c641d84d449f964ad48eaec8a8"
+  },
+  "result": {
+    "job_id": "490bf8c641d84d449f964ad48eaec8a8",
+    "status": "completed",
+    "exit_code": 0,
+    "finished_at": 1793617873.9781015,
+    "elapsed_seconds": 10.822354610999998
+  },
+  "contract": {
+    "blockers": [],
+    "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+    "exit_code": 0,
+    "status": "ready"
+  }
+}
