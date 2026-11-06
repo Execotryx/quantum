@@ -1,0 +1,81 @@
+{
+  "build_seconds": 2.752107972999511,
+  "chemistry": {
+    "batch_size": 9,
+    "brot": 12,
+    "evaluation_seconds": 12.418506480993528,
+    "metrics": {
+      "E_SOS": -22144.23882724429,
+      "E_gap": 3.965477244291833,
+      "Lambda": 308.4559397330945,
+      "error_1": 0.0031851950317996216,
+      "error_2": 0.018639570630974368,
+      "gap_in_domain": true,
+      "lambda_eff": 49.301369250574396
+    },
+    "resources": {
+      "angles_persistent_qubits": 108,
+      "angles_qubits": 128,
+      "angles_selection_qubits": 12,
+      "angles_temporary_qubits": 8,
+      "angles_toffoli": 75024.0,
+      "angles_toffoli_per_pass": 37512.0,
+      "angles_within_cap": true,
+      "brot": 12,
+      "givens_rotations_toffoli": 3450,
+      "heuristic_persistent_qubits": 90,
+      "heuristic_qubits": 634,
+      "heuristic_temporary_qubits": 544,
+      "heuristic_toffoli": 13757,
+      "inner_state_prep_persistent_qubits": 44,
+      "inner_state_prep_qubits": 588,
+      "inner_state_prep_temporary_qubits": 544,
+      "inner_state_prep_toffoli": 9461,
+      "keep_bits": 10,
+      "outer_state_prep_persistent_qubits": 46,
+      "outer_state_prep_qubits": 416,
+      "outer_state_prep_temporary_qubits": 370,
+      "outer_state_prep_toffoli": 846,
+      "persistent_qubits": 198,
+      "qubits": 742,
+      "temporary_qubits": 544,
+      "toffoli": 88781.0
+    },
+    "score": 3247752448.668952,
+    "submission_sha256": "09d50afaaca17334503ee807e91778c6200b81598937af2712a2e6f030ba6900",
+    "verified_shots": 15904,
+    "words_exact": true
+  },
+  "chemistry_hashes": {
+    "angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+    "angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+    "angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+    "angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+    "angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+    "angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+    "angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+    "angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+    "angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4"
+  },
+  "cpu_seconds": 41.641314567,
+  "gain": 0.03213945430858822,
+  "peak_rss_kib": 1286440,
+  "rebuild_identical": true,
+  "registration_sha256": "592d0491f693a721657008c44e15fb8aee4734bc5ae3ef27775f4b02cb43ace0",
+  "status": "go",
+  "wall_seconds": 58.73069062700233,
+  "xor_fixtures": {
+    "addresses": [
+      0,
+      7,
+      8,
+      127,
+      128,
+      3967,
+      3968,
+      3975
+    ],
+    "applications": 18,
+    "shots": 256
+  }
+}

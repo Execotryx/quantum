@@ -10,6 +10,10 @@ and test its preview and rerun behavior with a mocked CLI.
 The inverse-square-root screen lives in `tools/invsqrt_opportunity.py`. Preserve
 the preregistration, all lane outcomes, and separate full and confirmation receipts.
 
+On the combined optimization branch, `tools/banked_chemistry.py` screens the
+lookup-only replacement and tests the extracted combined archive. Preserve the
+pinned numerical inputs and separate chemistry confirmation evidence.
+
 Step-3 tools under `tools/` bind differential and primitive evidence to pinned
 upstream hashes. Keep fixture coverage and expected mutation diagnostics explicit.
 

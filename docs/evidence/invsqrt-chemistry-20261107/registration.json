@@ -1,0 +1,144 @@
+{
+  "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+  "environment": {
+    "cpu_count": 16,
+    "dependencies": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scipy": "1.17.0"
+    },
+    "dependency_lock_sha256": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+    "dirty": true,
+    "numpy_backend": {
+      "Build Dependencies": {
+        "blas": {
+          "detection method": "pkgconfig",
+          "found": true,
+          "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+          "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+          "name": "scipy-openblas",
+          "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+          "pc file directory": "/project/.openblas",
+          "version": "0.3.30"
+        },
+        "lapack": {
+          "detection method": "pkgconfig",
+          "found": true,
+          "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+          "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+          "name": "scipy-openblas",
+          "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+          "pc file directory": "/project/.openblas",
+          "version": "0.3.30"
+        }
+      },
+      "Compilers": {
+        "c": {
+          "commands": "cc",
+          "linker": "ld.bfd",
+          "name": "gcc",
+          "version": "14.2.1"
+        },
+        "c++": {
+          "commands": "c++",
+          "linker": "ld.bfd",
+          "name": "gcc",
+          "version": "14.2.1"
+        },
+        "cython": {
+          "commands": "cython",
+          "linker": "cython",
+          "name": "cython",
+          "version": "3.2.1"
+        }
+      },
+      "Machine Information": {
+        "build": {
+          "cpu": "x86_64",
+          "endian": "little",
+          "family": "x86_64",
+          "system": "linux"
+        },
+        "host": {
+          "cpu": "x86_64",
+          "endian": "little",
+          "family": "x86_64",
+          "system": "linux"
+        }
+      },
+      "Python Information": {
+        "path": "/tmp/build-env-w_be3r90/bin/python",
+        "version": "3.13"
+      },
+      "SIMD Extensions": {
+        "baseline": [
+          "SSE",
+          "SSE2",
+          "SSE3"
+        ],
+        "found": [
+          "SSSE3",
+          "SSE41",
+          "POPCNT",
+          "SSE42",
+          "AVX",
+          "F16C",
+          "FMA3",
+          "AVX2"
+        ],
+        "not found": [
+          "AVX512F",
+          "AVX512CD",
+          "AVX512_KNL",
+          "AVX512_KNM",
+          "AVX512_SKX",
+          "AVX512_CLX",
+          "AVX512_CNL",
+          "AVX512_ICL",
+          "AVX512_SPR"
+        ]
+      }
+    },
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "processor": "",
+    "python": "3.13.15 (main, Aug 14 2026, 15:34:59) [Clang 22.1.3 ]",
+    "source_revision": "daddcc56e3d972c2a64fca9190f09efb5ca13eca",
+    "thread_settings": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "inputs": {
+    "/mnt/e/sources/python/quantum/configs/banked-chemistry-v1.json": "890e3af9763d54bbe571f14db3a3d03d4bec2810b85ca7dafd11a2236d91fc72",
+    "/mnt/e/sources/python/quantum/docs/evidence/step3-chemistry-costs.json": "f4a86dcd073dce38b16e57c74142551d0ade3bbf49ddc74e65a9e06bad253f45",
+    "/mnt/e/sources/python/quantum/docs/evidence/step3-chemistry-metrics.json": "2a18ff083ad6898757063526e4eb44469f49bd3a4fef136e4b37a73f3b999603",
+    "/mnt/e/sources/python/quantum/docs/evidence/step3-chemistry-words.json": "59bab2f3d76780eae5956624cd7a19796bcda2abee3fc94705001cfbe6b5c97a",
+    "/mnt/e/sources/python/quantum/runs/invsqrt-opportunity-20261107/lead/invsqrt.kmb": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9",
+    "/mnt/e/sources/python/quantum/runs/step3-chemistry/recovered-words.npz": "6271ed6e5c00183df1baf78b7d7135ba3264b9e0a41e9c9e08725032ce972ff2",
+    "/mnt/e/sources/python/quantum/tools/banked_chemistry.py": "b1acf8b3d9edd862fb1fe86a2533b199cb88d859c97d1e7eb140ffc48a7ece27",
+    "/mnt/e/sources/python/quantum/uv.lock": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+    "/mnt/e/sources/python/quantum/vendor/backend.json": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+    "/mnt/e/sources/python/quantum/vendor/official/sample_submission/dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69"
+  },
+  "protocol": {
+    "budget": {
+      "engineer_hours": 8,
+      "max_compute_seconds": 7200,
+      "max_experiments": 3,
+      "max_rss_kib": 4194304,
+      "max_wall_seconds": 3600
+    },
+    "correctness_conditions": "Exact recovered words and factorization bytes, zero padding, preserved selection and phase, zero workspace after every circuit, and at most 128 qubits.",
+    "development_seed": 20261107,
+    "development_shots_per_address": 4,
+    "full_timeout_seconds": 3600,
+    "hypothesis": "Five-bit bank flags let a nine-word lookup fit the width cap and lower complete chemistry cost with unchanged numeric inputs.",
+    "invsqrt_sha256": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9",
+    "minimum_gain": 0.02,
+    "objective": "Measured complete official chemistry cost on the same numerical inputs.",
+    "parameter_ranges": "Reference J8 rebuild, naive J9 width-negative control, and one banked J9 family with seven low bits.",
+    "stop_rule": "Stop on reference mismatch, a failed invariant, budget exhaustion, or measured gain below 2 percent."
+  },
+  "registered_unix": 1793998155.9505646
+}
