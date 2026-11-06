@@ -11,6 +11,10 @@
 - Inverse-square-root opportunity screens freeze the protocol before simulation,
   run the reference control first, and retain each parallel lane separately.
   Full verification and fresh confirmation must use the same frozen KMB bytes.
+- Banked chemistry lookups preserve the pinned factorization and angle words.
+  Check the 128-qubit cap and phase, selection and workspace at every circuit
+  boundary. Combined validation keeps the exact confirmed inverse-square-root
+  bytes and reference DQI and verifies the extracted archive with the pinned metric.
 
 - Step-3 differential tools pin upstream/native hashes and retain explicit fixture
   coverage. Primitive evidence must state initialization, phase and composition

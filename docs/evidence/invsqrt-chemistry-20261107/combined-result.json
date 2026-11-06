@@ -1,0 +1,16 @@
+{
+  "archive_sha256": "8fb545091a1cf66c2656bdce40bedbc26e478746301f9a777f56173f88b88503",
+  "costs": {
+    "dfthcsos": 3247752448.668952,
+    "dqi": 24439461432712.35,
+    "invsqrt": 1971483.438323478
+  },
+  "metric_receipt_sha256": "4cc7a5c7ec9fd950b9c18362a25a39a21fea6d59d7b26057622909477b6aca2e",
+  "reference": {
+    "dfthcsos": 3355599588.3155375,
+    "dqi": 24439461432712.35,
+    "invsqrt": 2076774.233715282
+  },
+  "relative_aggregate_score": 1.0286345856615866,
+  "status": "passed"
+}

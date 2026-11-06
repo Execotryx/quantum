@@ -1,0 +1,19 @@
+{
+  "hypothesis": "Five-bit bank flags let a nine-word lookup fit the width cap and lower complete chemistry cost with unchanged numeric inputs.",
+  "parameter_ranges": "Reference J8 rebuild, naive J9 width-negative control, and one banked J9 family with seven low bits.",
+  "correctness_conditions": "Exact recovered words and factorization bytes, zero padding, preserved selection and phase, zero workspace after every circuit, and at most 128 qubits.",
+  "objective": "Measured complete official chemistry cost on the same numerical inputs.",
+  "stop_rule": "Stop on reference mismatch, a failed invariant, budget exhaustion, or measured gain below 2 percent.",
+  "minimum_gain": 0.02,
+  "budget": {
+    "engineer_hours": 8,
+    "max_experiments": 3,
+    "max_wall_seconds": 3600,
+    "max_compute_seconds": 7200,
+    "max_rss_kib": 4194304
+  },
+  "development_shots_per_address": 4,
+  "development_seed": 20261107,
+  "full_timeout_seconds": 3600,
+  "invsqrt_sha256": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9"
+}
