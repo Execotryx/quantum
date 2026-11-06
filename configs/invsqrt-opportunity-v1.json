@@ -1,0 +1,39 @@
+{
+  "hypothesis": "Narrower widths in the unchanged four-cubic Newton construction lower complete inverse-square-root cost.",
+  "parameter_ranges": "Exactly the reference control and two named width tuples in delta, coef, square, product, result order.",
+  "correctness_conditions": "Strictly positive full-domain model margin, no more than 90 percent worst relative tolerance, exact native model phase, input restored and scratch cleared.",
+  "objective": "Minimize complete modeled official QC with measured native counts and exhaustive model margins.",
+  "stop_rule": "Stop on reference mismatch or shared budget violation. Retain rejected lanes and select only among passing candidates.",
+  "minimum_gain": 0.03,
+  "maximum_tolerance_fraction": 0.9,
+  "budget": {
+    "engineer_hours": 4,
+    "max_wall_seconds": 1800,
+    "max_compute_seconds": 3600,
+    "max_experiments": 3,
+    "minimum_available_memory_kib": 4194304
+  },
+  "widths": {
+    "reference": [14, 17, 28, 28, 29],
+    "lead": [13, 17, 28, 27, 28],
+    "fallback": [13, 17, 27, 28, 28]
+  },
+  "reference": {
+    "receipt": "docs/evidence/official-baseline-20261101.json",
+    "sha256": "e2bf8eb64350a4460a271fc7f1d591ef125b1e276377e9a0f64b96ab3ca321e1",
+    "score": 2076774.233715282
+  },
+  "n_p": 10,
+  "development": {
+    "seed": 20261107,
+    "random_inputs": 512,
+    "shots_per_input": 64,
+    "extra_inputs": "Include the two domain endpoints, ±1 around 2^k and 3*2^k within the domain, and the lane's minimum-margin and worst-relative-error input."
+  },
+  "selection": "Lowest complete modeled QC, then largest minimum absolute margin, then name.",
+  "promotion": {
+    "workers": 2,
+    "timeout_seconds_per_execution": 3600,
+    "confirmation": "Full domain and official shots per input with a fresh independently generated salt, registered against the frozen hash before execution."
+  }
+}
