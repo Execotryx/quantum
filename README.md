@@ -6,15 +6,16 @@ independent mathematical checks, and local verification against pinned evaluator
 ## Current state
 
 The reference and independent mathematical checks are complete. The best
-locally verified archive combines the confirmed inverse-square-root circuit
-with the nine banked chemistry circuits and retains the reference DQI circuit.
-The complete extracted archive scored **1.0286345857** relative to the reference.
+locally verified archive combines direct inverse-square-root phasing with the
+nine banked chemistry circuits and the reference DQI circuit. The complete
+extracted archive scored **1.2861761126**, up from **1.0286345857** for the
+previous hybrid.
 
 | Benchmark | Locally measured change | Full trajectories in the hybrid |
 |---|---:|---:|
-| Inverse square root | 5.07% lower cost | 200,540,928 |
+| Inverse square root | 51.44% lower cost | 200,540,928 |
 | Chemistry | 3.21% lower cost | 254,464 |
-| DQI | Reference circuit and cost | 102,400 |
+| DQI | Identical reference circuit, zero observed errors | 102,400 |
 
 The [hybrid validation report](docs/banked-chemistry-07-11-2026-01-52-35.md)
 records the exact archive and component results. The
@@ -28,10 +29,11 @@ confirmation each passed **200,540,928** trajectories on identical circuit
 bytes. The worst input used **27.29%** of its allowed phase error.
 
 The successor archive keeps the original chemistry and DQI members by hash.
-Its complete metric run is in progress. The score above remains the measured
-result of the existing hybrid. [Formal hybrid certification](openspec/changes/certify-hybrid-release/proposal.md)
-tracks the parent certificate and the chemistry evidence a certified
-successor needs.
+The fresh archive seed slightly changed DQI's mean executed gate count.
+A paired parent replay with that same seed is pending to isolate the
+inverse-square-root gain for [formal certification](openspec/changes/certify-hybrid-release/proposal.md).
+See the [successor archive evidence](docs/direct-hybrid-paired-verification-07-11-2026-14-59-24.md)
+for the archive digest, measured coverage and comparison protocol.
 
 ## Install and check
 

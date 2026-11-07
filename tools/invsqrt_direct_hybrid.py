@@ -10,7 +10,7 @@ from invsqrt_direct import EXPECTED_SHOTS, ROOT, pins, require, run_job
 
 from qcompile.artifacts import deterministic_zip, extract_archive, hashes, manifest
 from qcompile.contract import load_contract
-from qcompile.io import read_json, sha256, write_json
+from qcompile.io import identity, read_json, sha256, write_json
 from qcompile.official import verify_candidate
 from qcompile.reference.scoring import aggregate
 
@@ -125,7 +125,7 @@ def metric(output: Path) -> None:
     contract = load_contract(ROOT / "contracts/contract.json")
     contract.require_ready(ROOT)
     verification = output / "verification"
-    report = verify_candidate(
+    verify_candidate(
         artifacts,
         contract,
         "full",
@@ -134,13 +134,34 @@ def metric(output: Path) -> None:
         verification,
         timeout=3600,
     )
-    require(report["status"] == "passed" and report["complete"], "complete successor metric failed")
+    review(output)
+
+
+def successful_metric(output: Path) -> tuple[dict, dict]:
+    frozen = read_json(output / "registration.json")
+    report = read_json(output / "verification/verification.json")
+    require(sha256(output / "build-b.zip") == frozen["archive_sha256"], "archive changed after verification")
+    require(
+        report["status"] == "passed"
+        and report["complete"]
+        and report["tier"] == "full"
+        and report["artifact_hashes"] == frozen["artifact_hashes"]
+        and report["seed_policy"] == frozen["seed_policy"]
+        and report["contract_hash"] == load_contract(ROOT / "contracts/contract.json").hash
+        and report["backend_hash"] == identity(read_json(ROOT / "vendor/backend.json")),
+        "complete archive verification and registration do not match",
+    )
     actual = report["official_results"]
     require(
         actual["coverage_counts"] == {name: {"completed": n, "expected": n} for name, n in COVERAGE.items()},
-        "unexpected successor coverage",
+        "unexpected archive coverage",
     )
-    require(sha256(archive) == frozen["archive_sha256"], "successor ZIP changed during verification")
+    return frozen, report
+
+
+def review(output: Path, paired_parent: Path | None = None) -> None:
+    frozen, report = successful_metric(output)
+    actual = report["official_results"]
     costs = actual["costs"]
     raw = actual["raw_verifier_results"]["invsqrt"]
     require(
@@ -150,34 +171,63 @@ def metric(output: Path) -> None:
         "successor inverse-square-root gate failed",
     )
     parent = read_json(PARENT_EVIDENCE / "combined-result.json")
+    parent_costs = parent["costs"]
+    pairing = {}
+    if paired_parent is not None:
+        paired_registration, paired_report = successful_metric(paired_parent)
+        require(
+            paired_registration["archive_sha256"] == parent["archive_sha256"]
+            and paired_report["seed_policy"]["salt"] == report["seed_policy"]["salt"]
+            and paired_registration["pairing"]["successor_receipt_sha256"]
+            == sha256(output / "verification/verification.json")
+            and all(
+                paired_report["artifact_hashes"][name] == digest
+                for name, digest in report["artifact_hashes"].items()
+                if name != "invsqrt.kmb"
+            ),
+            "paired parent does not bind the exact retained bytes and archive seed",
+        )
+        parent_costs = paired_report["official_results"]["costs"]
+        pairing = {
+            "paired_parent_receipt_sha256": sha256(paired_parent / "verification/verification.json"),
+            "paired_parent_score": aggregate(parent["reference"], parent_costs),
+        }
+    retained_match = all(isclose(costs[n], parent_costs[n], rel_tol=1e-12) for n in ("dqi", "dfthcsos"))
     require(
-        all(isclose(costs[n], parent["costs"][n], rel_tol=1e-12) for n in ("dqi", "dfthcsos")),
-        "retained benchmark costs differ",
+        isclose(costs["dfthcsos"], parent_costs["dfthcsos"], rel_tol=1e-12)
+        and (paired_parent is None or retained_match),
+        "retained benchmark costs differ on a comparable run",
     )
     score = aggregate(parent["reference"], costs)
-    require(score > parent["relative_aggregate_score"], "successor does not improve on measured parent")
+    require(
+        score > parent["relative_aggregate_score"] and score > aggregate(parent["reference"], parent_costs),
+        "successor does not improve on measured parent",
+    )
     write_json(
-        output / "comparison.json",
+        output / ("comparison.json" if retained_match else "unpaired-comparison.json"),
         {
-            "status": "locally_verified",
+            "status": "locally_verified" if retained_match else "paired_parent_required",
             "archive_sha256": frozen["archive_sha256"],
             "artifact_hashes": frozen["artifact_hashes"],
             "parent_archive_sha256": parent["archive_sha256"],
-            "verification_sha256": sha256(verification / "verification.json"),
+            "verification_sha256": sha256(output / "verification/verification.json"),
             "costs": costs,
             "reference": parent["reference"],
             "parent_score": parent["relative_aggregate_score"],
+            "parent_costs": parent_costs,
             "relative_aggregate_score": score,
             "coverage": COVERAGE,
+            **pairing,
         },
     )
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("action", choices=("prepare", "metric", "metric-worker"))
+    parser.add_argument("action", choices=("prepare", "metric", "metric-worker", "review"))
     parser.add_argument("output", type=Path)
     parser.add_argument("--screen", type=Path)
+    parser.add_argument("--paired-parent", type=Path)
     args = parser.parse_args()
     if args.action == "prepare":
         if args.screen is None:
@@ -185,6 +235,8 @@ def main() -> None:
         prepare(args.screen.resolve(), args.output.resolve())
     elif args.action == "metric-worker":
         metric(args.output.resolve())
+    elif args.action == "review":
+        review(args.output.resolve(), args.paired_parent)
     else:
         output = args.output.resolve()
         rc = run_job([sys.executable, __file__, "metric-worker", str(output)], output, 3660)
