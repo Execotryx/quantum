@@ -6,12 +6,18 @@ from pathlib import Path
 
 from .artifacts import hashes, validate_manifest
 from .component_confirmations import (
+    BENCHMARKS,
     FAIL_FAST,
+    CANDIDATE_PROFILE,
+    candidate_coverage,
     component_binding,
     component_hashes,
+    dqi_counts,
+    dqi_observed,
     fail_fast_observed,
     generated_benchmarks,
     has_full_hybrid_coverage,
+    registered_coverage,
     scopes_for_legacy_row,
 )
 from .errors import BlockedError, ValidationError
@@ -95,6 +101,13 @@ class CandidateStore:
 
     def create(self, config, contract_hash, artifacts, environment, claims, *, resume=False):
         validate_manifest(artifacts)
+        profile = config.get("verification_profile")
+        if profile not in (None, CANDIDATE_PROFILE):
+            raise ValidationError("unknown verification profile")
+        if profile == CANDIDATE_PROFILE:
+            config = {**config, "expected_coverage": candidate_coverage(artifacts)}
+        elif any(item["origin"] == "retained_parent" for item in artifacts.values()):
+            raise ValidationError("retained parent artifacts require the candidate verification profile")
         if not claims or any(c.get("kind") not in CLAIMS or not c.get("assumptions") for c in claims):
             raise ValidationError("scoped correctness claims and assumptions are required")
         for claim in claims:
@@ -145,7 +158,7 @@ class CandidateStore:
             for name, item in record["artifacts"].items()
         }
         if (
-            identity(frozen) != record["id"]
+            identity(frozen) != record["id"] or record["id"] != candidate_id
             or hashes(record["artifacts"]) != record["artifact_hashes"]
             or actual_sources != record["artifact_sources"]
         ):
@@ -203,9 +216,11 @@ class CandidateStore:
                         raise ValidationError("hash-bound independent numerical report required")
                 elif target in ("circuit_smoke_passed", "full_local_passed"):
                     tier = "smoke" if target == "circuit_smoke_passed" else "full"
-                    hybrid = bool(record["config"].get("hybrid_archive_sha256"))
+                    coverage = registered_coverage(record)
+                    hybrid = coverage is not None or bool(record["config"].get("hybrid_archive_sha256"))
                     full_hybrid = (
-                        hybrid and evidence.get("tier") == "full" and has_full_hybrid_coverage(evidence)
+                        hybrid and evidence.get("tier") == "full"
+                        and has_full_hybrid_coverage(evidence, coverage)
                     )
                     if (
                         evidence.get("kind") != "official_metric_execution"
@@ -235,7 +250,7 @@ class CandidateStore:
                 elif target == "release_selected":
                     for benchmark in generated_benchmarks(record):
                         self.require_confirmation(record, benchmark)
-                    self.require_chemistry_parent(record)
+                    self.require_release_parent(record)
                     for key in ("g0", "g1", "opportunity", "mutations", "stability", "improvement"):
                         receipt = evidence.get(key)
                         if (
@@ -300,6 +315,57 @@ class CandidateStore:
 
     def confirmation_for(self, candidate_id, benchmark):
         return self._slot(self.get(candidate_id), benchmark)[1]
+
+    def require_release_parent(self, record):
+        if registered_coverage(record) is None:
+            return self.require_chemistry_parent(record)
+        binding = record["config"].get("release_parent") or {}
+        parent_id = binding.get("candidate_id")
+        changed = generated_benchmarks(record)
+        if not isinstance(parent_id, str) or parent_id == record["id"] or not changed:
+            raise BlockedError("candidate release requires changed components and a distinct certified parent")
+        parent = self.get(parent_id)
+        anchor_path = self._path(parent_id).with_name("local-certificate.json")
+        if not anchor_path.is_file():
+            raise BlockedError("trusted parent certificate is unavailable")
+        anchor = read_json(anchor_path)
+        certificate_path = Path(anchor["certificate_path"])
+        if not certificate_path.is_file() or sha256(certificate_path) != anchor["certificate_sha256"]:
+            raise ValidationError("parent certificate changed")
+        certificate = read_json(certificate_path)
+        verification = certificate["verification"]
+        if (
+            parent["state"] not in ("release_selected", "remote_accepted")
+            or anchor["candidate_id"] != parent_id
+            or any(anchor.get(key) != binding.get(key) for key in ("zip_sha256", "certificate_sha256", "backend_hash"))
+            or parent["contract_hash"] != record["contract_hash"] or anchor["contract_hash"] != record["contract_hash"]
+            or anchor["dependency_lock_sha256"] != record["environment"]["dependency_lock_sha256"]
+            or certificate["artifact_hashes"] != parent["artifact_hashes"]
+            or verification.get("artifact_hashes") != parent["artifact_hashes"]
+            or verification.get("complete") is not True
+            or verification.get("backend_hash") != anchor["backend_hash"]
+        ):
+            raise BlockedError("candidate parent does not match the trusted full certificate")
+        retained = set(BENCHMARKS) - changed
+        for benchmark in BENCHMARKS:
+            current = component_hashes(record["artifact_hashes"], benchmark)
+            previous = component_hashes(parent["artifact_hashes"], benchmark)
+            if (current == previous) != (benchmark in retained):
+                raise BlockedError("declared changed scope disagrees with complete component bytes")
+        for name, item in record["artifacts"].items():
+            if item["origin"] != "generated" and parent["artifact_hashes"].get(name) != item["sha256"]:
+                raise BlockedError("retained member differs from its certified parent")
+        for benchmark in retained & generated_benchmarks(parent):
+            self.require_confirmation(parent, benchmark)
+        if retained and certificate.get("parent"):
+            if self.require_release_parent(parent) != certificate["parent"]:
+                raise BlockedError("inherited component lineage no longer matches its certificate")
+        return {
+            **anchor,
+            "artifact_hashes": parent["artifact_hashes"],
+            "retained_benchmarks": sorted(retained),
+            "dqi_counts": dqi_counts(verification["official_results"]["raw_verifier_results"]["dqi"]),
+        }
 
     def require_chemistry_parent(self, record):
         retained = {
@@ -410,13 +476,18 @@ class CandidateStore:
                 raise ValidationError("confirmation already registered; no retry on unchanged bytes")
             positive_int(protocol.get("sample_size"), "confirmation sample_size")
             nonnegative_int(protocol.get("max_failures"), "max_failures")
+            coverage = registered_coverage(record)
             if benchmark in FAIL_FAST and (
-                protocol["sample_size"] != FAIL_FAST[benchmark]
+                protocol["sample_size"] != (coverage or FAIL_FAST)[benchmark]
                 or protocol["max_failures"] != 0
                 or not protocol.get("backend_hash")
                 or (benchmark == "dfthcsos" and not protocol.get("verifier_artifact_sha256"))
             ):
                 raise ValidationError("fail-fast confirmation needs full coverage and a pinned backend")
+            if coverage is not None and (
+                protocol["sample_size"] != coverage[benchmark] or not protocol.get("backend_hash")
+            ):
+                raise ValidationError("candidate confirmation needs full coverage and a pinned backend")
             if protocol["max_failures"] >= protocol["sample_size"]:
                 raise ValidationError("confirmation rule must reject some possible outcomes")
             for key in (
@@ -434,6 +505,9 @@ class CandidateStore:
             history_salts = [h["evidence"].get("seed_policy", {}).get("salt") for h in record["history"]]
             if seed["salt"] in history_salts:
                 raise ValidationError("development salt cannot be reused for confirmation")
+            development = self.root / "development-salts.json"
+            if development.is_file() and seed["salt"] in read_json(development):
+                raise ValidationError("registered development salt cannot be reused for confirmation")
             ledger_path = self.root / "confirmation-ledger.json"
             ledger = self._ledger()
             # Salt identifies the challenge material, even if renamed with a new distribution label.
@@ -487,11 +561,13 @@ class CandidateStore:
             ):
                 raise ValidationError("confirmation protocol/seed mismatch")
             observed = evidence.get("observed", {})
+            coverage = registered_coverage(record)
+            raw = evidence.get("raw_benchmark", {})
             if benchmark in FAIL_FAST and (
                 evidence.get("benchmark") != benchmark
                 or evidence.get("backend_hash") != protocol["backend_hash"]
                 or evidence.get("component_hashes") != confirmation["component_hashes"]
-                or observed != fail_fast_observed(benchmark, evidence.get("raw_benchmark", {}))
+                or observed != fail_fast_observed(benchmark, raw, coverage)
                 or (
                     benchmark == "invsqrt"
                     and evidence["raw_benchmark"].get("circuit_sha256")
@@ -504,6 +580,20 @@ class CandidateStore:
                 )
             ):
                 raise ValidationError("confirmation receipt differs from its registered benchmark or runtime")
+            if coverage is not None and benchmark == "dqi" and (
+                evidence.get("benchmark") != benchmark
+                or evidence.get("backend_hash") != protocol["backend_hash"]
+                or evidence.get("component_hashes") != confirmation["component_hashes"]
+                or raw.get("circuit_sha256") != confirmation["component_hashes"]["dqi.kmb"]
+                or observed != dqi_observed(raw, coverage["dqi"])
+            ):
+                raise ValidationError("DQI confirmation receipt differs from its registered benchmark or runtime")
+            if coverage is not None and (
+                evidence.get("tier") != "full"
+                or raw != (evidence.get("official_results") or {}).get("raw_verifier_results", {}).get(benchmark)
+                or not has_full_hybrid_coverage(evidence, coverage)
+            ):
+                raise ValidationError("candidate confirmation requires the bound full metric receipt")
             n, k = observed.get("n"), observed.get("k")
             positive_int(n, "observed n")
             nonnegative_int(k, "observed k")

@@ -1,0 +1,23 @@
+{
+  "hypothesis": "Minimax coefficients on dyadic intervals can reduce complete cost against certified direct phasing.",
+  "parameter_ranges": "Uniform dyadic Taylor and relative minimax fits using the existing reversible Horner layout.",
+  "comparison": "certified-direct",
+  "minimum_gain": 0.1,
+  "controls": {
+    "certified-direct": {
+      "parameters": {"segment_bits": 6, "fractional": [31, 26, 21, 16], "fused": true, "reuse_lookup": true},
+      "sha256": "dfaf3345abf3ff70e9a633bfd0cd07baa7e7bc7eb70105b557d09726ef1f5a8c",
+      "coefficients_sha256": "f2c5e9cc951f423e48fbeef7772b0541d70bf28d347ce92d1d41af8a07a7c85e",
+      "cost": 1008498.1176395753
+    }
+  },
+  "direct_control": {"segment_bits": 6, "fractional": [30, 25, 20, 15], "fused": true, "reuse_lookup": true},
+  "piecewise": {
+    "minimax-cubic": {"fit": "minimax", "segment_bits": 5, "fractional": [30, 25, 20, 15], "fused": true, "reuse_lookup": true},
+    "minimax-quadratic": {"fit": "minimax", "segment_bits": 7, "fractional": [30, 24, 18], "fused": true, "reuse_lookup": true}
+  },
+  "ablations": {
+    "separate-arithmetic": {"fused": false},
+    "separate-lookup-workspace": {"reuse_lookup": false}
+  }
+}

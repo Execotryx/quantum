@@ -30,3 +30,8 @@ See `docs/baseline-campaign-02-11-2026-01-19-10.md` for measurement definitions.
   the confirmed hybrid inverse-square-root circuit as its comparison control.
   Freeze the generated KMB before independent confirmation. Carry forward the
   exact parent chemistry and DQI member hashes.
+- For the next hybrid round use the `candidate-v1` verification profile,
+  `tools/hybrid_preflight.py`, `tools/dqi_development.py`,
+  `tools/dqi_prototype.py` and `tools/chem_refit.py`. Keep matched DQI
+  development draws and isolated primitives separate from full archive and
+  one-use confirmation evidence.

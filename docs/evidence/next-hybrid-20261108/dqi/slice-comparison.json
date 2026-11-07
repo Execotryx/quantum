@@ -1,0 +1,46 @@
+{
+  "backend_sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+  "scope": "serialized native fixture; no full DQI decoder",
+  "slices": {
+    "bm": {
+      "bits": 1,
+      "operations": 1977,
+      "qubits": 158,
+      "sha256": "c69ebbd4e72348fc6678657b96a4607491fee4bc6c2b53c8246e8847f33b6287",
+      "t_like": 0,
+      "toffoli_like": 528
+    },
+    "eea": {
+      "bits": 1,
+      "operations": 1929,
+      "qubits": 110,
+      "sha256": "c5577f1c83226b301751052c775a314d2092bfc9411c1d34fb9564e3f0c887a2",
+      "t_like": 0,
+      "toffoli_like": 480
+    },
+    "inverse": {
+      "bits": 1,
+      "operations": 7193,
+      "qubits": 97,
+      "sha256": "ffe775dba6f084a51ab3745d0018e3a7655aee39ebe5120e92e593978b90b1b6",
+      "t_like": 0,
+      "toffoli_like": 1440
+    },
+    "multiply": {
+      "bits": 1,
+      "operations": 627,
+      "qubits": 37,
+      "sha256": "b94c370b02486b928937deb715ebe23f496e23b0880de987b21f1f441ce534a4",
+      "t_like": 0,
+      "toffoli_like": 144
+    },
+    "phase": {
+      "bits": 25,
+      "operations": 5676,
+      "qubits": 97,
+      "sha256": "2ba4928eddf1cc332cef7e4fcbf88db26e897255cb71b4466e31e718250e027a",
+      "t_like": 0,
+      "toffoli_like": 327
+    }
+  }
+}

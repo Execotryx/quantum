@@ -6,9 +6,11 @@ from math import isclose
 from pathlib import Path
 
 from .artifacts import deterministic_zip, extract_archive, hashes, validate_manifest
-from .component_confirmations import component_hashes, generated_benchmarks
+from .component_confirmations import (
+    component_hashes, dqi_counts, generated_benchmarks, has_full_hybrid_coverage, registered_coverage,
+)
 from .errors import BlockedError, ValidationError
-from .io import sha256, write_json
+from .io import read_json, sha256, write_json
 from .reference.scoring import aggregate
 
 
@@ -41,7 +43,7 @@ def build_candidate(selection, contract, output_dir):
             )
     for name, item in artifacts.items():
         target = output / name
-        if item["origin"] in ("retained_reference", "retained_certified"):
+        if item["origin"] in ("retained_reference", "retained_certified", "retained_parent"):
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(item["path"], target)
         if not target.is_file() or target.is_symlink() or sha256(target) != item["sha256"]:
@@ -71,13 +73,14 @@ def package_release(selection, contract, output_dir, *, source_environment, cand
     if selected_sources != record["artifact_sources"]:
         raise ValidationError("release selection changed frozen artifact provenance")
     retained = {
-        name for name, item in selection["artifacts"].items() if item["origin"] == "retained_certified"
+        name for name, item in selection["artifacts"].items()
+        if item["origin"] in ("retained_certified", "retained_parent")
     }
     parent = None
-    if retained:
+    if retained or registered_coverage(record) is not None:
         if candidate_store is None:
-            raise BlockedError("certified retained chemistry must resolve through its candidate store")
-        parent = candidate_store.require_chemistry_parent(record)
+            raise BlockedError("certified parent must resolve through its candidate store")
+        parent = candidate_store.require_release_parent(record)
     root = Path(output_dir).resolve()
     root.mkdir(parents=True, exist_ok=False)
     a = build_candidate(selection, contract, root / "build-a")
@@ -110,6 +113,54 @@ def package_release(selection, contract, output_dir, *, source_environment, cand
     return release
 
 
+def _compare_candidate_parent(parent, candidate, verification, supporting_evidence, baselines, score):
+    official = verification["official_results"]
+    costs, raw = official["costs"], official["raw_verifier_results"]
+    changed = generated_benchmarks(candidate)
+    retained = parent["retained_benchmarks"]
+    historical_costs = parent["costs"]
+    if (
+        verification["backend_hash"] != parent["backend_hash"]
+        or score <= parent["score"]
+        or any(costs[name] >= historical_costs[name] for name in changed)
+    ):
+        raise BlockedError("successor must improve each changed component and the certified aggregate")
+    for name, limit in candidate["config"].get("component_cost_limits", {}).items():
+        if name not in changed or costs[name] > limit:
+            raise BlockedError("successor missed its registered component cost limit")
+    if "invsqrt" in changed and raw["invsqrt"]["worst_error_over_tolerance"] > 0.90:
+        raise BlockedError("successor inverse square root missed its registered phase margin")
+    comparison = historical_costs
+    if "dqi" in retained and (
+        dqi_counts(raw["dqi"]) != parent["dqi_counts"]
+        or not isclose(costs["dqi"], historical_costs["dqi"], rel_tol=1e-12)
+    ):
+        pairing = supporting_evidence.get("matched_parent_verification") or {}
+        if not pairing.get("path") or not pairing.get("sha256"):
+            raise BlockedError("retained DQI requires a matched parent replay")
+        receipt = Path(pairing["path"])
+        if not receipt.is_file() or sha256(receipt) != pairing["sha256"]:
+            raise ValidationError("matched parent receipt changed")
+        replay = read_json(receipt)
+        replay_results = replay.get("official_results") or {}
+        if (
+            replay.get("kind") != "official_metric_execution"
+            or replay.get("tier") != "full" or replay.get("status") != "passed"
+            or replay.get("complete") is not True
+            or replay.get("artifact_hashes") != parent["artifact_hashes"]
+            or replay.get("contract_hash") != verification["contract_hash"]
+            or replay.get("backend_hash") != verification["backend_hash"]
+            or replay.get("seed_policy") != verification["seed_policy"]
+            or dqi_counts(replay_results.get("raw_verifier_results", {}).get("dqi", {})) != dqi_counts(raw["dqi"])
+        ):
+            raise BlockedError("matched replay does not bind the retained DQI draws")
+        comparison = replay_results["costs"]
+        if score <= aggregate(baselines, comparison) or any(costs[name] >= comparison[name] for name in changed):
+            raise BlockedError("successor did not improve on the matched parent")
+    if any(not isclose(costs[name], comparison[name], rel_tol=1e-12) for name in retained):
+        raise BlockedError("retained component cost differs from its verified parent")
+
+
 def certify_release(release, verification, contract, *, supporting_evidence):
     if (
         verification.get("kind") != "official_metric_execution"
@@ -137,7 +188,18 @@ def certify_release(release, verification, contract, *, supporting_evidence):
         raise BlockedError("release requires a distinct official local run role")
     official = verification.get("official_results") or {}
     actual_counts = official.get("coverage_counts") or {}
-    expected_counts = contract.data["fields"]["release.coverage"]["value"]
+    candidate = release.get("candidate") or {}
+    coverage = registered_coverage(candidate) if candidate else None
+    if coverage is not None and not release.get("parent"):
+        raise BlockedError("candidate release requires trusted parent lineage")
+    if coverage is not None and not has_full_hybrid_coverage(verification, coverage):
+        raise BlockedError("release requires actual full verifier counters")
+    if coverage is not None and any(
+        entry["evidence"].get("seed_policy", {}).get("salt") == verification["seed_policy"]["salt"]
+        for entry in candidate["history"]
+    ):
+        raise BlockedError("archive verification must use a separate salt from candidate development")
+    expected_counts = coverage or contract.data["fields"]["release.coverage"]["value"]
     if not isinstance(expected_counts, dict):
         raise BlockedError("resolved expected coverage is required")
     for name in ("invsqrt", "dqi", "dfthcsos"):
@@ -155,10 +217,9 @@ def certify_release(release, verification, contract, *, supporting_evidence):
     score = aggregate(baselines, costs)
     if score <= 1 or not any(costs[k] < baselines[k] for k in costs):
         raise BlockedError("release must improve complete official cost and aggregate score")
-    candidate = release.get("candidate") or {}
     parent = release.get("parent")
     if "confirmations" in candidate or parent:
-        optimized = generated_benchmarks(candidate) | ({"dfthcsos"} if parent else set())
+        optimized = generated_benchmarks(candidate) | ({"dfthcsos"} if parent and coverage is None else set())
         supporting = supporting_evidence.get("benchmark_evidence") or {}
         if set(supporting) != optimized:
             raise BlockedError("benchmark-specific supporting evidence is incomplete")
@@ -171,14 +232,21 @@ def certify_release(release, verification, contract, *, supporting_evidence):
                     raise BlockedError(f"missing {benchmark} {key} evidence")
             if costs[benchmark] >= baselines[benchmark]:
                 raise BlockedError(f"{benchmark} cost did not improve over the reference")
-        confirmations = candidate.get("confirmations") or {"invsqrt": candidate["confirmation"]}
+        changed = generated_benchmarks(candidate)
+        confirmations = candidate.get("confirmations") or {next(iter(changed)): candidate["confirmation"]}
         for benchmark, receipt in confirmations.items():
             if (
                 receipt["status"] != "passed"
                 or receipt["protocol"].get("backend_hash") != verification["backend_hash"]
             ):
                 raise BlockedError(f"{benchmark} confirmation did not use the verified release backend")
-        if parent:
+            if coverage is not None and (
+                receipt["protocol"]["seed_policy"]["salt"] == verification["seed_policy"]["salt"]
+            ):
+                raise BlockedError("archive verification must use a fresh salt")
+        if parent and coverage is not None:
+            _compare_candidate_parent(parent, candidate, verification, supporting_evidence, baselines, score)
+        elif parent:
             if (
                 verification["backend_hash"] != parent["backend_hash"]
                 or score <= parent["score"]

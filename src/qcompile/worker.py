@@ -42,7 +42,12 @@ def mapped_value(result, path):
     return value
 
 
-def mapped_coverage(results, mapping):
+def mapped_coverage(results, mapping, expected=None):
+    if expected is not None:
+        return {
+            benchmark: {"completed": mapped_value(results[benchmark], "verified_shots"), "expected": shots}
+            for benchmark, shots in expected.items()
+        }
     return {
         benchmark: {key: mapped_value(results[benchmark], path) for key, path in paths.items()}
         for benchmark, paths in mapping.items()
@@ -66,6 +71,16 @@ def mapped_confirmation(results, mapping):
     return observed
 
 
+def load_metric(backend):
+    for role in ("kickmix", "verifiers"):
+        sys.path.insert(0, str(Path(backend[role + "_root"]).resolve()))
+    notebook = read_json(Path(backend["metric_notebook"]))
+    source = "\n\n".join("".join(c["source"]) for c in notebook["cells"] if c["cell_type"] == "code")
+    scope: dict[str, Any] = {"__name__": "qcompile_pinned_official_metric"}
+    exec(compile(source, backend["metric_notebook"], "exec"), scope)
+    return scope
+
+
 def main():
     profile = recorder()
     request = read_json(Path(sys.argv[1]))
@@ -73,13 +88,8 @@ def main():
     with profile.stage("worker_input_integrity", "hashing", benchmark="all"):
         validate_backend(backend)
         validate_manifest(request["artifacts"])
-    for role in ("kickmix", "verifiers"):
-        sys.path.insert(0, str(Path(backend[role + "_root"]).resolve()))
     with profile.stage("metric_notebook_loading", "parsing", benchmark="all"):
-        notebook = read_json(Path(backend["metric_notebook"]))
-        source = "\n\n".join("".join(c["source"]) for c in notebook["cells"] if c["cell_type"] == "code")
-        scope: dict[str, Any] = {"__name__": "qcompile_pinned_official_metric"}
-        exec(compile(source, backend["metric_notebook"], "exec"), scope)
+        scope = load_metric(backend)
     root = Path.cwd()
     inputs = root / "evaluation_inputs"
     inputs.mkdir()
@@ -213,7 +223,9 @@ def main():
             "pid": os.getpid(),
             "claim": "sampled circuit acceptance under local salt and official metric; no coherent proof",
             "raw_verifier_results": jsonable(raw_results),
-            "coverage_counts": mapped_coverage(raw_results, backend.get("coverage_mapping", {})),
+            "coverage_counts": mapped_coverage(
+                raw_results, backend.get("coverage_mapping", {}), request.get("expected_coverage")
+            ),
             "confirmation_observed": mapped_confirmation(raw_results, backend.get("confirmation_mapping")),
             "counts_note": "Counters require explicit source-reconciled mappings into real verifier returns.",
         },

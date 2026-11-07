@@ -102,7 +102,7 @@ def validate_manifest(artifacts):
             raise ValidationError(f"artifact missing or linked: {name}")
         origin = record.get("origin")
         if (
-            origin not in ("generated", "retained_reference", "retained_certified")
+            origin not in ("generated", "retained_reference", "retained_certified", "retained_parent")
             or (origin == "retained_certified" and not name.startswith("dfthcsos/angle_k_"))
             or not record.get("provenance")
         ):

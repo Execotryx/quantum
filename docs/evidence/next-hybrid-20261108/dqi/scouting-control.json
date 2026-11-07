@@ -1,0 +1,8 @@
+{
+  "circuit_sha256": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+  "diagnostic": "Effective error rate 0.2929 >= 1/16 at log2_delta=-128.0 (empirical=0.0000, value_errors=0/256, phase_errors=0/256)",
+  "phase_errors": 0,
+  "status": "confidence_rejected",
+  "value_errors": 0,
+  "verified_shots": 256
+}
