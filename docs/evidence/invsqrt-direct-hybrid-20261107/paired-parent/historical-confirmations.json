@@ -1,0 +1,212 @@
+{
+  "dfthcsos": {
+    "raw": {
+      "batch_size": 9,
+      "brot": 12,
+      "lambda_eff": 49.301369250574396,
+      "metrics": {
+        "E_SOS": -22144.23882724429,
+        "E_gap": 3.965477244291833,
+        "Lambda": 308.4559397330945,
+        "error_1": 0.0031851950317996216,
+        "error_2": 0.018639570630974368,
+        "gap_in_domain": true,
+        "lambda_eff": 49.301369250574396
+      },
+      "num_circuits": 9,
+      "num_ops": 2063857,
+      "num_qubits": 742,
+      "reaction_depth": 99,
+      "resources": {
+        "angles_persistent_qubits": 108,
+        "angles_qubits": 128,
+        "angles_selection_qubits": 12,
+        "angles_temporary_qubits": 8,
+        "angles_toffoli": 75024.0,
+        "angles_toffoli_per_pass": 37512.0,
+        "angles_within_cap": true,
+        "brot": 12,
+        "givens_rotations_toffoli": 3450,
+        "heuristic_persistent_qubits": 90,
+        "heuristic_qubits": 634,
+        "heuristic_temporary_qubits": 544,
+        "heuristic_toffoli": 13757,
+        "inner_state_prep_persistent_qubits": 44,
+        "inner_state_prep_qubits": 588,
+        "inner_state_prep_temporary_qubits": 544,
+        "inner_state_prep_toffoli": 9461,
+        "keep_bits": 10,
+        "outer_state_prep_persistent_qubits": 46,
+        "outer_state_prep_qubits": 416,
+        "outer_state_prep_temporary_qubits": 370,
+        "outer_state_prep_toffoli": 846,
+        "persistent_qubits": 198,
+        "qubits": 742,
+        "temporary_qubits": 544,
+        "toffoli": 88781.0
+      },
+      "score": 3247752448.668952,
+      "status": "PASS",
+      "submission_sha256": "09d50afaaca17334503ee807e91778c6200b81598937af2712a2e6f030ba6900",
+      "toffoli_count": 88781.0,
+      "verified_shots": 254464
+    },
+    "registration": {
+      "archive_sha256": "8fb545091a1cf66c2656bdce40bedbc26e478746301f9a777f56173f88b88503",
+      "chemistry_hashes": {
+        "angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+        "angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+        "angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+        "angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+        "angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+        "angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+        "angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+        "angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+        "angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4"
+      },
+      "expected_shots": 254464,
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "registered_unix": 1793999310.5733728,
+      "salt": "559b14ee3fea16e2ca4d086475f754f99842008c1221077a40a0ac150afff356"
+    }
+  },
+  "invsqrt": {
+    "raw": {
+      "circuit_sha256": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9",
+      "max_toffoli_count": 7447,
+      "num_ops": 59717,
+      "num_qubits": 256,
+      "reaction_depth": 3844,
+      "rotation_count": 36.0,
+      "rotation_eps": 4.859684532075422e-13,
+      "score": 1971483.438323478,
+      "status": "PASS",
+      "t_count": 1.0,
+      "toffoli_count": 7447.0,
+      "toffoli_equivalent": 7701.107180951086,
+      "verified_shots": 200540928,
+      "worst_error_over_tolerance": 0.8469246188549967,
+      "worst_x": 2684414
+    },
+    "registration": {
+      "artifact_sha256": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9",
+      "decision_sha256": "ffc611b2d69cd016cd89a53a8fb8a24b4d80b3142b718c0015391aa4a24b4e4b",
+      "distribution": "Official exhaustive inputs with separate pseudorandom measurement streams",
+      "environment": {
+        "cpu_count": 16,
+        "dependencies": {
+          "numpy": "2.3.5",
+          "pandas": "2.2.3",
+          "scipy": "1.17.0"
+        },
+        "dependency_lock_sha256": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+        "dirty": true,
+        "numpy_backend": {
+          "Build Dependencies": {
+            "blas": {
+              "detection method": "pkgconfig",
+              "found": true,
+              "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+              "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+              "name": "scipy-openblas",
+              "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+              "pc file directory": "/project/.openblas",
+              "version": "0.3.30"
+            },
+            "lapack": {
+              "detection method": "pkgconfig",
+              "found": true,
+              "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+              "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+              "name": "scipy-openblas",
+              "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+              "pc file directory": "/project/.openblas",
+              "version": "0.3.30"
+            }
+          },
+          "Compilers": {
+            "c": {
+              "commands": "cc",
+              "linker": "ld.bfd",
+              "name": "gcc",
+              "version": "14.2.1"
+            },
+            "c++": {
+              "commands": "c++",
+              "linker": "ld.bfd",
+              "name": "gcc",
+              "version": "14.2.1"
+            },
+            "cython": {
+              "commands": "cython",
+              "linker": "cython",
+              "name": "cython",
+              "version": "3.2.1"
+            }
+          },
+          "Machine Information": {
+            "build": {
+              "cpu": "x86_64",
+              "endian": "little",
+              "family": "x86_64",
+              "system": "linux"
+            },
+            "host": {
+              "cpu": "x86_64",
+              "endian": "little",
+              "family": "x86_64",
+              "system": "linux"
+            }
+          },
+          "Python Information": {
+            "path": "/tmp/build-env-w_be3r90/bin/python",
+            "version": "3.13"
+          },
+          "SIMD Extensions": {
+            "baseline": [
+              "SSE",
+              "SSE2",
+              "SSE3"
+            ],
+            "found": [
+              "SSSE3",
+              "SSE41",
+              "POPCNT",
+              "SSE42",
+              "AVX",
+              "F16C",
+              "FMA3",
+              "AVX2"
+            ],
+            "not found": [
+              "AVX512F",
+              "AVX512CD",
+              "AVX512_KNL",
+              "AVX512_KNM",
+              "AVX512_SKX",
+              "AVX512_CLX",
+              "AVX512_CNL",
+              "AVX512_ICL",
+              "AVX512_SPR"
+            ]
+          }
+        },
+        "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+        "processor": "",
+        "python": "3.13.15 (main, Aug 14 2026, 15:34:59) [Clang 22.1.3 ]",
+        "source_revision": "cd532b2a24febbe42f42c83644da6cb33d19c995",
+        "thread_settings": {
+          "MKL_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1"
+        }
+      },
+      "expected_shots": 200540928,
+      "input_count": 3133452,
+      "registered_unix": 1793994628.9768016,
+      "role": "confirmation",
+      "salt": "01de93c6020258ff56714025ff63158757a204ad5c49f4570f214410864fb1d1",
+      "shots_per_input": 64
+    }
+  }
+}

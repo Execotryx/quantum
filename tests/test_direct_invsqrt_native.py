@@ -1,7 +1,10 @@
 """Native mutation controls for the independently generated circuit."""
 
+import subprocess
+import sys
 from functools import partial
 from importlib import import_module
+from pathlib import Path
 from types import SimpleNamespace
 
 import pytest
@@ -79,3 +82,38 @@ def test_native_direct_phasing_mutations(monkeypatch, project_root, tmp_path):
         tool.native_smoke(
             SimpleNamespace(Simulator=NonconstantCount), official, original, spec, model, points, policy
         )
+
+
+@pytest.mark.skipif(not sys.platform.startswith("linux"), reason="requires Linux process sampling")
+def test_direct_screen_resource_controls(monkeypatch, project_root, tmp_path):
+    monkeypatch.syspath_prepend(str(project_root / "tools"))
+    tool = import_module("invsqrt_direct")
+    worker_dir = tmp_path / "worker"
+    worker_dir.mkdir()
+    child_file = worker_dir / "child.pid"
+    worker = (
+        "import subprocess,sys,time; from pathlib import Path; "
+        "p=subprocess.Popen([sys.executable,'-c','import time; time.sleep(600)']); "
+        "Path(sys.argv[1]).write_text(str(p.pid)); time.sleep(600)"
+    )
+    with pytest.raises(subprocess.TimeoutExpired):
+        tool.run_job([sys.executable, "-c", worker, str(child_file)], worker_dir, timeout=2)
+    child_stat = Path(f"/proc/{int(child_file.read_text())}/stat")
+    if child_stat.exists():
+        assert child_stat.read_text().rsplit(")", 1)[1].split()[0] == "Z"
+    assert (worker_dir / "resources.json").is_file()
+
+    read_text = Path.read_text
+
+    def low_memory(path, *args, **kwargs):
+        if path == Path("/proc/meminfo"):
+            return "MemAvailable: 1 kB\n"
+        return read_text(path, *args, **kwargs)
+
+    monkeypatch.setattr(Path, "read_text", low_memory)
+    monkeypatch.setattr(tool, "capture", lambda root: {"dirty": False})
+    monkeypatch.setattr(tool, "load_contract", lambda path: SimpleNamespace(require_ready=lambda root: None))
+    output = tmp_path / "must-not-start"
+    with pytest.raises(ValueError, match="insufficient screening memory"):
+        tool.screen(output)
+    assert not output.exists()

@@ -17,8 +17,8 @@ previous hybrid.
 | Chemistry | 3.21% lower cost | 254,464 |
 | DQI | Identical reference circuit, zero observed errors | 102,400 |
 
-The [hybrid validation report](docs/banked-chemistry-07-11-2026-01-52-35.md)
-records the exact archive and component results. The
+The [original hybrid validation report](docs/banked-chemistry-07-11-2026-01-52-35.md)
+records the parent archive and its component results. The
 [independent validation audit](docs/step3-completion-02-11-2026-13-20-23.md)
 records the primitive and defect-control evidence.
 
@@ -29,11 +29,11 @@ confirmation each passed **200,540,928** trajectories on identical circuit
 bytes. The worst input used **27.29%** of its allowed phase error.
 
 The successor archive keeps the original chemistry and DQI members by hash.
-The fresh archive seed slightly changed DQI's mean executed gate count.
-A paired parent replay with that same seed is pending to isolate the
-inverse-square-root gain for [formal certification](openspec/changes/certify-hybrid-release/proposal.md).
-See the [successor archive evidence](docs/direct-hybrid-paired-verification-07-11-2026-14-59-24.md)
-for the archive digest, measured coverage and comparison protocol.
+A paired parent replay with the same archive seed matched both retained
+costs and isolated a **25.04%** aggregate gain from inverse square root.
+Both archives are locally certified. The
+[successor archive evidence](docs/direct-hybrid-paired-verification-07-11-2026-14-59-24.md)
+links the exact ZIPs, coverage and confirmation lineage.
 
 ## Install and check
 
