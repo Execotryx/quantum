@@ -83,10 +83,11 @@ def _verification_options(command):
 
 
 def _candidate_run(args, root, contract):
-    from .component_confirmations import FAIL_FAST, component_hashes, fail_fast_observed
+    from .component_confirmations import FAIL_FAST, component_hashes, dqi_observed, fail_fast_observed, registered_coverage
 
     store = CandidateStore(root / "runs/candidates")
     record = store.get(args.id)
+    coverage = registered_coverage(record)
     contract.require_ready(root)
     seed = read_json(args.seed_policy)
     settings = read_json(args.backend)
@@ -96,7 +97,7 @@ def _candidate_run(args, root, contract):
         if protocol["seed_policy"] != seed or args.tier != "full":
             raise ValidationError("confirmation must use full verification and its registered seed policy")
         benchmark = protocol["benchmark"]
-        if benchmark in FAIL_FAST and protocol.get("backend_hash") != identity(settings):
+        if (benchmark in FAIL_FAST or coverage is not None) and protocol.get("backend_hash") != identity(settings):
             raise ValidationError("confirmation backend differs from the registered backend")
         store.register_confirmation(args.id, protocol)
     report = verify_candidate(
@@ -107,13 +108,17 @@ def _candidate_run(args, root, contract):
         settings,
         args.output,
         timeout=args.timeout,
+        verification_profile=record["config"].get("verification_profile"),
     )
     if benchmark is not None:
         # A G0 mapping from actual verifier return fields is required.
         results = report.get("official_results") or {}
-        if benchmark in FAIL_FAST:
+        if benchmark in FAIL_FAST or coverage is not None:
             raw = results.get("raw_verifier_results", {}).get(benchmark, {})
-            observed = fail_fast_observed(benchmark, raw)
+            observed = (
+                dqi_observed(raw, coverage["dqi"]) if benchmark == "dqi" and coverage is not None
+                else fail_fast_observed(benchmark, raw, coverage)
+            )
             return store.finish_confirmation(
                 args.id,
                 {
@@ -252,8 +257,8 @@ def dispatch(args):
         if record.get("parent"):
             store = CandidateStore(root / "runs/candidates")
             candidate = store.get(record["candidate_id"])
-            if store.require_chemistry_parent(candidate) != record["parent"]:
-                raise ValidationError("release parent does not match the trusted chemistry lineage")
+            if store.require_release_parent(candidate) != record["parent"]:
+                raise ValidationError("release parent does not match the trusted lineage")
         from .artifacts import extract_archive
 
         # Re-extract the exact frozen ZIP at verification time; do not trust a prior directory.
@@ -271,6 +276,7 @@ def dispatch(args):
             read_json(args.backend),
             args.output,
             timeout=args.timeout,
+            verification_profile=record["candidate"]["config"].get("verification_profile"),
         )
         certificate = certify_release(
             record, report, contract, supporting_evidence=read_json(args.supporting_evidence)

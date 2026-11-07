@@ -12,6 +12,7 @@ import time
 from pathlib import Path
 
 from .artifacts import hashes, validate_manifest
+from .component_confirmations import CANDIDATE_PROFILE, candidate_coverage, has_full_hybrid_coverage
 from .environment import capture
 from .errors import BlockedError, ValidationError
 from .io import identity, read_json, sha256, write_json
@@ -51,7 +52,10 @@ def validate_backend(config):
         raise BlockedError("adapter reviewed only for official metric notebook v10")
 
 
-def verify_candidate(artifacts, contract, tier, seed_policy, backend, output_dir, *, timeout=86400):
+def verify_candidate(
+    artifacts, contract, tier, seed_policy, backend, output_dir, *,
+    timeout=86400, verification_profile=None,
+):
     if tier not in ("smoke", "full") or seed_policy.get("role") not in (
         "development",
         "confirmation",
@@ -66,6 +70,8 @@ def verify_candidate(artifacts, contract, tier, seed_policy, backend, output_dir
     with recorder().stage("adapter_input_integrity", "hashing", benchmark="all"):
         validate_manifest(artifacts)
         validate_backend(backend)
+        if verification_profile not in (None, CANDIDATE_PROFILE):
+            raise ValidationError("unknown verification profile")
     output_dir = Path(output_dir).resolve()
     output_dir.mkdir(parents=True, exist_ok=False)
     environment = capture(Path(backend.get("project_root", Path(__file__).resolve().parents[2])))
@@ -77,6 +83,8 @@ def verify_candidate(artifacts, contract, tier, seed_policy, backend, output_dir
         "seed_policy": seed_policy,
         "backend": backend,
     }
+    if verification_profile == CANDIDATE_PROFILE and tier == "full":
+        request["expected_coverage"] = candidate_coverage(artifacts)
     write_json(output_dir / "request.json", request)
     started = time.monotonic()
     status, diagnostic = "incomplete", None
@@ -109,6 +117,11 @@ def verify_candidate(artifacts, contract, tier, seed_policy, backend, output_dir
         validate_manifest(artifacts)
         validate_backend(backend)
     complete = status == "passed" and worker is not None and worker.get("completed") is True
+    if complete and "expected_coverage" in request and not has_full_hybrid_coverage(
+        {"official_results": worker}, request["expected_coverage"]
+    ):
+        complete, status = False, "failed"
+        diagnostic = "official worker returned incomplete or inconsistent candidate coverage"
     report = {
         "schema_version": 1,
         "kind": "official_metric_execution",

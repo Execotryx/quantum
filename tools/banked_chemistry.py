@@ -45,20 +45,32 @@ def backend():
     )
 
 
-def banked_circuit(km, api, delta, brot: int):
+def banked_circuit(km, api, delta, brot: int, *, low_bits: int | None = None):
+    legacy = low_bits is None
+    low_bits = LOW_BITS if low_bits is None else low_bits
+    delta = np.asarray(delta)
+    require(delta.ndim == 2 and delta.shape[0] >= 2 and delta.dtype.kind in "iu", "invalid delta table")
     rows, width = delta.shape
     address_bits = (rows - 1).bit_length()
-    require(address_bits == 12 and width == 9 and brot == 12, "unexpected pinned lookup shape")
+    if legacy:
+        require(address_bits == 12 and width == 9 and brot == 12, "unexpected pinned lookup shape")
+    require(1 <= low_bits < address_bits and 1 <= brot <= 62 and width >= 1, "invalid bank layout")
     require(bool(np.all((0 <= delta) & (delta < 2**brot))), "invalid delta word")
+    high_bits = address_bits - low_bits
+    flag_slots = int(high_bits > 1)
+    scratch_size = max(low_bits + flag_slots, high_bits - 1)
+    require(address_bits + width * brot + scratch_size <= 128, "bank layout exceeds ANGLE qubit cap")
     builder = km.CircuitBuilder()
     selection = builder.create_quantum_register(address_bits, api.SELECTION_REGISTER)
     words = [builder.create_quantum_register(brot, api.word_register(j)) for j in range(width)]
-    scratch = list(builder.alloc_qubits(LOW_BITS + 1))
-    flag, helpers = scratch[0], scratch[1:4]
+    scratch = list(builder.alloc_qubits(scratch_size))
+    flag, helpers = scratch[0], scratch[1:high_bits - 1]
     bits = list(reversed(list(selection)))
-    high, low = bits[:-LOW_BITS], bits[-LOW_BITS:]
+    high, low = bits[:-low_bits], bits[-low_bits:]
 
     def tree(control, level: int, start: int, end: int) -> None:
+        if start >= rows:
+            return
         if end - start == 1:
             for register, word in zip(words, delta[start], strict=True):
                 value = int(word)
@@ -68,10 +80,10 @@ def banked_circuit(km, api, delta, brot: int):
                     value ^= bit
             return
         middle = (start + end) // 2
-        if middle >= rows:
+        if legacy and middle >= rows:
             tree(control, level + 1, start, middle)
             return
-        address, child = low[level], scratch[level + 1]
+        address, child = low[level], scratch[level + flag_slots]
         builder.x(address)
         builder.init_and(control, address, child)
         builder.x(address)
@@ -80,8 +92,10 @@ def banked_circuit(km, api, delta, brot: int):
         tree(child, level + 1, middle, end)
         builder.del_and(control, address, child)
 
-    chain = list(zip([high[0], *helpers], high[1:], [*helpers, flag], strict=True))
-    size = 1 << LOW_BITS
+    chain = (
+        list(zip([high[0], *helpers], high[1:], [*helpers, flag], strict=True)) if high_bits > 1 else []
+    )
+    size = 1 << low_bits
     for bank, start in enumerate(range(0, rows, size)):
         negated = [bit for k, bit in enumerate(reversed(high)) if not bank & (1 << k)]
         for bit in negated:
@@ -90,7 +104,7 @@ def banked_circuit(km, api, delta, brot: int):
             builder.init_and(*pair)
         for pair in reversed(chain[:-1]):
             builder.del_and(*pair)
-        tree(flag, 0, start, start + size)
+        tree(flag if chain else high[0], 0, start, start + size)
         for pair in chain[:-1]:
             builder.init_and(*pair)
         for pair in reversed(chain):

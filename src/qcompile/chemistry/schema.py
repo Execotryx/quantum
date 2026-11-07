@@ -31,6 +31,7 @@ def read_factorization(path: Path, spec=None, max_bytes=MAX_NPZ_BYTES):
                 if np.lib.format.read_magic(stream) != (1, 0):
                     raise ValidationError(f"{key}: expected NPY format 1.0")
                 shape, _, dtype = np.lib.format.read_array_header_1_0(stream)
+                header_size = stream.tell()
             if dtype.kind not in kinds or dtype.names or dtype.subdtype or dtype.byteorder == ">":
                 raise ValidationError(f"{key}: invalid plain numeric dtype")
             if len(shape) != len(expected):
@@ -44,8 +45,7 @@ def read_factorization(path: Path, spec=None, max_bytes=MAX_NPZ_BYTES):
             if total > max_bytes:
                 raise ValidationError("NPZ allocation exceeds byte limit")
             # Prevent truncated/oversized payloads hidden behind valid headers.
-            info = archive.getinfo(key + ".npy")
-            if info.file_size > max_bytes + 10000 or info.file_size < size:
+            if archive.getinfo(key + ".npy").file_size != header_size + size:
                 raise ValidationError(f"{key}: inconsistent NPY payload size")
     with np.load(path, allow_pickle=False) as archive:
         arrays = {key: np.array(archive[key]) for key in spec}

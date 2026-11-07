@@ -24,6 +24,12 @@
   carry forward byte-identical optimized chemistry only through the trusted
   parent certificate and its intact confirmation. Check the exact full
   coverage and retained costs before attributing a gain to inverse square root.
+- New hybrid candidates opt into `candidate-v1`. Derive full chemistry coverage
+  from the frozen NPZ shape, bind all retained component bytes to the certified
+  parent, and use a matched parent replay if retained DQI observations differ.
+  Keep paired development salts out of the confirmation ledger. Treat
+  `hybrid_preflight.py` and the DQI primitive slices as structural development
+  evidence. Keep the v2 inverse-square-root screen separate from v1 replay.
 
 - Step-3 differential tools pin upstream/native hashes and retain explicit fixture
   coverage. Primitive evidence must state initialization, phase and composition

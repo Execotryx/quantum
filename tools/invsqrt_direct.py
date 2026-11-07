@@ -19,10 +19,12 @@ from qcompile.environment import capture
 from qcompile.experiments import record_lock, validate_budget
 from qcompile.invsqrt.direct import DirectFormat, build_circuit, coefficient_table, phase64
 from qcompile.invsqrt.direct_screen import beta_one_targets, complete_cost, scan_phase
+from qcompile.invsqrt.minimax import coefficient_table as minimax_table
 from qcompile.io import read_json, sha256, write_json
 from qcompile.profiling import ResourceSampler, terminate_tree
 
 CONFIG = ROOT / "configs/invsqrt-direct-v1.json"
+CONFIG_V2 = ROOT / "configs/invsqrt-direct-v2.json"
 N_P = 10
 EXPECTED_SHOTS = 200_540_928
 PINS = (
@@ -40,13 +42,22 @@ PINS = (
 )
 
 
-def pins() -> dict[str, str]:
-    return {p.relative_to(ROOT).as_posix(): sha256(p) for p in PINS}
+def pins(version: int = 1) -> dict[str, str]:
+    paths = PINS
+    if version == 2:
+        paths += (
+            CONFIG_V2,
+            ROOT / "src/qcompile/invsqrt/minimax.py",
+            ROOT / "docs/evidence/invsqrt-direct-20261107/combined/attempt.json",
+            ROOT / "docs/evidence/invsqrt-direct-20261107/combined/coefficients.json",
+            ROOT / "docs/evidence/invsqrt-direct-hybrid-20261107/certificate.json",
+        )
+    return {p.relative_to(ROOT).as_posix(): sha256(p) for p in paths}
 
 
 def registered(directory: Path) -> dict:
     record = read_json(directory / "registration.json")
-    require(pins() == record["inputs"], "registered inputs changed")
+    require(pins(record.get("version", 1)) == record["inputs"], "registered inputs changed")
     revision = capture(ROOT)
     require(
         not revision["dirty"] and revision["source_revision"] == record["environment"]["source_revision"],
@@ -113,8 +124,10 @@ def native_smoke(km, official, circuit, spec, model, points, policy):
 
 
 def direct_candidate(km, primitives, fmt_spec):
-    fmt = DirectFormat(N_P, **{**fmt_spec, "fractional": tuple(fmt_spec["fractional"])})
-    table = coefficient_table(fmt)
+    settings = dict(fmt_spec)
+    fit = settings.pop("fit", "taylor")
+    fmt = DirectFormat(N_P, **{**settings, "fractional": tuple(settings["fractional"])})
+    table = {"taylor": coefficient_table, "minimax": minimax_table}[fit](fmt)
     return build_circuit(km, primitives, fmt, table), partial(phase64, fmt, table), table
 
 
@@ -125,7 +138,7 @@ def lane(directory: Path, name: str) -> None:
     km, primitives, official = backend()
     spec = official.ProblemSpecInvSqrt.for_n_p(N_P)
     control = protocol["controls"].get(name)
-    if control:
+    if control and "widths" in control:
         prec = primitives.Precision(*control["widths"])
         model = partial(phase, primitives, prec, N_P)
         circuit = primitives.build_nr_circuit(N_P, prec=prec)
@@ -147,6 +160,11 @@ def lane(directory: Path, name: str) -> None:
             score is not None and isclose(score["score"], control["cost"], rel_tol=1e-12),
             f"{name} score differs",
         )
+        if "coefficients_sha256" in control:
+            require(
+                sha256(output / "coefficients.json") == control["coefficients_sha256"],
+                f"{name} coefficient table differs",
+            )
     write_json(
         output / "result.json",
         {
@@ -158,7 +176,7 @@ def lane(directory: Path, name: str) -> None:
             "phase_gate": margins["input_count"] == spec.max_x
             and not margins["nonpositive_margins"]
             and not margins["above_90_percent"],
-            "coefficients_sha256": None if control else sha256(output / "coefficients.json"),
+            "coefficients_sha256": None if "widths" in (control or {}) else sha256(output / "coefficients.json"),
         },
     )
 
@@ -179,8 +197,11 @@ def run_job(argv: list[str], output: Path, timeout: float) -> int:
                     sampler.stop()
 
 
-def screen(directory: Path) -> None:
+def screen(directory: Path, version: int = 1) -> None:
     protocol = read_json(CONFIG)
+    if version == 2:
+        updates = read_json(CONFIG_V2)
+        protocol = {**protocol, **updates, "controls": {**protocol["controls"], **updates["controls"]}}
     validate_budget(protocol)
     contract = load_contract(ROOT / "contracts/contract.json")
     contract.require_ready(ROOT)
@@ -198,7 +219,8 @@ def screen(directory: Path) -> None:
         directory / "registration.json",
         {
             "protocol": protocol,
-            "inputs": pins(),
+            "version": version,
+            "inputs": pins(version),
             "contract_hash": contract.hash,
             "environment": environment,
             "registered_unix": time.time(),
@@ -252,7 +274,10 @@ def screen(directory: Path) -> None:
         row = attempts[name]
         return row["cost"]["score"], -row["margins"]["minimum_margin_phase64"], name
 
-    controls_pass = all(attempt(name, {})["status"] == "completed" for name in ("reference", "incumbent"))
+    controls_pass = all(
+        attempt(name, control.get("parameters", {}))["status"] == "completed"
+        for name, control in protocol["controls"].items()
+    )
     if controls_pass:
         attempt("direct-control", protocol["direct_control"])
         for name, params in protocol["piecewise"].items():
@@ -261,11 +286,17 @@ def screen(directory: Path) -> None:
         if feasible:
             parent = min(feasible, key=ranking)
             params = attempts[parent]["parameters"]
-            fused = attempt("fused", {**params, "fused": True})
-            reuse = attempt("reuse", {**params, "reuse_lookup": True})
-            if all(passed(row) and row["cost"]["score"] < ranking(parent)[0] for row in (fused, reuse)):
-                attempt("combined", {**params, "fused": True, "reuse_lookup": True})
-    limit = protocol["controls"]["incumbent"]["cost"] * (1 - protocol["minimum_gain"])
+            if version == 1:
+                fused = attempt("fused", {**params, "fused": True})
+                reuse = attempt("reuse", {**params, "reuse_lookup": True})
+                if all(passed(row) and row["cost"]["score"] < ranking(parent)[0] for row in (fused, reuse)):
+                    attempt("combined", {**params, "fused": True, "reuse_lookup": True})
+            else:
+                for name, changes in protocol["ablations"].items():
+                    settings = {**params, **changes}
+                    if settings != params:
+                        attempt(name, settings)
+    limit = protocol["controls"][protocol.get("comparison", "incumbent")]["cost"] * (1 - protocol["minimum_gain"])
     eligible = [
         n
         for n, row in attempts.items()
@@ -385,6 +416,7 @@ def main() -> None:
     )
     parser.add_argument("directory", type=Path)
     parser.add_argument("name", nargs="?")
+    parser.add_argument("--protocol", choices=(1, 2), type=int, default=1)
     args = parser.parse_args()
     if args.action == "build":
         if args.name is None:
@@ -393,7 +425,7 @@ def main() -> None:
         circuit, _, _ = direct_candidate(km, primitives, read_json(Path(args.name)))
         emit(km, circuit, official, args.directory / "invsqrt.kmb")
     elif args.action == "screen":
-        screen(args.directory)
+        screen(args.directory, args.protocol)
     elif args.action == "lane":
         lane(args.directory, args.name)
     elif args.action == "verify-worker":
