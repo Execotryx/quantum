@@ -126,15 +126,30 @@ least 32 characters and an explicit distribution description. Sample size and
 thresholds must come from the registered, source-reconciled procedure; no example
 numeric threshold is presented as an official requirement.
 
-Registration precedes execution. Confirmation must cover the sole generated
-benchmark; retained components undergo full release revalidation. The fixed metric
-currently determines sample size, so a requested protocol must match its actual
-returned count. Custom sample sizes need a separately reviewed official adapter.
+Registration precedes execution. Each generated benchmark needs a separate
+confirmation. A hybrid confirmation binds the complete component, including
+the chemistry factorization and tree even when the NPZ is retained. Inverse
+square root and chemistry pin `backend_hash`, require zero failures and need
+200,540,928 and 254,464 completed trajectories respectively. Chemistry also
+pins the verifier's canonical family digest in `verifier_artifact_sha256`.
+The pinned verifiers raise on bad trajectories and return PASS only after
+full coverage. The importer checks the raw result before deriving zero
+failures. The legacy single-benchmark record and DQI counter mapping retain
+their original meaning.
+
+The fixed metric determines sample size, so a requested protocol must match
+its actual returned count. Custom sample sizes need a separately reviewed
+official adapter.
 Missing sample counters leave confirmation incomplete, never passed. Failed or
 tuning-consumed data cannot confirm a replacement; unchanged bytes cannot be
 repeatedly sampled. The ledger reserves salts globally within the run store.
 The Python API exposes `consume_confirmation` to mark evidence subsequently used
 for tuning. Such use is an operator decision; it cannot be detected automatically.
+
+The reduced metric smoke sample can reject the reference DQI circuit on its
+confidence bound even with zero observed errors. A complete hybrid metric
+report with all three exact full-strength coverage counts can also satisfy
+the hybrid smoke transition. That report retains its full tier and coverage.
 
 ## Rebuild recipes and certificates
 
@@ -151,6 +166,14 @@ files are copied unchanged. The release source revision and dependency lock must
 match the candidate. Two independent builds and two deterministic ZIPs must match
 before a fresh extraction is made. The full verifier is run on a new extraction
 again when `release verify` executes, not on the previous working directory.
+
+A direct-phasing successor declares unchanged optimized ANGLE files as
+`retained_certified`. The candidate's `retained_chemistry` binding contains the
+parent candidate ID, exact ZIP SHA-256, local certificate SHA-256 and backend
+identity. The store resolves the local certificate, checks the parent's
+chemistry confirmation and complete component manifest, and carries forward
+that lineage without reserving a new chemistry confirmation. Only the new
+inverse-square-root member receives a fresh confirmation.
 
 A supporting-evidence JSON must contain substantive records for `coverage_counts`,
 `cost_breakdown`, `numerical_margins`, `mutation_diagnostics`, `primitive_scope`,

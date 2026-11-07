@@ -21,13 +21,17 @@ records the exact archive and component results. The
 [independent validation audit](docs/step3-completion-02-11-2026-13-20-23.md)
 records the primitive and defect-control evidence.
 
-[Direct polynomial phasing](openspec/changes/reproduce-direct-polynomial-invsqrt/proposal.md)
-is the next inverse-square-root optimization on the hybrid branch. Its
-promotion gates require full-domain phase screening, separate full
-verification and confirmation on the same bytes, and a measured improvement
-on a rebuilt hybrid archive. [Formal hybrid certification](openspec/changes/certify-hybrid-release/proposal.md)
-is still open. It supplies the parent certificate that a successor needs to
-carry forward the unchanged chemistry family.
+[Direct polynomial phasing](docs/direct-polynomial-invsqrt-07-11-2026-13-43-15.md)
+produced a **199-qubit** circuit costing **1,008,498.12**, a **48.85%** reduction
+from the hybrid's inverse-square-root component. Full verification and fresh
+confirmation each passed **200,540,928** trajectories on identical circuit
+bytes. The worst input used **27.29%** of its allowed phase error.
+
+The successor archive keeps the original chemistry and DQI members by hash.
+Its complete metric run is in progress. The score above remains the measured
+result of the existing hybrid. [Formal hybrid certification](openspec/changes/certify-hybrid-release/proposal.md)
+tracks the parent certificate and the chemistry evidence a certified
+successor needs.
 
 ## Install and check
 
@@ -118,9 +122,9 @@ current inverse-square-root incumbent and its two full-strength runs.
 ## Candidate verification and reproducible builds
 
 Candidate commands register artifacts, consume evidence for state changes, run
-verification, and record preregistered confirmation. The first build workflow
-supports one optimized benchmark per candidate, with validated references for
-the other components.
+verification, and record preregistered confirmation. The hybrid workflow tracks
+confirmation for each optimized benchmark and includes the exact chemistry
+factorization and tree in the chemistry record.
 
 ```bash
 uv run qcompile candidate register --selection /path/to/candidate-selection.json

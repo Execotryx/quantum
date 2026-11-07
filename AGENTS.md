@@ -19,6 +19,11 @@
   Check the 128-qubit cap and phase, selection and workspace at every circuit
   boundary. Combined validation keeps the exact confirmed inverse-square-root
   bytes and reference DQI and verifies the extracted archive with the pinned metric.
+- Hybrid certification requires a separate, one-use confirmation per generated
+  benchmark. The chemistry scope includes the retained NPZ. A successor may
+  carry forward byte-identical optimized chemistry only through the trusted
+  parent certificate and its intact confirmation. Check the exact full
+  coverage and retained costs before attributing a gain to inverse square root.
 
 - Step-3 differential tools pin upstream/native hashes and retain explicit fixture
   coverage. Primitive evidence must state initialization, phase and composition

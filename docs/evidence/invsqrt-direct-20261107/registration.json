@@ -1,0 +1,217 @@
+{
+  "available_memory_kib": 7162936,
+  "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+  "environment": {
+    "cpu_count": 16,
+    "dependencies": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scipy": "1.17.0"
+    },
+    "dependency_lock_sha256": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+    "dirty": false,
+    "numpy_backend": {
+      "Build Dependencies": {
+        "blas": {
+          "detection method": "pkgconfig",
+          "found": true,
+          "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+          "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+          "name": "scipy-openblas",
+          "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+          "pc file directory": "/project/.openblas",
+          "version": "0.3.30"
+        },
+        "lapack": {
+          "detection method": "pkgconfig",
+          "found": true,
+          "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+          "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+          "name": "scipy-openblas",
+          "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+          "pc file directory": "/project/.openblas",
+          "version": "0.3.30"
+        }
+      },
+      "Compilers": {
+        "c": {
+          "commands": "cc",
+          "linker": "ld.bfd",
+          "name": "gcc",
+          "version": "14.2.1"
+        },
+        "c++": {
+          "commands": "c++",
+          "linker": "ld.bfd",
+          "name": "gcc",
+          "version": "14.2.1"
+        },
+        "cython": {
+          "commands": "cython",
+          "linker": "cython",
+          "name": "cython",
+          "version": "3.2.1"
+        }
+      },
+      "Machine Information": {
+        "build": {
+          "cpu": "x86_64",
+          "endian": "little",
+          "family": "x86_64",
+          "system": "linux"
+        },
+        "host": {
+          "cpu": "x86_64",
+          "endian": "little",
+          "family": "x86_64",
+          "system": "linux"
+        }
+      },
+      "Python Information": {
+        "path": "/tmp/build-env-w_be3r90/bin/python",
+        "version": "3.13"
+      },
+      "SIMD Extensions": {
+        "baseline": [
+          "SSE",
+          "SSE2",
+          "SSE3"
+        ],
+        "found": [
+          "SSSE3",
+          "SSE41",
+          "POPCNT",
+          "SSE42",
+          "AVX",
+          "F16C",
+          "FMA3",
+          "AVX2"
+        ],
+        "not found": [
+          "AVX512F",
+          "AVX512CD",
+          "AVX512_KNL",
+          "AVX512_KNM",
+          "AVX512_SKX",
+          "AVX512_CLX",
+          "AVX512_CNL",
+          "AVX512_ICL",
+          "AVX512_SPR"
+        ]
+      }
+    },
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "processor": "",
+    "python": "3.13.15 (main, Aug 14 2026, 15:34:59) [Clang 22.1.3 ]",
+    "source_revision": "a9d673d68cbae0d2305828c4bd167f555f562e9b",
+    "thread_settings": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "inputs": {
+    "configs/invsqrt-direct-v1.json": "a839f5c53c8e14155a805ebcbf35c965d600c88375294472d0c6bc9dd037e8e4",
+    "contracts/contract.json": "9a2e0016cd6bdb1519cac904574ba2f8dfc0e01969a2d1129ce0f0d836852a8f",
+    "docs/evidence/invsqrt-chemistry-20261107/archive.json": "ffeca5cd11ccd8c215209fd7b2e480275926c7027d0511e6e41424d19f738b2d",
+    "docs/evidence/invsqrt-chemistry-20261107/combined-result.json": "c93b6823ae55bf69a39d54825cab5f0ca57dab75f8808a8ea5b549eb5885d5fb",
+    "docs/evidence/official-baseline-20261101.json": "1fbc229f8bf97c731e73cc4db91759736d6a47d515661249ccc8add8516625b6",
+    "src/qcompile/invsqrt/direct.py": "0c8bf252333ea708bc391d631d50f906d839cc8e851d6101a7e5ef2cf245b451",
+    "src/qcompile/invsqrt/direct_screen.py": "94cd56df585c236a6676f6adcaae081e96411871e46c1242bf66be48dc90295f",
+    "tools/invsqrt_direct.py": "e07fc5edcc1bc508d8b75f87bb550b0da82da4f4c05dec7c7e65f69c1d037818",
+    "tools/invsqrt_opportunity.py": "2c90ea1cd69857fc9bfaa0b2acd02edf62f1f0a4d39cfa324ed424cba784c8d7",
+    "uv.lock": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+    "vendor/backend.json": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49"
+  },
+  "protocol": {
+    "budget": {
+      "engineer_hours": 16,
+      "max_compute_seconds": 14400,
+      "max_experiments": 11,
+      "max_wall_seconds": 7200,
+      "minimum_available_memory_kib": 4194304
+    },
+    "controls": {
+      "incumbent": {
+        "cost": 1971483.438323478,
+        "sha256": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9",
+        "widths": [
+          13,
+          17,
+          28,
+          27,
+          28
+        ]
+      },
+      "reference": {
+        "cost": 2076774.233715282,
+        "sha256": "e2bf8eb64350a4460a271fc7f1d591ef125b1e276377e9a0f64b96ab3ca321e1",
+        "widths": [
+          14,
+          17,
+          28,
+          28,
+          29
+        ]
+      }
+    },
+    "correctness_conditions": "Full-domain positive phase64 margin, at most 90 percent of the tolerance, native phase parity, restored x and zero scratch.",
+    "development": {
+      "batch": 64,
+      "random_inputs": 256,
+      "repeat": 4,
+      "seed": 2026110701
+    },
+    "direct_control": {
+      "fractional": [
+        33,
+        28,
+        23,
+        18
+      ],
+      "segment_bits": 6
+    },
+    "hypothesis": "A direct polynomial phase circuit can beat the confirmed Newton circuit inside the same hybrid.",
+    "minimum_gain": 0.1,
+    "objective": "Minimize complete declared-qubit and rotation-inclusive verifier cost.",
+    "parameter_ranges": "Left-endpoint Taylor pieces with fixed dyadic boundaries and the exact variants in this registration.",
+    "parent_rule": "Choose the best positive-margin and within-tolerance polynomial by score, then absolute margin, then label. Compare fused arithmetic and lookup workspace reuse independently on that parent. Combine them only if both individually lower cost.",
+    "piecewise": {
+      "finer-cubic": {
+        "fractional": [
+          32,
+          26,
+          20,
+          15
+        ],
+        "segment_bits": 7
+      },
+      "narrow-cubic": {
+        "fractional": [
+          31,
+          26,
+          21,
+          16
+        ],
+        "segment_bits": 6
+      },
+      "quartic": {
+        "fractional": [
+          33,
+          28,
+          23,
+          18,
+          13
+        ],
+        "segment_bits": 5
+      }
+    },
+    "promotion": {
+      "timeout_seconds": 3600,
+      "workers": 2
+    },
+    "stop_rule": "Stop on a control or budget failure. Retain all attempted variants and never promote on modeled evidence alone."
+  },
+  "registered_unix": 1794041632.638777,
+  "screen_lanes": 1
+}
