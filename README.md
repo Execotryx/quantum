@@ -3,11 +3,31 @@
 A Python toolchain for reproducible quantum-circuit compilation experiments,
 independent mathematical checks, and local verification against pinned evaluators.
 
-**Current status: G0/G1 independent validation passed; step-3 evidence frozen.**
-The [completion audit](docs/step3-completion-02-11-2026-13-20-23.md) records
-validation coverage, native defect controls, and the frozen artifact identity.
-The [implementation status](docs/implementation-status.md) describes completed
-work and the remaining optimization stages.
+## Current state
+
+The reference and independent mathematical checks are complete. The best
+locally verified archive combines the confirmed inverse-square-root circuit
+with the nine banked chemistry circuits and retains the reference DQI circuit.
+The complete extracted archive scored **1.0286345857** relative to the reference.
+
+| Benchmark | Locally measured change | Full trajectories in the hybrid |
+|---|---:|---:|
+| Inverse square root | 5.07% lower cost | 200,540,928 |
+| Chemistry | 3.21% lower cost | 254,464 |
+| DQI | Reference circuit and cost | 102,400 |
+
+The [hybrid validation report](docs/banked-chemistry-07-11-2026-01-52-35.md)
+records the exact archive and component results. The
+[independent validation audit](docs/step3-completion-02-11-2026-13-20-23.md)
+records the primitive and defect-control evidence.
+
+[Direct polynomial phasing](openspec/changes/reproduce-direct-polynomial-invsqrt/proposal.md)
+is the next inverse-square-root optimization on the hybrid branch. Its
+promotion gates require full-domain phase screening, separate full
+verification and confirmation on the same bytes, and a measured improvement
+on a rebuilt hybrid archive. [Formal hybrid certification](openspec/changes/certify-hybrid-release/proposal.md)
+is still open. It supplies the parent certificate that a successor needs to
+carry forward the unchanged chemistry family.
 
 ## Install and check
 
@@ -91,8 +111,9 @@ uv run qcompile experiment run --config configs/invsqrt-initial.json
 
 It evaluates a constant model over inputs 1–1024 and records nonpositive margins.
 Registrations, failures, environment details, and reports use content-derived run
-identities. The next research stage is the bounded opportunity screen in the
-[implementation plan](docs/implementation-plan.md).
+identities. The completed
+[width screen](docs/invsqrt-opportunity-07-11-2026-00-44-21.md) documents the
+current inverse-square-root incumbent and its two full-strength runs.
 
 ## Candidate verification and reproducible builds
 

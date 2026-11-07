@@ -1,0 +1,36 @@
+{
+  "hypothesis": "A direct polynomial phase circuit can beat the confirmed Newton circuit inside the same hybrid.",
+  "parameter_ranges": "Left-endpoint Taylor pieces with fixed dyadic boundaries and the exact variants in this registration.",
+  "correctness_conditions": "Full-domain positive phase64 margin, at most 90 percent of the tolerance, native phase parity, restored x and zero scratch.",
+  "objective": "Minimize complete declared-qubit and rotation-inclusive verifier cost.",
+  "stop_rule": "Stop on a control or budget failure. Retain all attempted variants and never promote on modeled evidence alone.",
+  "minimum_gain": 0.1,
+  "budget": {
+    "engineer_hours": 16,
+    "max_wall_seconds": 7200,
+    "max_compute_seconds": 14400,
+    "max_experiments": 11,
+    "minimum_available_memory_kib": 4194304
+  },
+  "promotion": {"timeout_seconds": 3600, "workers": 2},
+  "development": {"seed": 2026110701, "random_inputs": 256, "repeat": 4, "batch": 64},
+  "controls": {
+    "reference": {
+      "widths": [14, 17, 28, 28, 29],
+      "sha256": "e2bf8eb64350a4460a271fc7f1d591ef125b1e276377e9a0f64b96ab3ca321e1",
+      "cost": 2076774.233715282
+    },
+    "incumbent": {
+      "widths": [13, 17, 28, 27, 28],
+      "sha256": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9",
+      "cost": 1971483.438323478
+    }
+  },
+  "direct_control": {"segment_bits": 6, "fractional": [33, 28, 23, 18]},
+  "piecewise": {
+    "quartic": {"segment_bits": 5, "fractional": [33, 28, 23, 18, 13]},
+    "narrow-cubic": {"segment_bits": 6, "fractional": [31, 26, 21, 16]},
+    "finer-cubic": {"segment_bits": 7, "fractional": [32, 26, 20, 15]}
+  },
+  "parent_rule": "Choose the best positive-margin and within-tolerance polynomial by score, then absolute margin, then label. Compare fused arithmetic and lookup workspace reuse independently on that parent. Combine them only if both individually lower cost."
+}
