@@ -1,0 +1,3772 @@
+{
+  "archive_sha256": "8fb545091a1cf66c2656bdce40bedbc26e478746301f9a777f56173f88b88503",
+  "artifact_hashes": {
+    "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+    "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+    "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+    "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+    "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+    "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+    "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+    "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+    "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+    "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+    "dqi.kmb": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+    "invsqrt.kmb": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9"
+  },
+  "candidate": {
+    "artifact_hashes": {
+      "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+      "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+      "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+      "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+      "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+      "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+      "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+      "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+      "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+      "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "dqi.kmb": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+      "invsqrt.kmb": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9"
+    },
+    "artifact_sources": {
+      "dfthcsos/angle_k_0.kmb": {
+        "origin": "generated",
+        "provenance": "Hash-bound member of the verified hybrid archive"
+      },
+      "dfthcsos/angle_k_1.kmb": {
+        "origin": "generated",
+        "provenance": "Hash-bound member of the verified hybrid archive"
+      },
+      "dfthcsos/angle_k_2.kmb": {
+        "origin": "generated",
+        "provenance": "Hash-bound member of the verified hybrid archive"
+      },
+      "dfthcsos/angle_k_3.kmb": {
+        "origin": "generated",
+        "provenance": "Hash-bound member of the verified hybrid archive"
+      },
+      "dfthcsos/angle_k_4.kmb": {
+        "origin": "generated",
+        "provenance": "Hash-bound member of the verified hybrid archive"
+      },
+      "dfthcsos/angle_k_5.kmb": {
+        "origin": "generated",
+        "provenance": "Hash-bound member of the verified hybrid archive"
+      },
+      "dfthcsos/angle_k_6.kmb": {
+        "origin": "generated",
+        "provenance": "Hash-bound member of the verified hybrid archive"
+      },
+      "dfthcsos/angle_k_7.kmb": {
+        "origin": "generated",
+        "provenance": "Hash-bound member of the verified hybrid archive"
+      },
+      "dfthcsos/angle_k_8.kmb": {
+        "origin": "generated",
+        "provenance": "Hash-bound member of the verified hybrid archive"
+      },
+      "dfthcsos/submission.npz": {
+        "origin": "retained_reference",
+        "provenance": "Hash-bound member of the verified hybrid archive"
+      },
+      "dqi.kmb": {
+        "origin": "retained_reference",
+        "provenance": "Hash-bound member of the verified hybrid archive"
+      },
+      "invsqrt.kmb": {
+        "origin": "generated",
+        "provenance": "Hash-bound member of the verified hybrid archive"
+      }
+    },
+    "artifacts": {
+      "dfthcsos/angle_k_0.kmb": {
+        "origin": "generated",
+        "path": "/mnt/e/sources/python/quantum/runs/invsqrt-direct-parent-certificate-20261107-v2/extracted/dfthcsos/angle_k_0.kmb",
+        "provenance": "Hash-bound member of the verified hybrid archive",
+        "sha256": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8"
+      },
+      "dfthcsos/angle_k_1.kmb": {
+        "origin": "generated",
+        "path": "/mnt/e/sources/python/quantum/runs/invsqrt-direct-parent-certificate-20261107-v2/extracted/dfthcsos/angle_k_1.kmb",
+        "provenance": "Hash-bound member of the verified hybrid archive",
+        "sha256": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573"
+      },
+      "dfthcsos/angle_k_2.kmb": {
+        "origin": "generated",
+        "path": "/mnt/e/sources/python/quantum/runs/invsqrt-direct-parent-certificate-20261107-v2/extracted/dfthcsos/angle_k_2.kmb",
+        "provenance": "Hash-bound member of the verified hybrid archive",
+        "sha256": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d"
+      },
+      "dfthcsos/angle_k_3.kmb": {
+        "origin": "generated",
+        "path": "/mnt/e/sources/python/quantum/runs/invsqrt-direct-parent-certificate-20261107-v2/extracted/dfthcsos/angle_k_3.kmb",
+        "provenance": "Hash-bound member of the verified hybrid archive",
+        "sha256": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062"
+      },
+      "dfthcsos/angle_k_4.kmb": {
+        "origin": "generated",
+        "path": "/mnt/e/sources/python/quantum/runs/invsqrt-direct-parent-certificate-20261107-v2/extracted/dfthcsos/angle_k_4.kmb",
+        "provenance": "Hash-bound member of the verified hybrid archive",
+        "sha256": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2"
+      },
+      "dfthcsos/angle_k_5.kmb": {
+        "origin": "generated",
+        "path": "/mnt/e/sources/python/quantum/runs/invsqrt-direct-parent-certificate-20261107-v2/extracted/dfthcsos/angle_k_5.kmb",
+        "provenance": "Hash-bound member of the verified hybrid archive",
+        "sha256": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553"
+      },
+      "dfthcsos/angle_k_6.kmb": {
+        "origin": "generated",
+        "path": "/mnt/e/sources/python/quantum/runs/invsqrt-direct-parent-certificate-20261107-v2/extracted/dfthcsos/angle_k_6.kmb",
+        "provenance": "Hash-bound member of the verified hybrid archive",
+        "sha256": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591"
+      },
+      "dfthcsos/angle_k_7.kmb": {
+        "origin": "generated",
+        "path": "/mnt/e/sources/python/quantum/runs/invsqrt-direct-parent-certificate-20261107-v2/extracted/dfthcsos/angle_k_7.kmb",
+        "provenance": "Hash-bound member of the verified hybrid archive",
+        "sha256": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc"
+      },
+      "dfthcsos/angle_k_8.kmb": {
+        "origin": "generated",
+        "path": "/mnt/e/sources/python/quantum/runs/invsqrt-direct-parent-certificate-20261107-v2/extracted/dfthcsos/angle_k_8.kmb",
+        "provenance": "Hash-bound member of the verified hybrid archive",
+        "sha256": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4"
+      },
+      "dfthcsos/submission.npz": {
+        "origin": "retained_reference",
+        "path": "/mnt/e/sources/python/quantum/runs/invsqrt-direct-parent-certificate-20261107-v2/extracted/dfthcsos/submission.npz",
+        "provenance": "Hash-bound member of the verified hybrid archive",
+        "sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69"
+      },
+      "dqi.kmb": {
+        "origin": "retained_reference",
+        "path": "/mnt/e/sources/python/quantum/runs/invsqrt-direct-parent-certificate-20261107-v2/extracted/dqi.kmb",
+        "provenance": "Hash-bound member of the verified hybrid archive",
+        "sha256": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995"
+      },
+      "invsqrt.kmb": {
+        "origin": "generated",
+        "path": "/mnt/e/sources/python/quantum/runs/invsqrt-direct-parent-certificate-20261107-v2/extracted/invsqrt.kmb",
+        "provenance": "Hash-bound member of the verified hybrid archive",
+        "sha256": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9"
+      }
+    },
+    "claims": [
+      {
+        "assumptions": "Pinned verifier on the exact local archive extraction",
+        "kind": "sampled_circuit_acceptance"
+      }
+    ],
+    "config": {
+      "hybrid_archive_sha256": "8fb545091a1cf66c2656bdce40bedbc26e478746301f9a777f56173f88b88503"
+    },
+    "confirmation": {
+      "status": "passed"
+    },
+    "confirmations": {
+      "dfthcsos": {
+        "artifact_hashes": {
+          "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+          "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+          "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+          "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+          "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+          "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+          "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+          "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+          "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+          "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+          "dqi.kmb": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+          "invsqrt.kmb": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9"
+        },
+        "benchmark": "dfthcsos",
+        "component_hashes": {
+          "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+          "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+          "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+          "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+          "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+          "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+          "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+          "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+          "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+          "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69"
+        },
+        "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+        "evidence": {
+          "artifact_hashes": {
+            "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+            "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+            "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+            "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+            "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+            "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+            "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+            "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+            "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+            "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+            "dqi.kmb": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+            "invsqrt.kmb": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9"
+          },
+          "backend_hash": "064b3f583a668ab10bbcdaef6b238e202c66a2d1a9cc164e581d1431798553f7",
+          "benchmark": "dfthcsos",
+          "complete": true,
+          "component_hashes": {
+            "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+            "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+            "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+            "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+            "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+            "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+            "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+            "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+            "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+            "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69"
+          },
+          "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+          "observed": {
+            "k": 0,
+            "n": 254464
+          },
+          "raw_benchmark": {
+            "batch_size": 9,
+            "brot": 12,
+            "lambda_eff": 49.301369250574396,
+            "metrics": {
+              "E_SOS": -22144.23882724429,
+              "E_gap": 3.965477244291833,
+              "Lambda": 308.4559397330945,
+              "error_1": 0.0031851950317996216,
+              "error_2": 0.018639570630974368,
+              "gap_in_domain": true,
+              "lambda_eff": 49.301369250574396
+            },
+            "num_circuits": 9,
+            "num_ops": 2063857,
+            "num_qubits": 742,
+            "reaction_depth": 99,
+            "resources": {
+              "angles_persistent_qubits": 108,
+              "angles_qubits": 128,
+              "angles_selection_qubits": 12,
+              "angles_temporary_qubits": 8,
+              "angles_toffoli": 75024.0,
+              "angles_toffoli_per_pass": 37512.0,
+              "angles_within_cap": true,
+              "brot": 12,
+              "givens_rotations_toffoli": 3450,
+              "heuristic_persistent_qubits": 90,
+              "heuristic_qubits": 634,
+              "heuristic_temporary_qubits": 544,
+              "heuristic_toffoli": 13757,
+              "inner_state_prep_persistent_qubits": 44,
+              "inner_state_prep_qubits": 588,
+              "inner_state_prep_temporary_qubits": 544,
+              "inner_state_prep_toffoli": 9461,
+              "keep_bits": 10,
+              "outer_state_prep_persistent_qubits": 46,
+              "outer_state_prep_qubits": 416,
+              "outer_state_prep_temporary_qubits": 370,
+              "outer_state_prep_toffoli": 846,
+              "persistent_qubits": 198,
+              "qubits": 742,
+              "temporary_qubits": 544,
+              "toffoli": 88781.0
+            },
+            "score": 3247752448.668952,
+            "status": "PASS",
+            "submission_sha256": "09d50afaaca17334503ee807e91778c6200b81598937af2712a2e6f030ba6900",
+            "toffoli_count": 88781.0,
+            "verified_shots": 254464
+          },
+          "reviewed": {
+            "raw": {
+              "batch_size": 9,
+              "brot": 12,
+              "lambda_eff": 49.301369250574396,
+              "metrics": {
+                "E_SOS": -22144.23882724429,
+                "E_gap": 3.965477244291833,
+                "Lambda": 308.4559397330945,
+                "error_1": 0.0031851950317996216,
+                "error_2": 0.018639570630974368,
+                "gap_in_domain": true,
+                "lambda_eff": 49.301369250574396
+              },
+              "num_circuits": 9,
+              "num_ops": 2063857,
+              "num_qubits": 742,
+              "reaction_depth": 99,
+              "resources": {
+                "angles_persistent_qubits": 108,
+                "angles_qubits": 128,
+                "angles_selection_qubits": 12,
+                "angles_temporary_qubits": 8,
+                "angles_toffoli": 75024.0,
+                "angles_toffoli_per_pass": 37512.0,
+                "angles_within_cap": true,
+                "brot": 12,
+                "givens_rotations_toffoli": 3450,
+                "heuristic_persistent_qubits": 90,
+                "heuristic_qubits": 634,
+                "heuristic_temporary_qubits": 544,
+                "heuristic_toffoli": 13757,
+                "inner_state_prep_persistent_qubits": 44,
+                "inner_state_prep_qubits": 588,
+                "inner_state_prep_temporary_qubits": 544,
+                "inner_state_prep_toffoli": 9461,
+                "keep_bits": 10,
+                "outer_state_prep_persistent_qubits": 46,
+                "outer_state_prep_qubits": 416,
+                "outer_state_prep_temporary_qubits": 370,
+                "outer_state_prep_toffoli": 846,
+                "persistent_qubits": 198,
+                "qubits": 742,
+                "temporary_qubits": 544,
+                "toffoli": 88781.0
+              },
+              "score": 3247752448.668952,
+              "status": "PASS",
+              "submission_sha256": "09d50afaaca17334503ee807e91778c6200b81598937af2712a2e6f030ba6900",
+              "toffoli_count": 88781.0,
+              "verified_shots": 254464
+            },
+            "registration": {
+              "archive_sha256": "8fb545091a1cf66c2656bdce40bedbc26e478746301f9a777f56173f88b88503",
+              "chemistry_hashes": {
+                "angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+                "angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+                "angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+                "angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+                "angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+                "angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+                "angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+                "angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+                "angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4"
+              },
+              "expected_shots": 254464,
+              "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+              "registered_unix": 1793999310.5733728,
+              "salt": "559b14ee3fea16e2ca4d086475f754f99842008c1221077a40a0ac150afff356"
+            }
+          },
+          "role": "confirmation",
+          "seed_policy": {
+            "distribution": "Pinned verifier distribution, independently registered on frozen bytes",
+            "role": "confirmation",
+            "salt": "559b14ee3fea16e2ca4d086475f754f99842008c1221077a40a0ac150afff356"
+          }
+        },
+        "protocol": {
+          "backend_hash": "064b3f583a668ab10bbcdaef6b238e202c66a2d1a9cc164e581d1431798553f7",
+          "benchmark": "dfthcsos",
+          "compute_allowance": {
+            "seconds": 3600
+          },
+          "confidence_procedure": "Full pinned coverage and fail-fast acceptance",
+          "distribution": "Pinned verifier distribution, independently registered on frozen bytes",
+          "historical_receipt_sha256": "713699d44931ce6203eadea7f30eb63ea498fb934a61a08f13f809aeb08bf24f",
+          "max_failures": 0,
+          "sample_size": 254464,
+          "seed_policy": {
+            "distribution": "Pinned verifier distribution, independently registered on frozen bytes",
+            "role": "confirmation",
+            "salt": "559b14ee3fea16e2ca4d086475f754f99842008c1221077a40a0ac150afff356"
+          },
+          "stop_rule": "One frozen registered confirmation",
+          "verifier_artifact_sha256": "09d50afaaca17334503ee807e91778c6200b81598937af2712a2e6f030ba6900"
+        },
+        "protocol_id": "75721595df7e8d6554ccb442822e0b03e499d75c0e6c36faf9eff71d16d1cb59",
+        "status": "passed"
+      },
+      "invsqrt": {
+        "artifact_hashes": {
+          "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+          "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+          "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+          "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+          "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+          "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+          "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+          "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+          "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+          "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+          "dqi.kmb": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+          "invsqrt.kmb": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9"
+        },
+        "benchmark": "invsqrt",
+        "component_hashes": {
+          "invsqrt.kmb": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9"
+        },
+        "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+        "evidence": {
+          "artifact_hashes": {
+            "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+            "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+            "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+            "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+            "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+            "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+            "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+            "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+            "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+            "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+            "dqi.kmb": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+            "invsqrt.kmb": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9"
+          },
+          "backend_hash": "064b3f583a668ab10bbcdaef6b238e202c66a2d1a9cc164e581d1431798553f7",
+          "benchmark": "invsqrt",
+          "complete": true,
+          "component_hashes": {
+            "invsqrt.kmb": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9"
+          },
+          "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+          "observed": {
+            "k": 0,
+            "n": 200540928
+          },
+          "raw_benchmark": {
+            "circuit_sha256": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9",
+            "max_toffoli_count": 7447,
+            "num_ops": 59717,
+            "num_qubits": 256,
+            "reaction_depth": 3844,
+            "rotation_count": 36.0,
+            "rotation_eps": 4.859684532075422e-13,
+            "score": 1971483.438323478,
+            "status": "PASS",
+            "t_count": 1.0,
+            "toffoli_count": 7447.0,
+            "toffoli_equivalent": 7701.107180951086,
+            "verified_shots": 200540928,
+            "worst_error_over_tolerance": 0.8469246188549967,
+            "worst_x": 2684414
+          },
+          "reviewed": {
+            "raw": {
+              "circuit_sha256": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9",
+              "max_toffoli_count": 7447,
+              "num_ops": 59717,
+              "num_qubits": 256,
+              "reaction_depth": 3844,
+              "rotation_count": 36.0,
+              "rotation_eps": 4.859684532075422e-13,
+              "score": 1971483.438323478,
+              "status": "PASS",
+              "t_count": 1.0,
+              "toffoli_count": 7447.0,
+              "toffoli_equivalent": 7701.107180951086,
+              "verified_shots": 200540928,
+              "worst_error_over_tolerance": 0.8469246188549967,
+              "worst_x": 2684414
+            },
+            "registration": {
+              "artifact_sha256": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9",
+              "decision_sha256": "ffc611b2d69cd016cd89a53a8fb8a24b4d80b3142b718c0015391aa4a24b4e4b",
+              "distribution": "Official exhaustive inputs with separate pseudorandom measurement streams",
+              "environment": {
+                "cpu_count": 16,
+                "dependencies": {
+                  "numpy": "2.3.5",
+                  "pandas": "2.2.3",
+                  "scipy": "1.17.0"
+                },
+                "dependency_lock_sha256": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+                "dirty": true,
+                "numpy_backend": {
+                  "Build Dependencies": {
+                    "blas": {
+                      "detection method": "pkgconfig",
+                      "found": true,
+                      "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+                      "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+                      "name": "scipy-openblas",
+                      "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+                      "pc file directory": "/project/.openblas",
+                      "version": "0.3.30"
+                    },
+                    "lapack": {
+                      "detection method": "pkgconfig",
+                      "found": true,
+                      "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+                      "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+                      "name": "scipy-openblas",
+                      "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+                      "pc file directory": "/project/.openblas",
+                      "version": "0.3.30"
+                    }
+                  },
+                  "Compilers": {
+                    "c": {
+                      "commands": "cc",
+                      "linker": "ld.bfd",
+                      "name": "gcc",
+                      "version": "14.2.1"
+                    },
+                    "c++": {
+                      "commands": "c++",
+                      "linker": "ld.bfd",
+                      "name": "gcc",
+                      "version": "14.2.1"
+                    },
+                    "cython": {
+                      "commands": "cython",
+                      "linker": "cython",
+                      "name": "cython",
+                      "version": "3.2.1"
+                    }
+                  },
+                  "Machine Information": {
+                    "build": {
+                      "cpu": "x86_64",
+                      "endian": "little",
+                      "family": "x86_64",
+                      "system": "linux"
+                    },
+                    "host": {
+                      "cpu": "x86_64",
+                      "endian": "little",
+                      "family": "x86_64",
+                      "system": "linux"
+                    }
+                  },
+                  "Python Information": {
+                    "path": "/tmp/build-env-w_be3r90/bin/python",
+                    "version": "3.13"
+                  },
+                  "SIMD Extensions": {
+                    "baseline": [
+                      "SSE",
+                      "SSE2",
+                      "SSE3"
+                    ],
+                    "found": [
+                      "SSSE3",
+                      "SSE41",
+                      "POPCNT",
+                      "SSE42",
+                      "AVX",
+                      "F16C",
+                      "FMA3",
+                      "AVX2"
+                    ],
+                    "not found": [
+                      "AVX512F",
+                      "AVX512CD",
+                      "AVX512_KNL",
+                      "AVX512_KNM",
+                      "AVX512_SKX",
+                      "AVX512_CLX",
+                      "AVX512_CNL",
+                      "AVX512_ICL",
+                      "AVX512_SPR"
+                    ]
+                  }
+                },
+                "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+                "processor": "",
+                "python": "3.13.15 (main, Aug 14 2026, 15:34:59) [Clang 22.1.3 ]",
+                "source_revision": "cd532b2a24febbe42f42c83644da6cb33d19c995",
+                "thread_settings": {
+                  "MKL_NUM_THREADS": "1",
+                  "OMP_NUM_THREADS": "1",
+                  "OPENBLAS_NUM_THREADS": "1"
+                }
+              },
+              "expected_shots": 200540928,
+              "input_count": 3133452,
+              "registered_unix": 1793994628.9768016,
+              "role": "confirmation",
+              "salt": "01de93c6020258ff56714025ff63158757a204ad5c49f4570f214410864fb1d1",
+              "shots_per_input": 64
+            }
+          },
+          "role": "confirmation",
+          "seed_policy": {
+            "distribution": "Pinned verifier distribution, independently registered on frozen bytes",
+            "role": "confirmation",
+            "salt": "01de93c6020258ff56714025ff63158757a204ad5c49f4570f214410864fb1d1"
+          }
+        },
+        "protocol": {
+          "backend_hash": "064b3f583a668ab10bbcdaef6b238e202c66a2d1a9cc164e581d1431798553f7",
+          "benchmark": "invsqrt",
+          "compute_allowance": {
+            "seconds": 3600
+          },
+          "confidence_procedure": "Full pinned coverage and fail-fast acceptance",
+          "distribution": "Pinned verifier distribution, independently registered on frozen bytes",
+          "historical_receipt_sha256": "7c9468b2a38c5a1ff95d0d29a2dddc4062eef9c5536b4e0c27953ed1b737098a",
+          "max_failures": 0,
+          "sample_size": 200540928,
+          "seed_policy": {
+            "distribution": "Pinned verifier distribution, independently registered on frozen bytes",
+            "role": "confirmation",
+            "salt": "01de93c6020258ff56714025ff63158757a204ad5c49f4570f214410864fb1d1"
+          },
+          "stop_rule": "One frozen registered confirmation",
+          "verifier_artifact_sha256": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9"
+        },
+        "protocol_id": "f94cdfc797954466251389908c14272ad14fb079ad88c6a26d94b54f570811d9",
+        "status": "passed"
+      }
+    },
+    "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+    "environment": {
+      "cpu_count": 16,
+      "dependencies": {
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "scipy": "1.17.0"
+      },
+      "dependency_lock_sha256": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+      "dirty": false,
+      "numpy_backend": {
+        "Build Dependencies": {
+          "blas": {
+            "detection method": "pkgconfig",
+            "found": true,
+            "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+            "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+            "name": "scipy-openblas",
+            "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+            "pc file directory": "/project/.openblas",
+            "version": "0.3.30"
+          },
+          "lapack": {
+            "detection method": "pkgconfig",
+            "found": true,
+            "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+            "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+            "name": "scipy-openblas",
+            "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+            "pc file directory": "/project/.openblas",
+            "version": "0.3.30"
+          }
+        },
+        "Compilers": {
+          "c": {
+            "commands": "cc",
+            "linker": "ld.bfd",
+            "name": "gcc",
+            "version": "14.2.1"
+          },
+          "c++": {
+            "commands": "c++",
+            "linker": "ld.bfd",
+            "name": "gcc",
+            "version": "14.2.1"
+          },
+          "cython": {
+            "commands": "cython",
+            "linker": "cython",
+            "name": "cython",
+            "version": "3.2.1"
+          }
+        },
+        "Machine Information": {
+          "build": {
+            "cpu": "x86_64",
+            "endian": "little",
+            "family": "x86_64",
+            "system": "linux"
+          },
+          "host": {
+            "cpu": "x86_64",
+            "endian": "little",
+            "family": "x86_64",
+            "system": "linux"
+          }
+        },
+        "Python Information": {
+          "path": "/tmp/build-env-w_be3r90/bin/python",
+          "version": "3.13"
+        },
+        "SIMD Extensions": {
+          "baseline": [
+            "SSE",
+            "SSE2",
+            "SSE3"
+          ],
+          "found": [
+            "SSSE3",
+            "SSE41",
+            "POPCNT",
+            "SSE42",
+            "AVX",
+            "F16C",
+            "FMA3",
+            "AVX2"
+          ],
+          "not found": [
+            "AVX512F",
+            "AVX512CD",
+            "AVX512_KNL",
+            "AVX512_KNM",
+            "AVX512_SKX",
+            "AVX512_CLX",
+            "AVX512_CNL",
+            "AVX512_ICL",
+            "AVX512_SPR"
+          ]
+        }
+      },
+      "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+      "processor": "",
+      "python": "3.13.15 (main, Aug 14 2026, 15:34:59) [Clang 22.1.3 ]",
+      "source_revision": "3c04f83ce7b28f2d4c1a98e3e747fb8f4029bc55",
+      "thread_settings": {
+        "MKL_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      }
+    },
+    "history": [
+      {
+        "evidence": {
+          "artifact_hashes": {
+            "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+            "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+            "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+            "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+            "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+            "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+            "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+            "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+            "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+            "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+            "dqi.kmb": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+            "invsqrt.kmb": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9"
+          },
+          "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+          "kind": "independent_numerical",
+          "passed": true,
+          "report_sha256": "d99eb635949566c46649402cfefb42ede93b61893aac620327839aa8445064cb"
+        },
+        "from": "draft",
+        "to": "numerically_feasible"
+      },
+      {
+        "evidence": {
+          "artifact_hashes": {
+            "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+            "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+            "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+            "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+            "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+            "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+            "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+            "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+            "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+            "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+            "dqi.kmb": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+            "invsqrt.kmb": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9"
+          },
+          "backend_hash": "064b3f583a668ab10bbcdaef6b238e202c66a2d1a9cc164e581d1431798553f7",
+          "complete": true,
+          "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+          "coverage": "unmodified official verifier completed",
+          "diagnostic": "worker exit code 0",
+          "elapsed_seconds": 747.638625825,
+          "environment": {
+            "cpu_count": 16,
+            "dependencies": {
+              "numpy": "2.3.5",
+              "pandas": "2.2.3",
+              "scipy": "1.17.0"
+            },
+            "dependency_lock_sha256": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+            "dirty": false,
+            "numpy_backend": {
+              "Build Dependencies": {
+                "blas": {
+                  "detection method": "pkgconfig",
+                  "found": true,
+                  "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+                  "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+                  "name": "scipy-openblas",
+                  "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+                  "pc file directory": "/project/.openblas",
+                  "version": "0.3.30"
+                },
+                "lapack": {
+                  "detection method": "pkgconfig",
+                  "found": true,
+                  "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+                  "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+                  "name": "scipy-openblas",
+                  "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+                  "pc file directory": "/project/.openblas",
+                  "version": "0.3.30"
+                }
+              },
+              "Compilers": {
+                "c": {
+                  "commands": "cc",
+                  "linker": "ld.bfd",
+                  "name": "gcc",
+                  "version": "14.2.1"
+                },
+                "c++": {
+                  "commands": "c++",
+                  "linker": "ld.bfd",
+                  "name": "gcc",
+                  "version": "14.2.1"
+                },
+                "cython": {
+                  "commands": "cython",
+                  "linker": "cython",
+                  "name": "cython",
+                  "version": "3.2.1"
+                }
+              },
+              "Machine Information": {
+                "build": {
+                  "cpu": "x86_64",
+                  "endian": "little",
+                  "family": "x86_64",
+                  "system": "linux"
+                },
+                "host": {
+                  "cpu": "x86_64",
+                  "endian": "little",
+                  "family": "x86_64",
+                  "system": "linux"
+                }
+              },
+              "Python Information": {
+                "path": "/tmp/build-env-w_be3r90/bin/python",
+                "version": "3.13"
+              },
+              "SIMD Extensions": {
+                "baseline": [
+                  "SSE",
+                  "SSE2",
+                  "SSE3"
+                ],
+                "found": [
+                  "SSSE3",
+                  "SSE41",
+                  "POPCNT",
+                  "SSE42",
+                  "AVX",
+                  "F16C",
+                  "FMA3",
+                  "AVX2"
+                ],
+                "not found": [
+                  "AVX512F",
+                  "AVX512CD",
+                  "AVX512_KNL",
+                  "AVX512_KNM",
+                  "AVX512_SKX",
+                  "AVX512_CLX",
+                  "AVX512_CNL",
+                  "AVX512_ICL",
+                  "AVX512_SPR"
+                ]
+              }
+            },
+            "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+            "processor": "",
+            "python": "3.13.15 (main, Aug 14 2026, 15:34:59) [Clang 22.1.3 ]",
+            "source_revision": "3c04f83ce7b28f2d4c1a98e3e747fb8f4029bc55",
+            "thread_settings": {
+              "MKL_NUM_THREADS": "1",
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1"
+            }
+          },
+          "kind": "official_metric_execution",
+          "logs": {
+            "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stdout.log": "5e5b167df188d1020a3caf584f51726f0b2c5b413f749011db5ff34a214a6bf9"
+          },
+          "official_results": {
+            "claim": "sampled circuit acceptance under local salt and official metric; no coherent proof",
+            "completed": true,
+            "confirmation_observed": {
+              "k": 0,
+              "n": 102400
+            },
+            "costs": {
+              "dfthcsos": 3247752448.668952,
+              "dqi": 24439466510149.91,
+              "invsqrt": 1971483.438323478
+            },
+            "counts_note": "Counters require explicit source-reconciled mappings into real verifier returns.",
+            "coverage_counts": {
+              "dfthcsos": {
+                "completed": 254464,
+                "expected": 254464
+              },
+              "dqi": {
+                "completed": 102400,
+                "expected": 102400
+              },
+              "invsqrt": {
+                "completed": 200540928,
+                "expected": 200540928
+              }
+            },
+            "max_rss_platform_units": 7313508,
+            "pid": 769,
+            "raw_verifier_results": {
+              "dfthcsos": {
+                "batch_size": 9,
+                "brot": 12,
+                "lambda_eff": 49.301369250574396,
+                "metrics": {
+                  "E_SOS": -22144.23882724429,
+                  "E_gap": 3.965477244291833,
+                  "Lambda": 308.4559397330945,
+                  "error_1": 0.0031851950317996216,
+                  "error_2": 0.018639570630974368,
+                  "gap_in_domain": true,
+                  "lambda_eff": 49.301369250574396
+                },
+                "num_circuits": 9,
+                "num_ops": 2063857,
+                "num_qubits": 742,
+                "reaction_depth": 99,
+                "resources": {
+                  "angles_persistent_qubits": 108,
+                  "angles_qubits": 128,
+                  "angles_selection_qubits": 12,
+                  "angles_temporary_qubits": 8,
+                  "angles_toffoli": 75024.0,
+                  "angles_toffoli_per_pass": 37512.0,
+                  "angles_within_cap": true,
+                  "brot": 12,
+                  "givens_rotations_toffoli": 3450,
+                  "heuristic_persistent_qubits": 90,
+                  "heuristic_qubits": 634,
+                  "heuristic_temporary_qubits": 544,
+                  "heuristic_toffoli": 13757,
+                  "inner_state_prep_persistent_qubits": 44,
+                  "inner_state_prep_qubits": 588,
+                  "inner_state_prep_temporary_qubits": 544,
+                  "inner_state_prep_toffoli": 9461,
+                  "keep_bits": 10,
+                  "outer_state_prep_persistent_qubits": 46,
+                  "outer_state_prep_qubits": 416,
+                  "outer_state_prep_temporary_qubits": 370,
+                  "outer_state_prep_toffoli": 846,
+                  "persistent_qubits": 198,
+                  "qubits": 742,
+                  "temporary_qubits": 544,
+                  "toffoli": 88781.0
+                },
+                "score": 3247752448.668952,
+                "status": "PASS",
+                "submission_sha256": "09d50afaaca17334503ee807e91778c6200b81598937af2712a2e6f030ba6900",
+                "toffoli_count": 88781.0,
+                "verified_shots": 254464
+              },
+              "dqi": {
+                "circuit_sha256": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+                "degree": 12,
+                "effective_error_rate": 0.0008660587301657926,
+                "empirical_error_rate": 0.0,
+                "log2_delta": -128.0,
+                "m": 4095,
+                "max_toffoli_count": 5725461,
+                "mean_error_weight": 31.046737331746634,
+                "n": 70,
+                "num_bits": 49154,
+                "num_ops": 86051014,
+                "num_qubits": 1893,
+                "phase_errors": 0,
+                "r": 2016,
+                "reaction_depth": 170757,
+                "repetition_factor": 1.1912604648115832,
+                "score": 24439466510149.91,
+                "shot_operation_counts": {
+                  "BIT_INVERT": 331738970950,
+                  "BIT_STORE0": 70593927648,
+                  "BIT_STORE1": 2515976906,
+                  "CCX": 466175290128,
+                  "CSWAP": 120075878400,
+                  "CX": 5515949056848,
+                  "CZ": 483333740101,
+                  "HMR": 125697609024,
+                  "INFO_TAG": 333529702400,
+                  "NEG": 66663590,
+                  "POP_CONDITION": 4331212800,
+                  "PUSH_CONDITION": 4331212800,
+                  "R": 125697609024,
+                  "SWAP": 320927179776,
+                  "X": 84822002944,
+                  "Z": 1727578812
+                },
+                "status": "PASS",
+                "toffoli_count": 5725109.06765625,
+                "value_errors": 0,
+                "verified_shots": 102400
+              },
+              "invsqrt": {
+                "circuit_sha256": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9",
+                "max_toffoli_count": 7447,
+                "num_ops": 59717,
+                "num_qubits": 256,
+                "reaction_depth": 3844,
+                "rotation_count": 36.0,
+                "rotation_eps": 4.859684532075422e-13,
+                "score": 1971483.438323478,
+                "status": "PASS",
+                "t_count": 1.0,
+                "toffoli_count": 7447.0,
+                "toffoli_equivalent": 7701.107180951086,
+                "verified_shots": 200540928,
+                "worst_error_over_tolerance": 0.8469246188549967,
+                "worst_x": 2684414
+              }
+            },
+            "rss_units": "bytes on macOS, KiB on Linux",
+            "verification_shot_divisor": 1
+          },
+          "remote_accepted": false,
+          "request_hash": "15de41e4f8b713723c3585ccfd8176975e1b5cc18ac87a1c6fe9b53bb1933f49",
+          "role": "official_local",
+          "schema_version": 1,
+          "seed_policy": {
+            "distribution": "Matched successor archive seed for retained-member comparison",
+            "role": "official_local",
+            "salt": "2b4caee9b649f172d30f0c68cc7598b80ba2bb14b0702c4b3ffed06eee3255a1"
+          },
+          "status": "passed",
+          "tier": "full"
+        },
+        "from": "numerically_feasible",
+        "to": "circuit_smoke_passed"
+      },
+      {
+        "evidence": {
+          "artifact_hashes": {
+            "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+            "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+            "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+            "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+            "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+            "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+            "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+            "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+            "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+            "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+            "dqi.kmb": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+            "invsqrt.kmb": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9"
+          },
+          "backend_hash": "064b3f583a668ab10bbcdaef6b238e202c66a2d1a9cc164e581d1431798553f7",
+          "complete": true,
+          "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+          "coverage": "unmodified official verifier completed",
+          "diagnostic": "worker exit code 0",
+          "elapsed_seconds": 747.638625825,
+          "environment": {
+            "cpu_count": 16,
+            "dependencies": {
+              "numpy": "2.3.5",
+              "pandas": "2.2.3",
+              "scipy": "1.17.0"
+            },
+            "dependency_lock_sha256": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+            "dirty": false,
+            "numpy_backend": {
+              "Build Dependencies": {
+                "blas": {
+                  "detection method": "pkgconfig",
+                  "found": true,
+                  "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+                  "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+                  "name": "scipy-openblas",
+                  "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+                  "pc file directory": "/project/.openblas",
+                  "version": "0.3.30"
+                },
+                "lapack": {
+                  "detection method": "pkgconfig",
+                  "found": true,
+                  "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+                  "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+                  "name": "scipy-openblas",
+                  "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+                  "pc file directory": "/project/.openblas",
+                  "version": "0.3.30"
+                }
+              },
+              "Compilers": {
+                "c": {
+                  "commands": "cc",
+                  "linker": "ld.bfd",
+                  "name": "gcc",
+                  "version": "14.2.1"
+                },
+                "c++": {
+                  "commands": "c++",
+                  "linker": "ld.bfd",
+                  "name": "gcc",
+                  "version": "14.2.1"
+                },
+                "cython": {
+                  "commands": "cython",
+                  "linker": "cython",
+                  "name": "cython",
+                  "version": "3.2.1"
+                }
+              },
+              "Machine Information": {
+                "build": {
+                  "cpu": "x86_64",
+                  "endian": "little",
+                  "family": "x86_64",
+                  "system": "linux"
+                },
+                "host": {
+                  "cpu": "x86_64",
+                  "endian": "little",
+                  "family": "x86_64",
+                  "system": "linux"
+                }
+              },
+              "Python Information": {
+                "path": "/tmp/build-env-w_be3r90/bin/python",
+                "version": "3.13"
+              },
+              "SIMD Extensions": {
+                "baseline": [
+                  "SSE",
+                  "SSE2",
+                  "SSE3"
+                ],
+                "found": [
+                  "SSSE3",
+                  "SSE41",
+                  "POPCNT",
+                  "SSE42",
+                  "AVX",
+                  "F16C",
+                  "FMA3",
+                  "AVX2"
+                ],
+                "not found": [
+                  "AVX512F",
+                  "AVX512CD",
+                  "AVX512_KNL",
+                  "AVX512_KNM",
+                  "AVX512_SKX",
+                  "AVX512_CLX",
+                  "AVX512_CNL",
+                  "AVX512_ICL",
+                  "AVX512_SPR"
+                ]
+              }
+            },
+            "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+            "processor": "",
+            "python": "3.13.15 (main, Aug 14 2026, 15:34:59) [Clang 22.1.3 ]",
+            "source_revision": "3c04f83ce7b28f2d4c1a98e3e747fb8f4029bc55",
+            "thread_settings": {
+              "MKL_NUM_THREADS": "1",
+              "OMP_NUM_THREADS": "1",
+              "OPENBLAS_NUM_THREADS": "1"
+            }
+          },
+          "kind": "official_metric_execution",
+          "logs": {
+            "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "stdout.log": "5e5b167df188d1020a3caf584f51726f0b2c5b413f749011db5ff34a214a6bf9"
+          },
+          "official_results": {
+            "claim": "sampled circuit acceptance under local salt and official metric; no coherent proof",
+            "completed": true,
+            "confirmation_observed": {
+              "k": 0,
+              "n": 102400
+            },
+            "costs": {
+              "dfthcsos": 3247752448.668952,
+              "dqi": 24439466510149.91,
+              "invsqrt": 1971483.438323478
+            },
+            "counts_note": "Counters require explicit source-reconciled mappings into real verifier returns.",
+            "coverage_counts": {
+              "dfthcsos": {
+                "completed": 254464,
+                "expected": 254464
+              },
+              "dqi": {
+                "completed": 102400,
+                "expected": 102400
+              },
+              "invsqrt": {
+                "completed": 200540928,
+                "expected": 200540928
+              }
+            },
+            "max_rss_platform_units": 7313508,
+            "pid": 769,
+            "raw_verifier_results": {
+              "dfthcsos": {
+                "batch_size": 9,
+                "brot": 12,
+                "lambda_eff": 49.301369250574396,
+                "metrics": {
+                  "E_SOS": -22144.23882724429,
+                  "E_gap": 3.965477244291833,
+                  "Lambda": 308.4559397330945,
+                  "error_1": 0.0031851950317996216,
+                  "error_2": 0.018639570630974368,
+                  "gap_in_domain": true,
+                  "lambda_eff": 49.301369250574396
+                },
+                "num_circuits": 9,
+                "num_ops": 2063857,
+                "num_qubits": 742,
+                "reaction_depth": 99,
+                "resources": {
+                  "angles_persistent_qubits": 108,
+                  "angles_qubits": 128,
+                  "angles_selection_qubits": 12,
+                  "angles_temporary_qubits": 8,
+                  "angles_toffoli": 75024.0,
+                  "angles_toffoli_per_pass": 37512.0,
+                  "angles_within_cap": true,
+                  "brot": 12,
+                  "givens_rotations_toffoli": 3450,
+                  "heuristic_persistent_qubits": 90,
+                  "heuristic_qubits": 634,
+                  "heuristic_temporary_qubits": 544,
+                  "heuristic_toffoli": 13757,
+                  "inner_state_prep_persistent_qubits": 44,
+                  "inner_state_prep_qubits": 588,
+                  "inner_state_prep_temporary_qubits": 544,
+                  "inner_state_prep_toffoli": 9461,
+                  "keep_bits": 10,
+                  "outer_state_prep_persistent_qubits": 46,
+                  "outer_state_prep_qubits": 416,
+                  "outer_state_prep_temporary_qubits": 370,
+                  "outer_state_prep_toffoli": 846,
+                  "persistent_qubits": 198,
+                  "qubits": 742,
+                  "temporary_qubits": 544,
+                  "toffoli": 88781.0
+                },
+                "score": 3247752448.668952,
+                "status": "PASS",
+                "submission_sha256": "09d50afaaca17334503ee807e91778c6200b81598937af2712a2e6f030ba6900",
+                "toffoli_count": 88781.0,
+                "verified_shots": 254464
+              },
+              "dqi": {
+                "circuit_sha256": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+                "degree": 12,
+                "effective_error_rate": 0.0008660587301657926,
+                "empirical_error_rate": 0.0,
+                "log2_delta": -128.0,
+                "m": 4095,
+                "max_toffoli_count": 5725461,
+                "mean_error_weight": 31.046737331746634,
+                "n": 70,
+                "num_bits": 49154,
+                "num_ops": 86051014,
+                "num_qubits": 1893,
+                "phase_errors": 0,
+                "r": 2016,
+                "reaction_depth": 170757,
+                "repetition_factor": 1.1912604648115832,
+                "score": 24439466510149.91,
+                "shot_operation_counts": {
+                  "BIT_INVERT": 331738970950,
+                  "BIT_STORE0": 70593927648,
+                  "BIT_STORE1": 2515976906,
+                  "CCX": 466175290128,
+                  "CSWAP": 120075878400,
+                  "CX": 5515949056848,
+                  "CZ": 483333740101,
+                  "HMR": 125697609024,
+                  "INFO_TAG": 333529702400,
+                  "NEG": 66663590,
+                  "POP_CONDITION": 4331212800,
+                  "PUSH_CONDITION": 4331212800,
+                  "R": 125697609024,
+                  "SWAP": 320927179776,
+                  "X": 84822002944,
+                  "Z": 1727578812
+                },
+                "status": "PASS",
+                "toffoli_count": 5725109.06765625,
+                "value_errors": 0,
+                "verified_shots": 102400
+              },
+              "invsqrt": {
+                "circuit_sha256": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9",
+                "max_toffoli_count": 7447,
+                "num_ops": 59717,
+                "num_qubits": 256,
+                "reaction_depth": 3844,
+                "rotation_count": 36.0,
+                "rotation_eps": 4.859684532075422e-13,
+                "score": 1971483.438323478,
+                "status": "PASS",
+                "t_count": 1.0,
+                "toffoli_count": 7447.0,
+                "toffoli_equivalent": 7701.107180951086,
+                "verified_shots": 200540928,
+                "worst_error_over_tolerance": 0.8469246188549967,
+                "worst_x": 2684414
+              }
+            },
+            "rss_units": "bytes on macOS, KiB on Linux",
+            "verification_shot_divisor": 1
+          },
+          "remote_accepted": false,
+          "request_hash": "15de41e4f8b713723c3585ccfd8176975e1b5cc18ac87a1c6fe9b53bb1933f49",
+          "role": "official_local",
+          "schema_version": 1,
+          "seed_policy": {
+            "distribution": "Matched successor archive seed for retained-member comparison",
+            "role": "official_local",
+            "salt": "2b4caee9b649f172d30f0c68cc7598b80ba2bb14b0702c4b3ffed06eee3255a1"
+          },
+          "status": "passed",
+          "tier": "full"
+        },
+        "from": "circuit_smoke_passed",
+        "to": "full_local_passed"
+      },
+      {
+        "evidence": {
+          "artifact_hashes": {
+            "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+            "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+            "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+            "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+            "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+            "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+            "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+            "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+            "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+            "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+            "dqi.kmb": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+            "invsqrt.kmb": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9"
+          },
+          "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+          "g0": {
+            "path": "/mnt/e/sources/python/quantum/runs/invsqrt-direct-parent-certificate-20261107-v2/evidence/g0.json",
+            "sha256": "2f9144e638f858ba5e54d4497b042decf9c1bb618655af8b3e0af02b09f6ea4a"
+          },
+          "g1": {
+            "path": "/mnt/e/sources/python/quantum/runs/invsqrt-direct-parent-certificate-20261107-v2/evidence/g1.json",
+            "sha256": "2f9144e638f858ba5e54d4497b042decf9c1bb618655af8b3e0af02b09f6ea4a"
+          },
+          "improvement": {
+            "path": "/mnt/e/sources/python/quantum/runs/invsqrt-direct-parent-certificate-20261107-v2/evidence/improvement.json",
+            "sha256": "ba1bdfbd3e571e3f7c1b3ad94930a80c44245d0466e3656d8da38e743d772135"
+          },
+          "mutations": {
+            "path": "/mnt/e/sources/python/quantum/runs/invsqrt-direct-parent-certificate-20261107-v2/evidence/mutations.json",
+            "sha256": "3a2372edf87c19deb9baa6c56f338a7d016604c732f5be343b4523c8b7d7cbb1"
+          },
+          "opportunity": {
+            "path": "/mnt/e/sources/python/quantum/runs/invsqrt-direct-parent-certificate-20261107-v2/evidence/opportunity.json",
+            "sha256": "63e4dbdb3f750b2f3d6ad52881945f6a4e52c08fb8bf6cf0c30d1a90fbf5d228"
+          },
+          "passed": true,
+          "stability": {
+            "path": "/mnt/e/sources/python/quantum/runs/invsqrt-direct-parent-certificate-20261107-v2/evidence/stability.json",
+            "sha256": "ccb8668dfec1eb8c8c072bcbaba90fa14dae78fa623f96be41f2d1f04d88ac18"
+          }
+        },
+        "from": "full_local_passed",
+        "to": "release_selected"
+      }
+    ],
+    "id": "bde2ae1a65b7be78a629e249f0d84ebb78e8d1c7250efea5fcb093c8ff299c33",
+    "state": "release_selected"
+  },
+  "candidate_id": "bde2ae1a65b7be78a629e249f0d84ebb78e8d1c7250efea5fcb093c8ff299c33",
+  "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+  "predicted_aggregate_score": 1.0286345144266953,
+  "remote_accepted": false,
+  "source_environment": {
+    "cpu_count": 16,
+    "dependencies": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scipy": "1.17.0"
+    },
+    "dependency_lock_sha256": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+    "dirty": false,
+    "numpy_backend": {
+      "Build Dependencies": {
+        "blas": {
+          "detection method": "pkgconfig",
+          "found": true,
+          "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+          "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+          "name": "scipy-openblas",
+          "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+          "pc file directory": "/project/.openblas",
+          "version": "0.3.30"
+        },
+        "lapack": {
+          "detection method": "pkgconfig",
+          "found": true,
+          "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+          "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+          "name": "scipy-openblas",
+          "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+          "pc file directory": "/project/.openblas",
+          "version": "0.3.30"
+        }
+      },
+      "Compilers": {
+        "c": {
+          "commands": "cc",
+          "linker": "ld.bfd",
+          "name": "gcc",
+          "version": "14.2.1"
+        },
+        "c++": {
+          "commands": "c++",
+          "linker": "ld.bfd",
+          "name": "gcc",
+          "version": "14.2.1"
+        },
+        "cython": {
+          "commands": "cython",
+          "linker": "cython",
+          "name": "cython",
+          "version": "3.2.1"
+        }
+      },
+      "Machine Information": {
+        "build": {
+          "cpu": "x86_64",
+          "endian": "little",
+          "family": "x86_64",
+          "system": "linux"
+        },
+        "host": {
+          "cpu": "x86_64",
+          "endian": "little",
+          "family": "x86_64",
+          "system": "linux"
+        }
+      },
+      "Python Information": {
+        "path": "/tmp/build-env-w_be3r90/bin/python",
+        "version": "3.13"
+      },
+      "SIMD Extensions": {
+        "baseline": [
+          "SSE",
+          "SSE2",
+          "SSE3"
+        ],
+        "found": [
+          "SSSE3",
+          "SSE41",
+          "POPCNT",
+          "SSE42",
+          "AVX",
+          "F16C",
+          "FMA3",
+          "AVX2"
+        ],
+        "not found": [
+          "AVX512F",
+          "AVX512CD",
+          "AVX512_KNL",
+          "AVX512_KNM",
+          "AVX512_SKX",
+          "AVX512_CLX",
+          "AVX512_CNL",
+          "AVX512_ICL",
+          "AVX512_SPR"
+        ]
+      }
+    },
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "processor": "",
+    "python": "3.13.15 (main, Aug 14 2026, 15:34:59) [Clang 22.1.3 ]",
+    "source_revision": "3c04f83ce7b28f2d4c1a98e3e747fb8f4029bc55",
+    "thread_settings": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "status": "locally_verified_awaiting_kaggle_acceptance",
+  "supporting_evidence": {
+    "accepted_reference_costs": {
+      "dfthcsos": 3355599588.3155375,
+      "dqi": 24439461432712.35,
+      "invsqrt": 2076774.233715282
+    },
+    "benchmark_evidence": {
+      "dfthcsos": {
+        "component_hashes": {
+          "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+          "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+          "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+          "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+          "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+          "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+          "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+          "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+          "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+          "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69"
+        },
+        "mutation": {
+          "controls": [
+            {
+              "expected": "error_1",
+              "field": "error_1",
+              "observed": "error_1 = 21.0000 mHa > 20 mHa",
+              "value": "0.021"
+            },
+            {
+              "expected": "error_2",
+              "field": "error_2",
+              "observed": "error_2 = 21.0000 mHa > 20 mHa",
+              "value": "0.021"
+            },
+            {
+              "expected": "strict floor",
+              "field": "Lambda",
+              "observed": "Lambda = 49 must be finite and > 49.0 (strict floor)",
+              "value": "49.0"
+            },
+            {
+              "expected": "strict floor",
+              "field": "E_gap",
+              "observed": "E_gap = 3.914898 must be finite and > 3.914898 (strict floor)",
+              "value": "3.914898"
+            },
+            {
+              "expected": "strict floor",
+              "field": "Lambda",
+              "observed": "Lambda = nan must be finite and > 49.0 (strict floor)",
+              "value": "nan"
+            },
+            {
+              "expected": "width",
+              "field": "angles_qubits",
+              "observed": "an ANGLE_k circuit uses 129 qubits > 128",
+              "value": "129"
+            }
+          ],
+          "positive_control": "passed"
+        },
+        "numerical": {
+          "E_SOS": -22144.23882724429,
+          "E_gap": 3.965477244291833,
+          "Lambda": 308.4559397330945,
+          "error_1": 0.0031851950317996216,
+          "error_2": 0.018639570630974368,
+          "gap_in_domain": true,
+          "lambda_eff": 49.301369250574396
+        },
+        "opportunity": {
+          "build_seconds": 2.752107972999511,
+          "chemistry": {
+            "batch_size": 9,
+            "brot": 12,
+            "evaluation_seconds": 12.418506480993528,
+            "metrics": {
+              "E_SOS": -22144.23882724429,
+              "E_gap": 3.965477244291833,
+              "Lambda": 308.4559397330945,
+              "error_1": 0.0031851950317996216,
+              "error_2": 0.018639570630974368,
+              "gap_in_domain": true,
+              "lambda_eff": 49.301369250574396
+            },
+            "resources": {
+              "angles_persistent_qubits": 108,
+              "angles_qubits": 128,
+              "angles_selection_qubits": 12,
+              "angles_temporary_qubits": 8,
+              "angles_toffoli": 75024.0,
+              "angles_toffoli_per_pass": 37512.0,
+              "angles_within_cap": true,
+              "brot": 12,
+              "givens_rotations_toffoli": 3450,
+              "heuristic_persistent_qubits": 90,
+              "heuristic_qubits": 634,
+              "heuristic_temporary_qubits": 544,
+              "heuristic_toffoli": 13757,
+              "inner_state_prep_persistent_qubits": 44,
+              "inner_state_prep_qubits": 588,
+              "inner_state_prep_temporary_qubits": 544,
+              "inner_state_prep_toffoli": 9461,
+              "keep_bits": 10,
+              "outer_state_prep_persistent_qubits": 46,
+              "outer_state_prep_qubits": 416,
+              "outer_state_prep_temporary_qubits": 370,
+              "outer_state_prep_toffoli": 846,
+              "persistent_qubits": 198,
+              "qubits": 742,
+              "temporary_qubits": 544,
+              "toffoli": 88781.0
+            },
+            "score": 3247752448.668952,
+            "submission_sha256": "09d50afaaca17334503ee807e91778c6200b81598937af2712a2e6f030ba6900",
+            "verified_shots": 15904,
+            "words_exact": true
+          },
+          "chemistry_hashes": {
+            "angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+            "angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+            "angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+            "angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+            "angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+            "angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+            "angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+            "angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+            "angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4"
+          },
+          "cpu_seconds": 41.641314567,
+          "gain": 0.03213945430858822,
+          "peak_rss_kib": 1286440,
+          "rebuild_identical": true,
+          "registration_sha256": "592d0491f693a721657008c44e15fb8aee4734bc5ae3ef27775f4b02cb43ace0",
+          "status": "go",
+          "wall_seconds": 58.73069062700233,
+          "xor_fixtures": {
+            "addresses": [
+              0,
+              7,
+              8,
+              127,
+              128,
+              3967,
+              3968,
+              3975
+            ],
+            "applications": 18,
+            "shots": 256
+          }
+        },
+        "primitive": {
+          "addresses": [
+            0,
+            7,
+            8,
+            127,
+            128,
+            3967,
+            3968,
+            3975
+          ],
+          "applications": 18,
+          "shots": 256
+        },
+        "stability": {
+          "two_archive_builds": "8fb545091a1cf66c2656bdce40bedbc26e478746301f9a777f56173f88b88503"
+        }
+      },
+      "invsqrt": {
+        "component_hashes": {
+          "invsqrt.kmb": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9"
+        },
+        "mutation": {
+          "records": [
+            {
+              "fixture": "valid_x1",
+              "observed": "PASS",
+              "verified_shots": 64
+            },
+            {
+              "expected": "phase error",
+              "fixture": "phase",
+              "observed": "x=1: phase error -5.000e-01 turns exceeds tolerance 5.960e-08."
+            },
+            {
+              "expected": "x was not restored",
+              "fixture": "input",
+              "observed": "x was not restored."
+            },
+            {
+              "expected": "did not return to",
+              "fixture": "scratch",
+              "observed": "Scratch qubit q6 did not return to |0>."
+            }
+          ],
+          "scope": "x=1 bounded diagnostic problem with the actual verifier",
+          "seed": 3103
+        },
+        "numerical": {
+          "input_count": 3133452,
+          "minimum_margin_phase64": 102726012,
+          "minimum_margin_x": 2684414,
+          "nonpositive_margins": 0,
+          "worst_tolerance_fraction": 0.8469246188549967,
+          "worst_x": 2684414
+        },
+        "opportunity": {
+          "attempts": {
+            "fallback": {
+              "eligible": true,
+              "status": "passed"
+            },
+            "lead": {
+              "eligible": true,
+              "status": "passed"
+            },
+            "reference": {
+              "eligible": false,
+              "status": "passed"
+            }
+          },
+          "cpu_seconds": 12.882169999999999,
+          "registration_sha256": "badff50429b188cdb91c3824a6d9929f988f977a8bbe982b304407e8f96e966d",
+          "scope": "Bounded development evidence. Full verification and confirmation are separate.",
+          "status": "go",
+          "wall_seconds": 15.393018370999926,
+          "winner": "lead",
+          "winner_sha256": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9",
+          "within_budget": true
+        },
+        "primitive": {
+          "counts_per_shot": [
+            7447,
+            1,
+            36
+          ],
+          "executed_counts": [
+            300739648,
+            40384,
+            1453824
+          ],
+          "inputs": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            11,
+            12,
+            13,
+            15,
+            16,
+            17,
+            23,
+            24,
+            25,
+            31,
+            32,
+            33,
+            47,
+            48,
+            49,
+            63,
+            64,
+            65,
+            95,
+            96,
+            97,
+            127,
+            128,
+            129,
+            191,
+            192,
+            193,
+            255,
+            256,
+            257,
+            383,
+            384,
+            385,
+            511,
+            512,
+            513,
+            767,
+            768,
+            769,
+            1023,
+            1024,
+            1025,
+            1535,
+            1536,
+            1537,
+            2047,
+            2048,
+            2049,
+            3071,
+            3072,
+            3073,
+            3210,
+            4095,
+            4096,
+            4097,
+            6143,
+            6144,
+            6145,
+            8191,
+            8192,
+            8193,
+            12287,
+            12288,
+            12289,
+            16383,
+            16384,
+            16385,
+            24575,
+            24576,
+            24577,
+            32767,
+            32768,
+            32769,
+            46927,
+            49151,
+            49152,
+            49153,
+            55371,
+            55765,
+            61798,
+            65535,
+            65536,
+            65537,
+            69084,
+            76736,
+            79053,
+            85080,
+            85671,
+            89526,
+            89700,
+            95314,
+            97981,
+            98303,
+            98304,
+            98305,
+            108668,
+            112175,
+            121645,
+            125470,
+            131071,
+            131072,
+            131073,
+            135462,
+            141947,
+            142672,
+            151615,
+            157597,
+            164580,
+            167155,
+            169594,
+            173863,
+            184610,
+            188065,
+            190919,
+            196607,
+            196608,
+            196609,
+            198032,
+            201033,
+            203899,
+            204043,
+            205276,
+            209700,
+            210303,
+            219003,
+            236616,
+            239562,
+            241773,
+            247254,
+            253014,
+            260950,
+            262143,
+            262144,
+            262145,
+            265629,
+            266581,
+            276592,
+            288967,
+            309053,
+            319751,
+            325785,
+            327954,
+            332173,
+            332395,
+            338038,
+            338886,
+            349095,
+            363339,
+            366897,
+            393215,
+            393216,
+            393217,
+            397643,
+            398072,
+            421167,
+            422245,
+            437977,
+            437994,
+            452780,
+            453496,
+            459132,
+            459589,
+            461710,
+            466395,
+            467486,
+            475169,
+            481053,
+            482421,
+            489019,
+            502932,
+            503479,
+            505983,
+            506899,
+            513365,
+            515848,
+            516230,
+            516887,
+            524287,
+            524288,
+            524289,
+            534204,
+            536786,
+            539154,
+            543283,
+            545832,
+            550476,
+            551369,
+            558478,
+            559254,
+            562625,
+            565011,
+            566948,
+            573188,
+            578033,
+            581688,
+            599649,
+            599845,
+            600232,
+            600659,
+            608816,
+            610172,
+            616890,
+            617625,
+            637393,
+            647242,
+            647712,
+            648055,
+            650895,
+            676394,
+            680797,
+            683634,
+            703900,
+            709069,
+            712359,
+            718748,
+            725681,
+            729873,
+            741413,
+            742125,
+            743305,
+            752157,
+            752600,
+            758272,
+            761699,
+            770676,
+            776061,
+            786431,
+            786432,
+            786433,
+            788168,
+            788782,
+            792867,
+            794880,
+            795794,
+            799527,
+            801987,
+            806375,
+            824482,
+            827795,
+            828877,
+            845495,
+            846653,
+            872060,
+            872413,
+            879174,
+            882131,
+            882829,
+            889678,
+            890364,
+            891019,
+            894849,
+            899596,
+            903973,
+            904537,
+            917703,
+            926126,
+            928420,
+            962543,
+            965945,
+            968444,
+            969569,
+            984187,
+            984913,
+            992375,
+            1009334,
+            1009399,
+            1015391,
+            1025090,
+            1028562,
+            1038115,
+            1047087,
+            1048575,
+            1048576,
+            1048577,
+            1050154,
+            1051592,
+            1052389,
+            1054371,
+            1059823,
+            1060270,
+            1068946,
+            1076389,
+            1078049,
+            1086136,
+            1089830,
+            1093849,
+            1093900,
+            1094765,
+            1108076,
+            1115569,
+            1145298,
+            1146109,
+            1147828,
+            1153904,
+            1155162,
+            1157381,
+            1161281,
+            1161766,
+            1162992,
+            1182612,
+            1198553,
+            1217471,
+            1234574,
+            1241654,
+            1242185,
+            1244504,
+            1245527,
+            1246743,
+            1247969,
+            1253591,
+            1273849,
+            1279483,
+            1281306,
+            1282591,
+            1283014,
+            1288443,
+            1290670,
+            1291370,
+            1304653,
+            1306396,
+            1311963,
+            1316659,
+            1317209,
+            1323035,
+            1327329,
+            1337802,
+            1346118,
+            1350934,
+            1352918,
+            1360031,
+            1361329,
+            1361956,
+            1370094,
+            1396120,
+            1397954,
+            1399657,
+            1411295,
+            1416448,
+            1418749,
+            1431020,
+            1432231,
+            1436367,
+            1448692,
+            1454019,
+            1457870,
+            1460201,
+            1466354,
+            1468716,
+            1472681,
+            1476647,
+            1500840,
+            1527431,
+            1527803,
+            1539928,
+            1543867,
+            1546429,
+            1565035,
+            1572863,
+            1572864,
+            1572865,
+            1581100,
+            1598379,
+            1599186,
+            1599396,
+            1602455,
+            1602569,
+            1606300,
+            1607178,
+            1610429,
+            1614108,
+            1617825,
+            1619265,
+            1623152,
+            1639423,
+            1642684,
+            1642811,
+            1645670,
+            1650290,
+            1652896,
+            1662874,
+            1664426,
+            1673395,
+            1707903,
+            1709686,
+            1711968,
+            1712869,
+            1722103,
+            1734507,
+            1742307,
+            1749323,
+            1753649,
+            1755131,
+            1760483,
+            1763810,
+            1767164,
+            1776348,
+            1782467,
+            1783868,
+            1787328,
+            1800077,
+            1801533,
+            1817513,
+            1822320,
+            1825009,
+            1826388,
+            1828278,
+            1828879,
+            1831173,
+            1831285,
+            1832721,
+            1847808,
+            1848918,
+            1849629,
+            1857879,
+            1867954,
+            1872182,
+            1874800,
+            1884445,
+            1888754,
+            1897299,
+            1900186,
+            1900290,
+            1905616,
+            1924832,
+            1927475,
+            1930515,
+            1932761,
+            1937348,
+            1945168,
+            1957554,
+            1967605,
+            1968250,
+            1972446,
+            1974163,
+            1977805,
+            1977811,
+            1991488,
+            2001975,
+            2002112,
+            2003019,
+            2003225,
+            2008498,
+            2021068,
+            2021607,
+            2026383,
+            2034651,
+            2040154,
+            2080116,
+            2082180,
+            2083075,
+            2090671,
+            2095145,
+            2097151,
+            2097152,
+            2097153,
+            2101206,
+            2105940,
+            2106405,
+            2107783,
+            2111643,
+            2118041,
+            2119138,
+            2124707,
+            2133530,
+            2138949,
+            2155348,
+            2156858,
+            2159045,
+            2170194,
+            2173380,
+            2187602,
+            2199993,
+            2200771,
+            2202415,
+            2209854,
+            2210566,
+            2229377,
+            2237382,
+            2240846,
+            2245152,
+            2246362,
+            2264407,
+            2264541,
+            2268282,
+            2271013,
+            2292472,
+            2297967,
+            2302163,
+            2313334,
+            2316113,
+            2327935,
+            2332240,
+            2333747,
+            2347022,
+            2357663,
+            2360071,
+            2365152,
+            2377328,
+            2383554,
+            2383652,
+            2384742,
+            2387262,
+            2388034,
+            2408999,
+            2416565,
+            2416888,
+            2421711,
+            2422589,
+            2428004,
+            2436931,
+            2437714,
+            2441333,
+            2443455,
+            2446184,
+            2447547,
+            2452540,
+            2461456,
+            2463602,
+            2464252,
+            2467485,
+            2468090,
+            2474941,
+            2478840,
+            2481206,
+            2498849,
+            2499983,
+            2502864,
+            2510577,
+            2511842,
+            2515000,
+            2515460,
+            2531403,
+            2534498,
+            2557037,
+            2563172,
+            2569761,
+            2571348,
+            2575797,
+            2592721,
+            2593895,
+            2599625,
+            2609337,
+            2615946,
+            2625406,
+            2630640,
+            2631679,
+            2633871,
+            2633910,
+            2650307,
+            2656906,
+            2663748,
+            2668599,
+            2678134,
+            2684414,
+            2700786,
+            2705974,
+            2709485,
+            2714647,
+            2722388,
+            2729007,
+            2729322,
+            2731613,
+            2733775,
+            2741287,
+            2744814,
+            2746115,
+            2754913,
+            2756856,
+            2764224,
+            2767743,
+            2771743,
+            2785784,
+            2786123,
+            2789916,
+            2792068,
+            2793960,
+            2795511,
+            2797045,
+            2801722,
+            2818407,
+            2825414,
+            2827537,
+            2838016,
+            2842693,
+            2843289,
+            2855273,
+            2878213,
+            2881183,
+            2886132,
+            2886638,
+            2895681,
+            2899633,
+            2914598,
+            2919104,
+            2924090,
+            2933815,
+            2936155,
+            2939472,
+            2954805,
+            2956172,
+            2956406,
+            2958319,
+            2961422,
+            2967268,
+            2968339,
+            3008279,
+            3016935,
+            3024936,
+            3036544,
+            3040830,
+            3047339,
+            3050098,
+            3064895,
+            3072223,
+            3079708,
+            3081947,
+            3083636,
+            3095569,
+            3100058,
+            3129123,
+            3132234,
+            3133452
+          ],
+          "shots": 40384
+        },
+        "stability": {
+          "two_archive_builds": "8fb545091a1cf66c2656bdce40bedbc26e478746301f9a777f56173f88b88503"
+        }
+      }
+    },
+    "cost_breakdown": {
+      "dfthcsos": 3247752448.668952,
+      "dqi": 24439466510149.91,
+      "invsqrt": 1971483.438323478
+    },
+    "coverage_counts": {
+      "dfthcsos": {
+        "completed": 254464,
+        "expected": 254464
+      },
+      "dqi": {
+        "completed": 102400,
+        "expected": 102400
+      },
+      "invsqrt": {
+        "completed": 200540928,
+        "expected": 200540928
+      }
+    },
+    "g0": {
+      "all_members_verified": true,
+      "bundle": "/mnt/e/sources/python/quantum/releases/step3-validation-v1/validation.zip",
+      "gates": {
+        "G0": "passed",
+        "G1": "passed"
+      },
+      "members": 29,
+      "sha256": "bc7c5216b9dd589974eabbcbc791742d2b4207e2943b3998f08ecf9ced516745",
+      "status": "frozen"
+    },
+    "g1": {
+      "all_members_verified": true,
+      "bundle": "/mnt/e/sources/python/quantum/releases/step3-validation-v1/validation.zip",
+      "gates": {
+        "G0": "passed",
+        "G1": "passed"
+      },
+      "members": 29,
+      "sha256": "bc7c5216b9dd589974eabbcbc791742d2b4207e2943b3998f08ecf9ced516745",
+      "status": "frozen"
+    },
+    "improvement": {
+      "dfthcsos": 107847139.64658546,
+      "invsqrt": 105290.79539180407
+    },
+    "mutation_diagnostics": {
+      "dfthcsos": {
+        "controls": [
+          {
+            "expected": "error_1",
+            "field": "error_1",
+            "observed": "error_1 = 21.0000 mHa > 20 mHa",
+            "value": "0.021"
+          },
+          {
+            "expected": "error_2",
+            "field": "error_2",
+            "observed": "error_2 = 21.0000 mHa > 20 mHa",
+            "value": "0.021"
+          },
+          {
+            "expected": "strict floor",
+            "field": "Lambda",
+            "observed": "Lambda = 49 must be finite and > 49.0 (strict floor)",
+            "value": "49.0"
+          },
+          {
+            "expected": "strict floor",
+            "field": "E_gap",
+            "observed": "E_gap = 3.914898 must be finite and > 3.914898 (strict floor)",
+            "value": "3.914898"
+          },
+          {
+            "expected": "strict floor",
+            "field": "Lambda",
+            "observed": "Lambda = nan must be finite and > 49.0 (strict floor)",
+            "value": "nan"
+          },
+          {
+            "expected": "width",
+            "field": "angles_qubits",
+            "observed": "an ANGLE_k circuit uses 129 qubits > 128",
+            "value": "129"
+          }
+        ],
+        "positive_control": "passed"
+      },
+      "invsqrt": {
+        "records": [
+          {
+            "fixture": "valid_x1",
+            "observed": "PASS",
+            "verified_shots": 64
+          },
+          {
+            "expected": "phase error",
+            "fixture": "phase",
+            "observed": "x=1: phase error -5.000e-01 turns exceeds tolerance 5.960e-08."
+          },
+          {
+            "expected": "x was not restored",
+            "fixture": "input",
+            "observed": "x was not restored."
+          },
+          {
+            "expected": "did not return to",
+            "fixture": "scratch",
+            "observed": "Scratch qubit q6 did not return to |0>."
+          }
+        ],
+        "scope": "x=1 bounded diagnostic problem with the actual verifier",
+        "seed": 3103
+      }
+    },
+    "mutations": {
+      "dfthcsos": {
+        "controls": [
+          {
+            "expected": "error_1",
+            "field": "error_1",
+            "observed": "error_1 = 21.0000 mHa > 20 mHa",
+            "value": "0.021"
+          },
+          {
+            "expected": "error_2",
+            "field": "error_2",
+            "observed": "error_2 = 21.0000 mHa > 20 mHa",
+            "value": "0.021"
+          },
+          {
+            "expected": "strict floor",
+            "field": "Lambda",
+            "observed": "Lambda = 49 must be finite and > 49.0 (strict floor)",
+            "value": "49.0"
+          },
+          {
+            "expected": "strict floor",
+            "field": "E_gap",
+            "observed": "E_gap = 3.914898 must be finite and > 3.914898 (strict floor)",
+            "value": "3.914898"
+          },
+          {
+            "expected": "strict floor",
+            "field": "Lambda",
+            "observed": "Lambda = nan must be finite and > 49.0 (strict floor)",
+            "value": "nan"
+          },
+          {
+            "expected": "width",
+            "field": "angles_qubits",
+            "observed": "an ANGLE_k circuit uses 129 qubits > 128",
+            "value": "129"
+          }
+        ],
+        "positive_control": "passed"
+      },
+      "invsqrt": {
+        "records": [
+          {
+            "fixture": "valid_x1",
+            "observed": "PASS",
+            "verified_shots": 64
+          },
+          {
+            "expected": "phase error",
+            "fixture": "phase",
+            "observed": "x=1: phase error -5.000e-01 turns exceeds tolerance 5.960e-08."
+          },
+          {
+            "expected": "x was not restored",
+            "fixture": "input",
+            "observed": "x was not restored."
+          },
+          {
+            "expected": "did not return to",
+            "fixture": "scratch",
+            "observed": "Scratch qubit q6 did not return to |0>."
+          }
+        ],
+        "scope": "x=1 bounded diagnostic problem with the actual verifier",
+        "seed": 3103
+      }
+    },
+    "numerical_margins": {
+      "dfthcsos": {
+        "E_SOS": -22144.23882724429,
+        "E_gap": 3.965477244291833,
+        "Lambda": 308.4559397330945,
+        "error_1": 0.0031851950317996216,
+        "error_2": 0.018639570630974368,
+        "gap_in_domain": true,
+        "lambda_eff": 49.301369250574396
+      },
+      "invsqrt": {
+        "input_count": 3133452,
+        "minimum_margin_phase64": 102726012,
+        "minimum_margin_x": 2684414,
+        "nonpositive_margins": 0,
+        "worst_tolerance_fraction": 0.8469246188549967,
+        "worst_x": 2684414
+      }
+    },
+    "opportunity": {
+      "dfthcsos": {
+        "build_seconds": 2.752107972999511,
+        "chemistry": {
+          "batch_size": 9,
+          "brot": 12,
+          "evaluation_seconds": 12.418506480993528,
+          "metrics": {
+            "E_SOS": -22144.23882724429,
+            "E_gap": 3.965477244291833,
+            "Lambda": 308.4559397330945,
+            "error_1": 0.0031851950317996216,
+            "error_2": 0.018639570630974368,
+            "gap_in_domain": true,
+            "lambda_eff": 49.301369250574396
+          },
+          "resources": {
+            "angles_persistent_qubits": 108,
+            "angles_qubits": 128,
+            "angles_selection_qubits": 12,
+            "angles_temporary_qubits": 8,
+            "angles_toffoli": 75024.0,
+            "angles_toffoli_per_pass": 37512.0,
+            "angles_within_cap": true,
+            "brot": 12,
+            "givens_rotations_toffoli": 3450,
+            "heuristic_persistent_qubits": 90,
+            "heuristic_qubits": 634,
+            "heuristic_temporary_qubits": 544,
+            "heuristic_toffoli": 13757,
+            "inner_state_prep_persistent_qubits": 44,
+            "inner_state_prep_qubits": 588,
+            "inner_state_prep_temporary_qubits": 544,
+            "inner_state_prep_toffoli": 9461,
+            "keep_bits": 10,
+            "outer_state_prep_persistent_qubits": 46,
+            "outer_state_prep_qubits": 416,
+            "outer_state_prep_temporary_qubits": 370,
+            "outer_state_prep_toffoli": 846,
+            "persistent_qubits": 198,
+            "qubits": 742,
+            "temporary_qubits": 544,
+            "toffoli": 88781.0
+          },
+          "score": 3247752448.668952,
+          "submission_sha256": "09d50afaaca17334503ee807e91778c6200b81598937af2712a2e6f030ba6900",
+          "verified_shots": 15904,
+          "words_exact": true
+        },
+        "chemistry_hashes": {
+          "angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+          "angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+          "angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+          "angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+          "angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+          "angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+          "angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+          "angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+          "angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4"
+        },
+        "cpu_seconds": 41.641314567,
+        "gain": 0.03213945430858822,
+        "peak_rss_kib": 1286440,
+        "rebuild_identical": true,
+        "registration_sha256": "592d0491f693a721657008c44e15fb8aee4734bc5ae3ef27775f4b02cb43ace0",
+        "status": "go",
+        "wall_seconds": 58.73069062700233,
+        "xor_fixtures": {
+          "addresses": [
+            0,
+            7,
+            8,
+            127,
+            128,
+            3967,
+            3968,
+            3975
+          ],
+          "applications": 18,
+          "shots": 256
+        }
+      },
+      "invsqrt": {
+        "attempts": {
+          "fallback": {
+            "eligible": true,
+            "status": "passed"
+          },
+          "lead": {
+            "eligible": true,
+            "status": "passed"
+          },
+          "reference": {
+            "eligible": false,
+            "status": "passed"
+          }
+        },
+        "cpu_seconds": 12.882169999999999,
+        "registration_sha256": "badff50429b188cdb91c3824a6d9929f988f977a8bbe982b304407e8f96e966d",
+        "scope": "Bounded development evidence. Full verification and confirmation are separate.",
+        "status": "go",
+        "wall_seconds": 15.393018370999926,
+        "winner": "lead",
+        "winner_sha256": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9",
+        "within_budget": true
+      }
+    },
+    "opportunity_decision": {
+      "dfthcsos": {
+        "build_seconds": 2.752107972999511,
+        "chemistry": {
+          "batch_size": 9,
+          "brot": 12,
+          "evaluation_seconds": 12.418506480993528,
+          "metrics": {
+            "E_SOS": -22144.23882724429,
+            "E_gap": 3.965477244291833,
+            "Lambda": 308.4559397330945,
+            "error_1": 0.0031851950317996216,
+            "error_2": 0.018639570630974368,
+            "gap_in_domain": true,
+            "lambda_eff": 49.301369250574396
+          },
+          "resources": {
+            "angles_persistent_qubits": 108,
+            "angles_qubits": 128,
+            "angles_selection_qubits": 12,
+            "angles_temporary_qubits": 8,
+            "angles_toffoli": 75024.0,
+            "angles_toffoli_per_pass": 37512.0,
+            "angles_within_cap": true,
+            "brot": 12,
+            "givens_rotations_toffoli": 3450,
+            "heuristic_persistent_qubits": 90,
+            "heuristic_qubits": 634,
+            "heuristic_temporary_qubits": 544,
+            "heuristic_toffoli": 13757,
+            "inner_state_prep_persistent_qubits": 44,
+            "inner_state_prep_qubits": 588,
+            "inner_state_prep_temporary_qubits": 544,
+            "inner_state_prep_toffoli": 9461,
+            "keep_bits": 10,
+            "outer_state_prep_persistent_qubits": 46,
+            "outer_state_prep_qubits": 416,
+            "outer_state_prep_temporary_qubits": 370,
+            "outer_state_prep_toffoli": 846,
+            "persistent_qubits": 198,
+            "qubits": 742,
+            "temporary_qubits": 544,
+            "toffoli": 88781.0
+          },
+          "score": 3247752448.668952,
+          "submission_sha256": "09d50afaaca17334503ee807e91778c6200b81598937af2712a2e6f030ba6900",
+          "verified_shots": 15904,
+          "words_exact": true
+        },
+        "chemistry_hashes": {
+          "angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+          "angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+          "angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+          "angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+          "angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+          "angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+          "angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+          "angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+          "angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4"
+        },
+        "cpu_seconds": 41.641314567,
+        "gain": 0.03213945430858822,
+        "peak_rss_kib": 1286440,
+        "rebuild_identical": true,
+        "registration_sha256": "592d0491f693a721657008c44e15fb8aee4734bc5ae3ef27775f4b02cb43ace0",
+        "status": "go",
+        "wall_seconds": 58.73069062700233,
+        "xor_fixtures": {
+          "addresses": [
+            0,
+            7,
+            8,
+            127,
+            128,
+            3967,
+            3968,
+            3975
+          ],
+          "applications": 18,
+          "shots": 256
+        }
+      },
+      "invsqrt": {
+        "attempts": {
+          "fallback": {
+            "eligible": true,
+            "status": "passed"
+          },
+          "lead": {
+            "eligible": true,
+            "status": "passed"
+          },
+          "reference": {
+            "eligible": false,
+            "status": "passed"
+          }
+        },
+        "cpu_seconds": 12.882169999999999,
+        "registration_sha256": "badff50429b188cdb91c3824a6d9929f988f977a8bbe982b304407e8f96e966d",
+        "scope": "Bounded development evidence. Full verification and confirmation are separate.",
+        "status": "go",
+        "wall_seconds": 15.393018370999926,
+        "winner": "lead",
+        "winner_sha256": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9",
+        "within_budget": true
+      }
+    },
+    "primitive_scope": {
+      "dfthcsos": {
+        "addresses": [
+          0,
+          7,
+          8,
+          127,
+          128,
+          3967,
+          3968,
+          3975
+        ],
+        "applications": 18,
+        "shots": 256
+      },
+      "invsqrt": {
+        "counts_per_shot": [
+          7447,
+          1,
+          36
+        ],
+        "executed_counts": [
+          300739648,
+          40384,
+          1453824
+        ],
+        "inputs": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          11,
+          12,
+          13,
+          15,
+          16,
+          17,
+          23,
+          24,
+          25,
+          31,
+          32,
+          33,
+          47,
+          48,
+          49,
+          63,
+          64,
+          65,
+          95,
+          96,
+          97,
+          127,
+          128,
+          129,
+          191,
+          192,
+          193,
+          255,
+          256,
+          257,
+          383,
+          384,
+          385,
+          511,
+          512,
+          513,
+          767,
+          768,
+          769,
+          1023,
+          1024,
+          1025,
+          1535,
+          1536,
+          1537,
+          2047,
+          2048,
+          2049,
+          3071,
+          3072,
+          3073,
+          3210,
+          4095,
+          4096,
+          4097,
+          6143,
+          6144,
+          6145,
+          8191,
+          8192,
+          8193,
+          12287,
+          12288,
+          12289,
+          16383,
+          16384,
+          16385,
+          24575,
+          24576,
+          24577,
+          32767,
+          32768,
+          32769,
+          46927,
+          49151,
+          49152,
+          49153,
+          55371,
+          55765,
+          61798,
+          65535,
+          65536,
+          65537,
+          69084,
+          76736,
+          79053,
+          85080,
+          85671,
+          89526,
+          89700,
+          95314,
+          97981,
+          98303,
+          98304,
+          98305,
+          108668,
+          112175,
+          121645,
+          125470,
+          131071,
+          131072,
+          131073,
+          135462,
+          141947,
+          142672,
+          151615,
+          157597,
+          164580,
+          167155,
+          169594,
+          173863,
+          184610,
+          188065,
+          190919,
+          196607,
+          196608,
+          196609,
+          198032,
+          201033,
+          203899,
+          204043,
+          205276,
+          209700,
+          210303,
+          219003,
+          236616,
+          239562,
+          241773,
+          247254,
+          253014,
+          260950,
+          262143,
+          262144,
+          262145,
+          265629,
+          266581,
+          276592,
+          288967,
+          309053,
+          319751,
+          325785,
+          327954,
+          332173,
+          332395,
+          338038,
+          338886,
+          349095,
+          363339,
+          366897,
+          393215,
+          393216,
+          393217,
+          397643,
+          398072,
+          421167,
+          422245,
+          437977,
+          437994,
+          452780,
+          453496,
+          459132,
+          459589,
+          461710,
+          466395,
+          467486,
+          475169,
+          481053,
+          482421,
+          489019,
+          502932,
+          503479,
+          505983,
+          506899,
+          513365,
+          515848,
+          516230,
+          516887,
+          524287,
+          524288,
+          524289,
+          534204,
+          536786,
+          539154,
+          543283,
+          545832,
+          550476,
+          551369,
+          558478,
+          559254,
+          562625,
+          565011,
+          566948,
+          573188,
+          578033,
+          581688,
+          599649,
+          599845,
+          600232,
+          600659,
+          608816,
+          610172,
+          616890,
+          617625,
+          637393,
+          647242,
+          647712,
+          648055,
+          650895,
+          676394,
+          680797,
+          683634,
+          703900,
+          709069,
+          712359,
+          718748,
+          725681,
+          729873,
+          741413,
+          742125,
+          743305,
+          752157,
+          752600,
+          758272,
+          761699,
+          770676,
+          776061,
+          786431,
+          786432,
+          786433,
+          788168,
+          788782,
+          792867,
+          794880,
+          795794,
+          799527,
+          801987,
+          806375,
+          824482,
+          827795,
+          828877,
+          845495,
+          846653,
+          872060,
+          872413,
+          879174,
+          882131,
+          882829,
+          889678,
+          890364,
+          891019,
+          894849,
+          899596,
+          903973,
+          904537,
+          917703,
+          926126,
+          928420,
+          962543,
+          965945,
+          968444,
+          969569,
+          984187,
+          984913,
+          992375,
+          1009334,
+          1009399,
+          1015391,
+          1025090,
+          1028562,
+          1038115,
+          1047087,
+          1048575,
+          1048576,
+          1048577,
+          1050154,
+          1051592,
+          1052389,
+          1054371,
+          1059823,
+          1060270,
+          1068946,
+          1076389,
+          1078049,
+          1086136,
+          1089830,
+          1093849,
+          1093900,
+          1094765,
+          1108076,
+          1115569,
+          1145298,
+          1146109,
+          1147828,
+          1153904,
+          1155162,
+          1157381,
+          1161281,
+          1161766,
+          1162992,
+          1182612,
+          1198553,
+          1217471,
+          1234574,
+          1241654,
+          1242185,
+          1244504,
+          1245527,
+          1246743,
+          1247969,
+          1253591,
+          1273849,
+          1279483,
+          1281306,
+          1282591,
+          1283014,
+          1288443,
+          1290670,
+          1291370,
+          1304653,
+          1306396,
+          1311963,
+          1316659,
+          1317209,
+          1323035,
+          1327329,
+          1337802,
+          1346118,
+          1350934,
+          1352918,
+          1360031,
+          1361329,
+          1361956,
+          1370094,
+          1396120,
+          1397954,
+          1399657,
+          1411295,
+          1416448,
+          1418749,
+          1431020,
+          1432231,
+          1436367,
+          1448692,
+          1454019,
+          1457870,
+          1460201,
+          1466354,
+          1468716,
+          1472681,
+          1476647,
+          1500840,
+          1527431,
+          1527803,
+          1539928,
+          1543867,
+          1546429,
+          1565035,
+          1572863,
+          1572864,
+          1572865,
+          1581100,
+          1598379,
+          1599186,
+          1599396,
+          1602455,
+          1602569,
+          1606300,
+          1607178,
+          1610429,
+          1614108,
+          1617825,
+          1619265,
+          1623152,
+          1639423,
+          1642684,
+          1642811,
+          1645670,
+          1650290,
+          1652896,
+          1662874,
+          1664426,
+          1673395,
+          1707903,
+          1709686,
+          1711968,
+          1712869,
+          1722103,
+          1734507,
+          1742307,
+          1749323,
+          1753649,
+          1755131,
+          1760483,
+          1763810,
+          1767164,
+          1776348,
+          1782467,
+          1783868,
+          1787328,
+          1800077,
+          1801533,
+          1817513,
+          1822320,
+          1825009,
+          1826388,
+          1828278,
+          1828879,
+          1831173,
+          1831285,
+          1832721,
+          1847808,
+          1848918,
+          1849629,
+          1857879,
+          1867954,
+          1872182,
+          1874800,
+          1884445,
+          1888754,
+          1897299,
+          1900186,
+          1900290,
+          1905616,
+          1924832,
+          1927475,
+          1930515,
+          1932761,
+          1937348,
+          1945168,
+          1957554,
+          1967605,
+          1968250,
+          1972446,
+          1974163,
+          1977805,
+          1977811,
+          1991488,
+          2001975,
+          2002112,
+          2003019,
+          2003225,
+          2008498,
+          2021068,
+          2021607,
+          2026383,
+          2034651,
+          2040154,
+          2080116,
+          2082180,
+          2083075,
+          2090671,
+          2095145,
+          2097151,
+          2097152,
+          2097153,
+          2101206,
+          2105940,
+          2106405,
+          2107783,
+          2111643,
+          2118041,
+          2119138,
+          2124707,
+          2133530,
+          2138949,
+          2155348,
+          2156858,
+          2159045,
+          2170194,
+          2173380,
+          2187602,
+          2199993,
+          2200771,
+          2202415,
+          2209854,
+          2210566,
+          2229377,
+          2237382,
+          2240846,
+          2245152,
+          2246362,
+          2264407,
+          2264541,
+          2268282,
+          2271013,
+          2292472,
+          2297967,
+          2302163,
+          2313334,
+          2316113,
+          2327935,
+          2332240,
+          2333747,
+          2347022,
+          2357663,
+          2360071,
+          2365152,
+          2377328,
+          2383554,
+          2383652,
+          2384742,
+          2387262,
+          2388034,
+          2408999,
+          2416565,
+          2416888,
+          2421711,
+          2422589,
+          2428004,
+          2436931,
+          2437714,
+          2441333,
+          2443455,
+          2446184,
+          2447547,
+          2452540,
+          2461456,
+          2463602,
+          2464252,
+          2467485,
+          2468090,
+          2474941,
+          2478840,
+          2481206,
+          2498849,
+          2499983,
+          2502864,
+          2510577,
+          2511842,
+          2515000,
+          2515460,
+          2531403,
+          2534498,
+          2557037,
+          2563172,
+          2569761,
+          2571348,
+          2575797,
+          2592721,
+          2593895,
+          2599625,
+          2609337,
+          2615946,
+          2625406,
+          2630640,
+          2631679,
+          2633871,
+          2633910,
+          2650307,
+          2656906,
+          2663748,
+          2668599,
+          2678134,
+          2684414,
+          2700786,
+          2705974,
+          2709485,
+          2714647,
+          2722388,
+          2729007,
+          2729322,
+          2731613,
+          2733775,
+          2741287,
+          2744814,
+          2746115,
+          2754913,
+          2756856,
+          2764224,
+          2767743,
+          2771743,
+          2785784,
+          2786123,
+          2789916,
+          2792068,
+          2793960,
+          2795511,
+          2797045,
+          2801722,
+          2818407,
+          2825414,
+          2827537,
+          2838016,
+          2842693,
+          2843289,
+          2855273,
+          2878213,
+          2881183,
+          2886132,
+          2886638,
+          2895681,
+          2899633,
+          2914598,
+          2919104,
+          2924090,
+          2933815,
+          2936155,
+          2939472,
+          2954805,
+          2956172,
+          2956406,
+          2958319,
+          2961422,
+          2967268,
+          2968339,
+          3008279,
+          3016935,
+          3024936,
+          3036544,
+          3040830,
+          3047339,
+          3050098,
+          3064895,
+          3072223,
+          3079708,
+          3081947,
+          3083636,
+          3095569,
+          3100058,
+          3129123,
+          3132234,
+          3133452
+        ],
+        "shots": 40384
+      }
+    },
+    "representation_stability": {
+      "dfthcsos": {
+        "two_archive_builds": "8fb545091a1cf66c2656bdce40bedbc26e478746301f9a777f56173f88b88503"
+      },
+      "invsqrt": {
+        "two_archive_builds": "8fb545091a1cf66c2656bdce40bedbc26e478746301f9a777f56173f88b88503"
+      }
+    },
+    "stability": {
+      "dfthcsos": {
+        "two_archive_builds": "8fb545091a1cf66c2656bdce40bedbc26e478746301f9a777f56173f88b88503"
+      },
+      "invsqrt": {
+        "two_archive_builds": "8fb545091a1cf66c2656bdce40bedbc26e478746301f9a777f56173f88b88503"
+      }
+    }
+  },
+  "two_builds_identical": true,
+  "verification": {
+    "artifact_hashes": {
+      "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+      "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+      "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+      "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+      "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+      "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+      "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+      "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+      "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+      "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "dqi.kmb": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+      "invsqrt.kmb": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9"
+    },
+    "backend_hash": "064b3f583a668ab10bbcdaef6b238e202c66a2d1a9cc164e581d1431798553f7",
+    "complete": true,
+    "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+    "coverage": "unmodified official verifier completed",
+    "diagnostic": "worker exit code 0",
+    "elapsed_seconds": 747.638625825,
+    "environment": {
+      "cpu_count": 16,
+      "dependencies": {
+        "numpy": "2.3.5",
+        "pandas": "2.2.3",
+        "scipy": "1.17.0"
+      },
+      "dependency_lock_sha256": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+      "dirty": false,
+      "numpy_backend": {
+        "Build Dependencies": {
+          "blas": {
+            "detection method": "pkgconfig",
+            "found": true,
+            "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+            "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+            "name": "scipy-openblas",
+            "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+            "pc file directory": "/project/.openblas",
+            "version": "0.3.30"
+          },
+          "lapack": {
+            "detection method": "pkgconfig",
+            "found": true,
+            "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+            "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+            "name": "scipy-openblas",
+            "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+            "pc file directory": "/project/.openblas",
+            "version": "0.3.30"
+          }
+        },
+        "Compilers": {
+          "c": {
+            "commands": "cc",
+            "linker": "ld.bfd",
+            "name": "gcc",
+            "version": "14.2.1"
+          },
+          "c++": {
+            "commands": "c++",
+            "linker": "ld.bfd",
+            "name": "gcc",
+            "version": "14.2.1"
+          },
+          "cython": {
+            "commands": "cython",
+            "linker": "cython",
+            "name": "cython",
+            "version": "3.2.1"
+          }
+        },
+        "Machine Information": {
+          "build": {
+            "cpu": "x86_64",
+            "endian": "little",
+            "family": "x86_64",
+            "system": "linux"
+          },
+          "host": {
+            "cpu": "x86_64",
+            "endian": "little",
+            "family": "x86_64",
+            "system": "linux"
+          }
+        },
+        "Python Information": {
+          "path": "/tmp/build-env-w_be3r90/bin/python",
+          "version": "3.13"
+        },
+        "SIMD Extensions": {
+          "baseline": [
+            "SSE",
+            "SSE2",
+            "SSE3"
+          ],
+          "found": [
+            "SSSE3",
+            "SSE41",
+            "POPCNT",
+            "SSE42",
+            "AVX",
+            "F16C",
+            "FMA3",
+            "AVX2"
+          ],
+          "not found": [
+            "AVX512F",
+            "AVX512CD",
+            "AVX512_KNL",
+            "AVX512_KNM",
+            "AVX512_SKX",
+            "AVX512_CLX",
+            "AVX512_CNL",
+            "AVX512_ICL",
+            "AVX512_SPR"
+          ]
+        }
+      },
+      "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+      "processor": "",
+      "python": "3.13.15 (main, Aug 14 2026, 15:34:59) [Clang 22.1.3 ]",
+      "source_revision": "3c04f83ce7b28f2d4c1a98e3e747fb8f4029bc55",
+      "thread_settings": {
+        "MKL_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1"
+      }
+    },
+    "kind": "official_metric_execution",
+    "logs": {
+      "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout.log": "5e5b167df188d1020a3caf584f51726f0b2c5b413f749011db5ff34a214a6bf9"
+    },
+    "official_results": {
+      "claim": "sampled circuit acceptance under local salt and official metric; no coherent proof",
+      "completed": true,
+      "confirmation_observed": {
+        "k": 0,
+        "n": 102400
+      },
+      "costs": {
+        "dfthcsos": 3247752448.668952,
+        "dqi": 24439466510149.91,
+        "invsqrt": 1971483.438323478
+      },
+      "counts_note": "Counters require explicit source-reconciled mappings into real verifier returns.",
+      "coverage_counts": {
+        "dfthcsos": {
+          "completed": 254464,
+          "expected": 254464
+        },
+        "dqi": {
+          "completed": 102400,
+          "expected": 102400
+        },
+        "invsqrt": {
+          "completed": 200540928,
+          "expected": 200540928
+        }
+      },
+      "max_rss_platform_units": 7313508,
+      "pid": 769,
+      "raw_verifier_results": {
+        "dfthcsos": {
+          "batch_size": 9,
+          "brot": 12,
+          "lambda_eff": 49.301369250574396,
+          "metrics": {
+            "E_SOS": -22144.23882724429,
+            "E_gap": 3.965477244291833,
+            "Lambda": 308.4559397330945,
+            "error_1": 0.0031851950317996216,
+            "error_2": 0.018639570630974368,
+            "gap_in_domain": true,
+            "lambda_eff": 49.301369250574396
+          },
+          "num_circuits": 9,
+          "num_ops": 2063857,
+          "num_qubits": 742,
+          "reaction_depth": 99,
+          "resources": {
+            "angles_persistent_qubits": 108,
+            "angles_qubits": 128,
+            "angles_selection_qubits": 12,
+            "angles_temporary_qubits": 8,
+            "angles_toffoli": 75024.0,
+            "angles_toffoli_per_pass": 37512.0,
+            "angles_within_cap": true,
+            "brot": 12,
+            "givens_rotations_toffoli": 3450,
+            "heuristic_persistent_qubits": 90,
+            "heuristic_qubits": 634,
+            "heuristic_temporary_qubits": 544,
+            "heuristic_toffoli": 13757,
+            "inner_state_prep_persistent_qubits": 44,
+            "inner_state_prep_qubits": 588,
+            "inner_state_prep_temporary_qubits": 544,
+            "inner_state_prep_toffoli": 9461,
+            "keep_bits": 10,
+            "outer_state_prep_persistent_qubits": 46,
+            "outer_state_prep_qubits": 416,
+            "outer_state_prep_temporary_qubits": 370,
+            "outer_state_prep_toffoli": 846,
+            "persistent_qubits": 198,
+            "qubits": 742,
+            "temporary_qubits": 544,
+            "toffoli": 88781.0
+          },
+          "score": 3247752448.668952,
+          "status": "PASS",
+          "submission_sha256": "09d50afaaca17334503ee807e91778c6200b81598937af2712a2e6f030ba6900",
+          "toffoli_count": 88781.0,
+          "verified_shots": 254464
+        },
+        "dqi": {
+          "circuit_sha256": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+          "degree": 12,
+          "effective_error_rate": 0.0008660587301657926,
+          "empirical_error_rate": 0.0,
+          "log2_delta": -128.0,
+          "m": 4095,
+          "max_toffoli_count": 5725461,
+          "mean_error_weight": 31.046737331746634,
+          "n": 70,
+          "num_bits": 49154,
+          "num_ops": 86051014,
+          "num_qubits": 1893,
+          "phase_errors": 0,
+          "r": 2016,
+          "reaction_depth": 170757,
+          "repetition_factor": 1.1912604648115832,
+          "score": 24439466510149.91,
+          "shot_operation_counts": {
+            "BIT_INVERT": 331738970950,
+            "BIT_STORE0": 70593927648,
+            "BIT_STORE1": 2515976906,
+            "CCX": 466175290128,
+            "CSWAP": 120075878400,
+            "CX": 5515949056848,
+            "CZ": 483333740101,
+            "HMR": 125697609024,
+            "INFO_TAG": 333529702400,
+            "NEG": 66663590,
+            "POP_CONDITION": 4331212800,
+            "PUSH_CONDITION": 4331212800,
+            "R": 125697609024,
+            "SWAP": 320927179776,
+            "X": 84822002944,
+            "Z": 1727578812
+          },
+          "status": "PASS",
+          "toffoli_count": 5725109.06765625,
+          "value_errors": 0,
+          "verified_shots": 102400
+        },
+        "invsqrt": {
+          "circuit_sha256": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9",
+          "max_toffoli_count": 7447,
+          "num_ops": 59717,
+          "num_qubits": 256,
+          "reaction_depth": 3844,
+          "rotation_count": 36.0,
+          "rotation_eps": 4.859684532075422e-13,
+          "score": 1971483.438323478,
+          "status": "PASS",
+          "t_count": 1.0,
+          "toffoli_count": 7447.0,
+          "toffoli_equivalent": 7701.107180951086,
+          "verified_shots": 200540928,
+          "worst_error_over_tolerance": 0.8469246188549967,
+          "worst_x": 2684414
+        }
+      },
+      "rss_units": "bytes on macOS, KiB on Linux",
+      "verification_shot_divisor": 1
+    },
+    "remote_accepted": false,
+    "request_hash": "15de41e4f8b713723c3585ccfd8176975e1b5cc18ac87a1c6fe9b53bb1933f49",
+    "role": "official_local",
+    "schema_version": 1,
+    "seed_policy": {
+      "distribution": "Matched successor archive seed for retained-member comparison",
+      "role": "official_local",
+      "salt": "2b4caee9b649f172d30f0c68cc7598b80ba2bb14b0702c4b3ffed06eee3255a1"
+    },
+    "status": "passed",
+    "tier": "full"
+  },
+  "zip_sha256": "8fb545091a1cf66c2656bdce40bedbc26e478746301f9a777f56173f88b88503"
+}

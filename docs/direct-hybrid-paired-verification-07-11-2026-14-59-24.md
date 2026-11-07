@@ -19,3 +19,22 @@ match. The unpaired cost difference triggered the exact retained-cost guard.
 The parent replay uses the successor's already registered archive seed,
 with its full report pinned before the replay. This provides a matched
 comparison without reusing either component confirmation seed.
+
+## Matched result and certificates
+
+The paired parent reproduced its original ZIP byte for byte and passed the
+full metric at **1.0286345144**. Both archives then measured the same DQI
+cost of **24,439,466,510,149.91** and chemistry cost of **3,247,752,448.67**.
+The direct-phasing successor's **1.2861761126** score is **25.0372%** higher
+under those matched conditions.
+
+- [Paired comparison](evidence/invsqrt-direct-hybrid-20261107/comparison.json)
+- [Parent certificate](evidence/invsqrt-direct-hybrid-20261107/paired-parent/certificate.json)
+- [Successor certificate](evidence/invsqrt-direct-hybrid-20261107/certificate.json)
+- [Benchmark-scoped confirmation ledger](evidence/invsqrt-direct-hybrid-20261107/confirmation-ledger.json)
+
+The ledger contains three independent confirmations, one for each optimized
+parent benchmark and one for the successor inverse-square-root circuit. The
+successor certificate links the parent's chemistry confirmation by protocol
+and certificate hash. All 11 retained archive members and both independent
+builds per archive matched by SHA-256.

@@ -175,6 +175,12 @@ chemistry confirmation and complete component manifest, and carries forward
 that lineage without reserving a new chemistry confirmation. Only the new
 inverse-square-root member receives a fresh confirmation.
 
+The full archive comparison uses the same registered seed on both archives
+when retained DQI gate counts differ across seeds. The paired parent
+registration binds the existing successor receipt before execution. This
+matches the sampling distribution on the identical DQI circuit and keeps
+the two component confirmation seeds independent.
+
 A supporting-evidence JSON must contain substantive records for `coverage_counts`,
 `cost_breakdown`, `numerical_margins`, `mutation_diagnostics`, `primitive_scope`,
 `representation_stability`, and `opportunity_decision`, plus the pinned

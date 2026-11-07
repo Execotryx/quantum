@@ -1,0 +1,86 @@
+[
+  {
+    "artifact_hashes": {
+      "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+      "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+      "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+      "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+      "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+      "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+      "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+      "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+      "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+      "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "dqi.kmb": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+      "invsqrt.kmb": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9"
+    },
+    "benchmark": "dfthcsos",
+    "candidate": "bde2ae1a65b7be78a629e249f0d84ebb78e8d1c7250efea5fcb093c8ff299c33",
+    "component_hashes": {
+      "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+      "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+      "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+      "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+      "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+      "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+      "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+      "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+      "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+      "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69"
+    },
+    "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+    "protocol_id": "75721595df7e8d6554ccb442822e0b03e499d75c0e6c36faf9eff71d16d1cb59",
+    "salt": "559b14ee3fea16e2ca4d086475f754f99842008c1221077a40a0ac150afff356",
+    "status": "passed"
+  },
+  {
+    "artifact_hashes": {
+      "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+      "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+      "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+      "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+      "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+      "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+      "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+      "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+      "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+      "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "dqi.kmb": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+      "invsqrt.kmb": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9"
+    },
+    "benchmark": "invsqrt",
+    "candidate": "bde2ae1a65b7be78a629e249f0d84ebb78e8d1c7250efea5fcb093c8ff299c33",
+    "component_hashes": {
+      "invsqrt.kmb": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9"
+    },
+    "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+    "protocol_id": "f94cdfc797954466251389908c14272ad14fb079ad88c6a26d94b54f570811d9",
+    "salt": "01de93c6020258ff56714025ff63158757a204ad5c49f4570f214410864fb1d1",
+    "status": "passed"
+  },
+  {
+    "artifact_hashes": {
+      "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+      "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+      "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+      "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+      "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+      "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+      "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+      "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+      "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+      "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "dqi.kmb": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+      "invsqrt.kmb": "dfaf3345abf3ff70e9a633bfd0cd07baa7e7bc7eb70105b557d09726ef1f5a8c"
+    },
+    "benchmark": "invsqrt",
+    "candidate": "ce5615b6839e1c09ed49fa5756b462853eccfe3dad7da69fe94fe6b7a473bc34",
+    "component_hashes": {
+      "invsqrt.kmb": "dfaf3345abf3ff70e9a633bfd0cd07baa7e7bc7eb70105b557d09726ef1f5a8c"
+    },
+    "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+    "protocol_id": "aa7fccc6b84fe433a3506f7338aacc277fdcbd63a98fbc7bf5683df4b55f47b3",
+    "salt": "61ea42a5616ae5568d12437106016348f05ecb5f45b81565e80fa4a7880e9ca8",
+    "status": "passed"
+  }
+]
