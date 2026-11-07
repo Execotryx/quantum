@@ -19,13 +19,18 @@ SPEC = {
 MAX_NPZ_BYTES = 2**26
 
 
-def read_factorization(path: Path, spec=None, max_bytes=MAX_NPZ_BYTES):
+def read_factorization(path: Path, spec=None, max_bytes=MAX_NPZ_BYTES, *, allow_extra=False):
     spec = SPEC if spec is None else spec
     dimensions, total = {}, 0
     with zipfile.ZipFile(path) as archive:
         names = archive.namelist()
-        if len(names) != len(set(names)) or set(names) != {key + ".npy" for key in spec}:
+        required = {key + ".npy" for key in spec}
+        supplied = set(names)
+        if len(names) != len(supplied) or not required <= supplied:
             raise ValidationError("NPZ must contain exactly one member for each required array")
+        extras = supplied - required
+        if extras and (not allow_extra or any(name.removesuffix(".npy") in spec for name in extras)):
+            raise ValidationError("NPZ has unexpected members or aliases for required arrays")
         for key, (kinds, expected) in spec.items():
             with archive.open(key + ".npy") as stream:
                 if np.lib.format.read_magic(stream) != (1, 0):

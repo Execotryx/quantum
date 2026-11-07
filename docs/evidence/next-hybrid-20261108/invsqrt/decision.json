@@ -1,0 +1,21 @@
+{
+  "attempts": {
+    "certified-direct": "390194afa0c799d9c3038b0ea494527325b4722a94675c9e647f428df4778e60",
+    "direct-control": "dab1f04d0f6583610df5c6391ed800426b00bd96df653e6d84960fef2a480352",
+    "incumbent": "3d15a5d316e9205d024b34d6b7f9ec5019abcba2691de6078cc244fbf5ce97ac",
+    "minimax-cubic": "ac6d05f3e852391c30a34bf0a1f72771ab5ce40ba9ccedbb9f7cf8deeff0a230",
+    "minimax-quadratic": "3b408ff14b6497ff9bfc63069aa058563b0c2a0efbca24dc848fa2c26e7c192d",
+    "reference": "5e270b98521e9572afd4fd23cbbabbe562e6090fe5c6eb9fc19363ef7ac821bc",
+    "separate-arithmetic": "e123297acafb9b0d88370a42ef0b6da284d8e9d5cf89bf3eea3649396c123a7b",
+    "separate-lookup-workspace": "c6bc1c7435cd02211e73b4bbdcfdbfbc7ffc2ee859a8d11a46b7456ffb9b3d61"
+  },
+  "controls_pass": true,
+  "cpu_seconds": 26.55,
+  "in_budget": true,
+  "limit": 907648.3058756178,
+  "registration_sha256": "a33bb0a75bd6a406662ec127853b23cff1c8a632073150d31f2129ad0b8c26ab",
+  "status": "go",
+  "wall_seconds": 55.467517789,
+  "winner": "minimax-quadratic",
+  "winner_sha256": "3ae33a3d0101085613ac6bfc1b1ab7dde6b8f35f7ebd84d0976ba66a0772f799"
+}

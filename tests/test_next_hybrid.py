@@ -9,9 +9,11 @@ import pytest
 from qcompile.artifacts import deterministic_npz
 from qcompile.chemistry.refit import encode_vectors
 from qcompile.chemistry.representation import canonical_signs, reconstruct
+from qcompile.chemistry.schema import read_factorization
 from qcompile.component_confirmations import candidate_coverage, has_full_hybrid_coverage
 from qcompile.dqi.field import GF4096
 from qcompile.dqi.reversible import phase_for_position
+from qcompile.errors import ValidationError
 
 
 def test_changed_shape_and_actual_coverage(tmp_path):
@@ -19,7 +21,10 @@ def test_changed_shape_and_actual_coverage(tmp_path):
     deterministic_npz(path, {
         "U": np.zeros((2, 3, 76)), "W": np.zeros((2, 3, 4)), "H2_I": np.zeros((2, 4)),
         "H1_I": np.array(0.0), "Hsym_lower": np.zeros(2926), "tree_edges": np.zeros((75, 2), dtype=int),
+        "angle_words": np.zeros((82, 75), dtype=int),
     })
+    with pytest.raises(ValidationError, match="unexpected members"):
+        read_factorization(path)
     expected = candidate_coverage({"dfthcsos/submission.npz": {"path": str(path)}})
     assert expected == {"invsqrt": 200_540_928, "dqi": 102_400, "dfthcsos": 5_248}
     observed = {

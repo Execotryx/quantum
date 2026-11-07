@@ -46,8 +46,8 @@ def preflight(archive: Path, backend_path: Path, output: Path) -> None:
     arrays = metric["read_npz"](npz, SPEC)
     r, b, c = arrays["W"].shape
     del arrays
-    # The project guard additionally requires exact members and complete payloads.
-    read_factorization(npz)
+    # Check complete required payloads without loading optional trainer arrays.
+    read_factorization(npz, allow_extra=True)
     angle_count = len(members) - 3
     angles = [read_circuit(root / f"dfthcsos/angle_k_{index}.kmb", chemistry.QUBIT_CAP)
               for index in range(angle_count)]

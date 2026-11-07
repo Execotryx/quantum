@@ -23,7 +23,7 @@ from qcompile.io import read_json, sha256, write_json
 
 
 def fixed_inputs(api, params_path: Path):
-    arrays = read_factorization(params_path)
+    arrays = read_factorization(params_path, allow_extra=True)
     inputs = api.load_inputs(arrays)
     return replace(inputs, params={**inputs.params, "tree_edges": arrays["tree_edges"]})
 
@@ -107,7 +107,7 @@ def fit(plan: Path, output: Path) -> None:
 
 def build(factorization: Path, words_path: Path, output: Path, brot: int, batch: int, bank: int | None) -> None:
     _, km, circuits, _, api = backend()
-    params = read_factorization(factorization)
+    params = read_factorization(factorization, allow_extra=True)
     words = np.load(words_path, allow_pickle=False)
     r, b, _ = params["U"].shape
     if words.shape != (76 + r * b, 75) or not 1 <= brot <= 52 or not 1 <= batch <= 75:

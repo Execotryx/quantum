@@ -1,0 +1,28 @@
+{
+  "maximum_residual": 0.0195,
+  "scale_bounds": [
+    [
+      0.999,
+      1.001
+    ],
+    [
+      0.97,
+      1.03
+    ]
+  ],
+  "lambda_margin": 1E-05,
+  "limits": {
+    "evaluations": 16,
+    "wall_seconds": 1200
+  },
+  "factorization": {
+    "sha256": "8f699105816960a242928da1c4a14fc9a7a2fb6becb3b8208c9158a817fe3335",
+    "path": "runs/next-hybrid-20261107/control-projection.npz"
+  },
+  "angle_words": {
+    "sha256": "71a46e6424408c216f5fff3fdea5d48726a6459d09cce4a35ce2c1aeea2dbfdd",
+    "path": "runs/next-hybrid-20261107/certified-words.npy"
+  },
+  "gap_margin": 1E-05,
+  "brot": 12
+}

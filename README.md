@@ -35,6 +35,23 @@ Both archives are locally certified. The
 [successor archive evidence](docs/direct-hybrid-paired-verification-07-11-2026-14-59-24.md)
 links the exact ZIPs, coverage and confirmation lineage.
 
+### Next hybrid optimization
+
+The v2 screen and native development checks found one candidate that reached
+its promotion threshold. The current certified archive remains the comparison
+baseline.
+
+| Lane | Certified control | New result | Evidence |
+|---|---:|---:|---|
+| Inverse square root | 199 qubits, 1,008,498.12 cost | 175 qubits, 820,078.95 screened cost | 18.68% lower cost. The model checked all 3,133,452 inputs and the native fixture passed 31,232 trajectories. Full verification and confirmation are pending. |
+| Chemistry | 3,247,752,448.67 cost | 3,240,974,365.97 cost with refit J9 | 0.21% lower in a 15,904-trajectory native screen. J8 was 3.11% higher than the certified control. Both missed the 10% promotion threshold. |
+| DQI | Reference decoder | EEA and BM update slices | The native EEA fixture used 110 qubits and 480 Toffoli-like gates. The BM fixture used 158 and 528. A full optimized decoder comparison remains open. |
+
+The inverse-square-root improvement projects a hybrid score of **1.37797**
+with the certified chemistry and DQI costs held fixed. The
+[validation report](docs/next-hybrid-validation-08-11-2026-00-04-43.md)
+records the measured and projected results, test scope, and incomplete runs.
+
 ## Install and check
 
 Run from the repository root in Linux or Ubuntu WSL using

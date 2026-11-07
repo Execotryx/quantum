@@ -15,7 +15,7 @@ CANDIDATE_PROFILE = "candidate-v1"
 
 def candidate_coverage(artifacts: dict[str, Any]) -> dict[str, int]:
     """Derive the full shot counts from metric v10 and the validated factor shapes."""
-    arrays = read_factorization(Path(artifacts["dfthcsos/submission.npz"]["path"]))
+    arrays = read_factorization(Path(artifacts["dfthcsos/submission.npz"]["path"]), allow_extra=True)
     r, b, _ = arrays["W"].shape
     return {**HYBRID_COVERAGE, "dfthcsos": (76 + r * b) * 64}
 
