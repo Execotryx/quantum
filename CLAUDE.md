@@ -13,6 +13,9 @@ the preregistration, all lane outcomes, and separate full and confirmation recei
 On the combined optimization branch, `tools/banked_chemistry.py` screens the
 lookup-only replacement and tests the extracted combined archive. Preserve the
 pinned numerical inputs and separate chemistry confirmation evidence.
+Use `tools/hybrid_certification.py` for the audited parent and successor
+certificate. Keep chemistry's one-use confirmation scoped to the complete
+family and NPZ. Resolve inherited evidence through the trusted parent record.
 
 Step-3 tools under `tools/` bind differential and primitive evidence to pinned
 upstream hashes. Keep fixture coverage and expected mutation diagnostics explicit.

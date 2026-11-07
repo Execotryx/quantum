@@ -1,0 +1,49 @@
+{
+  "coefficients_sha256": "27b0a9c52a1e7185420453855865a28fd7151fd73f61fa62dc1e6958b7ee03c9",
+  "cost": {
+    "fine_rotations": 39,
+    "qubits": 241,
+    "rotation_epsilon_radians": 2.5674219358865385e-12,
+    "rotation_t": 1047.6015173287665,
+    "score": 2068780.2414190583,
+    "t_like": 1,
+    "toffoli_like": 8322
+  },
+  "margins": {
+    "above_90_percent": 0,
+    "failed_inputs": 0,
+    "first_failed_inputs": [],
+    "input_count": 3133452,
+    "minimum_margin_phase64": 587938235,
+    "minimum_margin_x": 3116879,
+    "nonpositive_margins": 0,
+    "worst_tolerance_fraction": 0.06272935769359167,
+    "worst_x": 802815
+  },
+  "native": {
+    "counts": [
+      8322,
+      1,
+      39
+    ],
+    "executed_counts": [
+      259912704,
+      31232,
+      1218048
+    ],
+    "fixture_inputs": 7805,
+    "shots": 31232
+  },
+  "parameters": {
+    "fractional": [
+      32,
+      26,
+      20,
+      15
+    ],
+    "segment_bits": 7
+  },
+  "phase_gate": true,
+  "sha256": "998723c4d7e8d210addb0ba8fa46604c80cd4a96f75e598a05d0e9ed59051162",
+  "status": "completed"
+}

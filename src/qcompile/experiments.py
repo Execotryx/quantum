@@ -5,6 +5,15 @@ from contextlib import contextmanager
 from pathlib import Path
 
 from .artifacts import hashes, validate_manifest
+from .component_confirmations import (
+    FAIL_FAST,
+    component_binding,
+    component_hashes,
+    fail_fast_observed,
+    generated_benchmarks,
+    has_full_hybrid_coverage,
+    scopes_for_legacy_row,
+)
 from .errors import BlockedError, ValidationError
 from .io import identity, nonnegative_int, positive_int, read_json, sha256, write_json
 
@@ -84,7 +93,7 @@ class CandidateStore:
             raise ValidationError("invalid candidate id")
         return self.root / candidate_id / "candidate.json"
 
-    def create(self, config, contract_hash, artifacts, environment, claims):
+    def create(self, config, contract_hash, artifacts, environment, claims, *, resume=False):
         validate_manifest(artifacts)
         if not claims or any(c.get("kind") not in CLAIMS or not c.get("assumptions") for c in claims):
             raise ValidationError("scoped correctness claims and assumptions are required")
@@ -110,7 +119,18 @@ class CandidateStore:
             "confirmation": {"status": "not_run"},
             "history": [],
         }
-        write_json(self._path(candidate_id), record)
+        required = generated_benchmarks(record)
+        if len(required) > 1:
+            record["confirmations"] = {benchmark: {"status": "not_run"} for benchmark in sorted(required)}
+        try:
+            write_json(self._path(candidate_id), record)
+        except FileExistsError:
+            if not resume:
+                raise
+            existing = self.get(candidate_id)
+            if existing["environment"] != environment or existing["claims"] != claims:
+                raise ValidationError("existing candidate differs from the registered environment or claims")
+            return existing
         self._index()
         return record
 
@@ -183,9 +203,14 @@ class CandidateStore:
                         raise ValidationError("hash-bound independent numerical report required")
                 elif target in ("circuit_smoke_passed", "full_local_passed"):
                     tier = "smoke" if target == "circuit_smoke_passed" else "full"
+                    hybrid = bool(record["config"].get("hybrid_archive_sha256"))
+                    full_hybrid = (
+                        hybrid and evidence.get("tier") == "full" and has_full_hybrid_coverage(evidence)
+                    )
                     if (
                         evidence.get("kind") != "official_metric_execution"
-                        or evidence.get("tier") != tier
+                        or (evidence.get("tier") != tier and not full_hybrid)
+                        or (hybrid and tier == "full" and not full_hybrid)
                         or evidence.get("complete") is not True
                         or evidence.get("role") != "official_local"
                     ):
@@ -208,9 +233,9 @@ class CandidateStore:
                             "full release evidence requires a clean frozen source and dependency lock"
                         )
                 elif target == "release_selected":
-                    generated = any(a["origin"] == "generated" for a in record["artifacts"].values())
-                    if generated and record["confirmation"]["status"] != "passed":
-                        raise BlockedError("independent unused frozen-artifact confirmation required")
+                    for benchmark in generated_benchmarks(record):
+                        self.require_confirmation(record, benchmark)
+                    self.require_chemistry_parent(record)
                     for key in ("g0", "g1", "opportunity", "mutations", "stability", "improvement"):
                         receipt = evidence.get(key)
                         if (
@@ -246,22 +271,152 @@ class CandidateStore:
             self._save(record)
             return record
 
+    @staticmethod
+    def _slot(record, benchmark=None):
+        required = generated_benchmarks(record)
+        if benchmark is None and len(required) == 1:
+            benchmark = next(iter(required))
+        if benchmark not in required:
+            raise BlockedError("confirmation benchmark must name an optimized component")
+        if "confirmations" in record:
+            return benchmark, record["confirmations"][benchmark]
+        if len(required) != 1:
+            raise BlockedError("benchmark-keyed records are required for multiple optimized components")
+        return benchmark, record["confirmation"]
+
+    @staticmethod
+    def _set_slot(record, benchmark, confirmation):
+        if "confirmations" not in record:
+            record["confirmation"] = confirmation
+            return
+        record["confirmations"][benchmark] = confirmation
+        statuses = {slot["status"] for slot in record["confirmations"].values()}
+        status = next(iter(statuses)) if len(statuses) == 1 else "partial"
+        record["confirmation"] = {"status": status}
+
+    def _ledger(self):
+        path = self.root / "confirmation-ledger.json"
+        return read_json(path) if path.exists() else []
+
+    def confirmation_for(self, candidate_id, benchmark):
+        return self._slot(self.get(candidate_id), benchmark)[1]
+
+    def require_chemistry_parent(self, record):
+        retained = {
+            name for name, item in record["artifacts"].items() if item["origin"] == "retained_certified"
+        }
+        if not retained:
+            return None
+        binding = record["config"].get("retained_chemistry") or {}
+        parent_id = binding.get("candidate_id")
+        if not isinstance(parent_id, str) or parent_id == record["id"]:
+            raise BlockedError("retained chemistry requires a distinct certified parent")
+        parent = self.get(parent_id)
+        anchor_path = self._path(parent_id).with_name("local-certificate.json")
+        if not anchor_path.is_file():
+            raise BlockedError("trusted parent certificate is unavailable")
+        anchor = read_json(anchor_path)
+        certificate_path = Path(anchor["certificate_path"])
+        if not certificate_path.is_file() or sha256(certificate_path) != anchor["certificate_sha256"]:
+            raise ValidationError("parent certificate changed")
+        chemistry = component_hashes(record["artifact_hashes"], "dfthcsos")
+        receipt = self.require_confirmation(parent, "dfthcsos")
+        if (
+            generated_benchmarks(record) != {"invsqrt"}
+            or retained != {name for name in chemistry if name != "dfthcsos/submission.npz"}
+            or parent["state"] not in ("release_selected", "remote_accepted")
+            or anchor["candidate_id"] != parent_id
+            or any(
+                anchor.get(key) != binding.get(key)
+                for key in ("zip_sha256", "certificate_sha256", "backend_hash")
+            )
+            or parent["contract_hash"] != record["contract_hash"]
+            or anchor["contract_hash"] != record["contract_hash"]
+            or anchor["backend_hash"] != receipt["protocol"]["backend_hash"]
+            or anchor["dependency_lock_sha256"] != record["environment"]["dependency_lock_sha256"]
+            or chemistry != component_hashes(parent["artifact_hashes"], "dfthcsos")
+            or record["artifact_hashes"]["dqi.kmb"] != parent["artifact_hashes"]["dqi.kmb"]
+        ):
+            raise BlockedError("retained chemistry identity differs from its certified parent")
+        return {**anchor, "chemistry_protocol_id": receipt["protocol_id"]}
+
+    def record_local_certificate(self, candidate_id, path):
+        with record_lock(self.root):
+            record = self.get(candidate_id)
+            path = Path(path).resolve()
+            certificate = read_json(path)
+            verification = certificate.get("verification") or {}
+            if (
+                record["state"] != "release_selected"
+                or certificate.get("candidate_id") != candidate_id
+                or certificate.get("artifact_hashes") != record["artifact_hashes"]
+                or certificate.get("contract_hash") != record["contract_hash"]
+                or certificate.get("status") != "locally_verified_awaiting_kaggle_acceptance"
+                or verification.get("status") != "passed"
+                or verification.get("complete") is not True
+            ):
+                raise BlockedError("complete local certificate does not match selected candidate")
+            for benchmark in generated_benchmarks(record):
+                self.require_confirmation(record, benchmark)
+            anchor = {
+                "candidate_id": candidate_id,
+                "zip_sha256": certificate["zip_sha256"],
+                "certificate_sha256": sha256(path),
+                "certificate_path": str(path),
+                "contract_hash": record["contract_hash"],
+                "backend_hash": verification["backend_hash"],
+                "dependency_lock_sha256": record["environment"]["dependency_lock_sha256"],
+                "score": certificate["predicted_aggregate_score"],
+                "costs": verification["official_results"]["costs"],
+            }
+            anchor_path = self._path(candidate_id).with_name("local-certificate.json")
+            if anchor_path.exists():
+                if read_json(anchor_path) != anchor:
+                    raise ValidationError("different local certificate already recorded")
+            else:
+                write_json(anchor_path, anchor)
+            return anchor
+
+    def require_confirmation(self, record, benchmark):
+        _, confirmation = self._slot(record, benchmark)
+        if confirmation["status"] != "passed":
+            raise BlockedError("independent unused frozen-artifact confirmation required")
+        matches = [
+            item
+            for item in self._ledger()
+            if item["candidate"] == record["id"] and item["protocol_id"] == confirmation["protocol_id"]
+        ]
+        binding = component_binding(record, benchmark)
+        if (
+            len(matches) != 1
+            or matches[0]["status"] != "passed"
+            or matches[0]["salt"] != confirmation["protocol"]["seed_policy"]["salt"]
+            or scopes_for_legacy_row(self, matches[0]) != (benchmark, binding["component_hashes"])
+            or (
+                "component_hashes" in confirmation
+                and any(confirmation.get(key) != value for key, value in binding.items())
+            )
+        ):
+            raise BlockedError("benchmark confirmation does not match the one-use ledger")
+        return confirmation
+
     def register_confirmation(self, candidate_id, protocol):
         with record_lock(self.root):
             record = self.get(candidate_id)
-            if record["confirmation"]["status"] != "not_run":
+            benchmark, confirmation = self._slot(record, protocol.get("benchmark"))
+            if protocol.get("benchmark") != benchmark:
+                raise BlockedError("confirmation protocol must identify its benchmark")
+            if confirmation["status"] != "not_run":
                 raise ValidationError("confirmation already registered; no retry on unchanged bytes")
-            generated_benchmarks = {
-                ("dfthcsos" if name.startswith("dfthcsos/") else name.split(".")[0])
-                for name, item in record["artifacts"].items()
-                if item["origin"] == "generated"
-            }
-            if generated_benchmarks != {protocol.get("benchmark")}:
-                raise BlockedError(
-                    "first-release confirmation supports one optimized benchmark per candidate; benchmark must match all generated files"
-                )
             positive_int(protocol.get("sample_size"), "confirmation sample_size")
             nonnegative_int(protocol.get("max_failures"), "max_failures")
+            if benchmark in FAIL_FAST and (
+                protocol["sample_size"] != FAIL_FAST[benchmark]
+                or protocol["max_failures"] != 0
+                or not protocol.get("backend_hash")
+                or (benchmark == "dfthcsos" and not protocol.get("verifier_artifact_sha256"))
+            ):
+                raise ValidationError("fail-fast confirmation needs full coverage and a pinned backend")
             if protocol["max_failures"] >= protocol["sample_size"]:
                 raise ValidationError("confirmation rule must reject some possible outcomes")
             for key in (
@@ -280,19 +435,18 @@ class CandidateStore:
             if seed["salt"] in history_salts:
                 raise ValidationError("development salt cannot be reused for confirmation")
             ledger_path = self.root / "confirmation-ledger.json"
-            ledger = read_json(ledger_path) if ledger_path.exists() else []
+            ledger = self._ledger()
             # Salt identifies the challenge material, even if renamed with a new distribution label.
             if any(item["salt"] == seed["salt"] for item in ledger):
                 raise ValidationError("confirmation salt has already been used or reserved")
-            if any(
-                item["artifact_hashes"] == record["artifact_hashes"] and item["status"] == "failed"
-                for item in ledger
-            ):
-                raise ValidationError("failed frozen bytes cannot be repeatedly confirmed")
-            if any(item["artifact_hashes"] == record["artifact_hashes"] for item in ledger):
-                raise ValidationError(
-                    "unchanged frozen bytes already have confirmation history; revise the artifact rather than rerun"
-                )
+            binding = component_binding(record, benchmark)
+            for item in ledger:
+                if scopes_for_legacy_row(self, item) == (benchmark, binding["component_hashes"]):
+                    if item["status"] == "failed":
+                        raise ValidationError("failed frozen bytes cannot be repeatedly confirmed")
+                    raise ValidationError(
+                        "unchanged frozen bytes already have confirmation history; revise the artifact rather than rerun"
+                    )
             protocol_id = identity(protocol)
             ledger.append(
                 {
@@ -300,23 +454,29 @@ class CandidateStore:
                     "salt": seed["salt"],
                     "protocol_id": protocol_id,
                     "artifact_hashes": record["artifact_hashes"],
+                    **binding,
                     "status": "registered",
                 }
             )
             write_json(ledger_path, ledger, replace=True)
-            record["confirmation"] = {
-                "status": "registered",
-                "protocol": protocol,
-                "protocol_id": protocol_id,
-                "artifact_hashes": record["artifact_hashes"],
-            }
+            self._set_slot(
+                record,
+                benchmark,
+                {
+                    "status": "registered",
+                    "protocol": protocol,
+                    "protocol_id": protocol_id,
+                    "artifact_hashes": record["artifact_hashes"],
+                    **binding,
+                },
+            )
             self._save(record)
             return record
 
-    def finish_confirmation(self, candidate_id, evidence, *, consumed=False):
+    def finish_confirmation(self, candidate_id, evidence, *, consumed=False, benchmark=None):
         with record_lock(self.root):
             record = self.get(candidate_id)
-            confirmation = record["confirmation"]
+            benchmark, confirmation = self._slot(record, benchmark)
             if confirmation["status"] != "registered":
                 raise ValidationError("confirmation must be registered before observing results")
             self._bound(record, evidence)
@@ -327,6 +487,23 @@ class CandidateStore:
             ):
                 raise ValidationError("confirmation protocol/seed mismatch")
             observed = evidence.get("observed", {})
+            if benchmark in FAIL_FAST and (
+                evidence.get("benchmark") != benchmark
+                or evidence.get("backend_hash") != protocol["backend_hash"]
+                or evidence.get("component_hashes") != confirmation["component_hashes"]
+                or observed != fail_fast_observed(benchmark, evidence.get("raw_benchmark", {}))
+                or (
+                    benchmark == "invsqrt"
+                    and evidence["raw_benchmark"].get("circuit_sha256")
+                    != confirmation["component_hashes"]["invsqrt.kmb"]
+                )
+                or (
+                    benchmark == "dfthcsos"
+                    and evidence["raw_benchmark"].get("submission_sha256")
+                    != protocol["verifier_artifact_sha256"]
+                )
+            ):
+                raise ValidationError("confirmation receipt differs from its registered benchmark or runtime")
             n, k = observed.get("n"), observed.get("k")
             positive_int(n, "observed n")
             nonnegative_int(k, "observed k")
@@ -336,29 +513,37 @@ class CandidateStore:
             status = ("consumed_for_tuning" if consumed else "passed") if passed else "failed"
             confirmation.update(status=status, evidence=evidence)
             ledger_path = self.root / "confirmation-ledger.json"
-            ledger = read_json(ledger_path)
-            for entry in ledger:
-                if entry["protocol_id"] == confirmation["protocol_id"] and entry["candidate"] == candidate_id:
-                    entry["status"] = status
+            ledger = self._ledger()
+            matches = [
+                item
+                for item in ledger
+                if item["protocol_id"] == confirmation["protocol_id"] and item["candidate"] == candidate_id
+            ]
+            if len(matches) != 1 or matches[0]["status"] != "registered":
+                raise ValidationError("confirmation reservation is missing or already terminal")
+            matches[0]["status"] = status
             write_json(ledger_path, ledger, replace=True)
+            self._set_slot(record, benchmark, confirmation)
             self._save(record)
             return record
 
-    def consume_confirmation(self, candidate_id, reason):
+    def consume_confirmation(self, candidate_id, reason, *, benchmark=None):
         with record_lock(self.root):
             record = self.get(candidate_id)
-            if record["confirmation"]["status"] != "passed" or not reason:
-                raise ValidationError("only passed confirmation can be consumed, with a reason")
+            benchmark, _ = self._slot(record, benchmark)
+            if not reason:
+                raise ValidationError("confirmation consumption requires a reason")
             if record["state"] in ("release_selected", "remote_accepted"):
                 raise ValidationError("selected/released confirmation cannot be repurposed")
-            record["confirmation"]["status"] = "consumed_for_tuning"
-            record["confirmation"]["reason"] = reason
+            confirmation = self.require_confirmation(record, benchmark)
+            confirmation.update(status="consumed_for_tuning", reason=reason)
             ledger_path = self.root / "confirmation-ledger.json"
             ledger = read_json(ledger_path)
             for item in ledger:
-                if item["candidate"] == candidate_id:
+                if item["candidate"] == candidate_id and item["protocol_id"] == confirmation["protocol_id"]:
                     item["status"] = "consumed_for_tuning"
             write_json(ledger_path, ledger, replace=True)
 
+            self._set_slot(record, benchmark, confirmation)
             self._save(record)
             return record

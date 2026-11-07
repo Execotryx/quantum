@@ -100,7 +100,12 @@ def validate_manifest(artifacts):
             or any(p.is_symlink() for p in path.parents)
         ):
             raise ValidationError(f"artifact missing or linked: {name}")
-        if record.get("origin") not in ("generated", "retained_reference") or not record.get("provenance"):
+        origin = record.get("origin")
+        if (
+            origin not in ("generated", "retained_reference", "retained_certified")
+            or (origin == "retained_certified" and not name.startswith("dfthcsos/angle_k_"))
+            or not record.get("provenance")
+        ):
             raise ValidationError(f"artifact provenance missing: {name}")
         if sha256(path) != record.get("sha256"):
             raise ValidationError(f"artifact bytes changed: {name}")

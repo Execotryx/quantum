@@ -83,33 +83,55 @@ def _verification_options(command):
 
 
 def _candidate_run(args, root, contract):
+    from .component_confirmations import FAIL_FAST, component_hashes, fail_fast_observed
+
     store = CandidateStore(root / "runs/candidates")
     record = store.get(args.id)
     contract.require_ready(root)
     seed = read_json(args.seed_policy)
+    settings = read_json(args.backend)
+    benchmark = None
     if args.action == "confirm":
         protocol = read_json(args.protocol)
         if protocol["seed_policy"] != seed or args.tier != "full":
             raise ValidationError("confirmation must use full verification and its registered seed policy")
+        benchmark = protocol["benchmark"]
+        if benchmark in FAIL_FAST and protocol.get("backend_hash") != identity(settings):
+            raise ValidationError("confirmation backend differs from the registered backend")
         store.register_confirmation(args.id, protocol)
     report = verify_candidate(
         record["artifacts"],
         contract,
         args.tier,
         seed,
-        read_json(args.backend),
+        settings,
         args.output,
         timeout=args.timeout,
     )
-    if args.action == "confirm":
-        # A G0 mapping from actual verifier return fields is required. No invented counters.
-        observed = report.get("official_results", {}).get("confirmation_observed")
+    if benchmark is not None:
+        # A G0 mapping from actual verifier return fields is required.
+        results = report.get("official_results") or {}
+        if benchmark in FAIL_FAST:
+            raw = results.get("raw_verifier_results", {}).get(benchmark, {})
+            observed = fail_fast_observed(benchmark, raw)
+            return store.finish_confirmation(
+                args.id,
+                {
+                    **report,
+                    "observed": observed,
+                    "benchmark": benchmark,
+                    "raw_benchmark": raw,
+                    "component_hashes": component_hashes(record["artifact_hashes"], benchmark),
+                },
+                benchmark=benchmark,
+            )
+        observed = results.get("confirmation_observed")
         if observed is None:
             raise ValidationError(
                 "official metric does not export registered sample counters; "
                 "raw evidence retained, confirmation stays incomplete"
             )
-        return store.finish_confirmation(args.id, {**report, "observed": observed})
+        return store.finish_confirmation(args.id, {**report, "observed": observed}, benchmark=benchmark)
     return report
 
 
@@ -216,14 +238,22 @@ def dispatch(args):
         contract.require_ready(root)
         if args.action == "build":
             selection = read_json(args.selection)
-            selection["candidate"] = CandidateStore(root / "runs/candidates").get(selection["candidate_id"])
+            store = CandidateStore(root / "runs/candidates")
+            selection["candidate"] = store.get(selection["candidate_id"])
             selection["project_root"] = str(root)
-            return package_release(selection, contract, args.output, source_environment=capture(root))
+            return package_release(
+                selection, contract, args.output, source_environment=capture(root), candidate_store=store
+            )
         if args.tier != "full":
             raise ValidationError("release verification requires the full tier")
         record = read_json(args.release / "release.json")
         if sha256(args.release / "submission.zip") != record["zip_sha256"]:
             raise ValidationError("release ZIP changed")
+        if record.get("parent"):
+            store = CandidateStore(root / "runs/candidates")
+            candidate = store.get(record["candidate_id"])
+            if store.require_chemistry_parent(candidate) != record["parent"]:
+                raise ValidationError("release parent does not match the trusted chemistry lineage")
         from .artifacts import extract_archive
 
         # Re-extract the exact frozen ZIP at verification time; do not trust a prior directory.
@@ -246,6 +276,10 @@ def dispatch(args):
             record, report, contract, supporting_evidence=read_json(args.supporting_evidence)
         )
         write_json(args.release / "certificate.json", certificate)
+        if "confirmations" in record["candidate"] or record.get("parent"):
+            CandidateStore(root / "runs/candidates").record_local_certificate(
+                record["candidate_id"], args.release / "certificate.json"
+            )
         return certificate
     raise ValidationError("unknown command")
 

@@ -1,0 +1,22 @@
+{
+  "attempts": {
+    "combined": "390194afa0c799d9c3038b0ea494527325b4722a94675c9e647f428df4778e60",
+    "direct-control": "3f5be76fb087e821ed2ebc2d63e812c615fa6fed4a389d728a3ad18a8a41861f",
+    "finer-cubic": "20d116f099d2e6ad719b42cfb9bc1251f0d73f590104dbb0361e2d09718fafa7",
+    "fused": "0c8903c45e7e333efa2109bb9cdac117f5da6e680dcc0f4ddc84cb048d065f81",
+    "incumbent": "3d15a5d316e9205d024b34d6b7f9ec5019abcba2691de6078cc244fbf5ce97ac",
+    "narrow-cubic": "e00e1b8ac1f96dbe413d92d976ea1c55a1ec83573e10991394d0bd0a175ac8b0",
+    "quartic": "5bc548b4dd676fbeea38a234b55afbaab2c1df8705f10f40f7bae57fda9a4cce",
+    "reference": "5e270b98521e9572afd4fd23cbbabbe562e6090fe5c6eb9fc19363ef7ac821bc",
+    "reuse": "58601805c744d5a824ce365780300797b73fe3ebce4b2785bb8c40043920a5f0"
+  },
+  "controls_pass": true,
+  "cpu_seconds": 27.580000000000002,
+  "in_budget": true,
+  "limit": 1774335.0944911302,
+  "registration_sha256": "2d466fb3392fcb9b082f962e0aa01cf1a921d97becec1ccba8bb3a222ffe11fe",
+  "status": "go",
+  "wall_seconds": 51.937930858000016,
+  "winner": "combined",
+  "winner_sha256": "dfaf3345abf3ff70e9a633bfd0cd07baa7e7bc7eb70105b557d09726ef1f5a8c"
+}

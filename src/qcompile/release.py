@@ -2,9 +2,11 @@
 
 import shutil
 import subprocess
+from math import isclose
 from pathlib import Path
 
 from .artifacts import deterministic_zip, extract_archive, hashes, validate_manifest
+from .component_confirmations import component_hashes, generated_benchmarks
 from .errors import BlockedError, ValidationError
 from .io import sha256, write_json
 from .reference.scoring import aggregate
@@ -39,7 +41,7 @@ def build_candidate(selection, contract, output_dir):
             )
     for name, item in artifacts.items():
         target = output / name
-        if item["origin"] == "retained_reference":
+        if item["origin"] in ("retained_reference", "retained_certified"):
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(item["path"], target)
         if not target.is_file() or target.is_symlink() or sha256(target) != item["sha256"]:
@@ -50,7 +52,7 @@ def build_candidate(selection, contract, output_dir):
     return {name: output / name for name in artifacts}
 
 
-def package_release(selection, contract, output_dir, *, source_environment):
+def package_release(selection, contract, output_dir, *, source_environment, candidate_store=None):
     contract.require_ready(Path(selection["project_root"]))
     if source_environment.get("dirty") is not False or not source_environment.get("source_revision"):
         raise BlockedError("release needs a clean frozen source revision")
@@ -68,6 +70,14 @@ def package_release(selection, contract, output_dir, *, source_environment):
     }
     if selected_sources != record["artifact_sources"]:
         raise ValidationError("release selection changed frozen artifact provenance")
+    retained = {
+        name for name, item in selection["artifacts"].items() if item["origin"] == "retained_certified"
+    }
+    parent = None
+    if retained:
+        if candidate_store is None:
+            raise BlockedError("certified retained chemistry must resolve through its candidate store")
+        parent = candidate_store.require_chemistry_parent(record)
     root = Path(output_dir).resolve()
     root.mkdir(parents=True, exist_ok=False)
     a = build_candidate(selection, contract, root / "build-a")
@@ -94,6 +104,8 @@ def package_release(selection, contract, output_dir, *, source_environment):
         "two_builds_identical": True,
         "remote_accepted": False,
     }
+    if parent:
+        release["parent"] = parent
     write_json(root / "release.json", release)
     return release
 
@@ -143,6 +155,40 @@ def certify_release(release, verification, contract, *, supporting_evidence):
     score = aggregate(baselines, costs)
     if score <= 1 or not any(costs[k] < baselines[k] for k in costs):
         raise BlockedError("release must improve complete official cost and aggregate score")
+    candidate = release.get("candidate") or {}
+    parent = release.get("parent")
+    if "confirmations" in candidate or parent:
+        optimized = generated_benchmarks(candidate) | ({"dfthcsos"} if parent else set())
+        supporting = supporting_evidence.get("benchmark_evidence") or {}
+        if set(supporting) != optimized:
+            raise BlockedError("benchmark-specific supporting evidence is incomplete")
+        for benchmark in optimized:
+            evidence = supporting[benchmark]
+            if evidence.get("component_hashes") != component_hashes(release["artifact_hashes"], benchmark):
+                raise ValidationError("supporting evidence binds a different optimized component")
+            for key in ("opportunity", "numerical", "mutation", "primitive", "stability"):
+                if not evidence.get(key):
+                    raise BlockedError(f"missing {benchmark} {key} evidence")
+            if costs[benchmark] >= baselines[benchmark]:
+                raise BlockedError(f"{benchmark} cost did not improve over the reference")
+        confirmations = candidate.get("confirmations") or {"invsqrt": candidate["confirmation"]}
+        for benchmark, receipt in confirmations.items():
+            if (
+                receipt["status"] != "passed"
+                or receipt["protocol"].get("backend_hash") != verification["backend_hash"]
+            ):
+                raise BlockedError(f"{benchmark} confirmation did not use the verified release backend")
+        if parent:
+            if (
+                verification["backend_hash"] != parent["backend_hash"]
+                or score <= parent["score"]
+                or not all(
+                    isclose(costs[name], parent["costs"][name], rel_tol=1e-12) for name in ("dqi", "dfthcsos")
+                )
+                or costs["invsqrt"] > candidate["config"]["invsqrt_cost_limit"]
+                or official["raw_verifier_results"]["invsqrt"]["worst_error_over_tolerance"] > 0.90
+            ):
+                raise BlockedError("successor did not satisfy the measured parent comparison")
     return {
         **release,
         "predicted_aggregate_score": score,
