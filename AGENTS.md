@@ -11,6 +11,10 @@
 - Inverse-square-root opportunity screens freeze the protocol before simulation,
   run the reference control first, and retain each parallel lane separately.
   Full verification and fresh confirmation must use the same frozen KMB bytes.
+- Direct-phasing screens on the hybrid branch also reproduce the confirmed
+  Newton incumbent and price the complete declared-width and rotation cost.
+  Keep public-source reproduction distinct from an independently generated
+  circuit, and preserve the parent chemistry and DQI member hashes.
 - Banked chemistry lookups preserve the pinned factorization and angle words.
   Check the 128-qubit cap and phase, selection and workspace at every circuit
   boundary. Combined validation keeps the exact confirmed inverse-square-root
