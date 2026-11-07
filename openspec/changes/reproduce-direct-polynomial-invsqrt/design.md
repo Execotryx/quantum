@@ -218,13 +218,20 @@ full verifier stages serially at the campaign level.
    and require actual coverage of **200,540,928 / 102,400 / 254,464**
    for inverse square root, DQI and chemistry, respectively. Verify
    complete metric success separately from the per-benchmark receipts.
-5. Reconcile reported chemistry and DQI costs to the parent with a pinned
-   numerical comparison tolerance (proposed relative tolerance `1e-12`).
-   A difference beyond that tolerance blocks attribution and certification.
-   Investigate raw counters and seed policy without rerolling. Require the
+5. Reconcile reported chemistry and DQI costs to the parent with relative
+   comparison tolerance `1e-12`. A difference blocks attribution and
+   certification until reconciled. The retained DQI circuit can execute
+   a different mean number of Toffolis on a different seed. If that occurs
+   with the same circuit hash, coverage and error counters, keep the
+   historical score and rerun the parent using the successor's already
+   registered archive seed as a paired control. Bind the successor receipt
+   before the parent run and require the retained costs to match in that
+   pair. This archive comparison keeps both independent confirmation salts
+   separate. Require the
    measured inverse-square-root cost and worst tolerance use to clear the
    registered gates and the
    measured aggregate to strictly exceed **1.0286345856615866** using
    the same official reference costs. Record all component costs, delta
    versus the parent and reference, archive and per-member hashes, coverage,
-   and links to the confirmed evidence. Keep remote acceptance separate.
+   and links to the confirmed evidence, including both historical and paired
+   parent results if pairing was required. Keep remote acceptance separate.

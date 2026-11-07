@@ -115,6 +115,9 @@ result. It SHALL check exact coverage of 200,540,928, 102,400 and 254,464 for
 inverse square root, DQI and chemistry respectively, reconcile retained
 costs to the parent, apply the registered measured inverse-square-root cost
 and phase gates and require aggregate score strictly greater than 1.0286345856615866.
+If a retained DQI cost differs between seeds, the workflow SHALL preserve
+both original observations and bind a full parent replay to the successor's
+registered archive seed before attributing the change.
 The local certificate SHALL bind the tested ZIP, member hashes, receipts and
 parent lineage.
 

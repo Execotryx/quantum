@@ -8,7 +8,7 @@ from pathlib import Path
 
 from hybrid_parent_audit import EVIDENCE, HISTORICAL_CHEMISTRY, HISTORICAL_INVSQRT, audit
 from invsqrt_direct import ROOT, require, run_job
-from invsqrt_direct_hybrid import accepted_component
+from invsqrt_direct_hybrid import accepted_component, successful_metric
 
 from qcompile.artifacts import deterministic_zip, extract_archive
 from qcompile.component_confirmations import component_hashes, fail_fast_observed, has_full_hybrid_coverage
@@ -42,12 +42,40 @@ def bundle_artifacts(directory: Path, member_hashes: dict, *, successor: bool) -
     }
 
 
-def prepare_parent(output: Path) -> None:
+def prepare_parent(output: Path, paired_successor: Path | None = None) -> None:
     contract = load_contract(ROOT / "contracts/contract.json")
     contract.require_ready(ROOT)
     environment = capture(ROOT)
     require(not environment["dirty"], "parent build requires clean committed source")
     pinned = read_json(PARENT_MANIFEST)
+    seed_policy = {
+        "role": "official_local",
+        "salt": secrets.token_hex(32),
+        "distribution": "Pinned full metric on the exact rebuilt parent extraction",
+    }
+    pairing = {}
+    if paired_successor is not None:
+        successor, report = successful_metric(paired_successor)
+        require(
+            successor["parent_archive_sha256"] == pinned["sha256"]
+            and {
+                name
+                for name, digest in pinned["hashes"].items()
+                if successor["artifact_hashes"][name] != digest
+            }
+            == {"invsqrt.kmb"},
+            "pairing requires the unchanged retained members",
+        )
+        seed_policy = {
+            "role": "official_local",
+            "salt": report["seed_policy"]["salt"],
+            "distribution": "Matched successor archive seed for retained-member comparison",
+        }
+        pairing = {
+            "successor_receipt_sha256": sha256(paired_successor / "verification/verification.json"),
+            "successor_archive_sha256": successor["archive_sha256"],
+            "retained_dqi_cost": report["official_results"]["costs"]["dqi"],
+        }
     original = HISTORICAL_CHEMISTRY / "invsqrt-chemistry.zip"
     require(sha256(original) == pinned["sha256"], "original hybrid ZIP changed")
     output.mkdir(parents=True, exist_ok=False)
@@ -94,11 +122,8 @@ def prepare_parent(output: Path) -> None:
             "recipe_identity": identity(recipes),
             "source_environment": environment,
             "historical_confirmations_sha256": sha256(output / "historical-confirmations.json"),
-            "seed_policy": {
-                "role": "official_local",
-                "salt": secrets.token_hex(32),
-                "distribution": "Pinned full metric on the exact rebuilt parent extraction",
-            },
+            "seed_policy": seed_policy,
+            "pairing": pairing,
         },
     )
 
@@ -121,9 +146,13 @@ def measure_parent(output: Path) -> None:
         "parent full verification did not complete",
     )
     previous = read_json(PARENT_RESULT)
-    for benchmark, cost in result["official_results"]["costs"].items():
+    expected_costs = {name: previous["costs"][name] for name in ("invsqrt", "dfthcsos")}
+    if registration["pairing"]:
+        expected_costs["dqi"] = registration["pairing"]["retained_dqi_cost"]
+    for benchmark, cost in expected_costs.items():
         require(
-            isclose(cost, previous["costs"][benchmark], rel_tol=1e-12), f"parent {benchmark} cost changed"
+            isclose(cost, result["official_results"]["costs"][benchmark], rel_tol=1e-12),
+            f"parent {benchmark} cost changed",
         )
 
 
@@ -312,6 +341,18 @@ def certify(output: Path, *, screen: Path | None, parent_id: str | None) -> None
         }
         parent_record = store.get(parent_id)
         parent_anchor = read_json(store.root / parent_id / "local-certificate.json")
+        comparison = read_json(output / "comparison.json")
+        parent_output = Path(parent_anchor["certificate_path"]).parent
+        require(
+            comparison["status"] == "locally_verified"
+            and comparison["verification_sha256"] == sha256(output / "verification/verification.json")
+            and (
+                "paired_parent_receipt_sha256" not in comparison
+                or comparison["paired_parent_receipt_sha256"]
+                == sha256(parent_output / "verification/verification.json")
+            ),
+            "successor attribution does not match the certified parent receipt",
+        )
         original = read_json(PARENT_MANIFEST)
         require(
             parent_anchor["zip_sha256"] == original["sha256"]
@@ -396,10 +437,11 @@ def main() -> None:
     parser.add_argument("output", type=Path)
     parser.add_argument("--screen", type=Path)
     parser.add_argument("--parent-id")
+    parser.add_argument("--paired-successor", type=Path)
     args = parser.parse_args()
     output = args.output.resolve()
     if args.action == "prepare-parent":
-        prepare_parent(output)
+        prepare_parent(output, args.paired_successor)
     elif args.action == "parent-worker":
         measure_parent(output)
     elif args.action == "measure-parent":

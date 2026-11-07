@@ -59,3 +59,23 @@ def test_native_direct_phasing_mutations(monkeypatch, project_root, tmp_path):
         tool.native_smoke(
             km, official, build_circuit(km, cleanup_mutation, fmt, table), spec, model, points, policy
         )
+
+    class NonconstantCount:
+        def __init__(self, **options):
+            self.sim = km.Simulator(**options)
+
+        def __getattr__(self, name):
+            return getattr(self.sim, name)
+
+        def operation_statistics(self):
+            actual = self.sim.operation_statistics()
+            return SimpleNamespace(
+                num_toffoli_like=actual.num_toffoli_like + 1,
+                num_t_like=actual.num_t_like,
+                num_z_pow=actual.num_z_pow,
+            )
+
+    with pytest.raises(ValueError, match="executed counts differ"):
+        tool.native_smoke(
+            SimpleNamespace(Simulator=NonconstantCount), official, original, spec, model, points, policy
+        )

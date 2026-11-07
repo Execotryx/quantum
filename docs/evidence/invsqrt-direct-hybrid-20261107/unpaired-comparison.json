@@ -1,0 +1,42 @@
+{
+  "archive_sha256": "2500a815dd16a9b04185fa8f1c44b6c96e33d38a4d5d397d2bad3b7ab61d9fac",
+  "artifact_hashes": {
+    "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+    "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+    "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+    "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+    "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+    "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+    "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+    "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+    "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+    "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+    "dqi.kmb": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+    "invsqrt.kmb": "dfaf3345abf3ff70e9a633bfd0cd07baa7e7bc7eb70105b557d09726ef1f5a8c"
+  },
+  "costs": {
+    "dfthcsos": 3247752448.668952,
+    "dqi": 24439466510149.91,
+    "invsqrt": 1008498.1176395753
+  },
+  "coverage": {
+    "dfthcsos": 254464,
+    "dqi": 102400,
+    "invsqrt": 200540928
+  },
+  "parent_archive_sha256": "8fb545091a1cf66c2656bdce40bedbc26e478746301f9a777f56173f88b88503",
+  "parent_costs": {
+    "dfthcsos": 3247752448.668952,
+    "dqi": 24439461432712.35,
+    "invsqrt": 1971483.438323478
+  },
+  "parent_score": 1.0286345856615866,
+  "reference": {
+    "dfthcsos": 3355599588.3155375,
+    "dqi": 24439461432712.35,
+    "invsqrt": 2076774.233715282
+  },
+  "relative_aggregate_score": 1.286176112637598,
+  "status": "paired_parent_required",
+  "verification_sha256": "c72901fe05f9a592ae6714b880516bd1a2540db44b4d7938d0bb23119edb09ab"
+}
