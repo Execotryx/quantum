@@ -1,5 +1,9 @@
 # Next hybrid validation, 8 November 2026
 
+The [follow-up full verification report](next-hybrid-paired-archive-08-11-2026-01-13-24.md)
+records the completed full pass, fresh confirmation, paired archive and DQI retry.
+This document preserves the earlier development results and their scope.
+
 The incumbent is the [locally certified direct-phasing hybrid](direct-hybrid-paired-verification-07-11-2026-14-59-24.md)
 with aggregate score 1.286176112637598. Lower component cost is better. The
 campaign used the pinned Linux native backend and frozen Python 3.13

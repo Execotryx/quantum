@@ -1,0 +1,14 @@
+{
+  "coverage": {
+    "dfthcsos": 254464,
+    "dqi": 102400,
+    "invsqrt": 200540928
+  },
+  "parent_archive_sha256": "2500a815dd16a9b04185fa8f1c44b6c96e33d38a4d5d397d2bad3b7ab61d9fac",
+  "parent_candidate_id": "ce5615b6839e1c09ed49fa5756b462853eccfe3dad7da69fe94fe6b7a473bc34",
+  "retained_benchmarks": [
+    "dfthcsos",
+    "dqi"
+  ],
+  "status": "passed"
+}

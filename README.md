@@ -5,11 +5,10 @@ independent mathematical checks, and local verification against pinned evaluator
 
 ## Current state
 
-The reference and independent mathematical checks are complete. The best
-locally verified archive combines direct inverse-square-root phasing with the
-nine banked chemistry circuits and the reference DQI circuit. The complete
-extracted archive scored **1.2861761126**, up from **1.0286345857** for the
-previous hybrid.
+The reference and independent mathematical checks are complete. The certified
+comparison archive combines direct inverse-square-root phasing with nine
+banked chemistry circuits and the reference DQI circuit. It scored
+**1.2861761126**, up from **1.0286345857** for the previous hybrid.
 
 | Benchmark | Locally measured change | Full trajectories in the hybrid |
 |---|---:|---:|
@@ -37,20 +36,21 @@ links the exact ZIPs, coverage and confirmation lineage.
 
 ### Next hybrid optimization
 
-The v2 screen and native development checks found one candidate that reached
-its promotion threshold. The current certified archive remains the comparison
-baseline.
+The fully verified v2 hybrid scored **1.3779715418**, a **7.14%** gain over
+the certified comparison archive. Only the inverse-square-root circuit differs
+between the archives. The paired run reproduced the retained DQI and chemistry
+costs using the same archive seed.
 
 | Lane | Certified control | New result | Evidence |
 |---|---:|---:|---|
-| Inverse square root | 199 qubits, 1,008,498.12 cost | 175 qubits, 820,078.95 screened cost | 18.68% lower cost. The model checked all 3,133,452 inputs and the native fixture passed 31,232 trajectories. Full verification and confirmation are pending. |
+| Inverse square root | 199 qubits, 1,008,498.12 cost | 175 qubits, 820,078.95 cost | 18.68% lower cost. Full verification, fresh confirmation, and paired archive verification each passed 200,540,928 trajectories on the same circuit bytes. |
 | Chemistry | 3,247,752,448.67 cost | 3,240,974,365.97 cost with refit J9 | 0.21% lower in a 15,904-trajectory native screen. J8 was 3.11% higher than the certified control. Both missed the 10% promotion threshold. |
-| DQI | Reference decoder | EEA and BM update slices | The native EEA fixture used 110 qubits and 480 Toffoli-like gates. The BM fixture used 158 and 528. A full optimized decoder comparison remains open. |
+| DQI | Reference decoder | EEA and BM update slices | The native EEA fixture used 110 qubits and 480 Toffoli-like gates. The BM fixture used 158 and 528. The paired 2,560-shot reference control passed with zero errors. |
 
-The inverse-square-root improvement projects a hybrid score of **1.37797**
-with the certified chemistry and DQI costs held fixed. The
-[validation report](docs/next-hybrid-validation-08-11-2026-00-04-43.md)
-records the measured and projected results, test scope, and incomplete runs.
+The [full verification report](docs/next-hybrid-paired-archive-08-11-2026-01-13-24.md)
+links the archive hash, complete coverage and matched costs. The
+[development report](docs/next-hybrid-validation-08-11-2026-00-04-43.md)
+records the 309-test run, the original screens and their promotion decisions.
 
 ## Install and check
 
