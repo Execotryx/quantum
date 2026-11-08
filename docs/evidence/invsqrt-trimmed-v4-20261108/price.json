@@ -1,0 +1,26 @@
+{
+  "control_cost": 509471.48180735623,
+  "limitations": "Row peak and unchanged non-row costs are estimates. Full-domain bit identity and native parity are not established.",
+  "projected_cost": {
+    "fine_rotations": 35,
+    "qubits": 150,
+    "rotation_epsilon_radians": 1.1587494041843706e-12,
+    "rotation_t": 962.6511434156456,
+    "score": 472336.9178780867,
+    "t_like": 1,
+    "toffoli_like": 2908
+  },
+  "projected_gain_fraction": 0.07288840544623665,
+  "slices": {
+    "control": {
+      "output_shift_toffolis": 304,
+      "row_peak": 155,
+      "row_toffolis": 1704
+    },
+    "trimmed": {
+      "output_shift_toffolis": 302,
+      "row_peak": 150,
+      "row_toffolis": 1568
+    }
+  }
+}
