@@ -87,3 +87,21 @@ def initialize(spectrum: Floats, vectors: Floats, n: int, shape: tuple[int, int,
 
 def factor_rows(features: Floats, weights: Floats) -> Floats:
     return np.einsum("rbc,rbd->rcd", weights, features, optimize=True).reshape(-1, features.shape[-1])
+
+
+def joint_residual(target: Floats, vectors: Floats, weights: Floats,
+                   target_norm_squared: float) -> tuple[float, Floats, Floats]:
+    """Squared residual and gradients for unconstrained, normalized basis vectors."""
+    lengths = np.linalg.norm(vectors, axis=-1, keepdims=True)
+    if not np.all(np.isfinite(lengths)) or np.any(lengths == 0):
+        raise ValueError("basis vectors must have finite nonzero norms")
+    unit = vectors / lengths
+    features = svec(unit[..., :, None] * unit[..., None, :])
+    squared, row_grad = gram_residual(target, factor_rows(features, weights), target_norm_squared)
+    row_grad = row_grad.reshape(weights.shape[0], weights.shape[2], -1)
+    weight_grad = np.einsum("rcd,rbd->rbc", row_grad, features, optimize=True)
+    feature_grad = np.einsum("rbc,rcd->rbd", weights, row_grad, optimize=True)
+    unit_grad = 2 * np.einsum("rbij,rbj->rbi", symmetric_matrix(feature_grad, vectors.shape[-1]),
+                              unit, optimize=True)
+    vector_grad = (unit_grad - unit * np.sum(unit * unit_grad, axis=-1, keepdims=True)) / lengths
+    return squared, vector_grad, weight_grad

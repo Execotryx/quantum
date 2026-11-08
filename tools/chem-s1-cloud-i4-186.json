@@ -1,0 +1,8 @@
+{
+  "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+  "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+  "profile": "docs/evidence/chem-joint-profile-20261108/profile.json",
+  "profile_sha256": "2f511cf799f312871683fd4eb7d92c8a740ac02ae9df749461d88c7cc2c431ef",
+  "shape": [9, 143, 40], "initializer": "I4", "seed": 186,
+  "max_evaluations": 250, "wall_seconds": 1800
+}
