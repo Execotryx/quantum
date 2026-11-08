@@ -1,0 +1,167 @@
+{
+  "census_note": "builder call counts, not expanded gates; native internal sites excluded",
+  "count_definition": "pinned kickmix operation_statistics().num_toffoli_like, as used by verifier",
+  "declared_qubits": 286,
+  "degree": 12,
+  "elapsed_seconds": 0.2932150479999791,
+  "emitter_sha256": "2b8e1b80a806157c333a7e308eaf2499ee09de499efbc05875202c327959959e",
+  "kmb_sha256": "18bbb515b4590e94e2d74209ba3c0d2b2e13550a583233de29ee222aaaf2d18e",
+  "m": 63,
+  "n": 4,
+  "stages": {
+    "cleanup": {
+      "census": {
+        "right_rotate": 36
+      },
+      "entry_live_qubits": 196,
+      "operations": {
+        "CCX": 60,
+        "CSWAP": 72,
+        "CX": 13,
+        "CZ": 48,
+        "HMR": 54,
+        "INFO_TAG": 102,
+        "NEG": 4,
+        "POP_CONDITION": 15,
+        "PUSH_CONDITION": 15,
+        "R": 54,
+        "X": 121,
+        "Z": 10
+      },
+      "peak_observed_live_qubits": 197,
+      "toffoli_like": 132,
+      "toffoli_share": 0.0012297258270371992
+    },
+    "locator_forward": {
+      "census": {
+        "cswap": 321,
+        "del_gf2_div_with_scaffold": 48,
+        "init_gf2_div_with_scaffold": 48,
+        "ixor_gf2_mul": 166
+      },
+      "entry_live_qubits": 196,
+      "operations": {
+        "BIT_INVERT": 47216,
+        "BIT_STORE0": 4993,
+        "CCX": 36590,
+        "CSWAP": 5772,
+        "CX": 265142,
+        "CZ": 69956,
+        "HMR": 10556,
+        "INFO_TAG": 17806,
+        "NEG": 48,
+        "POP_CONDITION": 744,
+        "PUSH_CONDITION": 744,
+        "R": 10556,
+        "SWAP": 13710,
+        "X": 8968,
+        "Z": 672
+      },
+      "peak_observed_live_qubits": 286,
+      "toffoli_like": 42362,
+      "toffoli_share": 0.39464882943143814
+    },
+    "locator_reverse": {
+      "census": {
+        "cswap": 321,
+        "del_gf2_div_with_scaffold": 48,
+        "init_gf2_div_with_scaffold": 48,
+        "ixor_gf2_mul": 166
+      },
+      "entry_live_qubits": 196,
+      "operations": {
+        "BIT_INVERT": 47216,
+        "BIT_STORE0": 4994,
+        "CCX": 36590,
+        "CSWAP": 5772,
+        "CX": 265142,
+        "CZ": 69956,
+        "HMR": 10556,
+        "INFO_TAG": 17854,
+        "NEG": 48,
+        "POP_CONDITION": 744,
+        "PUSH_CONDITION": 744,
+        "R": 10556,
+        "SWAP": 13710,
+        "X": 9208,
+        "Z": 672
+      },
+      "peak_observed_live_qubits": 286,
+      "toffoli_like": 42362,
+      "toffoli_share": 0.39464882943143814
+    },
+    "scan": {
+      "census": {
+        "del_gf2_inverse_with_scaffold": 63,
+        "init_gf2_inverse_with_scaffold": 63,
+        "left_rotate": 24,
+        "right_rotate": 24
+      },
+      "entry_live_qubits": 196,
+      "operations": {
+        "BIT_INVERT": 39312,
+        "BIT_STORE0": 4221,
+        "BIT_STORE1": 756,
+        "CCX": 22113,
+        "CSWAP": 240,
+        "CX": 209564,
+        "CZ": 56574,
+        "HMR": 6804,
+        "INFO_TAG": 13080,
+        "POP_CONDITION": 63,
+        "PUSH_CONDITION": 63,
+        "R": 6804,
+        "SWAP": 14092,
+        "X": 3024,
+        "Z": 126
+      },
+      "peak_observed_live_qubits": 269,
+      "toffoli_like": 22353,
+      "toffoli_share": 0.20824288948304934
+    },
+    "syndrome_prep": {
+      "census": {
+        "left_rotate": 36
+      },
+      "entry_live_qubits": 196,
+      "operations": {
+        "CCX": 60,
+        "CSWAP": 72,
+        "CX": 13,
+        "CZ": 48,
+        "HMR": 54,
+        "INFO_TAG": 108,
+        "NEG": 4,
+        "POP_CONDITION": 15,
+        "PUSH_CONDITION": 15,
+        "R": 54,
+        "X": 145,
+        "Z": 10
+      },
+      "peak_observed_live_qubits": 197,
+      "toffoli_like": 132,
+      "toffoli_share": 0.0012297258270371992
+    }
+  },
+  "static_operations": {
+    "BIT_INVERT": 133744,
+    "BIT_STORE0": 14208,
+    "BIT_STORE1": 756,
+    "CCX": 95413,
+    "CSWAP": 11928,
+    "CX": 739874,
+    "CZ": 196582,
+    "HMR": 28024,
+    "INFO_TAG": 48950,
+    "NEG": 104,
+    "POP_CONDITION": 1581,
+    "PUSH_CONDITION": 1581,
+    "R": 28024,
+    "SWAP": 41512,
+    "X": 21466,
+    "Z": 1490
+  },
+  "static_toffoli_like": 107341,
+  "verifier_sha256": "f14274bc0943fb9769ddb01131be6063191a15009fe1caf1d4bdd9fd25194e65",
+  "width_note": "observed after proxy calls only; excludes transient native allocations"
+}
