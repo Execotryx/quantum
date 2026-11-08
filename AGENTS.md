@@ -57,10 +57,14 @@
   pinned reference before projecting costs for every passing lane. Bind the
   selected lane and run its S2 plan under the one-contingency supervisor.
   Projected loader costs cannot substitute for S3 accuracy or confirmation.
+  After an interruption, a fresh polish may reuse the complete, hash-bound
+  sweep series. Retain the original attempt separately.
 - Circular routed DQI rounds increment the counter on zero discrepancy. Gate
   decoder emission on the freed-nonzero verifier probe and complete registered
   depth campaign. Restore tagged entries on clean inputs and retain the
   overflow count as verifier-visible scratch on overflowed inputs.
+  Batched history sampling keeps the exact pinned draws and must match the
+  scalar recurrence and archived same-seed chunks before campaign use.
 - Banked chemistry lookups preserve the pinned factorization and angle words.
   Check the 128-qubit cap and phase, selection and workspace at every circuit
   boundary. Combined validation keeps the exact confirmed inverse-square-root

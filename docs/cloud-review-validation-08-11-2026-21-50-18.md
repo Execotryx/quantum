@@ -62,6 +62,14 @@ cases against native forward and reverse circuits at active widths
 3, 12 and 36. The frozen fixture SHA-256 is
 `e8b111c2f9c4f126cf1da9c89887a38082a0a89b449d4afe70ad3867010d16d1`.
 
+The follow-up cloud runs passed five lookup checks across all 512
+addresses. Both lookup modes matched the expected XOR on arbitrary
+nonzero targets. Both unlookup modes repaired phase across four
+measurement seeds. Dropping the first shared CNOT triggered a failure.
+Six additional reduced DQI tests passed, covering all correctable
+weights at both sizes and detecting branch, tag, history, and mask
+mutations. Pyright and Ruff passed for both follow-up test files.
+
 [Reduced DQI at (63, 4)](evidence/review-fixes-cloud-20261108/dqi-63-4.json) ·
 [Reduced DQI at (127, 12)](evidence/review-fixes-cloud-20261108/dqi-127-12.json) ·
 [Overflow probe](evidence/review-fixes-cloud-20261108/dqi-overflow-probe.json) ·

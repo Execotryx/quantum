@@ -37,7 +37,14 @@ fit must pass the residual gates before the loader projection can compare
 candidate costs.
 
 The cloud suite passed **766 tests**, and four additional frozen-round
-checks passed. [Cloud validation](docs/cloud-review-validation-08-11-2026-21-50-18.md)
+checks passed. Subsequent native lookup fixtures exercised all 512
+addresses, including randomized measurement phase repair and a dropped-CX
+mutation. The batched DQI sampler reproduced two complete scalar chunks
+before starting its own full-depth registration. Six reduced DQI tests
+covered every error weight at both reduced sizes and detected deliberate
+branch, tag, history, and mask defects.
+[Cloud validation](docs/cloud-review-validation-08-11-2026-21-50-18.md) ·
+[Depth sampler comparison](docs/dqi-batched-depth-sampling-08-11-2026-22-36-00.md)
 
 ### v3 comparison
 

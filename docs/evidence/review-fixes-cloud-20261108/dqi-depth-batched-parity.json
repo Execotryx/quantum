@@ -1,0 +1,23 @@
+{
+  "chunks": [
+    {
+      "batched_wall_seconds": 39.73835902799999,
+      "chunk": 0,
+      "sample_sha256": "1c6c41c822416c8098a913f20ac5a599501300e521e28c9caba773b43aac5de7",
+      "scalar_receipt_sha256": "6ff57a2f5082d52c7e99fd8ab5bce0136d294d61e42d08147d916b01f4a94296",
+      "scalar_wall_seconds": 1394.8474989529998,
+      "seed": 2026110801,
+      "shots": 100000
+    },
+    {
+      "batched_wall_seconds": 36.300810161000015,
+      "chunk": 1,
+      "sample_sha256": "54cf4d6c7c979b215762f665ce2c7d7ea306d53abd5da070ca4b5dafb2c6e6da",
+      "scalar_receipt_sha256": "58a979ee8fc461f30d5696877f8d694789e92fefe02ebfb9989886e190d5cb04",
+      "scalar_wall_seconds": 1456.050511715,
+      "seed": 2026110802,
+      "shots": 100000
+    }
+  ],
+  "status": "matched"
+}

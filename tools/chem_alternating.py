@@ -5,6 +5,7 @@ import os
 import subprocess
 import sys
 from importlib import import_module
+from math import isclose, isfinite
 from pathlib import Path
 
 import numpy as np
@@ -22,6 +23,7 @@ from qcompile.chemistry.factorization import (
     fit_alternating,
     initialize,
     joint_residual,
+    rank_lower_bound,
     shifted_target,
     svec,
 )
@@ -86,15 +88,36 @@ def polish(target: Floats, vectors: Floats, weights: Floats) -> tuple[Floats, Fl
     return best_vectors, best_weights, evaluations, trace, converged
 
 
-def run_lane(lane: str, factorization: Path, start: Path, output: Path) -> None:
+def completed_sweeps(directory: Path, plan: dict) -> tuple[list[dict], list[dict[str, str]], Path]:
+    """Read the complete registered sweep series without accepting a partial polish."""
+    registration = directory / "registration.json"
+    pins = [bind(registration)]
+    if read_json(registration)["plan"] != plan:
+        raise ValueError("sweep parent has a different registered lane")
+    points = []
+    artifacts = []
+    for sweep in range(0, SWEEPS + 1, INTERVAL):
+        receipt = directory / "sweeps" / f"sweep-{sweep:03}.json"
+        artifact = receipt.with_suffix(".npz")
+        receipt_pin, artifact_pin = bind(receipt), bind(artifact)
+        point = read_json(receipt)
+        if (point["sweep"] != sweep or not isfinite(point["continuous_residual"])
+                or point["continuous_residual"] < 0 or point["continuous_sha256"] != artifact_pin["sha256"]):
+            raise ValueError(f"invalid sweep checkpoint: {receipt}")
+        pins.extend((receipt_pin, artifact_pin))
+        points.append({key: value for key, value in point.items() if key != "continuous_sha256"})
+        artifacts.append(artifact)
+    best = min(range(len(points)), key=lambda i: points[i]["continuous_residual"])
+    return points, pins, artifacts[best]
+
+
+def run_lane(lane: str, factorization: Path, start: Path, output: Path, *,
+             sweeps_from: Path | None = None) -> None:
     if sha256(factorization) != REFERENCE_HASH:
         raise ValueError("alternating fit requires the pinned reference factorization")
     if any(os.environ.get(name) != "1" for name in THREADS):
         raise ValueError("run the lane through the one-thread supervisor")
     shape = LANES[lane]
-    output.mkdir(parents=True, exist_ok=False)
-    checkpoint_dir = output / "sweeps"
-    checkpoint_dir.mkdir()
     start_pin = None
     start_mode = "I1"
     if lane == "A":
@@ -104,39 +127,55 @@ def run_lane(lane: str, factorization: Path, start: Path, output: Path) -> None:
             if start_pin["sha256"] != read_json(START_RECEIPT)["continuous_sha256"]:
                 raise ValueError("lane A checkpoint differs from the recorded 5,000-evaluation start")
             start_mode = "I3-checkpoint"
+    plan = {"lane": lane, "shape": list(shape), "factorization": str(factorization.resolve()),
+            "factorization_sha256": REFERENCE_HASH, "sweeps": SWEEPS, "record_every": INTERVAL,
+            "polish_evaluations": EVALUATIONS, "start_mode": start_mode, "start": start_pin}
+    resume = completed_sweeps(sweeps_from, plan) if sweeps_from is not None else None
+    output.mkdir(parents=True, exist_ok=False)
     registration = output / "registration.json"
-    write_json(registration, {
-        "plan": {"lane": lane, "shape": shape, "factorization": str(factorization.resolve()),
-                 "factorization_sha256": REFERENCE_HASH, "sweeps": SWEEPS,
-                 "record_every": INTERVAL, "polish_evaluations": EVALUATIONS,
-                 "start_mode": start_mode, "start": start_pin},
-        "runner_sha256": sha256(Path(__file__)), "blas_threads": 1,
-    })
+    write_json(registration, {"plan": plan, "runner_sha256": sha256(Path(__file__)), "blas_threads": 1,
+                              **({"sweep_inputs": resume[1], "polish_start": bind(resume[2])} if resume else {})})
     _, _, _, _, api = backend()
     math_api = import_module("dfthcsos.scoreinfra.dfthc_math")
     inputs = fixed_inputs(api, factorization)
     n = inputs.num_orbitals
     target = shifted_target(inputs.ref["tei"], inputs.S)
-    eigenvalues, eigenvectors = np.linalg.eigh(target)
-    if start_pin is not None:
-        arrays = read_factorization(start, spec={"U": ("f", ("R", "B", n)), "W": ("f", ("R", "B", "C"))})
+    factor_spec = {"U": ("f", ("R", "B", n)), "W": ("f", ("R", "B", "C"))}
+    if resume:
+        sweep_trace, _, best = resume
+        arrays = read_factorization(best, spec=factor_spec)
         vectors, weights = arrays["U"], arrays["W"]
-        if weights.shape != shape or sha256(start) != start_pin["sha256"]:
-            raise ValueError("lane A checkpoint shape or bytes changed")
-    elif lane == "A":
-        vectors, weights = continuation_initialize(inputs.params["U"], inputs.w, shape)
+        measured = direct_residual(target, factor_rows(svec(vectors[..., :, None] * vectors[..., None, :]), weights))
+        if weights.shape != shape or not isclose(measured, min(p["continuous_residual"] for p in sweep_trace),
+                                                rel_tol=1e-10, abs_tol=1e-12):
+            raise ValueError("sweep parent minimum does not replay on the pinned target")
+        spectrum = np.asarray(np.linalg.eigvalsh(target), dtype=np.float64)
+        rank_floor = rank_lower_bound(spectrum, shape[0] * shape[2])
     else:
-        vectors, weights = initialize(eigenvalues, eigenvectors, n, shape)
+        eigenvalues, eigenvectors = np.linalg.eigh(target)
+        if start_pin is not None:
+            arrays = read_factorization(start, spec=factor_spec)
+            vectors, weights = arrays["U"], arrays["W"]
+            if weights.shape != shape or sha256(start) != start_pin["sha256"]:
+                raise ValueError("lane A checkpoint shape or bytes changed")
+        elif lane == "A":
+            vectors, weights = continuation_initialize(inputs.params["U"], inputs.w, shape)
+        else:
+            vectors, weights = initialize(eigenvalues, eigenvectors, n, shape)
 
-    def checkpoint(point: dict[str, int | float], v: Floats, w: Floats) -> None:
-        prefix = f"sweep-{int(point['sweep']):03}"
-        artifact = checkpoint_dir / f"{prefix}.npz"
-        deterministic_npz(artifact, {"U": v, "W": w})
-        write_json(checkpoint_dir / f"{prefix}.json", {**point, "continuous_sha256": sha256(artifact)})
+        checkpoint_dir = output / "sweeps"
+        checkpoint_dir.mkdir()
 
-    fit = fit_alternating(target, vectors, weights, SWEEPS, INTERVAL,
-                          spectrum=(eigenvalues, eigenvectors), checkpoint=checkpoint)
-    v, w, count, trace, converged = polish(target, fit.vectors, fit.weights)
+        def checkpoint(point: dict[str, int | float], v: Floats, w: Floats) -> None:
+            prefix = f"sweep-{int(point['sweep']):03}"
+            artifact = checkpoint_dir / f"{prefix}.npz"
+            deterministic_npz(artifact, {"U": v, "W": w})
+            write_json(checkpoint_dir / f"{prefix}.json", {**point, "continuous_sha256": sha256(artifact)})
+
+        fit = fit_alternating(target, vectors, weights, SWEEPS, INTERVAL,
+                              spectrum=(eigenvalues, eigenvectors), checkpoint=checkpoint)
+        vectors, weights, sweep_trace, rank_floor = fit.vectors, fit.weights, fit.trace, fit.rank_floor
+    v, w, count, trace, converged = polish(target, vectors, weights)
     residual = trace[-1]
     status = screen_outcome(trace, CONTINUOUS_GATE, cap_reached=count == EVALUATIONS,
                             optimizer_converged=converged)
@@ -148,6 +187,8 @@ def run_lane(lane: str, factorization: Path, start: Path, output: Path) -> None:
         status = "go" if decoded is not None and 0 <= decoded <= DECODED_GATE else "no_go"
     if sha256(factorization) != REFERENCE_HASH or (start_pin is not None and bind(start) != start_pin):
         raise ValueError("lane inputs changed while fitting")
+    if resume and any(bind(Path(pin["path"])) != pin for pin in resume[1]):
+        raise ValueError("sweep parent changed while polishing")
     artifact = output / f"continuous-{count:05}.npz"
     receipt = output / f"checkpoint-{count:05}.json"
     deterministic_npz(artifact, {"U": v, "W": w})
@@ -155,8 +196,8 @@ def run_lane(lane: str, factorization: Path, start: Path, output: Path) -> None:
                          "continuous_sha256": sha256(artifact), "decoded_metrics": json_safe(metrics)})
     write_json(output / "decision.json", {
         "status": status, "evaluations": count, "best_continuous_residual": residual,
-        "decoded_two_body_residual": decoded, "rank_floor": fit.rank_floor,
-        "sweep_trace": fit.trace, "polish_running_best_residuals": trace,
+        "decoded_two_body_residual": decoded, "rank_floor": rank_floor,
+        "sweep_trace": sweep_trace, "polish_running_best_residuals": trace,
         "registration_sha256": sha256(registration), "checkpoint_receipt_sha256": sha256(receipt),
     })
 
@@ -210,6 +251,7 @@ def main() -> None:
         command.add_argument("output", type=Path)
         command.add_argument("--factorization", type=Path, default=REFERENCE)
         command.add_argument("--start", type=Path, default=START)
+        command.add_argument("--sweeps-from", type=Path)
     selection = commands.add_parser("select")
     selection.add_argument("directory", type=Path)
     selection.add_argument("output", type=Path)
@@ -221,11 +263,13 @@ def main() -> None:
 
         select_lanes(args.directory, args.output, args.settings, args.seed)
     elif args.action == "run":
-        subprocess.run([sys.executable, __file__, "worker", args.lane, str(args.output),
-                        "--factorization", str(args.factorization), "--start", str(args.start)],
-                       check=True, env={**os.environ, **dict.fromkeys(THREADS, "1")})
+        command = [sys.executable, __file__, "worker", args.lane, str(args.output),
+                   "--factorization", str(args.factorization), "--start", str(args.start)]
+        if args.sweeps_from is not None:
+            command.extend(("--sweeps-from", str(args.sweeps_from)))
+        subprocess.run(command, check=True, env={**os.environ, **dict.fromkeys(THREADS, "1")})
     else:
-        run_lane(args.lane, args.factorization, args.start, args.output)
+        run_lane(args.lane, args.factorization, args.start, args.output, sweeps_from=args.sweeps_from)
 
 
 if __name__ == "__main__":

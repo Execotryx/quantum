@@ -15,8 +15,8 @@ from typing import Any
 
 import numpy as np
 
-from qcompile.dqi.bm_routed import State, step
 from qcompile.dqi.field import GF4096
+from qcompile.dqi.history_sampling import history_statistics
 from qcompile.io import identity, read_json, sha256, write_json
 from qcompile.official import validate_backend
 
@@ -93,7 +93,7 @@ def pins(backend: Path, probe_path: Path) -> dict:
             "sources": {name: sha256(ROOT / name) for name in (
                 "tools/dqi_history_depth.py", "src/qcompile/dqi/bm_routed.py",
                 "src/qcompile/dqi/bm_reference.py", "src/qcompile/dqi/decoder.py",
-                "src/qcompile/dqi/field.py", "uv.lock",
+                "src/qcompile/dqi/field.py", "src/qcompile/dqi/history_sampling.py", "uv.lock",
             )}}
 
 
@@ -120,29 +120,8 @@ def sample_chunk(index: int, seed: int) -> dict:
         syndromes, masks, phases = api.sample_shots(spec, tables, np.random.default_rng(seed), SHOTS, weights)
         del masks, phases
     digest = hashlib.sha256(memoryview(syndromes).cast("B")).hexdigest()
-    histogram = [0] * (spec.n + 1)
-    max_degrees = [0] * spec.n
-    max_shifted_degree = 0
-    for row_number, row in enumerate(syndromes):
-        sequence = row.tolist()
-        state = State((1,), (1,), 0)
-        retains = 0
-        for j in range(spec.n):
-            previous = state
-            state, history = step(previous, sequence, j, field)
-            degree = len(state.sigma) - 1
-            active = history.replace or history.retained_discrepancy != 0
-            shifted_degree = len(previous.tau) if active and previous.tau != (0,) else 0
-            if degree > min(j + 1, 35) or shifted_degree > 35:
-                return {"chunk": index, "seed": seed, "sample_sha256": digest, "status": "degree_violation",
-                        "shot": row_number, "round": j + 1, "degree": degree, "shifted_degree": shifted_degree}
-            max_degrees[j] = max(max_degrees[j], degree)
-            max_shifted_degree = max(max_shifted_degree, shifted_degree)
-            retains += history.retained_discrepancy != 0
-        histogram[retains] += 1
-    return {"chunk": index, "seed": seed, "sample_sha256": digest, "status": "complete", "shots": SHOTS,
-            "histogram": histogram, "max_degree_by_round": max_degrees,
-            "max_active_shifted_degree": max_shifted_degree, "wall_seconds": time.monotonic() - started}
+    return {"chunk": index, "seed": seed, "sample_sha256": digest,
+            **history_statistics(syndromes, field), "wall_seconds": time.monotonic() - started}
 
 
 def read_chunk(path: Path, registration_hash: str, index: int, seed: int) -> dict:

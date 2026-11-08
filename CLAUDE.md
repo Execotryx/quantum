@@ -40,9 +40,13 @@ worker failures and completed lanes in separate immutable attempts.
 The alternating-projection fit gates decoding on continuous residual. Register
 S2 settings before projecting complete loader cost for every passing lane.
 Use the one-contingency S2 supervisor before preparing S3 and the release loader.
+After an interruption, reuse only a complete, hash-bound sweep series to start
+a fresh polish and keep its result separate from the original attempt.
 Circular DQI rounds increment the counter on zero discrepancy. The routed
 decoder needs a passing freed-nonzero probe and registered history depth.
 An overflow leaves a verifier-visible count and bypasses exact history pops.
+Check batched depth sampling against the scalar recurrence and the archived
+same-seed chunks before running its separately registered campaign.
 Use `tools/hybrid_certification.py` for the audited parent and successor
 certificate. Keep chemistry's one-use confirmation scoped to the complete
 family and NPZ. Resolve inherited evidence through the trusted parent record.
