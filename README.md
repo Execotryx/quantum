@@ -38,13 +38,17 @@ verification is pending.
 The DQI cost figures cover reduced dimensions. The full-size sampling
 campaign selected **history depth 2**. Four of 10,000,000 shots needed
 more than two retained discrepancies, and none needed more than three.
-The full-size matched cost comparison is in progress.
+The full-size `(4095, 70)` circuit built and serialized at **1,942
+qubits**. The matched verifier comparison is registered and pending.
 [DQI depth decision](docs/dqi-depth-cloud-08-11-2026-23-50-00.md)
+[Full-size DQI build](docs/dqi-full-emission-09-11-2026-00-45-00.md)
 
 Chemistry's pinned reference yielded an
 initial S2 offset bound of **11.5** and a penalty of **1.0**. Its compressed
 fit must pass the residual gates before the loader projection can compare
-candidate costs.
+candidate costs. Lane A completed all 400 sweeps, and its lowest sweep
+residual was **41.57 mHa**. The VM cutoff interrupted the subsequent
+polish before it wrote a terminal result.
 
 The cloud suite passed **766 tests**, and four additional frozen-round
 checks passed. Subsequent native lookup fixtures exercised all 512
