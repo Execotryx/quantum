@@ -1,0 +1,10 @@
+{
+  "artifact_sha256": "254279d6ffb1907c60458ef0c8adfcd728e40ea75a44fb754be6346efeef4728",
+  "cost_limit": 448720.07,
+  "decision_sha256": "272df676f0ba2dd7e26fb4eac3cd70bff235c01a8980fba9ac09bd6382548a2d",
+  "expected_shots": 200540928,
+  "registered_unix": 1794157005.961814,
+  "role": "full",
+  "salt": "e7246beb8adf16a928acc205cf328e4f5ca16a7f32ac02dfd2bb3e24f5dfb11e",
+  "winner": "sibling-cnot"
+}

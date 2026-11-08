@@ -23,14 +23,18 @@ to **509,471.48** and width from 159 to **155 qubits**.
 
 | Experiment | Control cost | Candidate cost | Cloud result |
 |---|---:|---:|---|
-| v6 inverse square root | 472,336.92 | 411,586.92 | **12.86% lower** in the component screen. Width stayed at 150 qubits and Toffoli-like gates fell from 2,908 to 2,503. |
+| v6 inverse square root | 472,336.92 | 411,586.92 | **12.86% lower** in the full cloud verifier. Width stayed at 150 qubits and Toffoli-like gates fell from 2,908 to 2,503. |
 | Routed DQI, `(63, 4)` | 43.385 billion | 11.807 billion | **72.79% lower** on 2,560 matched trajectories with zero observed errors. |
 | Routed DQI, `(127, 12)` | 357.434 billion | 88.971 billion | **75.11% lower** on 2,560 matched trajectories with zero observed errors. |
 
 The v6 screen built each circuit twice, checked all 3,133,452 inputs
 against the phase model, and passed 31,232 native trajectories per circuit.
-Worst-case phase tolerance use stayed at **66.77%**. The DQI figures cover
-reduced dimensions. The full-size history depth still depends on the
+The frozen v6 circuit then passed all **200,540,928** full-strength
+trajectories at the screened cost. Worst-case phase tolerance use stayed
+at **66.77%**. Fresh confirmation and paired archive verification remain
+pending. [Full v6 cloud result](docs/v6-full-cloud-08-11-2026-23-26-00.md)
+
+The DQI figures cover reduced dimensions. The full-size history depth still depends on the
 registered sampling campaign. Chemistry's pinned reference yielded an
 initial S2 offset bound of **11.5** and a penalty of **1.0**. Its compressed
 fit must pass the residual gates before the loader projection can compare
