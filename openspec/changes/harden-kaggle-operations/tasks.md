@@ -32,7 +32,7 @@
 
 ## 7. Validation
 
-- [ ] 7.1 Run the relevant WSL tests, Pyright on changed Python files, Ruff and strict OpenSpec validation.
+- [x] 7.1 Run the relevant WSL tests, Pyright on changed Python files, Ruff and strict OpenSpec validation.
 - [ ] 7.2 Publish a dated change log with the v2 and v3 receipt records.
 
 [Operations controls, verified preflights and calendar](../../../docs/hybrid-roadmap-operations-08-11-2026-14-42-35.md)

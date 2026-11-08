@@ -5,6 +5,14 @@ independent mathematical checks, and local verification against pinned evaluator
 
 ## Current state
 
+The fully verified v4 hybrid scored **1.6149243284**, up **2.51%** from
+v3. The 28/20/14 lattice refinement lowered inverse-square-root cost
+from 548,860.92 to **509,471.48** and width from 159 to **155 qubits**.
+The fresh archive extraction reproduced the retained DQI and chemistry
+costs. [v4 paired verification](docs/evidence/invsqrt-roadmap-archive-20261108/comparison.json)
+
+### v3 comparison
+
 The fully verified v3 hybrid scored **1.5753293577**, up **14.32%** from
 v2. Two independent builds and the Google Cloud rebuild produced the
 same archive. The pinned evaluator passed all three benchmarks on a
@@ -31,9 +39,8 @@ records the development results, full archive comparison and receipts.
 
 ### Roadmap measurements
 
-The 28/20/14 lattice-refined inverse-square-root circuit passed two
-full verifier runs on the same frozen bytes. It costs **509,471.48**
-at **155 qubits**, a **7.18%** reduction from v3.
+The v4 circuit passed two full verifier runs on identical frozen bytes.
+The inverse-square-root component cost fell **7.18%**.
 
 The full-size DQI profile found that the locator and its reversal account
 for **73.69%** of counted gates. The standalone phase scan passed native
@@ -41,7 +48,8 @@ checks across all 4,095 positions, and the subtower inverse passed all
 4,096 inputs at 102 Toffoli-like gates. Those are primitive results.
 
 The best joint chemistry cloud pilot reached **314.05 mHa** after 250
-evaluations. It was still improving at the cap and remained above the
+evaluations. A separate local I3 run reached **81.40 mHa** after 1,500
+evaluations and was still improving at its cap. Both remained above the
 19 mHa continuous gate. The
 [roadmap measurements](docs/hybrid-roadmap-checkpoint-08-11-2026-14-54-02.md)
 link the matched controls and development receipts.
