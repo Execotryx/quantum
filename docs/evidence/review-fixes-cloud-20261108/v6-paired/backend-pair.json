@@ -1,0 +1,15 @@
+{
+  "cloud_contract_sha256": "fbd6d649c648ad4d44d7c356d490b732f59bd0ead32155fbbcdbd0b9a21f031a",
+  "inventory_sha256": "132405912244d6232e4ea7fb3c9e941f8cbfbfe8cc51dd49ab3fccb609166237",
+  "left_backend_hash": "95b516741a6412856f6e21b349a8b6d713412671bd87471fe2cd58266184ad88",
+  "left_request_sha256": "b2cfdaa2bce6df693f8bbabe53cd4add5c35f109b0b3d5b873ded5173d6492cc",
+  "paired_contract_sha256": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+  "path_changes": {
+    "project_root": {
+      "left": "/var/tmp/quantum-trimmed-paired-20261108-retry/source",
+      "right": "/var/tmp/quantum-review-20261108"
+    }
+  },
+  "right_backend_hash": "636936decdb34eaa235f223799bec54b707d964ae9c3583c2fbd362d31a450f0",
+  "right_request_sha256": "889f24fc4cda143bc7d56f964c36db3306a5fc36da17402e5ecec6f678580f9e"
+}

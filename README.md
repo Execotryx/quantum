@@ -5,6 +5,12 @@ independent mathematical checks, and local verification against pinned evaluator
 
 ## Current state
 
+The v6 hybrid passed all three benchmarks on a fresh archive extraction
+in Google Cloud. Its aggregate score was **1.7339568375**, up **4.70%**
+from v5. Inverse-square-root cost fell **12.86%** to **411,586.92**.
+The retained DQI and chemistry costs reproduced exactly.
+[v6 paired cloud verification](docs/v6-paired-cloud-09-11-2026-01-25-00.md)
+
 The fully verified v5 hybrid scored **1.6561824298**, up **2.55%** from
 v4. Trimming known zero bits reduced inverse square root to **150 qubits**
 and **2,908 Toffoli-like gates**. Its verified cost was **472,336.92**,
@@ -32,7 +38,7 @@ against the phase model, and passed 31,232 native trajectories per circuit.
 The frozen v6 circuit passed all **200,540,928** trajectories in each of
 the full-strength and fresh confirmation runs. Both reproduced the
 screened cost and **66.77%** worst-case phase tolerance use. Paired archive
-verification is pending.
+verification reproduced the same component cost and coverage.
 [v6 cloud confirmation](docs/v6-confirmation-cloud-09-11-2026-00-37-00.md)
 
 The DQI cost figures cover reduced dimensions. The full-size sampling
