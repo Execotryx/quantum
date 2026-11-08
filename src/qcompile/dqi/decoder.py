@@ -140,6 +140,30 @@ def recover(values, locator, field):
     return result
 
 
+def recover_forney(values, locator, field: GF4096) -> dict[int, int]:
+    """Recover e_j from (locator * syndrome series) / locator' at alpha**-j."""
+    values = _syndromes(values, field)
+    degree = len(locator) - 1
+    if not 0 <= degree <= 35 or not locator[-1] or not locator[0]:
+        raise ValidationError("invalid locator degree or boundary coefficient")
+    evaluator = _multiply(locator, values, field)[:degree]
+    derivative = [locator[k] if k % 2 else 0 for k in range(1, len(locator))]
+    recovered = {}
+    if degree:
+        for j in range(field.order):
+            root = field.exp[-j % field.order]
+            if field.evaluate(locator, root):
+                continue
+            slope = field.evaluate(derivative, root)
+            value = field.evaluate(evaluator, root)
+            if not slope or not value:
+                raise ValidationError("locator has a repeated or extraneous root")
+            recovered[j] = field.div(value, slope)
+    if len(recovered) != degree or syndrome(recovered, field) != values:
+        raise ValidationError("Forney recovery did not reproduce the supplied syndrome")
+    return recovered
+
+
 def decode(values, field, algorithm="bm"):
     if algorithm not in ("bm", "eea"):
         raise ValidationError("unknown decoder")

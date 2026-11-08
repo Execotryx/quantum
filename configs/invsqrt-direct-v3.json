@@ -1,0 +1,23 @@
+{
+  "hypothesis": "Reversible normalization, measurement repair and lower precision can reduce v2 cost.",
+  "parameter_ranges": "Uniform dyadic minimax, independent binary normalization and measurement unlookup, with an explicit precision ladder.",
+  "comparison": "verified-quadratic-v2",
+  "profile_liveness": true,
+  "precision_lanes": ["precision-29", "precision-28", "precision-27"],
+  "parent_rule": "Combine the best passing precision reduction with phase repair only if both lower the v2 cost independently. Add binary normalization only if it also lowers the v2 cost and the first combination passes.",
+  "controls": {
+    "verified-quadratic-v2": {
+      "parameters": {"fit": "minimax", "segment_bits": 7, "fractional": [30, 24, 18], "fused": true, "reuse_lookup": true},
+      "sha256": "3ae33a3d0101085613ac6bfc1b1ab7dde6b8f35f7ebd84d0976ba66a0772f799",
+      "coefficients_sha256": "39905e770ed4e2ce02cf14f3aba2080663f3f26cc2fc596181a2ae3085f414ae",
+      "cost": 820078.9505284121
+    }
+  },
+  "piecewise": {
+    "binary-normalization": {"fit": "minimax", "segment_bits": 7, "fractional": [30, 24, 18], "fused": true, "reuse_lookup": true, "binary_normalization": true},
+    "phase-repair": {"fit": "minimax", "segment_bits": 7, "fractional": [30, 24, 18], "fused": true, "reuse_lookup": true, "measurement_unlookup": true},
+    "precision-29": {"fit": "minimax", "segment_bits": 7, "fractional": [29, 21, 14], "fused": true, "reuse_lookup": true},
+    "precision-28": {"fit": "minimax", "segment_bits": 7, "fractional": [28, 20, 13], "fused": true, "reuse_lookup": true},
+    "precision-27": {"fit": "minimax", "segment_bits": 7, "fractional": [27, 19, 12], "fused": true, "reuse_lookup": true}
+  }
+}
