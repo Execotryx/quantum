@@ -1,0 +1,19 @@
+{
+  "archive_bytes": 909554679,
+  "archive_name": "submission.zip",
+  "archive_sha256": "2ad0d5d7759ffc3cae39f4fb2284d826daeda35c71963bd0592d9234362db3b9",
+  "cloud_verification_sha256": "c141c9cf7627e85d912938b30139bf8b870d37153f19785d4054058f96c58e55",
+  "control_aggregate_score": 1.6149243283559387,
+  "formal_release_certificate": "pending",
+  "local_aggregate_score": 1.6561824297677306,
+  "published_metric": {
+    "cli_version": "2.2.5",
+    "id": "metric/google-quantum-ai-metric",
+    "metadata_sha256": "f280f4c279b910f7249435200908aa4c80f0a4728c0dd901c3744dca0bf986ce",
+    "observed_at_utc": "2026-11-08T12:06:24.313634+00:00",
+    "sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73"
+  },
+  "status": "prepared_verified_archive_awaiting_manual_upload",
+  "structural_preflight_sha256": "d1dbc539d505c9e6b477e87fdb82948ac06c4a4ae86f45d57693ce11c1495958",
+  "submission_message": "v5 2ad0d5d7759f"
+}

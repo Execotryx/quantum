@@ -11,6 +11,9 @@
   leaves the separate release lineage and confirmation gates in force.
   Pin a separately located confirmation inventory in its protocol before
   reserving the salt.
+- A reviewed standalone inverse-square-root confirmation binds both
+  full receipts, the original screen, backend, circuit and confirmation
+  salt. Use the complete extracted-archive metric for release acceptance.
 - Keep the Cloud Shell provisioner's resource defaults and JSON output aligned
   with the operations plugin. Verify preview and rerun behavior without cloud writes.
 - Inverse-square-root opportunity screens freeze the protocol before simulation,

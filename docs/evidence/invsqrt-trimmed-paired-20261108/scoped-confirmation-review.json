@@ -1,0 +1,41 @@
+{
+  "archive_sha256": "2ad0d5d7759ffc3cae39f4fb2284d826daeda35c71963bd0592d9234362db3b9",
+  "archive_verification_sha256": "c141c9cf7627e85d912938b30139bf8b870d37153f19785d4054058f96c58e55",
+  "backend_review": {
+    "inventory_sha256": "132405912244d6232e4ea7fb3c9e941f8cbfbfe8cc51dd49ab3fccb609166237",
+    "path_changes": {
+      "kickmix_root": {
+        "left": "/mnt/e/sources/python/quantum/vendor/official/kickmix",
+        "right": "/var/tmp/quantum/vendor/official/kickmix"
+      },
+      "metric_notebook": {
+        "left": "/mnt/e/sources/python/quantum/vendor/metric/google-quantum-ai-metric.ipynb",
+        "right": "/var/tmp/quantum/vendor/metric/google-quantum-ai-metric.ipynb"
+      },
+      "project_root": {
+        "left": null,
+        "right": "/var/tmp/quantum-trimmed-paired-20261108-retry/source"
+      },
+      "verifiers_root": {
+        "left": "/mnt/e/sources/python/quantum/vendor/official/verifiers",
+        "right": "/var/tmp/quantum/vendor/official/verifiers"
+      }
+    }
+  },
+  "component_backend_sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+  "component_hashes": {
+    "invsqrt.kmb": "f4c8503d87c9e7cedb8a79a796e0b195623c2e88467691ca1b08af1a70fb200d"
+  },
+  "confirmation_salt": "661033782c525aa6ea5f2d854c4b99243432e1a86831de69190c16d148eaed71",
+  "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+  "observed": {
+    "k": 0,
+    "n": 200540928
+  },
+  "receipt_sha256": {
+    "confirmation": "711302e73c1b8d33e645e56cec38e4a00eedc9fa3fcdcf60dc08a82d2c2b4b9d",
+    "full": "f68575d6f3822357a4a3a9331967b1adc5499e6f2f05e021fa4874bb1f054395"
+  },
+  "scope": "reviewed inverse-square-root confirmation and paired metric binding",
+  "source_revision": "70aacf27a69532f76504bd46c5c6464837bfd668"
+}

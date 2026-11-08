@@ -1,12 +1,37 @@
+import shutil
+
 import pytest
 
-from qcompile.component_confirmations import FAIL_FAST, HYBRID_COVERAGE, component_hashes
+from qcompile.component_confirmations import (
+    CANDIDATE_PROFILE,
+    FAIL_FAST,
+    HYBRID_COVERAGE,
+    component_hashes,
+    review_invsqrt_confirmation,
+)
 from qcompile.errors import BlockedError, ValidationError
 from qcompile.experiments import CandidateStore
-from qcompile.io import sha256
+from qcompile.io import read_json, sha256, write_json
 
 CONTRACT = "a" * 64
 BACKEND = "b" * 64
+
+
+def test_reviewed_standalone_confirmation_binds_original_v5_receipts(tmp_path, project_root):
+    original = project_root / "docs/evidence/invsqrt-trimmed-v4-20261108/verification"
+    screen = read_json(original / "screen-registration.json")
+    candidate = screen["candidate_sha256"]
+    backend = screen["inputs"]["vendor/backend.json"]
+    reviewed = review_invsqrt_confirmation(original, candidate, backend)
+    assert reviewed["confirmation"]["raw"]["verified_shots"] == FAIL_FAST["invsqrt"]
+    assert reviewed["full"]["registration"]["salt"] != reviewed["confirmation"]["registration"]["salt"]
+    copy = shutil.copytree(original, tmp_path / "verification")
+    registration = copy / "confirmation-registration.json"
+    data = read_json(registration)
+    data["preceding_full_sha256"] = "0" * 64
+    write_json(registration, data, replace=True)
+    with pytest.raises(ValidationError, match="standalone confirmation receipt"):
+        review_invsqrt_confirmation(copy, candidate, backend)
 
 
 def candidate(store, artifacts, config=None):
@@ -32,6 +57,25 @@ def protocol(benchmark, salt):
         "compute_allowance": 1,
         "seed_policy": {"role": "confirmation", "salt": salt * 32},
     }
+
+
+def test_candidate_v1_standalone_scope_requires_explicit_review(tmp_path, artifact_set, monkeypatch):
+    monkeypatch.setattr("qcompile.experiments.candidate_coverage", lambda _: HYBRID_COVERAGE.copy())
+    store = CandidateStore(tmp_path / "store")
+    record = candidate(store, artifact_set, {"verification_profile": CANDIDATE_PROFILE})
+    policy = {**protocol("invsqrt", "i"), "standalone_invsqrt": {"fixture": True}}
+    receipt = {**result(record, policy), "tier": "full"}
+    original_raw = receipt["raw_benchmark"]
+    monkeypatch.setattr(CandidateStore, "_standalone_invsqrt", staticmethod(lambda *_: original_raw))
+    store.register_confirmation(record["id"], policy)
+    with pytest.raises(ValidationError, match="bound standalone"):
+        store.finish_confirmation(record["id"], receipt, benchmark="invsqrt")
+    receipt["kind"] = "reviewed_standalone_invsqrt"
+    record = store.finish_confirmation(record["id"], receipt, benchmark="invsqrt")
+    assert store.require_confirmation(record, "invsqrt")["status"] == "passed"
+    record["confirmations"]["invsqrt"]["evidence"]["raw_benchmark"] = {}
+    with pytest.raises(BlockedError, match="stored benchmark result"):
+        store.require_confirmation(record, "invsqrt")
 
 
 def result(record, policy):

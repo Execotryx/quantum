@@ -137,6 +137,14 @@ full coverage. The importer checks the raw result before deriving zero
 failures. The legacy single-benchmark record and DQI counter mapping retain
 their original meaning.
 
+For a reviewed candidate-v1 inverse-square-root confirmation, the
+protocol can bind `standalone_invsqrt.directory`, `decision_sha256`, and
+`receipt_sha256`. The directory holds the original screen, driver, full
+result, fresh confirmation, and their registrations and raw receipts.
+The candidate store validates the exact evidence at reservation and
+completion. This scope requires the pinned `backend_inventory` and
+still uses the complete extracted-archive metric for release verification.
+
 The fixed metric determines sample size, so a requested protocol must match
 its actual returned count. Custom sample sizes need a separately reviewed
 official adapter.

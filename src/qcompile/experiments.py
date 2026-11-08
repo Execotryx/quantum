@@ -21,6 +21,7 @@ from .component_confirmations import (
     generated_benchmarks,
     has_full_hybrid_coverage,
     registered_coverage,
+    review_invsqrt_confirmation,
     scopes_for_legacy_row,
 )
 from .errors import BlockedError, ValidationError
@@ -352,6 +353,24 @@ class CandidateStore:
     def confirmation_for(self, candidate_id, benchmark):
         return self._slot(self.get(candidate_id), benchmark)[1]
 
+    @staticmethod
+    def _standalone_invsqrt(record, protocol):
+        scope = protocol["standalone_invsqrt"]
+        if registered_coverage(record) is None or protocol.get("benchmark") != "invsqrt":
+            raise ValidationError("standalone review applies only to a candidate-v1 inverse-square-root confirmation")
+        read_confirmation_backend(protocol)
+        review = review_invsqrt_confirmation(
+            Path(scope["directory"]), record["artifact_hashes"]["invsqrt.kmb"],
+            protocol["backend_inventory"]["sha256"],
+        )
+        if (
+            review["decision_sha256"] != scope["decision_sha256"]
+            or review["confirmation"]["receipt_sha256"] != scope["receipt_sha256"]
+            or review["confirmation"]["registration"]["salt"] != protocol["seed_policy"]["salt"]
+        ):
+            raise ValidationError("standalone confirmation differs from the registered evidence")
+        return review["confirmation"]["raw"]
+
     def require_release_parent(self, record):
         if registered_coverage(record) is None:
             return self.require_chemistry_parent(record)
@@ -501,6 +520,11 @@ class CandidateStore:
             )
         ):
             raise BlockedError("benchmark confirmation does not match the one-use ledger")
+        protocol = confirmation["protocol"]
+        if "standalone_invsqrt" in protocol and (
+            confirmation["evidence"]["raw_benchmark"] != self._standalone_invsqrt(record, protocol)
+        ):
+            raise BlockedError("standalone confirmation differs from the stored benchmark result")
         return confirmation
 
     def register_confirmation(self, candidate_id, protocol):
@@ -514,7 +538,9 @@ class CandidateStore:
             positive_int(protocol.get("sample_size"), "confirmation sample_size")
             nonnegative_int(protocol.get("max_failures"), "max_failures")
             coverage = registered_coverage(record)
-            if "backend_inventory" in protocol:
+            if "standalone_invsqrt" in protocol:
+                self._standalone_invsqrt(record, protocol)
+            elif "backend_inventory" in protocol:
                 read_confirmation_backend(protocol)
             if benchmark in FAIL_FAST and (
                 protocol["sample_size"] != (coverage or FAIL_FAST)[benchmark]
@@ -632,12 +658,20 @@ class CandidateStore:
                 or observed != dqi_observed(raw, coverage["dqi"])
             ):
                 raise ValidationError("DQI confirmation receipt differs from its registered benchmark or runtime")
-            if coverage is not None and (
-                evidence.get("tier") != "full"
-                or raw != (evidence.get("official_results") or {}).get("raw_verifier_results", {}).get(benchmark)
-                or not has_full_hybrid_coverage(evidence, coverage)
-            ):
-                raise ValidationError("candidate confirmation requires the bound full metric receipt")
+            if coverage is not None:
+                if "standalone_invsqrt" in protocol:
+                    if (
+                        evidence.get("kind") != "reviewed_standalone_invsqrt"
+                        or evidence.get("tier") != "full"
+                        or raw != self._standalone_invsqrt(record, protocol)
+                    ):
+                        raise ValidationError("candidate confirmation requires the bound standalone inverse-square-root receipt")
+                elif (
+                    evidence.get("tier") != "full"
+                    or raw != (evidence.get("official_results") or {}).get("raw_verifier_results", {}).get(benchmark)
+                    or not has_full_hybrid_coverage(evidence, coverage)
+                ):
+                    raise ValidationError("candidate confirmation requires the bound full metric receipt")
             n, k = observed.get("n"), observed.get("k")
             positive_int(n, "observed n")
             nonnegative_int(k, "observed k")

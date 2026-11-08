@@ -11,12 +11,23 @@ from invsqrt_direct import ROOT, require, run_job
 from invsqrt_direct_hybrid import accepted_component, successful_metric
 
 from qcompile.artifacts import deterministic_zip, extract_archive
-from qcompile.component_confirmations import component_hashes, fail_fast_observed, has_full_hybrid_coverage
+from qcompile.component_confirmations import (
+    HYBRID_COVERAGE,
+    component_hashes,
+    fail_fast_observed,
+    has_full_hybrid_coverage,
+    review_invsqrt_confirmation,
+)
 from qcompile.contract import load_contract
 from qcompile.environment import capture
 from qcompile.experiments import CandidateStore
 from qcompile.io import identity, read_json, sha256, write_json
-from qcompile.official import review_backend_pair, verify_candidate
+from qcompile.official import (
+    compare_backend_inventories,
+    review_backend_pair,
+    review_verification_request,
+    verify_candidate,
+)
 from qcompile.release import build_candidate, certify_release
 
 BACKEND = ROOT / "vendor/backend.json"
@@ -431,10 +442,53 @@ def certify(output: Path, *, screen: Path | None, parent_id: str | None) -> None
     print(record["id"], certificate["predicted_aggregate_score"], flush=True)
 
 
+def review_scoped_invsqrt(component: Path, archive: Path, backend: Path) -> dict:
+    registration_path = archive / "registration.json"
+    registration = read_json(registration_path)
+    preparation = read_json(archive / "prepare.json")
+    report_path = archive / "verification.json"
+    report = read_json(report_path)
+    archive_backend = review_verification_request(report, archive / "request.json")
+    backend_sha256 = sha256(backend)
+    comparison = compare_backend_inventories(read_json(backend), archive_backend)
+    candidate = component_hashes(registration["artifact_hashes"], "invsqrt")
+    reviewed = review_invsqrt_confirmation(component, candidate["invsqrt.kmb"], backend_sha256)
+    receipts = {role: reviewed[role]["receipt_sha256"] for role in ("full", "confirmation")}
+    require(
+        report["tier"] == "full"
+        and report["role"] == "official_local"
+        and report["contract_hash"] == load_contract(ROOT / "contracts/contract.json").hash
+        and has_full_hybrid_coverage(report, HYBRID_COVERAGE)
+        and preparation["registration_sha256"] == sha256(registration_path)
+        and preparation["archive_sha256"] == registration["archive_sha256"]
+        and report["artifact_hashes"] == registration["artifact_hashes"]
+        and report["seed_policy"] == registration["seed_policy"]
+        and report["seed_policy"]["salt"] not in {reviewed[r]["registration"]["salt"] for r in receipts}
+        and registration["component_receipts"] == receipts
+        and registration["component_source_revision"] == reviewed["environment"]["source_revision"]
+        and report["official_results"]["raw_verifier_results"]["invsqrt"] == reviewed["confirmation"]["raw"],
+        "paired archive does not bind the reviewed full and confirmation receipts",
+    )
+    return {
+        "scope": "reviewed inverse-square-root confirmation and paired metric binding",
+        "archive_sha256": registration["archive_sha256"],
+        "archive_verification_sha256": sha256(report_path),
+        "component_hashes": candidate,
+        "component_backend_sha256": backend_sha256,
+        "backend_review": comparison,
+        "contract_hash": report["contract_hash"],
+        "source_revision": registration["component_source_revision"],
+        "receipt_sha256": receipts,
+        "confirmation_salt": reviewed["confirmation"]["registration"]["salt"],
+        "observed": fail_fast_observed("invsqrt", reviewed["confirmation"]["raw"]),
+    }
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
-        "action", choices=("prepare-parent", "measure-parent", "parent-worker", "certify", "review-backend")
+        "action", choices=("prepare-parent", "measure-parent", "parent-worker", "certify", "review-backend",
+                           "review-scoped-invsqrt")
     )
     parser.add_argument("output", type=Path)
     parser.add_argument("--screen", type=Path)
@@ -442,9 +496,14 @@ def main() -> None:
     parser.add_argument("--paired-successor", type=Path)
     parser.add_argument("--parent-verification", type=Path)
     parser.add_argument("--successor-verification", type=Path)
+    parser.add_argument("--component-verification", type=Path)
     args = parser.parse_args()
     output = args.output.resolve()
-    if args.action == "review-backend":
+    if args.action == "review-scoped-invsqrt":
+        if args.component_verification is None or args.successor_verification is None:
+            parser.error("review-scoped-invsqrt requires the component and successor verification directories")
+        write_json(output, review_scoped_invsqrt(args.component_verification, args.successor_verification, BACKEND))
+    elif args.action == "review-backend":
         if args.parent_verification is None or args.successor_verification is None:
             parser.error("review-backend requires both verification directories")
         parent = args.parent_verification.resolve()
