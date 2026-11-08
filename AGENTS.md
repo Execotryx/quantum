@@ -18,9 +18,18 @@
 - The v3 direct-phasing screen checks each ablation independently before
   combining improvements. Restore coefficient-lookup phase after measurement
   and verify the padded lane and scratch on the serialized circuit.
+- The v4 screen pins the lattice tables, requires each precision parent to
+  pass and improve independently, and binds the winning KMB through full
+  verification, fresh confirmation and the paired archive. Price projected
+  widths and standalone address mappings separately from emitted circuits.
 - Keep tower-field DQI development receipts scoped to their actual code
   dimensions. Run the chemistry continuous residual gate before emitting
   decoded words or ANGLE circuits.
+- Keep profiled reference stages, standalone phase-scan results and
+  routed-decoder acceptance as separate evidence. A primitive receipt
+  cannot close a decoder or archive gate. For joint chemistry fits,
+  compare exact checkpoint residuals and leave a capped lane eligible
+  for a separately registered continuation.
 - Banked chemistry lookups preserve the pinned factorization and angle words.
   Check the 128-qubit cap and phase, selection and workspace at every circuit
   boundary. Combined validation keeps the exact confirmed inverse-square-root
@@ -56,6 +65,10 @@
   For the isolated environment, pass `--pythonpath vendor/linux-env/bin/python`
   to Pyright instead of relying on automatic environment discovery.
 - Preserve dated Markdown change logs under `docs/`; use OpenSpec for plans.
+- Receipt preparation checks the published metric hash and binds the exact
+  local certificate, ZIP and message. Keep external observations immutable
+  and record corrections separately. Reserve DQI confirmation salts for
+  their frozen component and classify capped fits from their objective trace.
 - Step-2 campaigns require clean committed Linux source and frozen dependencies.
   Preregister A,A,B baseline salts and run serially at full strength; never reuse
   them as candidate confirmation. Profile by delegation to pinned upstream code.

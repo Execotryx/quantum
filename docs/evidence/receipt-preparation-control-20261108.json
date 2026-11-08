@@ -1,0 +1,12 @@
+{
+  "status": "prepared_certified_control",
+  "zip_sha256": "8fb545091a1cf66c2656bdce40bedbc26e478746301f9a777f56173f88b88503",
+  "zip_bytes": 909659144,
+  "message": "certified-control 8fb545091a1c",
+  "metric_sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+  "cli_version": "Kaggle CLI 2.2.5",
+  "certificate_sha256": "9f3de70c965d5548183f4ce0cc96f26a39b1139326ca2a8a599ae14959da6afe",
+  "preflight_sha256": "4c0f0842bf0621a5141412bf6075b3adb79a60057b4b7008a30231cd70f4dfc6",
+  "local_score": "1.0286345144266953",
+  "binding": "direct"
+}

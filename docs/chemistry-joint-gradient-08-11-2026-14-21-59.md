@@ -24,5 +24,26 @@ In a [20-evaluation pilot](evidence/chem-s1-pilot-20261108/), the spectral
 residual fell from 5.8172 to 2.4778 Ha and the random-control residual fell
 from 11.2590 to 8.3543 Ha. Both were still improving and were classified
 `budget_limited`. These runs do not reject a shape or establish eligibility.
-The other initializers, full fit campaign, later optimization stages, loaders,
-and chemistry acceptance remain open in the OpenSpec tasks.
+Added clustering and continuation initializers and checked them on synthetic
+inputs. Four-evaluation full-shape smokes decreased the clustering residual
+from 7.7816 to 6.8283 Ha and the continuation residual from 2.1187 to
+1.8647 Ha. Both are `budget_limited`; their separate receipts are alongside the
+other pilot receipts. Follow-up runs reproduced both residuals after removing
+an unnecessary target eigendecomposition from continuation and a large
+temporary allocation from clustering. These are shorter than the I1/I4 runs and do not rank
+converged fits. Projection-bound ranking, the full fit campaign, later stages,
+loaders, and chemistry acceptance remain open in the OpenSpec tasks.
+
+Added a balanced spectral-factor projection diagnostic for comparing
+initializers. It is not a certified lower bound on the tensor residual,
+because factor rotations can change groupings without changing the tensor.
+The [full-shape comparison](evidence/chem-projection-20261108/comparison.md)
+ranks the initializers differently from their actual initial tensor residuals,
+so it must not be used as a shape rejection gate.
+Added smooth Lambda and energy-gap derivatives, including identity-offset
+variables, and an augmented-Lagrangian objective. Synthetic finite-difference
+checks cover every coordinate, and a separate synthetic comparison checks
+Lambda and gap directly against the pinned evaluator; exact metrics remain
+authoritative.
+S2 remains gated: no eligible S1 checkpoint, domain-restoration procedure,
+or exact-checkpoint optimizer orchestration has been established.

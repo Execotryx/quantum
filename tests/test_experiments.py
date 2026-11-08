@@ -4,6 +4,7 @@ import pytest
 
 from qcompile.errors import BlockedError, ValidationError
 from qcompile.experiments import CandidateStore, opportunity_decision, validate_budget
+from qcompile.io import write_json
 
 ENV = {"source_revision": "a" * 40, "dirty": False, "dependency_lock_sha256": "b" * 64}
 
@@ -129,6 +130,24 @@ def test_failed_confirmation_cannot_be_rerolled_even_with_new_config(tmp_path, a
     )
     with pytest.raises(ValidationError, match="failed frozen bytes"):
         store.register_confirmation(second["id"], protocol("different-independent-salt-1234567890"))
+
+
+def test_dqi_confirmation_reservation_binds_frozen_component(tmp_path, artifact_set):
+    store, record = create(tmp_path, artifact_set)
+    p = protocol()
+    salt = p["seed_policy"]["salt"]
+    ledger = store.root / "development-salts.json"
+    write_json(ledger, {salt: "historical-development-registration"})
+    with pytest.raises(ValidationError, match="registered for development"):
+        store.register_confirmation(record["id"], p)
+    reserve = {"role": "confirmation", "component_hashes": {"dqi.kmb": "f" * 64}}
+    write_json(ledger, {salt: reserve}, replace=True)
+    with pytest.raises(ValidationError, match="reserved for another component"):
+        store.register_confirmation(record["id"], p)
+    reserve["component_hashes"]["dqi.kmb"] = record["artifact_hashes"]["dqi.kmb"]
+    write_json(ledger, {salt: reserve}, replace=True)
+    registered = store.register_confirmation(record["id"], p)
+    assert registered["confirmation"]["status"] == "registered"
 
 
 def test_confirmation_registered_before_results_and_sample_size_checked(tmp_path, artifact_set):

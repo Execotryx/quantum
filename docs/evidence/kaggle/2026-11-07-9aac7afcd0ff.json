@@ -1,0 +1,32 @@
+{
+  "archive_class": "exact",
+  "band": {
+    "max": "1.3779815417804443",
+    "min": "1.3779615417804443"
+  },
+  "binding": "inferred",
+  "delta": "-0.0000015417804443",
+  "evidence": "Authenticated submission-list row agrees with the reported historical score. Its blank description leaves archive identity inferred.",
+  "kaggle_cli_version": "2.2.5",
+  "kaggle_public_score": "1.37797",
+  "listing_sha256": "902d5955f2f69a9d6f486df31c253f189de33f2b6187235a5545299e65247f7c",
+  "local_certificate": {
+    "kind": "paired_verification",
+    "path": "docs/evidence/next-hybrid-20261108/paired-archive/verification.json",
+    "sha256": "ad252697b1a7080743710a2ab9bb05e92f3b3f9291e689bdf44d9a1753f3b959"
+  },
+  "local_score": "1.3779715417804443",
+  "metric_sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+  "observed_at_utc": "2026-11-08T09:59:32.697360+00:00",
+  "reconciled": true,
+  "recorded_on_utc": "2026-11-08",
+  "scored_at_utc": null,
+  "source": "openspec/changes/harden-kaggle-operations/design.md",
+  "submission_message": "",
+  "submission_ref": "58104725",
+  "submitted_at_utc": "2026-11-07T21:11:04.187000+00:00",
+  "superseded_sha256": "f6b8df43eb67ec106b6d24bc3ac7dd50365f176a6d3c96dafe5f500eae6f09cd",
+  "supersedes": "2026-11-08-9aac7afcd0ff.json",
+  "zip_bytes": 909703620,
+  "zip_sha256": "9aac7afcd0ff3bbff7f4c65c85cf1b331e67b3fd9893ec83b8499d0f223bb841"
+}

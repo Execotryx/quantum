@@ -1,0 +1,448 @@
+{
+  "scope": "virtual routed BM classical correctable GF16 plus GF4096 samples",
+  "input_count": 23851,
+  "gf16_max_age": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "gf16_max_retained": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "max_history_70_all_inputs": 34,
+  "bound_tightness": "Constructed unrestricted GF4096 70-round witness with 34 retained discrepancies; witness is not claimed decodable.",
+  "source_sha256": "f65b2c1d13b5a865385351abcde970c174975f41b1ef714e457c987bf2d3a407",
+  "test_sha256": "55deee6098d9388c83e357d68f7629b67965bab1eabc8ca68623aabdc66e838e",
+  "static_history_bits": 910,
+  "indexed_stack_history_bits_with_branch_flags": 722,
+  "slot_lower_bound_qubits": 2629,
+  "stack_lower_bound_qubits": 2441,
+  "stack_gate_increase_crossover_percent": 16.0,
+  "rounds": [
+    {
+      "round": 1,
+      "max_retained_discrepancies": 0.0,
+      "unrestricted_template_age": 1,
+      "locator_degree_correctable_bound": 1
+    },
+    {
+      "round": 2,
+      "max_retained_discrepancies": 0.0,
+      "unrestricted_template_age": 2,
+      "locator_degree_correctable_bound": 2
+    },
+    {
+      "round": 3,
+      "max_retained_discrepancies": 1.0,
+      "unrestricted_template_age": 3,
+      "locator_degree_correctable_bound": 3
+    },
+    {
+      "round": 4,
+      "max_retained_discrepancies": 1.0,
+      "unrestricted_template_age": 4,
+      "locator_degree_correctable_bound": 4
+    },
+    {
+      "round": 5,
+      "max_retained_discrepancies": 2.0,
+      "unrestricted_template_age": 5,
+      "locator_degree_correctable_bound": 5
+    },
+    {
+      "round": 6,
+      "max_retained_discrepancies": 2.0,
+      "unrestricted_template_age": 6,
+      "locator_degree_correctable_bound": 6
+    },
+    {
+      "round": 7,
+      "max_retained_discrepancies": 3.0,
+      "unrestricted_template_age": 7,
+      "locator_degree_correctable_bound": 7
+    },
+    {
+      "round": 8,
+      "max_retained_discrepancies": 3.0,
+      "unrestricted_template_age": 8,
+      "locator_degree_correctable_bound": 8
+    },
+    {
+      "round": 9,
+      "max_retained_discrepancies": 4.0,
+      "unrestricted_template_age": 9,
+      "locator_degree_correctable_bound": 9
+    },
+    {
+      "round": 10,
+      "max_retained_discrepancies": 4.0,
+      "unrestricted_template_age": 10,
+      "locator_degree_correctable_bound": 10
+    },
+    {
+      "round": 11,
+      "max_retained_discrepancies": 5.0,
+      "unrestricted_template_age": 11,
+      "locator_degree_correctable_bound": 11
+    },
+    {
+      "round": 12,
+      "max_retained_discrepancies": 5.0,
+      "unrestricted_template_age": 12,
+      "locator_degree_correctable_bound": 12
+    },
+    {
+      "round": 13,
+      "max_retained_discrepancies": 6.0,
+      "unrestricted_template_age": 13,
+      "locator_degree_correctable_bound": 13
+    },
+    {
+      "round": 14,
+      "max_retained_discrepancies": 6.0,
+      "unrestricted_template_age": 14,
+      "locator_degree_correctable_bound": 14
+    },
+    {
+      "round": 15,
+      "max_retained_discrepancies": 7.0,
+      "unrestricted_template_age": 15,
+      "locator_degree_correctable_bound": 15
+    },
+    {
+      "round": 16,
+      "max_retained_discrepancies": 7.0,
+      "unrestricted_template_age": 16,
+      "locator_degree_correctable_bound": 16
+    },
+    {
+      "round": 17,
+      "max_retained_discrepancies": 8.0,
+      "unrestricted_template_age": 17,
+      "locator_degree_correctable_bound": 17
+    },
+    {
+      "round": 18,
+      "max_retained_discrepancies": 8.0,
+      "unrestricted_template_age": 18,
+      "locator_degree_correctable_bound": 18
+    },
+    {
+      "round": 19,
+      "max_retained_discrepancies": 9.0,
+      "unrestricted_template_age": 19,
+      "locator_degree_correctable_bound": 19
+    },
+    {
+      "round": 20,
+      "max_retained_discrepancies": 9.0,
+      "unrestricted_template_age": 20,
+      "locator_degree_correctable_bound": 20
+    },
+    {
+      "round": 21,
+      "max_retained_discrepancies": 10.0,
+      "unrestricted_template_age": 21,
+      "locator_degree_correctable_bound": 21
+    },
+    {
+      "round": 22,
+      "max_retained_discrepancies": 10.0,
+      "unrestricted_template_age": 22,
+      "locator_degree_correctable_bound": 22
+    },
+    {
+      "round": 23,
+      "max_retained_discrepancies": 11.0,
+      "unrestricted_template_age": 23,
+      "locator_degree_correctable_bound": 23
+    },
+    {
+      "round": 24,
+      "max_retained_discrepancies": 11.0,
+      "unrestricted_template_age": 24,
+      "locator_degree_correctable_bound": 24
+    },
+    {
+      "round": 25,
+      "max_retained_discrepancies": 12.0,
+      "unrestricted_template_age": 25,
+      "locator_degree_correctable_bound": 25
+    },
+    {
+      "round": 26,
+      "max_retained_discrepancies": 12.0,
+      "unrestricted_template_age": 26,
+      "locator_degree_correctable_bound": 26
+    },
+    {
+      "round": 27,
+      "max_retained_discrepancies": 13.0,
+      "unrestricted_template_age": 27,
+      "locator_degree_correctable_bound": 27
+    },
+    {
+      "round": 28,
+      "max_retained_discrepancies": 13.0,
+      "unrestricted_template_age": 28,
+      "locator_degree_correctable_bound": 28
+    },
+    {
+      "round": 29,
+      "max_retained_discrepancies": 14.0,
+      "unrestricted_template_age": 29,
+      "locator_degree_correctable_bound": 29
+    },
+    {
+      "round": 30,
+      "max_retained_discrepancies": 14.0,
+      "unrestricted_template_age": 30,
+      "locator_degree_correctable_bound": 30
+    },
+    {
+      "round": 31,
+      "max_retained_discrepancies": 15.0,
+      "unrestricted_template_age": 31,
+      "locator_degree_correctable_bound": 31
+    },
+    {
+      "round": 32,
+      "max_retained_discrepancies": 15.0,
+      "unrestricted_template_age": 32,
+      "locator_degree_correctable_bound": 32
+    },
+    {
+      "round": 33,
+      "max_retained_discrepancies": 16.0,
+      "unrestricted_template_age": 33,
+      "locator_degree_correctable_bound": 33
+    },
+    {
+      "round": 34,
+      "max_retained_discrepancies": 16.0,
+      "unrestricted_template_age": 34,
+      "locator_degree_correctable_bound": 34
+    },
+    {
+      "round": 35,
+      "max_retained_discrepancies": 17.0,
+      "unrestricted_template_age": 35,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 36,
+      "max_retained_discrepancies": 17.0,
+      "unrestricted_template_age": 36,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 37,
+      "max_retained_discrepancies": 18.0,
+      "unrestricted_template_age": 37,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 38,
+      "max_retained_discrepancies": 18.0,
+      "unrestricted_template_age": 38,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 39,
+      "max_retained_discrepancies": 19.0,
+      "unrestricted_template_age": 39,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 40,
+      "max_retained_discrepancies": 19.0,
+      "unrestricted_template_age": 40,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 41,
+      "max_retained_discrepancies": 20.0,
+      "unrestricted_template_age": 41,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 42,
+      "max_retained_discrepancies": 20.0,
+      "unrestricted_template_age": 42,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 43,
+      "max_retained_discrepancies": 21.0,
+      "unrestricted_template_age": 43,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 44,
+      "max_retained_discrepancies": 21.0,
+      "unrestricted_template_age": 44,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 45,
+      "max_retained_discrepancies": 22.0,
+      "unrestricted_template_age": 45,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 46,
+      "max_retained_discrepancies": 22.0,
+      "unrestricted_template_age": 46,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 47,
+      "max_retained_discrepancies": 23.0,
+      "unrestricted_template_age": 47,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 48,
+      "max_retained_discrepancies": 23.0,
+      "unrestricted_template_age": 48,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 49,
+      "max_retained_discrepancies": 24.0,
+      "unrestricted_template_age": 49,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 50,
+      "max_retained_discrepancies": 24.0,
+      "unrestricted_template_age": 50,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 51,
+      "max_retained_discrepancies": 25.0,
+      "unrestricted_template_age": 51,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 52,
+      "max_retained_discrepancies": 25.0,
+      "unrestricted_template_age": 52,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 53,
+      "max_retained_discrepancies": 26.0,
+      "unrestricted_template_age": 53,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 54,
+      "max_retained_discrepancies": 26.0,
+      "unrestricted_template_age": 54,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 55,
+      "max_retained_discrepancies": 27.0,
+      "unrestricted_template_age": 55,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 56,
+      "max_retained_discrepancies": 27.0,
+      "unrestricted_template_age": 56,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 57,
+      "max_retained_discrepancies": 28.0,
+      "unrestricted_template_age": 57,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 58,
+      "max_retained_discrepancies": 28.0,
+      "unrestricted_template_age": 58,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 59,
+      "max_retained_discrepancies": 29.0,
+      "unrestricted_template_age": 59,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 60,
+      "max_retained_discrepancies": 29.0,
+      "unrestricted_template_age": 60,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 61,
+      "max_retained_discrepancies": 30.0,
+      "unrestricted_template_age": 61,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 62,
+      "max_retained_discrepancies": 30.0,
+      "unrestricted_template_age": 62,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 63,
+      "max_retained_discrepancies": 31.0,
+      "unrestricted_template_age": 63,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 64,
+      "max_retained_discrepancies": 31.0,
+      "unrestricted_template_age": 64,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 65,
+      "max_retained_discrepancies": 32.0,
+      "unrestricted_template_age": 65,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 66,
+      "max_retained_discrepancies": 32.0,
+      "unrestricted_template_age": 66,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 67,
+      "max_retained_discrepancies": 33.0,
+      "unrestricted_template_age": 67,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 68,
+      "max_retained_discrepancies": 33.0,
+      "unrestricted_template_age": 68,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 69,
+      "max_retained_discrepancies": 34.0,
+      "unrestricted_template_age": 69,
+      "locator_degree_correctable_bound": 35
+    },
+    {
+      "round": 70,
+      "max_retained_discrepancies": 34.0,
+      "unrestricted_template_age": 70,
+      "locator_degree_correctable_bound": 35
+    }
+  ],
+  "limitations": "The minimal-locator theorem applies to correctable inputs; no full quantum round, shift routing cleanup, history circuit, aggregate cost or admission is claimed."
+}

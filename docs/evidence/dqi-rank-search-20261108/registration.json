@@ -1,0 +1,10 @@
+{
+  "initial_terms_sha256": "ce323108c00d483c9eeefa1aec81d69c67f3eaa00490d86d4f8187a70749031c",
+  "max_seconds": 40.0,
+  "max_steps": 200000,
+  "restart_steps": 10000,
+  "scope": "development rank search",
+  "search_source_sha256": "c4ccd30f2de6d5c8865069c5bb29d62663cdcf4eea99de665ad52e259a9eaa9b",
+  "seed": 11108,
+  "tower_source_sha256": "112e7ad1e80241329371c5bdefbdf7319e1174f693ec2ec175daf0b23f3529bd"
+}

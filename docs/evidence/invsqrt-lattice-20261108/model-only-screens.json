@@ -1,0 +1,46 @@
+{
+  "control_cost": 509471.48180735623,
+  "control_kmb_sha256": "c487332fe965389191c8e6d34848d61c82748e5802c6e616eb0363869f92c4c9",
+  "control_table_sha256": "391304b70b1172cda1c9cff1af4dd05b892e021353224c20a2f8a6d1c67b2079",
+  "load_as_you_go": {
+    "assumptions": "No peak beyond isolated inner and outer rows; unchanged margin, fine rotations and other operation counts. Reload and unlookup may add peak width.",
+    "c2_lookup_toffolis": 766,
+    "c2_unlookup_toffolis": 56,
+    "isolated_row_qubits": {
+      "inner": 146,
+      "outer": 155,
+      "outer_without_c2": 141
+    },
+    "optimistic_score": {
+      "fine_rotations": 35,
+      "qubits": 146,
+      "rotation_epsilon_radians": 1.1587494041843706e-12,
+      "rotation_t": 962.6511434156456,
+      "score": 599901.2667346711,
+      "t_like": 1,
+      "toffoli_like": 3868
+    }
+  },
+  "two_octave": {
+    "assumptions": "Original width and margin; free octave-address selection; existing coefficient and repair geometry; ignores extra control workspace. The wider segment requires a new fitted table and full-domain model.",
+    "extra_row_toffolis": 162,
+    "lookup_tree_toffolis": {
+      "new": 508,
+      "old": 766
+    },
+    "optimistic_score": {
+      "fine_rotations": 35,
+      "qubits": 155,
+      "rotation_epsilon_radians": 1.1587494041843706e-12,
+      "rotation_t": 962.6511434156456,
+      "score": 491956.48180735623,
+      "t_like": 1,
+      "toffoli_like": 2933
+    },
+    "repair_tree_toffolis": {
+      "new": 39,
+      "old": 56
+    },
+    "saved_lookup_toffolis": 275
+  }
+}

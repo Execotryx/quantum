@@ -1,0 +1,11 @@
+{
+  "best_continuous_residual": 2.1186673022380393,
+  "elapsed_seconds": 48.03529907400002,
+  "evaluations": 1,
+  "reason": "gate or registered cap reached",
+  "running_best_residuals": [
+    2.1186673022380393
+  ],
+  "scope": "continuous S1 only; decoded checkpoints do not establish eligibility",
+  "status": "budget_limited"
+}

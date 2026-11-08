@@ -1,0 +1,20 @@
+{
+  "additional_toffoli_reduction_needed_even_if_rotations_free": 1046,
+  "control_direct_rotation_charge": 240.9127858539114,
+  "control_qubits": 155,
+  "control_rotation_inclusive_toffoli_equivalent": 3286.9127858539114,
+  "gradient_width_assumptions": [
+    30,
+    36
+  ],
+  "limitations": "Width is simple declared-register bookkeeping, not a lower bound on a redesigned circuit; peak lifetimes can change. Gradient preparation, accumulation, rounding and rotation costs are unmodeled. No predicted complete cost or gain.",
+  "other_qubits_that_must_be_removed_after_output_replacement": [
+    46,
+    52
+  ],
+  "removed_output_qubits_assumed": 39,
+  "status": "bookkeeping_only_no_prototype",
+  "target_qubits": 100,
+  "target_toffoli_equivalent": 2000,
+  "toffolis_if_all_direct_rotation_charge_vanished": 3046
+}

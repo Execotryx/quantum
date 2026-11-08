@@ -1,16 +1,16 @@
 ## 1. Control and tracer
 
-- [ ] 1.1 Add `configs/invsqrt-direct-v4.json` and protocol 4 in `tools/invsqrt_direct.py`. Rebuild v3 byte for byte (`ce8a58b6…f5b4`) as the control.
+- [x] 1.1 Add `configs/invsqrt-direct-v4.json` and protocol 4 in `tools/invsqrt_direct.py`. Rebuild v3 byte for byte (`ce8a58b6…f5b4`) as the control.
 - [ ] 1.2 Implement `LivenessBuilder` in `src/qcompile/liveness.py`. Prove the emitted bytes match the unproxied build by SHA-256.
 - [ ] 1.3 Record the per-call trace for v3: peak, call path at the peak, live allocations by site and width.
-- [ ] 1.4 Implement the op-stream interval analysis (direct iteration or KMX round-trip). Report declared count, `max id + 1`, distinct ids and maximum interval overlap.
-- [ ] 1.5 Build the dense and sparse counting fixtures and record how `num_qubits` is defined.
+- [x] 1.4 Implement the op-stream interval analysis (direct iteration or KMX round-trip). Report declared count, `max id + 1`, distinct ids and maximum interval overlap.
+- [x] 1.5 Build the dense and sparse counting fixtures and record how `num_qubits` is defined.
 - [ ] 1.6 Read the pinned `_add_row`, `iadd`, `isub`, `_phase_by_bits` and rotate primitives. Tabulate their internal allocations.
 
 ## 2. Decision
 
 - [ ] 2.1 Classify the gap as H1, H2 or mixed using the decision table. Bind the decision to the trace hashes.
-- [ ] 2.2 Recompute the qubit-to-Toffoli exchange rate from the control receipt.
+- [x] 2.2 Recompute the qubit-to-Toffoli exchange rate from the control receipt.
 
 ## 3. Remap (only if H1 or mixed)
 

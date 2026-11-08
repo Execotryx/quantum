@@ -1,0 +1,14 @@
+{
+  "initial_terms_sha256": "ce323108c00d483c9eeefa1aec81d69c67f3eaa00490d86d4f8187a70749031c",
+  "max_seconds": 45.0,
+  "max_steps": 1000000,
+  "restart_steps": 25000,
+  "scope": "development rank search",
+  "seed": 11109,
+  "source_sha256": {
+    "field": "8669c691af4649eb58fba39d55842f2dd9cbdd2bbe6eb32bdc6321cf6836beaa",
+    "runner": "c67eed3cf23bbcab9333b853b6201bc9c2ef51621de1a428130e9371f4050c30",
+    "search": "c0eae4934cae40c5813fc305e43a1cf1858fa68b03fa054250c651e03456d254",
+    "tower": "112e7ad1e80241329371c5bdefbdf7319e1174f693ec2ec175daf0b23f3529bd"
+  }
+}

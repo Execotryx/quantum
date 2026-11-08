@@ -1,7 +1,7 @@
 ## 1. End-state proofs
 
-- [ ] 1.1 Prove the `S ↔ (σ, ω)` and `ω ↔ g` bijections for weights 0–35 under the pinned indexing. Define the weight encoding and the zero case.
-- [ ] 1.2 Prove the linear phase identity `Tr(μ(E_j) · g(X_j))` against `recover_forney` and the trace-dual basis.
+- [x] 1.1 Prove the `S ↔ (σ, ω)` and `ω ↔ g` bijections for weights 0–35 under the pinned indexing. Define the weight encoding and the zero case.
+- [x] 1.2 Prove the linear phase identity `Tr(μ(E_j) · g(X_j))` against `recover_forney` and the trace-dual basis.
 
 ## 2. Small-field prototypes
 

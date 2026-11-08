@@ -1,0 +1,8 @@
+{
+  "kaggle_cli_version": "2.2.5",
+  "metadata_sha256": "f280f4c279b910f7249435200908aa4c80f0a4728c0dd901c3744dca0bf986ce",
+  "notebook": "metric/google-quantum-ai-metric",
+  "notebook_sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+  "observed_at_utc": "2026-11-08T09:59:32.697360+00:00",
+  "status": "matched_pin"
+}

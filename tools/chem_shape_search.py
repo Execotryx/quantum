@@ -15,11 +15,14 @@ from scipy.optimize import minimize
 
 from qcompile.artifacts import deterministic_npz
 from qcompile.chemistry.factorization import (
+    clustered_initialize,
+    continuation_initialize,
     direct_residual,
     factor_rows,
     gram_residual,
     initialize,
     joint_residual,
+    projection_score,
     rank_lower_bound,
     shifted_target,
     svec,
@@ -91,8 +94,8 @@ def fit_joint(plan_path: Path, output: Path) -> None:
     cap, wall = plan["max_evaluations"], plan["wall_seconds"]
     if type(cap) is not int or not 1 <= cap <= 20000 or type(wall) not in (int, float) or not 0 < wall <= 86400:
         raise ValueError("invalid registered evaluation or wall cap")
-    if plan["initializer"] not in ("I1", "I4") or type(plan["seed"]) is not int:
-        raise ValueError("expected I1 or seeded I4 initializer")
+    if plan["initializer"] not in ("I1", "I2", "I3", "I4") or type(plan["seed"]) is not int:
+        raise ValueError("expected an I1 through I4 initializer and integer seed")
     settings, _, _, _, api = backend()
     math_api = import_module("dfthcsos.scoreinfra.dfthc_math")
     inputs = fixed_inputs(api, source)
@@ -105,23 +108,40 @@ def fit_joint(plan_path: Path, output: Path) -> None:
     })
     start = time.monotonic()
     target = shifted_target(inputs.ref["tei"], inputs.S)
-    spectrum, eigenvectors = np.linalg.eigh(target)
     r, b, c = shape
     n = inputs.num_orbitals
-    if plan["initializer"] == "I1":
-        vectors, weights = initialize(spectrum, eigenvectors, n, shape)
+    spectrum = eigenvectors = None
+    if plan["initializer"] == "I3":
+        vectors, weights = continuation_initialize(inputs.params["U"], inputs.w, shape)
     else:
-        if r * c > np.count_nonzero(spectrum > 0):
-            raise ValueError("insufficient positive spectral factors")
-        groups = (eigenvectors[:, -r * c:] * np.sqrt(spectrum[-r * c:])).T.reshape(r, c, -1)
-        vectors = np.random.default_rng(plan["seed"]).normal(size=(r, b, n))
-        vectors /= np.linalg.norm(vectors, axis=-1, keepdims=True)
-        weights = np.empty(shape)
-        for k, group in enumerate(groups):
-            features = svec(vectors[k, :, :, None] * vectors[k, :, None, :])
-            weights[k] = np.linalg.lstsq(features.T, group.T, rcond=1e-10)[0]
+        spectrum, eigenvectors = np.linalg.eigh(target)
+        if plan["initializer"] == "I1":
+            vectors, weights = initialize(spectrum, eigenvectors, n, shape)
+        elif plan["initializer"] == "I2":
+            vectors, weights = clustered_initialize(spectrum, eigenvectors, n, shape, plan["seed"])
+        else:
+            if r * c > np.count_nonzero(spectrum > 0):
+                raise ValueError("insufficient positive spectral factors")
+            groups = (eigenvectors[:, -r * c:] * np.sqrt(spectrum[-r * c:])).T.reshape(r, c, -1)
+            vectors = np.random.default_rng(plan["seed"]).normal(size=(r, b, n))
+            vectors /= np.linalg.norm(vectors, axis=-1, keepdims=True)
+            weights = np.empty(shape)
+            for k, group in enumerate(groups):
+                features = svec(vectors[k, :, :, None] * vectors[k, :, None, :])
+                weights[k] = np.linalg.lstsq(features.T, group.T, rcond=1e-10)[0]
     split = vectors.size
     initial = np.concatenate((vectors.ravel(), weights.ravel()))
+    if plan.get("projection_ranking", False):
+        if spectrum is None or eigenvectors is None:
+            spectrum, eigenvectors = np.linalg.eigh(target)
+        if r * c > np.count_nonzero(spectrum > 0):
+            raise ValueError("insufficient positive spectral factors")
+        spectral_rows = (eigenvectors[:, -r * c:] * np.sqrt(spectrum[-r * c:])).T
+        score = projection_score(spectral_rows, vectors, c)
+        write_json(output / "initial-projection.json", {
+            "score": score,
+            "scope": "balanced spectral factor projection diagnostic, not a tensor-residual lower bound",
+        })
     norm = float(np.vdot(target, target))
     best_value = float("inf")
     best = initial.copy()

@@ -10,8 +10,8 @@ from typing import Literal
 from .artifacts import hashes, validate_manifest
 from .component_confirmations import (
     BENCHMARKS,
-    FAIL_FAST,
     CANDIDATE_PROFILE,
+    FAIL_FAST,
     candidate_coverage,
     component_binding,
     component_hashes,

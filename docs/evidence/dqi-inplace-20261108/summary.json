@@ -1,0 +1,22 @@
+{
+  "pinned_field_sampled_weights": "one deterministic case for every weight 0 through 35",
+  "test_sha256": "71e0636b07ab047bea1b69637d9a5fcc00f2095e63027e3ade0b0643927b07b1",
+  "degree_register_bits": 2,
+  "distinct_syndromes": 23851,
+  "syndrome_words": 4,
+  "limitations": "Oracle computations and scratch are not reversible gate implementations; compressed single-bank circuit and full-domain arbitrary syndrome coverage are not claimed.",
+  "field_degree": 4,
+  "full_syndrome_space": 65536,
+  "tested_weight_counts": [
+    1,
+    225,
+    23625
+  ],
+  "source_sha256": "3671088fdbd935865c077bb8d389f8cc14f8ff14f6f087e889c5b0cd736bf770",
+  "field_modulus": "0x13",
+  "distinct_encoded_states": 23851,
+  "exhaustive_decodable_patterns": 23851,
+  "max_weight": 2,
+  "full_size_two_bank_lower_bound_qubits": 1686,
+  "role": "classical reversible oracle harness"
+}
