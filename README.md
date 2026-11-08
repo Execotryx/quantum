@@ -29,10 +29,11 @@ to **509,471.48** and width from 159 to **155 qubits**.
 
 The v6 screen built each circuit twice, checked all 3,133,452 inputs
 against the phase model, and passed 31,232 native trajectories per circuit.
-The frozen v6 circuit then passed all **200,540,928** full-strength
-trajectories at the screened cost. Worst-case phase tolerance use stayed
-at **66.77%**. Fresh confirmation and paired archive verification remain
-pending. [Full v6 cloud result](docs/v6-full-cloud-08-11-2026-23-26-00.md)
+The frozen v6 circuit passed all **200,540,928** trajectories in each of
+the full-strength and fresh confirmation runs. Both reproduced the
+screened cost and **66.77%** worst-case phase tolerance use. Paired archive
+verification is pending.
+[v6 cloud confirmation](docs/v6-confirmation-cloud-09-11-2026-00-37-00.md)
 
 The DQI cost figures cover reduced dimensions. The full-size sampling
 campaign selected **history depth 2**. Four of 10,000,000 shots needed
