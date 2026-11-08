@@ -1,0 +1,85 @@
+{
+  "backend": {
+    "confirmation_mapping": {
+      "benchmark": "dqi",
+      "k": [
+        "value_errors",
+        "phase_errors"
+      ],
+      "n": "verified_shots"
+    },
+    "coverage_mapping": {
+      "dfthcsos": {
+        "completed": "verified_shots",
+        "expected": "verified_shots"
+      },
+      "dqi": {
+        "completed": "verified_shots",
+        "expected": "verified_shots"
+      },
+      "invsqrt": {
+        "completed": "verified_shots",
+        "expected": "verified_shots"
+      }
+    },
+    "coverage_mapping_note": "Both raw aliases are actual returned verified_shots; the independent required count is in contract.release.coverage; never infer success from exit status.",
+    "kickmix_files": {
+      "LICENSE.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "kickmix.so": "c66b3216c4029e0cdfd09054306aa0feadf53ab2f50c1164e37f752874e5005e"
+    },
+    "kickmix_root": "/mnt/e/sources/python/quantum/vendor/official/kickmix",
+    "metric_notebook": "/mnt/e/sources/python/quantum/vendor/metric/google-quantum-ai-metric.ipynb",
+    "metric_sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+    "metric_version": 10,
+    "verifiers_files": {
+      "LICENSE.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "dfthcsos/FeMoCo76o113e.fcidump": "e5a48af746fd075026dec9e8f5df2d363802a121e8c53af9a0b984bde695e1bd",
+      "dfthcsos/FeMoCo76o113e.fixed_shifts.npz": "7b7facf63fe35a9d9d3d00787ffdb700c863fa845fe4724d7f7c54778151cd87",
+      "dfthcsos/SCORING_README.md": "c2228569f96e58e118419bc32be2be9e33d6abffb8117cb0b91e1fc25b2a0230",
+      "dfthcsos/__init__.py": "81915e324cc0cade67f52a54b7a51991fd96abaea94d1f8a4d423dae20e57348",
+      "dfthcsos/example_submission/angle_k_reference_circuit.py": "8daccdca69f2d718b0176cd9281803df84a988ea5ac6c167fbb02e461ac2b371",
+      "dfthcsos/scoreinfra/__init__.py": "be90e0d503d5c20dcac0102af638b9a4ccad0341daa5baa5d49216a259e4516f",
+      "dfthcsos/scoreinfra/circuits.py": "fc027b52fdcebe14404f403a089122485d097ed65d03e6d989623d620b1ab68c",
+      "dfthcsos/scoreinfra/costs_prepare.py": "7f1e190c42fc5325f3e6689fbbef51f95b0cb12f1c828cda92b6c088e72206da",
+      "dfthcsos/scoreinfra/dfthc_math.py": "ae82898d47a7a86b96378fb906e0f8a9f46003065cf19c7c09952a123b5b5af8",
+      "dfthcsos/scoreinfra/reference.py": "a2d5a63191d655729e29f0fde1e85fe4630bf896a91a63bb894d8d7daf71ed39",
+      "dfthcsos/verify.py": "0775be7a528922367caebe9e4d051d6199811f1aefeaa4b793eaaa4621b8ec9d",
+      "dqi/__init__.py": "01c870aa9763f4e4357fc6654bff1d3296cec995bd0943f87b4a48946ada5b40",
+      "dqi/dqi_reference_circuit.py": "2b8e1b80a806157c333a7e308eaf2499ee09de499efbc05875202c327959959e",
+      "dqi/verify_submission_dqi.py": "f14274bc0943fb9769ddb01131be6063191a15009fe1caf1d4bdd9fd25194e65",
+      "invsqrt/__init__.py": "e9a6ecf253c343528578be5fa92eb820ccade63333aebb784552fb4ae75dbc0b",
+      "invsqrt/nr_reference_circuit.py": "bb90330dcf774f7b502de471293facba67f27952cc8808fe4a9970a9b1322e23",
+      "invsqrt/verify_submission_invsqrt.py": "ddef520dec6b68d1cf0a6f328ddd36d79eb84570b9192cf3f7acaf073f06733a"
+    },
+    "verifiers_root": "/mnt/e/sources/python/quantum/vendor/official/verifiers"
+  },
+  "blas_threads": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "plan": {
+    "factorization": {
+      "path": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69"
+    },
+    "profile_directory": "docs/evidence/chem-grid-profiles-20261108/r9-b129-c40",
+    "shape": [
+      9,
+      129,
+      40
+    ],
+    "target_sha256": "7e72455f4f6e6a476fed9c1626a96cebea775c4fc071145fd056af23d63e8393"
+  },
+  "plan_sha256": "cc45fc0751e07e3feca0484bce0db72a3af2b87a45b958125350e05e7d68e53b",
+  "profile_path": "docs/evidence/chem-grid-profiles-20261108/r9-b129-c40/measurement/profile.json",
+  "profile_sha256": "bcbd3af34f9cfbb12bd6fd90221e31e6fffbf2b603a5aae68923c25554f71eb1",
+  "ranking_source_sha256": "be74735cef38c54a93b90d555d419cddf731988f520672d6df2dc32cabc38cf8",
+  "source_hashes": {
+    "src/qcompile/chemistry/factorization.py": "3949134f0a1928be162ec6d44c126f315aa4aaae09be7bdb259bf0e2b601c71e",
+    "tools/banked_chemistry.py": "c9d9baad3f23951bb1b1a120a281adb2ccdd465485f107d797911f3ade3e9e48",
+    "tools/chem_refit.py": "1069086bd5b6065f5372f2a4c51cadf3968b975ccf9adc9dd0d4a3a301a25ff4",
+    "tools/chem_shape_search.py": "b09c0731885880b85a66a8b041840c57eecd6d822d7888e80634163710861ebe",
+    "uv.lock": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8"
+  }
+}

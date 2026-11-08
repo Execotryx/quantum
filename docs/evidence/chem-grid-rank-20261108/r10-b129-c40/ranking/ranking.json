@@ -1,0 +1,54 @@
+{
+  "elapsed_seconds": 37.209784184,
+  "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+  "profile_sha256": "550de4ee1ef82b947f3fbc14371264783852fb6c1ee90264e849091ab477ffa8",
+  "ranking": [
+    {
+      "checkpoint": "i1.npz",
+      "initial_continuous_residual": 5.915578462060003,
+      "initializer": "I1",
+      "initializer_sha256": "c5f97013b3cf7f6ada83d741b727ee9c243b94eacedaf24584458d2dcb5d6504",
+      "projection_score": 3.0163912948580607,
+      "seed": null
+    },
+    {
+      "checkpoint": "i2-185.npz",
+      "initial_continuous_residual": 7.929179004576082,
+      "initializer": "I2",
+      "initializer_sha256": "237b72e510a918ff303731dabdf0b83b7b301c97232239989c49e61ff2a04459",
+      "projection_score": 3.642806856149867,
+      "seed": 185
+    },
+    {
+      "checkpoint": "i2-184.npz",
+      "initial_continuous_residual": 7.947472572915697,
+      "initializer": "I2",
+      "initializer_sha256": "815ad381e84db4846e1d6770fe5c3cbb65da87eacc2768de65f37847f5064299",
+      "projection_score": 3.7094504879299968,
+      "seed": 184
+    },
+    {
+      "checkpoint": "i3.npz",
+      "initial_continuous_residual": 2.1175330686254936,
+      "initializer": "I3",
+      "initializer_sha256": "4eb289f678c070b09c08afc23b9a25254ec489ef8d6c6873f55086d464187547",
+      "projection_score": 4.238101002426252,
+      "seed": null
+    },
+    {
+      "checkpoint": "i4-184.npz",
+      "initial_continuous_residual": 11.336517104666006,
+      "initializer": "I4",
+      "initializer_sha256": "01953b682ee388053c391740df4b44fd5d06ff327b66a22151d4a0616122ebee",
+      "projection_score": 6.806460491480152,
+      "seed": 184
+    }
+  ],
+  "scope": "initial factor-space projection diagnostic; not a tensor-residual bound or shape rejection",
+  "shape": [
+    10,
+    129,
+    40
+  ],
+  "target_sha256": "7e72455f4f6e6a476fed9c1626a96cebea775c4fc071145fd056af23d63e8393"
+}

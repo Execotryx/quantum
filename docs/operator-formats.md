@@ -153,6 +153,20 @@ the hybrid smoke transition. That report retains its full tier and coverage.
 
 ## Rebuild recipes and certificates
 
+For a candidate-v1 successor whose backend identity differs from the
+trusted parent's, set `parent_verification_request` and
+`verification_request` to the original parent and successor
+`request.json` files. Certification checks each request against its own verification
+receipt and records the comparison as `parent_backend_review`. Only
+the four backend location fields may differ. Source and counter-map
+pins must match, and component confirmation uses its own backend gate.
+For a confirmation from a separate checkout, its registered protocol
+must bind the original backend inventory with `backend_inventory.path`
+and `backend_inventory.sha256`. Supply the archive's original request
+as `verification_request` in the supporting evidence. The certificate
+records each verified path-only difference under
+`confirmation_backend_reviews`.
+
 A release selection extends a candidate selection with `candidate_id` and
 `build_recipes`. Each generated path belongs to exactly one recipe. A recipe has
 `argv` (an argument array, with `{output_dir}` substituted into a new directory),

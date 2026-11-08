@@ -7,10 +7,20 @@ from pathlib import Path
 
 from .artifacts import deterministic_zip, extract_archive, hashes, validate_manifest
 from .component_confirmations import (
-    component_hashes, dqi_counts, generated_benchmarks, has_full_hybrid_coverage, registered_coverage,
+    component_hashes,
+    dqi_counts,
+    generated_benchmarks,
+    has_full_hybrid_coverage,
+    registered_coverage,
 )
 from .errors import BlockedError, ValidationError
 from .io import read_json, sha256, write_json
+from .official import (
+    compare_backend_inventories,
+    read_confirmation_backend,
+    review_backend_pair,
+    review_verification_request,
+)
 from .reference.scoring import aggregate
 
 
@@ -119,12 +129,23 @@ def _compare_candidate_parent(parent, candidate, verification, supporting_eviden
     changed = generated_benchmarks(candidate)
     retained = parent["retained_benchmarks"]
     historical_costs = parent["costs"]
-    if (
-        verification["backend_hash"] != parent["backend_hash"]
-        or score <= parent["score"]
-        or any(costs[name] >= historical_costs[name] for name in changed)
-    ):
+    if score <= parent["score"] or any(costs[name] >= historical_costs[name] for name in changed):
         raise BlockedError("successor must improve each changed component and the certified aggregate")
+    relocation = None
+    if verification["backend_hash"] != parent["backend_hash"]:
+        parent_request = supporting_evidence.get("parent_verification_request")
+        successor_request = supporting_evidence.get("verification_request")
+        if not parent_request or not successor_request:
+            raise BlockedError("successor backend differs without the original verification requests")
+        certificate_path = Path(parent["certificate_path"])
+        if sha256(certificate_path) != parent["certificate_sha256"]:
+            raise ValidationError("parent certificate changed before backend comparison")
+        parent_report = read_json(certificate_path)["verification"]
+        if parent_report["backend_hash"] != parent["backend_hash"]:
+            raise ValidationError("parent verification backend differs from the certificate anchor")
+        relocation = review_backend_pair(
+            parent_report, Path(parent_request), verification, Path(successor_request),
+        )
     for name, limit in candidate["config"].get("component_cost_limits", {}).items():
         if name not in changed or costs[name] > limit:
             raise BlockedError("successor missed its registered component cost limit")
@@ -159,6 +180,7 @@ def _compare_candidate_parent(parent, candidate, verification, supporting_eviden
             raise BlockedError("successor did not improve on the matched parent")
     if any(not isclose(costs[name], comparison[name], rel_tol=1e-12) for name in retained):
         raise BlockedError("retained component cost differs from its verified parent")
+    return relocation
 
 
 def certify_release(release, verification, contract, *, supporting_evidence):
@@ -203,13 +225,13 @@ def certify_release(release, verification, contract, *, supporting_evidence):
     if not isinstance(expected_counts, dict):
         raise BlockedError("resolved expected coverage is required")
     for name in ("invsqrt", "dqi", "dfthcsos"):
-        coverage = supporting_evidence["coverage_counts"].get(name, {})
+        count = supporting_evidence["coverage_counts"].get(name, {})
         if (
-            type(coverage.get("completed")) is not int
-            or coverage["completed"] <= 0
-            or coverage["completed"] != coverage.get("expected")
-            or coverage != actual_counts.get(name)
-            or coverage["expected"] != expected_counts.get(name)
+            type(count.get("completed")) is not int
+            or count["completed"] <= 0
+            or count["completed"] != count.get("expected")
+            or count != actual_counts.get(name)
+            or count["expected"] != expected_counts.get(name)
         ):
             raise BlockedError(f"incomplete release coverage: {name}")
     costs = official.get("costs", {})
@@ -218,6 +240,8 @@ def certify_release(release, verification, contract, *, supporting_evidence):
     if score <= 1 or not any(costs[k] < baselines[k] for k in costs):
         raise BlockedError("release must improve complete official cost and aggregate score")
     parent = release.get("parent")
+    backend_review = None
+    confirmation_backend_reviews = {}
     if "confirmations" in candidate or parent:
         optimized = generated_benchmarks(candidate) | ({"dfthcsos"} if parent and coverage is None else set())
         supporting = supporting_evidence.get("benchmark_evidence") or {}
@@ -234,18 +258,31 @@ def certify_release(release, verification, contract, *, supporting_evidence):
                 raise BlockedError(f"{benchmark} cost did not improve over the reference")
         changed = generated_benchmarks(candidate)
         confirmations = candidate.get("confirmations") or {next(iter(changed)): candidate["confirmation"]}
+        archive_backend = None
         for benchmark, receipt in confirmations.items():
-            if (
-                receipt["status"] != "passed"
-                or receipt["protocol"].get("backend_hash") != verification["backend_hash"]
-            ):
-                raise BlockedError(f"{benchmark} confirmation did not use the verified release backend")
+            if receipt["status"] != "passed":
+                raise BlockedError(f"{benchmark} confirmation did not pass")
+            protocol = receipt["protocol"]
+            if protocol.get("backend_hash") != verification["backend_hash"]:
+                request = supporting_evidence.get("verification_request")
+                if not request or "backend_inventory" not in protocol:
+                    raise BlockedError(f"{benchmark} confirmation lacks matching backend evidence")
+                component_backend = read_confirmation_backend(protocol)
+                if archive_backend is None:
+                    archive_backend = review_verification_request(verification, Path(request))
+                confirmation_backend_reviews[benchmark] = {
+                    **compare_backend_inventories(component_backend, archive_backend),
+                    "confirmation_inventory_sha256": protocol["backend_inventory"]["sha256"],
+                    "verification_request_sha256": verification["request_hash"],
+                }
             if coverage is not None and (
                 receipt["protocol"]["seed_policy"]["salt"] == verification["seed_policy"]["salt"]
             ):
                 raise BlockedError("archive verification must use a fresh salt")
         if parent and coverage is not None:
-            _compare_candidate_parent(parent, candidate, verification, supporting_evidence, baselines, score)
+            backend_review = _compare_candidate_parent(
+                parent, candidate, verification, supporting_evidence, baselines, score,
+            )
         elif parent:
             if (
                 verification["backend_hash"] != parent["backend_hash"]
@@ -259,6 +296,8 @@ def certify_release(release, verification, contract, *, supporting_evidence):
                 raise BlockedError("successor did not satisfy the measured parent comparison")
     return {
         **release,
+        **({"parent_backend_review": backend_review} if backend_review is not None else {}),
+        **({"confirmation_backend_reviews": confirmation_backend_reviews} if confirmation_backend_reviews else {}),
         "predicted_aggregate_score": score,
         "status": "locally_verified_awaiting_kaggle_acceptance",
         "verification": verification,

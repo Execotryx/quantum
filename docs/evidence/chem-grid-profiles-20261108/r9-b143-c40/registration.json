@@ -1,0 +1,21 @@
+{
+  "plan": {
+    "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+    "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+    "seed": 184,
+    "shape": [
+      9,
+      143,
+      40
+    ]
+  },
+  "plan_sha256": "0172a609e1c9b48e13eda258de3f91a542b330ed7293e9f3b6bd26a5f3478ed2",
+  "source_hashes": {
+    "src/qcompile/chemistry/factorization.py": "3949134f0a1928be162ec6d44c126f315aa4aaae09be7bdb259bf0e2b601c71e",
+    "tools/banked_chemistry.py": "c9d9baad3f23951bb1b1a120a281adb2ccdd465485f107d797911f3ade3e9e48",
+    "tools/chem_refit.py": "1069086bd5b6065f5372f2a4c51cadf3968b975ccf9adc9dd0d4a3a301a25ff4",
+    "tools/chem_shape_search.py": "b09c0731885880b85a66a8b041840c57eecd6d822d7888e80634163710861ebe",
+    "uv.lock": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8"
+  },
+  "wrapper_sha256": "1b331ddc1ba741409b99efd861fdd2fef0b7a5563c7eeb7b523244bb178c2353"
+}

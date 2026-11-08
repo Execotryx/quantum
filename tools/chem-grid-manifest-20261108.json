@@ -1,0 +1,41 @@
+{
+  "factorization": {
+    "path": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+    "sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69"
+  },
+  "target_sha256": "7e72455f4f6e6a476fed9c1626a96cebea775c4fc071145fd056af23d63e8393",
+  "seeds": [
+    184,
+    185
+  ],
+  "limits": {
+    "evaluations": 20000,
+    "wall_seconds": 18000
+  },
+  "shapes": {
+    "r9-b143-c40": {
+      "profile_directory": "docs/evidence/chem-grid-profiles-20261108/r9-b143-c40",
+      "profile_sha256": "711b7d748675b055cdf6ac87101a29bfdcbd24199b7593fa1e9b0798f43d818f",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r9-b143-c40/ranking/ranking.json",
+      "ranking_sha256": null
+    },
+    "r9-b129-c40": {
+      "profile_directory": "docs/evidence/chem-grid-profiles-20261108/r9-b129-c40",
+      "profile_sha256": "bcbd3af34f9cfbb12bd6fd90221e31e6fffbf2b603a5aae68923c25554f71eb1",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r9-b129-c40/ranking/ranking.json",
+      "ranking_sha256": null
+    },
+    "r10-b129-c40": {
+      "profile_directory": "docs/evidence/chem-grid-profiles-20261108/r10-b129-c40",
+      "profile_sha256": "550de4ee1ef82b947f3fbc14371264783852fb6c1ee90264e849091ab477ffa8",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r10-b129-c40/ranking/ranking.json",
+      "ranking_sha256": null
+    },
+    "r8-b120-c40": {
+      "profile_directory": "docs/evidence/chem-grid-profiles-20261108/r8-b120-c40",
+      "profile_sha256": "00344805123ebe77560063a803350c62e4463086135ab92c07e48658acccbbf8",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r8-b120-c40/ranking/ranking.json",
+      "ranking_sha256": null
+    }
+  }
+}

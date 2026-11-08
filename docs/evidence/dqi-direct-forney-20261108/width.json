@@ -1,0 +1,36 @@
+{
+  "baseline_word_qubits": 12,
+  "kickmix_sha256": "c66b3216c4029e0cdfd09054306aa0feadf53ab2f50c1164e37f752874e5005e",
+  "operation_widths": {
+    "gf2_idiv": {
+      "constants_checked": 4095,
+      "first_max_witnesses": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "max_declared_qubits": 12
+    },
+    "gf2_imul": {
+      "constants_checked": 4095,
+      "first_max_witnesses": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "max_declared_qubits": 12
+    }
+  },
+  "role": "development_structural_bound",
+  "tool_sha256": "ddb6228587c3a33abb69863267676c1dd86ec1100684c3dc2793db0437ce55cf"
+}

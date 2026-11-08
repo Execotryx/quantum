@@ -61,6 +61,12 @@ development cases at `(63, 2)`. The full-size decoder remains in
 development. [Routed round](docs/dqi-native-arithmetic-round-08-11-2026-15-42-52.md) ·
 [Reduced decoder](docs/dqi-radius-one-composition-08-11-2026-15-37-00.md)
 
+The half-degree Bézout construction matches the independent DQI
+reciprocal on reduced exhaustive fixtures and sampled cases at all
+weights through 35. A reversible monomial update passed native tests.
+General reversible quotient generation and full decoder admission remain
+open. [Half-degree reciprocal work](docs/dqi-half-degree-bezout-08-11-2026-16-12-49.md)
+
 The registered chemistry loader ranked all seven legal batches on
 the pinned reference factors. Its best development estimate was
 **3.2504 billion**, 0.081% above the existing verified chemistry cost.
@@ -68,12 +74,16 @@ Two builds reproduced the winning family and verified all 4,096
 binary addresses, including padding.
 [Reference loader ranking](docs/chemistry-loader-reference-ranking-08-11-2026-15-48-27.md)
 
-The best joint chemistry cloud pilot reached **314.05 mHa** after 250
-evaluations. A separate local I3 run reached **81.40 mHa** after 1,500
-evaluations and was still improving at its cap. Both remained above the
-19 mHa continuous gate. The
-[roadmap measurements](docs/hybrid-roadmap-checkpoint-08-11-2026-14-54-02.md)
-link the matched controls and development receipts.
+The local I3 fit reached **81.40 mHa** after 1,500 evaluations. A
+separately registered restart reached **41.57 mHa** after 5,000 more
+evaluations. The continuous gate is **19.0 mHa**. Four pinned shape
+profiles and initializer rankings now bind the **24 fit plans**.
+[Continuation result](docs/chemistry-i3-continuation-result-08-11-2026-16-19-24.md) ·
+[Grid registration](docs/chemistry-fit-grid-08-11-2026-16-16-34.md)
+
+The direct inverse-square-root cost model matches width and counted
+gates on 27 comparable circuit receipts.
+[Resource model calibration](docs/invsqrt-costmodel-08-11-2026-16-08-55.md)
 
 ### Earlier hybrid results
 

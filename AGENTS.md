@@ -9,6 +9,8 @@
 - Review archived backend requests through their original receipt hashes.
   A path-only inventory comparison keeps both original identities and
   leaves the separate release lineage and confirmation gates in force.
+  Pin a separately located confirmation inventory in its protocol before
+  reserving the salt.
 - Keep the Cloud Shell provisioner's resource defaults and JSON output aligned
   with the operations plugin. Verify preview and rerun behavior without cloud writes.
 - Inverse-square-root opportunity screens freeze the protocol before simulation,
@@ -28,6 +30,8 @@
 - The trimmed-width inverse-square-root recipe proves every intermediate
   fits and every phase matches v4 before using narrowed registers.
   Run the control first and preserve the exact emitted KMB for confirmation.
+- Use the calibrated direct cost model only for its supported uniform
+  dyadic architecture. Unseen formats need fresh phase and native gates.
 - Keep tower-field DQI development receipts scoped to their actual code
   dimensions. Run the chemistry continuous residual gate before emitting
   decoded words or ANGLE circuits.

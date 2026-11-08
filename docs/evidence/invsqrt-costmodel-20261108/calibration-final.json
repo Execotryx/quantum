@@ -1,0 +1,1433 @@
+{
+  "backend_sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+  "calibration_tool_sha256": "d50f0d4d352879af4abd4644c03ebae924e49ebe6a4aebe8ce6de5dfe79525d0",
+  "cases": [
+    {
+      "actual": {
+        "fine_rotations": 37,
+        "qubits": 169,
+        "rotation_epsilon_radians": 2.1157960075354854e-12,
+        "rotation_t": 999.661726363705,
+        "score": 738895.9579388666,
+        "t_like": 1,
+        "toffoli_like": 4122
+      },
+      "parameters": {
+        "binary_normalization": true,
+        "fit": "minimax",
+        "fractional": [
+          30,
+          24,
+          18
+        ],
+        "fused": true,
+        "reuse_lookup": true,
+        "segment_bits": 7
+      },
+      "path": "docs/evidence/advance-hybrid-20261108/invsqrt/attempt-binary-normalization.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 37,
+          "qubits": 169,
+          "rotation_epsilon_radians": 2.1157960075354854e-12,
+          "rotation_t": 999.661726363705,
+          "score": 738895.9579388666,
+          "t_like": 1,
+          "toffoli_like": 4122
+        },
+        "horner_by_stage": [
+          1196,
+          858
+        ],
+        "stages": {
+          "coefficient_lookup": 766,
+          "coefficient_unlookup": 766,
+          "horner": 2054,
+          "input_shift": 160,
+          "normalization_flags": 56,
+          "output_shift": 320
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "9273bb163b47b730f2bc7e43b46a807c2cf315f38ffba7f5e588eb66aa0c9135",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 38,
+        "qubits": 199,
+        "rotation_epsilon_radians": 2.4387112135488054e-12,
+        "rotation_t": 1022.318947529151,
+        "score": 1008498.1176395753,
+        "t_like": 1,
+        "toffoli_like": 4812
+      },
+      "parameters": {
+        "fractional": [
+          31,
+          26,
+          21,
+          16
+        ],
+        "fused": true,
+        "reuse_lookup": true,
+        "segment_bits": 6
+      },
+      "path": "docs/evidence/advance-hybrid-20261108/invsqrt/attempt-certified-direct.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 38,
+          "qubits": 199,
+          "rotation_epsilon_radians": 2.4387112135488054e-12,
+          "rotation_t": 1022.318947529151,
+          "score": 1008498.1176395753,
+          "t_like": 1,
+          "toffoli_like": 4812
+        },
+        "horner_by_stage": [
+          1358,
+          1050,
+          770
+        ],
+        "stages": {
+          "coefficient_lookup": 382,
+          "coefficient_unlookup": 382,
+          "horner": 3178,
+          "input_shift": 220,
+          "normalization_flags": 10,
+          "output_shift": 640
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "4576204a7d8d9607f8dc24bfd4345212b57e8442ed3d30aaa42a7899b5d284f4",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 36,
+        "qubits": 159,
+        "rotation_epsilon_radians": 8.601644070396454e-13,
+        "rotation_t": 998.8219284210002,
+        "score": 548860.9216547348,
+        "t_like": 1,
+        "toffoli_like": 3202
+      },
+      "parameters": {
+        "binary_normalization": true,
+        "fit": "minimax",
+        "fractional": [
+          29,
+          21,
+          14
+        ],
+        "fused": true,
+        "measurement_unlookup": true,
+        "reuse_lookup": true,
+        "segment_bits": 7
+      },
+      "path": "docs/evidence/advance-hybrid-20261108/invsqrt/attempt-combined-v3.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 36,
+          "qubits": 159,
+          "rotation_epsilon_radians": 8.601644070396454e-13,
+          "rotation_t": 998.8219284210002,
+          "score": 548860.9216547348,
+          "t_like": 1,
+          "toffoli_like": 3202
+        },
+        "horner_by_stage": [
+          1144,
+          702
+        ],
+        "stages": {
+          "coefficient_lookup": 766,
+          "coefficient_unlookup": 56,
+          "horner": 1846,
+          "input_shift": 160,
+          "normalization_flags": 56,
+          "output_shift": 318
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "b835a906b25e138c86bfb9944859e227a9d208d45ccf58ff0bdc98a1e0f14cf0",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 37,
+        "qubits": 175,
+        "rotation_epsilon_radians": 2.1157960075354854e-12,
+        "rotation_t": 999.661726363705,
+        "score": 695828.9505284121,
+        "t_like": 1,
+        "toffoli_like": 3726
+      },
+      "parameters": {
+        "fit": "minimax",
+        "fractional": [
+          30,
+          24,
+          18
+        ],
+        "fused": true,
+        "measurement_unlookup": true,
+        "reuse_lookup": true,
+        "segment_bits": 7
+      },
+      "path": "docs/evidence/advance-hybrid-20261108/invsqrt/attempt-phase-repair.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 37,
+          "qubits": 175,
+          "rotation_epsilon_radians": 2.1157960075354854e-12,
+          "rotation_t": 999.661726363705,
+          "score": 695828.9505284121,
+          "t_like": 1,
+          "toffoli_like": 3726
+        },
+        "horner_by_stage": [
+          1196,
+          858
+        ],
+        "stages": {
+          "coefficient_lookup": 766,
+          "coefficient_unlookup": 56,
+          "horner": 2054,
+          "input_shift": 220,
+          "normalization_flags": 10,
+          "output_shift": 620
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "ee7e32c733f3132e1a4c0f1d6f2c41492905baa7c21a4004d336126fa8b98578",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 36,
+        "qubits": 165,
+        "rotation_epsilon_radians": 8.601644070396454e-13,
+        "rotation_t": 998.8219284210002,
+        "score": 735562.6545473662,
+        "t_like": 1,
+        "toffoli_like": 4208
+      },
+      "parameters": {
+        "fit": "minimax",
+        "fractional": [
+          29,
+          21,
+          14
+        ],
+        "fused": true,
+        "reuse_lookup": true,
+        "segment_bits": 7
+      },
+      "path": "docs/evidence/advance-hybrid-20261108/invsqrt/attempt-precision-29.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 36,
+          "qubits": 165,
+          "rotation_epsilon_radians": 8.601644070396454e-13,
+          "rotation_t": 998.8219284210002,
+          "score": 735562.6545473662,
+          "t_like": 1,
+          "toffoli_like": 4208
+        },
+        "horner_by_stage": [
+          1144,
+          702
+        ],
+        "stages": {
+          "coefficient_lookup": 766,
+          "coefficient_unlookup": 766,
+          "horner": 1846,
+          "input_shift": 220,
+          "normalization_flags": 10,
+          "output_shift": 600
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "0dcf42cfb1846097dba2ab7d4d88bfaae364757ed7e3040f180018c7ad4e3707",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 36,
+        "qubits": 165,
+        "rotation_epsilon_radians": 8.601644070396454e-13,
+        "rotation_t": 998.8219284210002,
+        "score": 618412.6545473663,
+        "t_like": 1,
+        "toffoli_like": 3498
+      },
+      "parameters": {
+        "fit": "minimax",
+        "fractional": [
+          29,
+          21,
+          14
+        ],
+        "fused": true,
+        "measurement_unlookup": true,
+        "reuse_lookup": true,
+        "segment_bits": 7
+      },
+      "path": "docs/evidence/advance-hybrid-20261108/invsqrt/attempt-precision-with-phase-repair.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 36,
+          "qubits": 165,
+          "rotation_epsilon_radians": 8.601644070396454e-13,
+          "rotation_t": 998.8219284210002,
+          "score": 618412.6545473663,
+          "t_like": 1,
+          "toffoli_like": 3498
+        },
+        "horner_by_stage": [
+          1144,
+          702
+        ],
+        "stages": {
+          "coefficient_lookup": 766,
+          "coefficient_unlookup": 56,
+          "horner": 1846,
+          "input_shift": 220,
+          "normalization_flags": 10,
+          "output_shift": 600
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "d6ab3a79a342e3253e48fab79dc7b78e807eab08ebb790777ee6164926d946bc",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 37,
+        "qubits": 175,
+        "rotation_epsilon_radians": 2.1157960075354854e-12,
+        "rotation_t": 999.661726363705,
+        "score": 820078.9505284121,
+        "t_like": 1,
+        "toffoli_like": 4436
+      },
+      "parameters": {
+        "fit": "minimax",
+        "fractional": [
+          30,
+          24,
+          18
+        ],
+        "fused": true,
+        "reuse_lookup": true,
+        "segment_bits": 7
+      },
+      "path": "docs/evidence/advance-hybrid-20261108/invsqrt/attempt-verified-quadratic-v2.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 37,
+          "qubits": 175,
+          "rotation_epsilon_radians": 2.1157960075354854e-12,
+          "rotation_t": 999.661726363705,
+          "score": 820078.9505284121,
+          "t_like": 1,
+          "toffoli_like": 4436
+        },
+        "horner_by_stage": [
+          1196,
+          858
+        ],
+        "stages": {
+          "coefficient_lookup": 766,
+          "coefficient_unlookup": 766,
+          "horner": 2054,
+          "input_shift": 220,
+          "normalization_flags": 10,
+          "output_shift": 620
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "7107006746e21668e12fe4360737d4c5a8392f26cc6372a55f8b90d64f002c8a",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 38,
+        "qubits": 199,
+        "rotation_epsilon_radians": 2.4387112135488054e-12,
+        "rotation_t": 1022.318947529151,
+        "score": 1008498.1176395753,
+        "t_like": 1,
+        "toffoli_like": 4812
+      },
+      "parameters": {
+        "fractional": [
+          31,
+          26,
+          21,
+          16
+        ],
+        "fused": true,
+        "reuse_lookup": true,
+        "segment_bits": 6
+      },
+      "path": "docs/evidence/invsqrt-direct-20261107/combined/attempt.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 38,
+          "qubits": 199,
+          "rotation_epsilon_radians": 2.4387112135488054e-12,
+          "rotation_t": 1022.318947529151,
+          "score": 1008498.1176395753,
+          "t_like": 1,
+          "toffoli_like": 4812
+        },
+        "horner_by_stage": [
+          1358,
+          1050,
+          770
+        ],
+        "stages": {
+          "coefficient_lookup": 382,
+          "coefficient_unlookup": 382,
+          "horner": 3178,
+          "input_shift": 220,
+          "normalization_flags": 10,
+          "output_shift": 640
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "390194afa0c799d9c3038b0ea494527325b4722a94675c9e647f428df4778e60",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 40,
+        "qubits": 252,
+        "rotation_epsilon_radians": 2.5599152213266653e-12,
+        "rotation_t": 1074.5577207848996,
+        "score": 2301992.1364094485,
+        "t_like": 1,
+        "toffoli_like": 8866
+      },
+      "parameters": {
+        "fractional": [
+          33,
+          28,
+          23,
+          18
+        ],
+        "segment_bits": 6
+      },
+      "path": "docs/evidence/invsqrt-direct-20261107/direct-control/attempt.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 40,
+          "qubits": 252,
+          "rotation_epsilon_radians": 2.5599152213266653e-12,
+          "rotation_t": 1074.5577207848996,
+          "score": 2301992.1364094485,
+          "t_like": 1,
+          "toffoli_like": 8866
+        },
+        "horner_by_stage": [
+          3006,
+          2378,
+          1808
+        ],
+        "stages": {
+          "coefficient_lookup": 382,
+          "coefficient_unlookup": 382,
+          "horner": 7192,
+          "input_shift": 220,
+          "normalization_flags": 10,
+          "output_shift": 680
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "3f5be76fb087e821ed2ebc2d63e812c615fa6fed4a389d728a3ad18a8a41861f",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 39,
+        "qubits": 241,
+        "rotation_epsilon_radians": 2.5674219358865385e-12,
+        "rotation_t": 1047.6015173287665,
+        "score": 2068780.2414190583,
+        "t_like": 1,
+        "toffoli_like": 8322
+      },
+      "parameters": {
+        "fractional": [
+          32,
+          26,
+          20,
+          15
+        ],
+        "segment_bits": 7
+      },
+      "path": "docs/evidence/invsqrt-direct-20261107/finer-cubic/attempt.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 39,
+          "qubits": 241,
+          "rotation_epsilon_radians": 2.5674219358865385e-12,
+          "rotation_t": 1047.6015173287665,
+          "score": 2068780.2414190583,
+          "t_like": 1,
+          "toffoli_like": 8322
+        },
+        "horner_by_stage": [
+          2664,
+          1974,
+          1262
+        ],
+        "stages": {
+          "coefficient_lookup": 766,
+          "coefficient_unlookup": 766,
+          "horner": 5900,
+          "input_shift": 220,
+          "normalization_flags": 10,
+          "output_shift": 660
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "20d116f099d2e6ad719b42cfb9bc1251f0d73f590104dbb0361e2d09718fafa7",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 38,
+        "qubits": 206,
+        "rotation_epsilon_radians": 2.4387112135488054e-12,
+        "rotation_t": 1022.318947529151,
+        "score": 1043972.9257977513,
+        "t_like": 1,
+        "toffoli_like": 4812
+      },
+      "parameters": {
+        "fractional": [
+          31,
+          26,
+          21,
+          16
+        ],
+        "fused": true,
+        "segment_bits": 6
+      },
+      "path": "docs/evidence/invsqrt-direct-20261107/fused/attempt.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 38,
+          "qubits": 206,
+          "rotation_epsilon_radians": 2.4387112135488054e-12,
+          "rotation_t": 1022.318947529151,
+          "score": 1043972.9257977513,
+          "t_like": 1,
+          "toffoli_like": 4812
+        },
+        "horner_by_stage": [
+          1358,
+          1050,
+          770
+        ],
+        "stages": {
+          "coefficient_lookup": 382,
+          "coefficient_unlookup": 382,
+          "horner": 3178,
+          "input_shift": 220,
+          "normalization_flags": 10,
+          "output_shift": 640
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "0c8903c45e7e333efa2109bb9cdac117f5da6e680dcc0f4ddc84cb048d065f81",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 38,
+        "qubits": 238,
+        "rotation_epsilon_radians": 2.4387112135488054e-12,
+        "rotation_t": 1022.318947529151,
+        "score": 1998683.4773779844,
+        "t_like": 1,
+        "toffoli_like": 8142
+      },
+      "parameters": {
+        "fractional": [
+          31,
+          26,
+          21,
+          16
+        ],
+        "segment_bits": 6
+      },
+      "path": "docs/evidence/invsqrt-direct-20261107/narrow-cubic/attempt.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 38,
+          "qubits": 238,
+          "rotation_epsilon_radians": 2.4387112135488054e-12,
+          "rotation_t": 1022.318947529151,
+          "score": 1998683.4773779844,
+          "t_like": 1,
+          "toffoli_like": 8142
+        },
+        "horner_by_stage": [
+          2778,
+          2150,
+          1580
+        ],
+        "stages": {
+          "coefficient_lookup": 382,
+          "coefficient_unlookup": 382,
+          "horner": 6508,
+          "input_shift": 220,
+          "normalization_flags": 10,
+          "output_shift": 640
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "e00e1b8ac1f96dbe413d92d976ea1c55a1ec83573e10991394d0bd0a175ac8b0",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 40,
+        "qubits": 264,
+        "rotation_epsilon_radians": 2.5599152213266653e-12,
+        "rotation_t": 1074.5577207848996,
+        "score": 2773290.809571803,
+        "t_like": 1,
+        "toffoli_like": 10236
+      },
+      "parameters": {
+        "fractional": [
+          33,
+          28,
+          23,
+          18,
+          13
+        ],
+        "segment_bits": 5
+      },
+      "path": "docs/evidence/invsqrt-direct-20261107/quartic/attempt.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 40,
+          "qubits": 264,
+          "rotation_epsilon_radians": 2.5599152213266653e-12,
+          "rotation_t": 1074.5577207848996,
+          "score": 2773290.809571803,
+          "t_like": 1,
+          "toffoli_like": 10236
+        },
+        "horner_by_stage": [
+          3246,
+          2574,
+          1964,
+          1162
+        ],
+        "stages": {
+          "coefficient_lookup": 190,
+          "coefficient_unlookup": 190,
+          "horner": 8946,
+          "input_shift": 220,
+          "normalization_flags": 10,
+          "output_shift": 680
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "5bc548b4dd676fbeea38a234b55afbaab2c1df8705f10f40f7bae57fda9a4cce",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 38,
+        "qubits": 231,
+        "rotation_epsilon_radians": 2.4387112135488054e-12,
+        "rotation_t": 1022.318947529151,
+        "score": 1939898.6692198084,
+        "t_like": 1,
+        "toffoli_like": 8142
+      },
+      "parameters": {
+        "fractional": [
+          31,
+          26,
+          21,
+          16
+        ],
+        "reuse_lookup": true,
+        "segment_bits": 6
+      },
+      "path": "docs/evidence/invsqrt-direct-20261107/reuse/attempt.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 38,
+          "qubits": 231,
+          "rotation_epsilon_radians": 2.4387112135488054e-12,
+          "rotation_t": 1022.318947529151,
+          "score": 1939898.6692198084,
+          "t_like": 1,
+          "toffoli_like": 8142
+        },
+        "horner_by_stage": [
+          2778,
+          2150,
+          1580
+        ],
+        "stages": {
+          "coefficient_lookup": 382,
+          "coefficient_unlookup": 382,
+          "horner": 6508,
+          "input_shift": 220,
+          "normalization_flags": 10,
+          "output_shift": 640
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "58601805c744d5a824ce365780300797b73fe3ebce4b2785bb8c40043920a5f0",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 38,
+        "qubits": 199,
+        "rotation_epsilon_radians": 2.4387112135488054e-12,
+        "rotation_t": 1022.318947529151,
+        "score": 1008498.1176395753,
+        "t_like": 1,
+        "toffoli_like": 4812
+      },
+      "parameters": {
+        "fractional": [
+          31,
+          26,
+          21,
+          16
+        ],
+        "fused": true,
+        "reuse_lookup": true,
+        "segment_bits": 6
+      },
+      "path": "docs/evidence/invsqrt-v4-screen-20261108/attempt-certified-direct.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 38,
+          "qubits": 199,
+          "rotation_epsilon_radians": 2.4387112135488054e-12,
+          "rotation_t": 1022.318947529151,
+          "score": 1008498.1176395753,
+          "t_like": 1,
+          "toffoli_like": 4812
+        },
+        "horner_by_stage": [
+          1358,
+          1050,
+          770
+        ],
+        "stages": {
+          "coefficient_lookup": 382,
+          "coefficient_unlookup": 382,
+          "horner": 3178,
+          "input_shift": 220,
+          "normalization_flags": 10,
+          "output_shift": 640
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "4576204a7d8d9607f8dc24bfd4345212b57e8442ed3d30aaa42a7899b5d284f4",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 35,
+        "qubits": 155,
+        "rotation_epsilon_radians": 1.1587494041843706e-12,
+        "rotation_t": 962.6511434156456,
+        "score": 509471.48180735623,
+        "t_like": 1,
+        "toffoli_like": 3046
+      },
+      "parameters": {
+        "binary_normalization": true,
+        "fit": "minimax",
+        "fractional": [
+          28,
+          20,
+          14
+        ],
+        "fused": true,
+        "lattice_receipt": "docs/evidence/invsqrt-lattice-20261108/28-20-14.json",
+        "measurement_unlookup": true,
+        "reuse_lookup": true,
+        "segment_bits": 7
+      },
+      "path": "docs/evidence/invsqrt-v4-screen-20261108/attempt-combined-lattice.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 35,
+          "qubits": 155,
+          "rotation_epsilon_radians": 1.1587494041843706e-12,
+          "rotation_t": 962.6511434156456,
+          "score": 509471.48180735623,
+          "t_like": 1,
+          "toffoli_like": 3046
+        },
+        "horner_by_stage": [
+          1092,
+          612
+        ],
+        "stages": {
+          "coefficient_lookup": 766,
+          "coefficient_unlookup": 56,
+          "horner": 1704,
+          "input_shift": 160,
+          "normalization_flags": 56,
+          "output_shift": 304
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "8deaea8680eb20ccc5d64b1159ef419212341993073fc6a51d0e28eebba10bad",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 35,
+        "qubits": 156,
+        "rotation_epsilon_radians": 1.1915223615471038e-12,
+        "rotation_t": 961.8624897855816,
+        "score": 526767.6371016377,
+        "t_like": 1,
+        "toffoli_like": 3136
+      },
+      "parameters": {
+        "binary_normalization": true,
+        "fit": "minimax",
+        "fractional": [
+          28,
+          21,
+          14
+        ],
+        "fused": true,
+        "lattice_receipt": "docs/evidence/invsqrt-lattice-20261108/28-21-14.json",
+        "measurement_unlookup": true,
+        "reuse_lookup": true,
+        "segment_bits": 7
+      },
+      "path": "docs/evidence/invsqrt-v4-screen-20261108/attempt-lattice-28-21-14.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 35,
+          "qubits": 156,
+          "rotation_epsilon_radians": 1.1915223615471038e-12,
+          "rotation_t": 961.8624897855816,
+          "score": 526767.6371016377,
+          "t_like": 1,
+          "toffoli_like": 3136
+        },
+        "horner_by_stage": [
+          1092,
+          702
+        ],
+        "stages": {
+          "coefficient_lookup": 766,
+          "coefficient_unlookup": 56,
+          "horner": 1794,
+          "input_shift": 160,
+          "normalization_flags": 56,
+          "output_shift": 304
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "6262d1272a6fe3af87e65b774c1e02a0ad25affc1b28ff7ddb262736a2ce4f85",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 36,
+        "qubits": 158,
+        "rotation_epsilon_radians": 5.840034681792155e-13,
+        "rotation_t": 1010.0840200630071,
+        "score": 531001.8187924888,
+        "t_like": 1,
+        "toffoli_like": 3108
+      },
+      "parameters": {
+        "binary_normalization": true,
+        "fit": "minimax",
+        "fractional": [
+          29,
+          20,
+          14
+        ],
+        "fused": true,
+        "lattice_receipt": "docs/evidence/invsqrt-lattice-20261108/29-20-14.json",
+        "measurement_unlookup": true,
+        "reuse_lookup": true,
+        "segment_bits": 7
+      },
+      "path": "docs/evidence/invsqrt-v4-screen-20261108/attempt-lattice-29-20-14.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 36,
+          "qubits": 158,
+          "rotation_epsilon_radians": 5.840034681792155e-13,
+          "rotation_t": 1010.0840200630071,
+          "score": 531001.8187924888,
+          "t_like": 1,
+          "toffoli_like": 3108
+        },
+        "horner_by_stage": [
+          1140,
+          612
+        ],
+        "stages": {
+          "coefficient_lookup": 766,
+          "coefficient_unlookup": 56,
+          "horner": 1752,
+          "input_shift": 160,
+          "normalization_flags": 56,
+          "output_shift": 318
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "8a84cd0f011bed41fcb9e2cbf4a071aaa2fb7bb3fb1c2a2abb8506d3cee81a6c",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 37,
+        "qubits": 175,
+        "rotation_epsilon_radians": 2.1157960075354854e-12,
+        "rotation_t": 999.661726363705,
+        "score": 820078.9505284121,
+        "t_like": 1,
+        "toffoli_like": 4436
+      },
+      "parameters": {
+        "fit": "minimax",
+        "fractional": [
+          30,
+          24,
+          18
+        ],
+        "fused": true,
+        "reuse_lookup": true,
+        "segment_bits": 7
+      },
+      "path": "docs/evidence/invsqrt-v4-screen-20261108/attempt-verified-quadratic-v2.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 37,
+          "qubits": 175,
+          "rotation_epsilon_radians": 2.1157960075354854e-12,
+          "rotation_t": 999.661726363705,
+          "score": 820078.9505284121,
+          "t_like": 1,
+          "toffoli_like": 4436
+        },
+        "horner_by_stage": [
+          1196,
+          858
+        ],
+        "stages": {
+          "coefficient_lookup": 766,
+          "coefficient_unlookup": 766,
+          "horner": 2054,
+          "input_shift": 220,
+          "normalization_flags": 10,
+          "output_shift": 620
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "7107006746e21668e12fe4360737d4c5a8392f26cc6372a55f8b90d64f002c8a",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 36,
+        "qubits": 159,
+        "rotation_epsilon_radians": 8.601644070396454e-13,
+        "rotation_t": 998.8219284210002,
+        "score": 548860.9216547348,
+        "t_like": 1,
+        "toffoli_like": 3202
+      },
+      "parameters": {
+        "binary_normalization": true,
+        "fit": "minimax",
+        "fractional": [
+          29,
+          21,
+          14
+        ],
+        "fused": true,
+        "measurement_unlookup": true,
+        "reuse_lookup": true,
+        "segment_bits": 7
+      },
+      "path": "docs/evidence/invsqrt-v4-screen-20261108/attempt-verified-v3.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 36,
+          "qubits": 159,
+          "rotation_epsilon_radians": 8.601644070396454e-13,
+          "rotation_t": 998.8219284210002,
+          "score": 548860.9216547348,
+          "t_like": 1,
+          "toffoli_like": 3202
+        },
+        "horner_by_stage": [
+          1144,
+          702
+        ],
+        "stages": {
+          "coefficient_lookup": 766,
+          "coefficient_unlookup": 56,
+          "horner": 1846,
+          "input_shift": 160,
+          "normalization_flags": 56,
+          "output_shift": 318
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "b835a906b25e138c86bfb9944859e227a9d208d45ccf58ff0bdc98a1e0f14cf0",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 38,
+        "qubits": 199,
+        "rotation_epsilon_radians": 2.4387112135488054e-12,
+        "rotation_t": 1022.318947529151,
+        "score": 1008498.1176395753,
+        "t_like": 1,
+        "toffoli_like": 4812
+      },
+      "parameters": {
+        "fractional": [
+          31,
+          26,
+          21,
+          16
+        ],
+        "fused": true,
+        "reuse_lookup": true,
+        "segment_bits": 6
+      },
+      "path": "docs/evidence/next-hybrid-20261108/invsqrt/certified-direct.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 38,
+          "qubits": 199,
+          "rotation_epsilon_radians": 2.4387112135488054e-12,
+          "rotation_t": 1022.318947529151,
+          "score": 1008498.1176395753,
+          "t_like": 1,
+          "toffoli_like": 4812
+        },
+        "horner_by_stage": [
+          1358,
+          1050,
+          770
+        ],
+        "stages": {
+          "coefficient_lookup": 382,
+          "coefficient_unlookup": 382,
+          "horner": 3178,
+          "input_shift": 220,
+          "normalization_flags": 10,
+          "output_shift": 640
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "390194afa0c799d9c3038b0ea494527325b4722a94675c9e647f428df4778e60",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 37,
+        "qubits": 193,
+        "rotation_epsilon_radians": 2.1157960075354854e-12,
+        "rotation_t": 999.661726363705,
+        "score": 933379.9282970488,
+        "t_like": 1,
+        "toffoli_like": 4586
+      },
+      "parameters": {
+        "fractional": [
+          30,
+          25,
+          20,
+          15
+        ],
+        "fused": true,
+        "reuse_lookup": true,
+        "segment_bits": 6
+      },
+      "path": "docs/evidence/next-hybrid-20261108/invsqrt/direct-control.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 37,
+          "qubits": 193,
+          "rotation_epsilon_radians": 2.1157960075354854e-12,
+          "rotation_t": 999.661726363705,
+          "score": 933379.9282970488,
+          "t_like": 1,
+          "toffoli_like": 4586
+        },
+        "horner_by_stage": [
+          1302,
+          994,
+          676
+        ],
+        "stages": {
+          "coefficient_lookup": 382,
+          "coefficient_unlookup": 382,
+          "horner": 2972,
+          "input_shift": 220,
+          "normalization_flags": 10,
+          "output_shift": 620
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "dab1f04d0f6583610df5c6391ed800426b00bd96df653e6d84960fef2a480352",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 37,
+        "qubits": 193,
+        "rotation_epsilon_radians": 2.0380525988899718e-12,
+        "rotation_t": 1000.780798074244,
+        "score": 909501.9235070823,
+        "t_like": 1,
+        "toffoli_like": 4462
+      },
+      "parameters": {
+        "fit": "minimax",
+        "fractional": [
+          30,
+          25,
+          20,
+          15
+        ],
+        "fused": true,
+        "reuse_lookup": true,
+        "segment_bits": 5
+      },
+      "path": "docs/evidence/next-hybrid-20261108/invsqrt/minimax-cubic.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 37,
+          "qubits": 193,
+          "rotation_epsilon_radians": 2.0380525988899718e-12,
+          "rotation_t": 1000.780798074244,
+          "score": 909501.9235070823,
+          "t_like": 1,
+          "toffoli_like": 4462
+        },
+        "horner_by_stage": [
+          1410,
+          1080,
+          742
+        ],
+        "stages": {
+          "coefficient_lookup": 190,
+          "coefficient_unlookup": 190,
+          "horner": 3232,
+          "input_shift": 220,
+          "normalization_flags": 10,
+          "output_shift": 620
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "ac6d05f3e852391c30a34bf0a1f72771ab5ce40ba9ccedbb9f7cf8deeff0a230",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 37,
+        "qubits": 175,
+        "rotation_epsilon_radians": 2.1157960075354854e-12,
+        "rotation_t": 999.661726363705,
+        "score": 820078.9505284121,
+        "t_like": 1,
+        "toffoli_like": 4436
+      },
+      "parameters": {
+        "fit": "minimax",
+        "fractional": [
+          30,
+          24,
+          18
+        ],
+        "fused": true,
+        "reuse_lookup": true,
+        "segment_bits": 7
+      },
+      "path": "docs/evidence/next-hybrid-20261108/invsqrt/minimax-quadratic.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 37,
+          "qubits": 175,
+          "rotation_epsilon_radians": 2.1157960075354854e-12,
+          "rotation_t": 999.661726363705,
+          "score": 820078.9505284121,
+          "t_like": 1,
+          "toffoli_like": 4436
+        },
+        "horner_by_stage": [
+          1196,
+          858
+        ],
+        "stages": {
+          "coefficient_lookup": 766,
+          "coefficient_unlookup": 766,
+          "horner": 2054,
+          "input_shift": 220,
+          "normalization_flags": 10,
+          "output_shift": 620
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "3b408ff14b6497ff9bfc63069aa058563b0c2a0efbca24dc848fa2c26e7c192d",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 37,
+        "qubits": 206,
+        "rotation_epsilon_radians": 2.1157960075354854e-12,
+        "rotation_t": 999.661726363705,
+        "score": 1410310.0789077308,
+        "t_like": 1,
+        "toffoli_like": 6596
+      },
+      "parameters": {
+        "fit": "minimax",
+        "fractional": [
+          30,
+          24,
+          18
+        ],
+        "fused": false,
+        "reuse_lookup": true,
+        "segment_bits": 7
+      },
+      "path": "docs/evidence/next-hybrid-20261108/invsqrt/separate-arithmetic.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 37,
+          "qubits": 206,
+          "rotation_epsilon_radians": 2.1157960075354854e-12,
+          "rotation_t": 999.661726363705,
+          "score": 1410310.0789077308,
+          "t_like": 1,
+          "toffoli_like": 6596
+        },
+        "horner_by_stage": [
+          2452,
+          1762
+        ],
+        "stages": {
+          "coefficient_lookup": 766,
+          "coefficient_unlookup": 766,
+          "horner": 4214,
+          "input_shift": 220,
+          "normalization_flags": 10,
+          "output_shift": 620
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "e123297acafb9b0d88370a42ef0b6da284d8e9d5cf89bf3eea3649396c123a7b",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 37,
+        "qubits": 183,
+        "rotation_epsilon_radians": 2.1157960075354854e-12,
+        "rotation_t": 999.661726363705,
+        "score": 857568.2739811395,
+        "t_like": 1,
+        "toffoli_like": 4436
+      },
+      "parameters": {
+        "fit": "minimax",
+        "fractional": [
+          30,
+          24,
+          18
+        ],
+        "fused": true,
+        "reuse_lookup": false,
+        "segment_bits": 7
+      },
+      "path": "docs/evidence/next-hybrid-20261108/invsqrt/separate-lookup-workspace.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 37,
+          "qubits": 183,
+          "rotation_epsilon_radians": 2.1157960075354854e-12,
+          "rotation_t": 999.661726363705,
+          "score": 857568.2739811395,
+          "t_like": 1,
+          "toffoli_like": 4436
+        },
+        "horner_by_stage": [
+          1196,
+          858
+        ],
+        "stages": {
+          "coefficient_lookup": 766,
+          "coefficient_unlookup": 766,
+          "horner": 2054,
+          "input_shift": 220,
+          "normalization_flags": 10,
+          "output_shift": 620
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "c6bc1c7435cd02211e73b4bbdcfdbfbc7ffc2ee859a8d11a46b7456ffb9b3d61",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    },
+    {
+      "actual": {
+        "fine_rotations": 35,
+        "qubits": 150,
+        "rotation_epsilon_radians": 1.1587494041843706e-12,
+        "rotation_t": 962.6511434156456,
+        "score": 472336.9178780867,
+        "t_like": 1,
+        "toffoli_like": 2908
+      },
+      "parameters": {
+        "fractional": [
+          28,
+          20,
+          14
+        ],
+        "segment_bits": 7,
+        "trimmed": true
+      },
+      "path": "docs/evidence/invsqrt-trimmed-v4-20261108/development-a.json",
+      "predicted": {
+        "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+        "cost": {
+          "fine_rotations": 35,
+          "qubits": 150,
+          "rotation_epsilon_radians": 1.1587494041843706e-12,
+          "rotation_t": 962.6511434156456,
+          "score": 472336.9178780867,
+          "t_like": 1,
+          "toffoli_like": 2908
+        },
+        "horner_by_stage": [
+          1040,
+          528
+        ],
+        "stages": {
+          "coefficient_lookup": 766,
+          "coefficient_unlookup": 56,
+          "horner": 1568,
+          "input_shift": 160,
+          "normalization_flags": 56,
+          "output_shift": 302
+        }
+      },
+      "rotation_error": 0,
+      "sha256": "9927827465cdf60a43ad50cdfc9f841206897d1883a57bf3e44142f44b5c5da1",
+      "t_error": 0,
+      "toffoli_relative_error": 0.0,
+      "width_error": 0
+    }
+  ],
+  "dependency_lock_sha256": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+  "model_sha256": "6fbc2f1b17babd92ff85e832ccd1dd06003e47a49605c4735ed8858669652f1f",
+  "note": "Only scored direct-circuit receipts are comparable; reference Newton circuits and failed or missing-cost lanes are excluded. The model does not establish accuracy, quantum phase correctness or zero-bit invariants.",
+  "status": "calibrated"
+}

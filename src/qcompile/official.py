@@ -41,10 +41,22 @@ def review_verification_request(report: dict, path: Path) -> dict:
     return backend
 
 
-def review_backend_pair(left_report: dict, left_request: Path, right_report: dict, right_request: Path) -> dict:
-    """Compare inventories while preserving their individual receipt identities."""
-    left = review_verification_request(left_report, left_request)
-    right = review_verification_request(right_report, right_request)
+def read_confirmation_backend(protocol: dict) -> dict:
+    """Read the original inventory bound to a confirmation protocol."""
+    inventory = protocol.get("backend_inventory")
+    if not isinstance(inventory, dict) or not inventory.get("path") or not inventory.get("sha256"):
+        raise ValidationError("confirmation backend inventory requires a path and digest")
+    path = Path(inventory["path"])
+    if not path.is_file() or sha256(path) != inventory["sha256"]:
+        raise ValidationError("confirmation backend inventory changed")
+    backend = read_json(path)
+    if identity(backend) != protocol.get("backend_hash"):
+        raise ValidationError("confirmation backend differs from its protocol")
+    return backend
+
+
+def compare_backend_inventories(left: dict, right: dict) -> dict:
+    """Establish that every difference is confined to a location field."""
     left_pins = {key: value for key, value in left.items() if key not in BACKEND_PATHS}
     right_pins = {key: value for key, value in right.items() if key not in BACKEND_PATHS}
     if left_pins != right_pins:
@@ -57,16 +69,25 @@ def review_backend_pair(left_report: dict, left_request: Path, right_report: dic
     ):
         raise ValidationError("verification inventories lack reviewed backend pins")
     return {
-        "left_backend_hash": left_report["backend_hash"],
-        "right_backend_hash": right_report["backend_hash"],
-        "left_request_sha256": left_report["request_hash"],
-        "right_request_sha256": right_report["request_hash"],
         "inventory_sha256": identity(left_pins),
         "path_changes": {
             key: {"left": left.get(key), "right": right.get(key)}
             for key in BACKEND_PATHS
             if left.get(key) != right.get(key)
         },
+    }
+
+
+def review_backend_pair(left_report: dict, left_request: Path, right_report: dict, right_request: Path) -> dict:
+    """Compare inventories while preserving their individual receipt identities."""
+    left = review_verification_request(left_report, left_request)
+    right = review_verification_request(right_report, right_request)
+    return {
+        "left_backend_hash": left_report["backend_hash"],
+        "right_backend_hash": right_report["backend_hash"],
+        "left_request_sha256": left_report["request_hash"],
+        "right_request_sha256": right_report["request_hash"],
+        **compare_backend_inventories(left, right),
     }
 
 

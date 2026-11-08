@@ -85,6 +85,9 @@ def test_hybrid_requires_matching_component_scopes(tmp_path, artifact_set):
         store.finish_confirmation(record["id"], bad, benchmark="dfthcsos")
     record = store.finish_confirmation(record["id"], result(record, chemistry), benchmark="dfthcsos")
     assert store.require_confirmation(record, "dfthcsos")["component_hashes"]["dfthcsos/submission.npz"]
+    record["confirmations"]["dfthcsos"]["protocol"]["backend_hash"] = "x" * 64
+    with pytest.raises(BlockedError, match="one-use ledger"):
+        store.require_confirmation(record, "dfthcsos")
 
 
 def test_changed_other_component_cannot_reserve_chemistry_again(tmp_path, artifact_set):
