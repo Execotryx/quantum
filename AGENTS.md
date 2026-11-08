@@ -15,6 +15,12 @@
   Newton incumbent and price the complete declared-width and rotation cost.
   Keep public-source reproduction distinct from an independently generated
   circuit, and preserve the parent chemistry and DQI member hashes.
+- The v3 direct-phasing screen checks each ablation independently before
+  combining improvements. Restore coefficient-lookup phase after measurement
+  and verify the padded lane and scratch on the serialized circuit.
+- Keep tower-field DQI development receipts scoped to their actual code
+  dimensions. Run the chemistry continuous residual gate before emitting
+  decoded words or ANGLE circuits.
 - Banked chemistry lookups preserve the pinned factorization and angle words.
   Check the 128-qubit cap and phase, selection and workspace at every circuit
   boundary. Combined validation keeps the exact confirmed inverse-square-root

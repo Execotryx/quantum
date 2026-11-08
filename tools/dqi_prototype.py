@@ -9,6 +9,7 @@ from qcompile.dqi.field import GF4096
 from qcompile.dqi.reversible import (
     bm_locator_slice, eea_locator_slice, inverse_xor, multiply_xor, phase_for_position,
 )
+from qcompile.dqi.tower import multiply_xor as tower_multiply_xor
 from qcompile.io import read_json, sha256, write_json
 from qcompile.official import validate_backend
 
@@ -23,10 +24,13 @@ def build(kind: str, backend_path: Path, output: Path, *, adjoint: bool = False)
         raise ValueError("native field polynomial differs from the pinned DQI field")
     builder = km.CircuitBuilder()
     source = builder.create_quantum_register(12, "source")
-    if kind == "multiply":
+    if kind in ("multiply", "tower-multiply"):
         right = builder.create_quantum_register(12, "right")
         target = builder.create_quantum_register(12, "target")
-        multiply_xor(builder, field, source, right, target)
+        if kind == "tower-multiply":
+            tower_multiply_xor(builder, source, right, target)
+        else:
+            multiply_xor(builder, field, source, right, target)
     elif kind == "inverse":
         target = builder.create_quantum_register(12, "target")
         inverse_xor(builder, field, source, target)
@@ -57,7 +61,7 @@ def build(kind: str, backend_path: Path, output: Path, *, adjoint: bool = False)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("kind", choices=("multiply", "inverse", "phase", "eea", "bm"))
+    parser.add_argument("kind", choices=("multiply", "tower-multiply", "inverse", "phase", "eea", "bm"))
     parser.add_argument("backend", type=Path)
     parser.add_argument("output", type=Path)
     parser.add_argument("--adjoint", action="store_true")

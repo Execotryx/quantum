@@ -130,6 +130,14 @@ def build(factorization: Path, words_path: Path, output: Path, brot: int, batch:
 def rank(plan: Path, output: Path) -> None:
     settings, _, _, _, api = backend()
     proposals = read_json(plan)["layouts"]
+    results = rank_layouts(api, proposals)
+    write_json(output, {
+        "plan_sha256": sha256(plan), "backend": settings, "layouts": results,
+        "scope": "structural ranking with zero ANGLE Toffolis and no numerical score factor",
+    })
+
+
+def rank_layouts(api, proposals):
     if not 1 <= len(proposals) <= 64:
         raise ValueError("layout shortlist must contain between 1 and 64 entries")
     results = []
@@ -154,10 +162,7 @@ def rank(plan: Path, output: Path) -> None:
             "preparation_rotation_tq": prep["toffoli"] * full_qubits,
         })
     results.sort(key=lambda row: (not row["within_cap"], row["preparation_rotation_tq"]))
-    write_json(output, {
-        "plan_sha256": sha256(plan), "backend": settings, "layouts": results,
-        "scope": "structural ranking with zero ANGLE Toffolis and no numerical score factor",
-    })
+    return results
 
 
 def quantize(factorization: Path, words_path: Path, output: Path, source_bits: int, brot: int) -> None:

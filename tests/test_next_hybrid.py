@@ -79,7 +79,7 @@ def test_generic_angle_exact_xor_including_padding(native_tools, low):
 
 
 @pytest.mark.official
-@pytest.mark.parametrize("kind", ["multiply", "inverse", "phase", "eea", "bm"])
+@pytest.mark.parametrize("kind", ["multiply", "tower-multiply", "inverse", "phase", "eea", "bm"])
 def test_native_dqi_prototype(native_tools, tmp_path, kind):
     _, (_, km, _, _, _), project_root = native_tools
     tool = import_module("dqi_prototype")
@@ -110,7 +110,7 @@ def test_native_dqi_prototype(native_tools, tmp_path, kind):
     parity = np.zeros(64, dtype=bool)
     for j in range(64):
         source = int(values["source"][j])
-        if kind == "multiply":
+        if kind in ("multiply", "tower-multiply"):
             expected["target"][j] ^= field.mul(source, int(values["right"][j]))
         elif kind == "inverse":
             expected["target"][j] ^= field.inv(source) if source else 0

@@ -25,6 +25,7 @@ from qcompile.profiling import ResourceSampler, terminate_tree
 
 CONFIG = ROOT / "configs/invsqrt-direct-v1.json"
 CONFIG_V2 = ROOT / "configs/invsqrt-direct-v2.json"
+CONFIG_V3 = ROOT / "configs/invsqrt-direct-v3.json"
 N_P = 10
 EXPECTED_SHOTS = 200_540_928
 PINS = (
@@ -44,13 +45,20 @@ PINS = (
 
 def pins(version: int = 1) -> dict[str, str]:
     paths = PINS
-    if version == 2:
+    if version >= 2:
         paths += (
             CONFIG_V2,
             ROOT / "src/qcompile/invsqrt/minimax.py",
             ROOT / "docs/evidence/invsqrt-direct-20261107/combined/attempt.json",
             ROOT / "docs/evidence/invsqrt-direct-20261107/combined/coefficients.json",
             ROOT / "docs/evidence/invsqrt-direct-hybrid-20261107/certificate.json",
+        )
+    if version == 3:
+        paths += (
+            CONFIG_V3,
+            ROOT / "src/qcompile/invsqrt/unlookup.py",
+            ROOT / "docs/evidence/next-hybrid-20261108/invsqrt/minimax-quadratic.json",
+            ROOT / "docs/evidence/next-hybrid-20261108/paired-archive/comparison.json",
         )
     return {p.relative_to(ROOT).as_posix(): sha256(p) for p in paths}
 
@@ -123,12 +131,12 @@ def native_smoke(km, official, circuit, spec, model, points, policy):
     return {"fixture_inputs": len(points), "shots": len(xs), "executed_counts": executed, "counts": per_shot}
 
 
-def direct_candidate(km, primitives, fmt_spec):
+def direct_candidate(km, primitives, fmt_spec, *, liveness=None):
     settings = dict(fmt_spec)
     fit = settings.pop("fit", "taylor")
     fmt = DirectFormat(N_P, **{**settings, "fractional": tuple(settings["fractional"])})
     table = {"taylor": coefficient_table, "minimax": minimax_table}[fit](fmt)
-    return build_circuit(km, primitives, fmt, table), partial(phase64, fmt, table), table
+    return build_circuit(km, primitives, fmt, table, liveness=liveness), partial(phase64, fmt, table), table
 
 
 def lane(directory: Path, name: str) -> None:
@@ -138,13 +146,14 @@ def lane(directory: Path, name: str) -> None:
     km, primitives, official = backend()
     spec = official.ProblemSpecInvSqrt.for_n_p(N_P)
     control = protocol["controls"].get(name)
+    liveness = {} if protocol.get("profile_liveness") else None
     if control and "widths" in control:
         prec = primitives.Precision(*control["widths"])
         model = partial(phase, primitives, prec, N_P)
         circuit = primitives.build_nr_circuit(N_P, prec=prec)
         segments = 2
     else:
-        circuit, model, table = direct_candidate(km, primitives, params)
+        circuit, model, table = direct_candidate(km, primitives, params, liveness=liveness)
         write_json(output / "coefficients.json", table)
         segments = params["segment_bits"]
     circuit, digest = emit(km, circuit, official, output / "invsqrt.kmb")
@@ -172,6 +181,7 @@ def lane(directory: Path, name: str) -> None:
             "parameters": params,
             "margins": margins,
             "native": native,
+            **({"allocated_qubits": liveness} if liveness is not None else {}),
             "cost": score,
             "phase_gate": margins["input_count"] == spec.max_x
             and not margins["nonpositive_margins"]
@@ -199,8 +209,8 @@ def run_job(argv: list[str], output: Path, timeout: float) -> int:
 
 def screen(directory: Path, version: int = 1) -> None:
     protocol = read_json(CONFIG)
-    if version == 2:
-        updates = read_json(CONFIG_V2)
+    for config in (CONFIG_V2, CONFIG_V3)[: version - 1]:
+        updates = read_json(config)
         protocol = {**protocol, **updates, "controls": {**protocol["controls"], **updates["controls"]}}
     validate_budget(protocol)
     contract = load_contract(ROOT / "contracts/contract.json")
@@ -279,7 +289,8 @@ def screen(directory: Path, version: int = 1) -> None:
         for name, control in protocol["controls"].items()
     )
     if controls_pass:
-        attempt("direct-control", protocol["direct_control"])
+        if version < 3:
+            attempt("direct-control", protocol["direct_control"])
         for name, params in protocol["piecewise"].items():
             attempt(name, params)
         feasible = [n for n, row in attempts.items() if n not in protocol["controls"] and passed(row)]
@@ -291,11 +302,20 @@ def screen(directory: Path, version: int = 1) -> None:
                 reuse = attempt("reuse", {**params, "reuse_lookup": True})
                 if all(passed(row) and row["cost"]["score"] < ranking(parent)[0] for row in (fused, reuse)):
                     attempt("combined", {**params, "fused": True, "reuse_lookup": True})
-            else:
+            elif version == 2:
                 for name, changes in protocol["ablations"].items():
                     settings = {**params, **changes}
                     if settings != params:
                         attempt(name, settings)
+            elif version == 3:
+                comparison = protocol["comparison"]
+                improved = {name for name in feasible if ranking(name)[0] < ranking(comparison)[0]}
+                precision = improved.intersection(protocol["precision_lanes"])
+                if precision and "phase-repair" in improved:
+                    settings = {**attempts[min(precision, key=ranking)]["parameters"], "measurement_unlookup": True}
+                    combined = attempt("precision-with-phase-repair", settings)
+                    if passed(combined) and "binary-normalization" in improved:
+                        attempt("combined-v3", {**settings, "binary_normalization": True})
     limit = protocol["controls"][protocol.get("comparison", "incumbent")]["cost"] * (1 - protocol["minimum_gain"])
     eligible = [
         n
@@ -416,7 +436,7 @@ def main() -> None:
     )
     parser.add_argument("directory", type=Path)
     parser.add_argument("name", nargs="?")
-    parser.add_argument("--protocol", choices=(1, 2), type=int, default=1)
+    parser.add_argument("--protocol", choices=(1, 2, 3), type=int, default=1)
     args = parser.parse_args()
     if args.action == "build":
         if args.name is None:

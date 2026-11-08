@@ -8,6 +8,8 @@ from typing import Any
 import numpy as np
 from numpy.typing import NDArray
 
+from .unlookup import unlookup
+
 Words = NDArray[np.int64]
 
 
@@ -18,6 +20,8 @@ class DirectFormat:
     fractional: tuple[int, ...]
     fused: bool = False
     reuse_lookup: bool = False
+    binary_normalization: bool = False
+    measurement_unlookup: bool = False
 
     def __post_init__(self) -> None:
         if not 1 <= self.n_p <= 10 or not 0 <= self.segment_bits <= min(8, 2 * self.n_p):
@@ -113,23 +117,73 @@ def _load_table(builder: Any, address: Any, path: Any, registers: list[Any], tab
     walk(0, 0, True)
 
 
-def build_circuit(km: Any, primitives: Any, fmt: DirectFormat, table: tuple[tuple[int, ...], ...]) -> Any:
+def _binary_count(builder: Any, x: Any, count: Any, n_p: int) -> None:
+    """XOR the leading-zero pair count using a prefix AND ladder."""
+    flags = builder.alloc_qubits(n_p)
+    pair = builder.alloc_qubits(1)
+
+    def update(k: int, inverse: bool) -> None:
+        hi, lo = x[len(x) - 2 * k - 1], x[len(x) - 2 * k - 2]
+        builder.x(hi)
+        builder.x(lo)
+        logical_and = builder.del_and if inverse else builder.init_and
+        if k:
+            builder.init_and(hi, lo, pair[0])
+            logical_and(flags[k - 1], pair[0], flags[k])
+            builder.del_and(hi, lo, pair[0])
+        else:
+            logical_and(hi, lo, flags[k])
+        builder.x(lo)
+        builder.x(hi)
+
+    for k in range(n_p):
+        update(k, False)
+        for bit, wire in enumerate(count):
+            if (k ^ (k + 1)) >> bit & 1:
+                builder.cx(flags[k], wire)
+    for k in reversed(range(n_p)):
+        update(k, True)
+    builder.free(pair)
+    builder.free(flags)
+
+
+def _binary_shift(builder: Any, inverse: bool, count: Any, *lanes: Any) -> None:
+    rotate = builder.right_rotate if inverse else builder.left_rotate
+    positions = reversed(range(len(count))) if inverse else range(len(count))
+    for i in positions:
+        for lane in lanes:
+            rotate(lane, 1 << i, control=count[i])
+
+
+def build_circuit(km: Any, primitives: Any, fmt: DirectFormat, table: tuple[tuple[int, ...], ...],
+                  *, liveness: dict[str, int] | None = None) -> Any:
     """Emit the clean phase oracle using the pinned reference arithmetic primitives."""
     builder = km.CircuitBuilder()
+
+    def observe(stage: str) -> None:
+        if liveness is not None:
+            allocated = builder.num_allocated_qubits
+            liveness[stage] = int(allocated() if callable(allocated) else allocated)
     x = builder.create_quantum_register(2 * fmt.n_p + 2, name="x")
-    flags = builder.alloc_qubits(fmt.n_p)
+    flags = builder.alloc_qubits(fmt.n_p.bit_length() if fmt.binary_normalization else fmt.n_p)
+    if fmt.binary_normalization:
+        _binary_count(builder, x, flags, fmt.n_p)
+        _binary_shift(builder, False, flags, x[::2], x[1::2])
     output = builder.alloc_qubits(fmt.output_fractional + 1)
     coefs = [output[: fmt.widths[0]], *(builder.alloc_qubits(width) for width in fmt.widths[1:])]
     path = builder.alloc_qubits(fmt.segment_bits + 1)
     low_width = 2 * fmt.n_p - fmt.segment_bits
     address = x[low_width:]
-    primitives._normalize(builder, False, x, flags)
+    if not fmt.binary_normalization:
+        primitives._normalize(builder, False, x, flags)
     _load_table(builder, address, path, coefs, table)
-    if fmt.reuse_lookup:
+    observe("lookup")
+    if fmt.reuse_lookup or fmt.measurement_unlookup:
         builder.free(path)
 
     scratch = builder.alloc_qubits(max(fmt.widths))
     product = None if fmt.fused else builder.alloc_qubits(max(fmt.widths))
+    observe("arithmetic")
 
     def rows(j: int, target: Any, inverse: bool, subtract: bool = False) -> None:
         acc, operand = coefs[j : j + 2]
@@ -157,19 +211,36 @@ def build_circuit(km: Any, primitives: Any, fmt: DirectFormat, table: tuple[tupl
     stages = range(len(coefs) - 2, -1, -1)
     for j in stages:
         horner_step(j, False)
-    primitives._denormalize(builder, False, flags, output)
+    if fmt.binary_normalization:
+        _binary_shift(builder, False, flags, output)
+    else:
+        primitives._denormalize(builder, False, flags, output)
     primitives._phase_by_bits(builder, output[:-1])
-    primitives._denormalize(builder, True, flags, output)
+    observe("phase")
+    if fmt.binary_normalization:
+        _binary_shift(builder, True, flags, output)
+    else:
+        primitives._denormalize(builder, True, flags, output)
     for j in reversed(stages):
         horner_step(j, True)
 
     if product is not None:
         builder.free(product)
     builder.free(scratch)
-    if fmt.reuse_lookup:
-        path = builder.alloc_qubits(fmt.segment_bits + 1)
-    _load_table(builder, address, path, coefs, table)
-    primitives._normalize(builder, True, x, flags)
-    for register in (*coefs[1:], output, flags, path):
+    if fmt.measurement_unlookup:
+        unlookup(builder, address, coefs, table)
+    else:
+        if fmt.reuse_lookup:
+            path = builder.alloc_qubits(fmt.segment_bits + 1)
+        _load_table(builder, address, path, coefs, table)
+    observe("after_unlookup")
+    if fmt.binary_normalization:
+        _binary_shift(builder, True, flags, x[::2], x[1::2])
+        _binary_count(builder, x, flags, fmt.n_p)
+    else:
+        primitives._normalize(builder, True, x, flags)
+    for register in (*coefs[1:], output, flags):
         builder.free(register)
+    if not fmt.measurement_unlookup:
+        builder.free(path)
     return builder.finish_circuit()
