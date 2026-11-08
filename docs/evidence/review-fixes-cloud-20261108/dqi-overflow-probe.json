@@ -1,0 +1,13 @@
+{
+  "backend_sha256": "bd68ed6223bbba78821192be217cb3dc9a6af5e0ae1c07097361511bb189edd4",
+  "circuit_sha256": "d72b637a774d24d87ba99a305f4196b69503dd770fe3babb753505c826cdb434",
+  "counters": [
+    128,
+    256,
+    0,
+    256
+  ],
+  "probe_source_sha256": "6928cdc73732848e582988b59877dd000ade10c63142bd29d5acc694f4ef5a16",
+  "returncode": 0,
+  "status": "per_shot_value_errors"
+}

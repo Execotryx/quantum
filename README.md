@@ -19,6 +19,26 @@ lattice refinement lowered inverse-square-root cost from 548,860.92
 to **509,471.48** and width from 159 to **155 qubits**.
 [v4 paired verification](docs/evidence/invsqrt-roadmap-archive-20261108/comparison.json)
 
+### Next-round cloud comparison
+
+| Experiment | Control cost | Candidate cost | Cloud result |
+|---|---:|---:|---|
+| v6 inverse square root | 472,336.92 | 411,586.92 | **12.86% lower** in the component screen. Width stayed at 150 qubits and Toffoli-like gates fell from 2,908 to 2,503. |
+| Routed DQI, `(63, 4)` | 43.385 billion | 11.807 billion | **72.79% lower** on 2,560 matched trajectories with zero observed errors. |
+| Routed DQI, `(127, 12)` | 357.434 billion | 88.971 billion | **75.11% lower** on 2,560 matched trajectories with zero observed errors. |
+
+The v6 screen built each circuit twice, checked all 3,133,452 inputs
+against the phase model, and passed 31,232 native trajectories per circuit.
+Worst-case phase tolerance use stayed at **66.77%**. The DQI figures cover
+reduced dimensions. The full-size history depth still depends on the
+registered sampling campaign. Chemistry's pinned reference yielded an
+initial S2 offset bound of **11.5** and a penalty of **1.0**. Its compressed
+fit must pass the residual gates before the loader projection can compare
+candidate costs.
+
+The cloud suite passed **766 tests**, and four additional frozen-round
+checks passed. [Cloud validation](docs/cloud-review-validation-08-11-2026-21-50-18.md)
+
 ### v3 comparison
 
 The fully verified v3 hybrid scored **1.5753293577**, up **14.32%** from
@@ -64,6 +84,9 @@ development. [Routed round](docs/dqi-native-arithmetic-round-08-11-2026-15-42-52
 The half-degree Bézout construction matches the independent DQI
 reciprocal on reduced exhaustive fixtures and sampled cases at all
 weights through 35. A reversible monomial update passed native tests.
+Fixed-degree native division now generates two or three quotient digits,
+with an adjoint that clears the saved history.
+[Native quotient division](docs/dqi-half-eea-division-08-11-2026-16-50-16.md)
 General reversible quotient generation and full decoder admission remain
 open. [Half-degree reciprocal work](docs/dqi-half-degree-bezout-08-11-2026-16-12-49.md)
 
@@ -80,6 +103,8 @@ evaluations. The continuous gate is **19.0 mHa**. Four pinned shape
 profiles and initializer rankings now bind the **24 fit plans**.
 [Continuation result](docs/chemistry-i3-continuation-result-08-11-2026-16-19-24.md) ·
 [Grid registration](docs/chemistry-fit-grid-08-11-2026-16-16-34.md)
+The fixed-basis relaxation adds a separate projection diagnostic.
+[Fixed-basis diagnostic](docs/chemistry-fixed-basis-bound-08-11-2026-16-51-28.md)
 
 The direct inverse-square-root cost model matches width and counted
 gates on 27 comparable circuit receipts.

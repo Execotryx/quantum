@@ -1,0 +1,16 @@
+{
+  "bound": {
+    "estimate": 0.31644142034136763,
+    "factor_rank_cap": 360,
+    "feature_rows": 1287,
+    "inside_psd_rank_residual": 0.005350151742966345,
+    "outside_span_residual": 0.31639618895301086,
+    "qr_orthogonality_frobenius": 2.9542553907642924e-14,
+    "relaxed_span_columns": 1287,
+    "scope": "fixed basis only; floating-point estimate is not a certified exclusion bound"
+  },
+  "decision": "diagnostic_only",
+  "elapsed_seconds": 3.2558827309999856,
+  "initializer_residual": 2.1186673022380385,
+  "scope": "no finite-precision certification and no shape exclusion"
+}

@@ -21,7 +21,7 @@ def repair_table(rows: tuple[int, ...], low_bits: int) -> tuple[tuple[int, ...],
 
 
 def unlookup(builder: Any, address: Any, registers: list[Any],
-             table: tuple[tuple[int, ...], ...]) -> None:
+             table: tuple[tuple[int, ...], ...], *, sibling_cnot: bool = False) -> None:
     wires = [wire for register in registers for wire in register]
     packed = []
     for row in table:
@@ -63,9 +63,20 @@ def unlookup(builder: Any, address: Any, registers: list[Any],
                     mask ^= bit
             return
         bit = high[len(high) - depth - 1]
+        left = 2 * prefix
+        remaining = len(high) - depth - 1
+        if sibling_cnot and depth and ((left + 1) << remaining) > len(banks) // 4:
+            flag = path[depth - 1]
+            builder.x(bit)
+            builder.init_and(control, bit, flag)
+            builder.x(bit)
+            walk(depth + 1, left, flag)
+            builder.cx(control, flag)
+            walk(depth + 1, left + 1, flag)
+            builder.del_and(control, bit, flag)
+            return
         for direction in (0, 1):
-            child = 2 * prefix + direction
-            remaining = len(high) - depth - 1
+            child = left + direction
             if (child + 1) << remaining <= len(banks) // 4:
                 continue
             if not direction:

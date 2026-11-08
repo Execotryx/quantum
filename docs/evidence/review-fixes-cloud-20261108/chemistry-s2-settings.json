@@ -1,0 +1,30 @@
+{
+  "contingency": {
+    "max_reruns": 1,
+    "multiplier": 2,
+    "trigger": 0.99
+  },
+  "floors": {
+    "gap_floor": 3.916,
+    "gap_target": 3.9161,
+    "lambda_floor": 49.05
+  },
+  "limits": {
+    "checkpoint_interval": 250,
+    "evaluations": 1500,
+    "offset_bound": 11.5,
+    "outer_iterations": 4,
+    "penalty": 1.0,
+    "restore_evaluations": 1000,
+    "wall_seconds": 7200
+  },
+  "reference_offsets": {
+    "B0": 11.5,
+    "m_ref": 5.597752481885436,
+    "mean_magnitude": 0.12348243634683148,
+    "reference": {
+      "path": "/var/tmp/quantum-review-20261108/runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69"
+    }
+  }
+}

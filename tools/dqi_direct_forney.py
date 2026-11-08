@@ -5,12 +5,12 @@ import sys
 from importlib import import_module
 from pathlib import Path
 
-from qcompile.dqi.direct_forney import evaluator_and_scan
+from qcompile.dqi.direct_forney import evaluator_and_scan, inplace_evaluator_and_scan
 from qcompile.io import read_json, sha256, write_json
 from qcompile.official import validate_backend
 
 
-def build(backend_path: Path, output: Path, *, m: int, n: int) -> None:
+def build(backend_path: Path, output: Path, *, m: int, n: int, inplace: bool = False) -> None:
     if not 2 <= n <= min(m, 70) or n % 2 or m > 4095:
         raise ValueError("require even syndrome count in [2,70] and n <= m <= 4095")
     backend = read_json(backend_path)
@@ -24,7 +24,8 @@ def build(backend_path: Path, output: Path, *, m: int, n: int) -> None:
     locator = [builder.create_quantum_register(12, f"sigma_{i}") for i in range(n // 2 + 1)]
     syndromes = [builder.create_quantum_register(12, f"S{i}") for i in range(n)]
     masks = [builder.create_classical_register(12, f"E{j}") for j in range(m)]
-    evaluator_and_scan(builder, field, locator, syndromes, masks)
+    scan = inplace_evaluator_and_scan if inplace else evaluator_and_scan
+    scan(builder, field, locator, syndromes, masks)
     circuit = builder.finish_circuit()
     output.mkdir(parents=True, exist_ok=False)
     path = output / "direct-forney.kmb"
@@ -34,6 +35,7 @@ def build(backend_path: Path, output: Path, *, m: int, n: int) -> None:
         "m": m, "n": n, "kmb_sha256": sha256(path), "qubits": circuit.num_qubits,
         "bits": circuit.num_bits, "toffoli_like": circuit.operation_statistics().num_toffoli_like,
         "operations": dict(circuit.operation_statistics()), "backend": backend,
+        **({"evaluator": "scaled_inplace"} if inplace else {}),
     })
 
 
@@ -43,5 +45,6 @@ if __name__ == "__main__":
     parser.add_argument("output", type=Path)
     parser.add_argument("--m", type=int, required=True)
     parser.add_argument("--n", type=int, required=True)
+    parser.add_argument("--inplace-evaluator", action="store_true")
     args = parser.parse_args()
-    build(args.backend, args.output, m=args.m, n=args.n)
+    build(args.backend, args.output, m=args.m, n=args.n, inplace=args.inplace_evaluator)

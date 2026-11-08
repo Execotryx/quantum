@@ -22,6 +22,7 @@ class DirectFormat:
     reuse_lookup: bool = False
     binary_normalization: bool = False
     measurement_unlookup: bool = False
+    sibling_cnot: bool = False
 
     def __post_init__(self) -> None:
         if not 1 <= self.n_p <= 10 or not 0 <= self.segment_bits <= min(8, 2 * self.n_p):
@@ -86,7 +87,8 @@ def phase64(fmt: DirectFormat, table: tuple[tuple[int, ...], ...], xs: Words) ->
     return scaled << np.uint64(64 - fmt.output_fractional)
 
 
-def _load_table(builder: Any, address: Any, path: Any, registers: list[Any], table) -> None:
+def _load_table(builder: Any, address: Any, path: Any, registers: list[Any], table,
+                *, sibling_cnot: bool = False) -> None:
     """XOR a row with a unary prefix traversal and phase-correct temporary ANDs."""
     first = 1 << (len(address) - 2)
 
@@ -99,18 +101,28 @@ def _load_table(builder: Any, address: Any, path: Any, registers: list[Any], tab
                 builder.gf2_iadd(word, target=register, control=control)
             return
         bit = address[remaining - 1]
-        builder.x(bit)
         if depth == 0:
+            builder.x(bit)
             walk(depth + 1, prefix * 2, bit)
             builder.x(bit)
             walk(depth + 1, prefix * 2 + 1, bit)
             return
         flag = path[depth - 1]
-        builder.init_and(control, bit, flag)
-        walk(depth + 1, prefix * 2, flag)
-        builder.del_and(control, bit, flag)
-        builder.x(bit)
-        builder.init_and(control, bit, flag)
+        if not sibling_cnot or ((prefix * 2 + 1) << (remaining - 1)) > first:
+            builder.x(bit)
+            builder.init_and(control, bit, flag)
+            if sibling_cnot:
+                builder.x(bit)
+                walk(depth + 1, prefix * 2, flag)
+                # Toggling by the parent changes its left predicate to the right one.
+                builder.cx(control, flag)
+            else:
+                walk(depth + 1, prefix * 2, flag)
+                builder.del_and(control, bit, flag)
+                builder.x(bit)
+                builder.init_and(control, bit, flag)
+        else:
+            builder.init_and(control, bit, flag)
         walk(depth + 1, prefix * 2 + 1, flag)
         builder.del_and(control, bit, flag)
 
@@ -177,7 +189,7 @@ def build_circuit(km: Any, primitives: Any, fmt: DirectFormat, table: tuple[tupl
     address = x[low_width:]
     if not fmt.binary_normalization:
         primitives._normalize(builder, False, x, flags)
-    _load_table(builder, address, path, coefs, table)
+    _load_table(builder, address, path, coefs, table, sibling_cnot=fmt.sibling_cnot)
     observe("lookup")
     if fmt.reuse_lookup or fmt.measurement_unlookup:
         builder.free(path)
@@ -229,11 +241,11 @@ def build_circuit(km: Any, primitives: Any, fmt: DirectFormat, table: tuple[tupl
         builder.free(product)
     builder.free(scratch)
     if fmt.measurement_unlookup:
-        unlookup(builder, address, coefs, table)
+        unlookup(builder, address, coefs, table, sibling_cnot=fmt.sibling_cnot)
     else:
         if fmt.reuse_lookup:
             path = builder.alloc_qubits(fmt.segment_bits + 1)
-        _load_table(builder, address, path, coefs, table)
+        _load_table(builder, address, path, coefs, table, sibling_cnot=fmt.sibling_cnot)
     observe("after_unlookup")
     if fmt.binary_normalization:
         _binary_shift(builder, True, flags, x[::2], x[1::2])

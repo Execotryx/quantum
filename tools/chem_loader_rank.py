@@ -22,8 +22,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def validate_registration(plan: dict) -> dict[str, Path]:
     mode = plan["mode"]
-    if mode not in ("reference_control", "s3"):
-        raise ValueError("expected an explicit reference_control or s3 input")
+    if mode not in ("reference_control", "s3", "projection"):
+        raise ValueError("expected reference_control, s3, or projection")
     names = ["factorization", "words"]
     if mode == "s3":
         names += ["s3_registration", "s3_decision", "s3_result"]
@@ -39,7 +39,7 @@ def validate_registration(plan: dict) -> dict[str, Path]:
         if (plan["factorization"]["sha256"] != pinned["factorization_sha256"]
                 or plan["words"]["sha256"] != pinned["words_sha256"] or plan["brot"] != pinned["brot"]):
             raise ValueError("reference control must use the pinned factorization, words and precision")
-    else:
+    elif mode == "s3":
         registration = read_json(paths["s3_registration"])
         decision = read_json(paths["s3_decision"])
         result = read_json(paths["s3_result"])
@@ -56,6 +56,9 @@ def validate_registration(plan: dict) -> dict[str, Path]:
             raise ValueError("loader input is not the terminal S3 passing handoff")
         if not registration.get("plan_sha256"):
             raise ValueError("S3 registration lacks its plan identity")
+    elif (type(plan.get("lambda_proj")) not in (int, float) or not math.isfinite(plan["lambda_proj"])
+          or plan["lambda_proj"] <= 0 or plan["shots_per_address"] != 2):
+        raise ValueError("projection requires positive lambda_proj and two shots per address")
     if (type(plan["brot"]) is not int or not 1 <= plan["brot"] <= 52
             or type(plan["low_bits"]) is not int or plan["low_bits"] < 1
             or type(plan["shots_per_address"]) is not int or not 1 <= plan["shots_per_address"] <= 64
@@ -83,21 +86,25 @@ def run_worker(plan_path: Path, output: Path, expected_plan_hash: str) -> None:
     settings, km, circuits_api, _, verifier = backend()
     inputs = fixed_inputs(verifier, paths["factorization"])
     words, edges = load_words(paths["words"])
-    if edges is not None and not np.array_equal(edges, inputs.params["tree_edges"]):
+    projection = plan["mode"] == "projection"
+    if (projection and edges is None) or (edges is not None and not np.array_equal(edges, inputs.params["tree_edges"])):
         raise ValueError("registered word tree disagrees with factorization")
     r, b, _ = inputs.w.shape
     rows = inputs.num_orbitals + r * b
     brot, bank = plan["brot"], plan["low_bits"]
     if words.shape != (rows, inputs.num_orbitals - 1):
         raise ValueError("registered word table disagrees with factorization shape")
-    metrics = verifier.evaluate_words(inputs, words, tree_edges=inputs.params["tree_edges"], brot=brot)
-    if not verifier.passes_accuracy(metrics) or not passes_margins(metrics):
-        raise ValueError("loader input does not pass exact decoded project margins")
-    expected_metrics = (read_json(ROOT / "docs/evidence/step3-chemistry-metrics.json")["official"]
-                        if plan["mode"] == "reference_control" else read_json(paths["s3_result"])["metrics"])
-    for key in ("error_1", "error_2", "Lambda", "E_gap", "lambda_eff"):
-        if not math.isclose(metrics[key], expected_metrics[key], rel_tol=2e-9, abs_tol=2e-9):
-            raise ValueError(f"exact decoded metric {key} differs from the pinned input receipt")
+    if projection:
+        metrics = {"lambda_eff": plan["lambda_proj"]}
+    else:
+        metrics = verifier.evaluate_words(inputs, words, tree_edges=inputs.params["tree_edges"], brot=brot)
+        if not verifier.passes_accuracy(metrics) or not passes_margins(metrics):
+            raise ValueError("loader input does not pass exact decoded project margins")
+        expected_metrics = (read_json(ROOT / "docs/evidence/step3-chemistry-metrics.json")["official"]
+                            if plan["mode"] == "reference_control" else read_json(paths["s3_result"])["metrics"])
+        for key in ("error_1", "error_2", "Lambda", "E_gap", "lambda_eff"):
+            if not math.isclose(metrics[key], expected_metrics[key], rel_tol=2e-9, abs_tol=2e-9):
+                raise ValueError(f"exact decoded metric {key} differs from the pinned input receipt")
     cap = min(inputs.num_orbitals - 1, max_batch(rows, brot, bank))
     if cap < 3:
         raise ValueError("no registered batch from 3 fits the ANGLE cap")
@@ -108,7 +115,8 @@ def run_worker(plan_path: Path, output: Path, expected_plan_hash: str) -> None:
         "plan": plan, "plan_sha256": expected_plan_hash, "backend": settings,
         "source_hashes": {str(path.relative_to(ROOT)): sha256(path) for path in source_files},
         "metrics": json_safe(metrics), "expected_full_coverage": rows * 64,
-        "scope": "reference control" if plan["mode"] == "reference_control" else "S3 handoff",
+        "scope": {"reference_control": "reference control", "s3": "S3 handoff",
+                  "projection": "projected cost only"}[plan["mode"]],
     })
     ranked = []
     for batch in range(3, cap + 1):
@@ -120,6 +128,8 @@ def run_worker(plan_path: Path, output: Path, expected_plan_hash: str) -> None:
         if not np.array_equal(recovered, words):
             raise ValueError(f"native verifier disagrees with the registered table at J={batch}")
         ranking = rank_complete_cost(verifier, inputs, [(batch, candidate, toffoli)], brot, metrics["lambda_eff"])[0]
+        if projection:
+            ranking["low_bits"] = bank
         write_json(output / "trials" / f"batch-{batch:02}.json", {
             **ranking, "verified_shots": rows * plan["shots_per_address"],
             "scope": "development trial; no complete metric or confirmation",
@@ -127,6 +137,15 @@ def run_worker(plan_path: Path, output: Path, expected_plan_hash: str) -> None:
         ranked.append(ranking)
     ranked.sort(key=lambda entry: (entry["modeled_cost"], entry["batch"]))
     best = ranked[0]["batch"]
+    if projection:
+        validate_registration(plan)
+        if sha256(plan_path) != expected_plan_hash:
+            raise ValueError("loader plan changed during execution")
+        write_json(output / "ranking.json", {
+            "ranked": ranked, "selected_batch": best, "plan_sha256": expected_plan_hash,
+            "scope": "projected cost only",
+        })
+        return
     shutil.copyfile(paths["factorization"], output / "submission.npz")
     hashes = []
     nonzero_receipts = []

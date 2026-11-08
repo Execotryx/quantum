@@ -1,0 +1,34 @@
+{
+  "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+  "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+  "initializer": "I3-resume",
+  "max_evaluations": 10000,
+  "parent": {
+    "checkpoint": {
+      "path": "runs/chem-s1-resume-5000-20261108/continuous-05000.npz",
+      "sha256": "d4e50f7b9a084ce4137558dfb3347748a0704e67f8b036d457bb53181ef08fe3"
+    },
+    "checkpoint_receipt": {
+      "path": "runs/chem-s1-resume-5000-20261108/checkpoint-05000.json",
+      "sha256": "ab6139bfe20d27cf9d18cd5bd865aabcf3b16282403cd41e520947fa85b5f598"
+    },
+    "decision": {
+      "path": "runs/chem-s1-resume-5000-20261108/decision.json",
+      "sha256": "442f4dea1e21cd1a4067d394e3637eef700d55580fbb2401cda1ec007ab37ac7"
+    },
+    "registration": {
+      "path": "runs/chem-s1-resume-5000-20261108/registration.json",
+      "sha256": "bf5304ab4f05b3c99bcfbf2ea08ed1da5b8f0d5c0e3f01843ac6fe380428d142"
+    }
+  },
+  "profile": "docs/evidence/chem-joint-profile-20261108/profile.json",
+  "profile_sha256": "2f511cf799f312871683fd4eb7d92c8a740ac02ae9df749461d88c7cc2c431ef",
+  "seed": 184,
+  "shape": [
+    9,
+    143,
+    40
+  ],
+  "target_sha256": "7e72455f4f6e6a476fed9c1626a96cebea775c4fc071145fd056af23d63e8393",
+  "wall_seconds": 7200
+}

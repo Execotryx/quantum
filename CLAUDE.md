@@ -18,6 +18,8 @@ The v4 lattice recipe pins both single-width parents and the exact winning
 table. Keep model-only two-octave pricing separate from native circuit costs.
 The trimmed-width recipe requires full-domain intermediate bounds and
 v4 phase identity before its separate promotion campaign.
+The v6 sibling-control screen keeps v5 as its byte-identical control and
+requires two matching builds and agreement with the complete cost model.
 Use the calibrated direct stage model within its documented format and
 scope. A modeled resource improvement still needs the candidate gates.
 
@@ -35,6 +37,12 @@ Treat an I3 checkpoint restart as a separate run and a loader reference
 control as development evidence.
 Use the bounded grid supervisor for registered fit plans. Keep timeouts,
 worker failures and completed lanes in separate immutable attempts.
+The alternating-projection fit gates decoding on continuous residual. Register
+S2 settings before projecting complete loader cost for every passing lane.
+Use the one-contingency S2 supervisor before preparing S3 and the release loader.
+Circular DQI rounds increment the counter on zero discrepancy. The routed
+decoder needs a passing freed-nonzero probe and registered history depth.
+An overflow leaves a verifier-visible count and bypasses exact history pops.
 Use `tools/hybrid_certification.py` for the audited parent and successor
 certificate. Keep chemistry's one-use confirmation scoped to the complete
 family and NPZ. Resolve inherited evidence through the trusted parent record.

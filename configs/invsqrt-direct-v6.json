@@ -1,0 +1,30 @@
+{
+  "hypothesis": "Sharing sibling controls lowers the verified trimmed circuit cost.",
+  "parameter_ranges": "The frozen trimmed v5 lattice table, with one sibling-CNOT toggle.",
+  "comparison": "verified-v5",
+  "minimum_gain": 0.05,
+  "maximum_cost": 448720.07,
+  "maximum_qubits": 150,
+  "expected_development_shots": 31232,
+  "expected_worst_tolerance_fraction": 0.6677104117799098,
+  "check_cost_model": true,
+  "controls": {
+    "verified-v5": {
+      "parameters": {
+        "fit": "minimax", "segment_bits": 7, "fractional": [28, 20, 14],
+        "fused": true, "reuse_lookup": true, "binary_normalization": true, "measurement_unlookup": true,
+        "trimmed": true, "lattice_receipt": "docs/evidence/invsqrt-lattice-20261108/28-20-14.json"
+      },
+      "sha256": "f4c8503d87c9e7cedb8a79a796e0b195623c2e88467691ca1b08af1a70fb200d",
+      "cost": 472336.9178780867
+    }
+  },
+  "piecewise": {
+    "sibling-cnot": {
+      "fit": "minimax", "segment_bits": 7, "fractional": [28, 20, 14],
+      "fused": true, "reuse_lookup": true, "binary_normalization": true, "measurement_unlookup": true,
+      "trimmed": true, "lattice_receipt": "docs/evidence/invsqrt-lattice-20261108/28-20-14.json",
+      "sibling_cnot": true
+    }
+  }
+}

@@ -7,6 +7,7 @@ reciprocal-polynomial circuit but does not construct the locator itself.
 from typing import Any
 
 from .field import GF4096
+from .inplace_evaluator import inplace_evaluator
 from .scan import evaluator_xor, phase_at_position
 from .subtower import inverse_xor
 
@@ -70,3 +71,15 @@ def evaluator_and_scan(builder: Any, field: Any, locator: list[Any],
     evaluator_xor(builder, locator, syndromes, omega)
     for word in omega:
         builder.free(word)
+
+
+def inplace_evaluator_and_scan(builder: Any, field: Any, locator: list[Any],
+                               syndromes: list[Any], masks: list[Any]) -> None:
+    """Use the first syndrome words as scan workspace, then restore them."""
+    count = len(locator) - 1
+    if not 1 <= count <= min(len(syndromes), 35):
+        raise ValueError("invalid in-place direct scan shape")
+    omega = syndromes[:count]
+    inplace_evaluator(builder, locator, omega)
+    direct_scan(builder, field, locator, omega, masks)
+    inplace_evaluator(builder, locator, omega, adjoint=True)

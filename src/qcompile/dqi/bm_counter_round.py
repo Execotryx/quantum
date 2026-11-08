@@ -46,9 +46,9 @@ def round_with_counter(builder: Any, sigma: list[Any], shifted_tau: list[Any], s
                        *, adjoint: bool = False) -> None:
     """Compute branch, arithmetic, and signed counter; retain exact history.
 
-    Forward requires an all-zero branch and history, zero constant in the
-    supplied shifted template, and a counter width that does not overflow on
-    reachable inputs. The reverse input must be a corresponding forward output.
+    Exact restoration requires a clean forward branch and history. The
+    shifted template constant must be zero when the discrepancy is nonzero.
+    The reverse input must be a corresponding forward output.
     This does not prepare the virtual shift, update age, or address a stack.
     """
     if len(counter) < 2:

@@ -1,5 +1,8 @@
 """Symmetric pair coordinates and the continuous DFTHC residual."""
 
+from collections.abc import Callable
+from dataclasses import dataclass
+
 import numpy as np
 from numpy.typing import NDArray
 from scipy.cluster.hierarchy import cut_tree, linkage
@@ -89,6 +92,93 @@ def initialize(spectrum: Floats, vectors: Floats, n: int, shape: tuple[int, int,
 
 def factor_rows(features: Floats, weights: Floats) -> Floats:
     return np.einsum("rbc,rbd->rcd", weights, features, optimize=True).reshape(-1, features.shape[-1])
+
+
+@dataclass
+class AlternatingFit:
+    vectors: Floats
+    weights: Floats
+    residual: float
+    rank_floor: float
+    trace: list[dict[str, int | float]]
+
+
+def fit_alternating(
+    target: Floats, vectors: Floats, weights: Floats, sweeps: int, record_every: int,
+    *, spectrum: tuple[Floats, Floats] | None = None,
+    checkpoint: Callable[[dict[str, int | float], Floats, Floats], None] | None = None,
+) -> AlternatingFit:
+    """Fit spectral rows by exact block updates, retaining the best true residual."""
+    if (
+        vectors.ndim != 3 or weights.ndim != 3 or vectors.shape[:2] != weights.shape[:2]
+        or min(*vectors.shape, *weights.shape) < 1
+        or type(sweeps) is not int or type(record_every) is not int or min(sweeps, record_every) < 1
+    ):
+        raise ValueError("invalid alternating-fit shapes or sweep budget")
+    groups, features_per_group, n = vectors.shape
+    copies = weights.shape[2]
+    pair_width = n * (n + 1) // 2
+    if target.shape != (pair_width, pair_width) or not np.isfinite(target).all():
+        raise ValueError("invalid packed target")
+    norms = np.linalg.norm(vectors, axis=-1, keepdims=True)
+    if not np.isfinite(norms).all() or np.any(norms == 0) or not np.isfinite(weights).all():
+        raise ValueError("nonfinite or zero starting factors")
+    vectors = vectors / norms
+    weights = weights.copy()
+    features = svec(vectors[..., :, None] * vectors[..., None, :])
+    row_count = groups * copies
+    values, eigenvectors = np.linalg.eigh(target) if spectrum is None else spectrum
+    keep = min(row_count, int(np.count_nonzero(values > 0)))
+    spectral = np.zeros((row_count, pair_width))
+    if keep:
+        spectral[-keep:] = (eigenvectors[:, -keep:] * np.sqrt(values[-keep:])).T
+
+    best = AlternatingFit(vectors.copy(), weights.copy(), direct_residual(target, factor_rows(features, weights)),
+                          rank_lower_bound(values, row_count), [])
+    trace_start: dict[str, int | float] = {"sweep": 0, "continuous_residual": best.residual}
+    best.trace.append(trace_start)
+    if checkpoint is not None:
+        checkpoint(trace_start, vectors, weights)
+    diagonal = np.diag_indices(features_per_group)
+    pair_i, pair_j = np.triu_indices(n)
+    scale = np.where(pair_i == pair_j, 1.0, np.sqrt(2.0))
+    symmetric = np.empty((n, n))
+    for sweep in range(1, sweeps + 1):
+        rows = factor_rows(features, weights)
+        left, _, right = np.linalg.svd(rows @ spectral.T, full_matrices=False)
+        aligned = ((left @ right) @ spectral).reshape(groups, copies, pair_width)
+        surrogate = 0.0
+        for basis, feature, w, goal in zip(vectors, features, weights, aligned, strict=True):
+            gram = feature @ feature.T
+            gram[diagonal] += 1e-10 * np.trace(gram) / features_per_group
+            solved = np.linalg.solve(gram, feature @ goal.T)
+            residual = goal - w.T @ feature
+            trial_residual = goal - solved.T @ feature
+            if np.vdot(trial_residual, trial_residual) <= np.vdot(residual, residual):
+                w[:], residual = solved, trial_residual
+            for b, column in enumerate(w):
+                cross = column @ residual + np.dot(column, column) * feature[b]
+                entries = cross / scale
+                symmetric[pair_i, pair_j] = symmetric[pair_j, pair_i] = entries
+                eigenvalues, directions = np.linalg.eigh(symmetric)
+                if eigenvalues[-1] <= 0:
+                    continue
+                vector = directions[:, -1]
+                if vector[np.argmax(np.abs(vector))] < 0:
+                    vector = -vector
+                new_feature = vector[pair_i] * vector[pair_j] * scale
+                residual += column[:, None] * (feature[b] - new_feature)
+                basis[b], feature[b] = vector, new_feature
+            surrogate += float(np.vdot(residual, residual))
+        if sweep % record_every == 0 or sweep == sweeps:
+            actual = direct_residual(target, factor_rows(features, weights))
+            point = {"sweep": sweep, "continuous_residual": actual, "surrogate_squared": surrogate}
+            best.trace.append(point)
+            if actual < best.residual:
+                best.vectors, best.weights, best.residual = vectors.copy(), weights.copy(), actual
+            if checkpoint is not None:
+                checkpoint(point, vectors, weights)
+    return best
 
 
 def joint_residual(target: Floats, vectors: Floats, weights: Floats,

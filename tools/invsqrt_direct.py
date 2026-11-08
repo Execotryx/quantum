@@ -6,6 +6,7 @@ import secrets
 import subprocess
 import sys
 import time
+from dataclasses import asdict
 from functools import partial
 from math import isclose
 from pathlib import Path
@@ -17,9 +18,12 @@ from invsqrt_opportunity import ROOT, THREADS, backend, counts, phase, require
 from qcompile.contract import load_contract
 from qcompile.environment import capture
 from qcompile.experiments import record_lock, validate_budget
+from qcompile.invsqrt.costmodel import predict
 from qcompile.invsqrt.direct import DirectFormat, build_circuit, coefficient_table, phase64
 from qcompile.invsqrt.direct_screen import beta_one_targets, complete_cost, scan_phase
 from qcompile.invsqrt.minimax import coefficient_table as minimax_table
+from qcompile.invsqrt.trimmed import TrimmedFormat
+from qcompile.invsqrt.trimmed import build_circuit as build_trimmed
 from qcompile.io import read_json, sha256, write_json
 from qcompile.profiling import ResourceSampler, terminate_tree
 
@@ -27,6 +31,7 @@ CONFIG = ROOT / "configs/invsqrt-direct-v1.json"
 CONFIG_V2 = ROOT / "configs/invsqrt-direct-v2.json"
 CONFIG_V3 = ROOT / "configs/invsqrt-direct-v3.json"
 CONFIG_V4 = ROOT / "configs/invsqrt-direct-v4.json"
+CONFIG_V6 = ROOT / "configs/invsqrt-direct-v6.json"
 N_P = 10
 EXPECTED_SHOTS = 200_540_928
 PINS = (
@@ -69,6 +74,14 @@ def pins(version: int = 1) -> dict[str, str]:
             ROOT / "tools/invsqrt_lattice.py",
             *(ROOT / "docs/evidence/invsqrt-lattice-20261108" / f"{name}.json"
               for name in ("28-21-14", "29-20-14", "28-20-14")),
+        )
+    if version == 6:
+        paths += (
+            CONFIG_V6,
+            ROOT / "src/qcompile/invsqrt/trimmed.py",
+            ROOT / "src/qcompile/invsqrt/costmodel.py",
+            ROOT / "docs/evidence/invsqrt-trimmed-paired-20261108/comparison.json",
+            ROOT / "docs/evidence/invsqrt-trimmed-v4-20261108/development-a.json",
         )
     return {p.relative_to(ROOT).as_posix(): sha256(p) for p in paths}
 
@@ -141,19 +154,27 @@ def native_smoke(km, official, circuit, spec, model, points, policy):
     return {"fixture_inputs": len(points), "shots": len(xs), "executed_counts": executed, "counts": per_shot}
 
 
+def candidate_format(fmt_spec: dict) -> DirectFormat:
+    settings = {key: value for key, value in fmt_spec.items() if key not in ("fit", "lattice_receipt", "trimmed")}
+    cls = TrimmedFormat if fmt_spec.get("trimmed") else DirectFormat
+    return cls(N_P, **{**settings, "fractional": tuple(settings["fractional"])})
+
+
 def direct_candidate(km, primitives, fmt_spec, *, liveness=None):
-    settings = dict(fmt_spec)
-    fit = settings.pop("fit", "taylor")
-    lattice_receipt = settings.pop("lattice_receipt", None)
-    fmt = DirectFormat(N_P, **{**settings, "fractional": tuple(settings["fractional"])})
+    fit = fmt_spec.get("fit", "taylor")
+    lattice_receipt = fmt_spec.get("lattice_receipt")
+    fmt = candidate_format(fmt_spec)
     if lattice_receipt is None:
+        require(not isinstance(fmt, TrimmedFormat), "trimmed recipe requires a frozen lattice table")
         table = {"taylor": coefficient_table, "minimax": minimax_table}[fit](fmt)
     else:
         require(fit == "minimax", "lattice table requires minimax base")
         receipt = read_json(ROOT / lattice_receipt)
         require(tuple(receipt["fractional"]) == fmt.fractional, "lattice format differs")
         table = tuple(tuple(row) for row in receipt["coefficients"])
-    return build_circuit(km, primitives, fmt, table, liveness=liveness), partial(phase64, fmt, table), table
+    circuit = (build_trimmed(km, primitives, fmt, table) if isinstance(fmt, TrimmedFormat)
+               else build_circuit(km, primitives, fmt, table, liveness=liveness))
+    return circuit, partial(phase64, fmt, table), table
 
 
 def lane(directory: Path, name: str) -> None:
@@ -177,12 +198,26 @@ def lane(directory: Path, name: str) -> None:
     frozen = protocol.get("frozen_sha256", {}).get(name)
     if frozen is not None:
         require(digest == frozen, f"{name} frozen KMB hash differs")
+    reproducibility = {}
+    if protocol.get("check_cost_model"):
+        rebuilt, _, _ = direct_candidate(km, primitives, params)
+        rebuilt_digest = emit(km, rebuilt, official, output / "rebuild.kmb")[1]
+        del rebuilt
+        require(digest == rebuilt_digest, f"{name} independent KMB build differs")
+        reproducibility["rebuild_sha256"] = rebuilt_digest
     margins = scan_phase(model, spec.max_x, partial(official.reference_values, spec))
     points = fixture_inputs(spec.max_x, segments, margins, protocol["development"])
     native = native_smoke(km, official, circuit, spec, model, points, protocol["development"])
+    if "expected_development_shots" in protocol:
+        require(native["shots"] == protocol["expected_development_shots"], "development coverage changed")
     score = None
     if margins["minimum_margin_phase64"] > 0:
         score = complete_cost(circuit.num_qubits, native["counts"], margins["minimum_margin_phase64"])
+    if protocol.get("check_cost_model"):
+        fmt = candidate_format(params)
+        modeled = predict(DirectFormat(**asdict(fmt)), margins["minimum_margin_phase64"],
+                          trimmed=isinstance(fmt, TrimmedFormat))
+        require(modeled["cost"] == score, f"{name} calibrated cost differs from native counts")
     if control:
         require(digest == control["sha256"], f"{name} KMB hash differs")
         require(
@@ -198,6 +233,7 @@ def lane(directory: Path, name: str) -> None:
         output / "result.json",
         {
             "sha256": digest,
+            **reproducibility,
             "parameters": params,
             "margins": margins,
             "native": native,
@@ -229,9 +265,12 @@ def run_job(argv: list[str], output: Path, timeout: float) -> int:
 
 def screen(directory: Path, version: int = 1) -> None:
     protocol = read_json(CONFIG)
-    for config in (CONFIG_V2, CONFIG_V3, CONFIG_V4)[: version - 1]:
-        updates = read_json(config)
-        protocol = {**protocol, **updates, "controls": {**protocol["controls"], **updates["controls"]}}
+    if version == 6:
+        protocol.update(read_json(CONFIG_V6))
+    else:
+        for config in (CONFIG_V2, CONFIG_V3, CONFIG_V4)[: version - 1]:
+            updates = read_json(config)
+            protocol = {**protocol, **updates, "controls": {**protocol["controls"], **updates["controls"]}}
     validate_budget(protocol)
     contract = load_contract(ROOT / "contracts/contract.json")
     contract.require_ready(ROOT)
@@ -342,10 +381,12 @@ def screen(directory: Path, version: int = 1) -> None:
                 if all(name in feasible and ranking(name)[0] < ranking(comparison)[0] for name in parents):
                     attempt("combined-lattice", protocol["combined_lattice"])
     limit = protocol["controls"][protocol.get("comparison", "incumbent")]["cost"] * (1 - protocol["minimum_gain"])
+    limit = min(limit, protocol.get("maximum_cost", limit))
     eligible = [
         n
         for n, row in attempts.items()
         if n not in protocol["controls"] and passed(row) and row["cost"]["score"] <= limit
+        and row["cost"]["qubits"] <= protocol.get("maximum_qubits", float("inf"))
     ]
     winner = min(eligible, key=ranking) if controls_pass and in_budget() and eligible else None
     elapsed, cpu = usage()
@@ -382,14 +423,22 @@ def verify_worker(directory: Path, role: str) -> None:
         max_workers=protocol["promotion"]["workers"],
     )
     write_json(output / "raw-verifier.json", result)
+    expected_worst = protocol.get("expected_worst_tolerance_fraction")
     require(
         result["status"] == "PASS"
         and result["verified_shots"] == EXPECTED_SHOTS
         and result["circuit_sha256"] == digest == sha256(path)
         and result["worst_error_over_tolerance"] <= 0.90
-        and result["score"] <= record["cost_limit"],
+        and result["score"] <= record["cost_limit"]
+        and ("maximum_qubits" not in protocol or result["num_qubits"] <= protocol["maximum_qubits"]),
         "verification failed coverage, identity or measured promotion gates",
     )
+    if expected_worst is not None:
+        require(isclose(result["worst_error_over_tolerance"], expected_worst, rel_tol=1e-12),
+                "verified worst phase differs from the control")
+        if role == "confirmation":
+            full = read_json(directory / "full" / "result.json")["result"]
+            require(isclose(result["score"], full["score"], rel_tol=1e-12), "confirmation score differs")
     write_json(
         output / "result.json",
         {
@@ -461,7 +510,7 @@ def main() -> None:
     )
     parser.add_argument("directory", type=Path)
     parser.add_argument("name", nargs="?")
-    parser.add_argument("--protocol", choices=(1, 2, 3, 4), type=int, default=1)
+    parser.add_argument("--protocol", choices=(1, 2, 3, 4, 6), type=int, default=1)
     args = parser.parse_args()
     if args.action == "build":
         if args.name is None:

@@ -1,0 +1,45 @@
+{
+  "cloud": "Google Compute Engine",
+  "openspec": {
+    "assemble-routed-bm-direct-forney-decoder": 0,
+    "fit-dfthc-alternating-projection": 0,
+    "freeze-dqi-zero-discrepancy-round": 0,
+    "preregister-chemistry-s2-settings": 0,
+    "promote-compressed-chemistry": 0,
+    "select-compressed-chemistry-shape": 0,
+    "sequence-hybrid-releases": 0,
+    "share-invsqrt-lookup-siblings": 0,
+    "specify-dqi-history-overflow": 0
+  },
+  "pyright_exit_code": 0,
+  "replay_git_tree": "3b2384667df24770174b61a8c2ef9565b57a507b",
+  "replay_source_revision": "1b9bf512c5dc4a7284cc5dcd5bc28a158177a7c3",
+  "results": {
+    "frozen-rounds": {
+      "elapsed_seconds": 12.71,
+      "errors": 0,
+      "failures": 0,
+      "junit_sha256": "1172204391d84b85e64ac139f3f4e996052a02a8536ff2272a4bb87fbf32aeaf",
+      "skipped": 0,
+      "tests": 4
+    },
+    "history-fixtures": {
+      "elapsed_seconds": 5.545,
+      "errors": 0,
+      "failures": 0,
+      "junit_sha256": "8592eec58fdb6ca72137751ddc97bca19b059ec7a0d1984ec71af4d07774525e",
+      "skipped": 0,
+      "tests": 5
+    },
+    "replay": {
+      "elapsed_seconds": 502.246,
+      "errors": 0,
+      "failures": 0,
+      "junit_sha256": "2e87210dded91815cda25812d04b6608e9d139919df9084d0c2bd3ef5e7710ff",
+      "skipped": 0,
+      "tests": 766
+    }
+  },
+  "ruff_exit_code": 0,
+  "runtime": "3.13.14"
+}

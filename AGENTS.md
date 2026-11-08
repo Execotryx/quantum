@@ -48,6 +48,19 @@
   reference controls and eligible S3 handoffs from full chemistry acceptance.
 - Validate every fit plan through the pinned grid manifest before a batch.
   Keep separate attempt receipts and resume only hash-verified completions.
+- A floating-point fixed-basis relaxation supplies diagnostic evidence.
+  Shape exclusion needs a certified bound for the variable basis.
+- The sibling-control screen uses the frozen trimmed v5 KMB as its control.
+  Require two matching v6 builds and agreement with the complete cost model.
+- Alternating-projection chemistry lanes bind the start and terminal checkpoint.
+  Require the continuous gate before decoding. Preregister S2 settings from the
+  pinned reference before projecting costs for every passing lane. Bind the
+  selected lane and run its S2 plan under the one-contingency supervisor.
+  Projected loader costs cannot substitute for S3 accuracy or confirmation.
+- Circular routed DQI rounds increment the counter on zero discrepancy. Gate
+  decoder emission on the freed-nonzero verifier probe and complete registered
+  depth campaign. Restore tagged entries on clean inputs and retain the
+  overflow count as verifier-visible scratch on overflowed inputs.
 - Banked chemistry lookups preserve the pinned factorization and angle words.
   Check the 128-qubit cap and phase, selection and workspace at every circuit
   boundary. Combined validation keeps the exact confirmed inverse-square-root

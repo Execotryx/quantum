@@ -1,0 +1,15 @@
+{
+  "attempts": {
+    "sibling-cnot": "5679038b59faa0227b5bb233a6d4efbd24cd7c752831f329c191553e6653572b",
+    "verified-v5": "03af97d57057168d2b60f446133b087445f36ec477a449c794a0a1cde09d4ef7"
+  },
+  "controls_pass": true,
+  "cpu_seconds": 18.57,
+  "in_budget": true,
+  "limit": 448720.07,
+  "registration_sha256": "fc6cb4c86e9c08cbd6ab2a812dedf6218699f9f42d7d9994b5ed3690761ec11e",
+  "status": "go",
+  "wall_seconds": 18.649142980999954,
+  "winner": "sibling-cnot",
+  "winner_sha256": "254279d6ffb1907c60458ef0c8adfcd728e40ea75a44fb754be6346efeef4728"
+}

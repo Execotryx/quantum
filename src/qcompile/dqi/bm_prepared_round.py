@@ -23,8 +23,8 @@ def routed_update_with_multiplier(builder: Any, sigma: list[Any], shifted_tau: l
                                   delta: Any, replace: Any, *, adjoint: bool = False) -> None:
     """Compute alpha=Delta*sigma0, route its inverse on replace, then clear it.
 
-    All registers are disjoint. In forward inputs shifted_tau[0] is zero;
-    replace must be false when Delta is zero. The adjoint receives a valid
+    All registers are disjoint. In forward inputs shifted_tau[0] is zero
+    when Delta is nonzero, and replace is false when Delta is zero. The adjoint receives a valid
     output of the forward slice with the same Delta and replace metadata.
     """
     if not sigma or len(sigma) != len(shifted_tau) or len(delta) != 12:

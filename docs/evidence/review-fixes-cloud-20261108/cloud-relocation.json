@@ -1,0 +1,11 @@
+{
+  "scope": "cloud test checkout path-only relocation",
+  "original_backend_sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+  "relocated_backend_sha256": "bd68ed6223bbba78821192be217cb3dc9a6af5e0ae1c07097361511bb189edd4",
+  "changed_fields": [
+    "metric_notebook",
+    "kickmix_root",
+    "verifiers_root"
+  ],
+  "all_nonpath_inventory_fields_equal": true
+}

@@ -1,0 +1,230 @@
+{
+  "available_memory_kib": 15717752,
+  "contract_hash": "fbd6d649c648ad4d44d7c356d490b732f59bd0ead32155fbbcdbd0b9a21f031a",
+  "environment": {
+    "cpu_count": 2,
+    "dependencies": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scipy": "1.17.0"
+    },
+    "dependency_lock_sha256": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+    "dirty": false,
+    "numpy_backend": {
+      "Build Dependencies": {
+        "blas": {
+          "detection method": "pkgconfig",
+          "found": true,
+          "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+          "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+          "name": "scipy-openblas",
+          "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+          "pc file directory": "/project/.openblas",
+          "version": "0.3.30"
+        },
+        "lapack": {
+          "detection method": "pkgconfig",
+          "found": true,
+          "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+          "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+          "name": "scipy-openblas",
+          "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+          "pc file directory": "/project/.openblas",
+          "version": "0.3.30"
+        }
+      },
+      "Compilers": {
+        "c": {
+          "commands": "cc",
+          "linker": "ld.bfd",
+          "name": "gcc",
+          "version": "14.2.1"
+        },
+        "c++": {
+          "commands": "c++",
+          "linker": "ld.bfd",
+          "name": "gcc",
+          "version": "14.2.1"
+        },
+        "cython": {
+          "commands": "cython",
+          "linker": "cython",
+          "name": "cython",
+          "version": "3.2.1"
+        }
+      },
+      "Machine Information": {
+        "build": {
+          "cpu": "x86_64",
+          "endian": "little",
+          "family": "x86_64",
+          "system": "linux"
+        },
+        "host": {
+          "cpu": "x86_64",
+          "endian": "little",
+          "family": "x86_64",
+          "system": "linux"
+        }
+      },
+      "Python Information": {
+        "path": "/tmp/build-env-w_be3r90/bin/python",
+        "version": "3.13"
+      },
+      "SIMD Extensions": {
+        "baseline": [
+          "SSE",
+          "SSE2",
+          "SSE3"
+        ],
+        "found": [
+          "SSSE3",
+          "SSE41",
+          "POPCNT",
+          "SSE42",
+          "AVX",
+          "F16C",
+          "FMA3",
+          "AVX2"
+        ],
+        "not found": [
+          "AVX512F",
+          "AVX512CD",
+          "AVX512_KNL",
+          "AVX512_KNM",
+          "AVX512_SKX",
+          "AVX512_CLX",
+          "AVX512_CNL",
+          "AVX512_ICL",
+          "AVX512_SPR"
+        ]
+      }
+    },
+    "platform": "Linux-7.0.0-1014-gcp-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "python": "3.13.14 (main, Jul 18 2026, 17:02:37) [Clang 22.1.3 ]",
+    "source_revision": "88ee03305bc9f560b00cc677e48d27244a03cbcd",
+    "thread_settings": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "inputs": {
+    "configs/invsqrt-direct-v1.json": "a839f5c53c8e14155a805ebcbf35c965d600c88375294472d0c6bc9dd037e8e4",
+    "configs/invsqrt-direct-v2.json": "1921b28fcfb9cf8c06376fd923c8d15e041d63b02a47b0655256ed3be48a1009",
+    "configs/invsqrt-direct-v3.json": "0903159aae8aaffb31eac607d9e51fa08b98d828d220f1a8cf0edc23b80bbb4f",
+    "configs/invsqrt-direct-v4.json": "dd32d16086e30a29cba5a8ff6d04ec95fa6c65c211eed405aee51545ae504f2b",
+    "configs/invsqrt-direct-v6.json": "b3dd4e9e9d2aebe15e1aaf1856b2af24ee66d26fdd1bd0517e56bbb715222e52",
+    "contracts/contract.json": "7d4a10460782bafca05232d8f426ae2598e3ff396f28dadbd8823037f43c333c",
+    "docs/evidence/invsqrt-chemistry-20261107/archive.json": "ffeca5cd11ccd8c215209fd7b2e480275926c7027d0511e6e41424d19f738b2d",
+    "docs/evidence/invsqrt-chemistry-20261107/combined-result.json": "c93b6823ae55bf69a39d54825cab5f0ca57dab75f8808a8ea5b549eb5885d5fb",
+    "docs/evidence/invsqrt-direct-20261107/combined/attempt.json": "390194afa0c799d9c3038b0ea494527325b4722a94675c9e647f428df4778e60",
+    "docs/evidence/invsqrt-direct-20261107/combined/coefficients.json": "f2c5e9cc951f423e48fbeef7772b0541d70bf28d347ce92d1d41af8a07a7c85e",
+    "docs/evidence/invsqrt-direct-hybrid-20261107/certificate.json": "f37e9119ef2e479d92663a34b23fc4ceb4b93c8d325815c844b2d45cbdb3eba0",
+    "docs/evidence/invsqrt-lattice-20261108/28-20-14.json": "391304b70b1172cda1c9cff1af4dd05b892e021353224c20a2f8a6d1c67b2079",
+    "docs/evidence/invsqrt-lattice-20261108/28-21-14.json": "7aa3478178b8ee689a0451054e7015d3d6be268f905f5c9a2a57dd0e0a571275",
+    "docs/evidence/invsqrt-lattice-20261108/29-20-14.json": "0ac2640390cdfc4fd7ac90bc81be1afdd4d218b5cdfb7b464519c4b74af4c32f",
+    "docs/evidence/invsqrt-trimmed-paired-20261108/comparison.json": "c146495e1a2645cf13c5046edb0cba3cf0934426a3e41c93994cc53c14ae385d",
+    "docs/evidence/invsqrt-trimmed-v4-20261108/development-a.json": "9927827465cdf60a43ad50cdfc9f841206897d1883a57bf3e44142f44b5c5da1",
+    "docs/evidence/next-hybrid-20261108/invsqrt/minimax-quadratic.json": "3b408ff14b6497ff9bfc63069aa058563b0c2a0efbca24dc848fa2c26e7c192d",
+    "docs/evidence/next-hybrid-20261108/paired-archive/comparison.json": "bead60ccd8844094b3c12d147e81fd31dc8728a093a4f2158078a256b5ae711c",
+    "docs/evidence/official-baseline-20261101.json": "1fbc229f8bf97c731e73cc4db91759736d6a47d515661249ccc8add8516625b6",
+    "src/qcompile/invsqrt/costmodel.py": "5430f08c75f96405af0dd3e4141697705d04da0c7595835da492b2d51fab8d23",
+    "src/qcompile/invsqrt/direct.py": "e7fd9020e6c469c8b74f14583c68fa479ebd01e535897b3f452fbd7349df4c41",
+    "src/qcompile/invsqrt/direct_screen.py": "94cd56df585c236a6676f6adcaae081e96411871e46c1242bf66be48dc90295f",
+    "src/qcompile/invsqrt/lattice.py": "b5c7b31552933abfd20687b344a8e4f1c413cd9af9e0172da2f8c5c907cee7ed",
+    "src/qcompile/invsqrt/minimax.py": "b387cacee2a2d08458dd768a7ae6cc6fc6f4331001c9daf414b42830e3f41a71",
+    "src/qcompile/invsqrt/trimmed.py": "087b4d98f7d18b41f38aba45b1749f946f9c3db58df336c46ccd39a2a9ac6a7e",
+    "src/qcompile/invsqrt/unlookup.py": "a6a9e2ee336a66d9876c2cd329804bba72a3e80cada532efa11c24a3cef65342",
+    "src/qcompile/liveness.py": "207b15e0e1b94276d70643ae15388d0f53968abd66e4d745250a62a23e9919c6",
+    "tools/invsqrt_direct.py": "b81c2a2b3f936db05a0733a2cc104a0e7fef144e2f301f244cd134dceb6183bf",
+    "tools/invsqrt_lattice.py": "d598a78aefb93c059b7a4419c21f8ad13da384af0b58244525e4aa1185cc2cb8",
+    "tools/invsqrt_opportunity.py": "2c90ea1cd69857fc9bfaa0b2acd02edf62f1f0a4d39cfa324ed424cba784c8d7",
+    "uv.lock": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+    "vendor/backend.json": "bd68ed6223bbba78821192be217cb3dc9a6af5e0ae1c07097361511bb189edd4"
+  },
+  "protocol": {
+    "budget": {
+      "engineer_hours": 16,
+      "max_compute_seconds": 14400,
+      "max_experiments": 11,
+      "max_wall_seconds": 7200,
+      "minimum_available_memory_kib": 4194304
+    },
+    "check_cost_model": true,
+    "comparison": "verified-v5",
+    "controls": {
+      "verified-v5": {
+        "cost": 472336.9178780867,
+        "parameters": {
+          "binary_normalization": true,
+          "fit": "minimax",
+          "fractional": [
+            28,
+            20,
+            14
+          ],
+          "fused": true,
+          "lattice_receipt": "docs/evidence/invsqrt-lattice-20261108/28-20-14.json",
+          "measurement_unlookup": true,
+          "reuse_lookup": true,
+          "segment_bits": 7,
+          "trimmed": true
+        },
+        "sha256": "f4c8503d87c9e7cedb8a79a796e0b195623c2e88467691ca1b08af1a70fb200d"
+      }
+    },
+    "correctness_conditions": "Full-domain positive phase64 margin, at most 90 percent of the tolerance, native phase parity, restored x and zero scratch.",
+    "development": {
+      "batch": 64,
+      "random_inputs": 256,
+      "repeat": 4,
+      "seed": 2026110701
+    },
+    "direct_control": {
+      "fractional": [
+        33,
+        28,
+        23,
+        18
+      ],
+      "segment_bits": 6
+    },
+    "expected_development_shots": 31232,
+    "expected_worst_tolerance_fraction": 0.6677104117799098,
+    "hypothesis": "Sharing sibling controls lowers the verified trimmed circuit cost.",
+    "maximum_cost": 448720.07,
+    "maximum_qubits": 150,
+    "minimum_gain": 0.05,
+    "objective": "Minimize complete declared-qubit and rotation-inclusive verifier cost.",
+    "parameter_ranges": "The frozen trimmed v5 lattice table, with one sibling-CNOT toggle.",
+    "parent_rule": "Choose the best positive-margin and within-tolerance polynomial by score, then absolute margin, then label. Compare fused arithmetic and lookup workspace reuse independently on that parent. Combine them only if both individually lower cost.",
+    "piecewise": {
+      "sibling-cnot": {
+        "binary_normalization": true,
+        "fit": "minimax",
+        "fractional": [
+          28,
+          20,
+          14
+        ],
+        "fused": true,
+        "lattice_receipt": "docs/evidence/invsqrt-lattice-20261108/28-20-14.json",
+        "measurement_unlookup": true,
+        "reuse_lookup": true,
+        "segment_bits": 7,
+        "sibling_cnot": true,
+        "trimmed": true
+      }
+    },
+    "promotion": {
+      "timeout_seconds": 3600,
+      "workers": 2
+    },
+    "stop_rule": "Stop on a control or budget failure. Retain all attempted variants and never promote on modeled evidence alone."
+  },
+  "registered_unix": 1794156654.8439279,
+  "screen_lanes": 1,
+  "version": 6
+}

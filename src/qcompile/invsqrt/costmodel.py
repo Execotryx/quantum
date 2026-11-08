@@ -12,19 +12,20 @@ from .direct import DirectFormat
 from .direct_screen import complete_cost
 
 
-def _lookup(bits: int) -> int:
-    # Three quarters of the b+2-bit tree are used; its traversal computes one
-    # child before discovering the first quarter is empty.
-    return 6 * (1 << bits) - 2
+def _lookup(bits: int, sibling_cnot: bool) -> int:
+    # Three quarters of the b+2-bit tree are used. The legacy traversal also
+    # computes one flag for the empty quarter. The shared walk uses one AND per live parent.
+    return (3 if sibling_cnot else 6) * (1 << bits) - (1 if sibling_cnot else 2)
 
 
-def _unlookup(bits: int) -> tuple[int, int]:
+def _unlookup(bits: int, sibling_cnot: bool) -> tuple[int, int]:
     address_width = bits + 2
     low = min(4, address_width - 1)
     high = address_width - low
     monomials = (1 << low) - low - 1
     banks = range(1 << max(0, high - 2), 1 << high)
-    tree = sum(len({bank >> (high - depth) for bank in banks}) for depth in range(2, high + 1))
+    depths = range(1, high) if sibling_cnot else range(2, high + 1)
+    tree = sum(len({bank >> (high - depth) for bank in banks}) for depth in depths)
     return monomials + tree, monomials + max(high - 1, 0)
 
 
@@ -46,8 +47,8 @@ def predict(fmt: DirectFormat, margin: int, *, trimmed: bool = False) -> dict[st
     flags = fmt.n_p.bit_length() if fmt.binary_normalization else fmt.n_p
     base = x_width + flags + output_width + sum(widths[1:])
     path = fmt.segment_bits + 1
-    lookup = _lookup(fmt.segment_bits)
-    repair, repair_workspace = _unlookup(fmt.segment_bits)
+    lookup = _lookup(fmt.segment_bits, fmt.sibling_cnot)
+    repair, repair_workspace = _unlookup(fmt.segment_bits, fmt.sibling_cnot)
     unlookup = repair if fmt.measurement_unlookup else lookup
 
     rows = 0

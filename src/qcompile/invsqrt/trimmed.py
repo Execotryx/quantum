@@ -62,7 +62,7 @@ def build_circuit(km: Any, primitives: Any, fmt: TrimmedFormat, table: tuple[tup
     path = builder.alloc_qubits(fmt.segment_bits + 1)
     low_width = 2 * fmt.n_p - fmt.segment_bits
     address = x[low_width:]
-    _load_table(builder, address, path, coefs, table)
+    _load_table(builder, address, path, coefs, table, sibling_cnot=fmt.sibling_cnot)
     builder.free(path)
     scratch = builder.alloc_qubits(max(fmt.widths))
 
@@ -83,7 +83,7 @@ def build_circuit(km: Any, primitives: Any, fmt: TrimmedFormat, table: tuple[tup
     for stage in range(len(coefs) - 1):
         rows(stage, True)
     builder.free(scratch)
-    unlookup(builder, address, coefs, table)
+    unlookup(builder, address, coefs, table, sibling_cnot=fmt.sibling_cnot)
     _binary_shift(builder, True, flags, x[::2], x[1::2])
     _binary_count(builder, x, flags, fmt.n_p)
     for register in (*coefs[1:], output, flags):
