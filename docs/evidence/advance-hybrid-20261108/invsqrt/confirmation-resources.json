@@ -1,0 +1,32 @@
+{
+  "attempted_memory_reads": 1722,
+  "by_benchmark": {
+    "unattributed": {
+      "peak_pss_bytes": 346274816,
+      "samples": 137
+    }
+  },
+  "by_stage": {
+    "startup_or_unattributed": {
+      "peak_pss_bytes": 346274816,
+      "samples": 137
+    }
+  },
+  "interval_seconds": 1,
+  "limitations": "sampled peaks can miss short events; processes can exit during a sample; WSL storage counters may not include host I/O",
+  "memory_scope": "sampled live CLI process and descendants; PSS apportions shared pages; summed RSS double-counts sharing",
+  "missing_memory_reads": 0,
+  "observed_mean_interval_seconds": 1.0218788084044117,
+  "peak_process_count": 13,
+  "peak_pss_bytes": 346274816,
+  "peak_pss_plus_swap_bytes": 346274816,
+  "peak_summed_rss_bytes": 1488773120,
+  "peak_swap_pss_bytes": 0,
+  "profiler_cpu_seconds": 2.10378345,
+  "root_identity": {
+    "parent": 978,
+    "pid": 1002,
+    "start_ticks": 48348
+  },
+  "samples": 137
+}

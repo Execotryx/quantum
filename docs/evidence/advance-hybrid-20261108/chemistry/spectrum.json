@@ -1,0 +1,9 @@
+{
+  "positive_count": 2925,
+  "rank_lower_bounds": {
+    "360": 0.0066756314075863184,
+    "400": 0.004125367856772541
+  },
+  "scope": "float64 diagnostic; no pruning certificate",
+  "seconds": 2.429939890000014
+}

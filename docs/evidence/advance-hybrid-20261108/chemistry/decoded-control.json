@@ -1,0 +1,9 @@
+{
+  "brot": 12,
+  "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+  "packed_two_body_residual": 0.018639570630974104,
+  "passes_pinned_accuracy": true,
+  "pinned_error_1": 0.0031851950317996216,
+  "pinned_error_2": 0.018639570630974208,
+  "words_sha256": "71a46e6424408c216f5fff3fdea5d48726a6459d09cce4a35ce2c1aeea2dbfdd"
+}

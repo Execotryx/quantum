@@ -33,6 +33,8 @@ class TowerBuilder:
 
 
 def compare(backend_path: Path, output: Path, *, m: int, n: int, seed: int) -> None:
+    if not 2 <= n <= min(m, 70) or n % 2 or m > 4095:
+        raise ValueError("require even syndrome count in [2, 70] and n <= m <= 4095")
     settings = read_json(backend_path)
     validate_backend(settings)
     official = Path(settings["verifiers_root"]) / "dqi"
@@ -61,12 +63,15 @@ def compare(backend_path: Path, output: Path, *, m: int, n: int, seed: int) -> N
                 builder, syndromes=syndromes, error_mbuc=error_mbuc, n_iters=ref.default_n_iters(n),
             )
             circuit = builder.finish_circuit()
+            del builder
         path = output / f"{name}.kmb"
         with path.open("xb") as stream:
             circuit.to_file(stream, format="kmb")
+        del circuit
         circuit = km.Circuit.from_file(str(path))
         result = verifier.verify(circuit, spec, seed=seed, batch_size=256, max_workers=1)
         write_json(output / f"{name}.json", {**result, "kmb_sha256": sha256(path)})
+        del circuit
 
 
 if __name__ == "__main__":

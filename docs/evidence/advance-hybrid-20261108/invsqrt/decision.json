@@ -1,0 +1,24 @@
+{
+  "attempts": {
+    "binary-normalization": "9273bb163b47b730f2bc7e43b46a807c2cf315f38ffba7f5e588eb66aa0c9135",
+    "certified-direct": "4576204a7d8d9607f8dc24bfd4345212b57e8442ed3d30aaa42a7899b5d284f4",
+    "combined-v3": "b835a906b25e138c86bfb9944859e227a9d208d45ccf58ff0bdc98a1e0f14cf0",
+    "incumbent": "62a14b3b00fab11667afb0dd0f5905d06ea377e9da444df98448cb7c5043506f",
+    "phase-repair": "ee7e32c733f3132e1a4c0f1d6f2c41492905baa7c21a4004d336126fa8b98578",
+    "precision-27": "27de6fe760bf9aa6829e45236e8411dd76ccf52ce4084ce19120e93fef1ce35f",
+    "precision-28": "a07fb88a2499a83b8b5d3693f0830d5e80bfadd7d3d0e4126efba7edde36f612",
+    "precision-29": "0dcf42cfb1846097dba2ab7d4d88bfaae364757ed7e3040f180018c7ad4e3707",
+    "precision-with-phase-repair": "d6ab3a79a342e3253e48fab79dc7b78e807eab08ebb790777ee6164926d946bc",
+    "reference": "60f91d873143420961107d0ca2613e4faf51418fe7ee5ff3211bbb8ce51a299b",
+    "verified-quadratic-v2": "7107006746e21668e12fe4360737d4c5a8392f26cc6372a55f8b90d64f002c8a"
+  },
+  "controls_pass": true,
+  "cpu_seconds": 36.76,
+  "in_budget": true,
+  "limit": 738071.055475571,
+  "registration_sha256": "1c592cd67e22397f5d975ee2cff56ef546b6e68c7e277e797949ce20243e9d93",
+  "status": "go",
+  "wall_seconds": 81.32253413899997,
+  "winner": "combined-v3",
+  "winner_sha256": "ce8a58b65ee2d89457de655565a22b68ffc2d7dc68befc764a99410b3285f5b4"
+}

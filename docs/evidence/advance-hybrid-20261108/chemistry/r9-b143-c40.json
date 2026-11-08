@@ -1,0 +1,93 @@
+{
+  "attempts": [
+    {
+      "elapsed_seconds": 8.323227846000009,
+      "squared_residual": 33.84016257827366
+    },
+    {
+      "elapsed_seconds": 8.526303715000012,
+      "squared_residual": 27.999112692742898
+    },
+    {
+      "elapsed_seconds": 8.722629822000016,
+      "squared_residual": 1253.8052148286242
+    },
+    {
+      "elapsed_seconds": 8.916256650999998,
+      "squared_residual": 27.883386806816475
+    },
+    {
+      "elapsed_seconds": 9.116022181999995,
+      "squared_residual": 27.417218189734086
+    },
+    {
+      "elapsed_seconds": 9.302380518000007,
+      "squared_residual": 1596.9736958149037
+    },
+    {
+      "elapsed_seconds": 9.505081656000016,
+      "squared_residual": 28.43483860157272
+    },
+    {
+      "elapsed_seconds": 9.713285399,
+      "squared_residual": 27.3466291584852
+    },
+    {
+      "elapsed_seconds": 9.90750490100001,
+      "squared_residual": 25.892776635020482
+    },
+    {
+      "elapsed_seconds": 10.09344329999999,
+      "squared_residual": 20.847417961764023
+    },
+    {
+      "elapsed_seconds": 10.282151717999994,
+      "squared_residual": 17.79280326903026
+    },
+    {
+      "elapsed_seconds": 10.482297159000012,
+      "squared_residual": 16.282883928746173
+    },
+    {
+      "elapsed_seconds": 10.680598965999991,
+      "squared_residual": 14.097875981497566
+    },
+    {
+      "elapsed_seconds": 10.874278609000015,
+      "squared_residual": 12.991104461688678
+    },
+    {
+      "elapsed_seconds": 11.064492324000014,
+      "squared_residual": 11.856883006514124
+    },
+    {
+      "elapsed_seconds": 11.273261151000014,
+      "squared_residual": 11.243041002622078
+    },
+    {
+      "elapsed_seconds": 11.467493675000014,
+      "squared_residual": 10.599276076542452
+    },
+    {
+      "elapsed_seconds": 11.656765604000014,
+      "squared_residual": 10.187034945599095
+    },
+    {
+      "elapsed_seconds": 11.870407548000003,
+      "squared_residual": 9.752284932230566
+    },
+    {
+      "elapsed_seconds": 12.066731403000006,
+      "squared_residual": 9.40033671689929
+    }
+  ],
+  "final_residual": 3.065996855331022,
+  "initial_residual": 5.817229802773323,
+  "optimizer": "registered evaluation cap",
+  "shape": [
+    9,
+    143,
+    40
+  ],
+  "status": "continuous_no_go"
+}

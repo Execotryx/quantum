@@ -5,6 +5,32 @@ independent mathematical checks, and local verification against pinned evaluator
 
 ## Current state
 
+The fully verified v3 hybrid scored **1.5753293577**, up **14.32%** from
+v2. Two independent builds and the Google Cloud rebuild produced the
+same archive. The pinned evaluator passed all three benchmarks on a
+fresh extraction.
+
+| Component | v2 cost | v3 cost | Result |
+|---|---:|---:|---|
+| Inverse square root | 820,078.95 | **548,860.92** | 33.07% lower cost and 159 qubits, down from 175 |
+| DQI | 24,439,466,510,149.91 | 24,439,466,510,149.91 | Retained reference decoder |
+| Chemistry | 3,247,752,448.67 | 3,247,752,448.67 | Retained nine banked ANGLE circuits and factorization |
+
+The v3 inverse-square-root circuit combines binary normalization,
+measurement unlookup with phase repair, and lower coefficient precision.
+Full WSL verification, fresh WSL confirmation, and archive verification
+each passed **200,540,928** trajectories on identical circuit bytes.
+The worst input used **71.96%** of its phase tolerance.
+
+The full-size cloud DQI development test cut cost by **5.09%** with zero
+observed errors in 2,560 matched shots, short of the 2× promotion threshold.
+The chemistry pilot ranked 384 layouts. All three compressed fits missed
+the 19.5 mHa residual gate.
+The [v3 validation report](docs/advance-hybrid-validation-08-11-2026-05-33-43.md)
+records the development results, full archive comparison and receipts.
+
+### Earlier hybrid results
+
 The reference and independent mathematical checks are complete. The certified
 comparison archive combines direct inverse-square-root phasing with nine
 banked chemistry circuits and the reference DQI circuit. It scored
@@ -34,7 +60,7 @@ Both archives are locally certified. The
 [successor archive evidence](docs/direct-hybrid-paired-verification-07-11-2026-14-59-24.md)
 links the exact ZIPs, coverage and confirmation lineage.
 
-### Next hybrid optimization
+### v2 hybrid optimization
 
 The fully verified v2 hybrid scored **1.3779715418**, a **7.14%** gain over
 the certified comparison archive. Only the inverse-square-root circuit differs

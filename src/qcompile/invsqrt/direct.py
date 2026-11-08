@@ -3,7 +3,7 @@
 from dataclasses import dataclass
 from fractions import Fraction
 from math import isqrt
-from typing import Any
+from typing import Any, cast
 
 import numpy as np
 from numpy.typing import NDArray
@@ -163,7 +163,7 @@ def build_circuit(km: Any, primitives: Any, fmt: DirectFormat, table: tuple[tupl
     def observe(stage: str) -> None:
         if liveness is not None:
             allocated = builder.num_allocated_qubits
-            liveness[stage] = int(allocated() if callable(allocated) else allocated)
+            liveness[stage] = cast(int, allocated() if callable(allocated) else allocated)
     x = builder.create_quantum_register(2 * fmt.n_p + 2, name="x")
     flags = builder.alloc_qubits(fmt.n_p.bit_length() if fmt.binary_normalization else fmt.n_p)
     if fmt.binary_normalization:

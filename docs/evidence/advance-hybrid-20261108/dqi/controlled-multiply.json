@@ -1,0 +1,10 @@
+{
+  "reference": {
+    "qubits": 49,
+    "toffoli_like": 75
+  },
+  "tower": {
+    "qubits": 52,
+    "toffoli_like": 66
+  }
+}

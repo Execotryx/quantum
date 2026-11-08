@@ -1,0 +1,9 @@
+{
+  "continuous_two_body_residual": 0.016133219000882548,
+  "passes_19_5_mha": true,
+  "shape": [
+    65,
+    60,
+    60
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "archive_sha256": "920fcfba647e59524d9f66b254d1fc6438e4fb792663524c16bac4453f0ac94d",
+  "coverage_counts": {
+    "dfthcsos": {
+      "completed": 254464,
+      "expected": 254464
+    },
+    "dqi": {
+      "completed": 102400,
+      "expected": 102400
+    },
+    "invsqrt": {
+      "completed": 200540928,
+      "expected": 200540928
+    }
+  },
+  "matched_retained_costs": true,
+  "parent_archive_sha256": "9aac7afcd0ff3bbff7f4c65c85cf1b331e67b3fd9893ec83b8499d0f223bb841",
+  "parent_costs": {
+    "dfthcsos": 3247752448.668952,
+    "dqi": 24439466510149.91,
+    "invsqrt": 820078.9505284121
+  },
+  "parent_score": 1.3779715417804443,
+  "successor_costs": {
+    "dfthcsos": 3247752448.668952,
+    "dqi": 24439466510149.91,
+    "invsqrt": 548860.9216547348
+  },
+  "successor_score": 1.5753293577319043,
+  "verification_sha256": "4cdb0ec294091e72b8b2a5814aa6055ef1fec1e8c03499dc6facfc56c7a100b6"
+}
