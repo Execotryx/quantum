@@ -1,0 +1,157 @@
+{
+  "contract_sha256": "9a2e0016cd6bdb1519cac904574ba2f8dfc0e01969a2d1129ce0f0d836852a8f",
+  "control_cost": 472336.9178780867,
+  "control_sha256": "f4c8503d87c9e7cedb8a79a796e0b195623c2e88467691ca1b08af1a70fb200d",
+  "direct_phase": {
+    "admitted_by_20_percent_gate": false,
+    "coefficient_bits": 28,
+    "coefficient_terms": 308,
+    "fine_rotations": 2161,
+    "inner_bits": 19,
+    "limitations": "Bound applies only to the explicit per-term phase construction; it excludes all selection, lookup, arithmetic and cleanup costs, and assumes the largest possible tolerance margin.",
+    "low_bits": 13,
+    "optimistic_cost_lower_bound": {
+      "fine_rotations": 2161,
+      "qubits": 22,
+      "rotation_epsilon_radians": 4.895123871340079e-14,
+      "rotation_t": 64961.30853607986,
+      "score": 445859.19694843923,
+      "t_like": 0,
+      "toffoli_like": 4026
+    },
+    "optimistic_margin_phase64": 621138291,
+    "phase_product_toffolis": 4026,
+    "phase_slice_native_counts": [
+      {
+        "counts": [
+          1,
+          0,
+          1
+        ],
+        "declared_qubits": 4,
+        "product": false
+      },
+      {
+        "counts": [
+          2,
+          0,
+          1
+        ],
+        "declared_qubits": 5,
+        "product": true
+      }
+    ],
+    "precision_fractional_bits": 38,
+    "product_terms": 1859,
+    "scale_values": 11,
+    "selector_native_counts": [
+      {
+        "counts": [
+          8,
+          0,
+          0
+        ],
+        "declared_qubits": 9,
+        "scale": 0
+      },
+      {
+        "counts": [
+          8,
+          0,
+          0
+        ],
+        "declared_qubits": 9,
+        "scale": 1
+      },
+      {
+        "counts": [
+          8,
+          0,
+          0
+        ],
+        "declared_qubits": 9,
+        "scale": 2
+      },
+      {
+        "counts": [
+          8,
+          0,
+          0
+        ],
+        "declared_qubits": 9,
+        "scale": 3
+      },
+      {
+        "counts": [
+          8,
+          0,
+          0
+        ],
+        "declared_qubits": 9,
+        "scale": 4
+      },
+      {
+        "counts": [
+          8,
+          0,
+          0
+        ],
+        "declared_qubits": 9,
+        "scale": 5
+      },
+      {
+        "counts": [
+          8,
+          0,
+          0
+        ],
+        "declared_qubits": 9,
+        "scale": 6
+      },
+      {
+        "counts": [
+          8,
+          0,
+          0
+        ],
+        "declared_qubits": 9,
+        "scale": 7
+      },
+      {
+        "counts": [
+          8,
+          0,
+          0
+        ],
+        "declared_qubits": 9,
+        "scale": 8
+      },
+      {
+        "counts": [
+          8,
+          0,
+          0
+        ],
+        "declared_qubits": 9,
+        "scale": 9
+      },
+      {
+        "counts": [
+          8,
+          0,
+          0
+        ],
+        "declared_qubits": 9,
+        "scale": 10
+      }
+    ],
+    "t_rotations": 3
+  },
+  "phase_gradient": {
+    "admissible_with_current_scratch_contract": false,
+    "reason": "The pinned allowed gate set preserves computational-basis states branchwise; no Hadamard or other superposition preparation exists, and all scratch starts at zero."
+  },
+  "phase_source_sha256": "93691c9aa3018e0a66ce1db951de9c0dd61a764f19c49c358eacb6f380519231",
+  "price_source_sha256": "f576911716410760ebdb509e7a59d95e52bff28cddda842e5563f9b9ec80b857",
+  "status": "model_only_no_candidate"
+}

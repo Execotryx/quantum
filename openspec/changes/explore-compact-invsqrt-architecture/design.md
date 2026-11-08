@@ -35,3 +35,26 @@ and are not priced by this bookkeeping.
 
 The bookkeeping does not yet predict a complete candidate score. No compact
 prototype is admitted by this registration.
+
+## Direct phase accumulation screen
+
+The v4 trimmed control's phase uses 38 fractional bits. An exact alternative
+applies the `c0` contribution directly, then subtracts each column-truncated
+outer-Horner product as a selected phase after the inner stage. The integer
+recurrence matches the trimmed control for all 3,133,452 inputs; this is a
+model equality and does not establish all circuit measurement branches.
+
+The specific tested decomposition uses 308 selected coefficient bits and
+1,859 selected products, giving 4,026 Toffolis and 2,161 fine rotations before
+lookup, selection and cleanup. Even at the impossible best-case 22-qubit width,
+with no other gate costs and the maximum possible full-domain tolerance margin,
+its complete cost is 445,859.20. That exceeds the 20% admission limit of
+377,869.53. The tested construction is closed without emitting a full circuit;
+this bound does not rule out other compact architectures.
+
+The pinned allowed instructions contain no superposition-producing preparation:
+each allowed quantum instruction preserves computational-basis states on each
+measurement branch. Since all non-input qubits must start at zero, the proposed
+coherent phase-gradient resource cannot be prepared or supplied within the
+current verifier contract. This is a contract restriction, not a general claim
+about phase-gradient methods. See the separate compact-phase receipts.

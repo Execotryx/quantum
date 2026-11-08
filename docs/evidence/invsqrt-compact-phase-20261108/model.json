@@ -1,0 +1,7 @@
+{
+  "exact_matches": 3133452,
+  "limitation": "Equality of integer models does not prove a complete circuit or all measurement branches.",
+  "source_sha256": "dd1e9ccd9c941954043c5bdc90491089e78f0ffa1ed5c75c278186b414215d0d",
+  "status": "model_only",
+  "table_sha256": "391304b70b1172cda1c9cff1af4dd05b892e021353224c20a2f8a6d1c67b2079"
+}

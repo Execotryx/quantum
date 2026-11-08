@@ -1,0 +1,13 @@
+{
+  "inventory_sha256": "132405912244d6232e4ea7fb3c9e941f8cbfbfe8cc51dd49ab3fccb609166237",
+  "left_backend_hash": "234098668a6f0668719d4585121f896fa9f9c1f9940472d630be5676218537a8",
+  "left_request_sha256": "7ffc0407c3c814f6a4c326c3c7e6389d2147f5ac18218a66df41a2b215432fe9",
+  "path_changes": {
+    "project_root": {
+      "left": "/var/tmp/quantum-hybrid-roadmap-20261108/paired/source",
+      "right": "/var/tmp/quantum-trimmed-paired-20261108-retry/source"
+    }
+  },
+  "right_backend_hash": "95b516741a6412856f6e21b349a8b6d713412671bd87471fe2cd58266184ad88",
+  "right_request_sha256": "b2cfdaa2bce6df693f8bbabe53cd4add5c35f109b0b3d5b873ded5173d6492cc"
+}
