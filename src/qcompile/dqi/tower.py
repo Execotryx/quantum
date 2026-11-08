@@ -51,11 +51,13 @@ class Tower:
     coordinates: tuple[int, ...]
     trace_dual: tuple[int, ...]
     terms: tuple[BilinearTerm, ...]
+    subfield_terms: tuple[BilinearTerm, ...]
+    quadratic_norm: int
 
     def multiply(self, left: int, right: int) -> int:
         result = 0
         for a, b, word in self.terms:
-            if ((left & a).bit_count() & (right & b).bit_count()) & 1:
+            if (left & a).bit_count() & (right & b).bit_count() & 1:
                 result ^= word
         return result
 
@@ -100,16 +102,22 @@ def tower() -> Tower:
         for form, scale in ((mask, z ^ 1), (mask << 6, norm), (mask | (mask << 6), z)):
             parity = parity_map(coordinates, form)
             terms.append((parity, parity, field.mul(word, scale)))
-    return Tower(basis, coordinates, tuple(dual[1 << i] for i in range(12)), tuple(terms))
+    subfield_terms = tuple((mask, mask, subfield[word]) for mask, word in gf64_terms)
+    return Tower(basis, coordinates, tuple(dual[1 << i] for i in range(12)), tuple(terms), subfield_terms, norm)
 
 
 def multiply_xor(builder: Any, left: Sequence[Any], right: Sequence[Any], target: Sequence[Any]) -> None:
     """Apply the 54-term product on disjoint external polynomial registers."""
     if any(len(reg) != 12 for reg in (left, right, target)):
         raise ValueError("tower multiplication requires three 12-bit registers")
+    _product_xor(builder, left, right, target, tower().terms)
+
+
+def _product_xor(builder: Any, left: Sequence[Any], right: Sequence[Any], target: Sequence[Any],
+                 terms: Sequence[BilinearTerm]) -> None:
     scratch = builder.alloc_qubits(3)
     a, b, product = scratch
-    for left_mask, right_mask, word in tower().terms:
+    for left_mask, right_mask, word in terms:
         l_wires = [wire for i, wire in enumerate(left) if left_mask >> i & 1]
         r_wires = [wire for i, wire in enumerate(right) if right_mask >> i & 1]
         for wire in l_wires:
@@ -126,3 +134,66 @@ def multiply_xor(builder: Any, left: Sequence[Any], right: Sequence[Any], target
         for wire in reversed(l_wires):
             builder.cx(wire, a)
     builder.free(scratch)
+
+
+def _xor_map(builder: Any, source: Sequence[Any], target: Sequence[Any], columns: Sequence[int]) -> None:
+    for wire, word in zip(source, columns, strict=True):
+        for bit, dst in enumerate(target):
+            if word >> bit & 1:
+                builder.cx(wire, dst)
+
+
+def inverse_xor(builder: Any, source: Sequence[Any], target: Sequence[Any]) -> None:
+    """XOR the clean GF(4096) inverse, with zero mapped to zero."""
+    if len(source) != 12 or len(target) != 12:
+        raise ValueError("tower inversion requires two 12-bit registers")
+    maps = tower()
+    field = GF4096()
+    low_basis, high_basis = maps.basis[:6], maps.basis[6:]
+    square = tuple(linear(maps.coordinates, field.mul(v, v)) for v in low_basis)
+    square_norm = tuple(linear(maps.coordinates, field.mul(maps.quadratic_norm, field.mul(v, v)))
+                        for v in low_basis)
+    fourth = tuple(linear(square, v) for v in square)
+    ab = builder.alloc_qubits(12)
+    a, b = ab[:6], ab[6:]
+    norm = builder.alloc_qubits(6)
+    def accumulate_norm() -> None:
+        # (a + bz)(a + b + bz) = a² + ab + b² N(z).
+        _xor_map(builder, a, norm, square)
+        _xor_map(builder, b, norm, square_norm)
+        _product_xor(builder, a, b, norm, maps.subfield_terms)
+
+    _xor_map(builder, source, ab, maps.coordinates)
+    accumulate_norm()
+    # Compute powers 3, 15 and 31 and square the last one to obtain 62.
+    shifted = builder.alloc_qubits(6)
+    powers = [norm, *(builder.alloc_qubits(6) for _ in range(3))]
+    steps = ((0, 0, 1, square), (1, 1, 2, fourth), (0, 2, 3, square))
+
+    def accumulate_power(i: int, j: int, k: int, transform: Sequence[int]) -> None:
+        _xor_map(builder, powers[j], shifted, transform)
+        _product_xor(builder, powers[i], shifted, powers[k], maps.subfield_terms)
+        _xor_map(builder, powers[j], shifted, transform)
+
+    for step in steps:
+        accumulate_power(*step)
+    inverse_norm = builder.alloc_qubits(6)
+    _xor_map(builder, powers[3], inverse_norm, square)
+    identity = tuple(1 << i for i in range(6))
+    _xor_map(builder, b, a, identity)
+    for conjugate, columns in ((a, low_basis), (b, high_basis)):
+        terms = [(left_mask, right_mask, linear(columns, word))
+                 for left_mask, right_mask, word in maps.subfield_terms]
+        _product_xor(builder, conjugate, inverse_norm, target, terms)
+    _xor_map(builder, b, a, identity)
+    _xor_map(builder, powers[3], inverse_norm, square)
+    builder.free(inverse_norm)
+    for step in reversed(steps):
+        accumulate_power(*step)
+    for register in reversed(powers[1:]):
+        builder.free(register)
+    builder.free(shifted)
+    accumulate_norm()
+    _xor_map(builder, source, ab, maps.coordinates)
+    for register in (norm, ab):
+        builder.free(register)

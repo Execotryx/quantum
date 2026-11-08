@@ -1,0 +1,10 @@
+{
+  "artifact_sha256": "ce8a58b65ee2d89457de655565a22b68ffc2d7dc68befc764a99410b3285f5b4",
+  "cost_limit": 738071.055475571,
+  "decision_sha256": "d1b8a12b656e7a7b18b25b5c8696574088a954e374c7e88728711fb708deef45",
+  "expected_shots": 200540928,
+  "registered_unix": 1794097094.2808952,
+  "role": "confirmation",
+  "salt": "c6380719048fb380b181e1ca2cb21f4f1de6f1cbe17a7ba934844a4928c8385d",
+  "winner": "combined-v3"
+}

@@ -158,6 +158,7 @@ def rank_layouts(api, proposals):
         results.append({
             **proposal, "angle_qubits": angle_qubits, "within_cap": angle_qubits <= api.QUBIT_CAP,
             "angle_count": (75 + batch - 1) // batch, "expected_shots": 64 * rows,
+            "two_body_factors": r * c, "lookup_rows": rows, "address_bits": address,
             "heuristic": prep, "projected_qubits": full_qubits,
             "preparation_rotation_tq": prep["toffoli"] * full_qubits,
         })

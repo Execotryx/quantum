@@ -1,18 +1,22 @@
 """Regression tests for the next-tranche algebra and reversible ablations."""
 
+import sys
 from functools import partial
 from importlib import import_module
-import sys
 
 import numpy as np
 import pytest
 
+from qcompile.chemistry.factorization import (
+    direct_residual,
+    gram_residual,
+    rank_lower_bound,
+    shifted_target,
+    svec,
+)
 from qcompile.dqi.decoder import bm_locator, recover_forney, syndrome
 from qcompile.dqi.field import GF4096
 from qcompile.dqi.tower import linear, tower
-from qcompile.chemistry.factorization import (
-    direct_residual, gram_residual, rank_lower_bound, shifted_target, svec,
-)
 from qcompile.invsqrt.direct import DirectFormat, build_circuit, coefficient_table, phase64
 from qcompile.invsqrt.unlookup import repair_table
 
@@ -22,6 +26,14 @@ def test_tower_roundtrip_bilinearity_and_trace_dual():
     assert len(model.terms) == 54
     for value in range(4096):
         assert linear(model.basis, linear(model.coordinates, value)) == value
+    subfield = [linear(model.basis[:6], value) for value in range(64)]
+    for a, left in enumerate(subfield):
+        for b, right in enumerate(subfield):
+            product = 0
+            for left_mask, right_mask, word in model.subfield_terms:
+                if (a & left_mask).bit_count() & (b & right_mask).bit_count() & 1:
+                    product ^= word
+            assert subfield[product] == field.mul(left, right)
     for i in range(12):
         for j in range(12):
             assert model.multiply(1 << i, 1 << j) == field.mul(1 << i, 1 << j)

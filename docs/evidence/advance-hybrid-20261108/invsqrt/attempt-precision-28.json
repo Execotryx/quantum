@@ -1,0 +1,66 @@
+{
+  "allocated_qubits": {
+    "after_unlookup": 112,
+    "arithmetic": 133,
+    "lookup": 112,
+    "phase": 133
+  },
+  "coefficients_sha256": "3f3c85775b248973b6bed0728dc20e296629423c34d410b32c14d3f99176b4ef",
+  "cost": null,
+  "margins": {
+    "above_90_percent": 1526,
+    "failed_inputs": 476,
+    "first_failed_inputs": [
+      45567,
+      49790,
+      58622,
+      58623,
+      58879,
+      59007,
+      61817,
+      61823,
+      61947,
+      62719,
+      134655,
+      151551,
+      177663,
+      179167,
+      182251,
+      182266
+    ],
+    "input_count": 3133452,
+    "minimum_margin_phase64": -951401807,
+    "minimum_margin_x": 58623,
+    "nonpositive_margins": 476,
+    "worst_tolerance_fraction": 1.3912860692878006,
+    "worst_x": 2916344
+  },
+  "native": {
+    "counts": [
+      4046,
+      1,
+      35
+    ],
+    "executed_counts": [
+      126364672,
+      31232,
+      1093120
+    ],
+    "fixture_inputs": 7805,
+    "shots": 31232
+  },
+  "parameters": {
+    "fit": "minimax",
+    "fractional": [
+      28,
+      20,
+      13
+    ],
+    "fused": true,
+    "reuse_lookup": true,
+    "segment_bits": 7
+  },
+  "phase_gate": false,
+  "sha256": "155aa6a4f2b2c002a36746c382a04e5bca8466c6ef47b2a1f0f2740d926c3102",
+  "status": "completed"
+}

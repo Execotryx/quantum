@@ -79,7 +79,9 @@ def test_generic_angle_exact_xor_including_padding(native_tools, low):
 
 
 @pytest.mark.official
-@pytest.mark.parametrize("kind", ["multiply", "tower-multiply", "inverse", "phase", "eea", "bm"])
+@pytest.mark.parametrize("kind", [
+    "multiply", "tower-multiply", "inverse", "native-inverse", "tower-inverse", "phase", "eea", "bm",
+])
 def test_native_dqi_prototype(native_tools, tmp_path, kind):
     _, (_, km, _, _, _), project_root = native_tools
     tool = import_module("dqi_prototype")
@@ -87,13 +89,21 @@ def test_native_dqi_prototype(native_tools, tmp_path, kind):
     tool.build(kind, backend, tmp_path / "forward")
     circuit = km.Circuit.from_file(str(tmp_path / "forward" / f"{kind}.kmb"))
     registers = circuit.register_data
-    sim = km.Simulator(batch_size=64, seed=17)
+    exhaustive = kind in ("native-inverse", "tower-inverse")
+    shots = 4096 if exhaustive or kind == "phase" else 64
+    sim = km.Simulator(batch_size=shots, seed=17)
     rng = np.random.default_rng(51)
-    values = {name: rng.integers(0, 1 << len(reg), size=64) for name, reg in registers.items()}
+    field = GF4096()
+    values = {name: rng.integers(0, 1 << len(reg), size=shots) for name, reg in registers.items()}
     values["source"][0] = 0
+    if exhaustive:
+        values["source"][:] = np.arange(shots)
     if kind == "phase":
+        values["source"][1:] = field.exp[:4095]
         values["denominator"][0] = 0
         values["located"][0] = 1
+        values["source"][0] = values["mask"][0] = 1
+        values["mask"][1], values["mask"][-1] = 0, 4095
     if kind == "bm":
         for name in values:
             if name.startswith("saved_"):
@@ -106,13 +116,12 @@ def test_native_dqi_prototype(native_tools, tmp_path, kind):
 
     initialize()
     expected = {name: value.copy() for name, value in values.items()}
-    field = GF4096()
-    parity = np.zeros(64, dtype=bool)
-    for j in range(64):
+    parity = np.zeros(shots, dtype=bool)
+    for j in range(shots):
         source = int(values["source"][j])
         if kind in ("multiply", "tower-multiply"):
             expected["target"][j] ^= field.mul(source, int(values["right"][j]))
-        elif kind == "inverse":
+        elif kind in ("inverse", "native-inverse", "tower-inverse"):
             expected["target"][j] ^= field.inv(source) if source else 0
         elif kind == "phase":
             denominator = int(values["denominator"][j])
@@ -158,4 +167,4 @@ def test_native_dqi_prototype(native_tools, tmp_path, kind):
         sim.clear_for_shot()
         initialize()
     sim.do(circuit)
-    check_outputs(values, np.zeros(64, dtype=bool))
+    check_outputs(values, np.zeros(shots, dtype=bool))

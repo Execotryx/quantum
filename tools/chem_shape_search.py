@@ -2,16 +2,17 @@
 
 import argparse
 import itertools
+import os
 import time
 from dataclasses import replace
 from importlib import import_module
 from pathlib import Path
 
 import numpy as np
-from scipy.optimize import minimize
-
 from banked_chemistry import backend
 from chem_refit import fixed_inputs, rank_layouts
+from scipy.optimize import minimize
+
 from qcompile.artifacts import deterministic_npz
 from qcompile.chemistry.factorization import (
     direct_residual,
@@ -39,9 +40,10 @@ def rank(output: Path) -> None:
         ranked.extend(rank_layouts(api, layouts[start:start + 64]))
     ranked.sort(key=lambda v: (not v["within_cap"], v["preparation_rotation_tq"]))
     controls = rank_layouts(api, [
-        dict(r=65, b=60, c=60, brot=12, batch=9, bank=7),
-        dict(r=65, b=60, c=60, brot=12, batch=8),
-        dict(r=10, b=129, c=129, brot=12, batch=9, bank=6),
+        dict(name="certified-j9", r=65, b=60, c=60, brot=12, batch=9, bank=7),
+        dict(name="generalized-j9", r=65, b=60, c=60, brot=12, batch=9, bank=7),
+        dict(name="reference-j8", r=65, b=60, c=60, brot=12, batch=8),
+        dict(name="wide-rc", r=10, b=129, c=129, brot=12, batch=9, bank=6),
     ])
     write_json(output, {"scope": "structural only", "backend": settings, "ranked": ranked, "controls": controls})
 
@@ -58,22 +60,35 @@ def pilot(plan_path: Path, output: Path) -> None:
     math_api = import_module("dfthcsos.scoreinfra.dfthc_math")
     inputs = fixed_inputs(api, source)
     output.mkdir(parents=True, exist_ok=False)
-    write_json(output / "registration.json", {"plan": plan, "plan_sha256": sha256(plan_path), "backend": settings})
+    write_json(output / "registration.json", {
+        "plan": plan, "plan_sha256": sha256(plan_path), "backend": settings,
+        "blas_threads": {k: os.environ.get(k) for k in ("OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS")},
+        "precision": "float64",
+    })
     start = time.monotonic()
     target = shifted_target(inputs.ref["tei"], inputs.S)
-    spectrum, vectors = np.linalg.eigh(target)
+    spectrum, eigenvectors = np.linalg.eigh(target)
     norm = float(np.vdot(target, target))
     write_json(output / "spectrum.json", {
         "seconds": time.monotonic() - start, "positive_count": int(np.count_nonzero(spectrum > 0)),
         "rank_lower_bounds": {str(r * c): rank_lower_bound(spectrum, r * c) for r, _, c in shapes},
         "scope": "float64 diagnostic; no pruning certificate",
     })
+    pinned_rows = []
+    for vectors, weights in zip(inputs.params["U"], inputs.w, strict=True):
+        vectors = vectors / np.linalg.norm(vectors, axis=-1, keepdims=True)
+        pinned_rows.append(weights.T @ svec(vectors[..., :, None] * vectors[..., None, :]))
+    continuation_residual = direct_residual(target, np.concatenate(pinned_rows))
+    write_json(output / "continuation.json", {
+        "shape": list(inputs.w.shape), "continuous_two_body_residual": continuation_residual,
+        "passes_19_5_mha": continuation_residual <= 0.0195,
+    })
     n = inputs.num_orbitals
     for shape in shapes:
         r, b, c = shape
         directory = output / f"r{r}-b{b}-c{c}"
         directory.mkdir()
-        basis, weights = initialize(spectrum, vectors, n, shape)
+        basis, weights = initialize(spectrum, eigenvectors, n, shape)
         features = svec(basis[..., :, None] * basis[..., None, :])
         initial = direct_residual(target, factor_rows(features, weights))
         attempts = []

@@ -1,0 +1,47 @@
+[
+  {
+    "kind": "inverse",
+    "sha256": "ffe775dba6f084a51ab3745d0018e3a7655aee39ebe5120e92e593978b90b1b6",
+    "qubits": 97,
+    "bits": 1,
+    "toffoli_like": 1440,
+    "role": "primitive_fixture",
+    "adjoint": false
+  },
+  {
+    "kind": "multiply",
+    "sha256": "b94c370b02486b928937deb715ebe23f496e23b0880de987b21f1f441ce534a4",
+    "qubits": 37,
+    "bits": 1,
+    "toffoli_like": 144,
+    "role": "primitive_fixture",
+    "adjoint": false
+  },
+  {
+    "kind": "native-inverse",
+    "sha256": "1ecfd5c70cf8a8c0107ecd93f60291711b68fe1dff70165d50f6da806e614c12",
+    "qubits": 84,
+    "bits": 13,
+    "toffoli_like": 315,
+    "role": "primitive_fixture",
+    "adjoint": false
+  },
+  {
+    "kind": "tower-inverse",
+    "sha256": "1858973b93706b6b40f21a40205160604a9ac57e9fed3a6af1c444e71983063f",
+    "qubits": 75,
+    "bits": 1,
+    "toffoli_like": 180,
+    "role": "primitive_fixture",
+    "adjoint": false
+  },
+  {
+    "kind": "tower-multiply",
+    "sha256": "4c45506029108aa6f06ee5d377a2bc5466cd0261dbddd8d1850d989f1735ca27",
+    "qubits": 39,
+    "bits": 1,
+    "toffoli_like": 54,
+    "role": "primitive_fixture",
+    "adjoint": false
+  }
+]
