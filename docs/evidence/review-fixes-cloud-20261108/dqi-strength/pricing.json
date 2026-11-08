@@ -1,0 +1,14 @@
+{
+  "cost": 7121637700132.021,
+  "failures_by_salt": [
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "k_max": 0,
+  "priced_failures": 2,
+  "repetition_factor": 1.2013880602795501,
+  "upper_error_rate": 0.0009488155716079551
+}

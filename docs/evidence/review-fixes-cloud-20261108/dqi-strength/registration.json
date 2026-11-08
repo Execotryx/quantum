@@ -1,0 +1,26 @@
+{
+  "circuit_sha256": "d41de9ee484c18f91245cdb131fe765d638f06bdae955cdb5b2079bbf8c1f090",
+  "inputs": {
+    "/home/execotryx_gmail_com/quantum-review-20261108-transfer/dqi_strength.py": "38d6753a986cd32734026d86fea49d1c12759b0be8231c26aa4eecb133820004",
+    "runs/review-dqi-full-emission/decoder.kmb": "d41de9ee484c18f91245cdb131fe765d638f06bdae955cdb5b2079bbf8c1f090",
+    "runs/review-dqi-full-emission/emission.json": "29d371a09521d3b67794398f7dd006f6fb9c0167ce534076edad5ca39586700a",
+    "runs/review-dqi-full-pair/registration.json": "07ddba9d5f67dc163bbbd304d26a095ead5ded851672ea10aa2f2bbdbd55f725",
+    "runs/review-dqi-full-pair/trial-00/candidate.json": "a5f44e707de7751e451c4e41ddcbd00b908f0ed0a2456a118de8c4cab6cf3f7d",
+    "runs/review-dqi-full-pair/trial-00/cases.json": "7c1b6f6421aafa7f13029146ddeb6e90c11492047668d0314efabbd4a9507f59",
+    "runs/review-dqi-full-pair/trial-00/control.json": "fa95a863595a9253d0b8c7aaebafed2df8aa71b11d51cd0dc0982383e169c301",
+    "runs/review-dqi-full-pair/trial-00/status.json": "c53e9111a25e1bc7a3e3d99467432279ee5267848114b84deb069d59b0f8429d",
+    "vendor/backend.json": "bd68ed6223bbba78821192be217cb3dc9a6af5e0ae1c07097361511bb189edd4"
+  },
+  "price_limit": 12220000000000,
+  "salts": {
+    "confirmation": "270a9ad926595249e895d11723754b1581bc4f0dae7f90e25677e4e3d8402d73",
+    "development-1": "9626a6a14fb46ff41bccc3e8380718ac77570c7e8521137cb98de2eef9dabc66",
+    "development-2": "ae5ab27bc1e16ff0d93aef725cfcf32aabb2a62b71b2cd736d95ad2a4fce35e1",
+    "development-3": "554685c76261159e23973036f3b792a476cf74243f4b4a0f583e4ca269e5294a",
+    "development-4": "60200225977fe64acd35c32d9a044a2806b09a056b9320a533963622bd511634",
+    "development-5": "398e236f58b109fb682cffecf2ea363cdbb1edc205d23e99dedf87e30e97aa20",
+    "full": "14c5237b1204e5fe7e3ea7faffa467fbb6fc3ed252bc5b61589d4b769ecd9ce6"
+  },
+  "shots": 102400,
+  "workers": 2
+}

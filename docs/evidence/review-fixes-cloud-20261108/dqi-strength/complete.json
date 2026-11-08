@@ -1,0 +1,12 @@
+{
+  "receipts": {
+    "confirmation": "915592d192e7a7c79a66e00129e490f80cfd696c001cda1447c5935b3919d10b",
+    "development-1": "027f0d27c8a3eac6d5db57cd2f1bdae698b2a4cfacb014b11049688ae17d1e76",
+    "development-2": "44df0e81ffb8a0af79a63c7bd6fa3b6349cc0306f7370f70f31c0cb86119040b",
+    "development-3": "431a1e7f3ebca1d473923c45cbe8c114ff10f58961f9ec0fb70e912295442d9f",
+    "development-4": "ec6d149795fe52f270a0f8740fab53c8c41b1208ad15d373a4b16c9427e7bed2",
+    "development-5": "0f76c496de0bd78048456bf9677e0d64cd4838690956dfb1e86c08ae0cdfcf4c",
+    "full": "cd93ebc19c4fe47bc96e635ea622af19b44b43c08f9c38391d203cc04f658411"
+  },
+  "registration_sha256": "9179dbd0a26c110f478e3a4acc5b76b0400a63a034ac38cce3ccc73da2b9f1f8"
+}

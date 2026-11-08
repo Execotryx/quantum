@@ -46,9 +46,17 @@ The full-size DQI sampling campaign selected **history depth 2**. Four of
 10,000,000 shots needed more than two retained discrepancies, and none
 needed more than three. The routed circuit used **1,942 qubits**, up from
 1,893 in the control. The table uses development costs at 2,560 shots.
-Full-strength pricing and confirmation are pending.
+
+The same routed DQI circuit passed five pricing runs, full verification,
+and fresh confirmation with **zero errors in each 102,400-shot run**.
+Its full verifier cost was **7.062 trillion**, **71.11% lower** than the
+retained DQI cost of 24.439 trillion. Conservative pricing was **7.122
+trillion**, below the **12.220-trillion** promotion gate. The routed
+decoder has component verification. The v6 archive uses the retained
+decoder, and a paired archive with routed DQI is pending.
 [DQI depth decision](docs/dqi-depth-cloud-08-11-2026-23-50-00.md)
 [Full-size DQI comparison](docs/dqi-full-matched-cloud-09-11-2026-01-29-00.md)
+[Full-strength DQI verification](docs/dqi-full-strength-cloud-09-11-2026-02-17-00.md)
 
 Chemistry's pinned reference yielded an
 initial S2 offset bound of **11.5** and a penalty of **1.0**. Its compressed
