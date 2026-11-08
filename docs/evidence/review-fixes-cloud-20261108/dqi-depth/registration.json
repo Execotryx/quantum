@@ -1,0 +1,21 @@
+{
+  "base_seed": 2026110801,
+  "chunks": 100,
+  "max_degree": 35,
+  "max_exceedances": 10,
+  "pins": {
+    "backend_sha256": "bd68ed6223bbba78821192be217cb3dc9a6af5e0ae1c07097361511bb189edd4",
+    "probe_sha256": "2cc1c0e678d8812db9affd32794cb58892164a4e89a591d57151cdee2d85f305",
+    "sources": {
+      "src/qcompile/dqi/bm_reference.py": "2c892065e6fa30fce57b0bbb62d403093a61ceac3a0b4b370af7a698d80cccca",
+      "src/qcompile/dqi/bm_routed.py": "349d9c48ceeb3e70ded523d51ad354a088dc6a34def83ff6ad86503d1e2c839b",
+      "src/qcompile/dqi/decoder.py": "8ede70defa5c85a3acc0334195926e7458353d7d0a4d131d3009e8f1ca4eea43",
+      "src/qcompile/dqi/field.py": "8669c691af4649eb58fba39d55842f2dd9cbdd2bbe6eb32bdc6321cf6836beaa",
+      "src/qcompile/dqi/history_sampling.py": "07fa8a26377b6f3c864eda28c7a53e12a4d8b7697c57a4cf4bef544ac2847973",
+      "tools/dqi_history_depth.py": "363ecda9118c633b6086a0492db8aa61281d24a785d5cb4fb2285cc36f26a2d9",
+      "uv.lock": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8"
+    }
+  },
+  "shots_per_chunk": 100000,
+  "workers": 16
+}

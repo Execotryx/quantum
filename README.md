@@ -34,8 +34,13 @@ trajectories at the screened cost. Worst-case phase tolerance use stayed
 at **66.77%**. Fresh confirmation and paired archive verification remain
 pending. [Full v6 cloud result](docs/v6-full-cloud-08-11-2026-23-26-00.md)
 
-The DQI figures cover reduced dimensions. The full-size history depth still depends on the
-registered sampling campaign. Chemistry's pinned reference yielded an
+The DQI cost figures cover reduced dimensions. The full-size sampling
+campaign selected **history depth 2**. Four of 10,000,000 shots needed
+more than two retained discrepancies, and none needed more than three.
+The full-size matched cost comparison is in progress.
+[DQI depth decision](docs/dqi-depth-cloud-08-11-2026-23-50-00.md)
+
+Chemistry's pinned reference yielded an
 initial S2 offset bound of **11.5** and a penalty of **1.0**. Its compressed
 fit must pass the residual gates before the loader projection can compare
 candidate costs.
