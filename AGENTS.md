@@ -6,6 +6,9 @@
   job lifecycle, including detached descendants and reconnects. Cloud actions
   preview by default; keep account settings ignored and credentials out of tool
   arguments. Relocation proposals must not silently rewrite pinned evidence.
+- Review archived backend requests through their original receipt hashes.
+  A path-only inventory comparison keeps both original identities and
+  leaves the separate release lineage and confirmation gates in force.
 - Keep the Cloud Shell provisioner's resource defaults and JSON output aligned
   with the operations plugin. Verify preview and rerun behavior without cloud writes.
 - Inverse-square-root opportunity screens freeze the protocol before simulation,
@@ -22,6 +25,9 @@
   pass and improve independently, and binds the winning KMB through full
   verification, fresh confirmation and the paired archive. Price projected
   widths and standalone address mappings separately from emitted circuits.
+- The trimmed-width inverse-square-root recipe proves every intermediate
+  fits and every phase matches v4 before using narrowed registers.
+  Run the control first and preserve the exact emitted KMB for confirmation.
 - Keep tower-field DQI development receipts scoped to their actual code
   dimensions. Run the chemistry continuous residual gate before emitting
   decoded words or ANGLE circuits.
@@ -30,6 +36,9 @@
   cannot close a decoder or archive gate. For joint chemistry fits,
   compare exact checkpoint residuals and leave a capped lane eligible
   for a separately registered continuation.
+- A chemistry continuation pins the parent decision, checkpoint and target
+  and starts a fresh optimizer. The registered loader runner distinguishes
+  reference controls and eligible S3 handoffs from full chemistry acceptance.
 - Banked chemistry lookups preserve the pinned factorization and angle words.
   Check the 128-qubit cap and phase, selection and workspace at every circuit
   boundary. Combined validation keeps the exact confirmed inverse-square-root

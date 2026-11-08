@@ -16,6 +16,8 @@ The direct-phasing v3 screen in `tools/invsqrt_direct.py` compares individual
 changes against the confirmed v2 bytes before combining gains.
 The v4 lattice recipe pins both single-width parents and the exact winning
 table. Keep model-only two-octave pricing separate from native circuit costs.
+The trimmed-width recipe requires full-domain intermediate bounds and
+v4 phase identity before its separate promotion campaign.
 
 On the combined optimization branch, `tools/banked_chemistry.py` screens the
 lookup-only replacement and tests the extracted combined archive. Preserve the
@@ -27,9 +29,13 @@ The DQI stage profiler reconciles the reference KMB and native counts.
 Keep standalone phase scans, inverse primitives and classical end-state
 proofs separate from complete decoder verification. Keep synthetic
 compressed ANGLE results separate from a fitted chemistry family.
+Treat an I3 checkpoint restart as a separate run and a loader reference
+control as development evidence.
 Use `tools/hybrid_certification.py` for the audited parent and successor
 certificate. Keep chemistry's one-use confirmation scoped to the complete
 family and NPZ. Resolve inherited evidence through the trusted parent record.
+The `review-backend` action compares original hash-bound verifier requests
+across relocated source checkouts and records their distinct identities.
 
 Step-3 tools under `tools/` bind differential and primitive evidence to pinned
 upstream hashes. Keep fixture coverage and expected mutation diagnostics explicit.

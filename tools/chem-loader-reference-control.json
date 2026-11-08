@@ -1,0 +1,13 @@
+{
+  "mode": "reference_control",
+  "factorization": {
+    "path": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+    "sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69"
+  },
+  "words": {
+    "path": "runs/step3-chemistry/recovered-words.npz",
+    "sha256": "6271ed6e5c00183df1baf78b7d7135ba3264b9e0a41e9c9e08725032ce972ff2"
+  },
+  "brot": 12, "low_bits": 7, "shots_per_address": 2, "seed": 3103,
+  "wall_seconds": 3600
+}

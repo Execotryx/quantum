@@ -1,0 +1,11 @@
+{
+  "cost": 472336.9178780867,
+  "lanes": {
+    "development": "9927827465cdf60a43ad50cdfc9f841206897d1883a57bf3e44142f44b5c5da1",
+    "development-rebuild": "9927827465cdf60a43ad50cdfc9f841206897d1883a57bf3e44142f44b5c5da1"
+  },
+  "limit": 483997.9077169884,
+  "registration_sha256": "3f69225b668b802b330cd91d3d90735b76983a81a32bf662776b3c3beeec3da2",
+  "status": "go",
+  "winner_sha256": "f4c8503d87c9e7cedb8a79a796e0b195623c2e88467691ca1b08af1a70fb200d"
+}

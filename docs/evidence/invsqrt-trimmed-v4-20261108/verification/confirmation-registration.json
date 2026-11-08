@@ -1,0 +1,9 @@
+{
+  "artifact_sha256": "f4c8503d87c9e7cedb8a79a796e0b195623c2e88467691ca1b08af1a70fb200d",
+  "decision_sha256": "5d30f1f0416ed02b89dc40ba7ab9a9c7a7d0fbc8c7f140b303bce4e93237f5c0",
+  "expected_shots": 200540928,
+  "preceding_full_sha256": "f68575d6f3822357a4a3a9331967b1adc5499e6f2f05e021fa4874bb1f054395",
+  "role": "confirmation",
+  "salt": "661033782c525aa6ea5f2d854c4b99243432e1a86831de69190c16d148eaed71",
+  "source_revision": "70aacf27a69532f76504bd46c5c6464837bfd668"
+}

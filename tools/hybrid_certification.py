@@ -16,7 +16,7 @@ from qcompile.contract import load_contract
 from qcompile.environment import capture
 from qcompile.experiments import CandidateStore
 from qcompile.io import identity, read_json, sha256, write_json
-from qcompile.official import verify_candidate
+from qcompile.official import review_backend_pair, verify_candidate
 from qcompile.release import build_candidate, certify_release
 
 BACKEND = ROOT / "vendor/backend.json"
@@ -433,14 +433,29 @@ def certify(output: Path, *, screen: Path | None, parent_id: str | None) -> None
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("action", choices=("prepare-parent", "measure-parent", "parent-worker", "certify"))
+    parser.add_argument(
+        "action", choices=("prepare-parent", "measure-parent", "parent-worker", "certify", "review-backend")
+    )
     parser.add_argument("output", type=Path)
     parser.add_argument("--screen", type=Path)
     parser.add_argument("--parent-id")
     parser.add_argument("--paired-successor", type=Path)
+    parser.add_argument("--parent-verification", type=Path)
+    parser.add_argument("--successor-verification", type=Path)
     args = parser.parse_args()
     output = args.output.resolve()
-    if args.action == "prepare-parent":
+    if args.action == "review-backend":
+        if args.parent_verification is None or args.successor_verification is None:
+            parser.error("review-backend requires both verification directories")
+        parent = args.parent_verification.resolve()
+        successor = args.successor_verification.resolve()
+        left = parent / "verification.json"
+        right = successor / "verification.json"
+        review = review_backend_pair(read_json(left), parent / "request.json",
+                                     read_json(right), successor / "request.json")
+        write_json(output, {**review, "parent_verification_sha256": sha256(left),
+                            "successor_verification_sha256": sha256(right)})
+    elif args.action == "prepare-parent":
         prepare_parent(output, args.paired_successor)
     elif args.action == "parent-worker":
         measure_parent(output)

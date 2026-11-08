@@ -1,6 +1,7 @@
 """Rank the registered DFTHC grid and evaluate a bounded continuous shape pilot."""
 
 import argparse
+import hashlib
 import itertools
 import os
 import time
@@ -28,8 +29,37 @@ from qcompile.chemistry.factorization import (
     svec,
 )
 from qcompile.chemistry.refit import FixedWordRefit, encode_vectors
+from qcompile.chemistry.schema import read_factorization
 from qcompile.experiments import screen_outcome
 from qcompile.io import read_json, sha256, write_json
+
+
+def continuation_parent(plan: dict) -> tuple[dict, dict, Path]:
+    """Validate a budget-limited S1 checkpoint without changing its evidence."""
+    parent = plan["parent"]
+    paths = {}
+    for name in ("registration", "decision", "checkpoint_receipt", "checkpoint"):
+        item = parent[name]
+        path = Path(item["path"])
+        if sha256(path) != item["sha256"]:
+            raise ValueError(f"parent {name} hash differs")
+        paths[name] = path
+    registration = read_json(paths["registration"])
+    decision = read_json(paths["decision"])
+    receipt = read_json(paths["checkpoint_receipt"])
+    if decision.get("status") != "budget_limited":
+        raise ValueError("continuation requires a budget-limited parent")
+    if (registration["plan"]["factorization_sha256"] != plan["factorization_sha256"]
+            or registration["plan"]["shape"] != plan["shape"]
+            or receipt["continuous_sha256"] != parent["checkpoint"]["sha256"]
+            or receipt["evaluations"] != decision["evaluations"]
+            or not np.isclose(receipt["continuous_residual"], decision["best_continuous_residual"],
+                              rtol=1e-10, atol=1e-12)):
+        raise ValueError("parent registration, decision and checkpoint disagree")
+    target_hash = plan["target_sha256"]
+    if not isinstance(target_hash, str) or len(target_hash) != 64 or any(c not in "0123456789abcdef" for c in target_hash):
+        raise ValueError("continuation requires a lowercase SHA-256 target pin")
+    return decision, receipt, paths["checkpoint"]
 
 
 def profile(plan_path: Path, output: Path) -> None:
@@ -94,8 +124,9 @@ def fit_joint(plan_path: Path, output: Path) -> None:
     cap, wall = plan["max_evaluations"], plan["wall_seconds"]
     if type(cap) is not int or not 1 <= cap <= 20000 or type(wall) not in (int, float) or not 0 < wall <= 86400:
         raise ValueError("invalid registered evaluation or wall cap")
-    if plan["initializer"] not in ("I1", "I2", "I3", "I4") or type(plan["seed"]) is not int:
-        raise ValueError("expected an I1 through I4 initializer and integer seed")
+    if plan["initializer"] not in ("I1", "I2", "I3", "I4", "I3-resume") or type(plan["seed"]) is not int:
+        raise ValueError("expected an I1 through I4 initializer or I3-resume and integer seed")
+    parent = continuation_parent(plan) if plan["initializer"] == "I3-resume" else None
     settings, _, _, _, api = backend()
     math_api = import_module("dfthcsos.scoreinfra.dfthc_math")
     inputs = fixed_inputs(api, source)
@@ -111,7 +142,28 @@ def fit_joint(plan_path: Path, output: Path) -> None:
     r, b, c = shape
     n = inputs.num_orbitals
     spectrum = eigenvectors = None
-    if plan["initializer"] == "I3":
+    if parent is not None:
+        if hashlib.sha256(memoryview(np.ascontiguousarray(target, dtype=np.float64)).cast("B")).hexdigest() != plan["target_sha256"]:
+            raise ValueError("continuation shifted target hash differs")
+        parent_decision, _, parent_checkpoint = parent
+        data = read_factorization(parent_checkpoint, spec={"U": ("f", ("R", "B", n)), "W": ("f", ("R", "B", "C"))})
+        vectors, weights = data["U"], data["W"]
+        if tuple(weights.shape) != shape:
+            raise ValueError("continuation checkpoint shape differs")
+        lengths = np.linalg.norm(vectors, axis=-1, keepdims=True)
+        if np.any(lengths == 0):
+            raise ValueError("continuation checkpoint contains a zero vector")
+        unit = vectors / lengths
+        features = svec(unit[..., :, None] * unit[..., None, :])
+        observed = direct_residual(target, factor_rows(features, weights))
+        if not np.isclose(observed, parent_decision["best_continuous_residual"], rtol=1e-10, atol=1e-12):
+            raise ValueError("continuation parent fails the independent residual check")
+        write_json(output / "continuation.json", {
+            "parent_evaluations": parent_decision["evaluations"], "parent_residual": observed,
+            "checkpoint_sha256": plan["parent"]["checkpoint"]["sha256"],
+            "scope": "new optimizer with reset L-BFGS state; separate continuation, not an uninterrupted run",
+        })
+    elif plan["initializer"] == "I3":
         vectors, weights = continuation_initialize(inputs.params["U"], inputs.w, shape)
     else:
         spectrum, eigenvectors = np.linalg.eigh(target)
@@ -207,6 +259,8 @@ def fit_joint(plan_path: Path, output: Path) -> None:
         return
     exact = checkpoint()
     history[-1] = exact
+    if parent is not None:
+        continuation_parent(plan)
     capped = len(history) >= cap or time.monotonic() >= deadline
     status = screen_outcome(history, 0.019, cap_reached=capped, optimizer_converged=converged)
     if status == "go" and exact > 0.019:

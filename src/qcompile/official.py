@@ -19,6 +19,55 @@ from .io import identity, read_json, sha256, write_json
 from .profiling import recorder
 
 METRIC_V10_SHA256 = "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73"
+BACKEND_PATHS = ("metric_notebook", "verifiers_root", "kickmix_root", "project_root")
+
+
+def review_verification_request(report: dict, path: Path) -> dict:
+    """Recover an inventory from the exact request bound to a completed receipt."""
+    if sha256(path) != report.get("request_hash"):
+        raise ValidationError("verification request changed")
+    request = read_json(path)
+    backend = request["backend"]
+    if (
+        report.get("kind") != "official_metric_execution"
+        or report.get("status") != "passed"
+        or report.get("complete") is not True
+        or report.get("backend_hash") != identity(backend)
+        or report.get("role") != request["seed_policy"]["role"]
+        or any(report.get(key) != request[key] for key in ("tier", "environment", "seed_policy", "contract_hash"))
+        or report.get("artifact_hashes") != {name: item["sha256"] for name, item in request["artifacts"].items()}
+    ):
+        raise ValidationError("verification receipt differs from its request")
+    return backend
+
+
+def review_backend_pair(left_report: dict, left_request: Path, right_report: dict, right_request: Path) -> dict:
+    """Compare inventories while preserving their individual receipt identities."""
+    left = review_verification_request(left_report, left_request)
+    right = review_verification_request(right_report, right_request)
+    left_pins = {key: value for key, value in left.items() if key not in BACKEND_PATHS}
+    right_pins = {key: value for key, value in right.items() if key not in BACKEND_PATHS}
+    if left_pins != right_pins:
+        raise ValidationError("verification inventories differ beyond paths")
+    if (
+        left_pins.get("metric_sha256") != METRIC_V10_SHA256
+        or left_pins.get("metric_version") != 10
+        or not left_pins.get("verifiers_files")
+        or not left_pins.get("kickmix_files")
+    ):
+        raise ValidationError("verification inventories lack reviewed backend pins")
+    return {
+        "left_backend_hash": left_report["backend_hash"],
+        "right_backend_hash": right_report["backend_hash"],
+        "left_request_sha256": left_report["request_hash"],
+        "right_request_sha256": right_report["request_hash"],
+        "inventory_sha256": identity(left_pins),
+        "path_changes": {
+            key: {"left": left.get(key), "right": right.get(key)}
+            for key in BACKEND_PATHS
+            if left.get(key) != right.get(key)
+        },
+    }
 
 
 def tree_manifest(root):
