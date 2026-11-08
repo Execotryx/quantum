@@ -12,6 +12,7 @@ and **2,908 Toffoli-like gates**. Its verified cost was **472,336.92**,
 passed **200,540,928** trajectories. A third independent archive build
 passed the cloud metric on a fresh extraction and reproduced the DQI
 and chemistry costs. [v5 paired verification](docs/evidence/invsqrt-trimmed-paired-20261108/comparison.json)
+[Submission handoff](docs/v5-submission-handoff-08-11-2026-17-06-56.md)
 
 The v4 hybrid scored **1.6149243284**, up **2.51%** from v3. Its 28/20/14
 lattice refinement lowered inverse-square-root cost from 548,860.92

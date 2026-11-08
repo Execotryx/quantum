@@ -5,7 +5,7 @@ from typing import Any
 
 from qcompile.chemistry.schema import read_factorization
 from qcompile.errors import ValidationError
-from qcompile.io import read_json
+from qcompile.io import read_json, sha256
 
 BENCHMARKS = ("invsqrt", "dqi", "dfthcsos")
 FAIL_FAST = {"invsqrt": 200_540_928, "dfthcsos": 254_464}
@@ -63,6 +63,55 @@ def fail_fast_observed(
     if expected is None or raw.get("status") != "PASS" or type(completed) is not int or completed != expected:
         raise ValidationError("confirmation requires an actual complete fail-fast verifier pass")
     return {"n": completed, "k": 0}
+
+
+def review_invsqrt_confirmation(
+    directory: Path, artifact_sha256: str, backend_inventory_sha256: str,
+) -> dict[str, Any]:
+    """Review full standalone receipts against the original frozen screen."""
+    screen_path = directory / "screen-registration.json"
+    decision_path = directory / "screen-decision.json"
+    screen, decision = read_json(screen_path), read_json(decision_path)
+    environment = screen["environment"]
+    n = FAIL_FAST["invsqrt"]
+    if (
+        environment.get("dirty") is not False or not environment.get("source_revision")
+        or screen["inputs"].get("vendor/backend.json") != backend_inventory_sha256
+        or screen["driver_sha256"] != sha256(directory / "campaign.py")
+        or screen["candidate_sha256"] != artifact_sha256 or screen["expected_shots"] != n
+        or decision["status"] != "go" or decision["winner_sha256"] != artifact_sha256
+        or decision["registration_sha256"] != sha256(screen_path)
+        or decision["limit"] > 0.95 * screen["control_cost"]
+        or not 0 < decision["cost"] <= decision["limit"]
+    ):
+        raise ValidationError("standalone confirmation screen does not bind the registered winner")
+    decision_sha = sha256(decision_path)
+    previous_full = None
+    salts: set[str] = set()
+    reviews = {}
+    for role in ("full", "confirmation"):
+        registration_path = directory / f"{role}-registration.json"
+        raw_path = directory / f"{role}-raw-verifier.json"
+        receipt_path = directory / f"{role}-result.json"
+        registration, raw, receipt = (read_json(p) for p in (registration_path, raw_path, receipt_path))
+        salt = registration["salt"]
+        if (
+            registration["role"] != role or registration["artifact_sha256"] != artifact_sha256
+            or registration["decision_sha256"] != decision_sha or registration["expected_shots"] != n
+            or registration["source_revision"] != environment["source_revision"]
+            or registration["preceding_full_sha256"] != previous_full
+            or not isinstance(salt, str) or len(salt) < 32 or salt in salts
+            or receipt["registration_sha256"] != sha256(registration_path)
+            or receipt["raw_sha256"] != sha256(raw_path) or receipt["result"] != raw
+            or raw["circuit_sha256"] != artifact_sha256 or raw["score"] != decision["cost"]
+            or not 0 <= raw["worst_error_over_tolerance"] <= 0.90
+        ):
+            raise ValidationError(f"standalone {role} receipt differs from the frozen screen")
+        fail_fast_observed("invsqrt", raw)
+        salts.add(salt)
+        previous_full = sha256(receipt_path)
+        reviews[role] = {"registration": registration, "raw": raw, "receipt_sha256": previous_full}
+    return {"environment": environment, "decision_sha256": decision_sha, **reviews}
 
 
 def dqi_observed(raw: dict[str, Any], expected: int) -> dict[str, int]:

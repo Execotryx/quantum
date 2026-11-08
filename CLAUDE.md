@@ -42,6 +42,8 @@ The `review-backend` action compares original hash-bound verifier requests
 across relocated source checkouts and records their distinct identities.
 Pin confirmation backend snapshots in the frozen protocol and keep
 legacy coverage checks separate from candidate-v1 lineage.
+For a reviewed standalone inverse-square-root confirmation, keep the
+original screen, full pass, fresh confirmation and archive receipts separate.
 
 Step-3 tools under `tools/` bind differential and primitive evidence to pinned
 upstream hashes. Keep fixture coverage and expected mutation diagnostics explicit.
