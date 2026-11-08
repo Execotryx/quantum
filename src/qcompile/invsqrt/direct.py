@@ -156,9 +156,10 @@ def _binary_shift(builder: Any, inverse: bool, count: Any, *lanes: Any) -> None:
 
 
 def build_circuit(km: Any, primitives: Any, fmt: DirectFormat, table: tuple[tuple[int, ...], ...],
-                  *, liveness: dict[str, int] | None = None) -> Any:
+                  *, liveness: dict[str, int] | None = None, builder: Any = None) -> Any:
     """Emit the clean phase oracle using the pinned reference arithmetic primitives."""
-    builder = km.CircuitBuilder()
+    if builder is None:
+        builder = km.CircuitBuilder()
 
     def observe(stage: str) -> None:
         if liveness is not None:

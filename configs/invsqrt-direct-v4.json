@@ -1,0 +1,25 @@
+{
+  "hypothesis": "Lattice rounding permits independently beneficial coefficient-width reductions.",
+  "comparison": "verified-v3",
+  "minimum_gain": 0.05,
+  "profile_liveness": true,
+  "controls": {
+    "verified-v3": {
+      "parameters": {"fit": "minimax", "segment_bits": 7, "fractional": [29, 21, 14], "fused": true, "reuse_lookup": true, "binary_normalization": true, "measurement_unlookup": true},
+      "sha256": "ce8a58b65ee2d89457de655565a22b68ffc2d7dc68befc764a99410b3285f5b4",
+      "coefficients_sha256": "6849fc27b48f7ec097294102df0c71f496e12c017246502c9cb8fd221de7bc13",
+      "cost": 548860.9216547348
+    }
+  },
+  "piecewise": {
+    "lattice-28-21-14": {"fit": "minimax", "segment_bits": 7, "fractional": [28, 21, 14], "fused": true, "reuse_lookup": true, "binary_normalization": true, "measurement_unlookup": true, "lattice_receipt": "docs/evidence/invsqrt-lattice-20261108/28-21-14.json"},
+    "lattice-29-20-14": {"fit": "minimax", "segment_bits": 7, "fractional": [29, 20, 14], "fused": true, "reuse_lookup": true, "binary_normalization": true, "measurement_unlookup": true, "lattice_receipt": "docs/evidence/invsqrt-lattice-20261108/29-20-14.json"}
+  },
+  "combination_parents": ["lattice-28-21-14", "lattice-29-20-14"],
+  "combined_lattice": {"fit": "minimax", "segment_bits": 7, "fractional": [28, 20, 14], "fused": true, "reuse_lookup": true, "binary_normalization": true, "measurement_unlookup": true, "lattice_receipt": "docs/evidence/invsqrt-lattice-20261108/28-20-14.json"},
+  "frozen_sha256": {
+    "lattice-28-21-14": "8834f6761c43ff97329ae96eae66fb3508c9125bd1066ec641ecf9a476b23520",
+    "lattice-29-20-14": "4e39efb4f5a75374ee0ecfdeff77a0a7ec3affcb7619df8646a0c26fed521cf5",
+    "combined-lattice": "c487332fe965389191c8e6d34848d61c82748e5802c6e616eb0363869f92c4c9"
+  }
+}

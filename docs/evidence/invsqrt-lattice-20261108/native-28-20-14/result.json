@@ -1,0 +1,27 @@
+{
+  "cost": {
+    "fine_rotations": 35,
+    "qubits": 155,
+    "rotation_epsilon_radians": 1.1587494041843706e-12,
+    "rotation_t": 962.6511434156456,
+    "score": 509471.48180735623,
+    "t_like": 1,
+    "toffoli_like": 3046
+  },
+  "native": {
+    "counts": [
+      3046,
+      1,
+      35
+    ],
+    "executed_counts": [
+      95132672,
+      31232,
+      1093120
+    ],
+    "fixture_inputs": 7806,
+    "shots": 31232
+  },
+  "search_sha256": "391304b70b1172cda1c9cff1af4dd05b892e021353224c20a2f8a6d1c67b2079",
+  "sha256": "c487332fe965389191c8e6d34848d61c82748e5802c6e616eb0363869f92c4c9"
+}
