@@ -32,6 +32,7 @@ to **509,471.48** and width from 159 to **155 qubits**.
 | v6 inverse square root | 472,336.92 | 411,586.92 | **12.86% lower** in the full cloud verifier. Width stayed at 150 qubits and Toffoli-like gates fell from 2,908 to 2,503. |
 | Routed DQI, `(63, 4)` | 43.385 billion | 11.807 billion | **72.79% lower** on 2,560 matched trajectories with zero observed errors. |
 | Routed DQI, `(127, 12)` | 357.434 billion | 88.971 billion | **75.11% lower** on 2,560 matched trajectories with zero observed errors. |
+| Routed DQI, `(4095, 70)` | 101.381 trillion | 29.293 trillion | **71.11% lower** on 2,560 matched trajectories with zero observed errors. |
 
 The v6 screen built each circuit twice, checked all 3,133,452 inputs
 against the phase model, and passed 31,232 native trajectories per circuit.
@@ -41,13 +42,13 @@ screened cost and **66.77%** worst-case phase tolerance use. Paired archive
 verification reproduced the same component cost and coverage.
 [v6 cloud confirmation](docs/v6-confirmation-cloud-09-11-2026-00-37-00.md)
 
-The DQI cost figures cover reduced dimensions. The full-size sampling
-campaign selected **history depth 2**. Four of 10,000,000 shots needed
-more than two retained discrepancies, and none needed more than three.
-The full-size `(4095, 70)` circuit built and serialized at **1,942
-qubits**. The matched verifier comparison is registered and pending.
+The full-size DQI sampling campaign selected **history depth 2**. Four of
+10,000,000 shots needed more than two retained discrepancies, and none
+needed more than three. The routed circuit used **1,942 qubits**, up from
+1,893 in the control. The table uses development costs at 2,560 shots.
+Full-strength pricing and confirmation are pending.
 [DQI depth decision](docs/dqi-depth-cloud-08-11-2026-23-50-00.md)
-[Full-size DQI build](docs/dqi-full-emission-09-11-2026-00-45-00.md)
+[Full-size DQI comparison](docs/dqi-full-matched-cloud-09-11-2026-01-29-00.md)
 
 Chemistry's pinned reference yielded an
 initial S2 offset bound of **11.5** and a penalty of **1.0**. Its compressed
