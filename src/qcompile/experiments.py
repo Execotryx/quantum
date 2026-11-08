@@ -25,6 +25,7 @@ from .component_confirmations import (
 )
 from .errors import BlockedError, ValidationError
 from .io import identity, nonnegative_int, positive_int, read_json, sha256, write_json
+from .official import read_confirmation_backend
 
 STATES = [
     "draft",
@@ -489,7 +490,8 @@ class CandidateStore:
         ]
         binding = component_binding(record, benchmark)
         if (
-            len(matches) != 1
+            identity(confirmation["protocol"]) != confirmation["protocol_id"]
+            or len(matches) != 1
             or matches[0]["status"] != "passed"
             or matches[0]["salt"] != confirmation["protocol"]["seed_policy"]["salt"]
             or scopes_for_legacy_row(self, matches[0]) != (benchmark, binding["component_hashes"])
@@ -512,6 +514,8 @@ class CandidateStore:
             positive_int(protocol.get("sample_size"), "confirmation sample_size")
             nonnegative_int(protocol.get("max_failures"), "max_failures")
             coverage = registered_coverage(record)
+            if "backend_inventory" in protocol:
+                read_confirmation_backend(protocol)
             if benchmark in FAIL_FAST and (
                 protocol["sample_size"] != (coverage or FAIL_FAST)[benchmark]
                 or protocol["max_failures"] != 0

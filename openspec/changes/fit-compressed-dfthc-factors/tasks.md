@@ -2,7 +2,7 @@
 
 - [x] 1.1 Add joint `(U, W)` objective and gradient to `src/qcompile/chemistry/factorization.py` with `u = v / ‖v‖`.
 - [x] 1.2 Check gradients against finite differences on a small instance to `1e-6` relative error.
-- [ ] 1.3 Profile one full-size objective plus gradient. Record time, memory and BLAS threads, then fix the evaluation budgets.
+- [x] 1.3 Profile one full-size objective plus gradient. Record time, memory and BLAS threads, then fix the evaluation budgets.
 
 ## 2. Initializers
 

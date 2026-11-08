@@ -1,0 +1,18 @@
+{
+  "plan": {
+    "factorization": {
+      "path": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69"
+    },
+    "profile_directory": "docs/evidence/chem-grid-profiles-20261108/r8-b120-c40",
+    "shape": [
+      8,
+      120,
+      40
+    ],
+    "target_sha256": "7e72455f4f6e6a476fed9c1626a96cebea775c4fc071145fd056af23d63e8393"
+  },
+  "plan_sha256": "7f7a8071ca4f23071d38bad4668a2cc4863170b4e4fc52de1edc99b5d70a2f47",
+  "sampler_interval_seconds": 1,
+  "timeout_seconds": 1800
+}

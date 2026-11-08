@@ -1,0 +1,6 @@
+{
+  "checkpoint_sha256": "7d3a704ecd416bbab0e37e58b294ddb5cfe3b07a56748870a2e78acaea1b80e9",
+  "parent_evaluations": 1500,
+  "parent_residual": 0.08139909840093204,
+  "scope": "new optimizer with reset L-BFGS state; separate continuation, not an uninterrupted run"
+}

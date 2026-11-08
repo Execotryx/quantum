@@ -1,0 +1,78 @@
+{
+  "backend": {
+    "confirmation_mapping": {
+      "benchmark": "dqi",
+      "k": [
+        "value_errors",
+        "phase_errors"
+      ],
+      "n": "verified_shots"
+    },
+    "coverage_mapping": {
+      "dfthcsos": {
+        "completed": "verified_shots",
+        "expected": "verified_shots"
+      },
+      "dqi": {
+        "completed": "verified_shots",
+        "expected": "verified_shots"
+      },
+      "invsqrt": {
+        "completed": "verified_shots",
+        "expected": "verified_shots"
+      }
+    },
+    "coverage_mapping_note": "Both raw aliases are actual returned verified_shots; the independent required count is in contract.release.coverage; never infer success from exit status.",
+    "kickmix_files": {
+      "LICENSE.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "kickmix.so": "c66b3216c4029e0cdfd09054306aa0feadf53ab2f50c1164e37f752874e5005e"
+    },
+    "kickmix_root": "/mnt/e/sources/python/quantum/vendor/official/kickmix",
+    "metric_notebook": "/mnt/e/sources/python/quantum/vendor/metric/google-quantum-ai-metric.ipynb",
+    "metric_sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+    "metric_version": 10,
+    "verifiers_files": {
+      "LICENSE.txt": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+      "dfthcsos/FeMoCo76o113e.fcidump": "e5a48af746fd075026dec9e8f5df2d363802a121e8c53af9a0b984bde695e1bd",
+      "dfthcsos/FeMoCo76o113e.fixed_shifts.npz": "7b7facf63fe35a9d9d3d00787ffdb700c863fa845fe4724d7f7c54778151cd87",
+      "dfthcsos/SCORING_README.md": "c2228569f96e58e118419bc32be2be9e33d6abffb8117cb0b91e1fc25b2a0230",
+      "dfthcsos/__init__.py": "81915e324cc0cade67f52a54b7a51991fd96abaea94d1f8a4d423dae20e57348",
+      "dfthcsos/example_submission/angle_k_reference_circuit.py": "8daccdca69f2d718b0176cd9281803df84a988ea5ac6c167fbb02e461ac2b371",
+      "dfthcsos/scoreinfra/__init__.py": "be90e0d503d5c20dcac0102af638b9a4ccad0341daa5baa5d49216a259e4516f",
+      "dfthcsos/scoreinfra/circuits.py": "fc027b52fdcebe14404f403a089122485d097ed65d03e6d989623d620b1ab68c",
+      "dfthcsos/scoreinfra/costs_prepare.py": "7f1e190c42fc5325f3e6689fbbef51f95b0cb12f1c828cda92b6c088e72206da",
+      "dfthcsos/scoreinfra/dfthc_math.py": "ae82898d47a7a86b96378fb906e0f8a9f46003065cf19c7c09952a123b5b5af8",
+      "dfthcsos/scoreinfra/reference.py": "a2d5a63191d655729e29f0fde1e85fe4630bf896a91a63bb894d8d7daf71ed39",
+      "dfthcsos/verify.py": "0775be7a528922367caebe9e4d051d6199811f1aefeaa4b793eaaa4621b8ec9d",
+      "dqi/__init__.py": "01c870aa9763f4e4357fc6654bff1d3296cec995bd0943f87b4a48946ada5b40",
+      "dqi/dqi_reference_circuit.py": "2b8e1b80a806157c333a7e308eaf2499ee09de499efbc05875202c327959959e",
+      "dqi/verify_submission_dqi.py": "f14274bc0943fb9769ddb01131be6063191a15009fe1caf1d4bdd9fd25194e65",
+      "invsqrt/__init__.py": "e9a6ecf253c343528578be5fa92eb820ccade63333aebb784552fb4ae75dbc0b",
+      "invsqrt/nr_reference_circuit.py": "bb90330dcf774f7b502de471293facba67f27952cc8808fe4a9970a9b1322e23",
+      "invsqrt/verify_submission_invsqrt.py": "ddef520dec6b68d1cf0a6f328ddd36d79eb84570b9192cf3f7acaf073f06733a"
+    },
+    "verifiers_root": "/mnt/e/sources/python/quantum/vendor/official/verifiers"
+  },
+  "bits": 1531,
+  "kmb_sha256": "9defa28fbb5357119046b95fd92549d72489bd412c8eedb86eb4e2c11ca0bccf",
+  "m": 127,
+  "n": 12,
+  "operations": {
+    "BIT_STORE0": 3048,
+    "CCX": 29573,
+    "CCZ": 1524,
+    "CX": 614362,
+    "CZ": 53703,
+    "HMR": 32621,
+    "INFO_TAG": 6596,
+    "POP_CONDITION": 6096,
+    "PUSH_CONDITION": 6096,
+    "R": 29573,
+    "SWAP": 8761,
+    "X": 6096
+  },
+  "qubits": 387,
+  "role": "development_fixture",
+  "scope": "supplied locator; not a standalone decoder",
+  "toffoli_like": 31097
+}

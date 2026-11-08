@@ -1,8 +1,8 @@
 ## 1. Control and cost model
 
 - [x] 1.1 Rebuild the current certified control byte for byte. Record its exchange rate `C / Q`.
-- [ ] 1.2 Implement `src/qcompile/invsqrt/costmodel.py` with per-stage predictions.
-- [ ] 1.3 Calibrate against v1, v2, v3 and all recorded screen attempts. Require Toffoli-like counts within 2% and exact declared width. Record residuals.
+- [x] 1.2 Implement `src/qcompile/invsqrt/costmodel.py` with per-stage predictions.
+- [x] 1.3 Calibrate against v1, v2, v3 and all scored comparable screen attempts. Require Toffoli-like counts within 2% and exact declared width. Record residuals; unscored failures cannot supply calibration counts.
 
 ## 2. Rounding and widths
 

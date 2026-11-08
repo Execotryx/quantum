@@ -1,0 +1,15 @@
+{
+  "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+  "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+  "initializer": "I2",
+  "max_evaluations": 20000,
+  "profile": "docs/evidence/chem-grid-profiles-20261108/r9-b129-c40/measurement/profile.json",
+  "profile_sha256": "bcbd3af34f9cfbb12bd6fd90221e31e6fffbf2b603a5aae68923c25554f71eb1",
+  "seed": 185,
+  "shape": [
+    9,
+    129,
+    40
+  ],
+  "wall_seconds": 18000
+}

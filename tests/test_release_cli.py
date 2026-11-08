@@ -7,9 +7,11 @@ from types import SimpleNamespace
 import pytest
 
 from qcompile.artifacts import hashes
+from qcompile.component_confirmations import dqi_counts
+from qcompile.contract import load_contract
 from qcompile.errors import BlockedError, ValidationError
-from qcompile.io import sha256
-from qcompile.release import build_candidate, certify_release
+from qcompile.io import identity, read_json, sha256, write_json
+from qcompile.release import _compare_candidate_parent, build_candidate, certify_release
 
 
 def test_generated_artifacts_require_a_real_recipe(tmp_path, artifact_set):
@@ -70,6 +72,93 @@ def test_release_cannot_use_incomplete_or_smoke_verification(artifact_set):
     }
     with pytest.raises(BlockedError, match="complete hash-bound full"):
         certify_release(release, report, contract, supporting_evidence={})
+
+
+def test_changed_backend_requires_both_bound_requests(tmp_path, project_root):
+    evidence = project_root / "docs/evidence"
+    parent_dir = evidence / "advance-hybrid-20261108/archive"
+    successor_dir = evidence / "invsqrt-roadmap-archive-20261108"
+    parent_report = read_json(parent_dir / "verification.json")
+    successor = read_json(successor_dir / "verification.json")
+    comparison = read_json(successor_dir / "comparison.json")
+    baselines = read_json(evidence / "invsqrt-chemistry-20261107/combined-result.json")["reference"]
+    certificate = tmp_path / "parent-certificate.json"
+    write_json(certificate, {"verification": parent_report})
+    parent = {
+        "retained_benchmarks": ["dqi", "dfthcsos"],
+        "backend_hash": parent_report["backend_hash"],
+        "score": comparison["parent_score"],
+        "costs": comparison["parent_costs"],
+        "dqi_counts": dqi_counts(parent_report["official_results"]["raw_verifier_results"]["dqi"]),
+        "certificate_path": str(certificate),
+        "certificate_sha256": sha256(certificate),
+    }
+    candidate = {"config": {}, "artifacts": {"invsqrt.kmb": {"origin": "generated"}}}
+    with pytest.raises(BlockedError, match="without the original verification requests"):
+        _compare_candidate_parent(parent, candidate, successor, {}, baselines, comparison["successor_score"])
+    requests = {
+        "parent_verification_request": str(parent_dir / "request.json"),
+        "verification_request": str(successor_dir / "request.json"),
+    }
+    review = _compare_candidate_parent(
+        parent, candidate, successor, requests, baselines, comparison["successor_score"],
+    )
+    assert review is not None and list(review["path_changes"]) == ["project_root"]
+    requests["verification_request"] = requests["parent_verification_request"]
+    with pytest.raises(ValidationError, match="request changed"):
+        _compare_candidate_parent(
+            parent, candidate, successor, requests, baselines, comparison["successor_score"],
+        )
+
+
+def test_release_confirmation_backend_relocation_requires_frozen_inventory(tmp_path, project_root):
+    evidence = project_root / "docs/evidence"
+    archive = evidence / "invsqrt-roadmap-archive-20261108"
+    verification = read_json(archive / "verification.json")
+    settings = {**read_json(archive / "request.json")["backend"], "project_root": "/confirmation/source"}
+    local = tmp_path / "confirmation-backend.json"
+    write_json(local, settings)
+    protocol: dict[str, object] = {"backend_hash": identity(settings)}
+    hashes_ = verification["artifact_hashes"]
+    contract = load_contract(project_root / "contracts/contract.json")
+    release = {
+        "artifact_hashes": hashes_,
+        "contract_hash": contract.hash,
+        "candidate": {
+            "artifacts": {"invsqrt.kmb": {"origin": "generated"}},
+            "confirmations": {"invsqrt": {"status": "passed", "protocol": protocol}},
+        },
+    }
+    supporting: dict[str, object] = dict.fromkeys(
+        ("cost_breakdown", "numerical_margins", "mutation_diagnostics", "primitive_scope",
+         "representation_stability", "opportunity_decision"), {"test": "backend binding"},
+    )
+    supporting.update(
+        coverage_counts=verification["official_results"]["coverage_counts"],
+        accepted_reference_costs=read_json(evidence / "invsqrt-chemistry-20261107/combined-result.json")["reference"],
+        verification_request=str(archive / "request.json"),
+        benchmark_evidence={"invsqrt": {
+            "component_hashes": {"invsqrt.kmb": hashes_["invsqrt.kmb"]},
+            **dict.fromkeys(("opportunity", "numerical", "mutation", "primitive", "stability"), "fixture"),
+        }},
+    )
+    with pytest.raises(BlockedError, match="lacks matching backend evidence"):
+        certify_release(release, verification, contract, supporting_evidence=supporting)
+    protocol["backend_inventory"] = {"path": str(local), "sha256": sha256(local)}
+    certified = certify_release(release, verification, contract, supporting_evidence=supporting)
+    assert list(certified["confirmation_backend_reviews"]["invsqrt"]["path_changes"]) == ["project_root"]
+    write_json(local, {**settings, "project_root": "/changed"}, replace=True)
+    with pytest.raises(ValidationError, match="inventory changed"):
+        certify_release(release, verification, contract, supporting_evidence=supporting)
+
+
+def test_legacy_hybrid_certificate_keeps_its_parent_schema(project_root):
+    contract = load_contract(project_root / "contracts/contract.json")
+    certificate = read_json(project_root / "docs/evidence/invsqrt-direct-hybrid-20261107/certificate.json")
+    replay = certify_release(
+        certificate, certificate["verification"], contract, supporting_evidence=certificate["supporting_evidence"],
+    )
+    assert replay == certificate
 
 
 def test_cli_blocked_contract_exits_nonzero_and_help_is_real(project_root, tmp_path):

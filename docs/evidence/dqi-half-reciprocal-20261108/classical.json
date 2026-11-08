@@ -1,0 +1,13 @@
+{
+  "scope": "classical half-degree Bezout and supplied-monomial native EEA slice",
+  "source_sha256": "8dad094b2df838f0811477db16fa5f7a1a27aed3068f6d276645e874a6e07b4e",
+  "native_source_sha256": "169beaf5172c2ce35d75ac93e043c7644ff82c82ea06ca57220d9f778a651298",
+  "test_sha256": "a050174323b81287e424e19802d8b2743800011fd5802a8737b6d4143557aac3",
+  "gf16_scaled_correctable_locators": 1815,
+  "pinned_sampled_weights": "one scaled case per weight 0..35",
+  "source_e_degree_max": 17,
+  "source_o_degree_max": 17,
+  "native_monomial_shift1_t": 324,
+  "native_monomial_shift1_q": 231,
+  "limitations": "Classical quotient history and native monomial slice only; no dynamic quotient, full reversible EEA, variable-degree control or general native reciprocal."
+}

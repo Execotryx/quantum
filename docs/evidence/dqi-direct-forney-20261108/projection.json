@@ -1,0 +1,22 @@
+{
+  "scope": "structural projection for supplied-locator direct Forney fixture, not full verifier",
+  "degree": 35,
+  "positions": 4095,
+  "evaluator_forward_and_reverse_t": 68040,
+  "scan_t": 929565,
+  "total_static_t": 997605,
+  "supplied_locator_fixture_q_bound": 1779,
+  "native_fixture_basis": "70-position degree-35 circuit at 1779 Q; all nonzero gf2_imul and gf2_idiv constants measured to allocate zero additional qubits",
+  "extra_persistent_base_q": 432,
+  "age_q": 7,
+  "counter_q": 8,
+  "indexed_history_q": 722,
+  "scan_phase_q_bound_with_assumed_live_state": 2948,
+  "reference_q": 1893,
+  "reference_mean_t": 5725109.314453125,
+  "two_x_total_t_at_q2948": 1180320,
+  "two_x_remaining_t_after_scan": 182715,
+  "naive_unrolled_discrepancy_and_update_t_both_directions": 412020,
+  "optimistic_ratio_for_that_specific_schedule": 1.675,
+  "limitations": "No locator scratch or control costs included; composition, Q, executed gate count and full verifier result are not measured. Other layouts or arithmetic may differ."
+}

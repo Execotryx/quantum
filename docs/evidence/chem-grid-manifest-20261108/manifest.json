@@ -1,0 +1,567 @@
+{
+  "controls": [
+    {
+      "id": "reference-continuation",
+      "shape": [
+        65,
+        60,
+        60
+      ],
+      "status": "separate registration and full-size profile required"
+    },
+    {
+      "id": "i4-random",
+      "seed": 184,
+      "status": "best shape not yet selected"
+    }
+  ],
+  "lanes": [
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r9-b143-c40-i1-184",
+      "initializer": "I1",
+      "max_evaluations": 20000,
+      "plan_sha256": "daacbd00054a0d57c9fdc382ad5e6f92ece67f05c7c842c70f668f6822052527",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r9-b143-c40/measurement/profile.json",
+      "profile_sha256": "711b7d748675b055cdf6ac87101a29bfdcbd24199b7593fa1e9b0798f43d818f",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r9-b143-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 184,
+      "seed_semantics": "ignored; deterministic repeated execution",
+      "shape": [
+        9,
+        143,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r9-b143-c40-i1-185",
+      "initializer": "I1",
+      "max_evaluations": 20000,
+      "plan_sha256": "06bacefd7ccb6d60606a72f75e3a3d6f58816c43f6b5e8a2a4e8f38861e8ccfc",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r9-b143-c40/measurement/profile.json",
+      "profile_sha256": "711b7d748675b055cdf6ac87101a29bfdcbd24199b7593fa1e9b0798f43d818f",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r9-b143-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 185,
+      "seed_semantics": "ignored; deterministic repeated execution",
+      "shape": [
+        9,
+        143,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r9-b143-c40-i2-184",
+      "initializer": "I2",
+      "max_evaluations": 20000,
+      "plan_sha256": "1618856221eb5ba10879b90ff1d6eb14b2787481919a29a12f604970321ac32a",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r9-b143-c40/measurement/profile.json",
+      "profile_sha256": "711b7d748675b055cdf6ac87101a29bfdcbd24199b7593fa1e9b0798f43d818f",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r9-b143-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 184,
+      "seed_semantics": "seeded initialization",
+      "shape": [
+        9,
+        143,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r9-b143-c40-i2-185",
+      "initializer": "I2",
+      "max_evaluations": 20000,
+      "plan_sha256": "b8a6a2eac089580ef2044ce51af7e1b391dfe89a2de4bffc09e62383ac4da5cb",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r9-b143-c40/measurement/profile.json",
+      "profile_sha256": "711b7d748675b055cdf6ac87101a29bfdcbd24199b7593fa1e9b0798f43d818f",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r9-b143-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 185,
+      "seed_semantics": "seeded initialization",
+      "shape": [
+        9,
+        143,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r9-b143-c40-i3-184",
+      "initializer": "I3",
+      "max_evaluations": 20000,
+      "plan_sha256": "69c5f3448507847be365a067bc7ebcf603766c78ade4b1dd156d3aa6136820d9",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r9-b143-c40/measurement/profile.json",
+      "profile_sha256": "711b7d748675b055cdf6ac87101a29bfdcbd24199b7593fa1e9b0798f43d818f",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r9-b143-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 184,
+      "seed_semantics": "ignored; deterministic repeated execution",
+      "shape": [
+        9,
+        143,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r9-b143-c40-i3-185",
+      "initializer": "I3",
+      "max_evaluations": 20000,
+      "plan_sha256": "84759ac0f527fd376c98074d129d7c034d7a1b74f6b2cdd175dc82eab591a0e1",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r9-b143-c40/measurement/profile.json",
+      "profile_sha256": "711b7d748675b055cdf6ac87101a29bfdcbd24199b7593fa1e9b0798f43d818f",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r9-b143-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 185,
+      "seed_semantics": "ignored; deterministic repeated execution",
+      "shape": [
+        9,
+        143,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r9-b129-c40-i1-184",
+      "initializer": "I1",
+      "max_evaluations": 20000,
+      "plan_sha256": "545d6c4de4d7d1a8f16bcf8fecc9487c6ef0997b4d75cbb29cd98651fd6b479a",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r9-b129-c40/measurement/profile.json",
+      "profile_sha256": "bcbd3af34f9cfbb12bd6fd90221e31e6fffbf2b603a5aae68923c25554f71eb1",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r9-b129-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 184,
+      "seed_semantics": "ignored; deterministic repeated execution",
+      "shape": [
+        9,
+        129,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r9-b129-c40-i1-185",
+      "initializer": "I1",
+      "max_evaluations": 20000,
+      "plan_sha256": "2624f9015af5de3f3af0f140fa5a36f8193111f49b4edab96bdec10f1d734698",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r9-b129-c40/measurement/profile.json",
+      "profile_sha256": "bcbd3af34f9cfbb12bd6fd90221e31e6fffbf2b603a5aae68923c25554f71eb1",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r9-b129-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 185,
+      "seed_semantics": "ignored; deterministic repeated execution",
+      "shape": [
+        9,
+        129,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r9-b129-c40-i2-184",
+      "initializer": "I2",
+      "max_evaluations": 20000,
+      "plan_sha256": "399a7f101c6c8cd3af191af9c9f0e33cc6377e2ae894ea369b95676188a8e91f",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r9-b129-c40/measurement/profile.json",
+      "profile_sha256": "bcbd3af34f9cfbb12bd6fd90221e31e6fffbf2b603a5aae68923c25554f71eb1",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r9-b129-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 184,
+      "seed_semantics": "seeded initialization",
+      "shape": [
+        9,
+        129,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r9-b129-c40-i2-185",
+      "initializer": "I2",
+      "max_evaluations": 20000,
+      "plan_sha256": "a37c5536518258825c16ccf06d489d16f540ff51b93207374c2bbd9fba6889b2",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r9-b129-c40/measurement/profile.json",
+      "profile_sha256": "bcbd3af34f9cfbb12bd6fd90221e31e6fffbf2b603a5aae68923c25554f71eb1",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r9-b129-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 185,
+      "seed_semantics": "seeded initialization",
+      "shape": [
+        9,
+        129,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r9-b129-c40-i3-184",
+      "initializer": "I3",
+      "max_evaluations": 20000,
+      "plan_sha256": "8016049ef551e926a340717bd031d97d05a821cbf62b170a7fb44a4e578509f3",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r9-b129-c40/measurement/profile.json",
+      "profile_sha256": "bcbd3af34f9cfbb12bd6fd90221e31e6fffbf2b603a5aae68923c25554f71eb1",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r9-b129-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 184,
+      "seed_semantics": "ignored; deterministic repeated execution",
+      "shape": [
+        9,
+        129,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r9-b129-c40-i3-185",
+      "initializer": "I3",
+      "max_evaluations": 20000,
+      "plan_sha256": "7ab4ad9d125d6b46ba0957f1ec0d217121bd3778df5284cf3887e22f8ea1651d",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r9-b129-c40/measurement/profile.json",
+      "profile_sha256": "bcbd3af34f9cfbb12bd6fd90221e31e6fffbf2b603a5aae68923c25554f71eb1",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r9-b129-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 185,
+      "seed_semantics": "ignored; deterministic repeated execution",
+      "shape": [
+        9,
+        129,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r10-b129-c40-i1-184",
+      "initializer": "I1",
+      "max_evaluations": 20000,
+      "plan_sha256": "ffcda346c45e3af80f2690702aeb5ceed22b7207b5701beaae2d666a493d0e37",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r10-b129-c40/measurement/profile.json",
+      "profile_sha256": "550de4ee1ef82b947f3fbc14371264783852fb6c1ee90264e849091ab477ffa8",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r10-b129-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 184,
+      "seed_semantics": "ignored; deterministic repeated execution",
+      "shape": [
+        10,
+        129,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r10-b129-c40-i1-185",
+      "initializer": "I1",
+      "max_evaluations": 20000,
+      "plan_sha256": "72215e976e9ada8d2d20af904f248afec159b3b7ea4bf56a921672687e8f74cc",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r10-b129-c40/measurement/profile.json",
+      "profile_sha256": "550de4ee1ef82b947f3fbc14371264783852fb6c1ee90264e849091ab477ffa8",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r10-b129-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 185,
+      "seed_semantics": "ignored; deterministic repeated execution",
+      "shape": [
+        10,
+        129,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r10-b129-c40-i2-184",
+      "initializer": "I2",
+      "max_evaluations": 20000,
+      "plan_sha256": "65a86627775d4391e958536fbd81c4e8917b164fc9863fb25e0db22996726131",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r10-b129-c40/measurement/profile.json",
+      "profile_sha256": "550de4ee1ef82b947f3fbc14371264783852fb6c1ee90264e849091ab477ffa8",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r10-b129-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 184,
+      "seed_semantics": "seeded initialization",
+      "shape": [
+        10,
+        129,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r10-b129-c40-i2-185",
+      "initializer": "I2",
+      "max_evaluations": 20000,
+      "plan_sha256": "fa63ac723abc3a4f2650d89c544915261b1a5b3ec24564ac8b2cc77bf8a7c54b",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r10-b129-c40/measurement/profile.json",
+      "profile_sha256": "550de4ee1ef82b947f3fbc14371264783852fb6c1ee90264e849091ab477ffa8",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r10-b129-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 185,
+      "seed_semantics": "seeded initialization",
+      "shape": [
+        10,
+        129,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r10-b129-c40-i3-184",
+      "initializer": "I3",
+      "max_evaluations": 20000,
+      "plan_sha256": "9faf20825b0cd42a94c0a9f76418116afdf406f955a290ed02eb86a6c8063334",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r10-b129-c40/measurement/profile.json",
+      "profile_sha256": "550de4ee1ef82b947f3fbc14371264783852fb6c1ee90264e849091ab477ffa8",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r10-b129-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 184,
+      "seed_semantics": "ignored; deterministic repeated execution",
+      "shape": [
+        10,
+        129,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r10-b129-c40-i3-185",
+      "initializer": "I3",
+      "max_evaluations": 20000,
+      "plan_sha256": "5d24f5f47eabda69c350622927ce1e52b60d650f5fd9d7a002ea13748dd08084",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r10-b129-c40/measurement/profile.json",
+      "profile_sha256": "550de4ee1ef82b947f3fbc14371264783852fb6c1ee90264e849091ab477ffa8",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r10-b129-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 185,
+      "seed_semantics": "ignored; deterministic repeated execution",
+      "shape": [
+        10,
+        129,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r8-b120-c40-i1-184",
+      "initializer": "I1",
+      "max_evaluations": 20000,
+      "plan_sha256": "2c925fbd53ca96c4b92f14ce76c4755adc25c97a0056da0bcd0b1d5e8e92f801",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r8-b120-c40/measurement/profile.json",
+      "profile_sha256": "00344805123ebe77560063a803350c62e4463086135ab92c07e48658acccbbf8",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r8-b120-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 184,
+      "seed_semantics": "ignored; deterministic repeated execution",
+      "shape": [
+        8,
+        120,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r8-b120-c40-i1-185",
+      "initializer": "I1",
+      "max_evaluations": 20000,
+      "plan_sha256": "98254f1f4c53406153fbdc143cbaf05dfa5cbc76fb51639a0f392d611b111675",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r8-b120-c40/measurement/profile.json",
+      "profile_sha256": "00344805123ebe77560063a803350c62e4463086135ab92c07e48658acccbbf8",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r8-b120-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 185,
+      "seed_semantics": "ignored; deterministic repeated execution",
+      "shape": [
+        8,
+        120,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r8-b120-c40-i2-184",
+      "initializer": "I2",
+      "max_evaluations": 20000,
+      "plan_sha256": "17bc86f5cd1bc457064869c50025a36ddbda6c8c8c89b519dfd6652fcf9f9a2d",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r8-b120-c40/measurement/profile.json",
+      "profile_sha256": "00344805123ebe77560063a803350c62e4463086135ab92c07e48658acccbbf8",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r8-b120-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 184,
+      "seed_semantics": "seeded initialization",
+      "shape": [
+        8,
+        120,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r8-b120-c40-i2-185",
+      "initializer": "I2",
+      "max_evaluations": 20000,
+      "plan_sha256": "bcc178b3694d7c57cc559df7c70802c57537dbac450535920657ffe10c55e2c1",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r8-b120-c40/measurement/profile.json",
+      "profile_sha256": "00344805123ebe77560063a803350c62e4463086135ab92c07e48658acccbbf8",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r8-b120-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 185,
+      "seed_semantics": "seeded initialization",
+      "shape": [
+        8,
+        120,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r8-b120-c40-i3-184",
+      "initializer": "I3",
+      "max_evaluations": 20000,
+      "plan_sha256": "2ff24afc1dc361015e1e82b6433260f910400e525bd297a0badf79c56595c26f",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r8-b120-c40/measurement/profile.json",
+      "profile_sha256": "00344805123ebe77560063a803350c62e4463086135ab92c07e48658acccbbf8",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r8-b120-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 184,
+      "seed_semantics": "ignored; deterministic repeated execution",
+      "shape": [
+        8,
+        120,
+        40
+      ],
+      "wall_seconds": 18000
+    },
+    {
+      "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+      "id": "r8-b120-c40-i3-185",
+      "initializer": "I3",
+      "max_evaluations": 20000,
+      "plan_sha256": "49ea3233ffc90cca1c76c750a105c8de8a576bed4be68fc8812a59ebcfc62355",
+      "profile": "docs/evidence/chem-grid-profiles-20261108/r8-b120-c40/measurement/profile.json",
+      "profile_sha256": "00344805123ebe77560063a803350c62e4463086135ab92c07e48658acccbbf8",
+      "ranking_path": "docs/evidence/chem-grid-rank-20261108/r8-b120-c40/ranking.json",
+      "ranking_sha256": null,
+      "ready": false,
+      "seed": 185,
+      "seed_semantics": "ignored; deterministic repeated execution",
+      "shape": [
+        8,
+        120,
+        40
+      ],
+      "wall_seconds": 18000
+    }
+  ],
+  "plan": {
+    "factorization": {
+      "path": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+      "sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69"
+    },
+    "limits": {
+      "evaluations": 20000,
+      "wall_seconds": 18000
+    },
+    "seeds": [
+      184,
+      185
+    ],
+    "shapes": {
+      "r10-b129-c40": {
+        "profile_directory": "docs/evidence/chem-grid-profiles-20261108/r10-b129-c40",
+        "profile_sha256": "550de4ee1ef82b947f3fbc14371264783852fb6c1ee90264e849091ab477ffa8",
+        "ranking_path": "docs/evidence/chem-grid-rank-20261108/r10-b129-c40/ranking.json",
+        "ranking_sha256": null
+      },
+      "r8-b120-c40": {
+        "profile_directory": "docs/evidence/chem-grid-profiles-20261108/r8-b120-c40",
+        "profile_sha256": "00344805123ebe77560063a803350c62e4463086135ab92c07e48658acccbbf8",
+        "ranking_path": "docs/evidence/chem-grid-rank-20261108/r8-b120-c40/ranking.json",
+        "ranking_sha256": null
+      },
+      "r9-b129-c40": {
+        "profile_directory": "docs/evidence/chem-grid-profiles-20261108/r9-b129-c40",
+        "profile_sha256": "bcbd3af34f9cfbb12bd6fd90221e31e6fffbf2b603a5aae68923c25554f71eb1",
+        "ranking_path": "docs/evidence/chem-grid-rank-20261108/r9-b129-c40/ranking.json",
+        "ranking_sha256": null
+      },
+      "r9-b143-c40": {
+        "profile_directory": "docs/evidence/chem-grid-profiles-20261108/r9-b143-c40",
+        "profile_sha256": "711b7d748675b055cdf6ac87101a29bfdcbd24199b7593fa1e9b0798f43d818f",
+        "ranking_path": "docs/evidence/chem-grid-rank-20261108/r9-b143-c40/ranking.json",
+        "ranking_sha256": null
+      }
+    },
+    "target_sha256": "7e72455f4f6e6a476fed9c1626a96cebea775c4fc071145fd056af23d63e8393"
+  },
+  "plan_sha256": "cb04f514dafc785acfa6fa094714aa715cc80200ffacc12e7c7399fcf490190c",
+  "scope": "registration only; blocked lanes must not be launched before rankings exist"
+}

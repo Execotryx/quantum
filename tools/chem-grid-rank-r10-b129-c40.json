@@ -1,0 +1,13 @@
+{
+  "factorization": {
+    "path": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+    "sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69"
+  },
+  "shape": [
+    10,
+    129,
+    40
+  ],
+  "target_sha256": "7e72455f4f6e6a476fed9c1626a96cebea775c4fc071145fd056af23d63e8393",
+  "profile_directory": "docs/evidence/chem-grid-profiles-20261108/r10-b129-c40"
+}

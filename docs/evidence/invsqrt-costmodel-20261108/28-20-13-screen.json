@@ -1,0 +1,45 @@
+{
+  "admitted_by_5_percent_cost_gate": false,
+  "calibration_sha256": "ce054d49ff2a222550d0ba62dfd3c87846c288fbf5663c6dfd30769b443cd3a9",
+  "control_cost": 472336.9178780867,
+  "control_receipt_sha256": "9927827465cdf60a43ad50cdfc9f841206897d1883a57bf3e44142f44b5c5da1",
+  "full_domain_margins": {
+    "above_90_percent": 0,
+    "failed_inputs": 0,
+    "first_failed_inputs": [],
+    "input_count": 3133452,
+    "minimum_margin_phase64": 265762025,
+    "minimum_margin_x": 2961343,
+    "nonpositive_margins": 0,
+    "worst_tolerance_fraction": 0.5840535187948851,
+    "worst_x": 2961343
+  },
+  "gain_fraction": 0.006911417903365247,
+  "limitations": "Unseen trimmed precision is an extrapolation. Table fit alone does not prove intermediate zero-bit invariants, quantum phases, or native parity.",
+  "predicted": {
+    "assumptions": "Pinned direct primitives, uniform dyadic table and uncapped allocator. Unseen precisions extrapolate the formulas; trimmed widths additionally require a separately proved zero-bit invariant. Fitted-coefficient accuracy and phase-branch correctness are not implied.",
+    "cost": {
+      "fine_rotations": 35,
+      "qubits": 149,
+      "rotation_epsilon_radians": 1.2931682407428604e-12,
+      "rotation_t": 959.5476522803671,
+      "score": 469072.4000474437,
+      "t_like": 1,
+      "toffoli_like": 2908
+    },
+    "horner_by_stage": [
+      1040,
+      528
+    ],
+    "stages": {
+      "coefficient_lookup": 766,
+      "coefficient_unlookup": 56,
+      "horner": 1568,
+      "input_shift": 160,
+      "normalization_flags": 56,
+      "output_shift": 302
+    }
+  },
+  "status": "model_only",
+  "table_sha256": "6a26acc992af26f5fd3a2ef6b2135b3db89fa7a14eedd9593712315fa188ab0b"
+}
