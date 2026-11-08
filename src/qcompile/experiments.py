@@ -1,14 +1,17 @@
 """File-based candidate state machine and one-use frozen confirmation ledger."""
 
 import csv
+from collections.abc import Sequence
 from contextlib import contextmanager
+from math import isfinite
 from pathlib import Path
+from typing import Literal
 
 from .artifacts import hashes, validate_manifest
 from .component_confirmations import (
     BENCHMARKS,
-    FAIL_FAST,
     CANDIDATE_PROFILE,
+    FAIL_FAST,
     candidate_coverage,
     component_binding,
     component_hashes,
@@ -32,6 +35,38 @@ STATES = [
     "remote_accepted",
 ]
 CLAIMS = {"exact_algorithm_intent", "algebraically_proved_primitive", "sampled_circuit_acceptance"}
+ScreenOutcome = Literal["go", "no_go", "budget_limited", "inconclusive"]
+
+
+def screen_outcome(
+    objectives: Sequence[float],
+    threshold: float,
+    *,
+    cap_reached: bool = False,
+    optimizer_converged: bool = True,
+    excluded_by_bound: bool = False,
+) -> ScreenOutcome:
+    """Classify a nonnegative minimization trace against its registered gate."""
+    if not isfinite(threshold) or threshold <= 0 or any(not isfinite(v) or v < 0 for v in objectives):
+        raise ValidationError("screen objectives must be finite and nonnegative with a positive threshold")
+    best = min(objectives, default=float("inf"))
+    if best <= threshold:
+        if excluded_by_bound:
+            raise ValidationError("screen observations contradict the exclusion bound")
+        return "go"
+    if excluded_by_bound:
+        return "no_go"
+    if len(objectives) >= 4:
+        window = max(2, (len(objectives) + 3) // 4)
+        before = min(objectives[:len(objectives) - window + 1])
+        relative_gain = (before - best) / before
+        if relative_gain < 0.001 and best > 2 * threshold:
+            return "no_go"
+        if cap_reached and relative_gain >= 0.01:
+            return "budget_limited"
+    if cap_reached and not optimizer_converged:
+        return "budget_limited"
+    return "inconclusive"
 
 
 @contextmanager
@@ -505,15 +540,20 @@ class CandidateStore:
             history_salts = [h["evidence"].get("seed_policy", {}).get("salt") for h in record["history"]]
             if seed["salt"] in history_salts:
                 raise ValidationError("development salt cannot be reused for confirmation")
+            binding = component_binding(record, benchmark)
             development = self.root / "development-salts.json"
-            if development.is_file() and seed["salt"] in read_json(development):
-                raise ValidationError("registered development salt cannot be reused for confirmation")
+            if development.is_file():
+                reserved = read_json(development).get(seed["salt"])
+                if reserved is not None and not (
+                    isinstance(reserved, dict) and reserved.get("role") == "confirmation"
+                    and benchmark == "dqi" and reserved.get("component_hashes") == binding["component_hashes"]
+                ):
+                    raise ValidationError("salt is registered for development or reserved for another component")
             ledger_path = self.root / "confirmation-ledger.json"
             ledger = self._ledger()
             # Salt identifies the challenge material, even if renamed with a new distribution label.
             if any(item["salt"] == seed["salt"] for item in ledger):
                 raise ValidationError("confirmation salt has already been used or reserved")
-            binding = component_binding(record, benchmark)
             for item in ledger:
                 if scopes_for_legacy_row(self, item) == (benchmark, binding["component_hashes"]):
                     if item["status"] == "failed":

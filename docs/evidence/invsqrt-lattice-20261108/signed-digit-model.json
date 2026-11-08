@@ -1,0 +1,14 @@
+{
+  "margins": {
+    "above_90_percent": 0,
+    "failed_inputs": 0,
+    "first_failed_inputs": [],
+    "input_count": 3133452,
+    "minimum_margin_phase64": 367941604,
+    "minimum_margin_x": 3055051,
+    "nonpositive_margins": 0,
+    "worst_tolerance_fraction": 0.4497867676881213,
+    "worst_x": 1013591
+  },
+  "status": "model_only"
+}

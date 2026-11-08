@@ -1,0 +1,18 @@
+{
+  "rows": 52,
+  "isolated_row_toffolis": {
+    "reference": 1846,
+    "gated": 5304
+  },
+  "additional_toffolis": 3458,
+  "optimistic_complete_cost_assuming_131_qubits": {
+    "qubits": 131,
+    "toffoli_like": 6660,
+    "t_like": 1,
+    "fine_rotations": 36,
+    "rotation_epsilon_radians": 8.601644070396454e-13,
+    "rotation_t": 998.8219284210002,
+    "score": 905204.1681557877
+  },
+  "control_cost": 548860.9216547348
+}

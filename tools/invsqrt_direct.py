@@ -26,6 +26,7 @@ from qcompile.profiling import ResourceSampler, terminate_tree
 CONFIG = ROOT / "configs/invsqrt-direct-v1.json"
 CONFIG_V2 = ROOT / "configs/invsqrt-direct-v2.json"
 CONFIG_V3 = ROOT / "configs/invsqrt-direct-v3.json"
+CONFIG_V4 = ROOT / "configs/invsqrt-direct-v4.json"
 N_P = 10
 EXPECTED_SHOTS = 200_540_928
 PINS = (
@@ -53,12 +54,21 @@ def pins(version: int = 1) -> dict[str, str]:
             ROOT / "docs/evidence/invsqrt-direct-20261107/combined/coefficients.json",
             ROOT / "docs/evidence/invsqrt-direct-hybrid-20261107/certificate.json",
         )
-    if version == 3:
+    if version >= 3:
         paths += (
             CONFIG_V3,
             ROOT / "src/qcompile/invsqrt/unlookup.py",
             ROOT / "docs/evidence/next-hybrid-20261108/invsqrt/minimax-quadratic.json",
             ROOT / "docs/evidence/next-hybrid-20261108/paired-archive/comparison.json",
+        )
+    if version >= 4:
+        paths += (
+            CONFIG_V4,
+            ROOT / "src/qcompile/liveness.py",
+            ROOT / "src/qcompile/invsqrt/lattice.py",
+            ROOT / "tools/invsqrt_lattice.py",
+            *(ROOT / "docs/evidence/invsqrt-lattice-20261108" / f"{name}.json"
+              for name in ("28-21-14", "29-20-14", "28-20-14")),
         )
     return {p.relative_to(ROOT).as_posix(): sha256(p) for p in paths}
 
@@ -134,8 +144,15 @@ def native_smoke(km, official, circuit, spec, model, points, policy):
 def direct_candidate(km, primitives, fmt_spec, *, liveness=None):
     settings = dict(fmt_spec)
     fit = settings.pop("fit", "taylor")
+    lattice_receipt = settings.pop("lattice_receipt", None)
     fmt = DirectFormat(N_P, **{**settings, "fractional": tuple(settings["fractional"])})
-    table = {"taylor": coefficient_table, "minimax": minimax_table}[fit](fmt)
+    if lattice_receipt is None:
+        table = {"taylor": coefficient_table, "minimax": minimax_table}[fit](fmt)
+    else:
+        require(fit == "minimax", "lattice table requires minimax base")
+        receipt = read_json(ROOT / lattice_receipt)
+        require(tuple(receipt["fractional"]) == fmt.fractional, "lattice format differs")
+        table = tuple(tuple(row) for row in receipt["coefficients"])
     return build_circuit(km, primitives, fmt, table, liveness=liveness), partial(phase64, fmt, table), table
 
 
@@ -157,6 +174,9 @@ def lane(directory: Path, name: str) -> None:
         write_json(output / "coefficients.json", table)
         segments = params["segment_bits"]
     circuit, digest = emit(km, circuit, official, output / "invsqrt.kmb")
+    frozen = protocol.get("frozen_sha256", {}).get(name)
+    if frozen is not None:
+        require(digest == frozen, f"{name} frozen KMB hash differs")
     margins = scan_phase(model, spec.max_x, partial(official.reference_values, spec))
     points = fixture_inputs(spec.max_x, segments, margins, protocol["development"])
     native = native_smoke(km, official, circuit, spec, model, points, protocol["development"])
@@ -209,7 +229,7 @@ def run_job(argv: list[str], output: Path, timeout: float) -> int:
 
 def screen(directory: Path, version: int = 1) -> None:
     protocol = read_json(CONFIG)
-    for config in (CONFIG_V2, CONFIG_V3)[: version - 1]:
+    for config in (CONFIG_V2, CONFIG_V3, CONFIG_V4)[: version - 1]:
         updates = read_json(config)
         protocol = {**protocol, **updates, "controls": {**protocol["controls"], **updates["controls"]}}
     validate_budget(protocol)
@@ -316,6 +336,11 @@ def screen(directory: Path, version: int = 1) -> None:
                     combined = attempt("precision-with-phase-repair", settings)
                     if passed(combined) and "binary-normalization" in improved:
                         attempt("combined-v3", {**settings, "binary_normalization": True})
+            elif version == 4:
+                comparison = protocol["comparison"]
+                parents = protocol["combination_parents"]
+                if all(name in feasible and ranking(name)[0] < ranking(comparison)[0] for name in parents):
+                    attempt("combined-lattice", protocol["combined_lattice"])
     limit = protocol["controls"][protocol.get("comparison", "incumbent")]["cost"] * (1 - protocol["minimum_gain"])
     eligible = [
         n
@@ -436,7 +461,7 @@ def main() -> None:
     )
     parser.add_argument("directory", type=Path)
     parser.add_argument("name", nargs="?")
-    parser.add_argument("--protocol", choices=(1, 2, 3), type=int, default=1)
+    parser.add_argument("--protocol", choices=(1, 2, 3, 4), type=int, default=1)
     args = parser.parse_args()
     if args.action == "build":
         if args.name is None:

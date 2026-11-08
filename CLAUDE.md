@@ -9,8 +9,13 @@ and test its preview and rerun behavior with a mocked CLI.
 
 The inverse-square-root screen lives in `tools/invsqrt_opportunity.py`. Preserve
 the preregistration, all lane outcomes, and separate full and confirmation receipts.
+Receipt preparation binds the local certificate, archive and published metric
+hash. Keep score receipts immutable and distinguish capped fits from measured
+exclusion decisions.
 The direct-phasing v3 screen in `tools/invsqrt_direct.py` compares individual
 changes against the confirmed v2 bytes before combining gains.
+The v4 lattice recipe pins both single-width parents and the exact winning
+table. Keep model-only two-octave pricing separate from native circuit costs.
 
 On the combined optimization branch, `tools/banked_chemistry.py` screens the
 lookup-only replacement and tests the extracted combined archive. Preserve the
@@ -18,6 +23,10 @@ pinned numerical inputs and separate chemistry confirmation evidence.
 Run the continuous residual gate in `tools/chem_shape_search.py` before ANGLE
 synthesis. Keep the tower-field DQI receipts from `tools/dqi_decoder_screen.py`
 scoped to the decoder dimensions they actually exercise.
+The DQI stage profiler reconciles the reference KMB and native counts.
+Keep standalone phase scans, inverse primitives and classical end-state
+proofs separate from complete decoder verification. Keep synthetic
+compressed ANGLE results separate from a fitted chemistry family.
 Use `tools/hybrid_certification.py` for the audited parent and successor
 certificate. Keep chemistry's one-use confirmation scoped to the complete
 family and NPZ. Resolve inherited evidence through the trusted parent record.

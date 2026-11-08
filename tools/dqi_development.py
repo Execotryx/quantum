@@ -7,17 +7,19 @@ import subprocess
 import sys
 import time
 from importlib import import_module
+from math import isfinite
 from pathlib import Path
 
 import numpy as np
-
 from invsqrt_direct import run_job
+
 from qcompile.environment import capture
 from qcompile.experiments import record_lock
 from qcompile.io import read_json, sha256, write_json
 from qcompile.official import validate_backend
 
 ROOT = Path(__file__).resolve().parents[1]
+TRIAL_SHOTS = {"scouting": 256, "prospective": 2560, "matched_replay": 102400, "full_development": 102400}
 
 
 def matched_pair(registration: Path, output: Path) -> None:
@@ -29,7 +31,7 @@ def matched_pair(registration: Path, output: Path) -> None:
     km = import_module("kickmix")
     api = import_module("dqi.verify_submission_dqi")
     trial = read_json(output / "trial.json")
-    count = {"scouting": 256, "prospective": 2560, "matched_replay": 102400}[trial["role"]]
+    count = TRIAL_SHOTS[trial["role"]]
     spec = api.ProblemSpecDQI.benchmark_instance(num_shots=count)
     seed = int.from_bytes(hashlib.sha256(trial["salt"].encode()).digest(), "big")
     rng = np.random.default_rng(seed)
@@ -77,18 +79,62 @@ def matched_pair(registration: Path, output: Path) -> None:
         write_json(output / f"{side}.json", receipt)
 
 
-def run(plan: Path, output: Path) -> None:
-    config = read_json(plan)
+def validate_schedule(config) -> tuple[list[str], str | None]:
     trials = config["trials"]
-    allowed = {"scouting", "prospective", "matched_replay"}
     salts = [trial["salt"] for trial in trials]
+    confirmation = config.get("confirmation_salt")
+    kind = config.get("dqi_kind", "exact")
     if (
-        not 1 <= len(trials) <= 16 or any(trial["role"] not in allowed for trial in trials)
-        or len(set(salts)) != len(salts) or any(not isinstance(s, str) or len(s) < 32 for s in salts)
+        not 1 <= len(trials) <= 16 or any(trial["role"] not in TRIAL_SHOTS for trial in trials)
+        or any(not isinstance(s, str) or len(s) < 32 for s in salts) or len(set(salts)) != len(salts)
+        or kind not in {"exact", "failure_priced"}
+        or (confirmation is not None and (
+            not isinstance(confirmation, str) or len(confirmation) < 32 or confirmation in salts
+        ))
         or type(config["workers"]) is not int or not 1 <= config["workers"] <= 4
         or not 0 < config["wall_seconds"] <= 86400
     ):
         raise ValueError("invalid bounded DQI development protocol")
+    if kind == "failure_priced" and (
+        confirmation is None or sum(trial["role"] == "full_development" for trial in trials) < 5
+    ):
+        raise ValueError("failure-priced DQI needs at least five full development salts and a distinct confirmation salt")
+    return salts, confirmation
+
+
+def conservative_price(receipts, api) -> dict:
+    """Price full development draws using the pinned confidence procedure."""
+    if len(receipts) < 5:
+        raise ValueError("need at least five full DQI development receipts")
+    shots = TRIAL_SHOTS["full_development"]
+    failures = []
+    bases = []
+    for row in receipts:
+        counts = row["value_errors"], row["phase_errors"]
+        qubits, toffolis = row["num_qubits"], row["toffoli_count"]
+        if (
+            row["verified_shots"] != shots or row["log2_delta"] != api.DEFAULT_LOG2_DELTA
+            or any(type(n) is not int or n < 0 for n in counts) or sum(counts) > shots
+        ):
+            raise ValueError("inconsistent full DQI coverage, confidence level or disjoint failure counts")
+        if type(qubits) is not int or qubits <= 0 or not isfinite(toffolis) or toffolis <= 0:
+            raise ValueError("invalid DQI width or executed Toffoli mean")
+        failures.append(sum(counts))
+        bases.append(qubits**2 * toffolis)
+    priced = min(shots, max(failures) + 2)
+    upper = api.clopper_pearson_upper_bound(priced, shots, api.DEFAULT_LOG2_DELTA)
+    factor = api.repetition_overhead(upper) if upper < 1 / 16 else None
+    return {
+        "failures_by_salt": failures, "k_max": max(failures), "priced_failures": priced,
+        "upper_error_rate": upper, "repetition_factor": factor,
+        "cost": None if factor is None else factor * max(bases),
+    }
+
+
+def run(plan: Path, output: Path) -> None:
+    config = read_json(plan)
+    trials = config["trials"]
+    salts, confirmation_salt = validate_schedule(config)
     environment = capture(ROOT)
     if environment["dirty"]:
         raise ValueError("DQI development requires clean frozen source")
@@ -108,11 +154,19 @@ def run(plan: Path, output: Path) -> None:
         ledger = read_json(ledger_path) if ledger_path.exists() else {}
         confirmation = reservations / "confirmation-ledger.json"
         confirmed = {row["salt"] for row in read_json(confirmation)} if confirmation.exists() else set()
-        if set(salts) & (set(ledger) | confirmed):
+        requested = {*salts, confirmation_salt} if confirmation_salt is not None else set(salts)
+        if requested & (set(ledger) | confirmed):
             raise ValueError("DQI development salt has already been reserved")
-        ledger.update(dict.fromkeys(salts, sha256(registration)))
+        registration_hash = sha256(registration)
+        ledger.update(dict.fromkeys(salts, registration_hash))
+        if confirmation_salt is not None:
+            ledger[confirmation_salt] = {
+                "role": "confirmation", "registration_sha256": registration_hash,
+                "component_hashes": {"dqi.kmb": config["candidate"]["sha256"]},
+            }
         write_json(ledger_path, ledger, replace=True)
     deadline = time.monotonic() + config["wall_seconds"]
+    full_receipts = []
     for index, trial in enumerate(trials):
         directory = output / f"trial-{index:02}"
         directory.mkdir()
@@ -128,6 +182,18 @@ def run(plan: Path, output: Path) -> None:
             except subprocess.TimeoutExpired:
                 status = "timeout"
         write_json(directory / "status.json", {"status": status})
+        if trial["role"] == "full_development" and status == "complete":
+            full_receipts.append(read_json(directory / "candidate.json"))
+    if config.get("dqi_kind") == "failure_priced":
+        complete = len(full_receipts) == sum(trial["role"] == "full_development" for trial in trials)
+        if not complete or any(row["status"] != "PASS" for row in full_receipts):
+            write_json(output / "pricing.json", {"status": "ineligible", "complete": complete})
+        else:
+            sys.path[:0] = [settings["kickmix_root"], settings["verifiers_root"]]
+            api = import_module("dqi.verify_submission_dqi")
+            pricing = conservative_price(full_receipts, api)
+            status = "priced" if pricing["cost"] is not None else "confidence_rejected"
+            write_json(output / "pricing.json", {"status": status, **pricing})
 
 
 def main() -> None:

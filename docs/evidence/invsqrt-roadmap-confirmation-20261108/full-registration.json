@@ -1,0 +1,11 @@
+{
+  "artifact_sha256": "c487332fe965389191c8e6d34848d61c82748e5802c6e616eb0363869f92c4c9",
+  "cost_limit": 521417.875571998,
+  "driver_sha256": "c64f82ed7df857114c2741b7071378ef09061f6091801497d882d402f6115668",
+  "expected_shots": 200540928,
+  "metric_backend_sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+  "preceding_full_sha256": null,
+  "role": "full",
+  "salt": "49e6af867fc5f26da6a9eb97ec211fac6d6dc46670f2a2c8ca19168799c97a9d",
+  "workers": 12
+}

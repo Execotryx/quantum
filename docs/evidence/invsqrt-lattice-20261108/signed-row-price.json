@@ -1,0 +1,357 @@
+{
+  "control_cost": 548860.9216547348,
+  "limitations": "Boundary constants are stand-ins; this is not an emitted full circuit.",
+  "projected": {
+    "fine_rotations": 36,
+    "qubits": 161,
+    "rotation_epsilon_radians": 1.7406303299945297e-12,
+    "rotation_t": 978.320710337837,
+    "score": 1194753.658591098,
+    "t_like": 1,
+    "toffoli_like": 7176
+  },
+  "row_counts": [
+    5820,
+    0,
+    0
+  ],
+  "rows": [
+    {
+      "counts": [
+        225,
+        0,
+        0
+      ],
+      "digit": 0,
+      "qubits": 152,
+      "shift": -13,
+      "stage": 1,
+      "subtract": true
+    },
+    {
+      "counts": [
+        213,
+        0,
+        0
+      ],
+      "digit": 1,
+      "qubits": 152,
+      "shift": -11,
+      "stage": 1,
+      "subtract": true
+    },
+    {
+      "counts": [
+        201,
+        0,
+        0
+      ],
+      "digit": 2,
+      "qubits": 152,
+      "shift": -9,
+      "stage": 1,
+      "subtract": true
+    },
+    {
+      "counts": [
+        189,
+        0,
+        0
+      ],
+      "digit": 3,
+      "qubits": 152,
+      "shift": -7,
+      "stage": 1,
+      "subtract": true
+    },
+    {
+      "counts": [
+        177,
+        0,
+        0
+      ],
+      "digit": 4,
+      "qubits": 152,
+      "shift": -5,
+      "stage": 1,
+      "subtract": true
+    },
+    {
+      "counts": [
+        165,
+        0,
+        0
+      ],
+      "digit": 5,
+      "qubits": 152,
+      "shift": -3,
+      "stage": 1,
+      "subtract": true
+    },
+    {
+      "counts": [
+        125,
+        0,
+        0
+      ],
+      "digit": 6,
+      "qubits": 152,
+      "shift": -1,
+      "stage": 1,
+      "subtract": true
+    },
+    {
+      "counts": [
+        225,
+        0,
+        0
+      ],
+      "digit": 0,
+      "qubits": 152,
+      "shift": -13,
+      "stage": 1,
+      "subtract": false
+    },
+    {
+      "counts": [
+        213,
+        0,
+        0
+      ],
+      "digit": 1,
+      "qubits": 152,
+      "shift": -11,
+      "stage": 1,
+      "subtract": false
+    },
+    {
+      "counts": [
+        201,
+        0,
+        0
+      ],
+      "digit": 2,
+      "qubits": 152,
+      "shift": -9,
+      "stage": 1,
+      "subtract": false
+    },
+    {
+      "counts": [
+        189,
+        0,
+        0
+      ],
+      "digit": 3,
+      "qubits": 152,
+      "shift": -7,
+      "stage": 1,
+      "subtract": false
+    },
+    {
+      "counts": [
+        177,
+        0,
+        0
+      ],
+      "digit": 4,
+      "qubits": 152,
+      "shift": -5,
+      "stage": 1,
+      "subtract": false
+    },
+    {
+      "counts": [
+        165,
+        0,
+        0
+      ],
+      "digit": 5,
+      "qubits": 152,
+      "shift": -3,
+      "stage": 1,
+      "subtract": false
+    },
+    {
+      "counts": [
+        125,
+        0,
+        0
+      ],
+      "digit": 6,
+      "qubits": 152,
+      "shift": -1,
+      "stage": 1,
+      "subtract": false
+    },
+    {
+      "counts": [
+        277,
+        0,
+        0
+      ],
+      "digit": 0,
+      "qubits": 161,
+      "shift": -12,
+      "stage": 0,
+      "subtract": true
+    },
+    {
+      "counts": [
+        265,
+        0,
+        0
+      ],
+      "digit": 1,
+      "qubits": 161,
+      "shift": -10,
+      "stage": 0,
+      "subtract": true
+    },
+    {
+      "counts": [
+        253,
+        0,
+        0
+      ],
+      "digit": 2,
+      "qubits": 161,
+      "shift": -8,
+      "stage": 0,
+      "subtract": true
+    },
+    {
+      "counts": [
+        241,
+        0,
+        0
+      ],
+      "digit": 3,
+      "qubits": 161,
+      "shift": -6,
+      "stage": 0,
+      "subtract": true
+    },
+    {
+      "counts": [
+        229,
+        0,
+        0
+      ],
+      "digit": 4,
+      "qubits": 161,
+      "shift": -4,
+      "stage": 0,
+      "subtract": true
+    },
+    {
+      "counts": [
+        215,
+        0,
+        0
+      ],
+      "digit": 5,
+      "qubits": 161,
+      "shift": -2,
+      "stage": 0,
+      "subtract": true
+    },
+    {
+      "counts": [
+        135,
+        0,
+        0
+      ],
+      "digit": 6,
+      "qubits": 161,
+      "shift": 0,
+      "stage": 0,
+      "subtract": true
+    },
+    {
+      "counts": [
+        277,
+        0,
+        0
+      ],
+      "digit": 0,
+      "qubits": 161,
+      "shift": -12,
+      "stage": 0,
+      "subtract": false
+    },
+    {
+      "counts": [
+        265,
+        0,
+        0
+      ],
+      "digit": 1,
+      "qubits": 161,
+      "shift": -10,
+      "stage": 0,
+      "subtract": false
+    },
+    {
+      "counts": [
+        253,
+        0,
+        0
+      ],
+      "digit": 2,
+      "qubits": 161,
+      "shift": -8,
+      "stage": 0,
+      "subtract": false
+    },
+    {
+      "counts": [
+        241,
+        0,
+        0
+      ],
+      "digit": 3,
+      "qubits": 161,
+      "shift": -6,
+      "stage": 0,
+      "subtract": false
+    },
+    {
+      "counts": [
+        229,
+        0,
+        0
+      ],
+      "digit": 4,
+      "qubits": 161,
+      "shift": -4,
+      "stage": 0,
+      "subtract": false
+    },
+    {
+      "counts": [
+        215,
+        0,
+        0
+      ],
+      "digit": 5,
+      "qubits": 161,
+      "shift": -2,
+      "stage": 0,
+      "subtract": false
+    },
+    {
+      "counts": [
+        135,
+        0,
+        0
+      ],
+      "digit": 6,
+      "qubits": 161,
+      "shift": 0,
+      "stage": 0,
+      "subtract": false
+    }
+  ],
+  "status": "isolated_slice_projection"
+}

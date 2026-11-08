@@ -29,6 +29,23 @@ the 19.5 mHa residual gate.
 The [v3 validation report](docs/advance-hybrid-validation-08-11-2026-05-33-43.md)
 records the development results, full archive comparison and receipts.
 
+### Roadmap measurements
+
+The 28/20/14 lattice-refined inverse-square-root circuit passed two
+full verifier runs on the same frozen bytes. It costs **509,471.48**
+at **155 qubits**, a **7.18%** reduction from v3.
+
+The full-size DQI profile found that the locator and its reversal account
+for **73.69%** of counted gates. The standalone phase scan passed native
+checks across all 4,095 positions, and the subtower inverse passed all
+4,096 inputs at 102 Toffoli-like gates. Those are primitive results.
+
+The best joint chemistry cloud pilot reached **314.05 mHa** after 250
+evaluations. It was still improving at the cap and remained above the
+19 mHa continuous gate. The
+[roadmap measurements](docs/hybrid-roadmap-checkpoint-08-11-2026-14-54-02.md)
+link the matched controls and development receipts.
+
 ### Earlier hybrid results
 
 The reference and independent mathematical checks are complete. The certified
@@ -77,6 +94,18 @@ The [full verification report](docs/next-hybrid-paired-archive-08-11-2026-01-13-
 links the archive hash, complete coverage and matched costs. The
 [development report](docs/next-hybrid-validation-08-11-2026-00-04-43.md)
 records the 309-test run, the original screens and their promotion decisions.
+
+## Archive operations
+
+Prepare each locally certified archive after structural preflight and
+the published evaluator hash check. Review the external score against
+the registered band before preparing another archive. Aim to collect
+the receipt within 24 hours of certification.
+
+Reserve two daily slots from the planned architecture freeze through
+final selection. Select the highest-scoring certified archive and the
+highest-scoring remaining archive with exact DQI. Keep the local
+certificate and external score receipt separately.
 
 ## Install and check
 

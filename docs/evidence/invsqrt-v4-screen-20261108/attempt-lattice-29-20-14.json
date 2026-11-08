@@ -1,0 +1,60 @@
+{
+  "allocated_qubits": {
+    "after_unlookup": 100,
+    "arithmetic": 130,
+    "lookup": 108,
+    "phase": 130
+  },
+  "coefficients_sha256": "f54089b274c6f00f0a5b770b150332edc56a0140936884591a3dc53a2cc1090b",
+  "cost": {
+    "fine_rotations": 36,
+    "qubits": 158,
+    "rotation_epsilon_radians": 5.840034681792155e-13,
+    "rotation_t": 1010.0840200630071,
+    "score": 531001.8187924888,
+    "t_like": 1,
+    "toffoli_like": 3108
+  },
+  "margins": {
+    "above_90_percent": 0,
+    "failed_inputs": 0,
+    "first_failed_inputs": [],
+    "input_count": 3133452,
+    "minimum_margin_phase64": 123449057,
+    "minimum_margin_x": 2154495,
+    "nonpositive_margins": 0,
+    "worst_tolerance_fraction": 0.8571671899753694,
+    "worst_x": 940031
+  },
+  "native": {
+    "counts": [
+      3108,
+      1,
+      36
+    ],
+    "executed_counts": [
+      97069056,
+      31232,
+      1124352
+    ],
+    "fixture_inputs": 7804,
+    "shots": 31232
+  },
+  "parameters": {
+    "binary_normalization": true,
+    "fit": "minimax",
+    "fractional": [
+      29,
+      20,
+      14
+    ],
+    "fused": true,
+    "lattice_receipt": "docs/evidence/invsqrt-lattice-20261108/29-20-14.json",
+    "measurement_unlookup": true,
+    "reuse_lookup": true,
+    "segment_bits": 7
+  },
+  "phase_gate": true,
+  "sha256": "4e39efb4f5a75374ee0ecfdeff77a0a7ec3affcb7619df8646a0c26fed521cf5",
+  "status": "completed"
+}

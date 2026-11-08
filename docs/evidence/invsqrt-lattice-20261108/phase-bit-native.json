@@ -1,0 +1,38 @@
+{
+  "cost": {
+    "fine_rotations": 34,
+    "qubits": 159,
+    "rotation_epsilon_radians": 5.086820380516192e-13,
+    "rotation_t": 957.7612525839792,
+    "score": 547228.7597902132,
+    "t_like": 1,
+    "toffoli_like": 3202
+  },
+  "drop": 2,
+  "margins": {
+    "above_90_percent": 0,
+    "failed_inputs": 0,
+    "first_failed_inputs": [],
+    "input_count": 3133452,
+    "minimum_margin_phase64": 101553564,
+    "minimum_margin_x": 2875130,
+    "nonpositive_margins": 0,
+    "worst_tolerance_fraction": 0.8433883423206199,
+    "worst_x": 2875130
+  },
+  "native": {
+    "counts": [
+      3202,
+      1,
+      34
+    ],
+    "executed_counts": [
+      100004864,
+      31232,
+      1061888
+    ],
+    "fixture_inputs": 7805,
+    "shots": 31232
+  },
+  "sha256": "c419706da5a670e7d2cc0c0e441ceee5baf2789269747e383c87afb95e4876cc"
+}

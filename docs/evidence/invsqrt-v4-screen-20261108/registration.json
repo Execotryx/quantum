@@ -1,0 +1,324 @@
+{
+  "available_memory_kib": 6335220,
+  "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+  "environment": {
+    "cpu_count": 16,
+    "dependencies": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scipy": "1.17.0"
+    },
+    "dependency_lock_sha256": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+    "dirty": false,
+    "numpy_backend": {
+      "Build Dependencies": {
+        "blas": {
+          "detection method": "pkgconfig",
+          "found": true,
+          "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+          "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+          "name": "scipy-openblas",
+          "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+          "pc file directory": "/project/.openblas",
+          "version": "0.3.30"
+        },
+        "lapack": {
+          "detection method": "pkgconfig",
+          "found": true,
+          "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+          "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+          "name": "scipy-openblas",
+          "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+          "pc file directory": "/project/.openblas",
+          "version": "0.3.30"
+        }
+      },
+      "Compilers": {
+        "c": {
+          "commands": "cc",
+          "linker": "ld.bfd",
+          "name": "gcc",
+          "version": "14.2.1"
+        },
+        "c++": {
+          "commands": "c++",
+          "linker": "ld.bfd",
+          "name": "gcc",
+          "version": "14.2.1"
+        },
+        "cython": {
+          "commands": "cython",
+          "linker": "cython",
+          "name": "cython",
+          "version": "3.2.1"
+        }
+      },
+      "Machine Information": {
+        "build": {
+          "cpu": "x86_64",
+          "endian": "little",
+          "family": "x86_64",
+          "system": "linux"
+        },
+        "host": {
+          "cpu": "x86_64",
+          "endian": "little",
+          "family": "x86_64",
+          "system": "linux"
+        }
+      },
+      "Python Information": {
+        "path": "/tmp/build-env-w_be3r90/bin/python",
+        "version": "3.13"
+      },
+      "SIMD Extensions": {
+        "baseline": [
+          "SSE",
+          "SSE2",
+          "SSE3"
+        ],
+        "found": [
+          "SSSE3",
+          "SSE41",
+          "POPCNT",
+          "SSE42",
+          "AVX",
+          "F16C",
+          "FMA3",
+          "AVX2"
+        ],
+        "not found": [
+          "AVX512F",
+          "AVX512CD",
+          "AVX512_KNL",
+          "AVX512_KNM",
+          "AVX512_SKX",
+          "AVX512_CLX",
+          "AVX512_CNL",
+          "AVX512_ICL",
+          "AVX512_SPR"
+        ]
+      }
+    },
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "processor": "",
+    "python": "3.13.15 (main, Aug 14 2026, 15:34:59) [Clang 22.1.3 ]",
+    "source_revision": "a0334a8988f265f472afe18f9f073bd6a4a06c8d",
+    "thread_settings": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "inputs": {
+    "configs/invsqrt-direct-v1.json": "a839f5c53c8e14155a805ebcbf35c965d600c88375294472d0c6bc9dd037e8e4",
+    "configs/invsqrt-direct-v2.json": "1921b28fcfb9cf8c06376fd923c8d15e041d63b02a47b0655256ed3be48a1009",
+    "configs/invsqrt-direct-v3.json": "0903159aae8aaffb31eac607d9e51fa08b98d828d220f1a8cf0edc23b80bbb4f",
+    "configs/invsqrt-direct-v4.json": "dd32d16086e30a29cba5a8ff6d04ec95fa6c65c211eed405aee51545ae504f2b",
+    "contracts/contract.json": "9a2e0016cd6bdb1519cac904574ba2f8dfc0e01969a2d1129ce0f0d836852a8f",
+    "docs/evidence/invsqrt-chemistry-20261107/archive.json": "ffeca5cd11ccd8c215209fd7b2e480275926c7027d0511e6e41424d19f738b2d",
+    "docs/evidence/invsqrt-chemistry-20261107/combined-result.json": "c93b6823ae55bf69a39d54825cab5f0ca57dab75f8808a8ea5b549eb5885d5fb",
+    "docs/evidence/invsqrt-direct-20261107/combined/attempt.json": "390194afa0c799d9c3038b0ea494527325b4722a94675c9e647f428df4778e60",
+    "docs/evidence/invsqrt-direct-20261107/combined/coefficients.json": "f2c5e9cc951f423e48fbeef7772b0541d70bf28d347ce92d1d41af8a07a7c85e",
+    "docs/evidence/invsqrt-direct-hybrid-20261107/certificate.json": "f37e9119ef2e479d92663a34b23fc4ceb4b93c8d325815c844b2d45cbdb3eba0",
+    "docs/evidence/invsqrt-lattice-20261108/28-20-14.json": "391304b70b1172cda1c9cff1af4dd05b892e021353224c20a2f8a6d1c67b2079",
+    "docs/evidence/invsqrt-lattice-20261108/28-21-14.json": "7aa3478178b8ee689a0451054e7015d3d6be268f905f5c9a2a57dd0e0a571275",
+    "docs/evidence/invsqrt-lattice-20261108/29-20-14.json": "0ac2640390cdfc4fd7ac90bc81be1afdd4d218b5cdfb7b464519c4b74af4c32f",
+    "docs/evidence/next-hybrid-20261108/invsqrt/minimax-quadratic.json": "3b408ff14b6497ff9bfc63069aa058563b0c2a0efbca24dc848fa2c26e7c192d",
+    "docs/evidence/next-hybrid-20261108/paired-archive/comparison.json": "bead60ccd8844094b3c12d147e81fd31dc8728a093a4f2158078a256b5ae711c",
+    "docs/evidence/official-baseline-20261101.json": "1fbc229f8bf97c731e73cc4db91759736d6a47d515661249ccc8add8516625b6",
+    "src/qcompile/invsqrt/direct.py": "3f0b9092f19fdfcdf82ced11c5dd8c24ae7e98144b42f6d6c0bc12b59520841b",
+    "src/qcompile/invsqrt/direct_screen.py": "94cd56df585c236a6676f6adcaae081e96411871e46c1242bf66be48dc90295f",
+    "src/qcompile/invsqrt/lattice.py": "b5c7b31552933abfd20687b344a8e4f1c413cd9af9e0172da2f8c5c907cee7ed",
+    "src/qcompile/invsqrt/minimax.py": "b387cacee2a2d08458dd768a7ae6cc6fc6f4331001c9daf414b42830e3f41a71",
+    "src/qcompile/invsqrt/unlookup.py": "b4255bbe4294b681461e2e8910c108d10d0422a1fcb0a414ea1a296f1141e3ff",
+    "src/qcompile/liveness.py": "207b15e0e1b94276d70643ae15388d0f53968abd66e4d745250a62a23e9919c6",
+    "tools/invsqrt_direct.py": "4dc97b7ee646d9e569e844cc610fe9d10378ac9d77abade9045cc9e788522fb5",
+    "tools/invsqrt_lattice.py": "d598a78aefb93c059b7a4419c21f8ad13da384af0b58244525e4aa1185cc2cb8",
+    "tools/invsqrt_opportunity.py": "2c90ea1cd69857fc9bfaa0b2acd02edf62f1f0a4d39cfa324ed424cba784c8d7",
+    "uv.lock": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+    "vendor/backend.json": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49"
+  },
+  "protocol": {
+    "ablations": {
+      "separate-arithmetic": {
+        "fused": false
+      },
+      "separate-lookup-workspace": {
+        "reuse_lookup": false
+      }
+    },
+    "budget": {
+      "engineer_hours": 16,
+      "max_compute_seconds": 14400,
+      "max_experiments": 11,
+      "max_wall_seconds": 7200,
+      "minimum_available_memory_kib": 4194304
+    },
+    "combination_parents": [
+      "lattice-28-21-14",
+      "lattice-29-20-14"
+    ],
+    "combined_lattice": {
+      "binary_normalization": true,
+      "fit": "minimax",
+      "fractional": [
+        28,
+        20,
+        14
+      ],
+      "fused": true,
+      "lattice_receipt": "docs/evidence/invsqrt-lattice-20261108/28-20-14.json",
+      "measurement_unlookup": true,
+      "reuse_lookup": true,
+      "segment_bits": 7
+    },
+    "comparison": "verified-v3",
+    "controls": {
+      "certified-direct": {
+        "coefficients_sha256": "f2c5e9cc951f423e48fbeef7772b0541d70bf28d347ce92d1d41af8a07a7c85e",
+        "cost": 1008498.1176395753,
+        "parameters": {
+          "fractional": [
+            31,
+            26,
+            21,
+            16
+          ],
+          "fused": true,
+          "reuse_lookup": true,
+          "segment_bits": 6
+        },
+        "sha256": "dfaf3345abf3ff70e9a633bfd0cd07baa7e7bc7eb70105b557d09726ef1f5a8c"
+      },
+      "incumbent": {
+        "cost": 1971483.438323478,
+        "sha256": "9816fbfb5544949fb2c448410daf8144b825e45d0105cb118aac75c1a8c910e9",
+        "widths": [
+          13,
+          17,
+          28,
+          27,
+          28
+        ]
+      },
+      "reference": {
+        "cost": 2076774.233715282,
+        "sha256": "e2bf8eb64350a4460a271fc7f1d591ef125b1e276377e9a0f64b96ab3ca321e1",
+        "widths": [
+          14,
+          17,
+          28,
+          28,
+          29
+        ]
+      },
+      "verified-quadratic-v2": {
+        "coefficients_sha256": "39905e770ed4e2ce02cf14f3aba2080663f3f26cc2fc596181a2ae3085f414ae",
+        "cost": 820078.9505284121,
+        "parameters": {
+          "fit": "minimax",
+          "fractional": [
+            30,
+            24,
+            18
+          ],
+          "fused": true,
+          "reuse_lookup": true,
+          "segment_bits": 7
+        },
+        "sha256": "3ae33a3d0101085613ac6bfc1b1ab7dde6b8f35f7ebd84d0976ba66a0772f799"
+      },
+      "verified-v3": {
+        "coefficients_sha256": "6849fc27b48f7ec097294102df0c71f496e12c017246502c9cb8fd221de7bc13",
+        "cost": 548860.9216547348,
+        "parameters": {
+          "binary_normalization": true,
+          "fit": "minimax",
+          "fractional": [
+            29,
+            21,
+            14
+          ],
+          "fused": true,
+          "measurement_unlookup": true,
+          "reuse_lookup": true,
+          "segment_bits": 7
+        },
+        "sha256": "ce8a58b65ee2d89457de655565a22b68ffc2d7dc68befc764a99410b3285f5b4"
+      }
+    },
+    "correctness_conditions": "Full-domain positive phase64 margin, at most 90 percent of the tolerance, native phase parity, restored x and zero scratch.",
+    "development": {
+      "batch": 64,
+      "random_inputs": 256,
+      "repeat": 4,
+      "seed": 2026110701
+    },
+    "direct_control": {
+      "fractional": [
+        30,
+        25,
+        20,
+        15
+      ],
+      "fused": true,
+      "reuse_lookup": true,
+      "segment_bits": 6
+    },
+    "frozen_sha256": {
+      "combined-lattice": "c487332fe965389191c8e6d34848d61c82748e5802c6e616eb0363869f92c4c9",
+      "lattice-28-21-14": "8834f6761c43ff97329ae96eae66fb3508c9125bd1066ec641ecf9a476b23520",
+      "lattice-29-20-14": "4e39efb4f5a75374ee0ecfdeff77a0a7ec3affcb7619df8646a0c26fed521cf5"
+    },
+    "hypothesis": "Lattice rounding permits independently beneficial coefficient-width reductions.",
+    "minimum_gain": 0.05,
+    "objective": "Minimize complete declared-qubit and rotation-inclusive verifier cost.",
+    "parameter_ranges": "Uniform dyadic minimax, independent binary normalization and measurement unlookup, with an explicit precision ladder.",
+    "parent_rule": "Combine the best passing precision reduction with phase repair only if both lower the v2 cost independently. Add binary normalization only if it also lowers the v2 cost and the first combination passes.",
+    "piecewise": {
+      "lattice-28-21-14": {
+        "binary_normalization": true,
+        "fit": "minimax",
+        "fractional": [
+          28,
+          21,
+          14
+        ],
+        "fused": true,
+        "lattice_receipt": "docs/evidence/invsqrt-lattice-20261108/28-21-14.json",
+        "measurement_unlookup": true,
+        "reuse_lookup": true,
+        "segment_bits": 7
+      },
+      "lattice-29-20-14": {
+        "binary_normalization": true,
+        "fit": "minimax",
+        "fractional": [
+          29,
+          20,
+          14
+        ],
+        "fused": true,
+        "lattice_receipt": "docs/evidence/invsqrt-lattice-20261108/29-20-14.json",
+        "measurement_unlookup": true,
+        "reuse_lookup": true,
+        "segment_bits": 7
+      }
+    },
+    "precision_lanes": [
+      "precision-29",
+      "precision-28",
+      "precision-27"
+    ],
+    "profile_liveness": true,
+    "promotion": {
+      "timeout_seconds": 3600,
+      "workers": 2
+    },
+    "stop_rule": "Stop on a control or budget failure. Retain all attempted variants and never promote on modeled evidence alone."
+  },
+  "registered_unix": 1794132263.9031115,
+  "screen_lanes": 1,
+  "version": 4
+}

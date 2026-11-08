@@ -1,0 +1,47 @@
+{
+  "archive_sha256": "9aac7afcd0ff3bbff7f4c65c85cf1b331e67b3fd9893ec83b8499d0f223bb841",
+  "checks": {
+    "dfthcsos": {
+      "angle_count": 9,
+      "batch_size": 9,
+      "brot": 12,
+      "max_angle_qubits": 128,
+      "shape": [
+        65,
+        60,
+        60
+      ]
+    },
+    "dqi": {
+      "bits": 49154,
+      "qubits": 1893,
+      "registers": 4165
+    },
+    "invsqrt": {
+      "bits": 1,
+      "qubits": 175,
+      "registers": 1
+    }
+  },
+  "expected_full_coverage": {
+    "dfthcsos": 254464,
+    "dqi": 102400,
+    "invsqrt": 200540928
+  },
+  "kind": "structural_preflight",
+  "members": {
+    "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+    "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+    "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+    "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+    "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+    "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+    "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+    "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+    "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+    "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+    "dqi.kmb": "959471d05a26373b4f14ca0cae2d8639ea25f18170d9f6532139aa51ccc04995",
+    "invsqrt.kmb": "3ae33a3d0101085613ac6bfc1b1ab7dde6b8f35f7ebd84d0976ba66a0772f799"
+  },
+  "metric_sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73"
+}

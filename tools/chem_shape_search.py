@@ -15,16 +15,207 @@ from scipy.optimize import minimize
 
 from qcompile.artifacts import deterministic_npz
 from qcompile.chemistry.factorization import (
+    clustered_initialize,
+    continuation_initialize,
     direct_residual,
     factor_rows,
     gram_residual,
     initialize,
+    joint_residual,
+    projection_score,
     rank_lower_bound,
     shifted_target,
     svec,
 )
 from qcompile.chemistry.refit import FixedWordRefit, encode_vectors
+from qcompile.experiments import screen_outcome
 from qcompile.io import read_json, sha256, write_json
+
+
+def profile(plan_path: Path, output: Path) -> None:
+    """Profile a full-shape joint evaluation and compare the pinned tensor math."""
+    plan = read_json(plan_path)
+    source = Path(plan["factorization"])
+    if sha256(source) != plan["factorization_sha256"]:
+        raise ValueError("pinned factorization changed")
+    shape = tuple(plan["shape"])
+    if len(shape) != 3 or any(type(x) is not int or x < 1 for x in shape):
+        raise ValueError("expected a positive R, B, C shape")
+    if type(plan["seed"]) is not int:
+        raise ValueError("expected an integer seed")
+    settings, _, _, _, api = backend()
+    math_api = import_module("dfthcsos.scoreinfra.dfthc_math")
+    inputs = fixed_inputs(api, source)
+    n = inputs.num_orbitals
+    rng = np.random.default_rng(plan["seed"])
+    vectors = rng.normal(size=(*shape[:2], n))
+    vectors /= np.linalg.norm(vectors, axis=-1, keepdims=True)
+    weights = rng.normal(scale=1 / np.sqrt(shape[0] * shape[1] * shape[2]), size=shape)
+    target = shifted_target(inputs.ref["tei"], inputs.S)
+    started = time.monotonic()
+    squared, grad_v, grad_w = joint_residual(target, vectors, weights, float(np.vdot(target, target)))
+    elapsed = time.monotonic() - started
+    features = svec(vectors[..., :, None] * vectors[..., None, :])
+    residual = direct_residual(target, factor_rows(features, weights))
+    x = math_api.reconstruct_x(vectors, weights)
+    x = np.tril(x) + np.swapaxes(np.tril(x, k=-1), -1, -2)
+    delta = math_api.reconstruct_h2(x)
+    delta -= inputs.ref["tei"]
+    diagonal = np.arange(n)
+    delta[:, :, diagonal, diagonal] -= 0.5 * inputs.S[:, :, None]
+    delta[diagonal, diagonal, :, :] -= 0.5 * inputs.S[None, :, :]
+    native = float(np.linalg.norm(delta.ravel()))
+    if not np.isclose(residual, native, rtol=1e-10, atol=1e-10):
+        raise ValueError("packed residual differs from pinned tensor reconstruction")
+    output.mkdir(parents=True, exist_ok=False)
+    resource = import_module("resource")
+    write_json(output / "profile.json", {
+        "plan": plan, "plan_sha256": sha256(plan_path), "backend": settings,
+        "objective_gradient_seconds": elapsed, "process_peak_rss_kib": resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
+        "blas_threads": {k: os.environ.get(k) for k in ("OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS", "MKL_NUM_THREADS")},
+        "squared_residual": squared, "direct_residual": residual, "pinned_tensor_residual": native,
+        "gradient_norms": [float(np.linalg.norm(grad_v)), float(np.linalg.norm(grad_w))],
+        "scope": "one seeded full-shape evaluation; peak RSS includes loading and native comparison",
+    })
+
+
+def fit_joint(plan_path: Path, output: Path) -> None:
+    """Run one registered S1 fit, retaining continuous and decoded checkpoints."""
+    plan = read_json(plan_path)
+    source, profile_path = Path(plan["factorization"]), Path(plan["profile"])
+    if sha256(source) != plan["factorization_sha256"] or sha256(profile_path) != plan["profile_sha256"]:
+        raise ValueError("registered input hash differs")
+    shape = tuple(plan["shape"])
+    profile_data = read_json(profile_path)
+    if (len(shape) != 3 or any(type(x) is not int or x < 1 for x in shape)
+            or tuple(profile_data["plan"]["shape"]) != shape
+            or profile_data["plan"]["factorization_sha256"] != plan["factorization_sha256"]):
+        raise ValueError("shape and input must match the registered full-size profile")
+    cap, wall = plan["max_evaluations"], plan["wall_seconds"]
+    if type(cap) is not int or not 1 <= cap <= 20000 or type(wall) not in (int, float) or not 0 < wall <= 86400:
+        raise ValueError("invalid registered evaluation or wall cap")
+    if plan["initializer"] not in ("I1", "I2", "I3", "I4") or type(plan["seed"]) is not int:
+        raise ValueError("expected an I1 through I4 initializer and integer seed")
+    settings, _, _, _, api = backend()
+    math_api = import_module("dfthcsos.scoreinfra.dfthc_math")
+    inputs = fixed_inputs(api, source)
+    output.mkdir(parents=True, exist_ok=False)
+    write_json(output / "registration.json", {
+        "plan": plan, "plan_sha256": sha256(plan_path), "backend": settings,
+        "runner_sha256": sha256(Path(__file__)),
+        "factorization_module_sha256": sha256(Path(__file__).resolve().parents[1] / "src/qcompile/chemistry/factorization.py"),
+        "blas_threads": {key: os.environ.get(key) for key in ("OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS", "MKL_NUM_THREADS")},
+    })
+    start = time.monotonic()
+    target = shifted_target(inputs.ref["tei"], inputs.S)
+    r, b, c = shape
+    n = inputs.num_orbitals
+    spectrum = eigenvectors = None
+    if plan["initializer"] == "I3":
+        vectors, weights = continuation_initialize(inputs.params["U"], inputs.w, shape)
+    else:
+        spectrum, eigenvectors = np.linalg.eigh(target)
+        if plan["initializer"] == "I1":
+            vectors, weights = initialize(spectrum, eigenvectors, n, shape)
+        elif plan["initializer"] == "I2":
+            vectors, weights = clustered_initialize(spectrum, eigenvectors, n, shape, plan["seed"])
+        else:
+            if r * c > np.count_nonzero(spectrum > 0):
+                raise ValueError("insufficient positive spectral factors")
+            groups = (eigenvectors[:, -r * c:] * np.sqrt(spectrum[-r * c:])).T.reshape(r, c, -1)
+            vectors = np.random.default_rng(plan["seed"]).normal(size=(r, b, n))
+            vectors /= np.linalg.norm(vectors, axis=-1, keepdims=True)
+            weights = np.empty(shape)
+            for k, group in enumerate(groups):
+                features = svec(vectors[k, :, :, None] * vectors[k, :, None, :])
+                weights[k] = np.linalg.lstsq(features.T, group.T, rcond=1e-10)[0]
+    split = vectors.size
+    initial = np.concatenate((vectors.ravel(), weights.ravel()))
+    if plan.get("projection_ranking", False):
+        if spectrum is None or eigenvectors is None:
+            spectrum, eigenvectors = np.linalg.eigh(target)
+        if r * c > np.count_nonzero(spectrum > 0):
+            raise ValueError("insufficient positive spectral factors")
+        spectral_rows = (eigenvectors[:, -r * c:] * np.sqrt(spectrum[-r * c:])).T
+        score = projection_score(spectral_rows, vectors, c)
+        write_json(output / "initial-projection.json", {
+            "score": score,
+            "scope": "balanced spectral factor projection diagnostic, not a tensor-residual lower bound",
+        })
+    norm = float(np.vdot(target, target))
+    best_value = float("inf")
+    best = initial.copy()
+    history: list[float] = []
+    saved_count = -1
+    saved_exact = float("inf")
+    deadline = start + wall
+
+    class StopFit(Exception):
+        pass
+
+    def checkpoint() -> float:
+        nonlocal saved_count, saved_exact
+        if saved_count == len(history):
+            return saved_exact
+        unit = best[:split].reshape(r, b, n)
+        unit = unit / np.linalg.norm(unit, axis=-1, keepdims=True)
+        w = best[split:].reshape(shape)
+        features = svec(unit[..., :, None] * unit[..., None, :])
+        exact = direct_residual(target, factor_rows(features, w))
+        params = {**inputs.params, "U": unit, "W": w, "H2_I": w.sum(axis=1)}
+        native_w, offsets, _, _ = api.native_inputs(params)
+        candidate = replace(inputs, params=params, w=native_w, W=offsets)
+        body = encode_vectors(unit.reshape(r * b, n), params["tree_edges"], 12)
+        words = np.concatenate((np.zeros((n, n - 1), dtype=np.int64), body))
+        _, _, metrics = FixedWordRefit(api, math_api, candidate, words, 12).evaluate(1, 1)
+        label = f"{len(history):05}"
+        artifact = output / f"continuous-{label}.npz"
+        deterministic_npz(artifact, {"U": unit, "W": w})
+        write_json(output / f"checkpoint-{label}.json", {
+            "evaluations": len(history), "continuous_residual": exact, "decoded_brot": 12,
+            "continuous_sha256": sha256(artifact),
+            "decoded_metrics": {key: float(value) if np.isfinite(value) else None for key, value in metrics.items()},
+        })
+        saved_count, saved_exact = len(history), exact
+        return exact
+
+    def objective(flat):
+        nonlocal best, best_value
+        if len(history) >= cap or time.monotonic() >= deadline:
+            raise StopFit
+        value, grad_v, grad_w = joint_residual(target, flat[:split].reshape(r, b, n),
+                                               flat[split:].reshape(shape), norm)
+        if not np.isfinite(value) or value < 0:
+            raise ValueError("non-finite or negative Gram objective; use stable residual to investigate")
+        if value < best_value:
+            best_value, best = value, flat.copy()
+        history.append(float(np.sqrt(best_value)))
+        if len(history) % 500 == 0 or history[-1] <= 0.019:
+            if checkpoint() <= 0.019:
+                raise StopFit
+        return value, np.concatenate((grad_v.ravel(), grad_w.ravel()))
+
+    converged = False
+    try:
+        result = minimize(objective, initial, jac=True, method="L-BFGS-B", options={"maxfun": cap, "maxiter": cap})
+        converged = bool(result.success)
+        reason = str(result.message)
+    except StopFit:
+        reason = "gate or registered cap reached"
+    if not history:
+        write_json(output / "decision.json", {"status": "budget_limited", "evaluations": 0, "reason": "wall cap before evaluation"})
+        return
+    exact = checkpoint()
+    history[-1] = exact
+    capped = len(history) >= cap or time.monotonic() >= deadline
+    status = screen_outcome(history, 0.019, cap_reached=capped, optimizer_converged=converged)
+    if status == "go" and exact > 0.019:
+        status = "inconclusive"
+    write_json(output / "decision.json", {
+        "status": status, "reason": reason, "evaluations": len(history), "best_continuous_residual": exact,
+        "elapsed_seconds": time.monotonic() - start, "running_best_residuals": history,
+        "scope": "continuous S1 only; decoded checkpoints do not establish eligibility",
+    })
 
 
 def rank(output: Path) -> None:
@@ -150,11 +341,21 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     actions = parser.add_subparsers(dest="action", required=True)
     actions.add_parser("rank").add_argument("output", type=Path)
+    profiling = actions.add_parser("profile")
+    profiling.add_argument("plan", type=Path)
+    profiling.add_argument("output", type=Path)
+    joint = actions.add_parser("fit")
+    joint.add_argument("plan", type=Path)
+    joint.add_argument("output", type=Path)
     fit = actions.add_parser("pilot")
     fit.add_argument("plan", type=Path)
     fit.add_argument("output", type=Path)
     args = parser.parse_args()
     if args.action == "rank":
         rank(args.output)
+    elif args.action == "profile":
+        profile(args.plan, args.output)
+    elif args.action == "fit":
+        fit_joint(args.plan, args.output)
     else:
         pilot(args.plan, args.output)

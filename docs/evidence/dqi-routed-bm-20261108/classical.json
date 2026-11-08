@@ -1,0 +1,595 @@
+{
+  "scope": "classical exhaustive GF(16), n=4 and pinned-field sampled weights",
+  "source_sha256": "349d9c48ceeb3e70ded523d51ad354a088dc6a34def83ff6ad86503d1e2c839b",
+  "test_sha256": "634f5ce4f6bec82072a4288c7678c41d43399d3853b735b427254211f52ad7db",
+  "all_four_symbol_syndromes": 65536,
+  "decodable_cases": 23851,
+  "round_branch_counts": {
+    "replace": 238560,
+    "zero": 16384,
+    "retained_nonzero": 7200
+  },
+  "decodable_max_sigma_degree": [
+    1,
+    2,
+    2,
+    2
+  ],
+  "decodable_max_template_degree": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "decodable_max_retained_discrepancies": [
+    0,
+    0,
+    1,
+    1
+  ],
+  "static_history_bits_at_70": 910,
+  "signed_counter_bits_at_70": 8,
+  "rounds": [
+    {
+      "round": 1,
+      "sigma_degree_bound_unrestricted": 1,
+      "template_degree_bound_unrestricted": 1,
+      "counter_min_unrestricted": 0,
+      "counter_max_unrestricted": 1,
+      "static_history_bits": 13
+    },
+    {
+      "round": 2,
+      "sigma_degree_bound_unrestricted": 2,
+      "template_degree_bound_unrestricted": 2,
+      "counter_min_unrestricted": -1,
+      "counter_max_unrestricted": 2,
+      "static_history_bits": 26
+    },
+    {
+      "round": 3,
+      "sigma_degree_bound_unrestricted": 3,
+      "template_degree_bound_unrestricted": 3,
+      "counter_min_unrestricted": -2,
+      "counter_max_unrestricted": 3,
+      "static_history_bits": 39
+    },
+    {
+      "round": 4,
+      "sigma_degree_bound_unrestricted": 4,
+      "template_degree_bound_unrestricted": 4,
+      "counter_min_unrestricted": -3,
+      "counter_max_unrestricted": 4,
+      "static_history_bits": 52
+    },
+    {
+      "round": 5,
+      "sigma_degree_bound_unrestricted": 5,
+      "template_degree_bound_unrestricted": 5,
+      "counter_min_unrestricted": -4,
+      "counter_max_unrestricted": 5,
+      "static_history_bits": 65
+    },
+    {
+      "round": 6,
+      "sigma_degree_bound_unrestricted": 6,
+      "template_degree_bound_unrestricted": 6,
+      "counter_min_unrestricted": -5,
+      "counter_max_unrestricted": 6,
+      "static_history_bits": 78
+    },
+    {
+      "round": 7,
+      "sigma_degree_bound_unrestricted": 7,
+      "template_degree_bound_unrestricted": 7,
+      "counter_min_unrestricted": -6,
+      "counter_max_unrestricted": 7,
+      "static_history_bits": 91
+    },
+    {
+      "round": 8,
+      "sigma_degree_bound_unrestricted": 8,
+      "template_degree_bound_unrestricted": 8,
+      "counter_min_unrestricted": -7,
+      "counter_max_unrestricted": 8,
+      "static_history_bits": 104
+    },
+    {
+      "round": 9,
+      "sigma_degree_bound_unrestricted": 9,
+      "template_degree_bound_unrestricted": 9,
+      "counter_min_unrestricted": -8,
+      "counter_max_unrestricted": 9,
+      "static_history_bits": 117
+    },
+    {
+      "round": 10,
+      "sigma_degree_bound_unrestricted": 10,
+      "template_degree_bound_unrestricted": 10,
+      "counter_min_unrestricted": -9,
+      "counter_max_unrestricted": 10,
+      "static_history_bits": 130
+    },
+    {
+      "round": 11,
+      "sigma_degree_bound_unrestricted": 11,
+      "template_degree_bound_unrestricted": 11,
+      "counter_min_unrestricted": -10,
+      "counter_max_unrestricted": 11,
+      "static_history_bits": 143
+    },
+    {
+      "round": 12,
+      "sigma_degree_bound_unrestricted": 12,
+      "template_degree_bound_unrestricted": 12,
+      "counter_min_unrestricted": -11,
+      "counter_max_unrestricted": 12,
+      "static_history_bits": 156
+    },
+    {
+      "round": 13,
+      "sigma_degree_bound_unrestricted": 13,
+      "template_degree_bound_unrestricted": 13,
+      "counter_min_unrestricted": -12,
+      "counter_max_unrestricted": 13,
+      "static_history_bits": 169
+    },
+    {
+      "round": 14,
+      "sigma_degree_bound_unrestricted": 14,
+      "template_degree_bound_unrestricted": 14,
+      "counter_min_unrestricted": -13,
+      "counter_max_unrestricted": 14,
+      "static_history_bits": 182
+    },
+    {
+      "round": 15,
+      "sigma_degree_bound_unrestricted": 15,
+      "template_degree_bound_unrestricted": 15,
+      "counter_min_unrestricted": -14,
+      "counter_max_unrestricted": 15,
+      "static_history_bits": 195
+    },
+    {
+      "round": 16,
+      "sigma_degree_bound_unrestricted": 16,
+      "template_degree_bound_unrestricted": 16,
+      "counter_min_unrestricted": -15,
+      "counter_max_unrestricted": 16,
+      "static_history_bits": 208
+    },
+    {
+      "round": 17,
+      "sigma_degree_bound_unrestricted": 17,
+      "template_degree_bound_unrestricted": 17,
+      "counter_min_unrestricted": -16,
+      "counter_max_unrestricted": 17,
+      "static_history_bits": 221
+    },
+    {
+      "round": 18,
+      "sigma_degree_bound_unrestricted": 18,
+      "template_degree_bound_unrestricted": 18,
+      "counter_min_unrestricted": -17,
+      "counter_max_unrestricted": 18,
+      "static_history_bits": 234
+    },
+    {
+      "round": 19,
+      "sigma_degree_bound_unrestricted": 19,
+      "template_degree_bound_unrestricted": 19,
+      "counter_min_unrestricted": -18,
+      "counter_max_unrestricted": 19,
+      "static_history_bits": 247
+    },
+    {
+      "round": 20,
+      "sigma_degree_bound_unrestricted": 20,
+      "template_degree_bound_unrestricted": 20,
+      "counter_min_unrestricted": -19,
+      "counter_max_unrestricted": 20,
+      "static_history_bits": 260
+    },
+    {
+      "round": 21,
+      "sigma_degree_bound_unrestricted": 21,
+      "template_degree_bound_unrestricted": 21,
+      "counter_min_unrestricted": -20,
+      "counter_max_unrestricted": 21,
+      "static_history_bits": 273
+    },
+    {
+      "round": 22,
+      "sigma_degree_bound_unrestricted": 22,
+      "template_degree_bound_unrestricted": 22,
+      "counter_min_unrestricted": -21,
+      "counter_max_unrestricted": 22,
+      "static_history_bits": 286
+    },
+    {
+      "round": 23,
+      "sigma_degree_bound_unrestricted": 23,
+      "template_degree_bound_unrestricted": 23,
+      "counter_min_unrestricted": -22,
+      "counter_max_unrestricted": 23,
+      "static_history_bits": 299
+    },
+    {
+      "round": 24,
+      "sigma_degree_bound_unrestricted": 24,
+      "template_degree_bound_unrestricted": 24,
+      "counter_min_unrestricted": -23,
+      "counter_max_unrestricted": 24,
+      "static_history_bits": 312
+    },
+    {
+      "round": 25,
+      "sigma_degree_bound_unrestricted": 25,
+      "template_degree_bound_unrestricted": 25,
+      "counter_min_unrestricted": -24,
+      "counter_max_unrestricted": 25,
+      "static_history_bits": 325
+    },
+    {
+      "round": 26,
+      "sigma_degree_bound_unrestricted": 26,
+      "template_degree_bound_unrestricted": 26,
+      "counter_min_unrestricted": -25,
+      "counter_max_unrestricted": 26,
+      "static_history_bits": 338
+    },
+    {
+      "round": 27,
+      "sigma_degree_bound_unrestricted": 27,
+      "template_degree_bound_unrestricted": 27,
+      "counter_min_unrestricted": -26,
+      "counter_max_unrestricted": 27,
+      "static_history_bits": 351
+    },
+    {
+      "round": 28,
+      "sigma_degree_bound_unrestricted": 28,
+      "template_degree_bound_unrestricted": 28,
+      "counter_min_unrestricted": -27,
+      "counter_max_unrestricted": 28,
+      "static_history_bits": 364
+    },
+    {
+      "round": 29,
+      "sigma_degree_bound_unrestricted": 29,
+      "template_degree_bound_unrestricted": 29,
+      "counter_min_unrestricted": -28,
+      "counter_max_unrestricted": 29,
+      "static_history_bits": 377
+    },
+    {
+      "round": 30,
+      "sigma_degree_bound_unrestricted": 30,
+      "template_degree_bound_unrestricted": 30,
+      "counter_min_unrestricted": -29,
+      "counter_max_unrestricted": 30,
+      "static_history_bits": 390
+    },
+    {
+      "round": 31,
+      "sigma_degree_bound_unrestricted": 31,
+      "template_degree_bound_unrestricted": 31,
+      "counter_min_unrestricted": -30,
+      "counter_max_unrestricted": 31,
+      "static_history_bits": 403
+    },
+    {
+      "round": 32,
+      "sigma_degree_bound_unrestricted": 32,
+      "template_degree_bound_unrestricted": 32,
+      "counter_min_unrestricted": -31,
+      "counter_max_unrestricted": 32,
+      "static_history_bits": 416
+    },
+    {
+      "round": 33,
+      "sigma_degree_bound_unrestricted": 33,
+      "template_degree_bound_unrestricted": 33,
+      "counter_min_unrestricted": -32,
+      "counter_max_unrestricted": 33,
+      "static_history_bits": 429
+    },
+    {
+      "round": 34,
+      "sigma_degree_bound_unrestricted": 34,
+      "template_degree_bound_unrestricted": 34,
+      "counter_min_unrestricted": -33,
+      "counter_max_unrestricted": 34,
+      "static_history_bits": 442
+    },
+    {
+      "round": 35,
+      "sigma_degree_bound_unrestricted": 35,
+      "template_degree_bound_unrestricted": 35,
+      "counter_min_unrestricted": -34,
+      "counter_max_unrestricted": 35,
+      "static_history_bits": 455
+    },
+    {
+      "round": 36,
+      "sigma_degree_bound_unrestricted": 36,
+      "template_degree_bound_unrestricted": 36,
+      "counter_min_unrestricted": -35,
+      "counter_max_unrestricted": 36,
+      "static_history_bits": 468
+    },
+    {
+      "round": 37,
+      "sigma_degree_bound_unrestricted": 37,
+      "template_degree_bound_unrestricted": 37,
+      "counter_min_unrestricted": -36,
+      "counter_max_unrestricted": 37,
+      "static_history_bits": 481
+    },
+    {
+      "round": 38,
+      "sigma_degree_bound_unrestricted": 38,
+      "template_degree_bound_unrestricted": 38,
+      "counter_min_unrestricted": -37,
+      "counter_max_unrestricted": 38,
+      "static_history_bits": 494
+    },
+    {
+      "round": 39,
+      "sigma_degree_bound_unrestricted": 39,
+      "template_degree_bound_unrestricted": 39,
+      "counter_min_unrestricted": -38,
+      "counter_max_unrestricted": 39,
+      "static_history_bits": 507
+    },
+    {
+      "round": 40,
+      "sigma_degree_bound_unrestricted": 40,
+      "template_degree_bound_unrestricted": 40,
+      "counter_min_unrestricted": -39,
+      "counter_max_unrestricted": 40,
+      "static_history_bits": 520
+    },
+    {
+      "round": 41,
+      "sigma_degree_bound_unrestricted": 41,
+      "template_degree_bound_unrestricted": 41,
+      "counter_min_unrestricted": -40,
+      "counter_max_unrestricted": 41,
+      "static_history_bits": 533
+    },
+    {
+      "round": 42,
+      "sigma_degree_bound_unrestricted": 42,
+      "template_degree_bound_unrestricted": 42,
+      "counter_min_unrestricted": -41,
+      "counter_max_unrestricted": 42,
+      "static_history_bits": 546
+    },
+    {
+      "round": 43,
+      "sigma_degree_bound_unrestricted": 43,
+      "template_degree_bound_unrestricted": 43,
+      "counter_min_unrestricted": -42,
+      "counter_max_unrestricted": 43,
+      "static_history_bits": 559
+    },
+    {
+      "round": 44,
+      "sigma_degree_bound_unrestricted": 44,
+      "template_degree_bound_unrestricted": 44,
+      "counter_min_unrestricted": -43,
+      "counter_max_unrestricted": 44,
+      "static_history_bits": 572
+    },
+    {
+      "round": 45,
+      "sigma_degree_bound_unrestricted": 45,
+      "template_degree_bound_unrestricted": 45,
+      "counter_min_unrestricted": -44,
+      "counter_max_unrestricted": 45,
+      "static_history_bits": 585
+    },
+    {
+      "round": 46,
+      "sigma_degree_bound_unrestricted": 46,
+      "template_degree_bound_unrestricted": 46,
+      "counter_min_unrestricted": -45,
+      "counter_max_unrestricted": 46,
+      "static_history_bits": 598
+    },
+    {
+      "round": 47,
+      "sigma_degree_bound_unrestricted": 47,
+      "template_degree_bound_unrestricted": 47,
+      "counter_min_unrestricted": -46,
+      "counter_max_unrestricted": 47,
+      "static_history_bits": 611
+    },
+    {
+      "round": 48,
+      "sigma_degree_bound_unrestricted": 48,
+      "template_degree_bound_unrestricted": 48,
+      "counter_min_unrestricted": -47,
+      "counter_max_unrestricted": 48,
+      "static_history_bits": 624
+    },
+    {
+      "round": 49,
+      "sigma_degree_bound_unrestricted": 49,
+      "template_degree_bound_unrestricted": 49,
+      "counter_min_unrestricted": -48,
+      "counter_max_unrestricted": 49,
+      "static_history_bits": 637
+    },
+    {
+      "round": 50,
+      "sigma_degree_bound_unrestricted": 50,
+      "template_degree_bound_unrestricted": 50,
+      "counter_min_unrestricted": -49,
+      "counter_max_unrestricted": 50,
+      "static_history_bits": 650
+    },
+    {
+      "round": 51,
+      "sigma_degree_bound_unrestricted": 51,
+      "template_degree_bound_unrestricted": 51,
+      "counter_min_unrestricted": -50,
+      "counter_max_unrestricted": 51,
+      "static_history_bits": 663
+    },
+    {
+      "round": 52,
+      "sigma_degree_bound_unrestricted": 52,
+      "template_degree_bound_unrestricted": 52,
+      "counter_min_unrestricted": -51,
+      "counter_max_unrestricted": 52,
+      "static_history_bits": 676
+    },
+    {
+      "round": 53,
+      "sigma_degree_bound_unrestricted": 53,
+      "template_degree_bound_unrestricted": 53,
+      "counter_min_unrestricted": -52,
+      "counter_max_unrestricted": 53,
+      "static_history_bits": 689
+    },
+    {
+      "round": 54,
+      "sigma_degree_bound_unrestricted": 54,
+      "template_degree_bound_unrestricted": 54,
+      "counter_min_unrestricted": -53,
+      "counter_max_unrestricted": 54,
+      "static_history_bits": 702
+    },
+    {
+      "round": 55,
+      "sigma_degree_bound_unrestricted": 55,
+      "template_degree_bound_unrestricted": 55,
+      "counter_min_unrestricted": -54,
+      "counter_max_unrestricted": 55,
+      "static_history_bits": 715
+    },
+    {
+      "round": 56,
+      "sigma_degree_bound_unrestricted": 56,
+      "template_degree_bound_unrestricted": 56,
+      "counter_min_unrestricted": -55,
+      "counter_max_unrestricted": 56,
+      "static_history_bits": 728
+    },
+    {
+      "round": 57,
+      "sigma_degree_bound_unrestricted": 57,
+      "template_degree_bound_unrestricted": 57,
+      "counter_min_unrestricted": -56,
+      "counter_max_unrestricted": 57,
+      "static_history_bits": 741
+    },
+    {
+      "round": 58,
+      "sigma_degree_bound_unrestricted": 58,
+      "template_degree_bound_unrestricted": 58,
+      "counter_min_unrestricted": -57,
+      "counter_max_unrestricted": 58,
+      "static_history_bits": 754
+    },
+    {
+      "round": 59,
+      "sigma_degree_bound_unrestricted": 59,
+      "template_degree_bound_unrestricted": 59,
+      "counter_min_unrestricted": -58,
+      "counter_max_unrestricted": 59,
+      "static_history_bits": 767
+    },
+    {
+      "round": 60,
+      "sigma_degree_bound_unrestricted": 60,
+      "template_degree_bound_unrestricted": 60,
+      "counter_min_unrestricted": -59,
+      "counter_max_unrestricted": 60,
+      "static_history_bits": 780
+    },
+    {
+      "round": 61,
+      "sigma_degree_bound_unrestricted": 61,
+      "template_degree_bound_unrestricted": 61,
+      "counter_min_unrestricted": -60,
+      "counter_max_unrestricted": 61,
+      "static_history_bits": 793
+    },
+    {
+      "round": 62,
+      "sigma_degree_bound_unrestricted": 62,
+      "template_degree_bound_unrestricted": 62,
+      "counter_min_unrestricted": -61,
+      "counter_max_unrestricted": 62,
+      "static_history_bits": 806
+    },
+    {
+      "round": 63,
+      "sigma_degree_bound_unrestricted": 63,
+      "template_degree_bound_unrestricted": 63,
+      "counter_min_unrestricted": -62,
+      "counter_max_unrestricted": 63,
+      "static_history_bits": 819
+    },
+    {
+      "round": 64,
+      "sigma_degree_bound_unrestricted": 64,
+      "template_degree_bound_unrestricted": 64,
+      "counter_min_unrestricted": -63,
+      "counter_max_unrestricted": 64,
+      "static_history_bits": 832
+    },
+    {
+      "round": 65,
+      "sigma_degree_bound_unrestricted": 65,
+      "template_degree_bound_unrestricted": 65,
+      "counter_min_unrestricted": -64,
+      "counter_max_unrestricted": 65,
+      "static_history_bits": 845
+    },
+    {
+      "round": 66,
+      "sigma_degree_bound_unrestricted": 66,
+      "template_degree_bound_unrestricted": 66,
+      "counter_min_unrestricted": -65,
+      "counter_max_unrestricted": 66,
+      "static_history_bits": 858
+    },
+    {
+      "round": 67,
+      "sigma_degree_bound_unrestricted": 67,
+      "template_degree_bound_unrestricted": 67,
+      "counter_min_unrestricted": -66,
+      "counter_max_unrestricted": 67,
+      "static_history_bits": 871
+    },
+    {
+      "round": 68,
+      "sigma_degree_bound_unrestricted": 68,
+      "template_degree_bound_unrestricted": 68,
+      "counter_min_unrestricted": -67,
+      "counter_max_unrestricted": 68,
+      "static_history_bits": 884
+    },
+    {
+      "round": 69,
+      "sigma_degree_bound_unrestricted": 69,
+      "template_degree_bound_unrestricted": 69,
+      "counter_min_unrestricted": -68,
+      "counter_max_unrestricted": 69,
+      "static_history_bits": 897
+    },
+    {
+      "round": 70,
+      "sigma_degree_bound_unrestricted": 70,
+      "template_degree_bound_unrestricted": 70,
+      "counter_min_unrestricted": -69,
+      "counter_max_unrestricted": 70,
+      "static_history_bits": 910
+    }
+  ],
+  "limitations": "Full-size coefficient compression, reachable maximum stack depth and complete quantum-round emission remain unproved."
+}

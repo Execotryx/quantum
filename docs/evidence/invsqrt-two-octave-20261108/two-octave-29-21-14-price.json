@@ -1,0 +1,58 @@
+{
+  "control_cost": 509471.48180735623,
+  "extra_row_counts": [
+    [
+      35,
+      0,
+      0
+    ],
+    [
+      50,
+      0,
+      0
+    ]
+  ],
+  "extra_row_qubits": [
+    151,
+    159
+  ],
+  "fractional": [
+    29,
+    21,
+    14
+  ],
+  "full_domain_margins": {
+    "above_90_percent": 0,
+    "failed_inputs": 0,
+    "first_failed_inputs": [],
+    "input_count": 3133452,
+    "minimum_margin_phase64": 290888876,
+    "minimum_margin_x": 2883580,
+    "nonpositive_margins": 0,
+    "worst_tolerance_fraction": 0.5507446170718283,
+    "worst_x": 720895
+  },
+  "limitations": "Tree savings are structural estimates; the full two-octave circuit has not been emitted or native-verified. Declared width is a peak estimate.",
+  "lookup_and_repair_saved": 275,
+  "mapping_counts": [
+    14,
+    0,
+    0
+  ],
+  "projected_cost": {
+    "fine_rotations": 36,
+    "qubits": 159,
+    "rotation_epsilon_radians": 1.3761151082648914e-12,
+    "rotation_t": 985.1551254791055,
+    "score": 533848.6662377944,
+    "t_like": 1,
+    "toffoli_like": 3111
+  },
+  "projected_gain_fraction": -0.047847986199266446,
+  "uniform_baseline_counts": [
+    3202,
+    1,
+    36
+  ],
+  "uniform_baseline_qubits": 159
+}

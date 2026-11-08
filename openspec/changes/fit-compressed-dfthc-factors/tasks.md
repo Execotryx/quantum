@@ -6,7 +6,7 @@
 
 ## 2. Initializers
 
-- [ ] 2.1 Implement I2 (subspace clustering with greedy pursuit), I3 (continuation by merging the pinned reference groups) and I4 (seeded random).
+- [x] 2.1 Implement I2 (subspace clustering with greedy pursuit), I3 (continuation by merging the pinned reference groups) and I4 (seeded random).
 - [ ] 2.2 Implement the projection bound and rank I1–I4 per shape before optimization.
 
 ## 3. Residual fits (S1)
@@ -17,7 +17,7 @@
 
 ## 4. `λ_eff` stage (S2)
 
-- [ ] 4.1 Read `Λ` and `E_SOS` from the pinned code. Implement smoothed gradients and exact checkpoint evaluation.
+- [x] 4.1 Read `Λ` and `E_SOS` from the pinned code. Implement smoothed gradients and exact checkpoint evaluation.
 - [ ] 4.2 Run the augmented Lagrangian from each S1 fit at or below 19.0 mHa. Record `λ_eff`, `Λ`, `E_gap` and residual at each checkpoint.
 
 ## 5. Quantization ladder (S3)

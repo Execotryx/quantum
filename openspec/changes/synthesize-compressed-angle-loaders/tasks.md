@@ -1,11 +1,11 @@
 ## 1. Inputs
 
 - [ ] 1.1 Register the eligible factorization from `fit-compressed-dfthc-factors` by hash, with its word table, tree, metrics and expected coverage.
-- [ ] 1.2 Confirm from the pinned verifier that addresses at or above `A` are never checked. Record the evidence.
+- [x] 1.2 Confirm from the pinned verifier that addresses at or above `A` are never checked. Record the evidence.
 
 ## 2. Banked unary loader
 
-- [ ] 2.1 Generalize the bank construction in `src/qcompile/chemistry/loaders.py` to any `A`, `brot` and `J`. Keep the J9 tool as a control.
+- [x] 2.1 Generalize the bank construction in `src/qcompile/chemistry/loaders.py` to any `A`, `brot` and `J`. Keep the J9 tool as a control.
 - [ ] 2.2 Rank `J` from 3 to the cap by complete cost using the pinned cost code.
 - [ ] 2.3 Emit the best `J`. Run native checks for every address in both directions, bank boundaries and padding.
 

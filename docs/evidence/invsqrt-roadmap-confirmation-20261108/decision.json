@@ -1,0 +1,11 @@
+{
+  "comparison": 548860.9216547348,
+  "search_sha256": "391304b70b1172cda1c9cff1af4dd05b892e021353224c20a2f8a6d1c67b2079",
+  "candidate_cost": 509471.48180735623,
+  "winner": "lattice-28-20-14",
+  "native_shots": 31232,
+  "minimum_gain": 0.05,
+  "status": "go",
+  "full_domain": true,
+  "winner_sha256": "c487332fe965389191c8e6d34848d61c82748e5802c6e616eb0363869f92c4c9"
+}
