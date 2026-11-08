@@ -2,7 +2,7 @@
 
 - [x] 1.1 Register the 40-hour tranche and the 100-qubit, 2,000-equivalent target.
 - [x] 1.2 Record current-control bookkeeping and missing gradient costs.
-- [ ] 1.3 Freeze the exact phase-accumulation recurrence and precision policy.
+- [x] 1.3 Freeze the exact phase-accumulation recurrence and precision policy.
 - [ ] 1.4 Calibrate complete component resource predictions on native slices.
 - [ ] 1.5 Price gated signed-digit rows and branch-correct uncomputation separately.
 

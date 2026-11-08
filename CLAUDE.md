@@ -33,6 +33,8 @@ proofs separate from complete decoder verification. Keep synthetic
 compressed ANGLE results separate from a fitted chemistry family.
 Treat an I3 checkpoint restart as a separate run and a loader reference
 control as development evidence.
+Use the bounded grid supervisor for registered fit plans. Keep timeouts,
+worker failures and completed lanes in separate immutable attempts.
 Use `tools/hybrid_certification.py` for the audited parent and successor
 certificate. Keep chemistry's one-use confirmation scoped to the complete
 family and NPZ. Resolve inherited evidence through the trusted parent record.

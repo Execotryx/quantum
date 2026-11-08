@@ -43,6 +43,8 @@
 - A chemistry continuation pins the parent decision, checkpoint and target
   and starts a fresh optimizer. The registered loader runner distinguishes
   reference controls and eligible S3 handoffs from full chemistry acceptance.
+- Validate every fit plan through the pinned grid manifest before a batch.
+  Keep separate attempt receipts and resume only hash-verified completions.
 - Banked chemistry lookups preserve the pinned factorization and angle words.
   Check the 128-qubit cap and phase, selection and workspace at every circuit
   boundary. Combined validation keeps the exact confirmed inverse-square-root
