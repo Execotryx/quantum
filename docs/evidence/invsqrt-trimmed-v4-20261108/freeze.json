@@ -1,0 +1,42 @@
+{
+  "candidate_artifact_paths": [
+    "runs/invsqrt-trimmed-v4-rebuild-a/invsqrt.kmb",
+    "runs/invsqrt-trimmed-v4-rebuild-b/invsqrt.kmb"
+  ],
+  "candidate_cost": 472336.9178780867,
+  "candidate_sha256": "f4c8503d87c9e7cedb8a79a796e0b195623c2e88467691ca1b08af1a70fb200d",
+  "control_cost": 509471.48180735623,
+  "control_sha256": "c487332fe965389191c8e6d34848d61c82748e5802c6e616eb0363869f92c4c9",
+  "full_trajectories": 200540928,
+  "inputs": {
+    "contracts/contract.json": "9a2e0016cd6bdb1519cac904574ba2f8dfc0e01969a2d1129ce0f0d836852a8f",
+    "docs/evidence/invsqrt-lattice-20261108/28-20-14.json": "391304b70b1172cda1c9cff1af4dd05b892e021353224c20a2f8a6d1c67b2079",
+    "docs/evidence/invsqrt-roadmap-archive-20261108/registration.json": "7a1430b4a90e8bdbef96eb810cda7c0108a9f1a76d87d29e9e02361e7ff54b0c",
+    "docs/evidence/invsqrt-roadmap-archive-20261108/verification.json": "ece73210653b79aeb378762976fe6603bb9d1cf330e3fc813da80ce87ec6f752",
+    "docs/evidence/invsqrt-roadmap-confirmation-20261108/confirmation-result.json": "3f1a7d7b85090c4b66e8c6243dc5768adcd455c200b6b993ef4b1c93ecb7b1f3",
+    "docs/evidence/invsqrt-trimmed-v4-20261108/control-trace.json": "f5aee3444948e3fd5d2b91f770c33f33228bfc9fd04e4d18ff86023ec28c8ca2",
+    "docs/evidence/invsqrt-trimmed-v4-20261108/development-a.json": "9927827465cdf60a43ad50cdfc9f841206897d1883a57bf3e44142f44b5c5da1",
+    "docs/evidence/invsqrt-trimmed-v4-20261108/development-b.json": "9927827465cdf60a43ad50cdfc9f841206897d1883a57bf3e44142f44b5c5da1",
+    "docs/evidence/invsqrt-trimmed-v4-20261108/price.json": "bea930a4333a550cbc49ae534c46048e170655337399f5744ccdb499f7907e61",
+    "src/qcompile/invsqrt/direct.py": "3f0b9092f19fdfcdf82ced11c5dd8c24ae7e98144b42f6d6c0bc12b59520841b",
+    "src/qcompile/invsqrt/direct_screen.py": "94cd56df585c236a6676f6adcaae081e96411871e46c1242bf66be48dc90295f",
+    "src/qcompile/invsqrt/trimmed.py": "fee5ba31b8d94248510bf82ba5261022d92a59562691b8e716c2c71dc762daad",
+    "src/qcompile/invsqrt/unlookup.py": "b4255bbe4294b681461e2e8910c108d10d0422a1fcb0a414ea1a296f1141e3ff",
+    "src/qcompile/io.py": "3e57d2157e53bcb123782f31ab1337b33fea3f5a7a467587fc919f4743c279d5",
+    "src/qcompile/liveness.py": "207b15e0e1b94276d70643ae15388d0f53968abd66e4d745250a62a23e9919c6",
+    "tests/test_invsqrt_trimmed.py": "1ca7a5f2d199f0b06752fa06824eadeb0c2bd85b607734e727ba8bec7b956589",
+    "tools/invsqrt_direct.py": "4dc97b7ee646d9e569e844cc610fe9d10378ac9d77abade9045cc9e788522fb5",
+    "tools/invsqrt_opportunity.py": "2c90ea1cd69857fc9bfaa0b2acd02edf62f1f0a4d39cfa324ed424cba784c8d7",
+    "tools/invsqrt_trimmed.py": "d41cdce1cac626ab8c2662403c0c3fc15df56760a7a7718bdf45f7c5f3d55782",
+    "tools/invsqrt_trimmed_price.py": "190436399a5d654af62e3dc4b973623a5eb032e1869e204c9a6ecd0500af1b61",
+    "tools/invsqrt_trimmed_trace.py": "d43fc830925e38a6b86da342522b8848f13e7ef6336ea96044a6edb0fe95c6cc",
+    "uv.lock": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+    "vendor/backend.json": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49"
+  },
+  "max_tolerance_use": 0.9,
+  "maximum_cost": 483997.9077169884,
+  "minimum_gain_fraction": 0.05,
+  "model_inputs": 3133452,
+  "promotion_requirements": "Register a clean source revision and unchanged inputs before a full official run; then use a fresh independent one-use confirmation on identical bytes and paired archive verification.",
+  "status": "development_only_not_registration"
+}

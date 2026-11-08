@@ -1,0 +1,15 @@
+{
+  "factorization": "runs/invsqrt-direct-hybrid-20261107-v1/extracted/dfthcsos/submission.npz",
+  "factorization_sha256": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+  "profile": "docs/evidence/chem-joint-profile-20261108/profile.json",
+  "profile_sha256": "2f511cf799f312871683fd4eb7d92c8a740ac02ae9df749461d88c7cc2c431ef",
+  "target_sha256": "7e72455f4f6e6a476fed9c1626a96cebea775c4fc071145fd056af23d63e8393",
+  "shape": [9, 143, 40], "initializer": "I3-resume", "seed": 184,
+  "max_evaluations": 2, "wall_seconds": 300,
+  "parent": {
+    "registration": {"path": "runs/hybrid-roadmap-20261108/chem-i3-1500-local/registration.json", "sha256": "ea8698dae8bf219cff4fd521c8593c2854382b2590775094046de8ac11e67869"},
+    "decision": {"path": "runs/hybrid-roadmap-20261108/chem-i3-1500-local/decision.json", "sha256": "340e55358f3fd4c96765964698c8218a8aaa8336f74d40fbe663b9bb265c38a1"},
+    "checkpoint_receipt": {"path": "runs/hybrid-roadmap-20261108/chem-i3-1500-local/checkpoint-01500.json", "sha256": "40be17aef59b87fea22037f1a42e064436c6bda00f2c2c8ed09f7325e3fab976"},
+    "checkpoint": {"path": "runs/hybrid-roadmap-20261108/chem-i3-1500-local/continuous-01500.npz", "sha256": "7d3a704ecd416bbab0e37e58b294ddb5cfe3b07a56748870a2e78acaea1b80e9"}
+  }
+}

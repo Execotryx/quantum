@@ -1,0 +1,9 @@
+{
+  "artifact_sha256": "f4c8503d87c9e7cedb8a79a796e0b195623c2e88467691ca1b08af1a70fb200d",
+  "decision_sha256": "5d30f1f0416ed02b89dc40ba7ab9a9c7a7d0fbc8c7f140b303bce4e93237f5c0",
+  "expected_shots": 200540928,
+  "preceding_full_sha256": null,
+  "role": "full",
+  "salt": "a6167c72720c23e685118f729437a575fef751a55ebc10c4f00eec4f9e46104a",
+  "source_revision": "70aacf27a69532f76504bd46c5c6464837bfd668"
+}

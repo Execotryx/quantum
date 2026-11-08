@@ -7,7 +7,13 @@ from types import SimpleNamespace
 import numpy as np
 import pytest
 
-from qcompile.chemistry.loaders import banked_circuit, family, max_batch, rank_complete_cost
+from qcompile.chemistry.loaders import (
+    banked_circuit,
+    family,
+    max_batch,
+    rank_complete_cost,
+    verify_nonzero_xor,
+)
 
 
 @pytest.fixture
@@ -86,3 +92,16 @@ def test_reject_width_before_emission(backend):
     _, km, api, _, _ = backend
     with pytest.raises(ValueError, match="128-qubit"):
         banked_circuit(km, api, np.zeros((5, 40), dtype=np.int64), 4, low_bits=1)
+
+
+@pytest.mark.official
+def test_full_domain_composition_and_mutation(backend):
+    _, km, api, _, _ = backend
+    words = np.random.default_rng(9).integers(0, 16, size=(5, 5), dtype=np.int64)
+    circuits = family(km, api, words, 4, 2, 1)
+    report = verify_nonzero_xor(km, api, circuits, words, 4, 2, 42)
+    assert report == {"valid_addresses": 5, "padding_addresses": 3, "shots": 8, "circuit_applications": 6}
+    altered = words.copy()
+    altered[4, 3] ^= 1
+    with pytest.raises(ValueError, match="XOR fixture mismatch"):
+        verify_nonzero_xor(km, api, circuits, altered, 4, 2, 42)

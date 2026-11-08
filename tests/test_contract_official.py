@@ -9,9 +9,46 @@ from qcompile.assets import pin_backend
 from qcompile.chemistry.schema import SPEC, read_factorization
 from qcompile.contract import Contract, load_contract
 from qcompile.errors import BlockedError, ValidationError
-from qcompile.io import read_json, sha256
-from qcompile.official import validate_backend, verify_candidate
+from qcompile.io import identity, read_json, sha256, write_json
+from qcompile.official import METRIC_V10_SHA256, review_backend_pair, validate_backend, verify_candidate
 from qcompile.worker import mapped_confirmation, mapped_coverage
+
+
+def test_review_backend_pair_binds_receipts_and_accepts_only_path_changes(tmp_path):
+    backend = {
+        "metric_sha256": METRIC_V10_SHA256,
+        "metric_version": 10,
+        "verifiers_files": {"verify.py": "a" * 64},
+        "kickmix_files": {"kickmix.so": "b" * 64},
+        "project_root": "/first",
+    }
+
+    def make_receipt(name, settings):
+        request = tmp_path / f"{name}.json"
+        bindings = {
+            "tier": "full", "contract_hash": "c" * 64,
+            "seed_policy": {"role": "official_local", "salt": "d" * 64}, "environment": {},
+        }
+        write_json(request, {**bindings, "backend": settings, "artifacts": {"invsqrt.kmb": {"sha256": "e" * 64}}})
+        return {
+            **bindings, "kind": "official_metric_execution", "status": "passed", "complete": True,
+            "role": "official_local",
+            "backend_hash": identity(settings), "request_hash": sha256(request),
+            "artifact_hashes": {"invsqrt.kmb": "e" * 64},
+        }, request
+
+    left, left_path = make_receipt("left", backend)
+    right, right_path = make_receipt("right", {**backend, "project_root": "/second"})
+    result = review_backend_pair(left, left_path, right, right_path)
+    assert result["left_backend_hash"] != result["right_backend_hash"]
+    assert result["path_changes"] == {"project_root": {"left": "/first", "right": "/second"}}
+    with pytest.raises(ValidationError, match="request changed"):
+        review_backend_pair(left, right_path, right, right_path)
+    with pytest.raises(ValidationError, match="differs from its request"):
+        review_backend_pair({**left, "artifact_hashes": {}}, left_path, right, right_path)
+    changed, changed_path = make_receipt("changed", {**backend, "kickmix_files": {"kickmix.so": "f" * 64}})
+    with pytest.raises(ValidationError, match="inventories differ beyond paths"):
+        review_backend_pair(left, left_path, changed, changed_path)
 
 
 def test_contract_is_visibly_blocked_and_missing_fields_cannot_disappear(project_root):

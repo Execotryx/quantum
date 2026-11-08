@@ -90,9 +90,45 @@ def family(km: Any, api: Any, words: Any, brot: int, batch: int, low_bits: int) 
     return [banked_circuit(km, api, delta, brot, low_bits=low_bits) for delta in deltas]
 
 
+def verify_nonzero_xor(km: Any, api: Any, circuits: list[Any], words: Any,
+                       brot: int, batch: int, seed: int) -> dict[str, int]:
+    """Check arbitrary targets, selection, workspace and phase on the full binary domain."""
+    table = np.asarray(words)
+    _, deltas = batch_words(table, batch, brot)
+    if len(circuits) != len(deltas):
+        raise ValueError("family size does not match angle batches")
+    layout = api.register_layout(circuits)
+    address_count = 1 << len(layout.selection)
+    if (address_count < len(table) or layout.brot != brot or layout.batch_size != batch
+            or len(layout.selection) != (len(table) - 1).bit_length()):
+        raise ValueError("family register layout disagrees with the table")
+    addresses = np.arange(address_count, dtype=np.int64)
+    selection = ((addresses[None, :] >> np.arange(len(layout.selection))[:, None]) & 1).astype(bool)
+    bits = np.arange(brot, dtype=np.int64)
+    initial = np.random.default_rng(seed).integers(0, 1 << brot, size=(address_count, batch), dtype=np.int64)
+    sim = km.Simulator(batch_size=address_count, seed=seed)
+    sim.use_same_registers_as(circuits[0])
+    sim.write_across_shots(layout.selection, selection)
+    for index, register in enumerate(layout.words):
+        sim.write_across_shots(register, ((initial[:, index][None, :] >> bits[:, None]) & 1).astype(bool))
+    expected = initial.copy()
+    padded = [np.pad(delta, ((0, address_count - len(table)), (0, 0))) for delta in deltas]
+    for index in [*range(len(circuits)), *reversed(range(len(circuits)))]:
+        sim.do(circuits[index])
+        api._check_state(sim, circuits[index], layout, selection, f"nonzero ANGLE_{index}")
+        expected ^= padded[index]
+        actual = np.stack([(1 << bits) @ sim.read_across_shots(register) for register in layout.words], axis=1)
+        if not np.array_equal(actual, expected):
+            raise ValueError(f"nonzero XOR fixture mismatch at ANGLE_{index}")
+    if not np.array_equal(expected, initial):
+        raise ValueError("nonzero XOR fixture did not restore the initial targets")
+    return {"valid_addresses": len(table), "padding_addresses": address_count - len(table),
+            "shots": address_count, "circuit_applications": 2 * len(circuits)}
+
+
 def rank_complete_cost(api: Any, inputs: Any, candidates: list[tuple[int, list[Any], float]],
                        brot: int, lambda_eff: float) -> list[dict[str, Any]]:
-    """Rank verified synthetic families with the pinned resource-cost function.
+    """Rank native-verified families with the pinned resource-cost function.
 
     Each Toffoli value must cover both forward and reverse passes, as returned
     by the pinned circuit verifier. This ranking is not an accuracy decision.

@@ -11,6 +11,14 @@ from 548,860.92 to **509,471.48** and width from 159 to **155 qubits**.
 The fresh archive extraction reproduced the retained DQI and chemistry
 costs. [v4 paired verification](docs/evidence/invsqrt-roadmap-archive-20261108/comparison.json)
 
+The next inverse-square-root candidate trims known zero bits to **150
+qubits** and **2,908 Toffoli-like gates**. Two independent development
+builds reproduce the same circuit, with modeled cost **472,336.92**
+and exact v4 phase on all 3,133,452 inputs.
+The full local verifier and fresh confirmation each passed
+**200,540,928** trajectories at the same cost, **7.29% below v4**.
+[Trimmed-width verification](docs/invsqrt-trimmed-v4-08-11-2026-15-42-19.md)
+
 ### v3 comparison
 
 The fully verified v3 hybrid scored **1.5753293577**, up **14.32%** from
@@ -46,6 +54,19 @@ The full-size DQI profile found that the locator and its reversal account
 for **73.69%** of counted gates. The standalone phase scan passed native
 checks across all 4,095 positions, and the subtower inverse passed all
 4,096 inputs at 102 Toffoli-like gates. Those are primitive results.
+The native three-word routed round now computes its branch, updates the
+signed counter and reverses cleanly at **983 Toffoli-like gates** per
+direction. A separate radius-one decoder passed all 2,560 matched
+development cases at `(63, 2)`. The full-size decoder remains in
+development. [Routed round](docs/dqi-native-arithmetic-round-08-11-2026-15-42-52.md) ·
+[Reduced decoder](docs/dqi-radius-one-composition-08-11-2026-15-37-00.md)
+
+The registered chemistry loader ranked all seven legal batches on
+the pinned reference factors. Its best development estimate was
+**3.2504 billion**, 0.081% above the existing verified chemistry cost.
+Two builds reproduced the winning family and verified all 4,096
+binary addresses, including padding.
+[Reference loader ranking](docs/chemistry-loader-reference-ranking-08-11-2026-15-48-27.md)
 
 The best joint chemistry cloud pilot reached **314.05 mHa** after 250
 evaluations. A separate local I3 run reached **81.40 mHa** after 1,500
