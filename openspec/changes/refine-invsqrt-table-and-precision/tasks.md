@@ -36,6 +36,6 @@
 
 ## 7. Verification and archive
 
-- [ ] 7.1 Combine passing variants under the parent rule. Require at least 5% lower measured cost than the control.
-- [ ] 7.2 Full 200,540,928-trajectory pass and fresh confirmation on identical bytes. Paired archive run with other members retained by hash.
+- [x] 7.1 Combine passing variants under the parent rule. Require at least 5% lower measured cost than the control.
+- [x] 7.2 Full 200,540,928-trajectory pass and fresh confirmation on identical bytes. Paired archive run with other members retained by hash.
 - [ ] 7.3 Record the external receipt. Run WSL tests, Pyright, Ruff and strict OpenSpec validation. Publish a dated change log.

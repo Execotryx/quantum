@@ -11,7 +11,7 @@
 
 ## 3. Residual fits (S1)
 
-- [ ] 3.1 Add a `fit` action to `tools/chem_shape_search.py` with registered caps up to 20,000 evaluations, checkpoints every 500, and the shared outcome states.
+- [x] 3.1 Add a `fit` action to `tools/chem_shape_search.py` with registered caps up to 20,000 evaluations, checkpoints every 500, and the shared outcome states.
 - [ ] 3.2 Run the 24-run grid and the controls on the approved VM. Upload every terminal record.
 - [ ] 3.3 Record the best continuous residual per shape and initializer, and each outcome state.
 
@@ -22,7 +22,7 @@
 
 ## 5. Quantization ladder (S3)
 
-- [ ] 5.1 Encode at 12 through 8 bits. Refit `W` against decoded vectors at each step and regenerate one-body words.
+- [x] 5.1 Encode at 12 through 8 bits. Refit `W` against decoded vectors at each step and regenerate one-body words.
 - [ ] 5.2 Evaluate each step with the pinned evaluator. Stop at the first step that breaks a project margin.
 - [ ] 5.3 Optional ablation: alternative Givens tree orders on the best shape.
 

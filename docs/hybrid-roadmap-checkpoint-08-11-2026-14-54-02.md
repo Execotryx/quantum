@@ -1,5 +1,26 @@
 # Hybrid roadmap measurements
 
+## Paired archive
+
+The pinned metric measured **1.6149243283559387** on the v4 hybrid,
+up **2.51%** from the v3 score of 1.5753293577319043. Two local
+builds and the independent VM rebuild produced ZIP SHA-256
+`9152506e7b5f597d349249a666066dada030031288f0b1cd2a6bc71555b23541`.
+The verifier evaluated a fresh extraction. The retained DQI and
+chemistry members reproduced their v3 costs under the paired seed.
+
+| Benchmark | v3 cost | v4 cost | Completed trajectories |
+|---|---:|---:|---:|
+| Inverse square root | 548,860.9216547348 | 509,471.48180735623 | 200,540,928 |
+| DQI | 24,439,466,510,149.91 | 24,439,466,510,149.91 | 102,400 |
+| Chemistry | 3,247,752,448.668952 | 3,247,752,448.668952 | 254,464 |
+
+Cloud metric execution took 1,872.55 seconds. The external sampler
+observed 8.69 GiB peak process-tree PSS and zero swap PSS.
+[Paired comparison](evidence/invsqrt-roadmap-archive-20261108/comparison.json) ·
+[Verifier receipt](evidence/invsqrt-roadmap-archive-20261108/verification.json) ·
+[Resource sample](evidence/invsqrt-roadmap-archive-20261108/resources.json)
+
 ## Inverse square root
 
 The lattice refinement searched the coefficient words with the exact
@@ -87,11 +108,17 @@ A separate [250-evaluation local I3 fit](evidence/chem-s1-i3-250-20261108/decisi
 reached 225.63 mHa continuous and 226.04 mHa after 12-bit decoding.
 The initializer differs from the cloud lanes, so this comparison
 separates fit outcomes rather than hardware speed.
+The [1,500-evaluation I3 run](evidence/chem-s1-i3-1500-20261108/decision.json)
+reached 81.40 mHa continuous and 82.53 mHa decoded in 729.91 seconds.
+It was still improving at the registered cap and remained above the
+19 mHa S1 gate.
 
 The small banked loader tests verify addresses, padding, phase and
-cleanup independently of the factorization search. No compressed
-factorization qualified for ANGLE synthesis. The 24-run fit grid
-remains open, along with S2 admission and production quantization.
+cleanup independently of the factorization search. The
+[S2 command](chemistry-s2-cli-08-11-2026-15-08-56.md) and
+[S3 precision ladder](chemistry-s3-ladder-08-11-2026-15-17-33.md)
+passed gated integration fixtures. The 24-run fit grid, actual S2 and
+S3 execution, and production loader synthesis remain open.
 
 ## Operations
 
@@ -99,3 +126,6 @@ The [operations report](hybrid-roadmap-operations-08-11-2026-14-42-35.md)
 records the preflight fixtures, historical score binding, fresh salt
 policy and external metric gate. The unchanged v2 and v3 archives
 passed structural preflight.
+
+The complete WSL suite passed 660 tests. Ruff and Pyright passed on the
+changed Python files, and all 22 OpenSpec changes passed strict validation.
