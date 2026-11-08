@@ -10,5 +10,5 @@
 - [x] 2.1 Register the candidate, clean source, control, contract and exact gates.
 - [x] 2.2 Pass the complete official trajectory verifier on the registered KMB.
 - [x] 2.3 Pass a fresh, one-use confirmation on identical bytes.
-- [ ] 2.4 Run the paired extracted-archive metric and reconcile retained members and costs.
-- [ ] 2.5 Record final receipts and promotion decision without overwriting prior evidence.
+- [x] 2.4 Run the paired extracted-archive metric and reconcile retained members and costs.
+- [x] 2.5 Record final receipts and promotion decision without overwriting prior evidence.

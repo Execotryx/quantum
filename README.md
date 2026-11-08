@@ -5,19 +5,18 @@ independent mathematical checks, and local verification against pinned evaluator
 
 ## Current state
 
-The fully verified v4 hybrid scored **1.6149243284**, up **2.51%** from
-v3. The 28/20/14 lattice refinement lowered inverse-square-root cost
-from 548,860.92 to **509,471.48** and width from 159 to **155 qubits**.
-The fresh archive extraction reproduced the retained DQI and chemistry
-costs. [v4 paired verification](docs/evidence/invsqrt-roadmap-archive-20261108/comparison.json)
+The fully verified v5 hybrid scored **1.6561824298**, up **2.55%** from
+v4. Trimming known zero bits reduced inverse square root to **150 qubits**
+and **2,908 Toffoli-like gates**. Its verified cost was **472,336.92**,
+**7.29% below v4**. The full local verifier and fresh confirmation each
+passed **200,540,928** trajectories. A third independent archive build
+passed the cloud metric on a fresh extraction and reproduced the DQI
+and chemistry costs. [v5 paired verification](docs/evidence/invsqrt-trimmed-paired-20261108/comparison.json)
 
-The next inverse-square-root candidate trims known zero bits to **150
-qubits** and **2,908 Toffoli-like gates**. Two independent development
-builds reproduce the same circuit, with modeled cost **472,336.92**
-and exact v4 phase on all 3,133,452 inputs.
-The full local verifier and fresh confirmation each passed
-**200,540,928** trajectories at the same cost, **7.29% below v4**.
-[Trimmed-width verification](docs/invsqrt-trimmed-v4-08-11-2026-15-42-19.md)
+The v4 hybrid scored **1.6149243284**, up **2.51%** from v3. Its 28/20/14
+lattice refinement lowered inverse-square-root cost from 548,860.92
+to **509,471.48** and width from 159 to **155 qubits**.
+[v4 paired verification](docs/evidence/invsqrt-roadmap-archive-20261108/comparison.json)
 
 ### v3 comparison
 
@@ -84,6 +83,8 @@ profiles and initializer rankings now bind the **24 fit plans**.
 The direct inverse-square-root cost model matches width and counted
 gates on 27 comparable circuit receipts.
 [Resource model calibration](docs/invsqrt-costmodel-08-11-2026-16-08-55.md)
+The tested compact phase-accumulation design missed its 20% cost gate.
+[Compact phase screen](docs/invsqrt-compact-phase-08-11-2026-16-31-25.md)
 
 ### Earlier hybrid results
 
