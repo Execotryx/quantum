@@ -1,0 +1,261 @@
+{
+  "status": "PAPER_ONLY_NO_NATIVE",
+  "scope": "Every supported inverse add explicitly considers both the segmented and sparse Cuccaro/dirty-terminal schedules, with all carry-measurement repayment kept. Original engine files are unchanged.",
+  "rows": [
+    {
+      "Q": 48,
+      "mode": "binary",
+      "schedule": "m36_tight",
+      "old_blocked": "paper allocation 46+3>48",
+      "optimized_blocked": "paper allocation 46+3>48"
+    },
+    {
+      "Q": 48,
+      "mode": "binary",
+      "schedule": "m37_balanced",
+      "old_blocked": "paper allocation 46+3>48",
+      "optimized_blocked": "paper allocation 46+3>48"
+    },
+    {
+      "Q": 48,
+      "mode": "binary",
+      "schedule": "m37_wide",
+      "old_blocked": "paper allocation 46+3>48",
+      "optimized_blocked": "paper allocation 46+3>48"
+    },
+    {
+      "Q": 48,
+      "mode": "cswap",
+      "schedule": "m36_tight",
+      "old_blocked": "paper allocation 48+1>48",
+      "optimized_blocked": "paper allocation 48+1>48"
+    },
+    {
+      "Q": 48,
+      "mode": "cswap",
+      "schedule": "m37_balanced",
+      "old_blocked": "paper allocation 48+1>48",
+      "optimized_blocked": "paper allocation 48+1>48"
+    },
+    {
+      "Q": 48,
+      "mode": "cswap",
+      "schedule": "m37_wide",
+      "old_blocked": "paper allocation 48+1>48",
+      "optimized_blocked": "paper allocation 48+1>48"
+    },
+    {
+      "Q": 49,
+      "mode": "binary",
+      "schedule": "m36_tight",
+      "old_blocked": "paper allocation 49+1>49",
+      "optimized_blocked": "paper allocation 49+1>49"
+    },
+    {
+      "Q": 49,
+      "mode": "binary",
+      "schedule": "m37_balanced",
+      "old_blocked": "paper allocation 49+1>49",
+      "optimized_blocked": "paper allocation 49+1>49"
+    },
+    {
+      "Q": 49,
+      "mode": "binary",
+      "schedule": "m37_wide",
+      "old_blocked": "paper allocation 49+1>49",
+      "optimized_blocked": "paper allocation 49+1>49"
+    },
+    {
+      "Q": 49,
+      "mode": "cswap",
+      "schedule": "m36_tight",
+      "old_blocked": "paper allocation 49+1>49",
+      "optimized_blocked": "paper allocation 49+1>49"
+    },
+    {
+      "Q": 49,
+      "mode": "cswap",
+      "schedule": "m37_balanced",
+      "old_blocked": "paper allocation 49+1>49",
+      "optimized_blocked": "paper allocation 49+1>49"
+    },
+    {
+      "Q": 49,
+      "mode": "cswap",
+      "schedule": "m37_wide",
+      "old_blocked": "paper allocation 49+1>49",
+      "optimized_blocked": "paper allocation 49+1>49"
+    },
+    {
+      "Q": 50,
+      "mode": "binary",
+      "schedule": "m36_tight",
+      "old_blocked": "paper allocation 50+1>50",
+      "optimized_blocked": "paper allocation 50+1>50"
+    },
+    {
+      "Q": 50,
+      "mode": "binary",
+      "schedule": "m37_balanced",
+      "old_blocked": "paper allocation 50+1>50",
+      "optimized_blocked": "paper allocation 50+1>50"
+    },
+    {
+      "Q": 50,
+      "mode": "binary",
+      "schedule": "m37_wide",
+      "old_blocked": "paper allocation 50+1>50",
+      "optimized_blocked": "paper allocation 50+1>50"
+    },
+    {
+      "Q": 50,
+      "mode": "cswap",
+      "schedule": "m36_tight",
+      "old": 1319.0,
+      "old_peak": 50,
+      "optimized": 1319.0,
+      "optimized_peak": 50,
+      "saving": 0.0
+    },
+    {
+      "Q": 50,
+      "mode": "cswap",
+      "schedule": "m37_balanced",
+      "old": 1274.5,
+      "old_peak": 50,
+      "optimized": 1274.5,
+      "optimized_peak": 50,
+      "saving": 0.0
+    },
+    {
+      "Q": 50,
+      "mode": "cswap",
+      "schedule": "m37_wide",
+      "old": 1250.5,
+      "old_peak": 50,
+      "optimized": 1250.5,
+      "optimized_peak": 50,
+      "saving": 0.0
+    },
+    {
+      "Q": 51,
+      "mode": "binary",
+      "schedule": "m36_tight",
+      "old": 1262.0,
+      "old_peak": 51,
+      "optimized": 1262.0,
+      "optimized_peak": 51,
+      "saving": 0.0
+    },
+    {
+      "Q": 51,
+      "mode": "binary",
+      "schedule": "m37_balanced",
+      "old": 1219.5,
+      "old_peak": 51,
+      "optimized": 1219.5,
+      "optimized_peak": 51,
+      "saving": 0.0
+    },
+    {
+      "Q": 51,
+      "mode": "binary",
+      "schedule": "m37_wide",
+      "old": 1196.5,
+      "old_peak": 51,
+      "optimized": 1196.5,
+      "optimized_peak": 51,
+      "saving": 0.0
+    },
+    {
+      "Q": 51,
+      "mode": "cswap",
+      "schedule": "m36_tight",
+      "old": 1267.0,
+      "old_peak": 51,
+      "optimized": 1267.0,
+      "optimized_peak": 51,
+      "saving": 0.0
+    },
+    {
+      "Q": 51,
+      "mode": "cswap",
+      "schedule": "m37_balanced",
+      "old": 1224.5,
+      "old_peak": 51,
+      "optimized": 1224.5,
+      "optimized_peak": 51,
+      "saving": 0.0
+    },
+    {
+      "Q": 51,
+      "mode": "cswap",
+      "schedule": "m37_wide",
+      "old": 1201.5,
+      "old_peak": 51,
+      "optimized": 1201.5,
+      "optimized_peak": 51,
+      "saving": 0.0
+    },
+    {
+      "Q": 52,
+      "mode": "binary",
+      "schedule": "m36_tight",
+      "old": 1213.5,
+      "old_peak": 52,
+      "optimized": 1213.5,
+      "optimized_peak": 52,
+      "saving": 0.0
+    },
+    {
+      "Q": 52,
+      "mode": "binary",
+      "schedule": "m37_balanced",
+      "old": 1172.5,
+      "old_peak": 52,
+      "optimized": 1172.5,
+      "optimized_peak": 52,
+      "saving": 0.0
+    },
+    {
+      "Q": 52,
+      "mode": "binary",
+      "schedule": "m37_wide",
+      "old": 1150.0,
+      "old_peak": 52,
+      "optimized": 1150.0,
+      "optimized_peak": 52,
+      "saving": 0.0
+    },
+    {
+      "Q": 52,
+      "mode": "cswap",
+      "schedule": "m36_tight",
+      "old": 1211.5,
+      "old_peak": 52,
+      "optimized": 1211.5,
+      "optimized_peak": 52,
+      "saving": 0.0
+    },
+    {
+      "Q": 52,
+      "mode": "cswap",
+      "schedule": "m37_balanced",
+      "old": 1170.5,
+      "old_peak": 52,
+      "optimized": 1170.5,
+      "optimized_peak": 52,
+      "saving": 0.0
+    },
+    {
+      "Q": 52,
+      "mode": "cswap",
+      "schedule": "m37_wide",
+      "old": 1148.0,
+      "old_peak": 52,
+      "optimized": 1148.0,
+      "optimized_peak": 52,
+      "saving": 0.0
+    }
+  ]
+}

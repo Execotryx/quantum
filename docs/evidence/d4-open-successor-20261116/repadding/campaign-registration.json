@@ -1,0 +1,30 @@
+{
+  "artifacts": {
+    "banked": "runs/open-circuits-20261114/d4-build-a/dqi.kmb",
+    "candidate": "runs/d4-open-successor/early-tail-repad-a/dqi.kmb"
+  },
+  "pins": {
+    "backend": "132405912244d6232e4ea7fb3c9e941f8cbfbfe8cc51dd49ab3fccb609166237",
+    "banked": "53d8b2edf251e2a0c54c401a97d1396c7ed309e1cbfaab8d54a2c99a11ed6552",
+    "builds": [
+      "073196db1c92cebc1e0aa224d23344da350267aa14f90862b0c4b3daab3413cd",
+      "b7abd273c42e02689af3bc45ae078fd77247911e444888196ce8a755db4d2a7f"
+    ],
+    "candidate": "c726a6426612ce094ac0ea98d0fabafbe323c09d4fd078e3d2b037fa4bd5c5f7",
+    "driver": "e7c095901596965e81c4286aa5a64ff1e7999d15347f30fd5b64c68871d6410e",
+    "open_driver": "7645c180a4fc9df7d2497db5c29eacb69130968e5dc11429d18474ba658529bc",
+    "preflight_registration": "7a5a6180ba0cee8815a934349af9524613ce233ce3b48b477d5a2e9bc43c3296",
+    "preflight_report": "38d17f093a484557265ae323c8bebae6c5eaef8f4713fc7734faece78fc42ac3"
+  },
+  "salts": [
+    "3522d66ea0fd237df5153f798a7f18238920391127b51a587c066d972cde5593",
+    "d3dc9fc8cf7c7846b920f8fe518bbedafc5d728cc6d53d8c46012fd0b608590a",
+    "cc906eca54226c256f6a99ce082b79642492ffd8c074ef21c985232f975b399b",
+    "5ac0434b25c14e943a5c6e8275f5d7d851540426ae4665d73564f2e49651d4e9",
+    "a6f3ed4f743c7f445852bf3f79f586304787ea903007f70bceac6fec9c2faf90",
+    "f0579576b77d459835c97a8dcd043f659926a08c1cc2c7fb9c3c2695dd584117",
+    "f4d777e93e252cd4f4cafcc9d8f4f1332149857fb71c8410dd71ec47bbeb251d",
+    "c69edd903b7a4197d0350fb1fe6939929c0c3fa560e69c22949ba286a62ac0e9"
+  ],
+  "shots": 102400
+}

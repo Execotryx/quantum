@@ -1,0 +1,40 @@
+{
+  "status": "PINNED_CANDIDATE03_BASE_AND_GATE",
+  "files": [
+    {
+      "path": "native/candidate02/variant.py",
+      "bytes": 3469,
+      "sha256": "5fc151b1a633a36be4733ee23bdb66acd18504950124c54506adf25250e7e487"
+    },
+    {
+      "path": "native/candidate02/INPUTS.json",
+      "bytes": 4803,
+      "sha256": "8521586ac83d0fd9bca51947525c9df09c8e68304d2ea92626b258574d5affbe"
+    },
+    {
+      "path": "native/candidate02/SOURCE_READY.json",
+      "bytes": 1114,
+      "sha256": "44001fa3ea91bd45326a782cfedb5738d4d8b29686f485f83eee9231a8241314"
+    },
+    {
+      "path": "checkpoint002/cleanroom/odd_sqrt/consuming_odd_sqrt.py",
+      "bytes": 5436,
+      "sha256": "0a60a631cb97dc39ea0e76e7ab2dc26300fd4f96218a73e0e56262c59586c144"
+    },
+    {
+      "path": "PAPER_GATE_RECEIPT_012_VARIANT.json",
+      "bytes": 1284,
+      "sha256": "f11816ec390d58f379a7dc63704fab80a385bb581c73ec729c8e199697ad5131"
+    },
+    {
+      "path": "research/postgate_root_constants/independent_audit/audit.json",
+      "bytes": 4432,
+      "sha256": "9f69876a4c92a64704483419ff9ae7713209ff4e180cdd281e6eacfd74e997cc"
+    },
+    {
+      "path": "research/postgate_root_constants/independent_audit/full_boolean.json",
+      "bytes": 7920,
+      "sha256": "7f0f05c96ebf0f890fd9b62f7a2fd22420e0b3cdce48c54d0e771c83aa06086b"
+    }
+  ]
+}

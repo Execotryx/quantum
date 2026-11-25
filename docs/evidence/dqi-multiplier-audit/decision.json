@@ -1,0 +1,26 @@
+{
+  "status": "no_transplant",
+  "decoder_sha256": "53d8b2edf251e2a0c54c401a97d1396c7ed309e1cbfaab8d54a2c99a11ed6552",
+  "inventory_sha256": "85e35c7cf6a2e0e70812fb0c9ebd2ea49ec8b24b70a565a029c7ba15e1faf8ce",
+  "legacy_toffolis_per_call": 42,
+  "legacy_mean_calls_per_shot": 5119.0,
+  "decoder_mean_toffoli_like": 430823.0347070313,
+  "minimum_saving_per_shot": 4308.230347070313,
+  "candidates": [
+    {
+      "candidate": "scheme42",
+      "toffolis_per_call": 42,
+      "basis_qubits_added": 0,
+      "projected_saving_per_shot": 0,
+      "projected_saving_fraction": 0
+    },
+    {
+      "candidate": "r15",
+      "toffolis_per_call": 45,
+      "basis_qubits_added": 0,
+      "projected_saving_per_shot": -15357.0,
+      "projected_saving_fraction": -0.035645726348970834
+    }
+  ],
+  "retained_member": "dqi-v8"
+}

@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "controller_work/after_v3/scan/check_zero_mask_point.py",
+    "--output",
+    "controller_work/after_v3/scan/runs/point-full",
+    "--batch-size",
+    "256"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794390125.6915164,
+  "rss_soft": 1000000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 33718272,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 5,
+  "elapsed_seconds": 2.025738000869751,
+  "current_rss": 33718272,
+  "available_bytes": 9603227648,
+  "exit_code": 0
+}

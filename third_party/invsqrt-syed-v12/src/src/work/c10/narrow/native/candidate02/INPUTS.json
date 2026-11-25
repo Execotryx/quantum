@@ -1,0 +1,140 @@
+{
+  "status": "FROZEN_OWN_CANDIDATE01_SOURCES_AND_ACCEPTED_VARIANT_GATE",
+  "files": [
+    {
+      "path": "native/candidate01/common.py",
+      "bytes": 3343,
+      "sha256": "9872e64213a4219522a87efc49d1aa549a04e43ae3fb51c9d5b762b1ea6535ab"
+    },
+    {
+      "path": "native/candidate01/divider.py",
+      "bytes": 13551,
+      "sha256": "d0dbaf6fe4227da988c9cb9e9dee847624992c7c5cce7ab347990d5b0a116c05"
+    },
+    {
+      "path": "native/candidate01/divider_local_math.py",
+      "bytes": 3173,
+      "sha256": "2e9c3a938021d24d36441f50f9d3226cf91aeab864e719179c7a4e9e6574346f"
+    },
+    {
+      "path": "native/candidate01/generate.py",
+      "bytes": 4274,
+      "sha256": "1c2b7bedc52bb501dd4e057fcc2aeaf09832c08258d8a67a51a966573ea7cffd"
+    },
+    {
+      "path": "native/candidate01/layout.py",
+      "bytes": 1061,
+      "sha256": "3a068ce7f6cf65cc8aa32a06c8318e36427a3f0d2d0a9100e4c2482e9c941749"
+    },
+    {
+      "path": "native/candidate01/lifecycle.py",
+      "bytes": 15973,
+      "sha256": "47b73f1f24ea027eedcbd1950cde7fc2535b32afeeb2e366ebdc4b6f1eb3c068"
+    },
+    {
+      "path": "native/candidate01/normalization.py",
+      "bytes": 670,
+      "sha256": "416c69191a7f47383893306b96341ad490efaad9cd5b85bb4a9b4f5a1572d9b7"
+    },
+    {
+      "path": "native/candidate01/paper_replay_lifecycle.py",
+      "bytes": 1680,
+      "sha256": "638fea849d8b2c53fb83a073f659b243d7b19f5647d45dd085ec35317e764ff6"
+    },
+    {
+      "path": "native/candidate01/prove_divider.py",
+      "bytes": 17253,
+      "sha256": "f8fead5ba4b27c9c918c0afd5f9cd404d41a0a1e21ac21267554c2339e3aa12a"
+    },
+    {
+      "path": "native/candidate01/prove_lifecycle.py",
+      "bytes": 6668,
+      "sha256": "b7be445040f4318cfd551867e9e6debc872cb69f77918e61d7ef56359db2d679"
+    },
+    {
+      "path": "native/candidate01/prove_normalization.py",
+      "bytes": 4836,
+      "sha256": "79cb1aaf0a90b643387f450ff34a100310f31432819019e29a52c166e7a4546d"
+    },
+    {
+      "path": "native/candidate01/prove_root_decoder.py",
+      "bytes": 4481,
+      "sha256": "aaccfe2ac7155adfcb72a2f92c0d92ef904e5badac6b2178daf78692ff50a338"
+    },
+    {
+      "path": "native/candidate01/prove_tables.py",
+      "bytes": 9283,
+      "sha256": "58b78d532f0a9e90332872ceb51b4b78d2ca93c211972b06c422ac34c70569b8"
+    },
+    {
+      "path": "native/candidate01/prove_whole.py",
+      "bytes": 5944,
+      "sha256": "83550e558c91aa7b3d74e5032d0cceacda938a734f7c589a26071a21819d6fc8"
+    },
+    {
+      "path": "native/candidate01/root_decode.py",
+      "bytes": 1591,
+      "sha256": "cce7cdba0fa3afd537366af3c40d803569c5a7d99d28ba10fa46f3e8bd0d5537"
+    },
+    {
+      "path": "native/candidate01/run_batch02.py",
+      "bytes": 2898,
+      "sha256": "ae8c0071429d37fc74c9c0a2c6973acaf201faf9ad5f302673caac49e85a7087"
+    },
+    {
+      "path": "native/candidate01/run_parent_components.py",
+      "bytes": 2942,
+      "sha256": "b5d99032616e09e0cdf90bb38079f41d023598d354890d4cc2be3b6fe06ca180"
+    },
+    {
+      "path": "native/candidate01/table_text_symbolic.py",
+      "bytes": 6263,
+      "sha256": "28a4699d6aa1fbcdaba9665b28f73bbcacd12ea041110b38cd1ba908024fe0af"
+    },
+    {
+      "path": "native/candidate01/tables.py",
+      "bytes": 10489,
+      "sha256": "cf2c83b6db5d1b1e2a63f4fe6e84976192a49eabb74e370ee2376fc4300659d3"
+    },
+    {
+      "path": "native/candidate01/verify_official.py",
+      "bytes": 3308,
+      "sha256": "bf7e23e34789c191c83e7ad03d5e28c690ba85da4c23d66705c16f544e020d63"
+    },
+    {
+      "path": "native/candidate01/whole_model.py",
+      "bytes": 2428,
+      "sha256": "740b3530990003de29fc3a29726c1ac7f97aa29467fc14fd7608f5c5f58bfca4"
+    },
+    {
+      "path": "native/candidate01/whole_text_symbolic.py",
+      "bytes": 12667,
+      "sha256": "5c8ac00c902d6d202bf2cb1cde47a8014047482876e356a0741c11c85e171220"
+    },
+    {
+      "path": "PAPER_GATE_RECEIPT_011_VARIANT.json",
+      "bytes": 962,
+      "sha256": "27a5fae99ae9ce4fed8602b52160618a25b56c56b30ea34b8101b64b161e53be"
+    },
+    {
+      "path": "research/lifecycle_schedule/post008_gate_v4.json",
+      "bytes": 19878,
+      "sha256": "0e49c0e309c3a816d9e0512d5d815de44a1fc5a1de3b5eff866330c6017954b3"
+    },
+    {
+      "path": "research/recompute_root/initializer_u12_triangular/triangular_certificate.json",
+      "bytes": 5023,
+      "sha256": "b9583e4772d572161782fdbef862c4f75cb59b9c46f8289e7a07b7d12fa51173"
+    },
+    {
+      "path": "research/recompute_root/initializer_u12_triangular/complete_gate.json",
+      "bytes": 1883,
+      "sha256": "fc9626c050ad286dadcbb02ce5e901f7c651748dd804bd41c1ba564450ca7e7f"
+    },
+    {
+      "path": "research/recompute_root/initializer_u12/local_algebra.json",
+      "bytes": 9627,
+      "sha256": "978c2adafd8d3355558a5e672982623372d459dec610273e1e43847681cc4c14"
+    }
+  ]
+}

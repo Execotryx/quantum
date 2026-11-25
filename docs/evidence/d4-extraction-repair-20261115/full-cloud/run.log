@@ -1,0 +1,26 @@
+program.tar.gz: OK
+candidate.kmb.gz: OK
+launch.sh: OK
+registration.json: OK
+candidate.kmb: OK
+Sun Nov 15 14:03:14 UTC 2026
+candidate s1 started
+Traceback (most recent call last):
+  File "/home/execotryx_gmail_com/d4-repair-full-20261115/overlay/tools/dqi_repair_campaign.py", line 187, in <module>
+    main()
+    ~~~~^^
+  File "/home/execotryx_gmail_com/d4-repair-full-20261115/overlay/tools/dqi_repair_campaign.py", line 183, in main
+    evaluate(a.registration, a.backend, a.banked, a.candidate, a.output, a.workers, a.role)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/execotryx_gmail_com/d4-repair-full-20261115/overlay/tools/dqi_repair_campaign.py", line 129, in evaluate
+    result = verify_draw(api, circuit, pins[role], salt, workers)
+  File "/home/execotryx_gmail_com/d4-repair-full-20261115/overlay/tools/vendor_dqi_price.py", line 53, in verify_draw
+    return api.verify(circuit, spec, salt=salt, max_workers=workers)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/var/tmp/quantum/vendor/official/verifiers/dqi/verify_submission_dqi.py", line 351, in verify
+    circuit_hash = _circuit_sha256(circuit)
+  File "/var/tmp/quantum/vendor/official/verifiers/dqi/verify_submission_dqi.py", line 296, in _circuit_sha256
+    circuit.to_file(buf, format='kmb')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+ValueError: Failed to write to file.
+cp: cannot stat 'run.log': No such file or directory

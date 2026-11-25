@@ -1,0 +1,178 @@
+{
+  "cases": 8192,
+  "elapsed_seconds": 4.344657548994292,
+  "new_population_draws": false,
+  "no_source_changes_during_test": true,
+  "production_integration": false,
+  "rows": [
+    {
+      "all4095_units_on_both_coordinate_axes": true,
+      "component": "nested_reference",
+      "identical_builds": true,
+      "metrics": {
+        "Q": 889,
+        "helpers": 24,
+        "instructions": 108377,
+        "mean_scope": "Fresh24-bit head mask and final fresh6/12-bit mask; exact source model.",
+        "prefix_static_T": 291,
+        "static_T": 651,
+        "uniform_HMR_mean_T": 650.9934031963348
+      },
+      "runs": [
+        {
+          "cases": 8192,
+          "input_errors": {},
+          "observed_mean_T": 650.9967041015625,
+          "phase_errors": [],
+          "prefix_values_only": false,
+          "scratch_errors": false,
+          "seed": 35301
+        },
+        {
+          "cases": 8192,
+          "input_errors": {},
+          "observed_mean_T": 650.993408203125,
+          "phase_errors": [],
+          "prefix_values_only": false,
+          "scratch_errors": false,
+          "seed": 35302
+        },
+        {
+          "cases": 8192,
+          "input_errors": {},
+          "observed_mean_T": 651.0,
+          "phase_errors": [],
+          "prefix_values_only": false,
+          "scratch_errors": false,
+          "seed": 35303
+        },
+        {
+          "cases": 8192,
+          "input_errors": {},
+          "observed_mean_T": 291.0,
+          "phase_errors": null,
+          "prefix_values_only": true,
+          "scratch_errors": false,
+          "seed": 35301
+        },
+        {
+          "cases": 8192,
+          "input_errors": {},
+          "observed_mean_T": 291.0,
+          "phase_errors": null,
+          "prefix_values_only": true,
+          "scratch_errors": false,
+          "seed": 35302
+        },
+        {
+          "cases": 8192,
+          "input_errors": {},
+          "observed_mean_T": 291.0,
+          "phase_errors": null,
+          "prefix_values_only": true,
+          "scratch_errors": false,
+          "seed": 35303
+        }
+      ],
+      "sha256": "fd050bb6b92abf1d4f3607d60770314891f9543dc89ccded543cb036ea13bf2e",
+      "status": "PASS_ISOLATED_LAST_RETURN"
+    },
+    {
+      "all4095_units_on_both_coordinate_axes": true,
+      "component": "retained_child_candidate",
+      "identical_builds": true,
+      "metrics": {
+        "Q": 889,
+        "helpers": 24,
+        "instructions": 91672,
+        "mean_scope": "Fresh24-bit head mask and final fresh6/12-bit mask; exact source model.",
+        "prefix_static_T": 291,
+        "static_T": 643,
+        "uniform_HMR_mean_T": 642.7031199932098
+      },
+      "runs": [
+        {
+          "cases": 8192,
+          "input_errors": {},
+          "observed_mean_T": 642.7100830078125,
+          "phase_errors": [],
+          "prefix_values_only": false,
+          "scratch_errors": false,
+          "seed": 35301
+        },
+        {
+          "cases": 8192,
+          "input_errors": {},
+          "observed_mean_T": 642.642822265625,
+          "phase_errors": [],
+          "prefix_values_only": false,
+          "scratch_errors": false,
+          "seed": 35302
+        },
+        {
+          "cases": 8192,
+          "input_errors": {},
+          "observed_mean_T": 642.74951171875,
+          "phase_errors": [],
+          "prefix_values_only": false,
+          "scratch_errors": false,
+          "seed": 35303
+        },
+        {
+          "cases": 8192,
+          "input_errors": {},
+          "observed_mean_T": 291.0,
+          "phase_errors": null,
+          "prefix_values_only": true,
+          "scratch_errors": false,
+          "seed": 35301
+        },
+        {
+          "cases": 8192,
+          "input_errors": {},
+          "observed_mean_T": 291.0,
+          "phase_errors": null,
+          "prefix_values_only": true,
+          "scratch_errors": false,
+          "seed": 35302
+        },
+        {
+          "cases": 8192,
+          "input_errors": {},
+          "observed_mean_T": 291.0,
+          "phase_errors": null,
+          "prefix_values_only": true,
+          "scratch_errors": false,
+          "seed": 35303
+        }
+      ],
+      "sha256": "adc5549527c01dbdf8af01640fc245a67a621966407fed78d80d863cf0521bc8",
+      "status": "PASS_ISOLATED_LAST_RETURN"
+    }
+  ],
+  "source_ledger": {
+    "eligible_production_calls": 1,
+    "helpers": 24,
+    "mean_saving": 8.290283203125,
+    "new_population_event": false,
+    "pair_static_T": 643,
+    "pair_uniform_HMR_mean_T": 642.7031199932098,
+    "prefix_static_T": 291,
+    "return_static_T": 352,
+    "return_uniform_HMR_mean_T": 351.70311999320984,
+    "skipped_next_return_candidates": 32,
+    "source_domain": "unit K24 source, arbitrary target; no next word",
+    "static_saving": 8,
+    "status": "SOURCE_MODEL_NATIVE_PENDING",
+    "unretimed_next_return_helpers": 30,
+    "whole_decoder_peak_Q": 889
+  },
+  "source_sha256": {
+    "/workspace/scratch/e5e4bb56acc7/controller_work/after_c5/arithmetic_t/gf24_nested_norm.py": "e51535ecf80568d4a67b1406e3afeae718364587bec787f9aa7c6638d48d614a",
+    "/workspace/scratch/e5e4bb56acc7/controller_work/after_c5/arithmetic_t/nested_norm_inverse.py": "20e8c8cd699916e198cb79ce6ddd53ca933a76c5dbcbf2f329ab1001a26f06c9",
+    "/workspace/scratch/e5e4bb56acc7/controller_work/after_c5/extractor_width/direct_carry_arithmetic.py": "3be5e0ec74b40e5aa681f3bbf4624f6d10c766b0f65469b6a211a7359fdc8096",
+    "/workspace/scratch/e5e4bb56acc7/controller_work/after_v3/k24/check_last_return_retained_norm.py": "c6ec6a78b901ff5382de5800f793ac16598e4352809b138b802e4b50617c8797",
+    "/workspace/scratch/e5e4bb56acc7/controller_work/after_v3/k24/last_return_retained_norm.py": "35182c977774d579ef475ec3fdbd5959b7e616f79f03a837506c02c41f13db4a"
+  },
+  "status": "PASS_ISOLATED_LAST_RETURN_COMPONENTS"
+}

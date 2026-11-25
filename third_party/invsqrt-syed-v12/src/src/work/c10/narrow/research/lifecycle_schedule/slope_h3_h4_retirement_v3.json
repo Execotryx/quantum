@@ -1,0 +1,282 @@
+{
+  "certificate": {
+    "status": "EXACT_COEFFICIENT_METADATA_AND_ROOT_CHART_CERTIFICATE_NOT_NATIVE",
+    "model_sha256": "24fff823faa911afe93d02afc3ded0bbd156a210a85f1265c989a087f8fd1219",
+    "decoder_snapshot_sha256": "78b8658f051bda7b9fcfd0afa503a3291819afb14fa7647a51af76d9c1c65d34",
+    "roots": 4096,
+    "metadata_HMR_cases": 16384,
+    "retained_high_root": [
+      "R=physicala3",
+      "rawa5"
+    ],
+    "retired_raw_high_root": [
+      "a0",
+      "a1",
+      "a2",
+      "a4",
+      "a6"
+    ],
+    "root_frame": [
+      "CX(a2,a3)",
+      "CX(a2,a5)",
+      "CCX(a1,a5,a3)",
+      "CX(a2,a5)"
+    ],
+    "root_frame_lifecycle_E": 4,
+    "H3_current": {
+      "inputs": [
+        "D9",
+        "D10",
+        "D11",
+        "D12",
+        "H2",
+        "rawa5"
+      ],
+      "plan": {
+        "width": 6,
+        "constant": false,
+        "linear": 33,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "products": [
+          [
+            51,
+            60,
+            0,
+            2
+          ],
+          [
+            34,
+            24,
+            1,
+            3
+          ]
+        ],
+        "product_linear": 17
+      },
+      "Toffolis": 2
+    },
+    "H3_initial": {
+      "inputs": [
+        "A10",
+        "A11",
+        "A12",
+        "H2",
+        "rawa5",
+        "rawa6"
+      ],
+      "plan": {
+        "width": 6,
+        "constant": true,
+        "linear": 6,
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "products": [
+          [
+            21,
+            56,
+            0,
+            3
+          ]
+        ],
+        "product_linear": 22
+      },
+      "Toffolis": 1
+    },
+    "H4": {
+      "inputs": [
+        "D11",
+        "D12",
+        "H3"
+      ],
+      "plan": {
+        "width": 3,
+        "constant": false,
+        "linear": 6,
+        "edges": [
+          [
+            0,
+            2
+          ]
+        ],
+        "products": [
+          [
+            1,
+            4,
+            0,
+            2
+          ]
+        ],
+        "product_linear": 6
+      },
+      "Toffolis": 1
+    },
+    "root_decoder": {
+      "initial_inputs": "R+A13+H5+rawa5",
+      "decoded_raw_masks": [
+        64,
+        1,
+        2,
+        4,
+        16
+      ],
+      "Toffolis": 21,
+      "extra_scratch": 0,
+      "final_data": 44,
+      "phase_fix": "Measured roots are raw in the R-only frame; each reconstructed raw bit gets its measurement-conditionedZ. Then undo R-only frame using the alreadypriced1CCX."
+    },
+    "lifecycle": "After second coefficient forward, XmeasureH4 thenH3 with immediate quadraticClifford repairs. Inverseproduct and seedcleanup useD andlowroot, keepingH0..2,R,rawa5,oldA6snapshot. RecreateH3(2CCX),H4(1CCX) beforeANYcoefficientinverse. RestoreA, execute firstfivefrozenrootdecoderplans21E, paytheirHMRsigns, andundoR-onlyframe. The original first/second coefficient-carry functions match because allS bits andA/R/lowroot return beforetheirpairedinverse.",
+    "accuracy": "Unchangedcoefficients,U0,division,phase andoriginaltolerance.",
+    "table_options": {
+      "17_outputs": "LoadA13+H0..3. PrepareH4beforeeachCforward1E each; metadatarestore3E. Total5E.",
+      "16_outputs": "LoadA13+H0..2. PrepareH3with1CCXwhilea6stilllive, thenretire5roots; prepareH4with1CCX. Twopreparations4E+metadatarestore3E=7E."
+    }
+  },
+  "product_counts": [
+    {
+      "Q": 48,
+      "product_E": 249.5,
+      "inverse_data": 44,
+      "source": "word16+D13+root7+flags4+Hlow3+snapshot1",
+      "old_decoder": 26,
+      "new_decoder": 21,
+      "old_metadata_lifecycle": 3,
+      "new_metadata_lifecycle_17outputs": 5,
+      "net_saving_E_17output": 3,
+      "new_metadata_lifecycle_16outputs": 7,
+      "net_saving_E_16output_before_loader_changes": 1
+    },
+    {
+      "Q": 49,
+      "product_E": 229.0,
+      "inverse_data": 44,
+      "source": "word16+D13+root7+flags4+Hlow3+snapshot1",
+      "old_decoder": 26,
+      "new_decoder": 21,
+      "old_metadata_lifecycle": 3,
+      "new_metadata_lifecycle_17outputs": 5,
+      "net_saving_E_17output": 3,
+      "new_metadata_lifecycle_16outputs": 7,
+      "net_saving_E_16output_before_loader_changes": 1
+    },
+    {
+      "Q": 50,
+      "product_E": 223.0,
+      "inverse_data": 44,
+      "source": "word16+D13+root7+flags4+Hlow3+snapshot1",
+      "old_decoder": 26,
+      "new_decoder": 21,
+      "old_metadata_lifecycle": 3,
+      "new_metadata_lifecycle_17outputs": 5,
+      "net_saving_E_17output": 3,
+      "new_metadata_lifecycle_16outputs": 7,
+      "net_saving_E_16output_before_loader_changes": 1
+    },
+    {
+      "Q": 51,
+      "product_E": 219.0,
+      "inverse_data": 44,
+      "source": "word16+D13+root7+flags4+Hlow3+snapshot1",
+      "old_decoder": 26,
+      "new_decoder": 21,
+      "old_metadata_lifecycle": 3,
+      "new_metadata_lifecycle_17outputs": 5,
+      "net_saving_E_17output": 3,
+      "new_metadata_lifecycle_16outputs": 7,
+      "net_saving_E_16output_before_loader_changes": 1
+    },
+    {
+      "Q": 52,
+      "product_E": 215.5,
+      "inverse_data": 44,
+      "source": "word16+D13+root7+flags4+Hlow3+snapshot1",
+      "old_decoder": 26,
+      "new_decoder": 21,
+      "old_metadata_lifecycle": 3,
+      "new_metadata_lifecycle_17outputs": 5,
+      "net_saving_E_17output": 3,
+      "new_metadata_lifecycle_16outputs": 7,
+      "net_saving_E_16output_before_loader_changes": 1
+    }
+  ],
+  "metadata_recreation": {
+    "Q": 48,
+    "initial_data": 38,
+    "final_data": 40,
+    "peak": 40,
+    "Toffolis": 3.0
+  },
+  "native": false
+}

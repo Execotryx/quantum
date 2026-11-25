@@ -1,0 +1,24 @@
+launch.sh: OK
+source.tar.gz: OK
+Sun Nov 15 20:44:09 UTC 2026
+.aligned chart width=5 cases=64 seed=211 scratch=17 gates=1079.5
+aligned chart width=5 cases=64 seed=212 scratch=17 gates=1079.625
+.aligned chart width=10 cases=64 seed=211 scratch=17 gates=1811.5
+aligned chart width=10 cases=64 seed=212 scratch=17 gates=1811.625
+.pooled row=0 seed=301 forward=True eligible=9/11 qubits=1239 gates=36391.90909090909
+pooled row=0 seed=301 forward=False eligible=9/11 qubits=1239 gates=72786.54545454546
+pooled row=0 seed=302 forward=True eligible=9/11 qubits=1239 gates=36390.09090909091
+pooled row=0 seed=302 forward=False eligible=9/11 qubits=1239 gates=72781.0
+.pooled row=1 seed=301 forward=True eligible=9/11 qubits=1239 gates=36391.90909090909
+pooled row=1 seed=301 forward=False eligible=9/11 qubits=1239 gates=72786.54545454546
+pooled row=1 seed=302 forward=True eligible=9/11 qubits=1239 gates=36390.09090909091
+pooled row=1 seed=302 forward=False eligible=9/11 qubits=1239 gates=72781.0
+.affine extraction group=None quotient=False seed=941 qubits=945 gates=219193.5
+affine extraction group=None quotient=False seed=942 qubits=945 gates=219142.33333333334
+.affine extraction group=6 quotient=False seed=941 qubits=946 gates=218506.33333333334
+affine extraction group=6 quotient=False seed=942 qubits=946 gates=218462.33333333334
+.affine extraction group=None quotient=True seed=941 qubits=1043 gates=231292.66666666666
+affine extraction group=None quotient=True seed=942 qubits=1043 gates=231293.66666666666
+.
+8 passed, 30 deselected in 137.55s (0:02:17)
+Sun Nov 15 20:46:28 UTC 2026

@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "/workspace/scratch/e5e4bb56acc7/controller_work/after_v3/k24/check_last_return_retained_norm.py",
+    "--cases",
+    "8192",
+    "--output",
+    "controller_work/after_v3/k24/runs/last-return-full"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794391802.8509073,
+  "rss_soft": 1200000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 72585216,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 8,
+  "elapsed_seconds": 5.0811169147491455,
+  "current_rss": 72585216,
+  "available_bytes": 9579843584,
+  "exit_code": 0
+}

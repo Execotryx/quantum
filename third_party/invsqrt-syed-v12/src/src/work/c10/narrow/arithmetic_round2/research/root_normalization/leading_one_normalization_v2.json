@@ -1,0 +1,43 @@
+{
+  "paper": {
+    "forward_E": 52.0,
+    "inverse_E": 44.5,
+    "total_E": 96.5,
+    "modeled_forward_peak": 46,
+    "modeled_inverse_peak": 32,
+    "Q_cap": 48,
+    "old_total_E": 97.5,
+    "saving_E": 1,
+    "T": 0,
+    "R": 0,
+    "accuracy_change": 0,
+    "complete_Q": 48,
+    "complete_expected_Toffolis": 1583,
+    "complete_expected_cost": 87112.70685415737
+  },
+  "certificate": {
+    "status": "PASS_ALL_ORIGINAL_INPUTS_ALL_SYMBOLIC_HMR_PHASES_NOT_NATIVE",
+    "original_inputs": 3133452,
+    "input_interval": [
+      1,
+      3133453
+    ],
+    "end_exclusive": true,
+    "normalized_map": "n=x*4**k, k=floor((22-bit_length(x))/2)",
+    "original_input_owners_restored": true,
+    "all_scratch_and_flags_zero": true,
+    "forward_HMR_symbols": 21,
+    "total_independent_HMR_symbols": 31,
+    "all_phase_coefficients_zero": true,
+    "mathematical_phase_error": 0,
+    "forward_E": 52.0,
+    "roundtrip_E": 96.5,
+    "modeled_peak": 46,
+    "seconds": 0.12451543699717149,
+    "peak_rss_kib": 66980,
+    "native_builder_or_simulator": false,
+    "official_verifier_run": false
+  },
+  "source_sha256": "73774fd158bf0d2170a1f08ed72ce6a64b864c61b1ed64169872314a0aade88a",
+  "inputs_sha256": "f09e600b2d78558d1d5a6fa61cbf60cd17f48920184f5e8cf6d5d269487111bf"
+}

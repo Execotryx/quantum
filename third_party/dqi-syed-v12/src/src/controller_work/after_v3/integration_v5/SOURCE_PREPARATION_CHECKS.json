@@ -1,0 +1,32 @@
+{
+  "ast_files": {
+    "build_v5.py": "74e9370e275f19bc3e1c9f263cf37494277c06499bf157128be9b197f02b08f7",
+    "check_build_equality.py": "0df19f87b37f16a116c6ad7231aae0e6f0650b1d3340b9f8d1497d9f0cce5c9b",
+    "check_candidate.py": "26d3519c10ac08588dd5eadaf79fce725e9d7ed80429f7f53d56c51c7a54b3f1",
+    "check_key_boundary.py": "6b8851be258d3590666419c2ef28ee187a9da73cd5d5847b498d484d97f543e3",
+    "gen_dqi.py": "9251d2378047d32de1f12f1f5d23ac927ab04d5e1f8afd72ebb9a720aec42e9f",
+    "prepare_component_gates.py": "b6b206fe355bdc8724db3eb22920276538f156ef0fb970216317c1a8494a9988",
+    "v5_binding.py": "6483e60a487e4783ebe63f47705b7ca2bf3d1ec17e4f54431983f22727792df2",
+    "v5_events.py": "b9bc736bc65dec2a8052ef2f189df3a5bd7e83a0f8a00e8043ddd06e76cf9b84",
+    "v5_paths.py": "7d96bde0b1b82c192521c7042f0f90d3222ec2b086e169f4b0f7aaa6ff3bef74",
+    "v5_pipeline.py": "32b89202ec5eed5ef030d5f9982b1b0ecd5ab738a9020e3e40991c1a801e849c"
+  },
+  "counts_are_source_models": true,
+  "derivation_sha256": "d86eca1067754f80c93f5e343b16b9735ae51ae531f426568d27da391abde3de",
+  "exact_wrapper_copies": 5,
+  "format": "DQI_V5_BOUNDED_SOURCE_PREPARATION_CHECKS_V1",
+  "gate_plan_sha256": "0b4932be57dadb5ea3f70794d7635ed9b5db09a34f4ed4a05e5a3acf6d4b0518",
+  "imports_of_candidate_modules": false,
+  "independent_review_hardening": "Pre-pin exact original key corpus, rare physical input, key harness, physical oracle and carry-scale adapter before accepting their report hashes.",
+  "native_gate_manifest_created": false,
+  "producer_executed": false,
+  "rational_ledger_expression": {
+    "active_points": 4025,
+    "expected_mean_T_exact": "13168886125240077/34359738368",
+    "static_T": 384068
+  },
+  "runtime_or_native_checks": false,
+  "source_ledger_sha256": "ae360eb17e1b938b25e7fe28bb8080b7e6359eff7833941663a5753dd5f06af8",
+  "source_plan_file_count": 39,
+  "status": "PASS_SOURCE_ONLY_PREPARATION_NATIVE_PENDING"
+}

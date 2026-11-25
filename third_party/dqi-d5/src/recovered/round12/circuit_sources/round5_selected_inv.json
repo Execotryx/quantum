@@ -1,0 +1,7 @@
+{
+  "virtual": true,
+  "domain": true,
+  "calibration": null,
+  "tables": "round5_marsyas_tables.json",
+  "selected_sha256": "780cfca5e3e804be357f97888107f99895124b529681420387e3ac1ee9763f38"
+}

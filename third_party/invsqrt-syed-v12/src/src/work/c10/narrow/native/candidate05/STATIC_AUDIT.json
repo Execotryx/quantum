@@ -1,0 +1,20 @@
+{
+  "status": "PASS_STATIC_CANDIDATE05_SOURCE_PIN_AND_ROUTE_AUDIT_NO_NATIVE",
+  "inherited_source_pins": 70,
+  "syntax_sources": 5,
+  "mock_directions": 2,
+  "CSWAP_per_direction": 64,
+  "unchanged_affine_frames_per_direction": 5,
+  "exact_omission": [
+    0,
+    0,
+    26
+  ],
+  "unchanged_quantized_full_domain_digest": true,
+  "parent_gate_component_sum": 1560.5,
+  "complete_expected_cost": 88177.87103088977,
+  "native_imported": false,
+  "native_emitted": false,
+  "native_executed": false,
+  "seconds": 0.016647329000988975
+}

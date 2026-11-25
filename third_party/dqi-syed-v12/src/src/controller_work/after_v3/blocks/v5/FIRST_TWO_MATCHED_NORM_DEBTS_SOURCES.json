@@ -1,0 +1,35 @@
+{
+  "additional_helpers": 24,
+  "files": {
+    "check_first2_retained_norm_deferred_adapter.py": {
+      "bytes": 15737,
+      "sha256": "10b879908015940dec875c2adb20b9aa8d9956b7b3c92243bdfe47a9f2df6039"
+    },
+    "check_inverse_retained_norm_deferred.py": {
+      "bytes": 12675,
+      "sha256": "df6722a6c90671f91eadc9f2b6ace79b9154eb71a193589e0c74f6f53fecedd1"
+    },
+    "first2_retained_norm_deferred_adapter.py": {
+      "bytes": 7029,
+      "sha256": "095fdf281dd9e959c7980e517eb3cd7ab677d10fdd62c7a305600fb3c530c118"
+    },
+    "inverse_retained_norm_deferred.py": {
+      "bytes": 8462,
+      "sha256": "8cb8eaee9312acc81a3048072ec3ddf721399ba8ccdd7eac94002f9d4ec2da46"
+    }
+  },
+  "gate_note_sha256": "382ca76ad3b71709610a76876d5663e2bc9c397cf5ad61c1879e03ccf1b1fa3f",
+  "incremental_static_and_mean_gain_vs_stack195": 3,
+  "native_jobs_started_by_agent": 0,
+  "new_domain_event": false,
+  "owned_zero_storage_bits": 24,
+  "pair_static_T": 386,
+  "prefix_static_T": 191,
+  "production_key_mean_exact": "909145061707/4194304",
+  "production_key_prefix_static_T": 101055,
+  "production_key_static_T": 216983,
+  "production_mean_gain_exact": "1032585153/4194304",
+  "production_static_gain": 246,
+  "return_static_T": 195,
+  "status": "SOURCE_PREPARED_NATIVE_NOT_RUN"
+}

@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "/workspace/scratch/e5e4bb56acc7/controller_work/after_v3/blocks/check_paired_phase_rare27.py",
+    "--output",
+    "controller_work/after_v3/blocks/runs/rare-paired-phase-full"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794392941.764087,
+  "rss_soft": 1200000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 114016256,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 16,
+  "elapsed_seconds": 6.281644344329834,
+  "current_rss": 35426304,
+  "available_bytes": 9557315584,
+  "exit_code": 0
+}

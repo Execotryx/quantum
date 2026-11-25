@@ -1,0 +1,52 @@
+{
+  "diff_sha256": "83b503cbc7b1c3c2cdeb54a4de15dde666ab66094bee65ac6b5486b86e9ae63b",
+  "exact_replacements": [
+    {
+      "new": "writes one standard panel for the actual new gauge-one case and another\nfor the deterministically constructed zero third residue. Recorded case IDs\nretain their exact original serialization scheme and mask-seed identity; a\nstandard physical/mask hash is also recorded without replacing the old ID.\nIt never calls",
+      "old": "writes one standard panel for the actual new gauge-one case and another\nfor the deterministically constructed zero third residue. It never calls"
+    },
+    {
+      "new": "ZERO_ID = '6663887a36baed1286a39bd8933a2c4d45a0660ef96a6a2b03ea0460588e00b0'\nZERO_STANDARD_ID = '8359bec906a50537fb2e812301e4cc81a3153c91ee62f1fd4cf83819c8e334a1'",
+      "old": "ZERO_ID = '6663887a36baed1286a39bd8933a2c4d45a0660ef96a6a2b03ea0460588e00b0'"
+    },
+    {
+      "new": "PINS = {\n    'controller_work/night_c27/arithmetic/panel_audit/check_key_boundary.py': '2a5af18b8b0bd0bc0fef2cacf88dfcf58ce9a88d4c5f8790251f108f2f1a11a2',\n    'controller_work/after_v3/blocks/v6/prepare_integration_special_panels.py': '29c9c8dda21774d236caa2f06bc5ddc380cc3bfe9c6e5532489d586537101528',\n    'controller_work/after_v3/blocks/v6/runs/integration-special-panels.guard.json': '33e76c120c3220a1429d8bf36f90afecc0cb5795d63f6d0ac56f9e48bcd3aa4b',\n    'controller_work/after_v3/blocks/v6/runs/integration-special-panels.stdout': 'fb8470cc85927415294fecebd71c2477c62062bb8c19f5e96780d3221857beb6',",
+      "old": "PINS = {"
+    },
+    {
+      "new": "\ndef legacy_extra_id(row):\n    # Exact immutable check_key_boundary.load_cases convention for extras.\n    # List order is retained; mask mode is separately pinned to random.\n    raw = json.dumps([row['positions'], row['values']],\n                     separators=(',', ':')).encode()\n    return hashlib.sha256(raw).hexdigest()\n\n\ndef require_guard(path):",
+      "old": "\ndef require_guard(path):"
+    },
+    {
+      "new": "    assert legacy_extra_id(prior_zero) == ZERO_ID\n    assert canonical_id(prior_zero) == ZERO_STANDARD_ID\n    # V1 failed at this distinction before imports and before output creation.\n    failed = read(RUNS/'integration-special-panels.guard.json')\n    assert failed['status'] == 'complete' and failed['exit_code'] == 1\n    assert failed['stopped'] is False",
+      "old": "    assert canonical_id(prior_zero) == ZERO_ID"
+    },
+    {
+      "new": "        identity = canonical_id if name == 'gauge1' else legacy_extra_id\n        expected_id = GAUGE_ID if name == 'gauge1' else ZERO_ID\n        expected_standard = GAUGE_ID if name == 'gauge1' else ZERO_STANDARD_ID\n        assert row['case_id'] == identity(row) == identity(prior) == expected_id\n        assert canonical_id(row) == canonical_id(prior) == expected_standard",
+      "old": "        assert row['case_id'] == canonical_id(row) == canonical_id(prior)"
+    },
+    {
+      "new": "        prepared.append((name, row, dict(case_id=row['case_id'], label=row['label'],\n            recorded_case_id_scheme=('prepare_panels_sorted_physical_mask_json' if name == 'gauge1'\n                                     else 'key_harness_ordered_positions_values_json'),\n            standard_canonical_physical_mask_id=canonical_id(row),\n            secondary_hash_changes_recorded_mask_seed=False,",
+      "old": "        prepared.append((name, row, dict(case_id=row['case_id'], label=row['label'],"
+    },
+    {
+      "new": "            recorded_case_id_and_mask_mode_preserved=True, physical_record_preserved=True,\n            preparer_revision=2, identity_mapping=evidence['recorded_case_id_scheme'],\n            standard_canonical_physical_mask_id=evidence['standard_canonical_physical_mask_id'],",
+      "old": "            canonical_id_and_mask_mode_preserved=True, physical_record_preserved=True,"
+    },
+    {
+      "new": "    summary = dict(status='PREPARED_TWO_EXACT_V6_SPECIAL_PANELS_NOT_NATIVE',\n        preparer_revision=2, recorded_extra_id_preserved=True,\n        failed_v1_guard_sha256=PINS['controller_work/after_v3/blocks/v6/runs/integration-special-panels.guard.json'],",
+      "old": "    summary = dict(status='PREPARED_TWO_EXACT_V6_SPECIAL_PANELS_NOT_NATIVE',"
+    }
+  ],
+  "failed_guard_sha256": "33e76c120c3220a1429d8bf36f90afecc0cb5795d63f6d0ac56f9e48bcd3aa4b",
+  "failed_stdout_sha256": "fb8470cc85927415294fecebd71c2477c62062bb8c19f5e96780d3221857beb6",
+  "native_or_preparer_executed": false,
+  "new_source_sha256": "13dded8cccb5f46faf94973e20c74f6f7a6c587d9b529ef0d1effa9e4f8fc602",
+  "old_source_sha256": "29c9c8dda21774d236caa2f06bc5ddc380cc3bfe9c6e5532489d586537101528",
+  "provider_or_old_fixture_changed": false,
+  "recorded_case_id_preserved": true,
+  "recorded_extra_case_id": "6663887a36baed1286a39bd8933a2c4d45a0660ef96a6a2b03ea0460588e00b0",
+  "secondary_hash_replaces_mask_seed": false,
+  "standard_physical_mask_id": "8359bec906a50537fb2e812301e4cc81a3153c91ee62f1fd4cf83819c8e334a1",
+  "status": "SOURCE_ONLY_IDENTITY_SCHEME_REPAIR_NOT_EXECUTED"
+}

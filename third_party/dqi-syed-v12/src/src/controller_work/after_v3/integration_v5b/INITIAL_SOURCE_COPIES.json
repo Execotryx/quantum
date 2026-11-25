@@ -1,0 +1,56 @@
+{
+  "files": {
+    "build_v5b.py": {
+      "initial_copy_sha256": "b0df43c57fd8138a37b37f00086ad88c4acd34d0f9e90ca2ace65a42c98d77c3",
+      "parent": "controller_work/after_v3/integration_v5/build_v5.py",
+      "parent_sha256": "74e9370e275f19bc3e1c9f263cf37494277c06499bf157128be9b197f02b08f7"
+    },
+    "check_build_equality.py": {
+      "initial_copy_sha256": "39df1fefc6a8029b9398a8f69ea46e5c1ca411ebe552dd819639b8dd4286648e",
+      "parent": "controller_work/after_v3/integration_v5/check_build_equality.py",
+      "parent_sha256": "0df19f87b37f16a116c6ad7231aae0e6f0650b1d3340b9f8d1497d9f0cce5c9b"
+    },
+    "check_candidate.py": {
+      "initial_copy_sha256": "c266336dd3f8bb82c05831784b34f6d1a63a6e9c78f0cc173ce02dc25e11ca78",
+      "parent": "controller_work/after_v3/integration_v5/check_candidate.py",
+      "parent_sha256": "26d3519c10ac08588dd5eadaf79fce725e9d7ed80429f7f53d56c51c7a54b3f1"
+    },
+    "check_key_boundary.py": {
+      "initial_copy_sha256": "d003853b9548e35c2d407dec52c1a5abdf9d3941a30960c2b1ba760ec7d4e0dc",
+      "parent": "controller_work/after_v3/integration_v5/check_key_boundary.py",
+      "parent_sha256": "6b8851be258d3590666419c2ef28ee187a9da73cd5d5847b498d484d97f543e3"
+    },
+    "gen_dqi.py": {
+      "initial_copy_sha256": "ba324c9d5e901710f6ecaec6894e59db58e5ca11d9356ce2c8f6d78810bc61fd",
+      "parent": "controller_work/after_v3/integration_v5/gen_dqi.py",
+      "parent_sha256": "9251d2378047d32de1f12f1f5d23ac927ab04d5e1f8afd72ebb9a720aec42e9f"
+    },
+    "prepare_component_gates.py": {
+      "initial_copy_sha256": "7b705de41df06a8782925f593bce90b081816a80b2743998e76d0f3439f6d2d9",
+      "parent": "controller_work/after_v3/integration_v5/prepare_component_gates.py",
+      "parent_sha256": "b6b206fe355bdc8724db3eb22920276538f156ef0fb970216317c1a8494a9988"
+    },
+    "v5b_binding.py": {
+      "initial_copy_sha256": "e07e6311a84b589a004d219427b358f71bbefcc48a913780a435217079423a6e",
+      "parent": "controller_work/after_v3/integration_v5/v5_binding.py",
+      "parent_sha256": "6483e60a487e4783ebe63f47705b7ca2bf3d1ec17e4f54431983f22727792df2"
+    },
+    "v5b_events.py": {
+      "initial_copy_sha256": "8d1615a6b8163ab6f3ad1a71509b1836927f82ea56035a5ca795ec46e92bc6ae",
+      "parent": "controller_work/after_v3/integration_v5/v5_events.py",
+      "parent_sha256": "b9bc736bc65dec2a8052ef2f189df3a5bd7e83a0f8a00e8043ddd06e76cf9b84"
+    },
+    "v5b_paths.py": {
+      "initial_copy_sha256": "88f08ee397533c102d789016ce9627fdd0bd7f65082c6e418045c84694cedffc",
+      "parent": "controller_work/after_v3/integration_v5/v5_paths.py",
+      "parent_sha256": "7d96bde0b1b82c192521c7042f0f90d3222ec2b086e169f4b0f7aaa6ff3bef74"
+    },
+    "v5b_pipeline.py": {
+      "initial_copy_sha256": "d795e8f97064a2c8c6d3d425947fad3a3519b6e366775e8c30333da2a0652b54",
+      "parent": "controller_work/after_v3/integration_v5/v5_pipeline.py",
+      "parent_sha256": "32b89202ec5eed5ef030d5f9982b1b0ecd5ab738a9020e3e40991c1a801e849c"
+    }
+  },
+  "preserved_initial_v5_manifest_sha256": "6c347cbd1bd5c836d9e56f272f20a44f805103db85b7e72b945e42825be7f9ba",
+  "status": "IN_PROGRESS_NEW_SOURCE_PREPARATION"
+}

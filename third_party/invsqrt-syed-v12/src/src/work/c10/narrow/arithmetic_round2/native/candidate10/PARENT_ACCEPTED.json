@@ -1,0 +1,10 @@
+{
+  "status": "PARENT_ACCEPTED_COMPLETE_PAPER_GATE_FOR_NATIVE_COMPOSITION",
+  "utc": "2026-11-12T05:16:33.043752+00:00",
+  "complete_gate_sha256": "eb427769c7166ea94422a4d910cd47a2284c38f46f4eb311885ed6b86e6eb714",
+  "native_build_authorized": true,
+  "all_selected_components_native_proved": true,
+  "protected_phase_and_loaders_unchanged": true,
+  "whole_native_and_four_default_batch_salts_required": true,
+  "no_official_or_full_circuit_success_claim": true
+}

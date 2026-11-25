@@ -1,0 +1,17 @@
+patch patch_fwd_narrow.py
+patch patch_w47_body.py
+patch patch_endpoint_v9e2.py
+patch patch_hret_sat_s15k7a.py
+patch patch_seedinv.py
+patch patch_coefdisp.py
+patch patch_coef2_q46.py
+patch patch_h2ret.py
+patch patch_proddisp.py
+patch patch_donor_first60.py
+patch patch_ld_first20_56b8.py
+patch patch_second46_c19_70nb1.py
+patch patch_q47_decoder_resynth2.py
+with patch_endpoint_walk8.py
+with q46_loaders.py
+Q 46
+post agents/micro47/scripts/relocate_cs2.py

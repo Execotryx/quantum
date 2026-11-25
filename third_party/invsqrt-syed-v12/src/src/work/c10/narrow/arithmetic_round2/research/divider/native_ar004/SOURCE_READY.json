@@ -1,0 +1,49 @@
+{
+  "status": "AR004_NATIVE_SOURCE_READY_ACCEPTED_PAPER_NO_EXECUTION_YET",
+  "paper_acceptance_sha256": "d188e0b75ffa397879884f4d77c64fa409b4cada180e5253244f415d84e1d8e7",
+  "expected": {
+    "Q": 48,
+    "divider_E": 578,
+    "T": 0,
+    "R": 0,
+    "endpoint_owners": 43,
+    "all_original_inputs": 3133452
+  },
+  "files": [
+    {
+      "path": "PLAN.md",
+      "bytes": 2554,
+      "sha256": "38b48732febee405dec59dcd6d9e3d87414a2bda1bf88e2194027be8f4435355"
+    },
+    {
+      "path": "adapter.py",
+      "bytes": 2952,
+      "sha256": "9b2f24691a337dfe27f9f47477fbb97f671075dfe313e5a360f5c8ec8635b493"
+    },
+    {
+      "path": "prove.py",
+      "bytes": 15241,
+      "sha256": "1d15be0485da70617017dafaed6e3889f009c8b57bd55bd59b2d206800267352"
+    },
+    {
+      "path": "checker31.py",
+      "bytes": 11080,
+      "sha256": "665952a09d594b0912257c6ee8175c9092d94006600314f3a0c9fa00ca1bef6c"
+    },
+    {
+      "path": "CHECKER_COPY.json",
+      "bytes": 458,
+      "sha256": "e7531166ce08baa4efd674566e2e91556057092229cd80ad8109ed10399ec5d4"
+    },
+    {
+      "path": "INPUTS.json",
+      "bytes": 61433,
+      "sha256": "89ca5d0a650e132b92f56c26e4d0c4e14d1d4aecca9224471577bc6906350aed"
+    },
+    {
+      "path": "INDEPENDENT_REVIEW_ROOT.json",
+      "bytes": 3146,
+      "sha256": "c01221f83c59d480f7735dea6168967ed97887cf70ada1fb700e19cc408c5cea"
+    }
+  ]
+}

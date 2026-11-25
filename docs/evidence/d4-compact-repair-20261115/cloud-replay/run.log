@@ -1,0 +1,16 @@
+dqi_phase_replay.py: OK
+full-cloud-registration.json: OK
+launch.sh: OK
+s6.json: OK
+s7.json: OK
+summary.json: OK
+/dev/shm/d4-compact.DhccNj/candidate.kmb: OK
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        29G   27G  1.5G  95% /
+tmpfs           7.9G  781M  7.1G  10% /dev/shm
+Sun Nov 15 16:51:26 UTC 2026
+s6 started
+s6 matched; value errors=1, phase errors=0
+s7 started
+s7 matched; value errors=1, phase errors=0
+Sun Nov 15 17:06:28 UTC 2026

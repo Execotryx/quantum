@@ -1,0 +1,82 @@
+{
+ "history": 10,
+ "threshold": 16,
+ "replan": true,
+ "compact": true,
+ "own_reused": true,
+ "stage_policy": [
+  [
+   0,
+   "own"
+  ],
+  [
+   2,
+   "own"
+  ],
+  [
+   4,
+   "own"
+  ],
+  [
+   6,
+   "own"
+  ],
+  [
+   8,
+   "own"
+  ],
+  [
+   10,
+   "own"
+  ],
+  [
+   12,
+   "own"
+  ],
+  [
+   14,
+   "own"
+  ],
+  [
+   16,
+   "own"
+  ],
+  [
+   18,
+   "own"
+  ],
+  [
+   20,
+   "own"
+  ],
+  [
+   22,
+   "own"
+  ],
+  [
+   24,
+   "own"
+  ],
+  [
+   26,
+   "own"
+  ],
+  [
+   28,
+   "own"
+  ],
+  [
+   30,
+   "own"
+  ],
+  [
+   32,
+   "single"
+  ],
+  [
+   33,
+   "own"
+  ]
+ ],
+ "sha256": "835414f51eff796282be942f86e0f479901597c144481653eed63402cb6e4ea0"
+}

@@ -1,0 +1,59 @@
+work copy: /tmp/qcompile-v12-dfthcsos-b.EiVX5etI/dfthcsos_build/src
+SHA256SUMS OK: 84 files
+{"k": 0, "sha256": "ce7ebaf342c5b49f7d539637359fb8a282718fb3057e7b25dd193f2a6a4b8974", "toffoli_per_call": 293}
+{"k": 1, "sha256": "3eac70665f021b0e304106fd62749277d4d69db775df008aacd6d950e4934193", "toffoli_per_call": 287}
+{"k": 2, "sha256": "c3e1454e29a05c3c28bcfd16c2aee02340b5d439d9466774424fedf0ed7601d1", "toffoli_per_call": 287}
+{"k": 3, "sha256": "d26b576ae789b0471ec6c11b7317c7c69eb3d7190472af8120ccf25cf217a8ea", "toffoli_per_call": 287}
+{"k": 4, "sha256": "2efacc9d944aa5a855acf780e6bbc3c07af16c0275eb9549bb24adc70acca344", "toffoli_per_call": 268}
+{"k": 5, "sha256": "7e4ed9a363c8f56d85410185c7b4449211788bc61e81b3dc7cbdd10ab7ce8a42", "toffoli_per_call": 268}
+{"k": 6, "sha256": "26ab1d5df8132bbc28e068a4eef0b247ea21a96fa4034f89a6d1bf306f07e284", "toffoli_per_call": 268}
+{"k": 7, "sha256": "1ae98642315e7aaedfde99773af4ae48198bf8b4f2e11e97883d6aa1bfe12bee", "toffoli_per_call": 269}
+{"k": 8, "sha256": "e69c554c360c709e52126a6f773afeaa3564da7be0927d6293665f342203771f", "toffoli_per_call": 263}
+{"k": 9, "sha256": "38848ce19bd553e4007a454d9b7d392d05ac105cf4b269f41521bd1003bf838e", "toffoli_per_call": 264}
+{"k": 10, "sha256": "fdb67807154e35d9f41471c22b38bbc3ed07e5c93efef30a57f0599fb8400ff7", "toffoli_per_call": 264}
+{"k": 11, "sha256": "d22baf8e2d294165618bcee40d958ef2806f0b35352c8b92e0d201aff3269c37", "toffoli_per_call": 264}
+{"k": 12, "sha256": "b1b6af502f4bf02e521ab888600f645aa5a5bed028290466b54a835423eb2517", "toffoli_per_call": 264}
+{"k": 13, "sha256": "1843d7993215656e4e0eee69169966ba269d544bc0b90e855e4ed5e6e113accc", "toffoli_per_call": 264}
+{"k": 14, "sha256": "b763f0cd2fdeaaa31e7811084e51fde5d51575b036fa22854fb28172c1712a8e", "toffoli_per_call": 264}
+all 16 output files match the target SHA-256 list
+own exact branch proof: PASS, 15 circuits x 2 directions, 1220 addresses, all HMR outcomes, ANGLE Toffolis per pass 4074
+BUILT dfthcsos/angle_k_0.kmb ce7ebaf342c5b49f7d539637359fb8a282718fb3057e7b25dd193f2a6a4b8974
+BUILT dfthcsos/angle_k_1.kmb 3eac70665f021b0e304106fd62749277d4d69db775df008aacd6d950e4934193
+BUILT dfthcsos/angle_k_2.kmb c3e1454e29a05c3c28bcfd16c2aee02340b5d439d9466774424fedf0ed7601d1
+BUILT dfthcsos/angle_k_3.kmb d26b576ae789b0471ec6c11b7317c7c69eb3d7190472af8120ccf25cf217a8ea
+BUILT dfthcsos/angle_k_4.kmb 2efacc9d944aa5a855acf780e6bbc3c07af16c0275eb9549bb24adc70acca344
+BUILT dfthcsos/angle_k_5.kmb 7e4ed9a363c8f56d85410185c7b4449211788bc61e81b3dc7cbdd10ab7ce8a42
+BUILT dfthcsos/angle_k_6.kmb 26ab1d5df8132bbc28e068a4eef0b247ea21a96fa4034f89a6d1bf306f07e284
+BUILT dfthcsos/angle_k_7.kmb 1ae98642315e7aaedfde99773af4ae48198bf8b4f2e11e97883d6aa1bfe12bee
+BUILT dfthcsos/angle_k_8.kmb e69c554c360c709e52126a6f773afeaa3564da7be0927d6293665f342203771f
+BUILT dfthcsos/angle_k_9.kmb 38848ce19bd553e4007a454d9b7d392d05ac105cf4b269f41521bd1003bf838e
+BUILT dfthcsos/angle_k_10.kmb fdb67807154e35d9f41471c22b38bbc3ed07e5c93efef30a57f0599fb8400ff7
+BUILT dfthcsos/angle_k_11.kmb d22baf8e2d294165618bcee40d958ef2806f0b35352c8b92e0d201aff3269c37
+BUILT dfthcsos/angle_k_12.kmb b1b6af502f4bf02e521ab888600f645aa5a5bed028290466b54a835423eb2517
+BUILT dfthcsos/angle_k_13.kmb 1843d7993215656e4e0eee69169966ba269d544bc0b90e855e4ed5e6e113accc
+BUILT dfthcsos/angle_k_14.kmb b763f0cd2fdeaaa31e7811084e51fde5d51575b036fa22854fb28172c1712a8e
+BUILT dfthcsos/submission.npz 6418ec8e10b1a8da967ee26278434f9ac950474741185f4d61363e17a03da77f
+build.sh: done in 10 s
+	Command being timed: "bash /mnt/e/sources/python/quantum/runs/d4-open-successor/syed-v12-intake/dfthcsos_source/build.sh /mnt/e/sources/python/quantum/vendor/official/kickmix /mnt/e/sources/python/quantum/vendor/official/verifiers /mnt/e/sources/python/quantum/runs/d4-open-successor/syed-v12-dfthcsos-b"
+	User time (seconds): 4.12
+	System time (seconds): 0.49
+	Percent of CPU this job got: 48%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:09.60
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 50104
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 363
+	Minor (reclaiming a frame) page faults: 92897
+	Voluntary context switches: 18951
+	Involuntary context switches: 33
+	Swaps: 0
+	File system inputs: 44677
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

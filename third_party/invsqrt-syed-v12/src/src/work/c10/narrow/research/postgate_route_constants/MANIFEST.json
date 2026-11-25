@@ -1,0 +1,30 @@
+{
+  "status": "FROZEN_COMPLETE_FINITE_PAPER_ROUTE_CERTIFICATE_NO_NATIVE",
+  "files": [
+    {
+      "path": "PLAN.md",
+      "bytes": 3105,
+      "sha256": "08c7710d1493fd1db0c2a39c90c2fc363936fa5f51ead910c9ec00fc0aaf0476"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 6706,
+      "sha256": "d84ea1e502d5647cf5b260140fa940b1c6d3ce9adf12047e49b9a109d60560f2"
+    },
+    {
+      "path": "RESUME.md",
+      "bytes": 1272,
+      "sha256": "aecee2636f70e0548bc22ec0f76bd150053560e60378ba96fe3700f0da3c7a7a"
+    },
+    {
+      "path": "offsets.json",
+      "bytes": 393756,
+      "sha256": "14f887ede91c2630fd3eca8386a7ac8b55a4951087bbdec009f1e1aee3414a99"
+    },
+    {
+      "path": "screen_offsets.py",
+      "bytes": 8359,
+      "sha256": "a4347dbe194492e64ea0f06a487c5b641e0edcfa64c6eff779b71389c0944956"
+    }
+  ]
+}

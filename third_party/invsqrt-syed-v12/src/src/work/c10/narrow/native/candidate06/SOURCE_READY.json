@@ -1,0 +1,134 @@
+{
+  "status": "FROZEN_CANDIDATE06_COMPLETE_Q48_SOURCE_READY_NOT_NATIVE_EXECUTED",
+  "files": [
+    {
+      "path": "INPUTS.json",
+      "bytes": 48394,
+      "sha256": "0e02707f8647e63eef8ca82cf205479127841a459a988264031ff56203fdbd51"
+    },
+    {
+      "path": "LIFECYCLE_DIVIDER_COMPONENTS.md",
+      "bytes": 4880,
+      "sha256": "2ea36a5382854a2519e8f71b85e5d1eed8ea4282c745e714712a6b89c055e7a8"
+    },
+    {
+      "path": "LIFECYCLE_DIVIDER_STATIC.json",
+      "bytes": 3104,
+      "sha256": "4de042b4c8612e1cd513f8253abfd535a4576620072b35a760aa49143437094e"
+    },
+    {
+      "path": "PARENT_STATIC_REVIEW.json",
+      "bytes": 1845,
+      "sha256": "536baeaa069b01fa99fe8d5df44487f49b4cf32d5064b20e91cd5e5493030fc7"
+    },
+    {
+      "path": "PHASE06_PLAN.md",
+      "bytes": 1853,
+      "sha256": "83c061f098efedcf1fb9f6a0a2b85fc0aa4082a7a8cd531e32ceef5039cb3c58"
+    },
+    {
+      "path": "PHASE06_READY.json",
+      "bytes": 1122,
+      "sha256": "4e8c6594d3995de510078f56baaead12476d1540c50576f1fba8bca615771a9d"
+    },
+    {
+      "path": "PHASE06_STATIC.json",
+      "bytes": 2474,
+      "sha256": "76de35990d65d790361d71b255102902c135ba02b2509fd9b000af5e36a61c01"
+    },
+    {
+      "path": "PLAN.md",
+      "bytes": 2860,
+      "sha256": "6f58e98d18a4b99e3ae580f183d0672cb7ef453a7a338362af1e331914b19f46"
+    },
+    {
+      "path": "RESUME.md",
+      "bytes": 1076,
+      "sha256": "f2a0c6e4b8a9c4937299180c714aa84968d0fc844536d52b1be904d717d40400"
+    },
+    {
+      "path": "audit_tables06_static.py",
+      "bytes": 12757,
+      "sha256": "747e5248c9a34f40053d650c99800190340046b96498212218d650149ff514f6"
+    },
+    {
+      "path": "decoder06.py",
+      "bytes": 2202,
+      "sha256": "9fb7e197e85e343131b200e9ee0c081437b83b6824c615431ba9627d3b67417c"
+    },
+    {
+      "path": "divider_cleanup06.py",
+      "bytes": 4239,
+      "sha256": "eef2870d4788d95c59f56f13269f6d4ee858fbc3ac1c6e0ee8353a516292d647"
+    },
+    {
+      "path": "generate.py",
+      "bytes": 5174,
+      "sha256": "3c6cd010f31be105c5bfdd8a03694b341ca73a84072fc8a9404f2a904cf9f4df"
+    },
+    {
+      "path": "lifecycle06.py",
+      "bytes": 10299,
+      "sha256": "0e38bf25ef639106608b7fb70e863aed75f0fcc82fca9a98e8e94cec905ea8aa"
+    },
+    {
+      "path": "phase06.py",
+      "bytes": 7444,
+      "sha256": "4e979c47bc90317a6ac3576bc74964cf74222c2006e1630f6b17075af51ccdfb"
+    },
+    {
+      "path": "prove50.py",
+      "bytes": 3538,
+      "sha256": "3728736ac482260eab2e98cd82987a1f2c7bb91d93cd9dfb9c71820d48521753"
+    },
+    {
+      "path": "run_batch.py",
+      "bytes": 2752,
+      "sha256": "445dcb481328d4e4222bbaa98e04d0345c59583877bf099302b47e673b718581"
+    },
+    {
+      "path": "static_phase06.py",
+      "bytes": 4885,
+      "sha256": "3715cc352f0260adc1ee3002d6fae473d4277de69aef8b9216d79090433e14be"
+    },
+    {
+      "path": "tables06.py",
+      "bytes": 6482,
+      "sha256": "f0eef9c8905b0d4e9c20bb286b33d526c0cf0f27ea4bb619c066ea7ed58a690b"
+    },
+    {
+      "path": "tables06_static_audit.json",
+      "bytes": 2765,
+      "sha256": "2cbdf91e2e9b1b4ed5bd97f10a25531b12fe70021aa480db0c53423713b40ac5"
+    },
+    {
+      "path": "variant.py",
+      "bytes": 4267,
+      "sha256": "2c9ece9c700b0a87c21c37b9691e4a2a15d8d580cd972eb115d1e918008562c6"
+    }
+  ],
+  "expected_resources": {
+    "Q": 48,
+    "Toffolis": 1591,
+    "T": 4,
+    "R": 34,
+    "exact_margin_units64": 124372027,
+    "rotation_charge": 238.04838838550535,
+    "predicted_complete_cost": 87842.32264250425
+  },
+  "parent_authorization_sha256": "99ef9a891d4e99b262b1a452ea48b18c536e91e7017f018b77bc37f1793ccffd",
+  "input_manifest_sha256": "0e02707f8647e63eef8ca82cf205479127841a459a988264031ff56203fdbd51",
+  "native_execution_owner": "parent shared strict native guard",
+  "required_hard_address_space": 536870912,
+  "command": "/usr/bin/python3.13 narrow/native/candidate06/run_batch.py --full-proof",
+  "previous_candidates_preserved": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "phase_grid_turns": "1/1125899906842624",
+  "native_execution_performed": false,
+  "no_submission": true
+}

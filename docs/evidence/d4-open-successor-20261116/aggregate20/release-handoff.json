@@ -1,0 +1,11 @@
+{
+  "status": "validated_on_cloud",
+  "archive_sha256": "790f5727d8d3c5aa2efa3d9e910c43ab8f07e991ab47ce048a0a3fa1cd81eb24",
+  "aggregate_certificate_sha256": "26c98d6a967c0fe41cc2b584b06425d4f8683ba251d2587b2c6ce2cf6ff4d8dd",
+  "independent_rebuild_sha256": "3ba7a19d402f1e7ced95af71a7c5160d8408d8cab274c335437c983e87235798",
+  "dqi_member_record_sha256": "c32c500666c88dc0727b456133355150bb751cb6e602d189496181f479d54119",
+  "dqi_circuit_sha256": "c726a6426612ce094ac0ea98d0fabafbe323c09d4fd078e3d2b037fa4bd5c5f7",
+  "dqi_confirmation_report_sha256": "845031383cc53d0e4b80a6cded2b8831ad338d3cc8570b606880d1370fc43bba",
+  "dqi_confirmation_trials": 102400,
+  "dqi_confirmation_failures": 0
+}

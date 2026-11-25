@@ -1,0 +1,18 @@
+{
+  "status": "PASS_STATIC_SOURCE_AND_PROXY_AUDIT_NO_NATIVE_EXECUTION",
+  "source_pins": 51,
+  "proxy_generic_replacements": 34,
+  "proxy_unchanged_T": 4,
+  "proxy_unchanged_Clifford": 1,
+  "proxy_negative_tests": 3,
+  "native03_text_source_pin_verified": true,
+  "native03_signed_to_canonical_angles_verified": true,
+  "direct_delta_identity_affine_basis_cases": 286,
+  "all_new_angle_classes_generic": true,
+  "phase_modulus": 1125899906842624,
+  "syntax_sources": 6,
+  "native_imported": false,
+  "native_emitted": false,
+  "full_domain_scan_performed": false,
+  "seconds": 0.03813361100037582
+}

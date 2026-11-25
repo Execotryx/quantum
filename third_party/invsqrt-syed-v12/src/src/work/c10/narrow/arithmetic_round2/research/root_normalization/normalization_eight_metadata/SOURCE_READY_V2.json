@@ -1,0 +1,29 @@
+{
+  "status": "SELECTED_PAPER_SOURCE_READY_NOT_RUN",
+  "files": [
+    {
+      "path": "PLAN.md",
+      "bytes": 3892,
+      "sha256": "09e462fbc076cf49ab3f71e0a9c27491ac2bfdfd70b7315a85574f8123d408ec"
+    },
+    {
+      "path": "study_v2.py",
+      "bytes": 14158,
+      "sha256": "918723beb61a8f121ea7f97e2fd0d43d3407aaf316b02dcce372fd8cfc3d7cbb"
+    },
+    {
+      "path": "INPUTS.json",
+      "bytes": 61132,
+      "sha256": "d9a0b499de24c0d75faa74f42a83294b8cded417efe75112d0cd49063a4ebd24"
+    },
+    {
+      "path": "SELECTION.md",
+      "bytes": 379,
+      "sha256": "c725903fa6017966ee37c46e6d570e53deec393c82869ea24da23d4b1df61d4d"
+    }
+  ],
+  "replaces_unrun_source_only": "SOURCE_READY.json",
+  "native_execution": false,
+  "guard_seconds": 30,
+  "target_inverse_E": 43.25
+}

@@ -1,0 +1,1400 @@
+{
+  "status": "CONDITIONAL_PAIR_NORMALIZATION_LEDGER_NO_NATIVE_PASS",
+  "source_pins": {
+    "research/recompute_root/models/phasefit_z1_K7_G4_m37_virtual_quadS2_36_12c0.json": "24fff823faa911afe93d02afc3ded0bbd156a210a85f1265c989a087f8fd1219",
+    "research/recompute_root/decoder_k8/endpoint_reuse.json": "334ba08ff4baa68f8a7622334320ead48bf811d03aeea3b56430ce02e4de04ac",
+    "research/quantized_producer/framed_retained5_best21_snapshot.json": "3b6fa7059bee77bb9abe6c7395cd8ff2f2899843523188c60d513e6c5d381def",
+    "research/quantized_producer/u11_hmr_initializer.json": "b9e3183ad1291f0805d352ddd6efb37bb7be89d8af68f859ec8c80b76bfda15b",
+    "research/joint_loader/search/subspace16_cap23_s3_raw.json": "8c0f15847a70c68b910f97b3f78c86f64fd55cab7ff4ddf90c3891bec5385a15",
+    "research/joint_loader/search/subspace16_cap18_s2_raw.json": "f5f872c90a48192e08928266fe307a9802e965e58d489f2127e4fcefb16d1916",
+    "research/joint_loader/retained_table_cleanup.json": "6a48b472433918d2c51f30e6eeb1d9933fdf1aa4ae9f83b93129fd8ac103b6b5"
+  },
+  "model_margin": 31966138,
+  "normalized_endpoint_inputs": 3145728,
+  "endpoint_alias_bit_checks": 207618048,
+  "rows": [
+    {
+      "Q": 48,
+      "status": "ACTUAL_LOADERS_EXCEED_Q_CAP",
+      "components": {
+        "consuming_root": 206,
+        "normalization_allowance_unverified_interface": 122,
+        "product": 249.5,
+        "divider_with_u11_HMR": 624.5,
+        "phase_direct": 148.0,
+        "rotation_charge": 247.3782058208682,
+        "coefficient_rows": 123,
+        "coefficient_R_frames": 4,
+        "seed": 17.5,
+        "H3_H4_preparation_and_restoration": 7,
+        "retired_root_decoder": 21,
+        "pure_table_cleanup": 9
+      },
+      "known_E_before_two_loaders": 1778.8782058208683,
+      "first_loader": {
+        "Toffolis": 78,
+        "fixed_owners": 26,
+        "work_peak": 23,
+        "peak": 49
+      },
+      "second_loader": {
+        "Toffolis": 78,
+        "fixed_owners": 31,
+        "work_peak": 18,
+        "peak": 49
+      },
+      "actual_loader_E": 156,
+      "total_E": 1934.8782058208683,
+      "paper_total_cost": 92874.15387940168,
+      "width_legal": false,
+      "required_further_E_saving": {
+        "beat_stage97": 12.400080820868425,
+        "target": 60.149039154201546,
+        "stretch": 211.1282058208683
+      },
+      "remaining_two_loader_E": {
+        "beat_stage97": 143.59991917913158,
+        "target": 95.85096084579845,
+        "stretch": -55.12820582086829
+      },
+      "inverse_product": {
+        "P15_cut_data": 43,
+        "restored_redundant_sign_wire": 1,
+        "arithmetic_data": 44,
+        "owners": "word16+D13+root7+flags4+Hlow3+oldA6snapshot",
+        "forward_E": 103.0,
+        "inverse_E": 146.5,
+        "peak": 48
+      },
+      "seed_cleanup": {
+        "status": "SOURCE_EXPANDED_CONDITIONAL_PAPER_NOT_NATIVE",
+        "Q": 48,
+        "retired_root": 5,
+        "retained_slope": 3,
+        "initial_data": 44,
+        "peak": 47,
+        "final_data": 38,
+        "cleanup_expected_E": 4.5,
+        "complete_seed_lifecycle_expected_E": 17.5,
+        "T": 0,
+        "R": 0
+      },
+      "first_seed_peak": 47,
+      "producer_passes": {
+        "first_forward": {
+          "status": "SOURCE_EXPANDED_PAPER_NOT_NATIVE",
+          "Q": 48,
+          "product_bits": 10,
+          "retired_raw_high_bits": [],
+          "lookup_data": 42,
+          "H3_prepare_before_root_retirement_data": 43,
+          "coefficient_data": 44,
+          "snapshot_data": 45,
+          "forward": 41.0,
+          "inverse": 49.5,
+          "forward_high": 6.0,
+          "inverse_high": 9.5,
+          "forward_peak": 48,
+          "inverse_peak": 48,
+          "rows": [
+            {
+              "i": 0,
+              "k": 4,
+              "forward": 7.0,
+              "inverse": 8.0
+            },
+            {
+              "i": 1,
+              "k": 3,
+              "forward": 7.0,
+              "inverse": 8.0
+            },
+            {
+              "i": 2,
+              "k": 2,
+              "forward": 7.0,
+              "inverse": 8.0
+            },
+            {
+              "i": 3,
+              "k": 1,
+              "forward": 7.0,
+              "inverse": 8.0
+            },
+            {
+              "i": 4,
+              "k": 0,
+              "forward": 7.0,
+              "inverse": 8.0
+            }
+          ]
+        },
+        "second_forward": {
+          "status": "SOURCE_EXPANDED_PAPER_NOT_NATIVE",
+          "Q": 48,
+          "product_bits": 15,
+          "retired_raw_high_bits": [
+            0,
+            1,
+            2,
+            4,
+            6
+          ],
+          "lookup_data": 47,
+          "H3_prepare_before_root_retirement_data": 48,
+          "coefficient_data": 44,
+          "snapshot_data": 45,
+          "forward": 41.0,
+          "inverse": 49.5,
+          "forward_high": 6.0,
+          "inverse_high": 9.5,
+          "forward_peak": 48,
+          "inverse_peak": 48,
+          "rows": [
+            {
+              "i": 0,
+              "k": 4,
+              "forward": 7.0,
+              "inverse": 8.0
+            },
+            {
+              "i": 1,
+              "k": 3,
+              "forward": 7.0,
+              "inverse": 8.0
+            },
+            {
+              "i": 2,
+              "k": 2,
+              "forward": 7.0,
+              "inverse": 8.0
+            },
+            {
+              "i": 3,
+              "k": 1,
+              "forward": 7.0,
+              "inverse": 8.0
+            },
+            {
+              "i": 4,
+              "k": 0,
+              "forward": 7.0,
+              "inverse": 8.0
+            }
+          ]
+        },
+        "final_inverse": {
+          "status": "SOURCE_EXPANDED_PAPER_NOT_NATIVE",
+          "Q": 48,
+          "product_bits": 10,
+          "retired_raw_high_bits": [
+            0,
+            1,
+            2,
+            4,
+            6
+          ],
+          "lookup_data": 42,
+          "H3_prepare_before_root_retirement_data": 43,
+          "coefficient_data": 39,
+          "snapshot_data": 40,
+          "forward": 41.0,
+          "inverse": 41.0,
+          "forward_high": 6.0,
+          "inverse_high": 6.0,
+          "forward_peak": 43,
+          "inverse_peak": 45,
+          "rows": [
+            {
+              "i": 0,
+              "k": 4,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 1,
+              "k": 3,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 2,
+              "k": 2,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 3,
+              "k": 1,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 4,
+              "k": 0,
+              "forward": 7.0,
+              "inverse": 7.0
+            }
+          ]
+        }
+      },
+      "phase": {
+        "R": 34,
+        "T": 4,
+        "Toffolis": 147.0,
+        "peak": 48
+      }
+    },
+    {
+      "Q": 49,
+      "status": "CONDITIONAL_NORMALIZATION_GATE_ALSO_FAILS_COST",
+      "components": {
+        "consuming_root": 206,
+        "normalization_allowance_unverified_interface": 122,
+        "product": 229.0,
+        "divider_with_u11_HMR": 605.5,
+        "phase_direct": 147.0,
+        "rotation_charge": 247.3782058208682,
+        "coefficient_rows": 123,
+        "coefficient_R_frames": 4,
+        "seed": 17.5,
+        "H3_H4_preparation_and_restoration": 7,
+        "retired_root_decoder": 21,
+        "pure_table_cleanup": 9
+      },
+      "known_E_before_two_loaders": 1738.3782058208683,
+      "first_loader": {
+        "Toffolis": 78,
+        "fixed_owners": 26,
+        "work_peak": 23,
+        "peak": 49
+      },
+      "second_loader": {
+        "Toffolis": 78,
+        "fixed_owners": 31,
+        "work_peak": 18,
+        "peak": 49
+      },
+      "actual_loader_E": 156,
+      "total_E": 1894.3782058208683,
+      "paper_total_cost": 92824.53208522254,
+      "width_legal": true,
+      "required_further_E_saving": {
+        "beat_stage97": 11.134328269847856,
+        "target": 57.908818065766354,
+        "stretch": 205.80677724943962
+      },
+      "remaining_two_loader_E": {
+        "beat_stage97": 144.86567173015214,
+        "target": 98.09118193423365,
+        "stretch": -49.80677724943962
+      },
+      "inverse_product": {
+        "P15_cut_data": 43,
+        "restored_redundant_sign_wire": 1,
+        "arithmetic_data": 44,
+        "owners": "word16+D13+root7+flags4+Hlow3+oldA6snapshot",
+        "forward_E": 103.0,
+        "inverse_E": 126.0,
+        "peak": 49
+      },
+      "seed_cleanup": {
+        "status": "SOURCE_EXPANDED_CONDITIONAL_PAPER_NOT_NATIVE",
+        "Q": 49,
+        "retired_root": 5,
+        "retained_slope": 3,
+        "initial_data": 44,
+        "peak": 47,
+        "final_data": 38,
+        "cleanup_expected_E": 4.5,
+        "complete_seed_lifecycle_expected_E": 17.5,
+        "T": 0,
+        "R": 0
+      },
+      "first_seed_peak": 47,
+      "producer_passes": {
+        "first_forward": {
+          "status": "SOURCE_EXPANDED_PAPER_NOT_NATIVE",
+          "Q": 49,
+          "product_bits": 10,
+          "retired_raw_high_bits": [],
+          "lookup_data": 42,
+          "H3_prepare_before_root_retirement_data": 43,
+          "coefficient_data": 44,
+          "snapshot_data": 45,
+          "forward": 41.0,
+          "inverse": 44.0,
+          "forward_high": 6.0,
+          "inverse_high": 6.5,
+          "forward_peak": 48,
+          "inverse_peak": 49,
+          "rows": [
+            {
+              "i": 0,
+              "k": 4,
+              "forward": 7.0,
+              "inverse": 7.5
+            },
+            {
+              "i": 1,
+              "k": 3,
+              "forward": 7.0,
+              "inverse": 7.5
+            },
+            {
+              "i": 2,
+              "k": 2,
+              "forward": 7.0,
+              "inverse": 7.5
+            },
+            {
+              "i": 3,
+              "k": 1,
+              "forward": 7.0,
+              "inverse": 7.5
+            },
+            {
+              "i": 4,
+              "k": 0,
+              "forward": 7.0,
+              "inverse": 7.5
+            }
+          ]
+        },
+        "second_forward": {
+          "status": "SOURCE_EXPANDED_PAPER_NOT_NATIVE",
+          "Q": 49,
+          "product_bits": 15,
+          "retired_raw_high_bits": [
+            0,
+            1,
+            2,
+            4,
+            6
+          ],
+          "lookup_data": 47,
+          "H3_prepare_before_root_retirement_data": 48,
+          "coefficient_data": 44,
+          "snapshot_data": 45,
+          "forward": 41.0,
+          "inverse": 44.0,
+          "forward_high": 6.0,
+          "inverse_high": 6.5,
+          "forward_peak": 48,
+          "inverse_peak": 49,
+          "rows": [
+            {
+              "i": 0,
+              "k": 4,
+              "forward": 7.0,
+              "inverse": 7.5
+            },
+            {
+              "i": 1,
+              "k": 3,
+              "forward": 7.0,
+              "inverse": 7.5
+            },
+            {
+              "i": 2,
+              "k": 2,
+              "forward": 7.0,
+              "inverse": 7.5
+            },
+            {
+              "i": 3,
+              "k": 1,
+              "forward": 7.0,
+              "inverse": 7.5
+            },
+            {
+              "i": 4,
+              "k": 0,
+              "forward": 7.0,
+              "inverse": 7.5
+            }
+          ]
+        },
+        "final_inverse": {
+          "status": "SOURCE_EXPANDED_PAPER_NOT_NATIVE",
+          "Q": 49,
+          "product_bits": 10,
+          "retired_raw_high_bits": [
+            0,
+            1,
+            2,
+            4,
+            6
+          ],
+          "lookup_data": 42,
+          "H3_prepare_before_root_retirement_data": 43,
+          "coefficient_data": 39,
+          "snapshot_data": 40,
+          "forward": 41.0,
+          "inverse": 41.0,
+          "forward_high": 6.0,
+          "inverse_high": 6.0,
+          "forward_peak": 43,
+          "inverse_peak": 45,
+          "rows": [
+            {
+              "i": 0,
+              "k": 4,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 1,
+              "k": 3,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 2,
+              "k": 2,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 3,
+              "k": 1,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 4,
+              "k": 0,
+              "forward": 7.0,
+              "inverse": 7.0
+            }
+          ]
+        }
+      },
+      "phase": {
+        "R": 34,
+        "T": 4,
+        "Toffolis": 146.0,
+        "peak": 49
+      }
+    },
+    {
+      "Q": 50,
+      "status": "CONDITIONAL_NORMALIZATION_GATE_ALSO_FAILS_COST",
+      "components": {
+        "consuming_root": 206,
+        "normalization_allowance_unverified_interface": 122,
+        "product": 223.0,
+        "divider_with_u11_HMR": 595.0,
+        "phase_direct": 147.0,
+        "rotation_charge": 247.3782058208682,
+        "coefficient_rows": 123,
+        "coefficient_R_frames": 4,
+        "seed": 17.5,
+        "H3_H4_preparation_and_restoration": 7,
+        "retired_root_decoder": 21,
+        "pure_table_cleanup": 9
+      },
+      "known_E_before_two_loaders": 1721.8782058208683,
+      "first_loader": {
+        "Toffolis": 78,
+        "fixed_owners": 26,
+        "work_peak": 23,
+        "peak": 49
+      },
+      "second_loader": {
+        "Toffolis": 78,
+        "fixed_owners": 31,
+        "work_peak": 18,
+        "peak": 49
+      },
+      "actual_loader_E": 156,
+      "total_E": 1877.8782058208683,
+      "paper_total_cost": 93893.91029104342,
+      "width_legal": true,
+      "required_further_E_saving": {
+        "beat_stage97": 32.29920582086834,
+        "target": 78.13820582086828,
+        "stretch": 223.07820582086833
+      },
+      "remaining_two_loader_E": {
+        "beat_stage97": 123.70079417913166,
+        "target": 77.86179417913172,
+        "stretch": -67.07820582086833
+      },
+      "inverse_product": {
+        "P15_cut_data": 43,
+        "restored_redundant_sign_wire": 1,
+        "arithmetic_data": 44,
+        "owners": "word16+D13+root7+flags4+Hlow3+oldA6snapshot",
+        "forward_E": 103.0,
+        "inverse_E": 120.0,
+        "peak": 50
+      },
+      "seed_cleanup": {
+        "status": "SOURCE_EXPANDED_CONDITIONAL_PAPER_NOT_NATIVE",
+        "Q": 50,
+        "retired_root": 5,
+        "retained_slope": 3,
+        "initial_data": 44,
+        "peak": 47,
+        "final_data": 38,
+        "cleanup_expected_E": 4.5,
+        "complete_seed_lifecycle_expected_E": 17.5,
+        "T": 0,
+        "R": 0
+      },
+      "first_seed_peak": 47,
+      "producer_passes": {
+        "first_forward": {
+          "status": "SOURCE_EXPANDED_PAPER_NOT_NATIVE",
+          "Q": 50,
+          "product_bits": 10,
+          "retired_raw_high_bits": [],
+          "lookup_data": 42,
+          "H3_prepare_before_root_retirement_data": 43,
+          "coefficient_data": 44,
+          "snapshot_data": 45,
+          "forward": 41.0,
+          "inverse": 41.0,
+          "forward_high": 6.0,
+          "inverse_high": 6.0,
+          "forward_peak": 48,
+          "inverse_peak": 50,
+          "rows": [
+            {
+              "i": 0,
+              "k": 4,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 1,
+              "k": 3,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 2,
+              "k": 2,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 3,
+              "k": 1,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 4,
+              "k": 0,
+              "forward": 7.0,
+              "inverse": 7.0
+            }
+          ]
+        },
+        "second_forward": {
+          "status": "SOURCE_EXPANDED_PAPER_NOT_NATIVE",
+          "Q": 50,
+          "product_bits": 15,
+          "retired_raw_high_bits": [
+            0,
+            1,
+            2,
+            4,
+            6
+          ],
+          "lookup_data": 47,
+          "H3_prepare_before_root_retirement_data": 48,
+          "coefficient_data": 44,
+          "snapshot_data": 45,
+          "forward": 41.0,
+          "inverse": 41.0,
+          "forward_high": 6.0,
+          "inverse_high": 6.0,
+          "forward_peak": 48,
+          "inverse_peak": 50,
+          "rows": [
+            {
+              "i": 0,
+              "k": 4,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 1,
+              "k": 3,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 2,
+              "k": 2,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 3,
+              "k": 1,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 4,
+              "k": 0,
+              "forward": 7.0,
+              "inverse": 7.0
+            }
+          ]
+        },
+        "final_inverse": {
+          "status": "SOURCE_EXPANDED_PAPER_NOT_NATIVE",
+          "Q": 50,
+          "product_bits": 10,
+          "retired_raw_high_bits": [
+            0,
+            1,
+            2,
+            4,
+            6
+          ],
+          "lookup_data": 42,
+          "H3_prepare_before_root_retirement_data": 43,
+          "coefficient_data": 39,
+          "snapshot_data": 40,
+          "forward": 41.0,
+          "inverse": 41.0,
+          "forward_high": 6.0,
+          "inverse_high": 6.0,
+          "forward_peak": 43,
+          "inverse_peak": 45,
+          "rows": [
+            {
+              "i": 0,
+              "k": 4,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 1,
+              "k": 3,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 2,
+              "k": 2,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 3,
+              "k": 1,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 4,
+              "k": 0,
+              "forward": 7.0,
+              "inverse": 7.0
+            }
+          ]
+        }
+      },
+      "phase": {
+        "R": 34,
+        "T": 4,
+        "Toffolis": 146.0,
+        "peak": 49
+      }
+    },
+    {
+      "Q": 51,
+      "status": "CONDITIONAL_NORMALIZATION_GATE_ALSO_FAILS_COST",
+      "components": {
+        "consuming_root": 206,
+        "normalization_allowance_unverified_interface": 122,
+        "product": 219.0,
+        "divider_with_u11_HMR": 585.5,
+        "phase_direct": 147.0,
+        "rotation_charge": 247.3782058208682,
+        "coefficient_rows": 123,
+        "coefficient_R_frames": 4,
+        "seed": 17.5,
+        "H3_H4_preparation_and_restoration": 7,
+        "retired_root_decoder": 21,
+        "pure_table_cleanup": 9
+      },
+      "known_E_before_two_loaders": 1708.3782058208683,
+      "first_loader": {
+        "Toffolis": 78,
+        "fixed_owners": 26,
+        "work_peak": 23,
+        "peak": 49
+      },
+      "second_loader": {
+        "Toffolis": 78,
+        "fixed_owners": 31,
+        "work_peak": 18,
+        "peak": 49
+      },
+      "actual_loader_E": 156,
+      "total_E": 1864.3782058208683,
+      "paper_total_cost": 95083.28849686428,
+      "width_legal": true,
+      "required_further_E_saving": {
+        "beat_stage97": 54.98702935028018,
+        "target": 99.92722542871138,
+        "stretch": 242.0252646443978
+      },
+      "remaining_two_loader_E": {
+        "beat_stage97": 101.01297064971982,
+        "target": 56.07277457128862,
+        "stretch": -86.0252646443978
+      },
+      "inverse_product": {
+        "P15_cut_data": 43,
+        "restored_redundant_sign_wire": 1,
+        "arithmetic_data": 44,
+        "owners": "word16+D13+root7+flags4+Hlow3+oldA6snapshot",
+        "forward_E": 103.0,
+        "inverse_E": 116.0,
+        "peak": 51
+      },
+      "seed_cleanup": {
+        "status": "SOURCE_EXPANDED_CONDITIONAL_PAPER_NOT_NATIVE",
+        "Q": 51,
+        "retired_root": 5,
+        "retained_slope": 3,
+        "initial_data": 44,
+        "peak": 47,
+        "final_data": 38,
+        "cleanup_expected_E": 4.5,
+        "complete_seed_lifecycle_expected_E": 17.5,
+        "T": 0,
+        "R": 0
+      },
+      "first_seed_peak": 47,
+      "producer_passes": {
+        "first_forward": {
+          "status": "SOURCE_EXPANDED_PAPER_NOT_NATIVE",
+          "Q": 51,
+          "product_bits": 10,
+          "retired_raw_high_bits": [],
+          "lookup_data": 42,
+          "H3_prepare_before_root_retirement_data": 43,
+          "coefficient_data": 44,
+          "snapshot_data": 45,
+          "forward": 41.0,
+          "inverse": 41.0,
+          "forward_high": 6.0,
+          "inverse_high": 6.0,
+          "forward_peak": 48,
+          "inverse_peak": 50,
+          "rows": [
+            {
+              "i": 0,
+              "k": 4,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 1,
+              "k": 3,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 2,
+              "k": 2,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 3,
+              "k": 1,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 4,
+              "k": 0,
+              "forward": 7.0,
+              "inverse": 7.0
+            }
+          ]
+        },
+        "second_forward": {
+          "status": "SOURCE_EXPANDED_PAPER_NOT_NATIVE",
+          "Q": 51,
+          "product_bits": 15,
+          "retired_raw_high_bits": [
+            0,
+            1,
+            2,
+            4,
+            6
+          ],
+          "lookup_data": 47,
+          "H3_prepare_before_root_retirement_data": 48,
+          "coefficient_data": 44,
+          "snapshot_data": 45,
+          "forward": 41.0,
+          "inverse": 41.0,
+          "forward_high": 6.0,
+          "inverse_high": 6.0,
+          "forward_peak": 48,
+          "inverse_peak": 50,
+          "rows": [
+            {
+              "i": 0,
+              "k": 4,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 1,
+              "k": 3,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 2,
+              "k": 2,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 3,
+              "k": 1,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 4,
+              "k": 0,
+              "forward": 7.0,
+              "inverse": 7.0
+            }
+          ]
+        },
+        "final_inverse": {
+          "status": "SOURCE_EXPANDED_PAPER_NOT_NATIVE",
+          "Q": 51,
+          "product_bits": 10,
+          "retired_raw_high_bits": [
+            0,
+            1,
+            2,
+            4,
+            6
+          ],
+          "lookup_data": 42,
+          "H3_prepare_before_root_retirement_data": 43,
+          "coefficient_data": 39,
+          "snapshot_data": 40,
+          "forward": 41.0,
+          "inverse": 41.0,
+          "forward_high": 6.0,
+          "inverse_high": 6.0,
+          "forward_peak": 43,
+          "inverse_peak": 45,
+          "rows": [
+            {
+              "i": 0,
+              "k": 4,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 1,
+              "k": 3,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 2,
+              "k": 2,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 3,
+              "k": 1,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 4,
+              "k": 0,
+              "forward": 7.0,
+              "inverse": 7.0
+            }
+          ]
+        }
+      },
+      "phase": {
+        "R": 34,
+        "T": 4,
+        "Toffolis": 146.0,
+        "peak": 49
+      }
+    },
+    {
+      "Q": 52,
+      "status": "CONDITIONAL_NORMALIZATION_GATE_ALSO_FAILS_COST",
+      "components": {
+        "consuming_root": 206,
+        "normalization_allowance_unverified_interface": 122,
+        "product": 215.5,
+        "divider_with_u11_HMR": 576.5,
+        "phase_direct": 147.0,
+        "rotation_charge": 247.3782058208682,
+        "coefficient_rows": 123,
+        "coefficient_R_frames": 4,
+        "seed": 17.5,
+        "H3_H4_preparation_and_restoration": 7,
+        "retired_root_decoder": 21,
+        "pure_table_cleanup": 9
+      },
+      "known_E_before_two_loaders": 1695.8782058208683,
+      "first_loader": {
+        "Toffolis": 78,
+        "fixed_owners": 26,
+        "work_peak": 23,
+        "peak": 49
+      },
+      "second_loader": {
+        "Toffolis": 78,
+        "fixed_owners": 31,
+        "work_peak": 18,
+        "peak": 49
+      },
+      "actual_loader_E": 156,
+      "total_E": 1851.8782058208683,
+      "paper_total_cost": 96297.66670268515,
+      "width_legal": true,
+      "required_further_E_saving": {
+        "beat_stage97": 77.283013513176,
+        "target": 121.35897505163757,
+        "stretch": 260.7243596670221
+      },
+      "remaining_two_loader_E": {
+        "beat_stage97": 78.716986486824,
+        "target": 34.64102494836243,
+        "stretch": -104.7243596670221
+      },
+      "inverse_product": {
+        "P15_cut_data": 43,
+        "restored_redundant_sign_wire": 1,
+        "arithmetic_data": 44,
+        "owners": "word16+D13+root7+flags4+Hlow3+oldA6snapshot",
+        "forward_E": 103.0,
+        "inverse_E": 112.5,
+        "peak": 52
+      },
+      "seed_cleanup": {
+        "status": "SOURCE_EXPANDED_CONDITIONAL_PAPER_NOT_NATIVE",
+        "Q": 52,
+        "retired_root": 5,
+        "retained_slope": 3,
+        "initial_data": 44,
+        "peak": 47,
+        "final_data": 38,
+        "cleanup_expected_E": 4.5,
+        "complete_seed_lifecycle_expected_E": 17.5,
+        "T": 0,
+        "R": 0
+      },
+      "first_seed_peak": 47,
+      "producer_passes": {
+        "first_forward": {
+          "status": "SOURCE_EXPANDED_PAPER_NOT_NATIVE",
+          "Q": 52,
+          "product_bits": 10,
+          "retired_raw_high_bits": [],
+          "lookup_data": 42,
+          "H3_prepare_before_root_retirement_data": 43,
+          "coefficient_data": 44,
+          "snapshot_data": 45,
+          "forward": 41.0,
+          "inverse": 41.0,
+          "forward_high": 6.0,
+          "inverse_high": 6.0,
+          "forward_peak": 48,
+          "inverse_peak": 50,
+          "rows": [
+            {
+              "i": 0,
+              "k": 4,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 1,
+              "k": 3,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 2,
+              "k": 2,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 3,
+              "k": 1,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 4,
+              "k": 0,
+              "forward": 7.0,
+              "inverse": 7.0
+            }
+          ]
+        },
+        "second_forward": {
+          "status": "SOURCE_EXPANDED_PAPER_NOT_NATIVE",
+          "Q": 52,
+          "product_bits": 15,
+          "retired_raw_high_bits": [
+            0,
+            1,
+            2,
+            4,
+            6
+          ],
+          "lookup_data": 47,
+          "H3_prepare_before_root_retirement_data": 48,
+          "coefficient_data": 44,
+          "snapshot_data": 45,
+          "forward": 41.0,
+          "inverse": 41.0,
+          "forward_high": 6.0,
+          "inverse_high": 6.0,
+          "forward_peak": 48,
+          "inverse_peak": 50,
+          "rows": [
+            {
+              "i": 0,
+              "k": 4,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 1,
+              "k": 3,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 2,
+              "k": 2,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 3,
+              "k": 1,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 4,
+              "k": 0,
+              "forward": 7.0,
+              "inverse": 7.0
+            }
+          ]
+        },
+        "final_inverse": {
+          "status": "SOURCE_EXPANDED_PAPER_NOT_NATIVE",
+          "Q": 52,
+          "product_bits": 10,
+          "retired_raw_high_bits": [
+            0,
+            1,
+            2,
+            4,
+            6
+          ],
+          "lookup_data": 42,
+          "H3_prepare_before_root_retirement_data": 43,
+          "coefficient_data": 39,
+          "snapshot_data": 40,
+          "forward": 41.0,
+          "inverse": 41.0,
+          "forward_high": 6.0,
+          "inverse_high": 6.0,
+          "forward_peak": 43,
+          "inverse_peak": 45,
+          "rows": [
+            {
+              "i": 0,
+              "k": 4,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 1,
+              "k": 3,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 2,
+              "k": 2,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 3,
+              "k": 1,
+              "forward": 7.0,
+              "inverse": 7.0
+            },
+            {
+              "i": 4,
+              "k": 0,
+              "forward": 7.0,
+              "inverse": 7.0
+            }
+          ]
+        }
+      },
+      "phase": {
+        "R": 34,
+        "T": 4,
+        "Toffolis": 146.0,
+        "peak": 49
+      }
+    }
+  ],
+  "metadata_certificate": {
+    "status": "EXACT_COEFFICIENT_METADATA_AND_ROOT_CHART_CERTIFICATE_NOT_NATIVE",
+    "model_sha256": "24fff823faa911afe93d02afc3ded0bbd156a210a85f1265c989a087f8fd1219",
+    "decoder_snapshot_sha256": "78b8658f051bda7b9fcfd0afa503a3291819afb14fa7647a51af76d9c1c65d34",
+    "roots": 4096,
+    "metadata_HMR_cases": 16384,
+    "retained_high_root": [
+      "R=physicala3",
+      "rawa5"
+    ],
+    "retired_raw_high_root": [
+      "a0",
+      "a1",
+      "a2",
+      "a4",
+      "a6"
+    ],
+    "root_frame": [
+      "CX(a2,a3)",
+      "CX(a2,a5)",
+      "CCX(a1,a5,a3)",
+      "CX(a2,a5)"
+    ],
+    "root_frame_lifecycle_E": 4,
+    "H3_current": {
+      "inputs": [
+        "D9",
+        "D10",
+        "D11",
+        "D12",
+        "H2",
+        "rawa5"
+      ],
+      "plan": {
+        "width": 6,
+        "constant": false,
+        "linear": 33,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "products": [
+          [
+            51,
+            60,
+            0,
+            2
+          ],
+          [
+            34,
+            24,
+            1,
+            3
+          ]
+        ],
+        "product_linear": 17
+      },
+      "Toffolis": 2
+    },
+    "H3_initial": {
+      "inputs": [
+        "A10",
+        "A11",
+        "A12",
+        "H2",
+        "rawa5",
+        "rawa6"
+      ],
+      "plan": {
+        "width": 6,
+        "constant": true,
+        "linear": 6,
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "products": [
+          [
+            21,
+            56,
+            0,
+            3
+          ]
+        ],
+        "product_linear": 22
+      },
+      "Toffolis": 1
+    },
+    "H4": {
+      "inputs": [
+        "D11",
+        "D12",
+        "H3"
+      ],
+      "plan": {
+        "width": 3,
+        "constant": false,
+        "linear": 6,
+        "edges": [
+          [
+            0,
+            2
+          ]
+        ],
+        "products": [
+          [
+            1,
+            4,
+            0,
+            2
+          ]
+        ],
+        "product_linear": 6
+      },
+      "Toffolis": 1
+    },
+    "root_decoder": {
+      "initial_inputs": "R+A13+H5+rawa5",
+      "decoded_raw_masks": [
+        64,
+        1,
+        2,
+        4,
+        16
+      ],
+      "Toffolis": 21,
+      "extra_scratch": 0,
+      "final_data": 44,
+      "phase_fix": "Measured roots are raw in the R-only frame; each reconstructed raw bit gets its measurement-conditionedZ. Then undo R-only frame using the alreadypriced1CCX."
+    },
+    "lifecycle": "After second coefficient forward, XmeasureH4 thenH3 with immediate quadraticClifford repairs. Inverseproduct and seedcleanup useD andlowroot, keepingH0..2,R,rawa5,oldA6snapshot. RecreateH3(2CCX),H4(1CCX) beforeANYcoefficientinverse. RestoreA, execute firstfivefrozenrootdecoderplans21E, paytheirHMRsigns, andundoR-onlyframe. The original first/second coefficient-carry functions match because allS bits andA/R/lowroot return beforetheirpairedinverse.",
+    "accuracy": "Unchangedcoefficients,U0,division,phase andoriginaltolerance.",
+    "table_options": {
+      "17_outputs": "LoadA13+H0..3. PrepareH4beforeeachCforward1E each; metadatarestore3E. Total5E.",
+      "16_outputs": "LoadA13+H0..2. PrepareH3with1CCXwhilea6stilllive, thenretire5roots; prepareH4with1CCX. Twopreparations4E+metadatarestore3E=7E."
+    }
+  },
+  "table_cleanup_scope": "Only functions of the original high seven root bits. The full raw address and initial A13/H chart must be restored before this cut. Dynamic coefficient/product/seed debts and root-retirement debts remain separately owned and repaid.",
+  "unresolved_normalization": "The inherited122-E Stage94 charge is a semilog-alignment adapter, not yet a proved standard pair-normalizer for the consuming root. Parent is deriving a standalone pair-normalizer. No complete gate is asserted until that exact interface and roundtrip charge are certified.",
+  "native_obligations": [
+    "Resolve the pair-normalization interface and replace the inherited122-E allowance with its certified forward/inverse cost and actual peak before judging the complete construction gate.",
+    "Emit and natively prove both actual raw-address loader DAGs, their invertible output basis, and all deferred pure-table helper phases. Their peaks are49, so no Q48 claim.",
+    "Compute initialH3 while rawa6 is live, then R-only frame and retire exactlyrawa0,a1,a2,a4,a6; retain raw a5. ComputeH4 before coefficient rows.",
+    "Keep second oldA6 snapshot through inverseproduct. Repay first snapshot at second Aload. Combine identical first/second forward coefficient carry outcomes and repay in matching final inverse.",
+    "Erase H4 thenH3 only at currentD chart; immediately repay their exact quadratic phases. Restore H3 thenH4 after seed cleanup before ANY coefficient inverse mutation.",
+    "Use the exact17.5-E conditional seed cleanup, including old forward carry phases and the measurement-conditioned fifth helper; constants receive their classical-outcome phase.",
+    "Use the paired consuming-product owner handoff, implicit C0=0, reconstituted coefficient, and restored product controls. Arithmetic requires16 word owners in inverse, not15.",
+    "Use the u11 HMR initializer in the rotated j10 wire-label frame; recreate the b14 owner on inverse, repay all11 affine carry signs, then erase u high tolow.",
+    "Apply endpoint phase and unroute with exact alias/root frames; restore divider, product, root and normalization; retire no quotient information for free.",
+    "Restore initialA/H and rawaddress before table cleanup; repay dynamic/root/seed debts separately before the9-E puretable cleanup.",
+    "Run complete native proofs and official verifier saltsdefault,1,2,3 at unchanged tolerance. None has run for this branch."
+  ],
+  "native": false,
+  "official_verifier": false,
+  "no_submission": true
+}

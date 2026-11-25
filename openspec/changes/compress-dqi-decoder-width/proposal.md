@@ -1,3 +1,5 @@
+> Status: paused on 2026-11-14, pending vendor-public-inplace-dqi. Do not implement further until resolved.
+
 ## Why
 
 DQI cost scales with the square of its width. The routed decoder from

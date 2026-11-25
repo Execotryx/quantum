@@ -1,0 +1,304 @@
+{
+  "status": "EMITTED_NATIVE_CANDIDATE_NOT_YET_PROVED_OR_OFFICIALLY_VERIFIED",
+  "Q": 49,
+  "exact_native_expectation": {
+    "status": "EXACT_EXPECTATION_FROM_CLASSICAL_GUARDS",
+    "assumptions": [
+      "Every active HMR measures a computational-basis wire and has a fair independent outcome.",
+      "Conditional costs count instruction execution, independently of quantum control values."
+    ],
+    "accounting": "exact Boolean guards; GF2-rank enumeration of affine leaves",
+    "rank_cap": 12,
+    "maximum_rank_used": 1,
+    "syntactic_measurements": 1298,
+    "static": {
+      "toffoli_like": 1638,
+      "T": 4,
+      "generic_rotations": 34
+    },
+    "mean": {
+      "toffoli_like": "3125/2",
+      "T": "4",
+      "generic_rotations": "34"
+    },
+    "mean_numeric": {
+      "toffoli_like": 1562.5,
+      "T": 4.0,
+      "generic_rotations": 34.0
+    },
+    "mean_Toffoli_plus_T_quarter": "3127/2",
+    "independent_condition_depth_not_assumed": true,
+    "official_verified": false
+  },
+  "paper_rotation_charge": 247.3782058208682,
+  "paper_cost": 88733.03208522254,
+  "model_sha256": "24fff823faa911afe93d02afc3ded0bbd156a210a85f1265c989a087f8fd1219",
+  "gate_sha256": "0e49c0e309c3a816d9e0512d5d815de44a1fc5a1de3b5eff866330c6017954b3",
+  "cuts": [
+    {
+      "name": "normalized",
+      "live_qubits": 26,
+      "peak_so_far": 46,
+      "instruction_cut": 382,
+      "owners": {
+        "n": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 53.0,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "consumed_root",
+      "live_qubits": 26,
+      "peak_so_far": 46,
+      "instruction_cut": 1410,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 152.0,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "body_restored",
+      "live_qubits": 26,
+      "peak_so_far": 49,
+      "instruction_cut": 32512,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q19",
+          "q21",
+          "q16",
+          "q18",
+          "q46",
+          "q20",
+          "q34"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q32",
+          "q26"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1419.0,
+        "T": 4.0,
+        "generic_rotations": 34.0
+      }
+    },
+    {
+      "name": "root_restored",
+      "live_qubits": 26,
+      "peak_so_far": 49,
+      "instruction_cut": 33732,
+      "owners": {
+        "n": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q32",
+          "q26",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q19",
+          "q21",
+          "q16",
+          "q18",
+          "q46",
+          "q20",
+          "q34"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1518.0,
+        "T": 4.0,
+        "generic_rotations": 34.0
+      }
+    },
+    {
+      "name": "logical_input_restored",
+      "live_qubits": 22,
+      "peak_so_far": 49,
+      "instruction_cut": 34011,
+      "owners": {
+        "x": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q32",
+          "q26",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q19",
+          "q21",
+          "q16",
+          "q18",
+          "q46",
+          "q20",
+          "q34"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1562.5,
+        "T": 4.0,
+        "generic_rotations": 34.0
+      }
+    }
+  ],
+  "final_Clifford_layout_swaps": [
+    [
+      "q32",
+      "q8"
+    ],
+    [
+      "q26",
+      "q9"
+    ],
+    [
+      "q19",
+      "q15"
+    ],
+    [
+      "q21",
+      "q16"
+    ],
+    [
+      "q21",
+      "q17"
+    ],
+    [
+      "q46",
+      "q19"
+    ],
+    [
+      "q34",
+      "q21"
+    ]
+  ],
+  "official_verifier": false,
+  "no_submission": true,
+  "candidate": "candidate03_triangular_u12_constant_root_tail",
+  "kmb_sha256": "e60699395ff7868de45b996bee8314238cac33f3ef7eff2f4dc17eb6cc70e094",
+  "bytes": 289187,
+  "variant_gate_sha256": "f11816ec390d58f379a7dc63704fab80a385bb581c73ec729c8e199697ad5131",
+  "variant_input_manifest_sha256": "a4b68652340472ef2d4a54c522817c1c7d0a54cb858405af72684db6cacdd0e3",
+  "preserved_candidates": [
+    "candidate01",
+    "candidate02"
+  ],
+  "baseline_sources_unchanged": true,
+  "arithmetic_change": "Candidate02 plus exactly two known-zero root-pair steps, saving8 CCX.",
+  "native_sources": {
+    "generate.py": "f216eda956098789b148903ea443fe1dbb1abc07e089aec4255b53c2f8bafec9",
+    "paper_replay.py": "9bf15c12f6f6824c3cdf37c693c1978aeeb4c5edbe2c64f6590cb77d76159b20",
+    "prove_full.py": "1fd12467862bf19b46ee382712e7d52c3c17c03d037370bddb6652a903beba05",
+    "prove_root.py": "30145a173d3dd375538e5d040b6162bc0cdcc4879896b2edeb96c01cb4bb87f9",
+    "run_batch.py": "26d2484ac87f4000d06c82273b2f0728d6dcec62e39338e9d37b0aff3edeb475",
+    "variant.py": "7a5375b1b59bbb19ea050380039ba4b44b04ab8a26a4b553d917d0b14827e49f"
+  },
+  "emission_seconds": 3.2201642579893814
+}

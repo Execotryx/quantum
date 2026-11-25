@@ -1,0 +1,4857 @@
+{
+  "captures": {
+    "captures/s6/batch-102144.json": "66734206a57b592afb5a68f3baf5a386ff7e35ea6d3f3da568941870f2e6c0d7",
+    "captures/s7/batch-052736.json": "e4fbcc4c067c165fa3d8cd2fa63e00b6a0ad8fdb2f01136e19ed5919be747925",
+    "results/s2/batch-045312.json": "38f94a8f866e10bdc31cfca4490f45cf345310c5a8b6dd4919c755ebe35fb4b1",
+    "results/s6/batch-013056.json": "b9cb413ab625ea41ab39d298a2d127521050cde7eed7b955eb42df527b7138ab",
+    "results/s6/batch-073984.json": "7df8ef3c8a646c4b0c4af6ce1349db175a1f77d768f103a7364352bfc0cc2b32",
+    "results/s7/batch-046592.json": "685d5ac2db3a6d8921a4a49579c376868039f0d832d56461fd911731dd7fc92a"
+  },
+  "cases": [
+    {
+      "basis_dimension": 5,
+      "case": "s2/45440",
+      "degree_rank": 3,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 29,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          31,
+          40
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          31,
+          38
+        ]
+      },
+      "root_sha256": "24120edd0d8ac9cc2c4cee6b4732c54e286a5c04e66b8333ff7d985a670c5c2f",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        5,
+        3
+      ],
+      "weight": 31
+    },
+    {
+      "basis_dimension": 3,
+      "case": "s2/45439",
+      "degree_rank": 2,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "jet_rank": 2,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 34,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          34,
+          37
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 2,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          34,
+          35
+        ]
+      },
+      "root_sha256": "017940b2372360cb73dbbfabc18e331c8ba1163db9329e56644ca217e9a6c445",
+      "tail_actual_lengths": [
+        2,
+        1
+      ],
+      "tail_envelope": [
+        3,
+        2
+      ],
+      "weight": 34
+    },
+    {
+      "basis_dimension": 4,
+      "case": "s6/13238",
+      "degree_rank": 2,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 32,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          32,
+          39
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          32,
+          37
+        ]
+      },
+      "root_sha256": "462c9af52d8ed1b56cbf245e53568f301ae6339ec02afddcf627f7b6d7f4c550",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        4,
+        2
+      ],
+      "weight": 32
+    },
+    {
+      "basis_dimension": 4,
+      "case": "s6/13237",
+      "degree_rank": 2,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 32,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          32,
+          39
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          32,
+          37
+        ]
+      },
+      "root_sha256": "36e7d352cfb32ac86caca6d56cc9c9d7d51bf596b382191e33a87dfd6c4bf561",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        4,
+        2
+      ],
+      "weight": 32
+    },
+    {
+      "basis_dimension": 7,
+      "case": "s6/74119",
+      "degree_rank": 5,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 29,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          29,
+          42
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          29,
+          40
+        ]
+      },
+      "root_sha256": "d3d4a0704189f284bbf86dc47560fd50f2b9952202ab2d4fbd1711d388327202",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        7,
+        5
+      ],
+      "weight": 29
+    },
+    {
+      "basis_dimension": 5,
+      "case": "s6/74118",
+      "degree_rank": 3,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 31,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          31,
+          40
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          31,
+          38
+        ]
+      },
+      "root_sha256": "2ada4831c1db3db98b9a4b88b65f54b8b8b6127381da7419a2714cd179b73bd3",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        5,
+        3
+      ],
+      "weight": 31
+    },
+    {
+      "basis_dimension": 7,
+      "case": "s7/46728",
+      "degree_rank": 5,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 29,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          29,
+          42
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          29,
+          40
+        ]
+      },
+      "root_sha256": "79e1fd4adc0c4b2e489651b59033e0bbd9460211fd80359a18384880368571a9",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        7,
+        5
+      ],
+      "weight": 29
+    },
+    {
+      "basis_dimension": 10,
+      "case": "s7/46727",
+      "degree_rank": 8,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 24,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          26,
+          45
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          26,
+          43
+        ]
+      },
+      "root_sha256": "6130d2e8fdcc765d54bdf64ea7adf8ac1536c2d319cd2ed19530971877421b79",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        10,
+        8
+      ],
+      "weight": 26
+    },
+    {
+      "basis_dimension": 4,
+      "case": "s6/102316",
+      "degree_rank": 3,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 30,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          32,
+          39
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          32,
+          37
+        ]
+      },
+      "root_sha256": "e77fb1211f71229e2fb55666721f45c5f812945d4c12a668edf128c015acfc30",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        4,
+        3
+      ],
+      "weight": 32
+    },
+    {
+      "basis_dimension": 4,
+      "case": "s6/102315",
+      "degree_rank": 2,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 32,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          32,
+          39
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          32,
+          37
+        ]
+      },
+      "root_sha256": "e48bc03b9b4c54b2a7359c2a21f32eef130c8b18b10244fbabcc73a5a1a38d50",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        4,
+        2
+      ],
+      "weight": 32
+    },
+    {
+      "basis_dimension": 3,
+      "case": "s7/52983",
+      "degree_rank": 4,
+      "free_slots": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 31,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          33,
+          38
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 2,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          33,
+          36
+        ]
+      },
+      "root_sha256": "1c5bd103c3022b395179fa20adbaab85e6667098dbc3575bad9ae532666dcd3b",
+      "tail_actual_lengths": [
+        2,
+        1
+      ],
+      "tail_envelope": [
+        4,
+        3
+      ],
+      "weight": 33
+    },
+    {
+      "basis_dimension": 7,
+      "case": "s7/52982",
+      "degree_rank": 5,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 29,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          29,
+          42
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          29,
+          40
+        ]
+      },
+      "root_sha256": "e285293fcd04590186421ccb72802c17e0822aec8e29782284345c98142ba53c",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        7,
+        5
+      ],
+      "weight": 29
+    },
+    {
+      "basis_dimension": 3,
+      "case": "multiple/1",
+      "degree_rank": 4,
+      "free_slots": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "jet_rank": 3,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 32,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          35,
+          36
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 4,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          34,
+          35
+        ]
+      },
+      "root_sha256": "cd51466951fe9986e225a1e91ea2486457a45fc22cc6f674bbae0a1c54a7696a",
+      "tail_actual_lengths": [
+        4,
+        3
+      ],
+      "tail_envelope": [
+        4,
+        3
+      ],
+      "weight": 35
+    },
+    {
+      "basis_dimension": 3,
+      "case": "multiple/2",
+      "degree_rank": 6,
+      "free_slots": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "jet_rank": 3,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 30,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          35,
+          36
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 6,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          34,
+          35
+        ]
+      },
+      "root_sha256": "ce483e7645396d005c72f429ea537a420c51724eec7649a3b51a8c9199c2e700",
+      "tail_actual_lengths": [
+        5,
+        4
+      ],
+      "tail_envelope": [
+        5,
+        4
+      ],
+      "weight": 35
+    },
+    {
+      "basis_dimension": 3,
+      "case": "multiple/3",
+      "degree_rank": 8,
+      "free_slots": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "jet_rank": 3,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 30,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          35,
+          36
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 8,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          34,
+          35
+        ]
+      },
+      "root_sha256": "f242d4ccd2e24642693d5dac8450710c9321bd1d14131a945b03f0a1e13355ea",
+      "tail_actual_lengths": [
+        6,
+        5
+      ],
+      "tail_envelope": [
+        6,
+        5
+      ],
+      "weight": 35
+    },
+    {
+      "basis_dimension": 36,
+      "case": "sample/0",
+      "degree_rank": 34,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          0,
+          19
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          21
+        ],
+        [
+          0,
+          22
+        ],
+        [
+          0,
+          23
+        ],
+        [
+          0,
+          24
+        ],
+        [
+          0,
+          25
+        ],
+        [
+          0,
+          26
+        ],
+        [
+          0,
+          27
+        ],
+        [
+          0,
+          28
+        ],
+        [
+          0,
+          29
+        ],
+        [
+          0,
+          30
+        ],
+        [
+          0,
+          31
+        ],
+        [
+          0,
+          32
+        ],
+        [
+          0,
+          33
+        ],
+        [
+          0,
+          34
+        ],
+        [
+          0,
+          35
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 0,
+        "peak_explicit_coefficients": 74,
+        "shifted_degrees": [
+          0,
+          71
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          0,
+          69
+        ]
+      },
+      "root_sha256": "72e69d8f86c6894541e65f5ee9849b4371102d58ef404ab28027292a18c13c08",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        36,
+        34
+      ],
+      "weight": 0
+    },
+    {
+      "basis_dimension": 35,
+      "case": "sample/1",
+      "degree_rank": 33,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          0,
+          19
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          21
+        ],
+        [
+          0,
+          22
+        ],
+        [
+          0,
+          23
+        ],
+        [
+          0,
+          24
+        ],
+        [
+          0,
+          25
+        ],
+        [
+          0,
+          26
+        ],
+        [
+          0,
+          27
+        ],
+        [
+          0,
+          28
+        ],
+        [
+          0,
+          29
+        ],
+        [
+          0,
+          30
+        ],
+        [
+          0,
+          31
+        ],
+        [
+          0,
+          32
+        ],
+        [
+          0,
+          33
+        ],
+        [
+          0,
+          34
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 1,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          1,
+          70
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          1,
+          68
+        ]
+      },
+      "root_sha256": "99eeb432dd99cac5d89ba4ec3abcb13b5a4a6b6b96a015623f1e41081b57a379",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        35,
+        33
+      ],
+      "weight": 1
+    },
+    {
+      "basis_dimension": 34,
+      "case": "sample/2",
+      "degree_rank": 32,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          0,
+          19
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          21
+        ],
+        [
+          0,
+          22
+        ],
+        [
+          0,
+          23
+        ],
+        [
+          0,
+          24
+        ],
+        [
+          0,
+          25
+        ],
+        [
+          0,
+          26
+        ],
+        [
+          0,
+          27
+        ],
+        [
+          0,
+          28
+        ],
+        [
+          0,
+          29
+        ],
+        [
+          0,
+          30
+        ],
+        [
+          0,
+          31
+        ],
+        [
+          0,
+          32
+        ],
+        [
+          0,
+          33
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 2,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          2,
+          69
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          2,
+          67
+        ]
+      },
+      "root_sha256": "6d5c679581553ed8828c7b554050468889dea5133cc5e18d2e81a5e833e31d5e",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        34,
+        32
+      ],
+      "weight": 2
+    },
+    {
+      "basis_dimension": 33,
+      "case": "sample/3",
+      "degree_rank": 31,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          0,
+          19
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          21
+        ],
+        [
+          0,
+          22
+        ],
+        [
+          0,
+          23
+        ],
+        [
+          0,
+          24
+        ],
+        [
+          0,
+          25
+        ],
+        [
+          0,
+          26
+        ],
+        [
+          0,
+          27
+        ],
+        [
+          0,
+          28
+        ],
+        [
+          0,
+          29
+        ],
+        [
+          0,
+          30
+        ],
+        [
+          0,
+          31
+        ],
+        [
+          0,
+          32
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 3,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          3,
+          68
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          3,
+          66
+        ]
+      },
+      "root_sha256": "607954834a3b7688648091ad877536c68c29c93c1dd2d4e728aef8872683a488",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        33,
+        31
+      ],
+      "weight": 3
+    },
+    {
+      "basis_dimension": 32,
+      "case": "sample/4",
+      "degree_rank": 30,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          0,
+          19
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          21
+        ],
+        [
+          0,
+          22
+        ],
+        [
+          0,
+          23
+        ],
+        [
+          0,
+          24
+        ],
+        [
+          0,
+          25
+        ],
+        [
+          0,
+          26
+        ],
+        [
+          0,
+          27
+        ],
+        [
+          0,
+          28
+        ],
+        [
+          0,
+          29
+        ],
+        [
+          0,
+          30
+        ],
+        [
+          0,
+          31
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 4,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          4,
+          67
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          4,
+          65
+        ]
+      },
+      "root_sha256": "00695922a60ef4306674b63a662213c4adc8692ca81301a07dadb3800e645355",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        32,
+        30
+      ],
+      "weight": 4
+    },
+    {
+      "basis_dimension": 31,
+      "case": "sample/5",
+      "degree_rank": 29,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          0,
+          19
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          21
+        ],
+        [
+          0,
+          22
+        ],
+        [
+          0,
+          23
+        ],
+        [
+          0,
+          24
+        ],
+        [
+          0,
+          25
+        ],
+        [
+          0,
+          26
+        ],
+        [
+          0,
+          27
+        ],
+        [
+          0,
+          28
+        ],
+        [
+          0,
+          29
+        ],
+        [
+          0,
+          30
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 5,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          5,
+          66
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          5,
+          64
+        ]
+      },
+      "root_sha256": "82224c568634a646e9b5ca07973574aa853ffeac6b57b0ff0ed9bffa7d6d89a9",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        31,
+        29
+      ],
+      "weight": 5
+    },
+    {
+      "basis_dimension": 30,
+      "case": "sample/6",
+      "degree_rank": 28,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          0,
+          19
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          21
+        ],
+        [
+          0,
+          22
+        ],
+        [
+          0,
+          23
+        ],
+        [
+          0,
+          24
+        ],
+        [
+          0,
+          25
+        ],
+        [
+          0,
+          26
+        ],
+        [
+          0,
+          27
+        ],
+        [
+          0,
+          28
+        ],
+        [
+          0,
+          29
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 6,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          6,
+          65
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          6,
+          63
+        ]
+      },
+      "root_sha256": "c38b6a4a69368f693665b76d5dd496765aef371eed45f8d9e46e7834f2c66af6",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        30,
+        28
+      ],
+      "weight": 6
+    },
+    {
+      "basis_dimension": 29,
+      "case": "sample/7",
+      "degree_rank": 27,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          0,
+          19
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          21
+        ],
+        [
+          0,
+          22
+        ],
+        [
+          0,
+          23
+        ],
+        [
+          0,
+          24
+        ],
+        [
+          0,
+          25
+        ],
+        [
+          0,
+          26
+        ],
+        [
+          0,
+          27
+        ],
+        [
+          0,
+          28
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 7,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          7,
+          64
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          7,
+          62
+        ]
+      },
+      "root_sha256": "58e37b0aa84d05c0e8c648e18c91135edcd8f2cd87457432bfda42ac241f3c30",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        29,
+        27
+      ],
+      "weight": 7
+    },
+    {
+      "basis_dimension": 28,
+      "case": "sample/8",
+      "degree_rank": 26,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          0,
+          19
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          21
+        ],
+        [
+          0,
+          22
+        ],
+        [
+          0,
+          23
+        ],
+        [
+          0,
+          24
+        ],
+        [
+          0,
+          25
+        ],
+        [
+          0,
+          26
+        ],
+        [
+          0,
+          27
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 8,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          8,
+          63
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          8,
+          61
+        ]
+      },
+      "root_sha256": "292abeeaf0f3e7e8c8e69461a96c6360d4906ea2b2dd28a6836cb0d856f58322",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        28,
+        26
+      ],
+      "weight": 8
+    },
+    {
+      "basis_dimension": 27,
+      "case": "sample/9",
+      "degree_rank": 25,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          0,
+          19
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          21
+        ],
+        [
+          0,
+          22
+        ],
+        [
+          0,
+          23
+        ],
+        [
+          0,
+          24
+        ],
+        [
+          0,
+          25
+        ],
+        [
+          0,
+          26
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 9,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          9,
+          62
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          9,
+          60
+        ]
+      },
+      "root_sha256": "1ec8eda5e7acfb1975633047fbd5ca7a1722978612bddd03231ce0896f941c55",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        27,
+        25
+      ],
+      "weight": 9
+    },
+    {
+      "basis_dimension": 26,
+      "case": "sample/10",
+      "degree_rank": 24,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          0,
+          19
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          21
+        ],
+        [
+          0,
+          22
+        ],
+        [
+          0,
+          23
+        ],
+        [
+          0,
+          24
+        ],
+        [
+          0,
+          25
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 10,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          10,
+          61
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          10,
+          59
+        ]
+      },
+      "root_sha256": "2cc36fd9f9584aa0a6c770bae06ecddec1176321dbb087eecb4cb690d6e28998",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        26,
+        24
+      ],
+      "weight": 10
+    },
+    {
+      "basis_dimension": 25,
+      "case": "sample/11",
+      "degree_rank": 23,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          0,
+          19
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          21
+        ],
+        [
+          0,
+          22
+        ],
+        [
+          0,
+          23
+        ],
+        [
+          0,
+          24
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 11,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          11,
+          60
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          11,
+          58
+        ]
+      },
+      "root_sha256": "9074f544b6b5dad118ff8443124ad732bb69a9370756e50a0346c929d223bd02",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        25,
+        23
+      ],
+      "weight": 11
+    },
+    {
+      "basis_dimension": 24,
+      "case": "sample/12",
+      "degree_rank": 22,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          0,
+          19
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          21
+        ],
+        [
+          0,
+          22
+        ],
+        [
+          0,
+          23
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 12,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          12,
+          59
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          12,
+          57
+        ]
+      },
+      "root_sha256": "ac6e0e8db312a112fe7e4fede07bda50179b01140a9107e8263a386c3f80b452",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        24,
+        22
+      ],
+      "weight": 12
+    },
+    {
+      "basis_dimension": 23,
+      "case": "sample/13",
+      "degree_rank": 21,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          0,
+          19
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          21
+        ],
+        [
+          0,
+          22
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 13,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          13,
+          58
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          13,
+          56
+        ]
+      },
+      "root_sha256": "3812dd507fa2b00d300e52945fe1c8b9449b7fa6fb0843d9f1c3c0d03d018f39",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        23,
+        21
+      ],
+      "weight": 13
+    },
+    {
+      "basis_dimension": 22,
+      "case": "sample/14",
+      "degree_rank": 20,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          0,
+          19
+        ],
+        [
+          0,
+          20
+        ],
+        [
+          0,
+          21
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 14,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          14,
+          57
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          14,
+          55
+        ]
+      },
+      "root_sha256": "54169dac22e550a367c8d5a9697224fbde9d21e3b45355770d21b11d31788abe",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        22,
+        20
+      ],
+      "weight": 14
+    },
+    {
+      "basis_dimension": 21,
+      "case": "sample/15",
+      "degree_rank": 19,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          0,
+          19
+        ],
+        [
+          0,
+          20
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 15,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          15,
+          56
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          15,
+          54
+        ]
+      },
+      "root_sha256": "b88db3ccd2bd3bfee77bc098580687ec8f0517271a3de274c4b2ada4b619e30b",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        21,
+        19
+      ],
+      "weight": 15
+    },
+    {
+      "basis_dimension": 20,
+      "case": "sample/16",
+      "degree_rank": 18,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ],
+        [
+          0,
+          19
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 16,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          16,
+          55
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          16,
+          53
+        ]
+      },
+      "root_sha256": "2c26d78b343973f30562ecf7069fd20b5276ea511d7ef90ab7803479fa248e61",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        20,
+        18
+      ],
+      "weight": 16
+    },
+    {
+      "basis_dimension": 19,
+      "case": "sample/17",
+      "degree_rank": 17,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          17
+        ],
+        [
+          0,
+          18
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 17,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          17,
+          54
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          17,
+          52
+        ]
+      },
+      "root_sha256": "cf7fb4e1b1694f0c0b0b6774f603a6992e3cfdcb5456ff73096204b2429dede2",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        19,
+        17
+      ],
+      "weight": 17
+    },
+    {
+      "basis_dimension": 18,
+      "case": "sample/18",
+      "degree_rank": 16,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ],
+        [
+          0,
+          17
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 18,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          18,
+          53
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          18,
+          51
+        ]
+      },
+      "root_sha256": "e1d16027c27601dca334c63559b930f939dd1c672d46669d07508ac0b4e65cc9",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        18,
+        16
+      ],
+      "weight": 18
+    },
+    {
+      "basis_dimension": 17,
+      "case": "sample/19",
+      "degree_rank": 15,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          0,
+          16
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 19,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          19,
+          52
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          19,
+          50
+        ]
+      },
+      "root_sha256": "374b31a717653dc0606d47f420218bc590a38de7012c5f3505d0dbb3b233cd5b",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        17,
+        15
+      ],
+      "weight": 19
+    },
+    {
+      "basis_dimension": 16,
+      "case": "sample/20",
+      "degree_rank": 14,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ],
+        [
+          0,
+          15
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 20,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          20,
+          51
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          20,
+          49
+        ]
+      },
+      "root_sha256": "816ea3a01fd1219c1d1e6ffbd0184dc6748d5162cccb4f7176bd4ed1d0887fe5",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        16,
+        14
+      ],
+      "weight": 20
+    },
+    {
+      "basis_dimension": 15,
+      "case": "sample/21",
+      "degree_rank": 13,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          14
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 21,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          21,
+          50
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          21,
+          48
+        ]
+      },
+      "root_sha256": "bb9b1a9fc103f4675f76e641e745bf34e2388495a82237f75f923310d19f63b5",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        15,
+        13
+      ],
+      "weight": 21
+    },
+    {
+      "basis_dimension": 14,
+      "case": "sample/22",
+      "degree_rank": 12,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          0,
+          13
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 22,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          22,
+          49
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          22,
+          47
+        ]
+      },
+      "root_sha256": "9ee143896eb554c00085fd6e09a2cd3ebf662cc49c20cdfe3680a6fb44f120d5",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        14,
+        12
+      ],
+      "weight": 22
+    },
+    {
+      "basis_dimension": 13,
+      "case": "sample/23",
+      "degree_rank": 11,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 23,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          23,
+          48
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          23,
+          46
+        ]
+      },
+      "root_sha256": "00bd25bc478e7090f29872cdcbca43fd1b4d5aac2f63e7a8f6fb82cadb3f0ade",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        13,
+        11
+      ],
+      "weight": 23
+    },
+    {
+      "basis_dimension": 12,
+      "case": "sample/24",
+      "degree_rank": 10,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 24,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          24,
+          47
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          24,
+          45
+        ]
+      },
+      "root_sha256": "6edffa375d95e9ff785a3d001e396175ce47acb0187353695a3593e5da647e39",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        12,
+        10
+      ],
+      "weight": 24
+    },
+    {
+      "basis_dimension": 11,
+      "case": "sample/25",
+      "degree_rank": 9,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 25,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          25,
+          46
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          25,
+          44
+        ]
+      },
+      "root_sha256": "8f90193cbc863cb789e5c1454ab98e527ea2b8629137e3b7c751d027254b2417",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        11,
+        9
+      ],
+      "weight": 25
+    },
+    {
+      "basis_dimension": 10,
+      "case": "sample/26",
+      "degree_rank": 8,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 26,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          26,
+          45
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          26,
+          43
+        ]
+      },
+      "root_sha256": "458b3205c5987bb393ff7a7aa8a9cc8ddbdffc5755d0e106626ee8d66f0e9ebf",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        10,
+        8
+      ],
+      "weight": 26
+    },
+    {
+      "basis_dimension": 9,
+      "case": "sample/27",
+      "degree_rank": 7,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 27,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          27,
+          44
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          27,
+          42
+        ]
+      },
+      "root_sha256": "4efefb37ceca835c1ad29eae03a0f13b461fe3af2384d226e7e026221295fbb5",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        9,
+        7
+      ],
+      "weight": 27
+    },
+    {
+      "basis_dimension": 8,
+      "case": "sample/28",
+      "degree_rank": 6,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 28,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          28,
+          43
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          28,
+          41
+        ]
+      },
+      "root_sha256": "79afdcbdb92a4574da2d3b9fdad52551bdf045ce4452320b5c6157bbaea7757d",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        8,
+        6
+      ],
+      "weight": 28
+    },
+    {
+      "basis_dimension": 7,
+      "case": "sample/29",
+      "degree_rank": 5,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 29,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          29,
+          42
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          29,
+          40
+        ]
+      },
+      "root_sha256": "34892a616237d0ac1e8a5c7740fb39f03e105aa451f9bd219b4c087cc52aee61",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        7,
+        5
+      ],
+      "weight": 29
+    },
+    {
+      "basis_dimension": 6,
+      "case": "sample/30",
+      "degree_rank": 4,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 30,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          30,
+          41
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          30,
+          39
+        ]
+      },
+      "root_sha256": "f4e121be024d73835513ab17fcca80658b68693e44d4ec8ca24df5dea86d7bc8",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        6,
+        4
+      ],
+      "weight": 30
+    },
+    {
+      "basis_dimension": 5,
+      "case": "sample/31",
+      "degree_rank": 3,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 31,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          31,
+          40
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          31,
+          38
+        ]
+      },
+      "root_sha256": "9b1c9b0d64f5c419e6430cb166ed6989148c12437ca2a0970f338e12800a798e",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        5,
+        3
+      ],
+      "weight": 31
+    },
+    {
+      "basis_dimension": 4,
+      "case": "sample/32",
+      "degree_rank": 2,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 32,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          32,
+          39
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          32,
+          37
+        ]
+      },
+      "root_sha256": "8772bd9e49e6047755fe118b485cb1aa3c10a803bff7e7d4b336c64be364e0e7",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        4,
+        2
+      ],
+      "weight": 32
+    },
+    {
+      "basis_dimension": 3,
+      "case": "sample/33",
+      "degree_rank": 2,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "jet_rank": 1,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 33,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          33,
+          38
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 0,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          33,
+          36
+        ]
+      },
+      "root_sha256": "4468bfcec907d7c631844b2906d485c2c74fe78f51ad1eae7a012e75afb22839",
+      "tail_actual_lengths": [
+        1,
+        1
+      ],
+      "tail_envelope": [
+        3,
+        2
+      ],
+      "weight": 33
+    },
+    {
+      "basis_dimension": 3,
+      "case": "sample/34",
+      "degree_rank": 2,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "jet_rank": 2,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 34,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          34,
+          37
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 2,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          34,
+          35
+        ]
+      },
+      "root_sha256": "4f0f7569e7bc5aa8e74a460c420f5cdeb329439612fa423b2a39e923957a9173",
+      "tail_actual_lengths": [
+        2,
+        1
+      ],
+      "tail_envelope": [
+        3,
+        2
+      ],
+      "weight": 34
+    },
+    {
+      "basis_dimension": 3,
+      "case": "sample/35",
+      "degree_rank": 2,
+      "free_slots": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "jet_rank": 3,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 34,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          35,
+          36
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 2,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          34,
+          35
+        ]
+      },
+      "root_sha256": "5efb68014343896eea9f92ea681864c1abb4507382163be3d91a1aee845771fc",
+      "tail_actual_lengths": [
+        3,
+        2
+      ],
+      "tail_envelope": [
+        3,
+        2
+      ],
+      "weight": 35
+    },
+    {
+      "basis_dimension": 3,
+      "case": "forced/34",
+      "degree_rank": 4,
+      "free_slots": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "jet_rank": 2,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 32,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          34,
+          37
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 4,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          34,
+          35
+        ]
+      },
+      "root_sha256": "2c3929d926d9db6929379540083d1782cccdbc81f28e668062a2002ef1509588",
+      "tail_actual_lengths": [
+        3,
+        2
+      ],
+      "tail_envelope": [
+        4,
+        3
+      ],
+      "weight": 34
+    },
+    {
+      "basis_dimension": 3,
+      "case": "forced/35",
+      "degree_rank": 4,
+      "free_slots": [
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "jet_rank": 3,
+      "needs_common_factor_reduction": false,
+      "online_interpolation": {
+        "cancellations": 32,
+        "peak_explicit_coefficients": 143,
+        "shifted_degrees": [
+          35,
+          36
+        ]
+      },
+      "reduced_basis": {
+        "cancellations": 4,
+        "needs_common_factor_reduction": false,
+        "shifted_degrees": [
+          34,
+          35
+        ]
+      },
+      "root_sha256": "28b088ca980ca282d52c14324ec6907701bef3391dc2f4c8aca84463efdca2a4",
+      "tail_actual_lengths": [
+        4,
+        3
+      ],
+      "tail_envelope": [
+        4,
+        3
+      ],
+      "weight": 35
+    }
+  ],
+  "driver_sha256": "b1ec566ca3949c23263d03b5ad6e748885d4ef4f6d42a70a5938d3daca84499e",
+  "multiple_poles_sha256": "0b7f4ab02c435e28e5aaf7596913e453d4ddf474b797f0e384cf10ab52b4794b"
+}

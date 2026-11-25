@@ -1,0 +1,34 @@
+{
+  "added_functions": [
+    "_matched_inverse_receipt",
+    "_third_return_receipt",
+    "check_first_three",
+    "check_third_chart",
+    "check_zero_preparation"
+  ],
+  "changed_functions": [
+    "check_guard",
+    "main"
+  ],
+  "existing_receipts_evaluated_by_producer": false,
+  "format": "DQI_V6_COMPONENT_VALIDATOR_DERIVATION_V1",
+  "new_native_jobs": 0,
+  "parent": "controller_work/after_v3/integration_v5b/prepare_component_gates.py",
+  "parent_sha256": "064711f96902297c9c1cfcc579bb7afed73a27e10113e7bd9bc54d69bd425b6d",
+  "status": "SOURCE_ONLY_NOT_RECEIPT_VALIDATION",
+  "target_sha256": "f3b11a10365acd1641ac02b627be73828ec933b0e3d9093d03ad848717615d0d",
+  "unchanged_function_or_class_ASTs": [
+    "require",
+    "Inputs",
+    "cover",
+    "check_norm195",
+    "check_first_two",
+    "check_transpose11",
+    "check_preimage",
+    "check_matched_norm",
+    "check_cubic20",
+    "check_quotient62",
+    "check_matched_key",
+    "check_preimage62"
+  ]
+}

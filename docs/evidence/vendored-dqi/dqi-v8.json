@@ -1,0 +1,23 @@
+{
+  "artifact": "runs/open-circuits-20261114/d4-build-a/dqi.kmb",
+  "candidate": "d4",
+  "decision_sha256": "7d7c996988d519b8f65b210c4abfa7c2ea025aa376d007a4f5257d562a453a4e",
+  "draws": {
+    "s1.json": "486c5e9aa4deb0a70923ee1771d9a2bf788b3a7a006513903a5b73fd1015a71e",
+    "s2.json": "6cdde512c4e1859e8da653ca8466702762912707b5fef58b04a15af93ef07ad0",
+    "s3.json": "799cffcf1d9713b176059dd918e493bb5eccec068792ab9307de55788ed2eeb8",
+    "s4.json": "445209dab1f2de0fe7e26259547e1c88908ee4037004d4ce3e4ed57e51f76916",
+    "s5.json": "8ca97c383146b86c2e879fcc1baa403a30463871de9ad3d8cb2ab06fc43dc142",
+    "s6.json": "f2a47ebbb62cb011e3319f9b41423f4c36ff4b6ebd3313b4f079e2e2aac92626",
+    "s7.json": "f49e01ea9f940a407a0f5774006245efd5a4b56d9d639da2a6570726e48bc985",
+    "s8.json": "e92270371c150537dc0c3f8c1435b7264870f76fd6d3d3d506735a1f2e7c8ac5"
+  },
+  "member": "dqi-v8",
+  "pooled_price": 416454072253.1496,
+  "pooled_ratio": 58.68464990746052,
+  "registration_sha256": "be02cd9a038ba645860b99504548653449720b220f3b0e3d8e3de75a3c3b01eb",
+  "sha256": "53d8b2edf251e2a0c54c401a97d1396c7ed309e1cbfaab8d54a2c99a11ed6552",
+  "source_sha256": "6e9f0028226c240539df18b3ff05f4f533b1ff06902774fa88e13aacbbadbcd6",
+  "status": "go",
+  "zero_failure_cost": 412943401126.79767
+}

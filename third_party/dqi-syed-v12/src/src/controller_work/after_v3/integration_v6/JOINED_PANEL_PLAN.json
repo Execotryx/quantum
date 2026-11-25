@@ -1,0 +1,327 @@
+{
+  "actual_special_preparation_required": true,
+  "actual_special_prepared_hashes": null,
+  "component_manifest_required": true,
+  "format": "DQI_V6_JOINED_PANEL_SOURCE_PLAN_V1",
+  "four_fresh_original_salts_remain_required": true,
+  "full_model_static_T": 383992,
+  "internal_source_generation": "integration_v6",
+  "model_is_measured": false,
+  "model_mean_exact": "13165890612252429/34359738368",
+  "native_jobs_launched": 0,
+  "new_sampler_draws": 0,
+  "old_original_roles_retained": 5,
+  "public_release_label": "v5",
+  "role_count": 8,
+  "roles": [
+    {
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/integration_v6/check_key_boundary.py",
+        "--fixtures-file",
+        "controller_work/night_c27/arithmetic/panel_audit/prepared/cases.json",
+        "--batch-size",
+        "64",
+        "--output",
+        "controller_work/after_v3/integration_v6/runs/key-full"
+      ],
+      "guard": "controller_work/after_v3/integration_v6/runs/key-full.guard.json",
+      "parent_command_guard": {
+        "path": "controller_work/after_v3/integration_v4/runs/key-full.guard.json",
+        "sha256": "c9b993a8249fcb3680c0fa49f74511cdd758b5f51b2be8410443bcd18a54f111"
+      },
+      "preserved_original_input_role": true,
+      "report": "controller_work/after_v3/integration_v6/runs/key-full/report.json",
+      "required_scope": {
+        "Q": 889,
+        "cases": 781,
+        "new_chart_gauges": {
+          "0": 780,
+          "1": 1
+        },
+        "old_exclusions": 76,
+        "pair_static_T": 216928,
+        "prefix_static_T": 101087,
+        "scan_positions": 4095,
+        "seeds": [
+          147,
+          1147,
+          2147
+        ]
+      },
+      "role": "key-full"
+    },
+    {
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/integration_v6/check_candidate.py",
+        "--circuit",
+        "controller_work/after_v3/integration_v6/runs/a/dqi.kmb",
+        "--build-receipt",
+        "controller_work/after_v3/integration_v6/runs/a/build/build.json",
+        "--fixtures-file",
+        "controller_work/night_c27/arithmetic/panel_audit/fixed-prepared/cases.json",
+        "--batch-size",
+        "256",
+        "--output",
+        "controller_work/after_v3/integration_v6/runs/fixed-native"
+      ],
+      "guard": "controller_work/after_v3/integration_v6/runs/fixed-native.guard.json",
+      "parent_command_guard": {
+        "path": "controller_work/after_v3/integration_v4/runs/fixed-native.guard.json",
+        "sha256": "898071313bc44459c09f21663f4a116c7080a29be308d8a3bf5da4beeba9ca68"
+      },
+      "preserved_original_input_role": true,
+      "report": "controller_work/after_v3/integration_v6/runs/fixed-native/report.json",
+      "required_scope": {
+        "Q": 889,
+        "admitted": 6140,
+        "cases": 10073,
+        "declared_excluded": 3933,
+        "excluded_error_count_not_fixed": true,
+        "mask_seed": 202611112711,
+        "scan_positions": 4095,
+        "seed_batches": 120,
+        "seeds": [
+          147,
+          1147,
+          2147
+        ]
+      },
+      "role": "fixed-native"
+    },
+    {
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/integration_v6/check_candidate.py",
+        "--circuit",
+        "controller_work/after_v3/integration_v6/runs/a/dqi.kmb",
+        "--build-receipt",
+        "controller_work/after_v3/integration_v6/runs/a/build/build.json",
+        "--per-weight",
+        "2",
+        "--output",
+        "controller_work/after_v3/integration_v6/runs/physical42"
+      ],
+      "guard": "controller_work/after_v3/integration_v6/runs/physical42.guard.json",
+      "parent_command_guard": {
+        "path": "controller_work/after_v3/integration_v4/runs/physical42.guard.json",
+        "sha256": "ca35eb136b27f5ef3cd2077cb7d86cf72922817190c65c2482d6885414f24cff"
+      },
+      "preserved_original_input_role": true,
+      "report": "controller_work/after_v3/integration_v6/runs/physical42/report.json",
+      "required_scope": {
+        "Q": 889,
+        "cases": 42,
+        "scan_positions": 4095,
+        "seeds": [
+          1117,
+          2117,
+          3117
+        ],
+        "weights": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35
+        ]
+      },
+      "role": "physical42"
+    },
+    {
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/integration_v6/check_key_boundary.py",
+        "--fixtures-file",
+        "controller_work/after_c5/arithmetic_t/runs/first2-physical-gauge1-prepared/cases.json",
+        "--batch-size",
+        "1",
+        "--output",
+        "controller_work/after_v3/integration_v6/runs/legacy-rare-key"
+      ],
+      "guard": "controller_work/after_v3/integration_v6/runs/legacy-rare-key.guard.json",
+      "parent_command_guard": {
+        "path": "controller_work/after_v3/integration_v4/runs/gauge1-key.guard.json",
+        "sha256": "a448cc9667a76512b293e6c7e8dfe3cfc50800814e6bef89298830a10eea9c94"
+      },
+      "preserved_original_input_role": true,
+      "report": "controller_work/after_v3/integration_v6/runs/legacy-rare-key/report.json",
+      "required_scope": {
+        "Q": 889,
+        "cases": 1,
+        "new_chart_gauges": {
+          "0": 1
+        },
+        "old_label_not_used_as_gauge_one_evidence": true,
+        "scan_positions": 4095,
+        "seeds": [
+          147,
+          1147,
+          2147
+        ]
+      },
+      "role": "legacy-rare-key"
+    },
+    {
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/integration_v6/check_candidate.py",
+        "--circuit",
+        "controller_work/after_v3/integration_v6/runs/a/dqi.kmb",
+        "--build-receipt",
+        "controller_work/after_v3/integration_v6/runs/a/build/build.json",
+        "--fixtures-file",
+        "controller_work/after_c5/arithmetic_t/runs/first2-physical-gauge1-prepared/cases.json",
+        "--batch-size",
+        "1",
+        "--output",
+        "controller_work/after_v3/integration_v6/runs/legacy-rare-native"
+      ],
+      "guard": "controller_work/after_v3/integration_v6/runs/legacy-rare-native.guard.json",
+      "parent_command_guard": {
+        "path": "controller_work/after_v3/integration_v4/runs/gauge1-native.guard.json",
+        "sha256": "b3913e749bb6e3d6c5b0ec23fbab88224d817e446e8d09e46ac43579db9e8942"
+      },
+      "preserved_original_input_role": true,
+      "report": "controller_work/after_v3/integration_v6/runs/legacy-rare-native/report.json",
+      "required_scope": {
+        "Q": 889,
+        "cases": 1,
+        "mask_seed": 202611112711,
+        "scan_positions": 4095,
+        "seeds": [
+          147,
+          1147,
+          2147
+        ]
+      },
+      "role": "legacy-rare-native"
+    },
+    {
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/integration_v6/check_key_boundary.py",
+        "--fixtures-file",
+        "controller_work/after_v3/blocks/v6/runs/integration-special-panels-v2/gauge1/cases.json",
+        "--batch-size",
+        "1",
+        "--output",
+        "controller_work/after_v3/integration_v6/runs/gauge1-key"
+      ],
+      "guard": "controller_work/after_v3/integration_v6/runs/gauge1-key.guard.json",
+      "preserved_original_input_role": false,
+      "report": "controller_work/after_v3/integration_v6/runs/gauge1-key/report.json",
+      "required_preparation_manifest": "controller_work/after_v3/blocks/v6/runs/integration-special-panels-v2/gauge1/manifest.json",
+      "required_scope": {
+        "Q": 889,
+        "case_id": "54d38bf59904d025bfe626a0db3007111eb8d6c3e975bf0dda3a99d8a4cba57a",
+        "cases": 1,
+        "new_chart_gauges": {
+          "1": 1
+        },
+        "scan_positions": 4095,
+        "seeds": [
+          147,
+          1147,
+          2147
+        ]
+      },
+      "role": "gauge1-key"
+    },
+    {
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/integration_v6/check_candidate.py",
+        "--circuit",
+        "controller_work/after_v3/integration_v6/runs/a/dqi.kmb",
+        "--build-receipt",
+        "controller_work/after_v3/integration_v6/runs/a/build/build.json",
+        "--fixtures-file",
+        "controller_work/after_v3/blocks/v6/runs/integration-special-panels-v2/gauge1/cases.json",
+        "--batch-size",
+        "1",
+        "--output",
+        "controller_work/after_v3/integration_v6/runs/gauge1-native"
+      ],
+      "guard": "controller_work/after_v3/integration_v6/runs/gauge1-native.guard.json",
+      "preserved_original_input_role": false,
+      "report": "controller_work/after_v3/integration_v6/runs/gauge1-native/report.json",
+      "required_preparation_manifest": "controller_work/after_v3/blocks/v6/runs/integration-special-panels-v2/gauge1/manifest.json",
+      "required_scope": {
+        "Q": 889,
+        "case_id": "54d38bf59904d025bfe626a0db3007111eb8d6c3e975bf0dda3a99d8a4cba57a",
+        "cases": 1,
+        "mask_seed": 202611112711,
+        "scan_positions": 4095,
+        "seeds": [
+          147,
+          1147,
+          2147
+        ]
+      },
+      "role": "gauge1-native"
+    },
+    {
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/integration_v6/check_candidate.py",
+        "--circuit",
+        "controller_work/after_v3/integration_v6/runs/a/dqi.kmb",
+        "--build-receipt",
+        "controller_work/after_v3/integration_v6/runs/a/build/build.json",
+        "--fixtures-file",
+        "controller_work/after_v3/blocks/v6/runs/integration-special-panels-v2/raw-zero/cases.json",
+        "--batch-size",
+        "1",
+        "--output",
+        "controller_work/after_v3/integration_v6/runs/raw-zero-native"
+      ],
+      "guard": "controller_work/after_v3/integration_v6/runs/raw-zero-native.guard.json",
+      "preserved_original_input_role": false,
+      "report": "controller_work/after_v3/integration_v6/runs/raw-zero-native/report.json",
+      "required_preparation_manifest": "controller_work/after_v3/blocks/v6/runs/integration-special-panels-v2/raw-zero/manifest.json",
+      "required_scope": {
+        "Q": 889,
+        "case_id": "6663887a36baed1286a39bd8933a2c4d45a0660ef96a6a2b03ea0460588e00b0",
+        "cases": 1,
+        "mask_seed": 202611112711,
+        "raw_residue2": 0,
+        "scan_positions": 4095,
+        "seeds": [
+          147,
+          1147,
+          2147
+        ],
+        "whole_old_domain_admitted": true
+      },
+      "role": "raw-zero-native"
+    }
+  ],
+  "root_schedules_every_command": true,
+  "status": "SOURCE_PLAN_NOT_EXECUTED"
+}

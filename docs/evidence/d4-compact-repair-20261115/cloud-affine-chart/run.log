@@ -1,0 +1,20 @@
+launch.sh: OK
+source.tar.gz: OK
+Sun Nov 15 20:23:59 UTC 2026
+affine jet width=12 seed=891 scratch=12 gates=24.0
+affine jet width=12 seed=892 scratch=12 gates=24.0
+.affine jet width=24 seed=891 scratch=24 gates=48.0
+affine jet width=24 seed=892 scratch=24 gates=48.0
+.normalized affine charts=6 seed=895 forward=True scratch=50 gates=657.0
+normalized affine charts=6 seed=895 forward=False scratch=74 gates=1441.3333333333333
+normalized affine charts=6 seed=896 forward=True scratch=50 gates=660.6666666666666
+normalized affine charts=6 seed=896 forward=False scratch=74 gates=1441.3333333333333
+.affine coefficient words=21 seed=893 scratch=12 gates=504.0
+affine coefficient words=21 seed=894 scratch=12 gates=504.0
+.affine extraction group=None seed=941 qubits=945 gates=219193.5
+affine extraction group=None seed=942 qubits=945 gates=219142.33333333334
+.affine extraction group=6 seed=941 qubits=946 gates=218506.33333333334
+affine extraction group=6 seed=942 qubits=946 gates=218462.33333333334
+.
+6 passed, 30 deselected in 78.34s (0:01:18)
+Sun Nov 15 20:25:21 UTC 2026

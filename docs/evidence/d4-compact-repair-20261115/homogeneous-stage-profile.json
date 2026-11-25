@@ -1,0 +1,44 @@
+{
+  "backend_inventory_sha256": "132405912244d6232e4ea7fb3c9e941f8cbfbfe8cc51dd49ab3fccb609166237",
+  "controls_sha256": "0fd1fe30aa2e8b90fec80182eb726f463696b4aafffc7e47559334649ba34a8c",
+  "driver_sha256": "8f79eddbc680d6d222d7bceec15f2602eab0b4a79a288c4b28b8ad822c42f2be",
+  "reports": {
+    "banked": {
+      "qubits": 897,
+      "sha256": "53d8b2edf251e2a0c54c401a97d1396c7ed309e1cbfaab8d54a2c99a11ed6552",
+      "static_by_stage": {
+        "convert": 63336,
+        "extract": 65881,
+        "initial": 0,
+        "mask_projection": 0,
+        "restore_masks": 0,
+        "scan": 44275,
+        "synthesis": 33317,
+        "unconvert": 65674,
+        "unextract": 117776,
+        "uninitial": 0,
+        "unsynthesis": 54408
+      },
+      "static_toffoli_like": 444667
+    },
+    "homogeneous": {
+      "qubits": 904,
+      "sha256": "09467ecc12eb50a6a79f0706690a7018a29ecb6679d7e6c15c5b1754fde8db6a",
+      "static_by_stage": {
+        "convert": 63336,
+        "extract": 64145,
+        "initial": 0,
+        "mask_projection": 0,
+        "restore_masks": 0,
+        "scan": 44275,
+        "synthesis": 33317,
+        "unconvert": 65674,
+        "unextract": 119834,
+        "uninitial": 0,
+        "unsynthesis": 54408
+      },
+      "static_toffoli_like": 444989
+    }
+  },
+  "source_sha256": "6e9f0028226c240539df18b3ff05f4f533b1ff06902774fa88e13aacbbadbcd6"
+}

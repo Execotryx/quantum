@@ -1,0 +1,13 @@
+{
+  "backend_sha256": "bd68ed6223bbba78821192be217cb3dc9a6af5e0ae1c07097361511bb189edd4",
+  "circuit_sha256": "53d8b2edf251e2a0c54c401a97d1396c7ed309e1cbfaab8d54a2c99a11ed6552",
+  "draw_indices": [
+    2,
+    6,
+    7
+  ],
+  "driver_sha256": "7feda1e00c1bc1df33a7c45967cdad685425ca19179071c4be963bfe71bb9bf9",
+  "registration_sha256": "be02cd9a038ba645860b99504548653449720b220f3b0e3d8e3de75a3c3b01eb",
+  "verifier_sha256": "f14274bc0943fb9769ddb01131be6063191a15009fe1caf1d4bdd9fd25194e65",
+  "workers": 2
+}

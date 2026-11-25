@@ -1,0 +1,20 @@
+{
+  "status": "PARENT_COMPLETE_VARIANT_PAPER_GATE_ACCEPTED_NATIVE_PENDING",
+  "candidate": "candidate02_triangular_u12",
+  "certificate_sha256": "b9583e4772d572161782fdbef862c4f75cb59b9c46f8289e7a07b7d12fa51173",
+  "base_complete_gate_sha256": "0e49c0e309c3a816d9e0512d5d815de44a1fc5a1de3b5eff866330c6017954b3",
+  "Q": 49,
+  "both_table_preparation_peaks": 49,
+  "initializer_peak": 45,
+  "expected_Toffolis": 1570.5,
+  "T": 4,
+  "R": 34,
+  "rotation_charge": 247.3782058208682,
+  "total_equivalents": 1818.8782058208683,
+  "predicted_cost": 89125.03208522254,
+  "accuracy_margin_units_2powminus64": 31966138,
+  "mathematical_gate_only": true,
+  "native_build_authorized_after_this_receipt": true,
+  "preserve_candidate01": true,
+  "reason": "Identical u12 word and complete restored-owner contract on the entire 32768-case abstract input cube; 13 forward and1 cleanup replace24 forward and1 cleanup. No other preparation, correction, or width claim changes."
+}

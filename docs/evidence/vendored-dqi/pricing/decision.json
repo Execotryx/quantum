@@ -1,0 +1,84 @@
+{
+  "banked": true,
+  "pooled_ratio": 58.68464990746052,
+  "registration_sha256": "be02cd9a038ba645860b99504548653449720b220f3b0e3d8e3de75a3c3b01eb",
+  "selected": "d4",
+  "sha256": "53d8b2edf251e2a0c54c401a97d1396c7ed309e1cbfaab8d54a2c99a11ed6552",
+  "stage1": [
+    {
+      "candidate": "d4",
+      "cost": 417908682221.1634,
+      "failures_by_salt": [
+        0,
+        1
+      ],
+      "mean_toffolis": 430823.0347070313,
+      "priced_failures": 3,
+      "qubits": 897,
+      "repetition_factor": 1.2055843238398525,
+      "total_failures": 1,
+      "upper_error_rate": 0.000983909102617945,
+      "zero_failure_cost": 412943401126.79767
+    },
+    {
+      "candidate": "d5",
+      "cost": 842819915403.5186,
+      "failures_by_salt": [
+        0,
+        0
+      ],
+      "mean_toffolis": 905912.2522265625,
+      "priced_failures": 2,
+      "qubits": 880,
+      "repetition_factor": 1.2013880602795501,
+      "total_failures": 0,
+      "upper_error_rate": 0.0009488155716079551,
+      "zero_failure_cost": 835715017795.6908
+    }
+  ],
+  "stage2": [
+    {
+      "candidate": "d4",
+      "cost": 416454072253.1496,
+      "failures_by_salt": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        2,
+        1,
+        0
+      ],
+      "mean_toffolis": 430823.0347070313,
+      "priced_failures": 2,
+      "qubits": 897,
+      "repetition_factor": 1.2013880602795501,
+      "total_failures": 4,
+      "upper_error_rate": 0.0009488155716079551,
+      "zero_failure_cost": 412943401126.79767
+    },
+    {
+      "candidate": "d5",
+      "cost": 842819915403.5186,
+      "failures_by_salt": [
+        0,
+        0,
+        2,
+        1,
+        1,
+        1,
+        0,
+        0
+      ],
+      "mean_toffolis": 905912.2522265625,
+      "priced_failures": 2,
+      "qubits": 880,
+      "repetition_factor": 1.2013880602795501,
+      "total_failures": 5,
+      "upper_error_rate": 0.0009488155716079551,
+      "zero_failure_cost": 835715017795.6908
+    }
+  ],
+  "status": "go"
+}

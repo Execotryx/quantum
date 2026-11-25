@@ -1,0 +1,8 @@
+launch.sh: OK
+source.tar.gz: OK
+Sun Nov 15 23:23:42 UTC 2026
+.shared D4 seed=761 qubits=1024 mean_gates=495018.4117647059
+shared D4 seed=762 qubits=1024 mean_gates=495042.1176470588
+..
+3 passed, 51 deselected in 191.83s (0:03:11)
+Sun Nov 15 23:26:56 UTC 2026

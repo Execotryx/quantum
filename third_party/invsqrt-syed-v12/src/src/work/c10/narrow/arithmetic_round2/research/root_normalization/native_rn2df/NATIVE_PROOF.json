@@ -1,0 +1,417 @@
+{
+  "status": "PASS_NATIVE_NORMALIZATION9475_COMPONENT_NOT_OFFICIAL",
+  "component": "RN2-D forward parity plus RN2-F eight inverse coordinates",
+  "actual_native_Q": 46,
+  "forward_E": 51.5,
+  "inverse_expected_E": 43.25,
+  "roundtrip_expected_E": 94.75,
+  "saving_vs_original_normalizer_E": 2.75,
+  "additional_saving_vs_RN2B_E": 1.75,
+  "T": 0,
+  "R": 0,
+  "forward_resource": {
+    "kmb_sha256": "e745204ea4a0a1a2059f5b18563b55f58f1d65d153d8b02e256a736b8fd31a1c",
+    "kmx_sha256": "767af8ef0833a430d01a28c1b5327f4c9372223ac74a97e2972e2d345bc9520c",
+    "actual_native_Q": 46
+  },
+  "roundtrip_resource": {
+    "kmb_sha256": "66166ce9cdba28c4c344239aa35fce3d267a588ed9342691913d62f62fded8e1",
+    "kmx_sha256": "9388a8012d59fae0d13f85946eafc6dbde997ae9ad60b06282844ca584b4f39a",
+    "actual_native_Q": 46
+  },
+  "forward_symbolic": {
+    "status": "PASS_EXACT_NATIVE_TEXT_ALL_INPUTS_ALL_ACTIVE_HMR_OUTCOMES",
+    "support_classes": 22,
+    "syntactic_HMR_events": 20,
+    "domain": "Every positive x<3*2^20, a strict superset of the official domain",
+    "original_inputs_covered": 3133452,
+    "conditional_HMR_destinations_follow_exact_inactive_write_semantics": true,
+    "original_forward_parity_symbols_expanded": true,
+    "every_active_HMR_assignment_proved": true,
+    "all_resets_checked_zero": true,
+    "expected_native_resources": {
+      "status": "EXACT_EXPECTATION_FROM_CLASSICAL_GUARDS",
+      "assumptions": [
+        "Every active HMR measures a computational-basis wire and has a fair independent outcome.",
+        "Conditional costs count instruction execution, independently of quantum control values."
+      ],
+      "accounting": "exact Boolean guards; GF2-rank enumeration of affine leaves",
+      "rank_cap": 12,
+      "maximum_rank_used": 1,
+      "syntactic_measurements": 20,
+      "static": {
+        "toffoli_like": 52,
+        "T": 0,
+        "generic_rotations": 0
+      },
+      "mean": {
+        "toffoli_like": "103/2",
+        "T": "0",
+        "generic_rotations": "0"
+      },
+      "mean_numeric": {
+        "toffoli_like": 51.5,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      },
+      "mean_Toffoli_plus_T_quarter": "103/2",
+      "independent_condition_depth_not_assumed": true,
+      "official_verified": false
+    },
+    "rows": [
+      {
+        "leading": 0,
+        "independent_input_variables": 0,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      },
+      {
+        "leading": 1,
+        "independent_input_variables": 1,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      },
+      {
+        "leading": 2,
+        "independent_input_variables": 2,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      },
+      {
+        "leading": 3,
+        "independent_input_variables": 3,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      },
+      {
+        "leading": 4,
+        "independent_input_variables": 4,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      },
+      {
+        "leading": 5,
+        "independent_input_variables": 5,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      },
+      {
+        "leading": 6,
+        "independent_input_variables": 6,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 4
+      },
+      {
+        "leading": 7,
+        "independent_input_variables": 7,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 4
+      },
+      {
+        "leading": 8,
+        "independent_input_variables": 8,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      },
+      {
+        "leading": 9,
+        "independent_input_variables": 9,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      },
+      {
+        "leading": 10,
+        "independent_input_variables": 10,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      },
+      {
+        "leading": 11,
+        "independent_input_variables": 11,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      },
+      {
+        "leading": 12,
+        "independent_input_variables": 12,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      },
+      {
+        "leading": 13,
+        "independent_input_variables": 13,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      },
+      {
+        "leading": 14,
+        "independent_input_variables": 14,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      },
+      {
+        "leading": 15,
+        "independent_input_variables": 15,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      },
+      {
+        "leading": 16,
+        "independent_input_variables": 16,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      },
+      {
+        "leading": 17,
+        "independent_input_variables": 17,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      },
+      {
+        "leading": 18,
+        "independent_input_variables": 18,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      },
+      {
+        "leading": 19,
+        "independent_input_variables": 19,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      },
+      {
+        "leading": 20,
+        "independent_input_variables": 20,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      },
+      {
+        "leading": 21,
+        "independent_input_variables": 20,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      }
+    ]
+  },
+  "roundtrip_symbolic": {
+    "status": "PASS_EXACT_NATIVE_TEXT_ALL_INPUTS_ALL_ACTIVE_HMR_OUTCOMES",
+    "support_classes": 22,
+    "syntactic_HMR_events": 30,
+    "domain": "Every positive x<3*2^20, a strict superset of the official domain",
+    "original_inputs_covered": 3133452,
+    "conditional_HMR_destinations_follow_exact_inactive_write_semantics": true,
+    "original_forward_parity_symbols_expanded": true,
+    "every_active_HMR_assignment_proved": true,
+    "all_resets_checked_zero": true,
+    "expected_native_resources": {
+      "status": "EXACT_EXPECTATION_FROM_CLASSICAL_GUARDS",
+      "assumptions": [
+        "Every active HMR measures a computational-basis wire and has a fair independent outcome.",
+        "Conditional costs count instruction execution, independently of quantum control values."
+      ],
+      "accounting": "exact Boolean guards; GF2-rank enumeration of affine leaves",
+      "rank_cap": 12,
+      "maximum_rank_used": 2,
+      "syntactic_measurements": 30,
+      "static": {
+        "toffoli_like": 101,
+        "T": 0,
+        "generic_rotations": 0
+      },
+      "mean": {
+        "toffoli_like": "379/4",
+        "T": "0",
+        "generic_rotations": "0"
+      },
+      "mean_numeric": {
+        "toffoli_like": 94.75,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      },
+      "mean_Toffoli_plus_T_quarter": "379/4",
+      "independent_condition_depth_not_assumed": true,
+      "official_verified": false
+    },
+    "rows": [
+      {
+        "leading": 0,
+        "independent_input_variables": 0,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 3
+      },
+      {
+        "leading": 1,
+        "independent_input_variables": 1,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 3
+      },
+      {
+        "leading": 2,
+        "independent_input_variables": 2,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 3
+      },
+      {
+        "leading": 3,
+        "independent_input_variables": 3,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 3
+      },
+      {
+        "leading": 4,
+        "independent_input_variables": 4,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 3
+      },
+      {
+        "leading": 5,
+        "independent_input_variables": 5,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 3
+      },
+      {
+        "leading": 6,
+        "independent_input_variables": 6,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 4
+      },
+      {
+        "leading": 7,
+        "independent_input_variables": 7,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 4
+      },
+      {
+        "leading": 8,
+        "independent_input_variables": 8,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 3
+      },
+      {
+        "leading": 9,
+        "independent_input_variables": 9,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 3
+      },
+      {
+        "leading": 10,
+        "independent_input_variables": 10,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 3
+      },
+      {
+        "leading": 11,
+        "independent_input_variables": 11,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 3
+      },
+      {
+        "leading": 12,
+        "independent_input_variables": 12,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 3
+      },
+      {
+        "leading": 13,
+        "independent_input_variables": 13,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 3
+      },
+      {
+        "leading": 14,
+        "independent_input_variables": 14,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 3
+      },
+      {
+        "leading": 15,
+        "independent_input_variables": 15,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 3
+      },
+      {
+        "leading": 16,
+        "independent_input_variables": 16,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 3
+      },
+      {
+        "leading": 17,
+        "independent_input_variables": 17,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 3
+      },
+      {
+        "leading": 18,
+        "independent_input_variables": 18,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      },
+      {
+        "leading": 19,
+        "independent_input_variables": 19,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 2
+      },
+      {
+        "leading": 20,
+        "independent_input_variables": 20,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      },
+      {
+        "leading": 21,
+        "independent_input_variables": 20,
+        "maximum_data_monomials": 4,
+        "maximum_phase_monomials": 1
+      }
+    ]
+  },
+  "negative_omitted_helper_fix": {
+    "status": "REJECTED_MISSING_CONDITIONAL_HELPER_PHASE",
+    "error": "{'reason': 'native_phase', 'roundtrip': True, 'leading': 0, 'witness': {'original_input': 1, 'HMR_transcript': 671088640, 'leading_position': 0, 'phase_or_data_assignment_mask': 2814749767106560, 'inside_required_interval': True}}",
+    "native_text_sha256": "00f3151164169c31d5ecbcff582aec965e901fc46c088a0979cf47068f00856f"
+  },
+  "simulator": [
+    {
+      "seed": 0,
+      "shots": 32768,
+      "status": "PASS",
+      "sampled_mean_Toffolis": 94.74960327148438
+    },
+    {
+      "seed": 1,
+      "shots": 32768,
+      "status": "PASS",
+      "sampled_mean_Toffolis": 94.73504638671875
+    },
+    {
+      "seed": 2,
+      "shots": 32768,
+      "status": "PASS",
+      "sampled_mean_Toffolis": 94.73733520507812
+    },
+    {
+      "seed": 3,
+      "shots": 32768,
+      "status": "PASS",
+      "sampled_mean_Toffolis": 94.74203491210938
+    }
+  ],
+  "source_sha256": "95d6e2ac6ae838459310e77b5f05c3a77c8ee29b37e622888769dd8a83fefc81",
+  "proof_source_sha256": "c957c07bc5992d416cb97236461b7c1084cc527389bf9f0f343d3b019d341d59",
+  "inputs_sha256": "ba144ac21432fbfd77c96dfb0c5c995048e675bd75ccfc161a87bf9180be6217",
+  "source_ready_sha256": "db30d9244f206325ddf310f2955488680672a2b94938ff2b801874e7d761ba23",
+  "paper_acceptance_sha256": "c6e795219c98415c078c010023004def1a76b2785779955c95d1f4f3c62f40bd",
+  "complete_math_certificate_sha256": "9e5e0b2ec626d2893d12762593ca7b08c787f827f4cbfae1c59186ffcd4ff6a6",
+  "all_original_input_owners_restored": true,
+  "all_scratch_flags_zero": true,
+  "all_active_HMR_transcripts_proved": true,
+  "inactive_helper_measurement_destinations_explicitly_initialized": true,
+  "inherited_sources_and_modules_unchanged": true,
+  "normalization95_fallback_preserved": true,
+  "complete_fusion_qualification": false,
+  "official_verifier_run": false,
+  "seconds": 1.2837354490038706,
+  "peak_rss_kib": 33484
+}

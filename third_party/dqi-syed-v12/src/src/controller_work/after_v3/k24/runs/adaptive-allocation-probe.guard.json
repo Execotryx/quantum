@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "controller_work/after_v3/k24/adaptive_gauge_allocation_probe.py",
+    "--output",
+    "controller_work/after_v3/k24/runs/adaptive-allocation-probe/receipt.json"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794401291.4145765,
+  "rss_soft": 1500000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 30339072,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 5,
+  "elapsed_seconds": 0.807243824005127,
+  "current_rss": 30339072,
+  "available_bytes": 9557655552,
+  "exit_code": 0
+}

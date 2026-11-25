@@ -1,0 +1,61 @@
+{
+  "Q": 889,
+  "components_static_T": {
+    "extractor_rolling_gauge_padded_seed": 151910,
+    "full_scan": 44275,
+    "polynomial_synthesis": 65076,
+    "preimage_gauge_parking_shared_windows": 115043,
+    "projective_finish": 7856,
+    "shared_finish_outer_reciprocal_seam": -92
+  },
+  "expected_mean_T": 383265.02909302,
+  "expected_mean_T_exact": "13168886125240077/34359738368",
+  "format": "DQI_V5_SOURCE_MODEL_LEDGER_V1",
+  "frozen_v4_source_mean_exact": "13178547653656333/34359738368",
+  "frozen_v4_static_T": 384349,
+  "gain_from_v4_source_mean_exact": "1179385793/4194304",
+  "gain_from_v4_static_T": 281,
+  "gains": {
+    "first_two_retained_norm195": {
+      "mean_T_exact": "1020002241/4194304",
+      "static_T": 243
+    },
+    "transpose14": {
+      "mean_T_exact": "38",
+      "static_T": 38
+    }
+  },
+  "key": {
+    "expected_mean_T_exact": "909157644619/4194304",
+    "prefix_static_T": 101058,
+    "static_T": 216986
+  },
+  "measured_mean_T": null,
+  "native_jobs_run_by_preparer": 0,
+  "new_admitted_domain_event": false,
+  "new_population_draws": 0,
+  "norm_stage_counts": {
+    "historical_key": 72,
+    "historical_total": 122,
+    "scope": "Source-derived stages, not instrumented literal calls; no extra discount is inferred from these counts.",
+    "selected_key": 69,
+    "selected_total": 119
+  },
+  "official_banking_gate": "Four fresh original full official runs with actual failure factors and independent positive-error attribution.",
+  "official_cost": null,
+  "physical_scan_positions": 4095,
+  "preimage": {
+    "expected_mean_T_exact": "3933395305086733/34359738368",
+    "prefix_static_T": 57034,
+    "static_T": 115043
+  },
+  "public_cutoff": 15,
+  "selected_changes": [
+    "production_first_two_closed_inverse195",
+    "public_transpose_window14"
+  ],
+  "status": "SOURCE_MODEL_ONLY_NATIVE_AND_OFFICIAL_PENDING",
+  "total_static_T": 384068,
+  "user_price_goal": 351000000000,
+  "user_price_goal_met": null
+}

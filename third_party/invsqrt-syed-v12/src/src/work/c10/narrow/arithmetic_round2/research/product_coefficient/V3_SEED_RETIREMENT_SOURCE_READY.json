@@ -1,0 +1,56 @@
+{
+  "status": "SOURCE_READY_COMPLETE_V3_RETIREMENT_PAPER_COUNTER_NOT_RUN",
+  "anchor": "narrow",
+  "files": [
+    {
+      "path": "arithmetic_round2/research/product_coefficient/v3_seed_retirement_paper.py",
+      "bytes": 14005,
+      "sha256": "e02db82b82b028690ab7c5338f6fc3bedbc167006e6881095ebf5059c02eadd8"
+    },
+    {
+      "path": "arithmetic_round2/research/product_coefficient/V3_SEED_RETIREMENT_PLAN.md",
+      "bytes": 4365,
+      "sha256": "7fc2ad2cd7175a1cb630ea96567fbc6aed40067cedc2e59765dbf234ad468525"
+    },
+    {
+      "path": "arithmetic_round2/research/product_coefficient/native_known_zero_product.py",
+      "bytes": 6162,
+      "sha256": "7eff15c3f096dadd908d2b87770a3701f1bd53f71aaf368d8589e7d8fabdf243"
+    },
+    {
+      "path": "arithmetic_round2/research/product_coefficient/KNOWN_ZERO_PRODUCT_RESULT_MANIFEST.json",
+      "bytes": 1600,
+      "sha256": "4580742b3fae9ab214bae85d0dab097c13b6d318ddc3b395e6b156c0a6027e5d"
+    },
+    {
+      "path": "native/candidate01/lifecycle.py",
+      "bytes": 15973,
+      "sha256": "47b73f1f24ea027eedcbd1950cde7fc2535b32afeeb2e366ebdc4b6f1eb3c068"
+    },
+    {
+      "path": "native/candidate01/common.py",
+      "bytes": 3343,
+      "sha256": "9872e64213a4219522a87efc49d1aa549a04e43ae3fb51c9d5b762b1ea6535ab"
+    },
+    {
+      "path": "research/stream_phase/drive_paper_ledger.py",
+      "bytes": 7367,
+      "sha256": "d2e03ab32c5082d1f8d274c733ee7fa53be24a2c86ca5b0b47a10adbea612b19"
+    },
+    {
+      "path": "native/candidate07/INPUTS.json",
+      "bytes": 57553,
+      "sha256": "df3d932917e1c0c7b9a6f0bea7b575190a22eb4d27b16a347524fbd208daa414"
+    },
+    {
+      "path": "arithmetic_round2/tools/strict_guard.py",
+      "bytes": 8974,
+      "sha256": "bc01e3aa123f56bbf815bf55a0bef93ebc08f7dd0b99e51c0082ea96b3ba45bc"
+    }
+  ],
+  "CPU_seconds": 10,
+  "guard_seconds": 15,
+  "hard_AS_bytes": 536870912,
+  "native_execution": false,
+  "all304_inherited_source_pins_rechecked_by_worker": true
+}

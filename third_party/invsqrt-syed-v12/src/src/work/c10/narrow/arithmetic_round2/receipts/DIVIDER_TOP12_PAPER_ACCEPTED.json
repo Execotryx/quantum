@@ -1,0 +1,18 @@
+{
+  "status": "POSITIVE_PAPER_GATE_ACCEPTED_ISOLATED_NATIVE_COMPONENT_AUTHORIZED",
+  "utc": "2026-11-12T03:55:27.846930+00:00",
+  "route": "AR003 divider final inverse feed top",
+  "paper_gate_sha256": "0add50688c99c09ae67038f39124737ed14ab63ec4580a6a5be2fc84e214dee9",
+  "source_and_result_pins_checked": 8,
+  "saving_E": 1,
+  "component_divider_E": 586.5,
+  "Q": 48,
+  "complete_expected_Toffolis_alone": 1583,
+  "T": 4,
+  "R": 33,
+  "native_build_authorized": true,
+  "measured_top_phase_and_conditional_initializer_helper_phase_required": true,
+  "original_forward_and_endpoint_unchanged": true,
+  "full_composed_native_and_four_default_batch_salts_required": true,
+  "expected_counts_not_measured": true
+}

@@ -1,0 +1,3487 @@
+{
+  "status": "EMITTED_NATIVE_CANDIDATE_NOT_YET_PROVED_OR_OFFICIALLY_VERIFIED",
+  "candidate": "candidate07_ring26_loader79",
+  "Q": 48,
+  "exact_native_expectation": {
+    "status": "EXACT_EXPECTATION_FROM_CLASSICAL_GUARDS",
+    "assumptions": [
+      "Every active HMR measures a computational-basis wire and has a fair independent outcome.",
+      "Conditional costs count instruction execution, independently of quantum control values."
+    ],
+    "accounting": "exact Boolean guards; GF2-rank enumeration of affine leaves",
+    "rank_cap": 12,
+    "maximum_rank_used": 1,
+    "syntactic_measurements": 1324,
+    "static": {
+      "toffoli_like": 1671,
+      "T": 4,
+      "generic_rotations": 33
+    },
+    "mean": {
+      "toffoli_like": "1584",
+      "T": "4",
+      "generic_rotations": "33"
+    },
+    "mean_numeric": {
+      "toffoli_like": 1584.0,
+      "T": 4.0,
+      "generic_rotations": 33.0
+    },
+    "mean_Toffoli_plus_T_quarter": "1585",
+    "independent_condition_depth_not_assumed": true,
+    "official_verified": false
+  },
+  "paper_rotation_charge": 230.84805946161188,
+  "paper_cost": 87160.70685415737,
+  "components_expected_Toffolis": {
+    "normalization": 97.5,
+    "consuming_root": 198,
+    "divider_disposable_feed": 587.5,
+    "paired_product_disposable_owned_carries": 240.5,
+    "coefficient_rows_two_forward_one_inverse": 123,
+    "seed": 17.5,
+    "coefficient_R_frames": 4,
+    "H3_H4_preparation_and_restoration": 7,
+    "root_value_decoder": 21,
+    "first_loader": 61,
+    "framed_second_loader": 79,
+    "shared_table_cleanup": 9,
+    "ring26_full_control_zero_global_endpoint": 139
+  },
+  "cuts": [
+    {
+      "name": "normalized",
+      "live_qubits": 26,
+      "peak_so_far": 46,
+      "instruction_cut": 382,
+      "owners": {
+        "n": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 53.0,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "consumed_root",
+      "live_qubits": 26,
+      "peak_so_far": 46,
+      "instruction_cut": 1410,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 152.0,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "body_entry",
+      "live_qubits": 26,
+      "peak_so_far": 46,
+      "instruction_cut": 1410,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 152.0,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "first_table",
+      "live_qubits": 42,
+      "peak_so_far": 48,
+      "instruction_cut": 5611,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q45",
+          "q44",
+          "q41",
+          "q43",
+          "q39",
+          "q37",
+          "q35",
+          "q33",
+          "q31",
+          "q29",
+          "q27",
+          "q42",
+          "q40"
+        ],
+        "H": [
+          "q38",
+          "q36",
+          "q34"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 213.0,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "first_coefficient",
+      "live_qubits": 45,
+      "peak_so_far": 48,
+      "instruction_cut": 5925,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q45",
+          "q44",
+          "q41",
+          "q43",
+          "q39",
+          "q37",
+          "q35",
+          "q33",
+          "q31",
+          "q29",
+          "q27",
+          "q42",
+          "q40"
+        ],
+        "H": [
+          "q38",
+          "q36",
+          "q34",
+          "q47",
+          "q46"
+        ],
+        "snapshot": [
+          "q26"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 257.0,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "first_metadata_retired",
+      "live_qubits": 39,
+      "peak_so_far": 48,
+      "instruction_cut": 5954,
+      "owners": {},
+      "cumulative_expected": {
+        "toffoli_like": 258.0,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "seed_ready",
+      "live_qubits": 45,
+      "peak_so_far": 48,
+      "instruction_cut": 6063,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q45",
+          "q44",
+          "q41",
+          "q43",
+          "q39",
+          "q37",
+          "q35",
+          "q33",
+          "q31",
+          "q29",
+          "q27",
+          "q42",
+          "q40"
+        ],
+        "seed": [
+          "q26",
+          "q34",
+          "q36",
+          "q38",
+          "q46",
+          "q47"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 269.0,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "signed_product15",
+      "live_qubits": 44,
+      "peak_so_far": 48,
+      "instruction_cut": 7054,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "P": [
+          "q26",
+          "q34",
+          "q36",
+          "q38",
+          "q46",
+          "q47",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q45",
+          "q44",
+          "q41",
+          "q43",
+          "q39",
+          "q37",
+          "q35",
+          "q33",
+          "q31",
+          "q29",
+          "q27",
+          "q42",
+          "q40"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 372.0,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "coefficient_retired_for_divider",
+      "live_qubits": 31,
+      "peak_so_far": 48,
+      "instruction_cut": 7067,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "P": [
+          "q26",
+          "q34",
+          "q36",
+          "q38",
+          "q46",
+          "q47",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 372.0,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "divider_return",
+      "live_qubits": 31,
+      "peak_so_far": 48,
+      "instruction_cut": 17185,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "P": [
+          "q26",
+          "q34",
+          "q36",
+          "q38",
+          "q46",
+          "q47",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q8",
+          "q32"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1098.5,
+        "T": 4.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "second_table",
+      "live_qubits": 43,
+      "peak_so_far": 48,
+      "instruction_cut": 21976,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "None",
+          "None",
+          "None",
+          "q18",
+          "None",
+          "q20",
+          "q21"
+        ],
+        "P": [
+          "q26",
+          "q34",
+          "q36",
+          "q38",
+          "q46",
+          "q47",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q8",
+          "q32"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37",
+          "q39"
+        ],
+        "H": [
+          "q43",
+          "q41",
+          "q44"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1178.5,
+        "T": 4.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "second_H3_ready",
+      "live_qubits": 44,
+      "peak_so_far": 48,
+      "instruction_cut": 21992,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "None",
+          "None",
+          "None",
+          "q18",
+          "None",
+          "q20",
+          "q21"
+        ],
+        "P": [
+          "q26",
+          "q34",
+          "q36",
+          "q38",
+          "q46",
+          "q47",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q8",
+          "q32"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37",
+          "q39"
+        ],
+        "H": [
+          "q43",
+          "q41",
+          "q44",
+          "q28"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1179.5,
+        "T": 4.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "second_a6_retired",
+      "live_qubits": 43,
+      "peak_so_far": 48,
+      "instruction_cut": 21993,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "None",
+          "None",
+          "None",
+          "q18",
+          "None",
+          "q20",
+          "None"
+        ],
+        "P": [
+          "q26",
+          "q34",
+          "q36",
+          "q38",
+          "q46",
+          "q47",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q8",
+          "q32"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37",
+          "q39"
+        ],
+        "H": [
+          "q43",
+          "q41",
+          "q44",
+          "q28"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1179.5,
+        "T": 4.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "second_coefficient",
+      "live_qubits": 45,
+      "peak_so_far": 48,
+      "instruction_cut": 22290,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "None",
+          "None",
+          "None",
+          "q18",
+          "None",
+          "q20",
+          "None"
+        ],
+        "P": [
+          "q26",
+          "q34",
+          "q36",
+          "q38",
+          "q46",
+          "q47",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q8",
+          "q32"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37",
+          "q39"
+        ],
+        "H": [
+          "q43",
+          "q41",
+          "q44",
+          "q28",
+          "q21"
+        ],
+        "snapshot": [
+          "q7"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1221.5,
+        "T": 4.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "second_metadata_retired",
+      "live_qubits": 43,
+      "peak_so_far": 48,
+      "instruction_cut": 22379,
+      "owners": {},
+      "cumulative_expected": {
+        "toffoli_like": 1221.5,
+        "T": 4.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "inverse_product_data",
+      "live_qubits": 44,
+      "peak_so_far": 48,
+      "instruction_cut": 22381,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "None",
+          "None",
+          "None",
+          "q18",
+          "None",
+          "q20",
+          "None"
+        ],
+        "word": [
+          "q26",
+          "q34",
+          "q36",
+          "q38",
+          "q46",
+          "q47",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q8",
+          "q32",
+          "q28"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37",
+          "q39"
+        ],
+        "H": [
+          "q43",
+          "q41",
+          "q44"
+        ],
+        "snapshot": [
+          "q7"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1221.5,
+        "T": 4.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "seed_cleared",
+      "live_qubits": 38,
+      "peak_so_far": 48,
+      "instruction_cut": 24914,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "None",
+          "None",
+          "None",
+          "q18",
+          "None",
+          "q20",
+          "None"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q8",
+          "q32",
+          "q28"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37",
+          "q39"
+        ],
+        "H": [
+          "q43",
+          "q41",
+          "q44"
+        ],
+        "snapshot": [
+          "q7"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1365.5,
+        "T": 4.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "coefficient_sources_restored",
+      "live_qubits": 40,
+      "peak_so_far": 48,
+      "instruction_cut": 24937,
+      "owners": {},
+      "cumulative_expected": {
+        "toffoli_like": 1368.5,
+        "T": 4.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "A_restored",
+      "live_qubits": 39,
+      "peak_so_far": 48,
+      "instruction_cut": 25447,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "None",
+          "None",
+          "None",
+          "q18",
+          "None",
+          "q20",
+          "None"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q8",
+          "q32",
+          "q28"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "A": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37",
+          "q39"
+        ],
+        "H": [
+          "q43",
+          "q41",
+          "q44",
+          "q47",
+          "q9"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1409.5,
+        "T": 4.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "raw_root_restored",
+      "live_qubits": 44,
+      "peak_so_far": 48,
+      "instruction_cut": 26137,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q7",
+          "q45",
+          "q21",
+          "q18",
+          "q26",
+          "q20",
+          "q34"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q8",
+          "q32",
+          "q28"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "A": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37",
+          "q39"
+        ],
+        "H": [
+          "q43",
+          "q41",
+          "q44",
+          "q47",
+          "q9"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1431.5,
+        "T": 4.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "body_return",
+      "live_qubits": 26,
+      "peak_so_far": 48,
+      "instruction_cut": 34598,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q7",
+          "q45",
+          "q21",
+          "q18",
+          "q26",
+          "q20",
+          "q34"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q8",
+          "q32",
+          "q28"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1440.5,
+        "T": 4.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "body_restored",
+      "live_qubits": 26,
+      "peak_so_far": 48,
+      "instruction_cut": 34598,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q7",
+          "q45",
+          "q21",
+          "q18",
+          "q26",
+          "q20",
+          "q34"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q8",
+          "q32",
+          "q28"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1440.5,
+        "T": 4.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "root_restored",
+      "live_qubits": 26,
+      "peak_so_far": 48,
+      "instruction_cut": 35818,
+      "owners": {
+        "n": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q8",
+          "q32",
+          "q28",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q7",
+          "q45",
+          "q21",
+          "q18",
+          "q26",
+          "q20",
+          "q34"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1539.5,
+        "T": 4.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "logical_input_restored",
+      "live_qubits": 22,
+      "peak_so_far": 48,
+      "instruction_cut": 36097,
+      "owners": {
+        "x": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q8",
+          "q32",
+          "q28",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q7",
+          "q45",
+          "q21",
+          "q18",
+          "q26",
+          "q20",
+          "q34"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1584.0,
+        "T": 4.0,
+        "generic_rotations": 33.0
+      }
+    }
+  ],
+  "owner_trace": [
+    {
+      "label": "body_entry",
+      "live_owners": 26
+    },
+    {
+      "label": "first_table",
+      "live_owners": 42
+    },
+    {
+      "label": "first_coefficient",
+      "live_owners": 45
+    },
+    {
+      "label": "first_metadata_retired",
+      "live_owners": 39
+    },
+    {
+      "label": "seed_ready",
+      "live_owners": 45
+    },
+    {
+      "label": "signed_product15",
+      "live_owners": 44
+    },
+    {
+      "label": "coefficient_retired_for_divider",
+      "live_owners": 31
+    },
+    {
+      "label": "divider_return",
+      "live_owners": 31
+    },
+    {
+      "label": "second_table",
+      "live_owners": 43
+    },
+    {
+      "label": "second_H3_ready",
+      "live_owners": 44
+    },
+    {
+      "label": "second_a6_retired",
+      "live_owners": 43
+    },
+    {
+      "label": "second_coefficient",
+      "live_owners": 45
+    },
+    {
+      "label": "second_metadata_retired",
+      "live_owners": 43
+    },
+    {
+      "label": "inverse_product_data",
+      "live_owners": 44
+    },
+    {
+      "label": "seed_cleared",
+      "live_owners": 38
+    },
+    {
+      "label": "coefficient_sources_restored",
+      "live_owners": 40
+    },
+    {
+      "label": "A_restored",
+      "live_owners": 39
+    },
+    {
+      "label": "raw_root_restored",
+      "live_owners": 44
+    },
+    {
+      "label": "body_return",
+      "live_owners": 26
+    }
+  ],
+  "final_Clifford_layout_swaps": [
+    [
+      "q8",
+      "q7"
+    ],
+    [
+      "q32",
+      "q8"
+    ],
+    [
+      "q28",
+      "q9"
+    ],
+    [
+      "q32",
+      "q15"
+    ],
+    [
+      "q45",
+      "q16"
+    ],
+    [
+      "q21",
+      "q17"
+    ],
+    [
+      "q26",
+      "q19"
+    ],
+    [
+      "q34",
+      "q21"
+    ]
+  ],
+  "route_trace": [
+    {
+      "inverse": false,
+      "ring_bits": 26,
+      "centres": [
+        0,
+        -2,
+        -6,
+        0,
+        -1
+      ],
+      "omissions": [],
+      "swap_count": 61,
+      "stages": [
+        {
+          "stage": 0,
+          "swaps": 12
+        },
+        {
+          "stage": 1,
+          "swaps": 12
+        },
+        {
+          "stage": 2,
+          "swaps": 12
+        },
+        {
+          "stage": 3,
+          "swaps": 12
+        },
+        {
+          "stage": 4,
+          "swaps": 13
+        }
+      ],
+      "gates": [
+        {
+          "stage": 0,
+          "positions": [
+            1,
+            25
+          ],
+          "arguments": [
+            "q23",
+            "q38",
+            "q8"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            2,
+            24
+          ],
+          "arguments": [
+            "q23",
+            "q46",
+            "q9"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            3,
+            23
+          ],
+          "arguments": [
+            "q23",
+            "q47",
+            "q45"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            4,
+            22
+          ],
+          "arguments": [
+            "q23",
+            "q0",
+            "q44"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            5,
+            21
+          ],
+          "arguments": [
+            "q23",
+            "q1",
+            "q41"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            6,
+            20
+          ],
+          "arguments": [
+            "q23",
+            "q2",
+            "q43"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            7,
+            19
+          ],
+          "arguments": [
+            "q23",
+            "q3",
+            "q39"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            8,
+            18
+          ],
+          "arguments": [
+            "q23",
+            "q4",
+            "q37"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            9,
+            17
+          ],
+          "arguments": [
+            "q23",
+            "q5",
+            "q35"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            10,
+            16
+          ],
+          "arguments": [
+            "q23",
+            "q6",
+            "q33"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            11,
+            15
+          ],
+          "arguments": [
+            "q23",
+            "q40",
+            "q31"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            12,
+            14
+          ],
+          "arguments": [
+            "q23",
+            "q42",
+            "q29"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            0,
+            24
+          ],
+          "arguments": [
+            "q24",
+            "q36",
+            "q9"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            1,
+            23
+          ],
+          "arguments": [
+            "q24",
+            "q38",
+            "q45"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            2,
+            22
+          ],
+          "arguments": [
+            "q24",
+            "q46",
+            "q44"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            3,
+            21
+          ],
+          "arguments": [
+            "q24",
+            "q47",
+            "q41"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            4,
+            20
+          ],
+          "arguments": [
+            "q24",
+            "q0",
+            "q43"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            5,
+            19
+          ],
+          "arguments": [
+            "q24",
+            "q1",
+            "q39"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            6,
+            18
+          ],
+          "arguments": [
+            "q24",
+            "q2",
+            "q37"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            7,
+            17
+          ],
+          "arguments": [
+            "q24",
+            "q3",
+            "q35"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            8,
+            16
+          ],
+          "arguments": [
+            "q24",
+            "q4",
+            "q33"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            9,
+            15
+          ],
+          "arguments": [
+            "q24",
+            "q5",
+            "q31"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            10,
+            14
+          ],
+          "arguments": [
+            "q24",
+            "q6",
+            "q29"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            11,
+            13
+          ],
+          "arguments": [
+            "q24",
+            "q40",
+            "q27"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            0,
+            20
+          ],
+          "arguments": [
+            "q23",
+            "q36",
+            "q43"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            1,
+            19
+          ],
+          "arguments": [
+            "q23",
+            "q38",
+            "q39"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            2,
+            18
+          ],
+          "arguments": [
+            "q23",
+            "q46",
+            "q37"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            3,
+            17
+          ],
+          "arguments": [
+            "q23",
+            "q47",
+            "q35"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            4,
+            16
+          ],
+          "arguments": [
+            "q23",
+            "q0",
+            "q33"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            5,
+            15
+          ],
+          "arguments": [
+            "q23",
+            "q1",
+            "q31"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            6,
+            14
+          ],
+          "arguments": [
+            "q23",
+            "q2",
+            "q29"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            7,
+            13
+          ],
+          "arguments": [
+            "q23",
+            "q3",
+            "q27"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            8,
+            12
+          ],
+          "arguments": [
+            "q23",
+            "q4",
+            "q42"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            9,
+            11
+          ],
+          "arguments": [
+            "q23",
+            "q5",
+            "q40"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            21,
+            25
+          ],
+          "arguments": [
+            "q23",
+            "q41",
+            "q8"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            22,
+            24
+          ],
+          "arguments": [
+            "q23",
+            "q44",
+            "q9"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            1,
+            25
+          ],
+          "arguments": [
+            "q22",
+            "q38",
+            "q8"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            2,
+            24
+          ],
+          "arguments": [
+            "q22",
+            "q46",
+            "q9"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            3,
+            23
+          ],
+          "arguments": [
+            "q22",
+            "q47",
+            "q45"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            4,
+            22
+          ],
+          "arguments": [
+            "q22",
+            "q0",
+            "q44"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            5,
+            21
+          ],
+          "arguments": [
+            "q22",
+            "q1",
+            "q41"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            6,
+            20
+          ],
+          "arguments": [
+            "q22",
+            "q2",
+            "q43"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            7,
+            19
+          ],
+          "arguments": [
+            "q22",
+            "q3",
+            "q39"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            8,
+            18
+          ],
+          "arguments": [
+            "q22",
+            "q4",
+            "q37"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            9,
+            17
+          ],
+          "arguments": [
+            "q22",
+            "q5",
+            "q35"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            10,
+            16
+          ],
+          "arguments": [
+            "q22",
+            "q6",
+            "q33"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            11,
+            15
+          ],
+          "arguments": [
+            "q22",
+            "q40",
+            "q31"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            12,
+            14
+          ],
+          "arguments": [
+            "q22",
+            "q42",
+            "q29"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            0,
+            25
+          ],
+          "arguments": [
+            "q22",
+            "q36",
+            "q8"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            1,
+            24
+          ],
+          "arguments": [
+            "q22",
+            "q38",
+            "q9"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            2,
+            23
+          ],
+          "arguments": [
+            "q22",
+            "q46",
+            "q45"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            3,
+            22
+          ],
+          "arguments": [
+            "q22",
+            "q47",
+            "q44"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            4,
+            21
+          ],
+          "arguments": [
+            "q22",
+            "q0",
+            "q41"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            5,
+            20
+          ],
+          "arguments": [
+            "q22",
+            "q1",
+            "q43"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            6,
+            19
+          ],
+          "arguments": [
+            "q22",
+            "q2",
+            "q39"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            7,
+            18
+          ],
+          "arguments": [
+            "q22",
+            "q3",
+            "q37"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            8,
+            17
+          ],
+          "arguments": [
+            "q22",
+            "q4",
+            "q35"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            9,
+            16
+          ],
+          "arguments": [
+            "q22",
+            "q5",
+            "q33"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            10,
+            15
+          ],
+          "arguments": [
+            "q22",
+            "q6",
+            "q31"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            11,
+            14
+          ],
+          "arguments": [
+            "q22",
+            "q40",
+            "q29"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            12,
+            13
+          ],
+          "arguments": [
+            "q22",
+            "q42",
+            "q27"
+          ]
+        }
+      ]
+    },
+    {
+      "inverse": true,
+      "ring_bits": 26,
+      "centres": [
+        0,
+        -2,
+        -6,
+        0,
+        -1
+      ],
+      "omissions": [],
+      "swap_count": 61,
+      "stages": [
+        {
+          "stage": 4,
+          "swaps": 13
+        },
+        {
+          "stage": 3,
+          "swaps": 12
+        },
+        {
+          "stage": 2,
+          "swaps": 12
+        },
+        {
+          "stage": 1,
+          "swaps": 12
+        },
+        {
+          "stage": 0,
+          "swaps": 12
+        }
+      ],
+      "gates": [
+        {
+          "stage": 4,
+          "positions": [
+            0,
+            25
+          ],
+          "arguments": [
+            "q22",
+            "q36",
+            "q8"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            1,
+            24
+          ],
+          "arguments": [
+            "q22",
+            "q38",
+            "q9"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            2,
+            23
+          ],
+          "arguments": [
+            "q22",
+            "q46",
+            "q45"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            3,
+            22
+          ],
+          "arguments": [
+            "q22",
+            "q47",
+            "q44"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            4,
+            21
+          ],
+          "arguments": [
+            "q22",
+            "q0",
+            "q41"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            5,
+            20
+          ],
+          "arguments": [
+            "q22",
+            "q1",
+            "q43"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            6,
+            19
+          ],
+          "arguments": [
+            "q22",
+            "q2",
+            "q39"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            7,
+            18
+          ],
+          "arguments": [
+            "q22",
+            "q3",
+            "q37"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            8,
+            17
+          ],
+          "arguments": [
+            "q22",
+            "q4",
+            "q35"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            9,
+            16
+          ],
+          "arguments": [
+            "q22",
+            "q5",
+            "q33"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            10,
+            15
+          ],
+          "arguments": [
+            "q22",
+            "q6",
+            "q31"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            11,
+            14
+          ],
+          "arguments": [
+            "q22",
+            "q40",
+            "q29"
+          ]
+        },
+        {
+          "stage": 4,
+          "positions": [
+            12,
+            13
+          ],
+          "arguments": [
+            "q22",
+            "q42",
+            "q27"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            1,
+            25
+          ],
+          "arguments": [
+            "q22",
+            "q38",
+            "q8"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            2,
+            24
+          ],
+          "arguments": [
+            "q22",
+            "q46",
+            "q9"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            3,
+            23
+          ],
+          "arguments": [
+            "q22",
+            "q47",
+            "q45"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            4,
+            22
+          ],
+          "arguments": [
+            "q22",
+            "q0",
+            "q44"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            5,
+            21
+          ],
+          "arguments": [
+            "q22",
+            "q1",
+            "q41"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            6,
+            20
+          ],
+          "arguments": [
+            "q22",
+            "q2",
+            "q43"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            7,
+            19
+          ],
+          "arguments": [
+            "q22",
+            "q3",
+            "q39"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            8,
+            18
+          ],
+          "arguments": [
+            "q22",
+            "q4",
+            "q37"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            9,
+            17
+          ],
+          "arguments": [
+            "q22",
+            "q5",
+            "q35"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            10,
+            16
+          ],
+          "arguments": [
+            "q22",
+            "q6",
+            "q33"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            11,
+            15
+          ],
+          "arguments": [
+            "q22",
+            "q40",
+            "q31"
+          ]
+        },
+        {
+          "stage": 3,
+          "positions": [
+            12,
+            14
+          ],
+          "arguments": [
+            "q22",
+            "q42",
+            "q29"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            0,
+            20
+          ],
+          "arguments": [
+            "q23",
+            "q36",
+            "q43"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            1,
+            19
+          ],
+          "arguments": [
+            "q23",
+            "q38",
+            "q39"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            2,
+            18
+          ],
+          "arguments": [
+            "q23",
+            "q46",
+            "q37"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            3,
+            17
+          ],
+          "arguments": [
+            "q23",
+            "q47",
+            "q35"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            4,
+            16
+          ],
+          "arguments": [
+            "q23",
+            "q0",
+            "q33"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            5,
+            15
+          ],
+          "arguments": [
+            "q23",
+            "q1",
+            "q31"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            6,
+            14
+          ],
+          "arguments": [
+            "q23",
+            "q2",
+            "q29"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            7,
+            13
+          ],
+          "arguments": [
+            "q23",
+            "q3",
+            "q27"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            8,
+            12
+          ],
+          "arguments": [
+            "q23",
+            "q4",
+            "q42"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            9,
+            11
+          ],
+          "arguments": [
+            "q23",
+            "q5",
+            "q40"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            21,
+            25
+          ],
+          "arguments": [
+            "q23",
+            "q41",
+            "q8"
+          ]
+        },
+        {
+          "stage": 2,
+          "positions": [
+            22,
+            24
+          ],
+          "arguments": [
+            "q23",
+            "q44",
+            "q9"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            0,
+            24
+          ],
+          "arguments": [
+            "q24",
+            "q36",
+            "q9"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            1,
+            23
+          ],
+          "arguments": [
+            "q24",
+            "q38",
+            "q45"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            2,
+            22
+          ],
+          "arguments": [
+            "q24",
+            "q46",
+            "q44"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            3,
+            21
+          ],
+          "arguments": [
+            "q24",
+            "q47",
+            "q41"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            4,
+            20
+          ],
+          "arguments": [
+            "q24",
+            "q0",
+            "q43"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            5,
+            19
+          ],
+          "arguments": [
+            "q24",
+            "q1",
+            "q39"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            6,
+            18
+          ],
+          "arguments": [
+            "q24",
+            "q2",
+            "q37"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            7,
+            17
+          ],
+          "arguments": [
+            "q24",
+            "q3",
+            "q35"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            8,
+            16
+          ],
+          "arguments": [
+            "q24",
+            "q4",
+            "q33"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            9,
+            15
+          ],
+          "arguments": [
+            "q24",
+            "q5",
+            "q31"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            10,
+            14
+          ],
+          "arguments": [
+            "q24",
+            "q6",
+            "q29"
+          ]
+        },
+        {
+          "stage": 1,
+          "positions": [
+            11,
+            13
+          ],
+          "arguments": [
+            "q24",
+            "q40",
+            "q27"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            1,
+            25
+          ],
+          "arguments": [
+            "q23",
+            "q38",
+            "q8"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            2,
+            24
+          ],
+          "arguments": [
+            "q23",
+            "q46",
+            "q9"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            3,
+            23
+          ],
+          "arguments": [
+            "q23",
+            "q47",
+            "q45"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            4,
+            22
+          ],
+          "arguments": [
+            "q23",
+            "q0",
+            "q44"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            5,
+            21
+          ],
+          "arguments": [
+            "q23",
+            "q1",
+            "q41"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            6,
+            20
+          ],
+          "arguments": [
+            "q23",
+            "q2",
+            "q43"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            7,
+            19
+          ],
+          "arguments": [
+            "q23",
+            "q3",
+            "q39"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            8,
+            18
+          ],
+          "arguments": [
+            "q23",
+            "q4",
+            "q37"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            9,
+            17
+          ],
+          "arguments": [
+            "q23",
+            "q5",
+            "q35"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            10,
+            16
+          ],
+          "arguments": [
+            "q23",
+            "q6",
+            "q33"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            11,
+            15
+          ],
+          "arguments": [
+            "q23",
+            "q40",
+            "q31"
+          ]
+        },
+        {
+          "stage": 0,
+          "positions": [
+            12,
+            14
+          ],
+          "arguments": [
+            "q23",
+            "q42",
+            "q29"
+          ]
+        }
+      ]
+    }
+  ],
+  "phase_angle_records": [
+    {
+      "index": 0,
+      "site": "base_i0",
+      "target": "q41",
+      "new_half_turns": "2087/70368744177664",
+      "turn_units50": 16696,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 1,
+      "site": "base_i1",
+      "target": "q44",
+      "new_half_turns": "31885/562949953421312",
+      "turn_units50": 31885,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 2,
+      "site": "base_i2",
+      "target": "q45",
+      "new_half_turns": "65753/562949953421312",
+      "turn_units50": 65753,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 3,
+      "site": "base_i3",
+      "target": "q9",
+      "new_half_turns": "65943/281474976710656",
+      "turn_units50": 131886,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 4,
+      "site": "base_i4",
+      "target": "q8",
+      "new_half_turns": "130839/281474976710656",
+      "turn_units50": 261678,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 5,
+      "site": "base_i5",
+      "target": "q36",
+      "new_half_turns": "262743/281474976710656",
+      "turn_units50": 525486,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 6,
+      "site": "base_i6",
+      "target": "q38",
+      "new_half_turns": "1048587/562949953421312",
+      "turn_units50": 1048587,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 7,
+      "site": "base_i7",
+      "target": "q46",
+      "new_half_turns": "2096433/562949953421312",
+      "turn_units50": 2096433,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 8,
+      "site": "base_i8",
+      "target": "q47",
+      "new_half_turns": "131077/17592186044416",
+      "turn_units50": 4194464,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 9,
+      "site": "base_i9",
+      "target": "q0",
+      "new_half_turns": "8388179/562949953421312",
+      "turn_units50": 8388179,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 10,
+      "site": "base_i10",
+      "target": "q1",
+      "new_half_turns": "8388711/281474976710656",
+      "turn_units50": 16777422,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 11,
+      "site": "base_i11",
+      "target": "q2",
+      "new_half_turns": "33554147/562949953421312",
+      "turn_units50": 33554147,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 12,
+      "site": "base_i12",
+      "target": "q3",
+      "new_half_turns": "67108361/562949953421312",
+      "turn_units50": 67108361,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 13,
+      "site": "base_i13",
+      "target": "q4",
+      "new_half_turns": "67108583/281474976710656",
+      "turn_units50": 134217166,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 14,
+      "site": "base_i14",
+      "target": "q5",
+      "new_half_turns": "134217991/281474976710656",
+      "turn_units50": 268435982,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 15,
+      "site": "base_i15",
+      "target": "q6",
+      "new_half_turns": "536872047/562949953421312",
+      "turn_units50": 536872047,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 16,
+      "site": "base_i16",
+      "target": "q40",
+      "new_half_turns": "67108989/35184372088832",
+      "turn_units50": 1073743824,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 17,
+      "site": "base_i17",
+      "target": "q42",
+      "new_half_turns": "268435621/70368744177664",
+      "turn_units50": 2147484968,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 18,
+      "site": "base_i18",
+      "target": "q27",
+      "new_half_turns": "4294967019/562949953421312",
+      "turn_units50": 4294967019,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 19,
+      "site": "base_i19",
+      "target": "q29",
+      "new_half_turns": "4294967241/281474976710656",
+      "turn_units50": 8589934482,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 20,
+      "site": "base_i20",
+      "target": "q31",
+      "new_half_turns": "17179868565/562949953421312",
+      "turn_units50": 17179868565,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 21,
+      "site": "base_i21",
+      "target": "q33",
+      "new_half_turns": "17179869037/281474976710656",
+      "turn_units50": 34359738074,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 22,
+      "site": "base_i22",
+      "target": "q35",
+      "new_half_turns": "68719477849/562949953421312",
+      "turn_units50": 68719477849,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 23,
+      "site": "base_i23",
+      "target": "q37",
+      "new_half_turns": "68719477117/281474976710656",
+      "turn_units50": 137438954234,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 24,
+      "site": "base_i24",
+      "target": "q39",
+      "new_half_turns": "68719476819/140737488355328",
+      "turn_units50": 274877907276,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 25,
+      "site": "base_i25",
+      "target": "q43",
+      "new_half_turns": "274877910945/281474976710656",
+      "turn_units50": 549755821890,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 26,
+      "site": "overflow_j0",
+      "target": "q30",
+      "new_half_turns": "1099511634651/562949953421312",
+      "turn_units50": 1099511634651,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 27,
+      "site": "overflow_j1",
+      "target": "q28",
+      "new_half_turns": "2199023260937/562949953421312",
+      "turn_units50": 2199023260937,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 28,
+      "site": "overflow_j2",
+      "target": "q30",
+      "new_half_turns": "4398046507155/562949953421312",
+      "turn_units50": 4398046507155,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 29,
+      "site": "overflow_j3",
+      "target": "q28",
+      "new_half_turns": "268435455/17179869184",
+      "turn_units50": 8796092989440,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 30,
+      "site": "overflow_j4",
+      "target": "q30",
+      "new_half_turns": "536870911/17179869184",
+      "turn_units50": 17592186011648,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 31,
+      "site": "overflow_j5",
+      "target": "q28",
+      "new_half_turns": "1073741823/17179869184",
+      "turn_units50": 35184372056064,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 32,
+      "site": "overflow_j6",
+      "target": "q30",
+      "new_half_turns": "2147483647/17179869184",
+      "turn_units50": 70368744144896,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 33,
+      "site": "global_one",
+      "target": "q8",
+      "new_half_turns": "0",
+      "turn_units50": 0,
+      "angle_class": "Clifford",
+      "emitted": false
+    }
+  ],
+  "phase_trace": [
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 44,
+      "wires": [
+        "q8"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 45,
+      "wires": [
+        "q7"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 46,
+      "wires": [
+        "q32"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 47,
+      "wires": [
+        "q28"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 48,
+      "wires": [
+        "q30"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 47,
+      "wires": [
+        "q28"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 47,
+      "wires": [
+        "q28"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 48,
+      "wires": [
+        "q30"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 47,
+      "wires": [
+        "q28"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 47,
+      "wires": [
+        "q28"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 48,
+      "wires": [
+        "q30"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 47,
+      "wires": [
+        "q28"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 47,
+      "wires": [
+        "q28"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 48,
+      "wires": [
+        "q30"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 47,
+      "wires": [
+        "q28"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 47,
+      "wires": [
+        "q28"
+      ]
+    },
+    {
+      "event": "complete",
+      "entry_owners": 43,
+      "exit_owners": 43,
+      "observed_peak_owners": 48,
+      "generic_calls": 33,
+      "T_calls": 4,
+      "direct_Clifford_Z_POW_calls": 1,
+      "global_identity_validated_and_omitted": true,
+      "expected_Toffolis": 139,
+      "local_HMR_functions": 15,
+      "all_local_outcomes_repaid_before_exit": true,
+      "no_TableDebts_transfer": true,
+      "fixed_phase_records": [
+        {
+          "site": "overflow_j7",
+          "half_turns": "1/4",
+          "target": "q28",
+          "kind": "T"
+        },
+        {
+          "site": "overflow_j8",
+          "half_turns": "1/4",
+          "target": "q28",
+          "kind": "T"
+        },
+        {
+          "site": "overflow_j8",
+          "half_turns": "1/4",
+          "target": "q47",
+          "kind": "T"
+        },
+        {
+          "site": "overflow_j8",
+          "half_turns": "-1/4",
+          "target": "q47",
+          "kind": "T"
+        },
+        {
+          "site": "overflow_j9",
+          "half_turns": "1",
+          "target": "q32",
+          "kind": "Clifford"
+        }
+      ]
+    }
+  ],
+  "phase_basis": "ring26_global_zero33",
+  "phase_modulus": 1125899906842624,
+  "model_sha256": "24fff823faa911afe93d02afc3ded0bbd156a210a85f1265c989a087f8fd1219",
+  "accuracy_receipt_sha256": "c0eab1edd234e32d5baa1a51a0fec46abf82165d3973ffda825d2149f67f11e5",
+  "quantized_exact_minimum_margin_units64": 124370688,
+  "independent_phase_units50_sha256": "8bd482a8957cd387a2b212afdaca656947b7f89c983d67ff4eea4e14c3b0a26a",
+  "paper_gate_sha256": "49ce6e7007b19abcd533b82a9f291b617cbc1c864a3d66287c0e63a87ebb82c4",
+  "parent_authorization_sha256": "f8cfe4331b37a5184a4aab17ee85b4ac892c08c2cfb863fc4b1c1b3c9978262e",
+  "actual_HMR_variables": 1324,
+  "inherited_lifecycle_source_unchanged": true,
+  "inherited_lifecycle_contract_563_is_historical": true,
+  "selected_complete_lifecycle_expected_Toffolis": 562,
+  "all_prior_candidates_unchanged": true,
+  "official_verifier": false,
+  "no_submission": true,
+  "kmb_sha256": "ea5677b1686a28a092751bd15240dd0d54af112488758a35dc6b986fa479efe8",
+  "bytes": 305558,
+  "emission_seconds": 12.352444806994754,
+  "native_sources": {
+    "audit_tables07_static.py": "e70706e498681c81089c44d18e6de830af5cb917b512740b54f57988e9a8edc3",
+    "generate.py": "f29a6c89a0372302854c8a6c2662db34cb44e856743f9fc711c9ba2aa269cca1",
+    "oracle50.py": "df311f0844c7cf72c7dedeff891442ad9da6f88cb727a724c832a3611684e3ff",
+    "phase07.py": "c200e2f9749e3a89adc17ad9837005e0a28e794622e5fbece3551275f1de8f20",
+    "prove50.py": "d079cefb01fa88581cf279e99590ad74610551861658f5fef65ff9071650216e",
+    "run_batch.py": "906d64eed736a3d7a1d495bfea4f9f5882fcd849a67b721c2b0855c97670ba52",
+    "tables07.py": "3834990b7546026372722abc5fefb24fb4effd889dfd29743353a174753ea88e",
+    "variant.py": "2b14bea6fcedfa772daf3f5b9c5176e3434fe23ed90b8300d586bd230711f616"
+  }
+}

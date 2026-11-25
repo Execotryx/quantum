@@ -1,0 +1,33 @@
+{
+  "status": "FROZEN_INDEPENDENT_RING26_FINITE_AND_SOURCE_REVIEW",
+  "files": [
+    {
+      "path": "INDEPENDENT_REVIEW.md",
+      "bytes": 9205,
+      "sha256": "4cc837dda512d09badd037874640b7e5c0e898969302c78cb2615ad7291d761e"
+    },
+    {
+      "path": "PLAN.md",
+      "bytes": 3465,
+      "sha256": "0787fb77d2f68d1187dc2ba61c7443df7b3b181457de79f5be75a416685a1019"
+    },
+    {
+      "path": "finite_review.json",
+      "bytes": 12160,
+      "sha256": "204a31c2f071b741b63cac21b3882eb5e3e5ed1dcfcef63a4f7bccc948ee3bb7"
+    },
+    {
+      "path": "finite_review.py",
+      "bytes": 16183,
+      "sha256": "e27b244b240c4e1ad6199a510d0e5ec6582b5ba957fff43a13be91034814a302"
+    },
+    {
+      "path": "source_review.json",
+      "bytes": 53983,
+      "sha256": "c909998316980feac300b1efaa2c558f79f5c9370dcfb250f1363b214b2990d6"
+    }
+  ],
+  "all_input_accuracy_pending": true,
+  "native_pending": true,
+  "official_four_salts_pending": true
+}

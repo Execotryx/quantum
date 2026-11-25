@@ -1,0 +1,35 @@
+{
+  "status": "NATIVE_COMPONENT_SOURCE_READY_NOT_EXECUTED",
+  "accepted_paper_gate_sha256": "04a2f62efca37e06c484a8cd3ba5c43ace9cda133ea9a23ae7ec8fa405d03b27",
+  "forward_E": 96,
+  "roundtrip_E": 192,
+  "expected_native_local_Q": 39,
+  "hybrid_E": 199,
+  "hybrid_expected_Q": 42,
+  "full_normalized_inputs": 3145728,
+  "files": [
+    {
+      "path": "root192.py",
+      "bytes": 6054,
+      "sha256": "1be9045ccd992451807c2be22e079c4b3b013eb219ce7e6658f0ca3cdef1cd4a"
+    },
+    {
+      "path": "prove_root192.py",
+      "bytes": 7793,
+      "sha256": "b243231f2377867d35f501e25918265c60547fc306e28291fbe6f480b61941d4"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1428,
+      "sha256": "5ced51e8c7bd9a42c52c348973aa55efe73a18f4ff181c100e324b8e3eb2b5c8"
+    },
+    {
+      "path": "INPUTS.json",
+      "bytes": 60684,
+      "sha256": "dc8ad2f39a4e4a155a33975e86611897bb7e6a029ffecc9ff93fc04af5b5a456"
+    }
+  ],
+  "input_pins": 322,
+  "protected_sources_changed": false,
+  "integration_api": "forward(builder,norm22); inverse(builder,norm22); direct private helper modules, no install mutation"
+}

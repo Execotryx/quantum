@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/var/tmp/quantum/vendor/metric/google-quantum-ai-metric.ipynb", line 242, in generate_standard_submission
+  File "/var/tmp/quantum/vendor/metric/google-quantum-ai-metric.ipynb", line 230, in <lambda>
+  File "/var/tmp/quantum-review-20261108/src/qcompile/worker.py", line 184, in observe
+    actual = _original(*args, **kwargs)
+  File "/var/tmp/quantum/vendor/official/verifiers/dqi/verify_submission_dqi.py", line 351, in verify
+    circuit_hash = _circuit_sha256(circuit)
+  File "/var/tmp/quantum/vendor/official/verifiers/dqi/verify_submission_dqi.py", line 296, in _circuit_sha256
+    circuit.to_file(buf, format='kmb')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+ValueError: Failed to write to file.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/var/tmp/quantum-review-20261108/src/qcompile/worker.py", line 236, in <module>
+    main()
+    ~~~~^^
+  File "/var/tmp/quantum-review-20261108/src/qcompile/worker.py", line 208, in main
+    scope["generate_standard_submission"](str(submission))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/var/tmp/quantum/vendor/metric/google-quantum-ai-metric.ipynb", line 246, in generate_standard_submission
+qcompile_pinned_official_metric.ParticipantVisibleError: The dqi submission failed verification: Failed to write to file.

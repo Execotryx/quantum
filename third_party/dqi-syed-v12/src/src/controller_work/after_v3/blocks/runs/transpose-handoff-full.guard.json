@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "/workspace/scratch/e5e4bb56acc7/controller_work/after_v3/blocks/check_transpose_handoff.py",
+    "--output",
+    "controller_work/after_v3/blocks/runs/transpose-handoff-full"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794392554.2954972,
+  "rss_soft": 3000000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 40443904,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 8,
+  "elapsed_seconds": 16.31472873687744,
+  "current_rss": 40443904,
+  "available_bytes": 9608093696,
+  "exit_code": 0
+}

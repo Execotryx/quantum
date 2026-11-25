@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "/workspace/scratch/e5e4bb56acc7/controller_work/after_v3/blocks/v6/check_third_pivot_chart.py",
+    "--per-mode",
+    "4096",
+    "--output",
+    "controller_work/after_v3/blocks/v6/runs/third-chart-full"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794398033.8777118,
+  "rss_soft": 3000000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 180244480,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 10,
+  "elapsed_seconds": 13.06232237815857,
+  "current_rss": 141139968,
+  "available_bytes": 9400242176,
+  "exit_code": 0
+}

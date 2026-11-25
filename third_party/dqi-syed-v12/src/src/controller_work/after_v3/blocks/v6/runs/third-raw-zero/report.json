@@ -1,0 +1,30 @@
+{
+  "actual_nonzero_magnitudes": true,
+  "attempts": [
+    {
+      "admitted": true,
+      "free_value": 1,
+      "reason_mask": 0
+    }
+  ],
+  "cases": 1,
+  "exact_C5_raw_query_zero": true,
+  "native_checked": false,
+  "new_gauge": 0,
+  "new_population_draws": 0,
+  "population_claim": false,
+  "prepared_cases_sha256": "3e7b5f07a0cbfc87e2b12da2ca739c5c70df2a0db2e1d1fa1ca34da4110b0882",
+  "scope": "One deterministic exact construction; no probability estimate or official run",
+  "source_bindings": {
+    "controller_work/after_c5/extractor_width/direct_carry_scalar_screen.py": "0dd91ca47acab0a466e27e6374f9751e739e0c06f7b973b2d4aa34df034ceb28",
+    "controller_work/after_v3/blocks/v6/boundary_scale_first3.py": "03fe157840d2ccd400aab5bf73fdb46c620c416a6007aa530797cb6db524105c",
+    "controller_work/after_v3/blocks/v6/prepare_zero_third_fixture.py": "b34ab50ac470bd66a46b175a45c5382123b8c476b35265d431345d2fd2cd10e0",
+    "controller_work/night_c27/arithmetic/panel_audit/physical_boundary_oracle.py": "b2d7871501afdb528820c78989e408098ca441153fa16f98d4b5f9697810db99",
+    "controller_work/night_c27/arithmetic/panel_audit/prepare_panels.py": "4007bd123f1eb77431acb32c6811d838e30f4455b6f87c537413955533962fa7",
+    "controller_work/night_c27/arithmetic/panel_audit/prepared/cases.json": "eb9216d25bd69f17179533932f0ec6a8704860a366117bd370b6eec35495e339",
+    "controller_work/night_c27/census/reference.py": "a43a7dbf3ef0cb02f8660067a0067c603cf39fe7a552584c3fc9bc228f501aa6"
+  },
+  "status": "PREPARED_ADMITTED_PHYSICAL_THIRD_RAW_ZERO_FIXTURE_NOT_NATIVE",
+  "unchanged_complete_classifier_admitted": true,
+  "unchanged_support": true
+}

@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "/workspace/scratch/e5e4bb56acc7/controller_work/after_v3/blocks/check_quotient63_preimage.py",
+    "--output",
+    "controller_work/after_v3/blocks/runs/quotient63-preimage-full"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794393566.0574117,
+  "rss_soft": 3000000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 187641856,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 9,
+  "elapsed_seconds": 138.7617790699005,
+  "current_rss": 187617280,
+  "available_bytes": 9457594368,
+  "exit_code": 0
+}

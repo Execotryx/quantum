@@ -1,0 +1,107 @@
+{
+  "status": "Q48_PRODUCT_CARRY_INTERFACE_AUDIT_PASS_COMPLETE_LOADER_GATE_OWNED_BY_MEASUREMENT_AGENT",
+  "before": {
+    "root_low": 5,
+    "R": 1,
+    "raw_a5": 1,
+    "D": 13,
+    "flags": 4,
+    "Hlow": 3,
+    "snapshot": 1,
+    "word": 16,
+    "total": 44
+  },
+  "framed_second_sequence": [
+    {
+      "stage": "second_loader_return",
+      "owners": 43
+    },
+    {
+      "stage": "initial_H3",
+      "owners": 44
+    },
+    {
+      "stage": "only_a6_retired",
+      "owners": 43
+    },
+    {
+      "stage": "H4",
+      "owners": 44
+    },
+    {
+      "stage": "snapshot",
+      "owners": 45
+    },
+    {
+      "stage": "coefficient_then_high_metadata_retirement",
+      "owners": 43
+    },
+    {
+      "stage": "inverse_product_high_appended",
+      "owners": 44
+    }
+  ],
+  "root_missing_raw_high_indices": [
+    0,
+    1,
+    2,
+    4,
+    6
+  ],
+  "direct_Z_outcome_indices": [
+    6
+  ],
+  "table_debt_only_indices": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "carry_control_coordinates": "C=[False]+D, parity=C8, q=word[6+i]; same semantic coordinates after framed loader handoff.",
+  "product_forward_E": 103,
+  "product_inverse_E": 137.5,
+  "product_pair_E": 240.5,
+  "conditional_regeneration_E_included": 4,
+  "incoming_owned_rows": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "false_row": 8,
+  "aliased_live_control_row_never_freed": 9,
+  "product_peak": 48,
+  "every_pair_debt_retained": true,
+  "every_table_debt_retained": true,
+  "no_early_raw_sign_double_payment": true,
+  "Q48_proposed_Toffoli_components": {
+    "normalize": 97.5,
+    "root": 198,
+    "nonproduct_lifecycle": 322.5,
+    "product": 240.5,
+    "divider": 587.5,
+    "phase": 145
+  },
+  "proposed_total_Toffolis": 1591,
+  "T": 4,
+  "R": 34,
+  "unchanged_margin_units64": 124372027,
+  "rotation_charge": 238.04838838550535,
+  "proposed_complete_cost": 87842.32264250427,
+  "native_proved": false,
+  "official_verified": false,
+  "native_build_authorized": false,
+  "source_pins": {
+    "research/joint_loader/frozen/loader16_first61_Q48.json": "4857688e595af50828d7bedf0bc745eaaed8d10767e2e6ca6f77802887e1ad48",
+    "research/joint_loader/frozen/loader16_first61_Q48.replay.json": "e5998730a420e33b03d9fba84dedb363710a8d3a04cd16abcdece4c79071a3a4",
+    "research/joint_loader/frozen/loader16_second80_framed_Q48.json": "e4f007d322caae5c77b3d61c61d73fb239126e67a488238ece442b1f51d8a805",
+    "research/joint_loader/frozen/loader16_second80_framed_Q48.replay.json": "0fce54f7e7e148bb7f4b4c474d1c2e886064d4cdd53c53c8d5d5fde704efb6e7",
+    "research/disposable_rounding_carry/study.json": "e0b4375c67c0e8f7ce83af47092e9a37d2e0650bfae10e3aecf3bdf7145281ac",
+    "research/disposable_rounding_carry/adapted_inverse.py": "e159e3348ac5694889bd38eaba01bf6e288d1e28092c265660464a8844a0b691",
+    "research/disposable_rounding_carry/RESULT_AUDIT.json": "26ec31d71a8a2f2f03485559208b25902d6b569a3980a1b45c0fd7434d079186"
+  }
+}

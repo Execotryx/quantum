@@ -1,0 +1,49 @@
+{
+  "failure_batches": {
+    "batch-052736.json": "e4fbcc4c067c165fa3d8cd2fa63e00b6a0ad8fdb2f01136e19ed5919be747925"
+  },
+  "historical_receipt_sha256": "d24911bfa042201e99e0a2987900d90cf2a5cfea36218e7718808e0be1ac60b6",
+  "matches_historical_result": true,
+  "result": {
+    "circuit_sha256": "a44bdf032e965707cc1d07228258eb07786f9d1b07e094a5d90d1f2fb4b4bff5",
+    "degree": 12,
+    "effective_error_rate": 0.0009104197583220583,
+    "empirical_error_rate": 9.765625e-06,
+    "log2_delta": -128.0,
+    "m": 4095,
+    "max_toffoli_count": 3243349,
+    "mean_error_weight": 31.046737331746634,
+    "n": 70,
+    "num_bits": 50185,
+    "num_ops": 88249025,
+    "num_qubits": 4081,
+    "phase_errors": 0,
+    "r": 2016,
+    "reaction_depth": 172245,
+    "repetition_factor": 1.1967314991687559,
+    "score": 63747007731167.1,
+    "shot_operation_counts": {
+      "BIT_INVERT": 16442151431,
+      "BIT_STORE0": 5680742400,
+      "BIT_STORE1": 137634938,
+      "CCX": 314859090154,
+      "CCZ": 37064036,
+      "CSWAP": 12617830400,
+      "CX": 7648655885416,
+      "CZ": 223508106824,
+      "HMR": 150086533354,
+      "INFO_TAG": 2048000,
+      "POP_CONDITION": 1344204800,
+      "PUSH_CONDITION": 1344204800,
+      "R": 121544683754,
+      "SWAP": 181766144000,
+      "X": 31770046764,
+      "Z": 26811540554
+    },
+    "status": "PASS",
+    "toffoli_count": 3198378.755761719,
+    "value_errors": 1,
+    "verified_shots": 102400
+  },
+  "salt": "19a1798b5a7ce143fd2023929fa16bb063ab0689ccd4df88f8a3a0c8d63bbb1b"
+}

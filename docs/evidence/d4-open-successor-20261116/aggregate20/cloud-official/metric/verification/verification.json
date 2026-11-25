@@ -1,0 +1,295 @@
+{
+  "artifact_hashes": {
+    "dfthcsos/angle_k_0.kmb": "ce7ebaf342c5b49f7d539637359fb8a282718fb3057e7b25dd193f2a6a4b8974",
+    "dfthcsos/angle_k_1.kmb": "3eac70665f021b0e304106fd62749277d4d69db775df008aacd6d950e4934193",
+    "dfthcsos/angle_k_10.kmb": "fdb67807154e35d9f41471c22b38bbc3ed07e5c93efef30a57f0599fb8400ff7",
+    "dfthcsos/angle_k_11.kmb": "d22baf8e2d294165618bcee40d958ef2806f0b35352c8b92e0d201aff3269c37",
+    "dfthcsos/angle_k_12.kmb": "b1b6af502f4bf02e521ab888600f645aa5a5bed028290466b54a835423eb2517",
+    "dfthcsos/angle_k_13.kmb": "1843d7993215656e4e0eee69169966ba269d544bc0b90e855e4ed5e6e113accc",
+    "dfthcsos/angle_k_14.kmb": "b763f0cd2fdeaaa31e7811084e51fde5d51575b036fa22854fb28172c1712a8e",
+    "dfthcsos/angle_k_2.kmb": "c3e1454e29a05c3c28bcfd16c2aee02340b5d439d9466774424fedf0ed7601d1",
+    "dfthcsos/angle_k_3.kmb": "d26b576ae789b0471ec6c11b7317c7c69eb3d7190472af8120ccf25cf217a8ea",
+    "dfthcsos/angle_k_4.kmb": "2efacc9d944aa5a855acf780e6bbc3c07af16c0275eb9549bb24adc70acca344",
+    "dfthcsos/angle_k_5.kmb": "7e4ed9a363c8f56d85410185c7b4449211788bc61e81b3dc7cbdd10ab7ce8a42",
+    "dfthcsos/angle_k_6.kmb": "26ab1d5df8132bbc28e068a4eef0b247ea21a96fa4034f89a6d1bf306f07e284",
+    "dfthcsos/angle_k_7.kmb": "1ae98642315e7aaedfde99773af4ae48198bf8b4f2e11e97883d6aa1bfe12bee",
+    "dfthcsos/angle_k_8.kmb": "e69c554c360c709e52126a6f773afeaa3564da7be0927d6293665f342203771f",
+    "dfthcsos/angle_k_9.kmb": "38848ce19bd553e4007a454d9b7d392d05ac105cf4b269f41521bd1003bf838e",
+    "dfthcsos/submission.npz": "6418ec8e10b1a8da967ee26278434f9ac950474741185f4d61363e17a03da77f",
+    "dqi.kmb": "c726a6426612ce094ac0ea98d0fabafbe323c09d4fd078e3d2b037fa4bd5c5f7",
+    "invsqrt.kmb": "321aff83636214196daa9cbc9dcc9c5e12a155bcff8d9989e98b8cee40935177"
+  },
+  "backend_hash": "54c398f03aa7927667647c718fa927b066f029c37a41b54eff1e7d87ffbaebb2",
+  "complete": true,
+  "contract_hash": "8c94e0139e19f60b2141c11861e5576c23e38e374f7c11f530e71da2b09aee79",
+  "coverage": "unmodified official verifier completed",
+  "diagnostic": "worker exit code 0",
+  "elapsed_seconds": 1191.5664328529997,
+  "environment": {
+    "cpu_count": 2,
+    "dependencies": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scipy": "1.17.0"
+    },
+    "dependency_lock_sha256": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+    "dirty": true,
+    "numpy_backend": {
+      "Build Dependencies": {
+        "blas": {
+          "detection method": "pkgconfig",
+          "found": true,
+          "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+          "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+          "name": "scipy-openblas",
+          "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+          "pc file directory": "/project/.openblas",
+          "version": "0.3.30"
+        },
+        "lapack": {
+          "detection method": "pkgconfig",
+          "found": true,
+          "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+          "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+          "name": "scipy-openblas",
+          "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+          "pc file directory": "/project/.openblas",
+          "version": "0.3.30"
+        }
+      },
+      "Compilers": {
+        "c": {
+          "commands": "cc",
+          "linker": "ld.bfd",
+          "name": "gcc",
+          "version": "14.2.1"
+        },
+        "c++": {
+          "commands": "c++",
+          "linker": "ld.bfd",
+          "name": "gcc",
+          "version": "14.2.1"
+        },
+        "cython": {
+          "commands": "cython",
+          "linker": "cython",
+          "name": "cython",
+          "version": "3.2.1"
+        }
+      },
+      "Machine Information": {
+        "build": {
+          "cpu": "x86_64",
+          "endian": "little",
+          "family": "x86_64",
+          "system": "linux"
+        },
+        "host": {
+          "cpu": "x86_64",
+          "endian": "little",
+          "family": "x86_64",
+          "system": "linux"
+        }
+      },
+      "Python Information": {
+        "path": "/tmp/build-env-w_be3r90/bin/python",
+        "version": "3.13"
+      },
+      "SIMD Extensions": {
+        "baseline": [
+          "SSE",
+          "SSE2",
+          "SSE3"
+        ],
+        "found": [
+          "SSSE3",
+          "SSE41",
+          "POPCNT",
+          "SSE42",
+          "AVX",
+          "F16C",
+          "FMA3",
+          "AVX2"
+        ],
+        "not found": [
+          "AVX512F",
+          "AVX512CD",
+          "AVX512_KNL",
+          "AVX512_KNM",
+          "AVX512_SKX",
+          "AVX512_CLX",
+          "AVX512_CNL",
+          "AVX512_ICL",
+          "AVX512_SPR"
+        ]
+      }
+    },
+    "platform": "Linux-7.0.0-1014-gcp-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "python": "3.13.14 (main, Jul 18 2026, 17:02:37) [Clang 22.1.3 ]",
+    "source_revision": null,
+    "thread_settings": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "kind": "official_metric_execution",
+  "logs": {
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "4e52fc309ebd4bf03d91120fc8822385b4c16c4e3125c370b91dbf5f8f810e71"
+  },
+  "official_results": {
+    "claim": "sampled circuit acceptance under local salt and official metric; no coherent proof",
+    "completed": true,
+    "confirmation_observed": {
+      "k": 0,
+      "n": 102400
+    },
+    "costs": {
+      "dfthcsos": 296635967.5935997,
+      "dqi": 372799646414.39325,
+      "invsqrt": 80162.80854264232
+    },
+    "counts_note": "Counters require explicit source-reconciled mappings into real verifier returns.",
+    "coverage_counts": {
+      "dfthcsos": {
+        "completed": 78080,
+        "expected": 78080
+      },
+      "dqi": {
+        "completed": 102400,
+        "expected": 102400
+      },
+      "invsqrt": {
+        "completed": 200540928,
+        "expected": 200540928
+      }
+    },
+    "max_rss_platform_units": 4896248,
+    "pid": 1847,
+    "raw_verifier_results": {
+      "dfthcsos": {
+        "batch_size": 5,
+        "brot": 8,
+        "lambda_eff": 46.907347493481,
+        "metrics": {
+          "E_SOS": -22144.1882482,
+          "E_gap": 3.914898200000607,
+          "Lambda": 282.9736002829144,
+          "error_1": 0.019610371288993327,
+          "error_2": 0.019998779892854764,
+          "gap_in_domain": true,
+          "lambda_eff": 46.907347493481
+        },
+        "num_circuits": 15,
+        "num_ops": 624885,
+        "num_qubits": 427,
+        "reaction_depth": 168,
+        "resources": {
+          "angles_persistent_qubits": 40,
+          "angles_qubits": 128,
+          "angles_selection_qubits": 11,
+          "angles_temporary_qubits": 77,
+          "angles_toffoli": 8148.0,
+          "angles_toffoli_per_pass": 4074.0,
+          "angles_within_cap": true,
+          "brot": 8,
+          "givens_rotations_toffoli": 2250,
+          "heuristic_persistent_qubits": 84,
+          "heuristic_qubits": 387,
+          "heuristic_temporary_qubits": 303,
+          "heuristic_toffoli": 6662,
+          "inner_state_prep_persistent_qubits": 44,
+          "inner_state_prep_qubits": 347,
+          "inner_state_prep_temporary_qubits": 303,
+          "inner_state_prep_toffoli": 4095,
+          "keep_bits": 10,
+          "outer_state_prep_persistent_qubits": 40,
+          "outer_state_prep_qubits": 130,
+          "outer_state_prep_temporary_qubits": 90,
+          "outer_state_prep_toffoli": 317,
+          "persistent_qubits": 124,
+          "qubits": 427,
+          "temporary_qubits": 303,
+          "toffoli": 14810.0
+        },
+        "score": 296635967.5935997,
+        "status": "PASS",
+        "submission_sha256": "ebdf11d79863ff91e46ed620a7340ee0aeb178276dbd622ef8edc463d42cf8f8",
+        "toffoli_count": 14810.0,
+        "verified_shots": 78080
+      },
+      "dqi": {
+        "circuit_sha256": "c726a6426612ce094ac0ea98d0fabafbe323c09d4fd078e3d2b037fa4bd5c5f7",
+        "degree": 12,
+        "effective_error_rate": 0.0008660587301657926,
+        "empirical_error_rate": 0.0,
+        "log2_delta": -128.0,
+        "m": 4095,
+        "max_toffoli_count": 395571,
+        "mean_error_weight": 31.046737331746634,
+        "n": 70,
+        "num_bits": 53687,
+        "num_ops": 55357470,
+        "num_qubits": 891,
+        "phase_errors": 0,
+        "r": 2016,
+        "reaction_depth": 43468,
+        "repetition_factor": 1.1912604648115832,
+        "score": 372799646414.39325,
+        "shot_operation_counts": {
+          "BIT_INVERT": 651561842073,
+          "BIT_STORE0": 169970103797,
+          "BIT_STORE1": 2991131223,
+          "CCX": 38283163104,
+          "CCZ": 740763824,
+          "CSWAP": 1341849600,
+          "CX": 3215833388250,
+          "CZ": 25444544952,
+          "HMR": 7940440922,
+          "POP_CONDITION": 186233856000,
+          "PUSH_CONDITION": 186233856000,
+          "R": 5391418474,
+          "SWAP": 34835367967,
+          "X": 11549041346,
+          "Z": 2839389880
+        },
+        "status": "PASS",
+        "toffoli_count": 394197.03640625,
+        "value_errors": 0,
+        "verified_shots": 102400
+      },
+      "invsqrt": {
+        "circuit_sha256": "321aff83636214196daa9cbc9dcc9c5e12a155bcff8d9989e98b8cee40935177",
+        "max_toffoli_count": 1599,
+        "num_ops": 34789,
+        "num_qubits": 46,
+        "reaction_depth": 1322,
+        "rotation_count": 33.0,
+        "rotation_eps": 6.418510368591089e-13,
+        "score": 80162.80854264232,
+        "status": "PASS",
+        "t_count": 1.0,
+        "toffoli_count": 1511.5716914653951,
+        "toffoli_equivalent": 1742.669750927007,
+        "verified_shots": 200540928,
+        "worst_error_over_tolerance": 0.973575996935943,
+        "worst_x": 54566
+      }
+    },
+    "rss_units": "bytes on macOS, KiB on Linux",
+    "verification_shot_divisor": 1
+  },
+  "remote_accepted": false,
+  "request_hash": "d73174f7ce7ab1332d0301690c9a7cdeeb8109a749ee886a912e5d94783525a3",
+  "role": "official_local",
+  "schema_version": 1,
+  "seed_policy": {
+    "distribution": "complete pinned aggregate above-20 metric",
+    "role": "official_local",
+    "salt": "09c7d2f7f57e7b84d749b17e294ed84d35ab21e8714768c1ded597f6a91235ec"
+  },
+  "status": "passed",
+  "tier": "full"
+}

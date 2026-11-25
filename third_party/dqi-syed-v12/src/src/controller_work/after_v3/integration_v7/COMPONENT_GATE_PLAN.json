@@ -1,0 +1,1059 @@
+{
+  "actual_new_gauge_case_id": "54d38bf59904d025bfe626a0db3007111eb8d6c3e975bf0dda3a99d8a4cba57a",
+  "actual_raw_zero_case_id": "6663887a36baed1286a39bd8933a2c4d45a0660ef96a6a2b03ea0460588e00b0",
+  "components": [
+    {
+      "checker": "controller_work/after_v3/blocks/v5/check_inverse_retained_norm195.py",
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/blocks/v5/check_inverse_retained_norm195.py",
+        "--output",
+        "controller_work/after_v3/blocks/v5/runs/norm-stack-full"
+      ],
+      "expected_coverage_and_counts": {
+        "Q": 889,
+        "cases": 20480,
+        "modes": 5,
+        "per_mode": 4096,
+        "seeds": [
+          59191,
+          60191,
+          61191
+        ],
+        "static_T": 195
+      },
+      "full_gate": true,
+      "guard": "controller_work/after_v3/blocks/v5/runs/norm-stack-full.guard.json",
+      "name": "retained_norm195_isolated",
+      "passed_status": "PASS_CLOSED_K24_INVERSE_WITH_RETAINED_NORM_STACK_COMPONENT",
+      "report": "controller_work/after_v3/blocks/v5/runs/norm-stack-full/report.json"
+    },
+    {
+      "checker": "controller_work/after_v3/blocks/v5/check_first2_retained_norm_adapter.py",
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/blocks/v5/check_first2_retained_norm_adapter.py",
+        "--output",
+        "controller_work/after_v3/blocks/v5/runs/first2-stack-full"
+      ],
+      "expected_coverage_and_counts": {
+        "Q": 889,
+        "cases": 782,
+        "original_exclusions": 76,
+        "original_key_domain": 781,
+        "pair_static_T": 216986,
+        "prefix_static_T": 101058,
+        "preserved_physical_gauge_one": 1,
+        "seeds": [
+          147,
+          1147,
+          2147
+        ]
+      },
+      "full_gate": true,
+      "guard": "controller_work/after_v3/blocks/v5/runs/first2-stack-full.guard.json",
+      "name": "first_two_retained_norm_production_key",
+      "passed_status": "PASS_PRODUCTION_FIRST_TWO_RETAINED_NORM_STACK_KEY",
+      "report": "controller_work/after_v3/blocks/v5/runs/first2-stack-full/report.json"
+    },
+    {
+      "checker": "controller_work/after_v3/k24/v5_transpose14/check_handoff_m11.py",
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/k24/v5_transpose14/check_handoff_m11.py",
+        "--output",
+        "controller_work/after_v3/k24/v5_transpose14/runs/handoff-m11-full"
+      ],
+      "expected_coverage_and_counts": {
+        "Q": 889,
+        "cases": 256,
+        "core_static_T": 2724,
+        "seeds": [
+          22901,
+          22902,
+          22903
+        ],
+        "sizes": [
+          11
+        ]
+      },
+      "full_gate": true,
+      "guard": "controller_work/after_v3/k24/v5_transpose14/runs/handoff-m11-full.guard.json",
+      "name": "transpose14_isolated",
+      "passed_status": "PASS_NATIVE_TRANSPOSE_FLAG_HANDOFF_COMPONENT_ONLY",
+      "report": "controller_work/after_v3/k24/v5_transpose14/runs/handoff-m11-full/report.json"
+    },
+    {
+      "checker": "controller_work/after_v3/k24/v5_transpose14/check_transpose14_preimage.py",
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/k24/v5_transpose14/check_transpose14_preimage.py",
+        "--output",
+        "controller_work/after_v3/k24/v5_transpose14/runs/preimage-full"
+      ],
+      "expected_coverage_and_counts": {
+        "Q": 889,
+        "cases": 266,
+        "existing_profile_supplement": 10,
+        "original_component": 256,
+        "pair_static_T": 115043,
+        "prefix_static_T": 57034,
+        "seeds": [
+          137,
+          1137,
+          2137
+        ],
+        "supplement_cutoff_only_excluded": 6,
+        "supplement_modes": {
+          "001": 4,
+          "010": 4,
+          "100": 2
+        },
+        "supplement_whole_decoder_admitted": 4
+      },
+      "full_gate": true,
+      "guard": "controller_work/after_v3/k24/v5_transpose14/runs/preimage-full.guard.json",
+      "name": "transpose14_preimage",
+      "passed_status": "PASS_NATIVE_TRANSPOSE14_CURRENT_V4_PREIMAGE_COMPONENT_ONLY",
+      "report": "controller_work/after_v3/k24/v5_transpose14/runs/preimage-full/report.json"
+    },
+    {
+      "checker": "controller_work/after_v3/blocks/v5/check_inverse_retained_norm_deferred.py",
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/blocks/v5/check_inverse_retained_norm_deferred.py",
+        "--output",
+        "controller_work/after_v3/blocks/v5/runs/norm-deferred-full"
+      ],
+      "expected_coverage_and_counts": {
+        "Q": 889,
+        "cases": 20480,
+        "pair_T": 386,
+        "prefix_T": 191,
+        "seeds": [
+          59191,
+          60191,
+          61191
+        ]
+      },
+      "full_gate": true,
+      "guard": "controller_work/after_v3/blocks/v5/runs/norm-deferred-full.guard.json",
+      "name": "matched_norm_debts_isolated",
+      "passed_status": "PASS_MATCHED_K24_INVERSES_WITH_RETAINED_NORM_DEBTS_COMPONENT",
+      "report": "controller_work/after_v3/blocks/v5/runs/norm-deferred-full/report.json"
+    },
+    {
+      "checker": "controller_work/after_v3/blocks/v5/check_first2_retained_norm_deferred_adapter.py",
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/blocks/v5/check_first2_retained_norm_deferred_adapter.py",
+        "--output",
+        "controller_work/after_v3/blocks/v5/runs/first2-deferred-full"
+      ],
+      "expected_coverage_and_counts": {
+        "Q": 889,
+        "cases": 782,
+        "existing_physical_gauge_one": 1,
+        "original_exclusions": 76,
+        "original_key_cases": 781,
+        "pair_T": 216983,
+        "prefix_T": 101055,
+        "public_carry_seams": 2,
+        "seeds": [
+          147,
+          1147,
+          2147
+        ]
+      },
+      "full_gate": true,
+      "guard": "controller_work/after_v3/blocks/v5/runs/first2-deferred-full.guard.json",
+      "name": "first_two_matched_norm_production_key",
+      "passed_status": "PASS_PRODUCTION_FIRST_TWO_MATCHED_NORM_DEBTS_KEY",
+      "report": "controller_work/after_v3/blocks/v5/runs/first2-deferred-full/report.json"
+    },
+    {
+      "checker": "controller_work/after_v3/blocks/v5_cubic_phase20/check_cubic_trace_quotient20.py",
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/blocks/v5_cubic_phase20/check_cubic_trace_quotient20.py",
+        "--output",
+        "controller_work/after_v3/blocks/v5_cubic_phase20/runs/cubic20-full"
+      ],
+      "expected_coverage_and_counts": {
+        "Q": 889,
+        "cases": 4096,
+        "exhaustive64by64": true,
+        "helpers": 10,
+        "pair_T": 40,
+        "seeds": [
+          63191,
+          64191,
+          65191
+        ],
+        "single_T": 20
+      },
+      "full_gate": true,
+      "guard": "controller_work/after_v3/blocks/v5_cubic_phase20/runs/cubic20-full.guard.json",
+      "name": "cubic20_isolated",
+      "passed_status": "PASS_NATIVE_CUBIC20_TRACE_QUOTIENT_COMPONENT",
+      "report": "controller_work/after_v3/blocks/v5_cubic_phase20/runs/cubic20-full/report.json"
+    },
+    {
+      "checker": "controller_work/after_v3/blocks/v5_cubic_phase20/check_quotient_phase62.py",
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/blocks/v5_cubic_phase20/check_quotient_phase62.py",
+        "--output",
+        "controller_work/after_v3/blocks/v5_cubic_phase20/runs/phase62-full"
+      ],
+      "expected_coverage_and_counts": {
+        "Q": 889,
+        "cases": 20480,
+        "helpers": 22,
+        "panels": 6,
+        "seeds": [
+          49191,
+          50191,
+          51191
+        ],
+        "single_T": 62
+      },
+      "full_gate": true,
+      "guard": "controller_work/after_v3/blocks/v5_cubic_phase20/runs/phase62-full.guard.json",
+      "name": "quotient62_isolated",
+      "passed_status": "PASS_NATIVE_CUBIC20_JOINT_NORM_QUOTIENT_PHASE_COMPONENT_ONLY",
+      "report": "controller_work/after_v3/blocks/v5_cubic_phase20/runs/phase62-full/report.json"
+    },
+    {
+      "checker": "controller_work/after_v3/blocks/v5_cubic_phase20/check_preimage62_transpose14.py",
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/blocks/v5_cubic_phase20/check_preimage62_transpose14.py",
+        "--output",
+        "controller_work/after_v3/blocks/v5_cubic_phase20/runs/preimage-full"
+      ],
+      "expected_coverage_and_counts": {
+        "Q": 889,
+        "cases": 266,
+        "existing_profile_supplement": 10,
+        "original_component": 256,
+        "pair_T": 115025,
+        "paired_calls": 18,
+        "prefix_T": 57034,
+        "seeds": [
+          137,
+          1137,
+          2137
+        ],
+        "supplement_cutoff_only_excluded": 6,
+        "supplement_whole_decoder_admitted": 4
+      },
+      "full_gate": true,
+      "guard": "controller_work/after_v3/blocks/v5_cubic_phase20/runs/preimage-full.guard.json",
+      "name": "quotient62_transpose14_preimage",
+      "passed_status": "PASS_NATIVE_CUBIC20_TRANSPOSE14_CURRENT_V4_PREIMAGE_COMPONENT_ONLY",
+      "report": "controller_work/after_v3/blocks/v5_cubic_phase20/runs/preimage-full/report.json"
+    },
+    {
+      "checker": "controller_work/after_v3/blocks/v6/check_third_pivot_chart.py",
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/blocks/v6/check_third_pivot_chart.py",
+        "--per-mode",
+        "4096",
+        "--output",
+        "controller_work/after_v3/blocks/v6/runs/third-chart-full"
+      ],
+      "expected_coverage_and_counts": {
+        "Q": 889,
+        "cases": 20480,
+        "pair_T": 1274,
+        "per_mode": 4096,
+        "prefix_T": 620,
+        "seeds": [
+          59191,
+          60191,
+          61191
+        ]
+      },
+      "full_gate": true,
+      "guard": "controller_work/after_v3/blocks/v6/runs/third-chart-full.guard.json",
+      "name": "third_zero_repaired_isolated",
+      "passed_status": "PASS_THIRD_PIVOT_ZERO_REPAIRED_COMPONENT_ONLY",
+      "report": "controller_work/after_v3/blocks/v6/runs/third-chart-full/report.json"
+    },
+    {
+      "checker": "controller_work/after_v3/blocks/v6/check_first3_retained_norm_adapter.py",
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/blocks/v6/check_first3_retained_norm_adapter.py",
+        "--output",
+        "controller_work/after_v3/blocks/v6/runs/first3-full"
+      ],
+      "expected_coverage_and_counts": {
+        "Q": 889,
+        "actual_gauge_one": 1,
+        "cases": 783,
+        "constructed_raw_zero": 1,
+        "old_rare_input": 1,
+        "original_exclusions": 76,
+        "original_key_cases": 781,
+        "pair_T": 216928,
+        "prefix_T": 101087,
+        "public_carry_seams": 2,
+        "seeds": [
+          147,
+          1147,
+          2147
+        ]
+      },
+      "full_gate": true,
+      "guard": "controller_work/after_v3/blocks/v6/runs/first3-full.guard.json",
+      "name": "first_three_zero_repaired_production_key",
+      "passed_status": "PASS_PRODUCTION_THIRD_ZERO_REPAIRED_CHART_KEY",
+      "report": "controller_work/after_v3/blocks/v6/runs/first3-full/report.json"
+    },
+    {
+      "checker": "controller_work/after_v3/k24/adaptive_gauge_v2/check_adaptive_gauge64_v2.py",
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/k24/adaptive_gauge_v2/check_adaptive_gauge64_v2.py",
+        "--output",
+        "controller_work/after_v3/k24/adaptive_gauge_v2/runs/full",
+        "--batch-size",
+        "80"
+      ],
+      "expected_coverage_and_counts": {
+        "allocation_revision": 2,
+        "candidate_labels": 64,
+        "cases": 80,
+        "explicit_selector_peak": 322,
+        "gauge_Q": 865,
+        "gauge_serialized_bits": 49462,
+        "inherited_native_point_scratch": 1,
+        "original_mask_restoration": true,
+        "pointwise_no_T_loss": true,
+        "retained_pivot": 12,
+        "scan_Q": 875,
+        "scan_explicit_live_peak": 24,
+        "scan_points": 4026,
+        "scan_serialized_bits": 49463,
+        "scan_static_T": 44286,
+        "seeds": [
+          3901,
+          4901,
+          5901
+        ]
+      },
+      "full_gate": true,
+      "guard": "controller_work/after_v3/k24/adaptive_gauge_v2/runs/full.guard.json",
+      "name": "adaptive64_gauge_and_full_scan",
+      "passed_status": "PASS_NATIVE_ADAPTIVE64_GAUGE_AND_SCAN_COMPONENTS",
+      "report": "controller_work/after_v3/k24/adaptive_gauge_v2/runs/full/report.json"
+    }
+  ],
+  "format": "DQI_V7_COMPONENT_GATE_PLAN_V1",
+  "internal_source_generation": "integration_v7",
+  "maximum_Q_source_model": 889,
+  "new_population_event": false,
+  "physical_scan_positions": 4095,
+  "preserved_initial_v5_source_manifest_sha256": "6c347cbd1bd5c836d9e56f272f20a44f805103db85b7e72b945e42825be7f9ba",
+  "preserved_v5b_source_manifest_sha256": "b15aa9cfa6cfee388adfd0e544807ef09ab5f5ca788a3f37b13641bb14be53d6",
+  "preserved_v6_source_manifest_sha256": "c967e714f8a0f53024be272a9ae317ff8945d08e3994e1b1347eb62f9d9b623d",
+  "public_cutoff": 15,
+  "public_release_label": "v6",
+  "scope": "All eleven immutable v5 arithmetic/key gates plus the complete corrected adaptive64 gauge and scan gate. No smoke, source-only, old tape or old price substitutes for a new full gate.",
+  "selected_changes": [
+    "matched191_195_production_first_two",
+    "public_transpose_window14",
+    "cubic20_joint_phase62",
+    "third_zero_repaired_public_chart",
+    "adaptive_capped64_mask_gauge"
+  ],
+  "source_files": {
+    "controller_work/after_c5/arithmetic_t/runs/first2-physical-gauge1/cases.json": {
+      "bytes": 9872,
+      "sha256": "149d50ccac0d343e4479444f1804a01127be648750f12ed9a99b1acc04f5b3d4"
+    },
+    "controller_work/after_c5/converter_width/runs/full/fixtures.json": {
+      "bytes": 395776,
+      "sha256": "6e023eb39758c15cc5e3835bc6bcdb0f8ad08c3ec15185d2c970dfbb201fac73"
+    },
+    "controller_work/after_c5/extractor_width/boundary_scale_adapter.py": {
+      "bytes": 3232,
+      "sha256": "573434146bd6eb945a524ded811ccc0f245d83e9ab53a98464d9c1c0593b1037"
+    },
+    "controller_work/after_v3/audit/V5_MATCHED_NORM_DEBT_SOURCE_REVIEW.md": {
+      "bytes": 6267,
+      "sha256": "836e494358e75792baee31e756e1c51e37fcdd5e3d49411fda882c075f2076e9"
+    },
+    "controller_work/after_v3/audit/V5_TRANSPOSE14_SOURCE_REVIEW.md": {
+      "bytes": 5638,
+      "sha256": "a6007def704d0ba7bad95cf252ab8d4f244c58c2782a6f19b3354da96a08375c"
+    },
+    "controller_work/after_v3/audit/V6_SPECIAL_PANELS_SOURCE_REVIEW.md": {
+      "bytes": 3020,
+      "sha256": "205eedcd39f29f1203b72e8d4ac38ff20557b28f4d4d4387df742887ff8cefef"
+    },
+    "controller_work/after_v3/audit/V6_SPECIAL_PANELS_V2_SOURCE_REVIEW.md": {
+      "bytes": 3742,
+      "sha256": "d42b88d7b999f9e9e081506b940c0b92f5065feb59c6222dd8fe05800c081c3d"
+    },
+    "controller_work/after_v3/audit/V6_THIRD_CHART_ORACLE_FIXTURE_SOURCE_REVIEW.md": {
+      "bytes": 5492,
+      "sha256": "5fb880d520bb48b50e62dd29b3b820b13a1d7071cfd6c1ec9e154aea10da0066"
+    },
+    "controller_work/after_v3/blocks/V5_RETAINED_NORM_BINDING_REVIEW.md": {
+      "bytes": 4491,
+      "sha256": "fdc4573b694cf1358af12b98724781da82ff2c2ccdd40a744a0cf3f26e144b44"
+    },
+    "controller_work/after_v3/blocks/runs/quotient63-preimage-full/report.json": {
+      "bytes": 217919,
+      "sha256": "461bb69e8825e211ae7ba7a547fe92ce4a4969361c140b52ee71f8bf416d8ebb"
+    },
+    "controller_work/after_v3/blocks/v5/CUBIC20_QUOTIENT62_SOURCE_REVIEW.md": {
+      "bytes": 5279,
+      "sha256": "891449b331cd905545ce72d4ab7f2734e165d2968d36d073ab3a2ae101cabafd"
+    },
+    "controller_work/after_v3/blocks/v5/CUBIC20_TRANSPOSE14_CALLER_SOURCE_REVIEW.md": {
+      "bytes": 4563,
+      "sha256": "550a462994886e11877c968d0c970341810d320ad1474951e2085c45a08ff30c"
+    },
+    "controller_work/after_v3/blocks/v5/FIRST_TWO_MATCHED_NORM_DEBTS_GATE.md": {
+      "bytes": 8188,
+      "sha256": "382ca76ad3b71709610a76876d5663e2bc9c397cf5ad61c1879e03ccf1b1fa3f"
+    },
+    "controller_work/after_v3/blocks/v5/FIRST_TWO_MATCHED_NORM_DEBTS_SOURCES.json": {
+      "bytes": 1279,
+      "sha256": "0741fc06d289a539252966811d314fd8d96725c73fd0315852bb6bd4cc475c3a"
+    },
+    "controller_work/after_v3/blocks/v5/FIRST_TWO_RETAINED_NORM195_GATE.md": {
+      "bytes": 10521,
+      "sha256": "cd901ba39753a298c1c9468da5825129808805d6caf9be208d15b4e10abb2bf0"
+    },
+    "controller_work/after_v3/blocks/v5/FIRST_TWO_RETAINED_NORM195_SOURCES.json": {
+      "bytes": 1095,
+      "sha256": "a2f1552a55a5bea8ace06254aab4a732b24fe0f9c4688a310d9672aeba41ed19"
+    },
+    "controller_work/after_v3/blocks/v5/V5B_MATCHED_AND_CUBIC62_BINDING_REVIEW.md": {
+      "bytes": 3457,
+      "sha256": "d96a5ef3de97f64591d69ecba5f1d291fd34ff28b86caa77c52681bc28104289"
+    },
+    "controller_work/after_v3/blocks/v5/check_first2_retained_norm_adapter.py": {
+      "bytes": 14127,
+      "sha256": "a3d693d4e283ace090226eb5f45f5f64ca669c9dd4efe3e0f7746630b0538ae7"
+    },
+    "controller_work/after_v3/blocks/v5/check_first2_retained_norm_deferred_adapter.py": {
+      "bytes": 15737,
+      "sha256": "10b879908015940dec875c2adb20b9aa8d9956b7b3c92243bdfe47a9f2df6039"
+    },
+    "controller_work/after_v3/blocks/v5/check_inverse_retained_norm195.py": {
+      "bytes": 11375,
+      "sha256": "706f5bfc69794b542aa541f87dc0329aa7645a07f792f7c30b5ac218f79be1a7"
+    },
+    "controller_work/after_v3/blocks/v5/check_inverse_retained_norm_deferred.py": {
+      "bytes": 12675,
+      "sha256": "df6722a6c90671f91eadc9f2b6ace79b9154eb71a193589e0c74f6f53fecedd1"
+    },
+    "controller_work/after_v3/blocks/v5/first2_retained_norm_adapter.py": {
+      "bytes": 5270,
+      "sha256": "1abb17d7c5943d7bd6bbc389b37113f7166bdff30c29755d0e6e6633e62e80cd"
+    },
+    "controller_work/after_v3/blocks/v5/first2_retained_norm_deferred_adapter.py": {
+      "bytes": 7029,
+      "sha256": "095fdf281dd9e959c7980e517eb3cd7ab677d10fdd62c7a305600fb3c530c118"
+    },
+    "controller_work/after_v3/blocks/v5/inverse_retained_norm195.py": {
+      "bytes": 6229,
+      "sha256": "4ae6b746ff165082b8c67ae733f144c16e34ac93d03952676d404f3cfa6b9b50"
+    },
+    "controller_work/after_v3/blocks/v5/inverse_retained_norm_deferred.py": {
+      "bytes": 8462,
+      "sha256": "8cb8eaee9312acc81a3048072ec3ddf721399ba8ccdd7eac94002f9d4ec2da46"
+    },
+    "controller_work/after_v3/blocks/v5_cubic_phase20/DERIVATION.json": {
+      "bytes": 4398,
+      "sha256": "1518b7280f39b530beeb0d1a352bed521b9a76ed0410e2aa00cb4646631a1ed6"
+    },
+    "controller_work/after_v3/blocks/v5_cubic_phase20/README.md": {
+      "bytes": 3601,
+      "sha256": "7eddd709644c33f35607bed4c825112323c0387e1dab43ce84e09a42ac669020"
+    },
+    "controller_work/after_v3/blocks/v5_cubic_phase20/SOURCE_LEDGER.json": {
+      "bytes": 760,
+      "sha256": "1d16b77a429ae976bdf62b4c14549f215325332f9904cbf4e9ee32624a4b893d"
+    },
+    "controller_work/after_v3/blocks/v5_cubic_phase20/check_cubic_trace_quotient20.py": {
+      "bytes": 6973,
+      "sha256": "16fe88aff8a72c697d9e188b63a2ae0ee3ba5ccb3b2c12aed52b4881f6eea736"
+    },
+    "controller_work/after_v3/blocks/v5_cubic_phase20/check_preimage62_transpose14.py": {
+      "bytes": 36362,
+      "sha256": "df8087025095caa231bdbc186d93f399b157c6e8a3769278bdf3af2c8a86d169"
+    },
+    "controller_work/after_v3/blocks/v5_cubic_phase20/check_quotient_phase62.py": {
+      "bytes": 14651,
+      "sha256": "0f9cc52f12f9eb8121ddaa02d5f5b22aded863775acfa873c1dee0e220562975"
+    },
+    "controller_work/after_v3/blocks/v5_cubic_phase20/cubic_trace_quotient20.py": {
+      "bytes": 2369,
+      "sha256": "5c4e5c8e8241aca141db76d2ce3bc9580a9647e72e895ac6ee9729c1351c6205"
+    },
+    "controller_work/after_v3/blocks/v5_cubic_phase20/paired_phase62.py": {
+      "bytes": 7174,
+      "sha256": "b1e4b759b384a28b1ac557d6b5674319b5403cf53aa03cc0f196b03356d0d150"
+    },
+    "controller_work/after_v3/blocks/v5_cubic_phase20/quotient_phase62.py": {
+      "bytes": 2892,
+      "sha256": "510b413697d3cd50b3d2c024252552bf294875ab5ff7ffe253f75b437b2fdc06"
+    },
+    "controller_work/after_v3/blocks/v6/ACTUAL_GAUGE_ONE_AND_COMPONENT_RECEIPT_REVIEW.md": {
+      "bytes": 5594,
+      "sha256": "3c76599d479d37cffced536310c299385ca3336e552e7593cbfe81f1c3070162"
+    },
+    "controller_work/after_v3/blocks/v6/INTEGRATION_SPECIAL_PANELS.md": {
+      "bytes": 2765,
+      "sha256": "dca94719324a4db16bf5edbbfd4d33be5fab6aa708732292ccda16149b3f79c4"
+    },
+    "controller_work/after_v3/blocks/v6/INTEGRATION_SPECIAL_PANELS_V2.md": {
+      "bytes": 2706,
+      "sha256": "f8a3ef3d448b5625c8d14aae9319b3e1a87ebc79c7158e9d043cc103e9a07df4"
+    },
+    "controller_work/after_v3/blocks/v6/KEY_CHECKER_DERIVATION.json": {
+      "bytes": 11061,
+      "sha256": "d875faf50a186d93b59bcceb0f909522ba366a2abf978a5a8a49d87961ed4579"
+    },
+    "controller_work/after_v3/blocks/v6/SPECIAL_PANELS_V2_DERIVATION.json": {
+      "bytes": 5073,
+      "sha256": "3e991af19424de4df2a6d990d61026a0115b81b4a1859479d463aa4fec94a8ae"
+    },
+    "controller_work/after_v3/blocks/v6/THIRD_PUBLIC_CHART_GATE.md": {
+      "bytes": 11074,
+      "sha256": "b364a5e5840553614bbd82abcae9bfe285ae6b4e74898eb68d67b8cfbbb9edd0"
+    },
+    "controller_work/after_v3/blocks/v6/THIRD_PUBLIC_CHART_SOURCES.json": {
+      "bytes": 2133,
+      "sha256": "c306afcf66f403ec4eeb9c3a439a19c53f22098817969087a8baf16dfb1aeeac"
+    },
+    "controller_work/after_v3/blocks/v6/V6_PIPELINE_EVENT_CONTACT_REVIEW.md": {
+      "bytes": 4962,
+      "sha256": "c5614a862f469afbf1aa1c9da4461a698b6438f63d81dcb5100c28c961136189"
+    },
+    "controller_work/after_v3/blocks/v6/boundary_scale_first3.py": {
+      "bytes": 4343,
+      "sha256": "03fe157840d2ccd400aab5bf73fdb46c620c416a6007aa530797cb6db524105c"
+    },
+    "controller_work/after_v3/blocks/v6/check_first3_retained_norm_adapter.py": {
+      "bytes": 18879,
+      "sha256": "3795553ea5ec70155d443a24d90930b9e32b8727d2f15abb98246edec33b4b17"
+    },
+    "controller_work/after_v3/blocks/v6/check_third_pivot_chart.py": {
+      "bytes": 16161,
+      "sha256": "b570fabe7e193827c91ae00290bb85ea74d7d91a03200b1dfcbe9cae34802104"
+    },
+    "controller_work/after_v3/blocks/v6/first3_retained_norm_adapter.py": {
+      "bytes": 8140,
+      "sha256": "6d66d5b5a308e56c50fe628cf0cfecda944db7e9189891d32ab628808d1e4cc8"
+    },
+    "controller_work/after_v3/blocks/v6/prepare_integration_special_panels.py": {
+      "bytes": 12170,
+      "sha256": "29c9c8dda21774d236caa2f06bc5ddc380cc3bfe9c6e5532489d586537101528"
+    },
+    "controller_work/after_v3/blocks/v6/prepare_integration_special_panels_v2.py": {
+      "bytes": 14643,
+      "sha256": "13dded8cccb5f46faf94973e20c74f6f7a6c587d9b529ef0d1effa9e4f8fc602"
+    },
+    "controller_work/after_v3/blocks/v6/prepare_zero_third_fixture.py": {
+      "bytes": 7317,
+      "sha256": "b34ab50ac470bd66a46b175a45c5382123b8c476b35265d431345d2fd2cd10e0"
+    },
+    "controller_work/after_v3/blocks/v6/runs/first3-full.guard.json": {
+      "bytes": 696,
+      "sha256": "69860f68ff0f61a2e05850d377419337182469c611342af91a7576ef4aa9f85b"
+    },
+    "controller_work/after_v3/blocks/v6/runs/first3-full/fixtures.json": {
+      "bytes": 5664075,
+      "sha256": "b55d42970ef4572b20f2afc42aa4cabc5d017e0d0476d554e397014babc6e073"
+    },
+    "controller_work/after_v3/blocks/v6/runs/first3-full/report.json": {
+      "bytes": 200835,
+      "sha256": "923df5eb0f79f2090f012cc5286267c1de5b3444177516658c4901fd348f9cb4"
+    },
+    "controller_work/after_v3/blocks/v6/runs/integration-special-panels.guard.json": {
+      "bytes": 678,
+      "sha256": "33e76c120c3220a1429d8bf36f90afecc0cb5795d63f6d0ac56f9e48bcd3aa4b"
+    },
+    "controller_work/after_v3/blocks/v6/runs/integration-special-panels.stdout": {
+      "bytes": 471,
+      "sha256": "fb8470cc85927415294fecebd71c2477c62062bb8c19f5e96780d3221857beb6"
+    },
+    "controller_work/after_v3/blocks/v6/runs/third-chart-full.guard.json": {
+      "bytes": 721,
+      "sha256": "7bbe51fea70cc8cfe1d00bcb55f8eb9548a7984d44df0352f3bb2245fa1143c4"
+    },
+    "controller_work/after_v3/blocks/v6/runs/third-chart-full/report.json": {
+      "bytes": 42583,
+      "sha256": "f5d140bb46f1b84886c21cde6bff4e8cbe993d4e572a2e8ec9ecb28f6f943efb"
+    },
+    "controller_work/after_v3/blocks/v6/runs/third-raw-zero.guard.json": {
+      "bytes": 691,
+      "sha256": "8c72aced0233b70b5d95d1d4e7f0ff0881c08c1c1bb71e15c693705d125f36f4"
+    },
+    "controller_work/after_v3/blocks/v6/runs/third-raw-zero/cases.json": {
+      "bytes": 10126,
+      "sha256": "3e7b5f07a0cbfc87e2b12da2ca739c5c70df2a0db2e1d1fa1ca34da4110b0882"
+    },
+    "controller_work/after_v3/blocks/v6/runs/third-raw-zero/report.json": {
+      "bytes": 1644,
+      "sha256": "6d111797aac57773d6f2838cb5c946a2aa4b70068096dc956c021143f74aece8"
+    },
+    "controller_work/after_v3/blocks/v6/third_pivot_chart.py": {
+      "bytes": 5712,
+      "sha256": "0a788b7b49b80f8d267d05ac1dc6c067fdb626aaa054d076ce3052948af32166"
+    },
+    "controller_work/after_v3/integration_v5/COMPONENT_GATE_PLAN.json": {
+      "bytes": 11904,
+      "sha256": "0b4932be57dadb5ea3f70794d7635ed9b5db09a34f4ed4a05e5a3acf6d4b0518"
+    },
+    "controller_work/after_v3/integration_v5/DERIVATION_IN_PROGRESS.json": {
+      "bytes": 3235,
+      "sha256": "866c3ebf2c5cee862444dbf5470068a642ac3a47834b2ca38880397ca8d97e89"
+    },
+    "controller_work/after_v3/integration_v5/DOMAIN_TRANSFER_ARGUMENT.md": {
+      "bytes": 5512,
+      "sha256": "fc51b67b613ccbd4e459460ac4b9f94dda9f297161f168e0fbb570ecdaefcf89"
+    },
+    "controller_work/after_v3/integration_v5/README.md": {
+      "bytes": 7954,
+      "sha256": "0e1452d9517c94f00871c7f9344a965b4f5871da7b731873dfcfcc8a2e1cd960"
+    },
+    "controller_work/after_v3/integration_v5/SOURCE_DERIVATION.json": {
+      "bytes": 4450,
+      "sha256": "d86eca1067754f80c93f5e343b16b9735ae51ae531f426568d27da391abde3de"
+    },
+    "controller_work/after_v3/integration_v5/SOURCE_MANIFEST.json": {
+      "bytes": 3795,
+      "sha256": "6c347cbd1bd5c836d9e56f272f20a44f805103db85b7e72b945e42825be7f9ba"
+    },
+    "controller_work/after_v3/integration_v5/SOURCE_MODEL_LEDGER.json": {
+      "bytes": 1951,
+      "sha256": "ae360eb17e1b938b25e7fe28bb8080b7e6359eff7833941663a5753dd5f06af8"
+    },
+    "controller_work/after_v3/integration_v5/SOURCE_PREPARATION_CHECKS.json": {
+      "bytes": 1917,
+      "sha256": "07a2dabfa6f6a739833a0ee80426793e444876e761c6641f8058e396ab8bf593"
+    },
+    "controller_work/after_v3/integration_v5/build_v5.py": {
+      "bytes": 4411,
+      "sha256": "74e9370e275f19bc3e1c9f263cf37494277c06499bf157128be9b197f02b08f7"
+    },
+    "controller_work/after_v3/integration_v5/check_build_equality.py": {
+      "bytes": 4381,
+      "sha256": "0df19f87b37f16a116c6ad7231aae0e6f0650b1d3340b9f8d1497d9f0cce5c9b"
+    },
+    "controller_work/after_v3/integration_v5/check_candidate.py": {
+      "bytes": 4134,
+      "sha256": "26d3519c10ac08588dd5eadaf79fce725e9d7ed80429f7f53d56c51c7a54b3f1"
+    },
+    "controller_work/after_v3/integration_v5/check_key_boundary.py": {
+      "bytes": 8291,
+      "sha256": "6b8851be258d3590666419c2ef28ee187a9da73cd5d5847b498d484d97f543e3"
+    },
+    "controller_work/after_v3/integration_v5/gen_dqi.py": {
+      "bytes": 1763,
+      "sha256": "9251d2378047d32de1f12f1f5d23ac927ab04d5e1f8afd72ebb9a720aec42e9f"
+    },
+    "controller_work/after_v3/integration_v5/prepare_component_gates.py": {
+      "bytes": 23589,
+      "sha256": "b6b206fe355bdc8724db3eb22920276538f156ef0fb970216317c1a8494a9988"
+    },
+    "controller_work/after_v3/integration_v5/v5_binding.py": {
+      "bytes": 13013,
+      "sha256": "6483e60a487e4783ebe63f47705b7ca2bf3d1ec17e4f54431983f22727792df2"
+    },
+    "controller_work/after_v3/integration_v5/v5_events.py": {
+      "bytes": 3654,
+      "sha256": "b9bc736bc65dec2a8052ef2f189df3a5bd7e83a0f8a00e8043ddd06e76cf9b84"
+    },
+    "controller_work/after_v3/integration_v5/v5_paths.py": {
+      "bytes": 773,
+      "sha256": "7d96bde0b1b82c192521c7042f0f90d3222ec2b086e169f4b0f7aaa6ff3bef74"
+    },
+    "controller_work/after_v3/integration_v5/v5_pipeline.py": {
+      "bytes": 11170,
+      "sha256": "32b89202ec5eed5ef030d5f9982b1b0ecd5ab738a9020e3e40991c1a801e849c"
+    },
+    "controller_work/after_v3/integration_v5b/COMPONENT_GATE_PLAN.json": {
+      "bytes": 24469,
+      "sha256": "a456fd4a9cc229ecc5b2c36612e0777c890e49019db2a348d02e81d6ab44b617"
+    },
+    "controller_work/after_v3/integration_v5b/COMPONENT_VALIDATOR_DERIVATION.json": {
+      "bytes": 6083,
+      "sha256": "f2fd0398b6daaea01d1171ffa7e5b6d275f59633bb09a2853b6db55aec77960f"
+    },
+    "controller_work/after_v3/integration_v5b/DOMAIN_TRANSFER_ARGUMENT.md": {
+      "bytes": 7465,
+      "sha256": "9a89f28329c0218424361098d98a377cdfc3f03e344d4a95049d169a626db2c9"
+    },
+    "controller_work/after_v3/integration_v5b/INITIAL_SOURCE_COPIES.json": {
+      "bytes": 3143,
+      "sha256": "392ec208e2c8795163c331e7a70485659814d1cd67e085d1c88b3e005f0f2fec"
+    },
+    "controller_work/after_v3/integration_v5b/README.md": {
+      "bytes": 8713,
+      "sha256": "6369033bc0314345b875b0f45180b87643405dfa7d5191c45074eaf4f5f081b2"
+    },
+    "controller_work/after_v3/integration_v5b/SOURCE_DERIVATION.json": {
+      "bytes": 4492,
+      "sha256": "c9980ba92d99c5551b26067e3b0fcef10c81e32a29f92421695ab27464c236fd"
+    },
+    "controller_work/after_v3/integration_v5b/SOURCE_MANIFEST.json": {
+      "bytes": 4407,
+      "sha256": "b15aa9cfa6cfee388adfd0e544807ef09ab5f5ca788a3f37b13641bb14be53d6"
+    },
+    "controller_work/after_v3/integration_v5b/SOURCE_MODEL_LEDGER.json": {
+      "bytes": 2557,
+      "sha256": "6ec92fadb7976376464d2742dcdcdd57bcf7d4b85d9f27f1357d62dac5181a25"
+    },
+    "controller_work/after_v3/integration_v5b/SOURCE_PREPARATION_ATTEMPT1.json": {
+      "bytes": 454,
+      "sha256": "13cc53387ab13bdf5a083d013f49b8cf5dbbbb9d63834e19e1ad41293827e28a"
+    },
+    "controller_work/after_v3/integration_v5b/SOURCE_PREPARATION_ATTEMPT2.json": {
+      "bytes": 355,
+      "sha256": "125d43a867a81d5cb2a331a50bd86a1c8ee52f1100062e13f8443ce1de2288cd"
+    },
+    "controller_work/after_v3/integration_v5b/SOURCE_PREPARATION_CHECKS.json": {
+      "bytes": 1976,
+      "sha256": "1f96523ffcd03da169eb3c7c0e2ef828ef051fd0aec10cfe92ffbdbcda565d3e"
+    },
+    "controller_work/after_v3/integration_v5b/WIDTH_COMPATIBILITY.md": {
+      "bytes": 1919,
+      "sha256": "7944a54ea3f4f3a5fbb47b2a7e8b84e2ff219c444627e9e6019a53d4aa1fefc4"
+    },
+    "controller_work/after_v3/integration_v5b/build_v5b.py": {
+      "bytes": 4417,
+      "sha256": "b0df43c57fd8138a37b37f00086ad88c4acd34d0f9e90ca2ace65a42c98d77c3"
+    },
+    "controller_work/after_v3/integration_v5b/check_build_equality.py": {
+      "bytes": 4383,
+      "sha256": "39df1fefc6a8029b9398a8f69ea46e5c1ca411ebe552dd819639b8dd4286648e"
+    },
+    "controller_work/after_v3/integration_v5b/check_candidate.py": {
+      "bytes": 4138,
+      "sha256": "c266336dd3f8bb82c05831784b34f6d1a63a6e9c78f0cc173ce02dc25e11ca78"
+    },
+    "controller_work/after_v3/integration_v5b/check_key_boundary.py": {
+      "bytes": 8469,
+      "sha256": "b4422fe7ac38ce5d73bd13acc48dd24bcd0003ee90a2d93649bb6890d56497c2"
+    },
+    "controller_work/after_v3/integration_v5b/gen_dqi.py": {
+      "bytes": 1766,
+      "sha256": "ba324c9d5e901710f6ecaec6894e59db58e5ca11d9356ce2c8f6d78810bc61fd"
+    },
+    "controller_work/after_v3/integration_v5b/prepare_component_gates.py": {
+      "bytes": 44417,
+      "sha256": "064711f96902297c9c1cfcc579bb7afed73a27e10113e7bd9bc54d69bd425b6d"
+    },
+    "controller_work/after_v3/integration_v5b/v5b_binding.py": {
+      "bytes": 15219,
+      "sha256": "e50cbe2372a99c5b954a4b94e9a213d773f9d939ab1fea0bd0b2613a83b72126"
+    },
+    "controller_work/after_v3/integration_v5b/v5b_events.py": {
+      "bytes": 3791,
+      "sha256": "f30e2d2ecd75bc9ac1559ca056d9fdf2205ff20d4137d020c46d7a2c93c67795"
+    },
+    "controller_work/after_v3/integration_v5b/v5b_paths.py": {
+      "bytes": 808,
+      "sha256": "88f08ee397533c102d789016ce9627fdd0bd7f65082c6e418045c84694cedffc"
+    },
+    "controller_work/after_v3/integration_v5b/v5b_pipeline.py": {
+      "bytes": 12454,
+      "sha256": "14bb85846d910eaf9ea9300bb604c818d28421ac7b48df8f8fa325091abf5b5e"
+    },
+    "controller_work/after_v3/integration_v6/COMPONENT_VALIDATOR_DERIVATION.json": {
+      "bytes": 967,
+      "sha256": "21b0be90d872804e7e07f1409753b52728242927e92111a0b1af9b2279ff6b78"
+    },
+    "controller_work/after_v3/integration_v6/INITIAL_SOURCE_COPIES.json": {
+      "bytes": 3711,
+      "sha256": "7b17148b7ccf8d6bd15e3ac52abbb6edcd39c2affaebf9b47e7ad22e304df646"
+    },
+    "controller_work/after_v3/integration_v6/SOURCE_MANIFEST.json": {
+      "bytes": 4808,
+      "sha256": "c967e714f8a0f53024be272a9ae317ff8945d08e3994e1b1347eb62f9d9b623d"
+    },
+    "controller_work/after_v3/integration_v6/build_v6.py": {
+      "bytes": 4411,
+      "sha256": "80b9032c526a82e4d2a81556a6d597453787d0084d2b5f93df75a73282d556de"
+    },
+    "controller_work/after_v3/integration_v6/check_build_equality.py": {
+      "bytes": 4381,
+      "sha256": "6928b596fe7c06800e3dcc38be1e584b434b05eef9883346d636e206e84845a2"
+    },
+    "controller_work/after_v3/integration_v6/check_candidate.py": {
+      "bytes": 4134,
+      "sha256": "53a51e2970efc72d1577cd86111955576e3a9f2bd0c26e8abbddb46a6c6c02f5"
+    },
+    "controller_work/after_v3/integration_v6/check_key_boundary.py": {
+      "bytes": 8840,
+      "sha256": "524825e0ae6cddf42fc642c892d89d42cac6e7542a173786c80c63aeb03bf159"
+    },
+    "controller_work/after_v3/integration_v6/gen_dqi.py": {
+      "bytes": 1763,
+      "sha256": "b9c0b55964ca4d43d832d53936a560dab6a58097f7d7ba9192728ce829d87020"
+    },
+    "controller_work/after_v3/integration_v6/prepare_component_gates.py": {
+      "bytes": 58309,
+      "sha256": "f3b11a10365acd1641ac02b627be73828ec933b0e3d9093d03ad848717615d0d"
+    },
+    "controller_work/after_v3/integration_v6/v6_binding.py": {
+      "bytes": 17265,
+      "sha256": "46476d02e7b76464e163622e22eb16e024a179c22fda916e233b86573f9f846b"
+    },
+    "controller_work/after_v3/integration_v6/v6_events.py": {
+      "bytes": 3945,
+      "sha256": "d44ff2142bd44ae685fd23184103d06cc75211ac4182aada01edada55eea646d"
+    },
+    "controller_work/after_v3/integration_v6/v6_paths.py": {
+      "bytes": 846,
+      "sha256": "eb0a45e35c3816cedd945347bfa149034cf481d068f9f933a9c42aca776cdffd"
+    },
+    "controller_work/after_v3/integration_v6/v6_pipeline.py": {
+      "bytes": 14059,
+      "sha256": "309c75ead9244c53e61fef9eaf8d1c6a0c1d2110de707a61ea75d54a342e0606"
+    },
+    "controller_work/after_v3/integration_v7/DOMAIN_TRANSFER_ARGUMENT.md": {
+      "bytes": 3673,
+      "sha256": "892160afdf8df5846ffdf91370263eaf283746304fbbf6451fb2b90f25da19c9"
+    },
+    "controller_work/after_v3/integration_v7/INITIAL_SOURCE_COPIES.json": {
+      "bytes": 2886,
+      "sha256": "90759eead1139e97b2791f644813b337bfa208ac0eae80c0fa4d0766709debac"
+    },
+    "controller_work/after_v3/integration_v7/README.md": {
+      "bytes": 3444,
+      "sha256": "8a23d6e352708ec444def91f64adfdc3dd122da2fb9f963164bfd26f792f742e"
+    },
+    "controller_work/after_v3/integration_v7/WIDTH_COMPATIBILITY.md": {
+      "bytes": 1363,
+      "sha256": "7a48ec6f4657a682b7a84af2393e0ca22798812d72775ebc2046f4fdc9481faf"
+    },
+    "controller_work/after_v3/integration_v7/build_v7.py": {
+      "bytes": 4496,
+      "sha256": "c0075c0860f02fd120f971680e220d78834bf8c69155a48dc3bacde39fbf87c9"
+    },
+    "controller_work/after_v3/integration_v7/check_build_equality.py": {
+      "bytes": 4381,
+      "sha256": "6d99d1ea8012af4aa4ddc330de0f5101b077b271a395455ac56002a444cddc0d"
+    },
+    "controller_work/after_v3/integration_v7/check_candidate.py": {
+      "bytes": 4134,
+      "sha256": "9a02ab4092f07936dc548c882feaa5b0ab949fed8ce71b4ff0b24a7c3f09c169"
+    },
+    "controller_work/after_v3/integration_v7/check_key_boundary.py": {
+      "bytes": 8840,
+      "sha256": "1ed7275eaf97165222bf39e0f5231a62c583f2e078f90b5c7603bb78b456f8e0"
+    },
+    "controller_work/after_v3/integration_v7/exact_occupancy.py": {
+      "bytes": 6247,
+      "sha256": "6dd44e475cef4cf995b85675fa0a121810c332d72e28525a64d2429c5ce08064"
+    },
+    "controller_work/after_v3/integration_v7/gen_dqi.py": {
+      "bytes": 1763,
+      "sha256": "576e735e30cd291ed2f699ae84d6d5b6c8db153a9e7fd5afe3ff4f87d9805c46"
+    },
+    "controller_work/after_v3/integration_v7/prepare_component_gates.py": {
+      "bytes": 68616,
+      "sha256": "d54c7ffb4d58c6e36e00c2cc10abfd16371d20083e35d6386b182648785eb096"
+    },
+    "controller_work/after_v3/integration_v7/v7_binding.py": {
+      "bytes": 22089,
+      "sha256": "370c1b957a025bc9619760276fd3d0f8f45e13ccdd403ae1404fa47ab7bb15bd"
+    },
+    "controller_work/after_v3/integration_v7/v7_events.py": {
+      "bytes": 4610,
+      "sha256": "bb18bf591ca9b4ba36abf870986963acdd9cd12d9f1e40c4fe80a98b4034d798"
+    },
+    "controller_work/after_v3/integration_v7/v7_paths.py": {
+      "bytes": 876,
+      "sha256": "e936ef7b7626f47b9237dab51e2e47ec04a57e79a542240c9a83c376da5e582b"
+    },
+    "controller_work/after_v3/integration_v7/v7_pipeline.py": {
+      "bytes": 17464,
+      "sha256": "e144415f639d77c83ef0944b826a52b1f832eedd7112078070ac2ecdad42bcc3"
+    },
+    "controller_work/after_v3/k24/FIRST_TWO_RETAINED_NORM195_SOURCE_REVIEW.md": {
+      "bytes": 5502,
+      "sha256": "e1ba20bdf22e570857c5f3dd4de612c3866349c396d949f1ea2d02ffed02028e"
+    },
+    "controller_work/after_v3/k24/THIRD_PIVOT_CHECKER_SOURCE_REVIEW.md": {
+      "bytes": 8904,
+      "sha256": "39f3fb9a5654eccab5f38d015c5538c16819a9702a19e741448319812ed8a7c1"
+    },
+    "controller_work/after_v3/k24/V5B_COMPONENT_GATE_SOURCE_REVIEW.md": {
+      "bytes": 6892,
+      "sha256": "49f93e2ef778c28bf32373bb2a1c8263062bc0fbd4845e16bacb9a29192e0450"
+    },
+    "controller_work/after_v3/k24/V5_COMPONENT_GATE_SOURCE_REVIEW.md": {
+      "bytes": 7916,
+      "sha256": "40e6221a0d3655dcab55a3309da84a4198e7abc0083d91b6bd1314fbd9fb8d73"
+    },
+    "controller_work/after_v3/k24/adaptive_gauge/adaptive_gauge64.py": {
+      "bytes": 19487,
+      "sha256": "3299627d63c20cf1223dc782cc6d48728f328a237d420f76f2d9260811bc7e5d"
+    },
+    "controller_work/after_v3/k24/adaptive_gauge/check_adaptive_gauge64.py": {
+      "bytes": 24179,
+      "sha256": "2210560abbd36e6bb8320afbc31afc77c86dad38a00b495962c530e1bd3fa3d1"
+    },
+    "controller_work/after_v3/k24/adaptive_gauge/runs/smoke.guard.json": {
+      "bytes": 723,
+      "sha256": "e7bf91c000a59a16ec1373bb30331ade7502dcbff611e8936d06017d933b6c33"
+    },
+    "controller_work/after_v3/k24/adaptive_gauge/runs/smoke.stdout": {
+      "bytes": 22625,
+      "sha256": "5cd14589eb99e13258068d566f2ec33dd95523859f94106eb542b47c58b0f829"
+    },
+    "controller_work/after_v3/k24/adaptive_gauge/runs/smoke/report.json": {
+      "bytes": 16482,
+      "sha256": "5f3e1b96974e199aad34d81fa09bcd79eae9235ddb8647f900bc7a2e610f1aee"
+    },
+    "controller_work/after_v3/k24/adaptive_gauge_allocation_probe.py": {
+      "bytes": 5904,
+      "sha256": "b3d3cefefecae8550eafa2009ae80ea608b7ffbf255e890a55c88655617e8922"
+    },
+    "controller_work/after_v3/k24/adaptive_gauge_occupancy.py": {
+      "bytes": 11845,
+      "sha256": "623203e26d18c0579e723f687cc85279f1c924cb641e533e4f1a15952ea021cd"
+    },
+    "controller_work/after_v3/k24/adaptive_gauge_v2/allocation_contract.py": {
+      "bytes": 8165,
+      "sha256": "61bdb1ad026d459564baddabb6743ba5ed89fe5c5966a12b959716baf95d3971"
+    },
+    "controller_work/after_v3/k24/adaptive_gauge_v2/check_adaptive_gauge64_v2.py": {
+      "bytes": 26977,
+      "sha256": "3c4cc668fd629b35f46df48995d38b8694f76c4cd0fed266a32411924a6af944"
+    },
+    "controller_work/after_v3/k24/adaptive_gauge_v2/runs/full.guard.json": {
+      "bytes": 700,
+      "sha256": "c54409190a1bbf6f1c781fb6b0426d09b68464933f8efef752c07370edf78fbd"
+    },
+    "controller_work/after_v3/k24/adaptive_gauge_v2/runs/full/report.json": {
+      "bytes": 33075,
+      "sha256": "c3e12467a3b5bd5c70b2a4090dd5a116024545a9efc39906989aeb21c05550d3"
+    },
+    "controller_work/after_v3/k24/runs/adaptive-allocation-probe.guard.json": {
+      "bytes": 674,
+      "sha256": "6494cccbeb8aa57d98eab8a32906a350718bdcfe1a5e2359f4c3e8da664c6eb5"
+    },
+    "controller_work/after_v3/k24/runs/adaptive-allocation-probe/receipt.json": {
+      "bytes": 24398,
+      "sha256": "f82009246d8b897a9e5ef0410b3860030a2b8edc0127f30574cb7ebd1912247e"
+    },
+    "controller_work/after_v3/k24/runs/adaptive-gauge-occupancy/paper_certificate.json": {
+      "bytes": 2230750,
+      "sha256": "baa51690dae289f4bba81e53ca98c8c9db420a13dbd74f4c00beb281a9c4b627"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/EXISTING_PROFILE_SUPPLEMENT.json": {
+      "bytes": 24729,
+      "sha256": "58303e050c3caa104bf5538ba76fd159cfb3b054addbfc5a02f343b0d1edd3dc"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/README.md": {
+      "bytes": 9685,
+      "sha256": "6eb6813300665791c890a811753ff61e9b8d2cb8c652b8de4da8b8211060d049"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/SOURCE_DERIVATION.json": {
+      "bytes": 16409,
+      "sha256": "8ca3ea41c67f14c2ef5fdfe6a683b2b06ab8c1415b4d4bc1cae4c47903f98d00"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/SOURCE_MANIFEST.json": {
+      "bytes": 1876,
+      "sha256": "c2a4e114553a3a94f1e136d0beee4adb8e1785545cbec3384ca92b96b4966438"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/SOURCE_PREPARATION_CHECKS.json": {
+      "bytes": 1140,
+      "sha256": "4248698dd83b14a4cab7375d96e74824fc97e5a7ca9ba4ad63cdde2849b30c05"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/check_handoff_m11.py": {
+      "bytes": 4335,
+      "sha256": "530de18308390713ad79a1a018a7fd77ba9f8395ac4253d92f04cdae77d88250"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/check_transpose14_preimage.py": {
+      "bytes": 26433,
+      "sha256": "64b8e50eb58f1310c1f79faec0a47c97db42807ffae5a6d5b358574f583e15fb"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/profile_supplement.py": {
+      "bytes": 7304,
+      "sha256": "315bcf5c76b04aece6b294bbbd00ef6610f8e18ef1d920f18173dd66004cb50b"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/transpose14_core.py": {
+      "bytes": 12819,
+      "sha256": "8b5eb93766ac6d9ef638594829ec8f6d27945e84b610c718b4cf9bea73ab039d"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/transpose14_window.py": {
+      "bytes": 15241,
+      "sha256": "1c25f660a58f7907602e60cfc32fbfc51a2775023cc911e33d5d10c2860236b4"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/variant_support.py": {
+      "bytes": 4482,
+      "sha256": "f0bd00e712d1f73790dd724d749de8541a492f404efde9867a9a3372d1298f0c"
+    },
+    "controller_work/night_c27/arithmetic/panel_audit/check_key_boundary.py": {
+      "bytes": 17015,
+      "sha256": "2a5af18b8b0bd0bc0fef2cacf88dfcf58ce9a88d4c5f8790251f108f2f1a11a2"
+    },
+    "controller_work/night_c27/arithmetic/panel_audit/fixed-prepared/cases.json": {
+      "bytes": 32465629,
+      "sha256": "abcd3a243eae059312a3d39b5fce19be75e0d692beec20cbd5197d30588932a7"
+    },
+    "controller_work/night_c27/arithmetic/panel_audit/physical_boundary_oracle.py": {
+      "bytes": 4162,
+      "sha256": "b2d7871501afdb528820c78989e408098ca441153fa16f98d4b5f9697810db99"
+    },
+    "controller_work/night_c27/arithmetic/panel_audit/prepared/cases.json": {
+      "bytes": 3799574,
+      "sha256": "eb9216d25bd69f17179533932f0ec6a8704860a366117bd370b6eec35495e339"
+    },
+    "controller_work/night_c27/census/reference.py": {
+      "bytes": 7550,
+      "sha256": "a43a7dbf3ef0cb02f8660067a0067c603cf39fe7a552584c3fc9bc228f501aa6"
+    },
+    "controller_work/work/round2/milestone152/source/narrow_field130.py": {
+      "bytes": 7071,
+      "sha256": "f021152bc598f334d854bfba13b9f228cd6a0b751010dde10c9341203bd49bf6"
+    },
+    "pro1_controller_bundle/1_task/official/kickmix.so": {
+      "bytes": 3220392,
+      "sha256": "c66b3216c4029e0cdfd09054306aa0feadf53ab2f50c1164e37f752874e5005e"
+    }
+  },
+  "special_panel_preparation": {
+    "actual_output_required_by_joined_workflow": true,
+    "changes_physical_inputs_or_admission": false,
+    "failed_first_version_preserved": true,
+    "output": "controller_work/after_v3/blocks/v6/runs/integration-special-panels-v2",
+    "selected_source": "controller_work/after_v3/blocks/v6/prepare_integration_special_panels_v2.py"
+  },
+  "status": "SOURCE_PLAN_NOT_NATIVE_EVIDENCE",
+  "whole_decoder_joined_special_panels_required": true,
+  "whole_v7_width_measured": false,
+  "width_compatibility": {
+    "current_whole_Q": 889,
+    "future_width_merge_needs_new_lifetime_gate": true,
+    "joint_phase_helpers": 22,
+    "previous_joint_phase_helpers": 18
+  }
+}

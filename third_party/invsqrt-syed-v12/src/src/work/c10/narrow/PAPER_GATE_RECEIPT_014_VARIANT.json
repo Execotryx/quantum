@@ -1,0 +1,20 @@
+{
+  "status": "PARENT_ACCEPTED_COMPLETE_CONSERVATIVE_CANDIDATE04_PAPER_GATE",
+  "candidate": "candidate04_quantized_angle_refit",
+  "bound_file_sha256": "fdbd64481c3e876ac88a6a0ad80c44a8b019807cc5d3b5cdee5bd12a59630ac1",
+  "full_bound_source_pins_checked": 14,
+  "Q": 49,
+  "both_preparation_peaks": 49,
+  "native_baseline_Toffolis": 1562.5,
+  "T": 4,
+  "R": 34,
+  "proved_margin_lower_bound_units64": 124286782,
+  "rotation_charge_upper_bound": 238.0530968204069,
+  "complete_cost_upper_bound": 88276.10174419993,
+  "not_a_measured_quantized_margin": true,
+  "all_components_and_phase_debts_included": true,
+  "native_build_authorized": true,
+  "required_before_emission": "Full quantize50 source-pinned scan, confirming exact phase and margin at least the conservative bound.",
+  "required_after_emission": "Exact native all-input/all-HMR phase/data/scratch proof plus original64-shot official salts default,1,2,3.",
+  "preserve_candidates_01_02_03": true
+}

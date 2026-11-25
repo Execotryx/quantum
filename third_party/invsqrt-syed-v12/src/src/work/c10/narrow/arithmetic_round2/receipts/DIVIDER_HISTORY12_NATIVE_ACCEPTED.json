@@ -1,0 +1,22 @@
+{
+  "status": "PARENT_REVIEW_ACCEPTED_NATIVE_COMPONENT_FOR_COMPOSITION",
+  "route": "AR004 divider history12 retirement",
+  "result_manifest_sha256": "d47b9c6695a257cb58bd1ee6839ad7e06d6ab9cce5e88c7694033358b9da74de",
+  "result_manifest_anchor": "component",
+  "native_proof_sha256": "b1e9bf4f4696a25a92512d9f0cba394b8e65be616a368cd506a8a9676907699f",
+  "guard_sha256": "b287a438f15a21bcdc92c1e8df85973855eded5ef1f43aaa7234dcd903649889",
+  "source_and_result_pins_checked": 354,
+  "component_exact_native_expected_Toffolis": 578,
+  "actual_local_native_Q": 48,
+  "all_chunks_checked_for_coverage_data_scratch_reset_phase": true,
+  "full_native_and_four_default_batch_salts_still_required": true,
+  "original_exact50_checker_required": true,
+  "unchanged_original_accuracy": true,
+  "protected_phase_and_loader_blocks_unchanged": true,
+  "original_inputs": 3133452,
+  "all_HMR_variables": 583,
+  "negative_probes": 2,
+  "current_history12_handle_required": true,
+  "forward_and_endpoint_unchanged": true,
+  "utc": "2026-11-12T05:14:47.155398+00:00"
+}

@@ -1,0 +1,5 @@
+{
+  "status": "SOURCE_EDIT_DESCRIPTION_MATCH_REFUSED_BEFORE_REMAINING_WRAPPER_EDITS",
+  "scope": "The first source-copy edit script expected a literal prefix comment absent from the parent. Earlier new-only runtime edits were retained; the wrapper was then changed against its actual arithmetic lines. No import, native build, test or frozen-file edit occurred.",
+  "affected_file": "check_key_boundary.py"
+}

@@ -1,0 +1,307 @@
+{
+  "status": "COMPLETE_COMPONENT_MATHEMATICAL_AND_SOURCE_GATE_CERTIFICATE_NOT_NATIVE",
+  "input_local_plans_sha256": "978c2adafd8d3355558a5e672982623372d459dec610273e1e43847681cc4c14",
+  "formula": "u12=4094\u22123v+b13\u22122b14+b12 mod2^14",
+  "unchanged_phase": true,
+  "rows": [
+    {
+      "status": "EXACT_ALL_ABSTRACT_BOOLEAN_PHASE_AND_OWNERSHIP_PASS_NOT_NATIVE",
+      "Q_cap": 48,
+      "abstract_cases": 32768,
+      "root_bits": 12,
+      "product_bits_checked": [
+        12,
+        13,
+        14
+      ],
+      "lower_product_and_flags": "Untouched spectators; original values are retained.",
+      "forward": {
+        "low_Toffolis": 3,
+        "high_rows": [
+          {
+            "bit": 2,
+            "Toffolis": 2,
+            "new_carry_wires": 2,
+            "owners": 45
+          },
+          {
+            "bit": 3,
+            "Toffolis": 2,
+            "new_carry_wires": 2,
+            "owners": 45
+          },
+          {
+            "bit": 4,
+            "Toffolis": 2,
+            "new_carry_wires": 2,
+            "owners": 45
+          },
+          {
+            "bit": 5,
+            "Toffolis": 2,
+            "new_carry_wires": 2,
+            "owners": 45
+          },
+          {
+            "bit": 6,
+            "Toffolis": 2,
+            "new_carry_wires": 2,
+            "owners": 45
+          },
+          {
+            "bit": 7,
+            "Toffolis": 2,
+            "new_carry_wires": 2,
+            "owners": 45
+          },
+          {
+            "bit": 8,
+            "Toffolis": 2,
+            "new_carry_wires": 2,
+            "owners": 45
+          },
+          {
+            "bit": 9,
+            "Toffolis": 2,
+            "new_carry_wires": 2,
+            "owners": 45
+          },
+          {
+            "bit": 10,
+            "Toffolis": 2,
+            "new_carry_wires": 2,
+            "owners": 45
+          },
+          {
+            "bit": 11,
+            "Toffolis": 2,
+            "new_carry_wires": 2,
+            "owners": 45
+          },
+          {
+            "bit": 12,
+            "Toffolis": 1,
+            "new_carry_wires": 1,
+            "owners": 44
+          }
+        ],
+        "total_Toffolis": 24,
+        "data_after": 43,
+        "pending_phase_debts": 0
+      },
+      "cleanup": {
+        "Toffolis": 1,
+        "restored_product_owner_ids": [
+          25,
+          45
+        ],
+        "final_data": 31,
+        "pending_phase_debts": 0
+      },
+      "Toffolis": 25,
+      "T": 0,
+      "R": 0,
+      "peak": 47,
+      "source_counts": {
+        "CX": 196,
+        "X": 57,
+        "CCX": 25,
+        "HMR": 38,
+        "conditional_Z": 111,
+        "classical_branch_Z": 25,
+        "conditional_CZ": 73
+      },
+      "HMR_sign_functions_proved": 38,
+      "outcome_scope": "Every HMR sign is checked against its complete correction on all32768 cases; linearity proves every joint outcome assignment.",
+      "original_product_owner_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "returned_product_owner_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        45
+      ],
+      "physical_binding": "Returned logical P owners are explicit. No claim that reconstructed product bits occupy their original freed physical IDs.",
+      "all_ancillas_zero": true,
+      "all_phase_debts_paid": true
+    },
+    {
+      "status": "EXACT_ALL_ABSTRACT_BOOLEAN_PHASE_AND_OWNERSHIP_PASS_NOT_NATIVE",
+      "Q_cap": 49,
+      "abstract_cases": 32768,
+      "root_bits": 12,
+      "product_bits_checked": [
+        12,
+        13,
+        14
+      ],
+      "lower_product_and_flags": "Untouched spectators; original values are retained.",
+      "forward": {
+        "low_Toffolis": 3,
+        "high_rows": [
+          {
+            "bit": 2,
+            "Toffolis": 2,
+            "new_carry_wires": 2,
+            "owners": 45
+          },
+          {
+            "bit": 3,
+            "Toffolis": 2,
+            "new_carry_wires": 2,
+            "owners": 45
+          },
+          {
+            "bit": 4,
+            "Toffolis": 2,
+            "new_carry_wires": 2,
+            "owners": 45
+          },
+          {
+            "bit": 5,
+            "Toffolis": 2,
+            "new_carry_wires": 2,
+            "owners": 45
+          },
+          {
+            "bit": 6,
+            "Toffolis": 2,
+            "new_carry_wires": 2,
+            "owners": 45
+          },
+          {
+            "bit": 7,
+            "Toffolis": 2,
+            "new_carry_wires": 2,
+            "owners": 45
+          },
+          {
+            "bit": 8,
+            "Toffolis": 2,
+            "new_carry_wires": 2,
+            "owners": 45
+          },
+          {
+            "bit": 9,
+            "Toffolis": 2,
+            "new_carry_wires": 2,
+            "owners": 45
+          },
+          {
+            "bit": 10,
+            "Toffolis": 2,
+            "new_carry_wires": 2,
+            "owners": 45
+          },
+          {
+            "bit": 11,
+            "Toffolis": 2,
+            "new_carry_wires": 2,
+            "owners": 45
+          },
+          {
+            "bit": 12,
+            "Toffolis": 1,
+            "new_carry_wires": 1,
+            "owners": 44
+          }
+        ],
+        "total_Toffolis": 24,
+        "data_after": 43,
+        "pending_phase_debts": 0
+      },
+      "cleanup": {
+        "Toffolis": 1,
+        "restored_product_owner_ids": [
+          25,
+          45
+        ],
+        "final_data": 31,
+        "pending_phase_debts": 0
+      },
+      "Toffolis": 25,
+      "T": 0,
+      "R": 0,
+      "peak": 47,
+      "source_counts": {
+        "CX": 196,
+        "X": 57,
+        "CCX": 25,
+        "HMR": 38,
+        "conditional_Z": 111,
+        "classical_branch_Z": 25,
+        "conditional_CZ": 73
+      },
+      "HMR_sign_functions_proved": 38,
+      "outcome_scope": "Every HMR sign is checked against its complete correction on all32768 cases; linearity proves every joint outcome assignment.",
+      "original_product_owner_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "returned_product_owner_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        45
+      ],
+      "physical_binding": "Returned logical P owners are explicit. No claim that reconstructed product bits occupy their original freed physical IDs.",
+      "all_ancillas_zero": true,
+      "all_phase_debts_paid": true
+    }
+  ],
+  "baseline_Q49_u11_plus_j11": 42,
+  "component_saving_Q49": 17,
+  "full_candidate_gate": "Not established here; normalization and actual loaders remain parent integration obligations.",
+  "seconds": 2.5068351609952515,
+  "peak_rss_kib": 15368
+}

@@ -1,0 +1,73 @@
+{
+  "status": "NATIVE_COMPONENT_COMPLETE_NOT_FULL_FUSION_QUALIFICATION",
+  "component": "RN2-B normalization96.5",
+  "utc": "2026-11-12T03:57:49.935771+00:00",
+  "actual_native_local_Q": 46,
+  "exact_native_expected_Toffolis_roundtrip": 96.5,
+  "every_HMR_transcript_proved": true,
+  "source_ready_sha256": "d453cd2eda5e4290478ab69c9696249d14c72c2653b6bd8aa74e6cead6e3726b",
+  "native_proof_sha256": "d9691d931b45c6533e619957d9446000a8c9fa9a00dc03e19dd618001acd6649",
+  "guard_sha256": "e9de46a0fa75dd610f9a09eafd132a646c1aac24074ab3570b6e3c21b294b0a3",
+  "files": [
+    {
+      "path": "INPUTS.json",
+      "bytes": 61546,
+      "sha256": "413513a6e2f89fdc8a3255daee9655e141c3f1456422d9c4ed27f98a5568cc12"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1068,
+      "sha256": "4a452127499ac9a06c1d8b9e8bd486a8182733a5a8cd04dbd218f0093c55c116"
+    },
+    {
+      "path": "SOURCE_READY.json",
+      "bytes": 1038,
+      "sha256": "d453cd2eda5e4290478ab69c9696249d14c72c2653b6bd8aa74e6cead6e3726b"
+    },
+    {
+      "path": "native.guard.json",
+      "bytes": 2741,
+      "sha256": "e9de46a0fa75dd610f9a09eafd132a646c1aac24074ab3570b6e3c21b294b0a3"
+    },
+    {
+      "path": "native.log",
+      "bytes": 2323,
+      "sha256": "fefc70cccd490ecd4ed6a289998ce9765fc0a2ab067fe8e9a942c90065b72d1a"
+    },
+    {
+      "path": "normalization96.py",
+      "bytes": 3308,
+      "sha256": "a3d644d83e9c815157aeffa283301d021c89d3da27a129453697f78953cc96d4"
+    },
+    {
+      "path": "normalization96_forward.kmb",
+      "bytes": 5773,
+      "sha256": "d6fbfad8f85a1259e9150a1bf031aeb59e5a44566823b61ce6e6bba953ae0578"
+    },
+    {
+      "path": "normalization96_forward.kmx",
+      "bytes": 7712,
+      "sha256": "4386298e23844ff9b50e03aaabf6779cdf13440da9fc0a2b4504aee0e5c09a59"
+    },
+    {
+      "path": "normalization96_native_proof.json",
+      "bytes": 11377,
+      "sha256": "d9691d931b45c6533e619957d9446000a8c9fa9a00dc03e19dd618001acd6649"
+    },
+    {
+      "path": "normalization96_roundtrip.kmb",
+      "bytes": 8312,
+      "sha256": "6decaa18af62eebd226fecffa55d0a2bc981e0285c7ddd3ee19d74b05d9109f3"
+    },
+    {
+      "path": "normalization96_roundtrip.kmx",
+      "bytes": 11116,
+      "sha256": "a64d7254bd3b14cca9134d2de6cbbccf3765b51182106a9fd2fb86decf776532"
+    },
+    {
+      "path": "prove_normalization96.py",
+      "bytes": 6351,
+      "sha256": "219b3db05f09567a869e8563cb05e19c8f59052771798c3a5d8ca5335ef9c814"
+    }
+  ]
+}

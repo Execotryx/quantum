@@ -1,0 +1,88 @@
+{
+  "status": "PASS_SYNTAX_AND_STATIC_HANDOFF_NATIVE_NOT_EXECUTED",
+  "files": {
+    "lifecycle06.py": {
+      "bytes": 10299,
+      "sha256": "0e38bf25ef639106608b7fb70e863aed75f0fcc82fca9a98e8e94cec905ea8aa",
+      "functions": [
+        "_mark",
+        "product_inverse",
+        "emit_body"
+      ]
+    },
+    "divider_cleanup06.py": {
+      "bytes": 4239,
+      "sha256": "eef2870d4788d95c59f56f13269f6d4ee858fbc3ac1c6e0ee8353a516292d647",
+      "functions": [
+        "bind",
+        "install",
+        "cleanup_divider"
+      ]
+    },
+    "LIFECYCLE_DIVIDER_COMPONENTS.md": {
+      "bytes": 4880,
+      "sha256": "2ea36a5382854a2519e8f71b85e5d1eed8ea4282c745e714712a6b89c055e7a8"
+    }
+  },
+  "source_pins": {
+    "PAPER_GATE_RECEIPT_018_VARIANT.json": {
+      "bytes": 1198,
+      "sha256": "99ef9a891d4e99b262b1a452ea48b18c536e91e7017f018b77bc37f1793ccffd"
+    },
+    "research/joint_loader/Q48_COMPLETE_PAPER_GATE.json": {
+      "bytes": 69161,
+      "sha256": "912da9164095aa996317909903d50162a76eded7ff9a90cbb9299c85c013de2c"
+    },
+    "native/candidate01/lifecycle.py": {
+      "bytes": 15973,
+      "sha256": "47b73f1f24ea027eedcbd1950cde7fc2535b32afeeb2e366ebdc4b6f1eb3c068"
+    },
+    "native/candidate01/common.py": {
+      "bytes": 3343,
+      "sha256": "9872e64213a4219522a87efc49d1aa549a04e43ae3fb51c9d5b762b1ea6535ab"
+    },
+    "native/candidate01/divider.py": {
+      "bytes": 13551,
+      "sha256": "d0dbaf6fe4227da988c9cb9e9dee847624992c7c5cce7ab347990d5b0a116c05"
+    },
+    "checkpoint002/cleanroom/baseline_stage97/engine/paired_arithmetic.py": {
+      "bytes": 22363,
+      "sha256": "a10b28423640a50a45a6ab23d3604dd869c26943b0ed12021526e87d1fbf8ccc"
+    },
+    "research/disposable_rounding_carry/study.json": {
+      "bytes": 748342,
+      "sha256": "e0b4375c67c0e8f7ce83af47092e9a37d2e0650bfae10e3aecf3bdf7145281ac"
+    },
+    "research/disposable_rounding_carry/adapted_inverse.py": {
+      "bytes": 2019,
+      "sha256": "e159e3348ac5694889bd38eaba01bf6e288d1e28092c265660464a8844a0b691"
+    },
+    "research/disposable_feed_carry/study.json": {
+      "bytes": 795005,
+      "sha256": "43dd1d83ac68187eee76bc3bd995fd05c9f57ed70ef5daa196a8394ecc70950b"
+    },
+    "research/disposable_feed_carry/cleanup_disposable_source.py": {
+      "bytes": 1916,
+      "sha256": "1775a06b4e563776b4bf24bcc96c6fcbe2cd776e77721a019299027155321403"
+    }
+  },
+  "API": {
+    "lifecycle": "emit_body(builder,v12,h10,flags4,table_module,divider_module,decode_root_callback,trace=None); returns current(v12,h10)",
+    "divider": "install(divider_module) binds pinned module and replaces cleanup_divider only; cleanup returns currentP15",
+    "diagnostic": "lifecycle06.CUT_HOOK(label,builder,current_owner_dict)"
+  },
+  "expected": {
+    "Q": 48,
+    "lifecycle_Toffolis": 563,
+    "product_pair_Toffolis": 240.5,
+    "product_regeneration_E": 4,
+    "divider_core_Toffolis": 587.5,
+    "divider_regeneration_E": 6.5,
+    "whole_Toffolis": 1591,
+    "T": 4,
+    "R": 34
+  },
+  "old_sources_modified": false,
+  "native_execution_performed": false,
+  "official_verifier_performed": false
+}

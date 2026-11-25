@@ -1,0 +1,64 @@
+{
+  "status": "FROZEN_SOURCE_READY_NOT_NATIVE_EXECUTED",
+  "files": [
+    {
+      "path": "INPUTS.json",
+      "bytes": 1326,
+      "sha256": "a4b68652340472ef2d4a54c522817c1c7d0a54cb858405af72684db6cacdd0e3"
+    },
+    {
+      "path": "PLAN.md",
+      "bytes": 1333,
+      "sha256": "e388c0cf92bf2e9ff48774b0b6c44967b3bb2bad1940734ae064254072fb8794"
+    },
+    {
+      "path": "RESUME.md",
+      "bytes": 3910,
+      "sha256": "1917329967d325534d100d40facbbea11b3b88cf1bbf906d6632ca70a9727b2f"
+    },
+    {
+      "path": "generate.py",
+      "bytes": 1699,
+      "sha256": "f216eda956098789b148903ea443fe1dbb1abc07e089aec4255b53c2f8bafec9"
+    },
+    {
+      "path": "paper_replay.json",
+      "bytes": 1726,
+      "sha256": "22e88ba096321c8396bafb7f1d712e7adfd957dbddfa3bb951d181ef07529e20"
+    },
+    {
+      "path": "paper_replay.py",
+      "bytes": 2903,
+      "sha256": "9bf15c12f6f6824c3cdf37c693c1978aeeb4c5edbe2c64f6590cb77d76159b20"
+    },
+    {
+      "path": "prove_full.py",
+      "bytes": 1494,
+      "sha256": "1fd12467862bf19b46ee382712e7d52c3c17c03d037370bddb6652a903beba05"
+    },
+    {
+      "path": "prove_root.py",
+      "bytes": 6711,
+      "sha256": "30145a173d3dd375538e5d040b6162bc0cdcc4879896b2edeb96c01cb4bb87f9"
+    },
+    {
+      "path": "run_batch.py",
+      "bytes": 2213,
+      "sha256": "26d2484ac87f4000d06c82273b2f0728d6dcec62e39338e9d37b0aff3edeb475"
+    },
+    {
+      "path": "variant.py",
+      "bytes": 3054,
+      "sha256": "7a5375b1b59bbb19ea050380039ba4b44b04ab8a26a4b553d917d0b14827e49f"
+    }
+  ],
+  "expected_resources": {
+    "Q": 49,
+    "Toffolis": 1562.5,
+    "T": 4,
+    "R": 34,
+    "predicted_cost": 88733.03208522254
+  },
+  "native_execution_owner": "parent shared strict guard",
+  "baseline_sources_unchanged": true
+}

@@ -1,0 +1,14 @@
+{
+  "backend_sha256": "bd68ed6223bbba78821192be217cb3dc9a6af5e0ae1c07097361511bb189edd4",
+  "circuit_sha256": "a44bdf032e965707cc1d07228258eb07786f9d1b07e094a5d90d1f2fb4b4bff5",
+  "draw_indices": [
+    6,
+    7
+  ],
+  "driver_sha256": "32dd86928c081c4c52da0dab6907e79d5dbd5f5e6e6d77550d5f016ca2719eac",
+  "registration_sha256": "e915b6bf22544acb34d9ef23dcfab9736e2a00ddb5cc95a749568d91e2952a16",
+  "role": "candidate",
+  "summary_sha256": "a640ea7c548b70c56a9b4f3291359f780106e152e1baf415a10e8d4845044190",
+  "verifier_sha256": "f14274bc0943fb9769ddb01131be6063191a15009fe1caf1d4bdd9fd25194e65",
+  "workers": 2
+}

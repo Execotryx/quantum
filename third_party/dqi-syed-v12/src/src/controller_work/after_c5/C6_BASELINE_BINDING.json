@@ -1,0 +1,343 @@
+{
+  "status": "C5_ACCEPTED_REFERENCE_SOURCE_BINDINGS_MATCH",
+  "goal_official_cost": 351000000000,
+  "baseline_circuit_sha256": "a9f262a5a1e10f3b99994ab65d2d71e86ca11e63f57d7b34c76fca1cfe0538f1",
+  "baseline_circuit_rehashed_this_check": false,
+  "production_source_files_checked": 66,
+  "source_files": [
+    {
+      "path": "controller_work/gen_dqi.py",
+      "sha256": "aaa7ec61126a315f3687913016c4f826cd02bead9afc3d14071a9c8158335e49",
+      "bytes": 2074
+    },
+    {
+      "path": "controller_work/night_c27/arithmetic/c27_paths.py",
+      "sha256": "09a22e041d6dc7e12fc5e5efb8bd8b0fd2bf1d088efb6ff47cfcfb03a11fe1d5",
+      "bytes": 567
+    },
+    {
+      "path": "controller_work/night_c27/arithmetic/gf24_arithmetic.py",
+      "sha256": "0864e9455bf464c6e1501bbeb0bc1f9596fb81c9829c7df5ae5eab07bd4fb0f0",
+      "bytes": 14213
+    },
+    {
+      "path": "controller_work/night_c27/arithmetic/phase_inverse12.py",
+      "sha256": "5d803160a953d9156b7c2cfd6a9afc791dbb27d24d4b6745e294e31b6b68a3c2",
+      "bytes": 4452
+    },
+    {
+      "path": "controller_work/night_c27/arithmetic/raw_query_extractor.py",
+      "sha256": "fe1610de1703f1bacf5664df32f0b259986efc7e892f3eda6906ed0cc146a60f",
+      "bytes": 7450
+    },
+    {
+      "path": "controller_work/night_c27/build_candidate.py",
+      "sha256": "c1a2059e3147fe0ee89a60fb0e42970dbdcbbca7295703a34c634a5afea72b63",
+      "bytes": 4258
+    },
+    {
+      "path": "controller_work/night_c27/controller/rolling_tail.py",
+      "sha256": "fa5cc8a0e4f3124355825ea74ddd42c37be6a59b25e784a6a73951d1637b6463",
+      "bytes": 10717
+    },
+    {
+      "path": "controller_work/night_c27/controller/rolling_tail_conditional.py",
+      "sha256": "86eb5ca81c7c7fd3f6ecb52a261ec2ae254efd9a6c837c9b33998d60ed98a8c6",
+      "bytes": 3900
+    },
+    {
+      "path": "controller_work/night_c27/controller/scalar_seed.py",
+      "sha256": "1200444cc7aa39a7ee72bf17578b4cba6a199e70a1f99bff87894c43f82cb4e0",
+      "bytes": 3768
+    },
+    {
+      "path": "controller_work/night_c27/mask_gauge/mask_gauge_blocked.py",
+      "sha256": "0583bb931d91bb660108f815bb110d3885b713616b0b928bb3b385b22740a722",
+      "bytes": 10162
+    },
+    {
+      "path": "controller_work/night_c27/provenance/__init__.py",
+      "sha256": "b49d2189c35d84d5cd117cd5e2ea9a240c63e79c883ac212c4224c8e4a7ce637",
+      "bytes": 175
+    },
+    {
+      "path": "controller_work/night_c27/provenance/source_inventory.py",
+      "sha256": "470c3985f1461e9ee4825316a40bff504e105db21b7ea9f8822f8af05a0253fb",
+      "bytes": 13077
+    },
+    {
+      "path": "controller_work/night_c27/synthesis/additive_fft_phase_scan.py",
+      "sha256": "cfbbfd64870a09e0cdd9ec15cccc5f07b0b0267d16fd404451282a8df6c1376a",
+      "bytes": 7120
+    },
+    {
+      "path": "controller_work/night_c27/synthesis/fixed_pipeline.py",
+      "sha256": "16dbeab8dcc485df07a8adeb3d47da5a97ad819b494343ba5052fc529a8890c2",
+      "bytes": 4917
+    },
+    {
+      "path": "controller_work/night_c27/synthesis/fused_crt_synthesis.py",
+      "sha256": "706d3555240ba60c088bbf50ae2ff9ce0f957b474f9175e917fde99a28cae240",
+      "bytes": 5086
+    },
+    {
+      "path": "controller_work/night_c27/synthesis/projective_finish.py",
+      "sha256": "96ea7459a7b242f1112807ee9d7321f1f32de9d95a2a16e0484277d211d5713a",
+      "bytes": 3684
+    },
+    {
+      "path": "controller_work/night_c27/synthesis/public_geometry.py",
+      "sha256": "a6e410dd457679005c364d91ad191471086daf9f82ade0c9763d4ca13c016cf7",
+      "bytes": 1851
+    },
+    {
+      "path": "controller_work/night_c27/synthesis/quadratic_phase_scan.py",
+      "sha256": "05c6db0470cd7d1e5fbdfc928eaaee9a2c2b4f21f223f1d885db2b6ed3dcd9cf",
+      "bytes": 2796
+    },
+    {
+      "path": "controller_work/night_converter/night_outer.py",
+      "sha256": "8dd322592815fff0cfd07696ae44179901d2733502de21f5aa49afd90ba20200",
+      "bytes": 6759
+    },
+    {
+      "path": "controller_work/night_converter/night_reference.py",
+      "sha256": "c13598616973c1cc0ee310f2e204e5d4913e5b33aa98b3dbb9dae7c27e98d6b0",
+      "bytes": 2811
+    },
+    {
+      "path": "controller_work/night_root/extension24_tensor.py",
+      "sha256": "330cdeba5965e03fa397b07f7200539925112a815793704791173d144e74c09d",
+      "bytes": 6210
+    },
+    {
+      "path": "controller_work/night_schedule/compact_inverse22.py",
+      "sha256": "53713d9b3e1ef8c34195ba3613e68411cf650e6bc3a1007a2f732a995802b326",
+      "bytes": 1674
+    },
+    {
+      "path": "controller_work/night_schedule/fixed_modular_finish.py",
+      "sha256": "f851998fd6562eedf2f7225e869b5413cef03de1cd42d2fa6bd2c4e305540ab4",
+      "bytes": 6284
+    },
+    {
+      "path": "controller_work/night_schedule/modular_quadratic_direct.py",
+      "sha256": "34749a359f131b63c3d18601f51cc6589b2d179c49ebb0212d4d513c23201abc",
+      "bytes": 7687
+    },
+    {
+      "path": "controller_work/night_schedule/scan10.py",
+      "sha256": "14a4e8e90dcc3b5f4b0dc3cc4ad5e306ebe55c87ca4185bc583f1ed9311f8b21",
+      "bytes": 2694
+    },
+    {
+      "path": "controller_work/research_audit/even_forney_classical.py",
+      "sha256": "fd1125a24b87a7947ffc36249ab6a3edc19b91a09d26668b9c87a83719e57ac3",
+      "bytes": 6341
+    },
+    {
+      "path": "controller_work/runtime/guard.py",
+      "sha256": "52f2e27bf37b7791d6879c9ce6c18e194580d9bc7e8c949a621613a03dd39cdc",
+      "bytes": 5037
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/coherent_border.py",
+      "sha256": "05e11f5133a18edb74b5cc2dfa6b9adebb0b1cb96b82553252af03bd40e8c631",
+      "bytes": 2530
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/compact_dual_scale.py",
+      "sha256": "a5356c1fd7e1831bde05b2f0cf249048030ba4f2fd1dfefcfdf9ac8c0cf51aa9",
+      "bytes": 827
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/compact_inverse.py",
+      "sha256": "3a0cb9ca02e51a6c55ccc8000448f45fb2f59d55c8f0d35c99344a731fb89b11",
+      "bytes": 7153
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/compact_six130.py",
+      "sha256": "ee71c254c38e8c68c7fc0c60c2db22fcd2ad51ab5df6988954b9a1328d3cec5a",
+      "bytes": 5282
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/confluent_reference.py",
+      "sha256": "b30d1215306fc85a14e565fe602b2b21cf83e8fb670fe16ff186ad4db9b82458",
+      "bytes": 10897
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/cubic_inverse130.py",
+      "sha256": "b71110b9699fb4beb229fa725fd8a7126ac676e58f328344caffabbc4c96b27a",
+      "bytes": 13485
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/deferred_fold.py",
+      "sha256": "ed666db7eca6ab1fcacd49f32fe9101fac0a1c9a010d35b2b05cb0bf84c153e3",
+      "bytes": 1287
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/dual_scale.py",
+      "sha256": "4251f6f8eed639505cdcdedc5b3ad18729fe067e4a4fdae29a799503e48009e3",
+      "bytes": 4644
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/field_tensor.py",
+      "sha256": "5ff27ee0ee83d5a171430506c2f2abe0956f205ce25e31256cc6f2e04657575f",
+      "bytes": 5956
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/inplace_scan.py",
+      "sha256": "8f8294bf0252b392cf1395371dd0164db65d35b760f9a759567e27386f3deba0",
+      "bytes": 8959
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/inverse_phase27.py",
+      "sha256": "b0c5695638f727381c5f6888fdaac7b12b24df8a3695d307addc930ecc9bc93f",
+      "bytes": 9478
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/low_cached_arithmetic.py",
+      "sha256": "c64cca88f70e41a4d9e1a2f08506112d4f585cbf3a15e796d93a5105e24b12aa",
+      "bytes": 2193
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/low_pipeline.py",
+      "sha256": "c1fc2a06ab83a6ec3213611f45b783f758c93a297d806940ca0f2fdad862a6e3",
+      "bytes": 11071
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/low_space_inverse.py",
+      "sha256": "3d3b6861f9cc23fd1568131dae5ed82cea380fc1ba1ec0a99bedd5698d794133",
+      "bytes": 7379
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/lowspace_field.py",
+      "sha256": "63f7a406ba812963575a6c94f8409bb53539ca9e7d87e4d2f0bedb86550f9661",
+      "bytes": 9865
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/lowspace_field130.py",
+      "sha256": "e5e24c094c54a58f255257c30ba00027e431bc6cecebc11b0196a60ae203b82c",
+      "bytes": 3507
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/mask_gauge135.py",
+      "sha256": "8ccf4ef6589f54f5abab89dc21b791aef1991a1451cec0183ac4bcf35439caa5",
+      "bytes": 5904
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/monic_forney.py",
+      "sha256": "98646104740f851ca9646b1cf830fb32bbb1e633ee8d9f94d14bc625588b3e5f",
+      "bytes": 7273
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/narrow_field130.py",
+      "sha256": "f021152bc598f334d854bfba13b9f228cd6a0b751010dde10c9341203bd49bf6",
+      "bytes": 7071
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/norm_cached_field.py",
+      "sha256": "8af6411be244568e48c2b4ae61f43b0ca491fa997a708139ce7e25eb13c7818b",
+      "bytes": 8588
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/norm_division.py",
+      "sha256": "8acc4bf6a3608b56dbba540fb07355f4de267b318927b74b853efb811be4c2d3",
+      "bytes": 3583
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/normal_fold.py",
+      "sha256": "0c8bcb75f4a4a4ebcf7cfbc7d3f9d0085daed6c24cc5f31c718b00cbdff60046",
+      "bytes": 5892
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/normal_pipeline.py",
+      "sha256": "233c322ef97a41f93b32a2d9e472b97c9925d74659e6d9e452d6872b0be499a9",
+      "bytes": 9715
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/normalization.py",
+      "sha256": "bbf24f658e2afdd0fc0d55a35b87d2111669fc3a89a3e12c98562ae47a8d81b2",
+      "bytes": 4646
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/paired_converter_scale.py",
+      "sha256": "c8f6d09297668b5bcfd197f7328abef5ab7afc1029334b841c30883c46c1a2c5",
+      "bytes": 5394
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/projective_carry.py",
+      "sha256": "6e4f714443c18133d82e06b5a33161caa46c9303f5a665b0ad815f306a3ada7a",
+      "bytes": 10680
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/quantum_reciprocal.py",
+      "sha256": "8e791a49445eb9acadd08cc5f8c8ac4fb6faf7917ffb55d0723b835621b8f301",
+      "bytes": 9423
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/raw_gap2_bezout.py",
+      "sha256": "f5b31feff640fd2bc88e476ba767a6f90f79d6f570a90dcf769706c72fc980a3",
+      "bytes": 9782
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/raw_lower_window.py",
+      "sha256": "f2ecc12f33089fc2ce9a3206d0e54f681c756e4d65cf355c0781a4942f4db9af",
+      "bytes": 9690
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/raw_toeplitz.py",
+      "sha256": "f3f6f76448a8965b0d40464b14b7db5459b379c670a18ec330ce6f74f3a98d60",
+      "bytes": 956
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/raw_window_tensor.py",
+      "sha256": "6e801adee808e928778b9793e31611d639de6a34a1fa6974133a829f8eaaf91f",
+      "bytes": 5398
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/raw_window_transpose.py",
+      "sha256": "c6ad98c84c756e5cdf07f142c9d93cfc568d5a3ba7af14852e85cdf5d09553fa",
+      "bytes": 4139
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/scalar_inverse_phase.py",
+      "sha256": "d1549c918b98501276c692427d611da204e61c3f20501b53b7b0ab4fd873e06a",
+      "bytes": 8405
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/sized_field130.py",
+      "sha256": "53bdc97b48a037be36a3fa3847b3208aab0209c5554ddba68e2e0809e1a484a7",
+      "bytes": 7739
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/tower_inverse.py",
+      "sha256": "4b3956a1e02a0e61c2daf983c9a556a5997774d012267bd4ca17c94a8463027e",
+      "bytes": 17188
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/unit_toeplitz.py",
+      "sha256": "8938463326f67101577c6d651400db7e8e99d4ad225710fe6bcfda40421e193d",
+      "bytes": 6339
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/virtual_divisor.py",
+      "sha256": "b18f90a0a020a7f9bef5fa23f5ac33085fdd6a3287a44ffb79f65b36ccbd7fe8",
+      "bytes": 4947
+    },
+    {
+      "path": "controller_work/work/round2/milestone152/source/zero_erasure.py",
+      "sha256": "e0730bb7b4a15e4ab95ac0ebb8ea6c36f7b1d55587a981b58604c4f8ab962362",
+      "bytes": 1483
+    },
+    {
+      "path": "pro1_controller_bundle/1_task/official/kickmix.so",
+      "sha256": "c66b3216c4029e0cdfd09054306aa0feadf53ab2f50c1164e37f752874e5005e",
+      "bytes": 3220392
+    }
+  ],
+  "baseline_population_certificate_sha256": "e2c128f22c4c8a22d4aacf6954d7ce7776e276918db5b3d0148271fac851409c",
+  "recorded_unix": 1794375110.641401,
+  "heavy_lock_available": true,
+  "original_sources_immutable": true
+}

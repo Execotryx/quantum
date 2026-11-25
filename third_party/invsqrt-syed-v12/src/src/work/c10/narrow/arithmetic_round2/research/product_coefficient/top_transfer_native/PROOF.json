@@ -1,0 +1,142 @@
+{
+  "status": "PASS_NATIVE_COEFFICIENT_TOP_COMPONENT_ALL_HMR_NOT_FULL_INVSQRT",
+  "complete_paper_receipt_sha256": "2fce920baf7cbf0bdf1fe34811fb6c269b3f7b2784d01b184ed525a61471704a",
+  "root_authorization_sha256": "83668c45c45371380149686dbd1d21552c6bab467df6aca8d5ed42ec797b0528",
+  "adapter_sha256": "e006beab571434e561eeefb9e4e4b789e0061569af4bea9d8667c748c297be41",
+  "checker_sha256": "b1b8eb2bb7d6aebfc14797a2a146f19e5b00ecd1acd16efebb7beb4138c7bed1",
+  "proof_source_sha256": "0546d921fa2500a51b4220096e34c7f3437f641ec23047a6e0708f63b4ccaa4a",
+  "native_row_proof": {
+    "status": "PROVED_EMITTED_NATIVE_TEXT_ALL_CARE_INPUTS_SPECTATORS_AND_HMR",
+    "native_text_sha256": "f58ae99f881c51909048cdd85c20cad80614ed4fe1a16c15fd811afb662b4af2",
+    "care_inputs": 16384,
+    "input_functions": 14,
+    "spectator_variables": 0,
+    "HMR_variables": 11,
+    "native_operations": 146,
+    "all_original_inputs_restored": true,
+    "all_spectators_preserved": true,
+    "all_scratch_zero": true,
+    "all_resets_zero": true,
+    "resets_checked": 0,
+    "final_phase_terms": 0,
+    "maximum_polynomial_terms": 30,
+    "seconds": 0.004691798007115722,
+    "full_invsqrt_native_proof": false,
+    "official_verifier": false
+  },
+  "native_two_forward_inverse_proof": {
+    "status": "PROVED_EMITTED_NATIVE_TEXT_ALL_CARE_INPUTS_SPECTATORS_AND_HMR",
+    "native_text_sha256": "474647486aeeee08a73de648348eb99cc89a8248dc965cf25465b1175257f3a2",
+    "care_inputs": 4096,
+    "input_functions": 24,
+    "spectator_variables": 15,
+    "HMR_variables": 120,
+    "native_operations": 1214,
+    "all_original_inputs_restored": true,
+    "all_spectators_preserved": true,
+    "all_scratch_zero": true,
+    "all_resets_zero": true,
+    "resets_checked": 0,
+    "final_phase_terms": 0,
+    "maximum_polynomial_terms": 217,
+    "seconds": 0.0757006839994574,
+    "full_invsqrt_native_proof": false,
+    "official_verifier": false
+  },
+  "two_independent_forward_transcripts_preserved": true,
+  "all_12_paired_debts_consumed_once": true,
+  "original_model_source_sha256": "24fff823faa911afe93d02afc3ded0bbd156a210a85f1265c989a087f8fd1219",
+  "negative_tests": [
+    {
+      "case": "row",
+      "omitted": "wrap",
+      "status": "REJECTED_PHASE_WITH_DATA_AND_SCRATCH_PRESERVED",
+      "message": "('Unpaid exact HMR/integral phase', 1, ['0x20'])"
+    },
+    {
+      "case": "two_forward",
+      "omitted": "wrap",
+      "status": "REJECTED_PHASE_WITH_DATA_AND_SCRATCH_PRESERVED",
+      "message": "('Unpaid exact HMR/integral phase', 1, ['0x100000000000000000000000000'])"
+    },
+    {
+      "case": "row",
+      "omitted": "saved",
+      "status": "REJECTED_PHASE_WITH_DATA_AND_SCRATCH_PRESERVED",
+      "message": "('Unpaid exact HMR/integral phase', 1, ['0x20'])"
+    },
+    {
+      "case": "two_forward",
+      "omitted": "saved",
+      "status": "REJECTED_PHASE_WITH_DATA_AND_SCRATCH_PRESERVED",
+      "message": "('Unpaid exact HMR/integral phase', 1, ['0x100000000000000000000000000'])"
+    }
+  ],
+  "native_runtime_checks": [
+    {
+      "seed": 0,
+      "shots": 4096,
+      "all4096_model_roots": true,
+      "status": "PASS",
+      "sampled_mean_Toffolis": 118.0
+    },
+    {
+      "seed": 1,
+      "shots": 4096,
+      "all4096_model_roots": true,
+      "status": "PASS",
+      "sampled_mean_Toffolis": 118.0
+    },
+    {
+      "seed": 2,
+      "shots": 4096,
+      "all4096_model_roots": true,
+      "status": "PASS",
+      "sampled_mean_Toffolis": 118.0
+    },
+    {
+      "seed": 3,
+      "shots": 4096,
+      "all4096_model_roots": true,
+      "status": "PASS",
+      "sampled_mean_Toffolis": 118.0
+    }
+  ],
+  "fixture_peak": 61,
+  "fixture_extra_original_A_anchor_wires": 13,
+  "production_arithmetic_peak": 48,
+  "inverse_production_peak_bound": 45,
+  "expected_Toffolis": 118,
+  "baseline_Toffolis": 123,
+  "saving_E": 5,
+  "T": 0,
+  "R": 0,
+  "original_accuracy_unchanged": true,
+  "endpoint_loaders_and_external_cleanups_unchanged": true,
+  "full_native_qualification": false,
+  "official_verified": false,
+  "elapsed_seconds": 0.6843957920063986,
+  "peak_rss_kib": 31644,
+  "files": [
+    {
+      "path": "coefficient_two_forward_inverse.kmb",
+      "bytes": 10970,
+      "sha256": "e9271fc9c186ed7264bcc5a90bcd980ae4c330a07d1bf439a3aa46f6f29d5f4c"
+    },
+    {
+      "path": "coefficient_two_forward_inverse.kmx",
+      "bytes": 15096,
+      "sha256": "474647486aeeee08a73de648348eb99cc89a8248dc965cf25465b1175257f3a2"
+    },
+    {
+      "path": "row.kmb",
+      "bytes": 1596,
+      "sha256": "1c9eb3ff15c00fba54317f59630e783fc40b4a959193fe871f4abe32e2447316"
+    },
+    {
+      "path": "row.kmx",
+      "bytes": 1957,
+      "sha256": "f58ae99f881c51909048cdd85c20cad80614ed4fe1a16c15fd811afb662b4af2"
+    }
+  ]
+}

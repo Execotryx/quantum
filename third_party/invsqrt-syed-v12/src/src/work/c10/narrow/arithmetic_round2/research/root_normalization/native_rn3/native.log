@@ -1,0 +1,162 @@
+
+[strict_guard] {"event": "preflight_passed", "elapsed_seconds": 0.011560567989363335, "limits": {"per_process_hard_address_bytes": 536870912, "aggregate_RSS_stop_bytes": 805306368, "minimum_host_available_bytes": 4294967296, "live_process_cap": 8}}
+{"root_native_progress": "root192_roundtrip_exact", "inputs": 786432, "seconds": 0.15164644899778068}
+{"root_native_progress": "root192_roundtrip_exact", "inputs": 1572864, "seconds": 0.28966868099814747}
+{"root_native_progress": "root192_roundtrip_exact", "inputs": 2359296, "seconds": 0.4363427939970279}
+{"root_native_progress": "root192_roundtrip_exact", "inputs": 3145728, "seconds": 0.6315351499943063}
+{"root_native_progress": "root192_hybrid_exact", "inputs": 786432, "seconds": 0.1601633489917731}
+{"root_native_progress": "root192_hybrid_exact", "inputs": 1572864, "seconds": 0.3534948829910718}
+{"root_native_progress": "root192_hybrid_exact", "inputs": 2359296, "seconds": 0.5197053779993439}
+{"root_native_progress": "root192_hybrid_exact", "inputs": 3145728, "seconds": 0.7067208089865744}
+{
+  "status": "PASS_NATIVE_ROOT192_COMPONENT_NOT_OFFICIAL",
+  "resources": {
+    "forward": {
+      "native_Q": 39,
+      "exact_native_expectation": {
+        "status": "EXACT_EXPECTATION_FROM_CLASSICAL_GUARDS",
+        "assumptions": [
+          "Every active HMR measures a computational-basis wire and has a fair independent outcome.",
+          "Conditional costs count instruction execution, independently of quantum control values."
+        ],
+        "accounting": "exact Boolean guards; GF2-rank enumeration of affine leaves",
+        "rank_cap": 12,
+        "maximum_rank_used": 0,
+        "syntactic_measurements": 84,
+        "static": {
+          "toffoli_like": 96,
+          "T": 0,
+          "generic_rotations": 0
+        },
+        "mean": {
+          "toffoli_like": "96",
+          "T": "0",
+          "generic_rotations": "0"
+        },
+        "mean_numeric": {
+          "toffoli_like": 96.0,
+          "T": 0.0,
+          "generic_rotations": 0.0
+        },
+        "mean_Toffoli_plus_T_quarter": "96",
+        "independent_condition_depth_not_assumed": true,
+        "official_verified": false
+      },
+      "kmb_sha256": "ac5415852f15886efe362718a3d742654585ab260dd8dc692c243aa712cdcc8d",
+      "kmx_sha256": "800aaaa7ee5a201af43f472c7b26b92ff440cc3635a85247dd1074830a8597ba"
+    },
+    "roundtrip": {
+      "native_Q": 39,
+      "exact_native_expectation": {
+        "status": "EXACT_EXPECTATION_FROM_CLASSICAL_GUARDS",
+        "assumptions": [
+          "Every active HMR measures a computational-basis wire and has a fair independent outcome.",
+          "Conditional costs count instruction execution, independently of quantum control values."
+        ],
+        "accounting": "exact Boolean guards; GF2-rank enumeration of affine leaves",
+        "rank_cap": 12,
+        "maximum_rank_used": 0,
+        "syntactic_measurements": 168,
+        "static": {
+          "toffoli_like": 192,
+          "T": 0,
+          "generic_rotations": 0
+        },
+        "mean": {
+          "toffoli_like": "192",
+          "T": "0",
+          "generic_rotations": "0"
+        },
+        "mean_numeric": {
+          "toffoli_like": 192.0,
+          "T": 0.0,
+          "generic_rotations": 0.0
+        },
+        "mean_Toffoli_plus_T_quarter": "192",
+        "independent_condition_depth_not_assumed": true,
+        "official_verified": false
+      },
+      "kmb_sha256": "9a5225d564cd4577259eca98578d9a4cab09d80eed270ef333d7fd14008c5a7f",
+      "kmx_sha256": "5e9705cc5420bb817ae3acc319142a424e537a8812d0da96dd52fb934883f643"
+    },
+    "hybrid": {
+      "native_Q": 42,
+      "exact_native_expectation": {
+        "status": "EXACT_EXPECTATION_FROM_CLASSICAL_GUARDS",
+        "assumptions": [
+          "Every active HMR measures a computational-basis wire and has a fair independent outcome.",
+          "Conditional costs count instruction execution, independently of quantum control values."
+        ],
+        "accounting": "exact Boolean guards; GF2-rank enumeration of affine leaves",
+        "rank_cap": 12,
+        "maximum_rank_used": 0,
+        "syntactic_measurements": 174,
+        "static": {
+          "toffoli_like": 199,
+          "T": 0,
+          "generic_rotations": 0
+        },
+        "mean": {
+          "toffoli_like": "199",
+          "T": "0",
+          "generic_rotations": "0"
+        },
+        "mean_numeric": {
+          "toffoli_like": 199.0,
+          "T": 0.0,
+          "generic_rotations": 0.0
+        },
+        "mean_Toffoli_plus_T_quarter": "199",
+        "independent_condition_depth_not_assumed": true,
+        "official_verified": false
+      },
+      "kmb_sha256": "a86834e4d079aadd031776cad1368e799429da907bbd0d87d09e609c3e3b52d7",
+      "kmx_sha256": "c8b989ac02f77eb9c69be752ed41498ad4288510f0a0920dcb0f8bc2094bed10"
+    }
+  },
+  "forward_simulator": [
+    {
+      "seed": 0,
+      "inputs": 32768,
+      "all_root_edges": 8192,
+      "status": "PASS_NATIVE_FORWARD_VALUE_PHASE_SCRATCH_AND_FLAGS",
+      "sampled_mean_Toffolis": 96.0
+    },
+    {
+      "seed": 1,
+      "inputs": 32768,
+      "all_root_edges": 8192,
+      "status": "PASS_NATIVE_FORWARD_VALUE_PHASE_SCRATCH_AND_FLAGS",
+      "sampled_mean_Toffolis": 96.0
+    },
+    {
+      "seed": 2,
+      "inputs": 32768,
+      "all_root_edges": 8192,
+      "status": "PASS_NATIVE_FORWARD_VALUE_PHASE_SCRATCH_AND_FLAGS",
+      "sampled_mean_Toffolis": 96.0
+    },
+    {
+      "seed": 3,
+      "inputs": 32768,
+      "all_root_edges": 8192,
+      "status": "PASS_NATIVE_FORWARD_VALUE_PHASE_SCRATCH_AND_FLAGS",
+      "sampled_mean_Toffolis": 96.0
+    }
+  ],
+  "normalized_inputs": 3145728,
+  "every_HMR_transcript_proved": true,
+  "all_scratch_zero": true,
+  "root_source_sha256": "1be9045ccd992451807c2be22e079c4b3b013eb219ce7e6658f0ca3cdef1cd4a",
+  "proof_source_sha256": "b243231f2377867d35f501e25918265c60547fc306e28291fbe6f480b61941d4",
+  "inputs_sha256": "dc8ad2f39a4e4a155a33975e86611897bb7e6a029ffecc9ff93fc04af5b5a456",
+  "source_ready_sha256": "0514e4532ea0271f571eb00ead3e64730b8a60252869faa9c83dbf31877b13c0",
+  "paper_acceptance_sha256": "04a2f62efca37e06c484a8cd3ba5c43ace9cda133ea9a23ae7ec8fa405d03b27",
+  "source_math_certificate_sha256": "1b873318b3f27bb3a5a035ba6d569387157663a3a154dd771c7f71936b3712e1",
+  "inherited_sources_and_modules_unchanged": true,
+  "complete_fusion_qualification": false,
+  "official_verifier_run": false,
+  "seconds": 1.7095534249965567
+}
+
+[strict_guard] {"event": "finished", "elapsed_seconds": 1.9976576159970136, "status": "COMPLETED", "returncode": 0, "peak_rss": 37183488}

@@ -1,0 +1,23 @@
+{
+  "benchmark": "invsqrt",
+  "claim": "actual verifier return; overall metric completion is recorded separately",
+  "elapsed_seconds": 971.619909469,
+  "kind": "official_benchmark_execution",
+  "result": {
+    "circuit_sha256": "321aff83636214196daa9cbc9dcc9c5e12a155bcff8d9989e98b8cee40935177",
+    "max_toffoli_count": 1599,
+    "num_ops": 34789,
+    "num_qubits": 46,
+    "reaction_depth": 1322,
+    "rotation_count": 33.0,
+    "rotation_eps": 6.418510368591089e-13,
+    "score": 80162.73077056778,
+    "status": "PASS",
+    "t_count": 1.0,
+    "toffoli_count": 1511.5700007681226,
+    "toffoli_equivalent": 1742.6680602297345,
+    "verified_shots": 200540928,
+    "worst_error_over_tolerance": 0.973575996935943,
+    "worst_x": 54566
+  }
+}

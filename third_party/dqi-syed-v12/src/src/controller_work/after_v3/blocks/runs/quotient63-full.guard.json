@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "/workspace/scratch/e5e4bb56acc7/controller_work/after_v3/blocks/check_quotient_phase63.py",
+    "--output",
+    "controller_work/after_v3/blocks/runs/quotient63-full"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794393413.0792804,
+  "rss_soft": 3000000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 176881664,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 9,
+  "elapsed_seconds": 18.08945870399475,
+  "current_rss": 137379840,
+  "available_bytes": 9503793152,
+  "exit_code": 0
+}

@@ -13,6 +13,7 @@ from pathlib import Path
 import numpy as np
 from invsqrt_direct import run_job
 
+from qcompile.dqi.pooled_pricing import pooled_failures
 from qcompile.environment import capture
 from qcompile.experiments import record_lock
 from qcompile.io import read_json, sha256, write_json
@@ -102,10 +103,7 @@ def validate_schedule(config) -> tuple[list[str], str | None]:
     return salts, confirmation
 
 
-def conservative_price(receipts, api) -> dict:
-    """Price full development draws using the pinned confidence procedure."""
-    if len(receipts) < 5:
-        raise ValueError("need at least five full DQI development receipts")
+def pricing_inputs(receipts, api) -> tuple[list[int], list[float]]:
     shots = TRIAL_SHOTS["full_development"]
     failures = []
     bases = []
@@ -121,12 +119,38 @@ def conservative_price(receipts, api) -> dict:
             raise ValueError("invalid DQI width or executed Toffoli mean")
         failures.append(sum(counts))
         bases.append(qubits**2 * toffolis)
+    return failures, bases
+
+
+def conservative_price(receipts, api) -> dict:
+    """Price full development draws using the pinned confidence procedure."""
+    if len(receipts) < 5:
+        raise ValueError("need at least five full DQI development receipts")
+    shots = TRIAL_SHOTS["full_development"]
+    failures, bases = pricing_inputs(receipts, api)
     priced = min(shots, max(failures) + 2)
     upper = api.clopper_pearson_upper_bound(priced, shots, api.DEFAULT_LOG2_DELTA)
     factor = api.repetition_overhead(upper) if upper < 1 / 16 else None
     return {
         "failures_by_salt": failures, "k_max": max(failures), "priced_failures": priced,
         "upper_error_rate": upper, "repetition_factor": factor,
+        "cost": None if factor is None else factor * max(bases),
+    }
+
+
+def pooled_price(receipts, api) -> dict:
+    """Price distinct full-coverage draws with the same verifier scoring rule."""
+    failures, bases = pricing_inputs(receipts, api)
+    shots = TRIAL_SHOTS["full_development"]
+    priced = min(shots, pooled_failures(failures))
+    upper = api.clopper_pearson_upper_bound(priced, shots, api.DEFAULT_LOG2_DELTA)
+    factor = api.repetition_overhead(upper) if upper < 1 / 16 else None
+    return {
+        "failures_by_salt": failures,
+        "total_failures": sum(failures),
+        "priced_failures": priced,
+        "upper_error_rate": upper,
+        "repetition_factor": factor,
         "cost": None if factor is None else factor * max(bases),
     }
 

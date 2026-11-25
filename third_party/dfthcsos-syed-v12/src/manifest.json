@@ -1,0 +1,91 @@
+{
+  "loaders": [
+    {
+      "k": 0,
+      "sha256": "ce7ebaf342c5b49f7d539637359fb8a282718fb3057e7b25dd193f2a6a4b8974",
+      "toffoli_per_call": 293
+    },
+    {
+      "k": 1,
+      "sha256": "3eac70665f021b0e304106fd62749277d4d69db775df008aacd6d950e4934193",
+      "toffoli_per_call": 287
+    },
+    {
+      "k": 2,
+      "sha256": "c3e1454e29a05c3c28bcfd16c2aee02340b5d439d9466774424fedf0ed7601d1",
+      "toffoli_per_call": 287
+    },
+    {
+      "k": 3,
+      "sha256": "d26b576ae789b0471ec6c11b7317c7c69eb3d7190472af8120ccf25cf217a8ea",
+      "toffoli_per_call": 287
+    },
+    {
+      "k": 4,
+      "sha256": "2efacc9d944aa5a855acf780e6bbc3c07af16c0275eb9549bb24adc70acca344",
+      "toffoli_per_call": 268
+    },
+    {
+      "k": 5,
+      "sha256": "7e4ed9a363c8f56d85410185c7b4449211788bc61e81b3dc7cbdd10ab7ce8a42",
+      "toffoli_per_call": 268
+    },
+    {
+      "k": 6,
+      "sha256": "26ab1d5df8132bbc28e068a4eef0b247ea21a96fa4034f89a6d1bf306f07e284",
+      "toffoli_per_call": 268
+    },
+    {
+      "k": 7,
+      "sha256": "1ae98642315e7aaedfde99773af4ae48198bf8b4f2e11e97883d6aa1bfe12bee",
+      "toffoli_per_call": 269
+    },
+    {
+      "k": 8,
+      "sha256": "e69c554c360c709e52126a6f773afeaa3564da7be0927d6293665f342203771f",
+      "toffoli_per_call": 263
+    },
+    {
+      "k": 9,
+      "sha256": "38848ce19bd553e4007a454d9b7d392d05ac105cf4b269f41521bd1003bf838e",
+      "toffoli_per_call": 264
+    },
+    {
+      "k": 10,
+      "sha256": "fdb67807154e35d9f41471c22b38bbc3ed07e5c93efef30a57f0599fb8400ff7",
+      "toffoli_per_call": 264
+    },
+    {
+      "k": 11,
+      "sha256": "d22baf8e2d294165618bcee40d958ef2806f0b35352c8b92e0d201aff3269c37",
+      "toffoli_per_call": 264
+    },
+    {
+      "k": 12,
+      "sha256": "b1b6af502f4bf02e521ab888600f645aa5a5bed028290466b54a835423eb2517",
+      "toffoli_per_call": 264
+    },
+    {
+      "k": 13,
+      "sha256": "1843d7993215656e4e0eee69169966ba269d544bc0b90e855e4ed5e6e113accc",
+      "toffoli_per_call": 264
+    },
+    {
+      "k": 14,
+      "sha256": "b763f0cd2fdeaaa31e7811084e51fde5d51575b036fa22854fb28172c1712a8e",
+      "toffoli_per_call": 264
+    }
+  ],
+  "npz_sha256": "6418ec8e10b1a8da967ee26278434f9ac950474741185f4d61363e17a03da77f",
+  "real_word_prefix_sha256": "b81a85cb861d16bb0cffdc7d51bb074a03a5a26fce7c36718ad332038137571f",
+  "replaced_loaders": [
+    7,
+    8
+  ],
+  "changed_batches": [
+    7
+  ],
+  "baseline_npz_sha256": "f53c8c788ae2ffdf2021cea41e54d9a19635d477d5c71e2f0437831398855df2",
+  "tree_edges_changed": false,
+  "compiler_provenance": "Original team portable compiler inherited from accepted package C; no public code or circuits."
+}

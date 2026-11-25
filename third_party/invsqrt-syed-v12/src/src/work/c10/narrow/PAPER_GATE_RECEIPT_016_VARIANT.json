@@ -1,0 +1,67 @@
+{
+  "status": "PARENT_ACCEPTED_COMPLETE_CANDIDATE05_ROUTE_GATE_BEFORE_NATIVE",
+  "created_utc": "2026-11-11T23:47:16.065324+00:00",
+  "candidate": "candidate05_constant_endpoint_route",
+  "Q": 49,
+  "expected_Toffolis": 1560.5,
+  "T": 4,
+  "R": 34,
+  "Toffoli_components": {
+    "normalize": 97.5,
+    "root": 198,
+    "coefficient_seed_product_table_lifecycle": 543.5,
+    "divider": 577.5,
+    "phase_route_and_controls": 144
+  },
+  "rotation_charge": 238.04838838550535,
+  "complete_predicted_E": 1799.5483883855054,
+  "complete_predicted_cost": 88177.87103088977,
+  "exact_margin_units64": 124372027,
+  "first_preparation_peak": 49,
+  "second_preparation_peak": 49,
+  "phase_peak_owners": {
+    "data": 43,
+    "constant_ones": 2,
+    "retained_flag_controls": 2,
+    "threshold_and_feature_helpers": 2
+  },
+  "new_phase_corrections": 0,
+  "every_existing_phase_correction_retained": true,
+  "angle_choice": "actual candidate04 quantized angles; both new LP vectors are strictly worse",
+  "angle_alternative_costs": {
+    "candidate04": 88275.87103088977,
+    "wide": 88275.87465363483,
+    "drop_base_i1": 89060.61320063617
+  },
+  "parent_independent_affine_permutation_classes_checked": 11,
+  "fixed_endpoint_swap_omitted_forward_and_inverse": [
+    0,
+    0,
+    26
+  ],
+  "centres": [
+    -1,
+    -3,
+    -7,
+    -1,
+    -2
+  ],
+  "all_native_candidates_preserved": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "native_build_authorized": true,
+  "required_after_emission": "Fresh all-input/all-HMR exact50 native proof and all four original full64-shot official salts, unchanged tolerance",
+  "source_pins": {
+    "research/postgate_route_constants/MANIFEST.json": "a7d353858692cffc2f361d973cd752405114a433b13d5c15cb94165c4b31302b",
+    "research/postgate_route_constants/offsets.json": "14f887ede91c2630fd3eca8386a7ac8b55a4951087bbdec009f1e1aee3414a99",
+    "research/postgate_route_constants/screen_offsets.py": "a4347dbe194492e64ea0f06a487c5b641e0edcfa64c6eff779b71389c0944956",
+    "research/postgate_angle_refit/quantize50.json": "8670515091475959ab0edeae03cb736cdb1cb66cd7768366e69fafb7eff8bf72",
+    "native/candidate04/candidate04.build.json": "24f5a7759a6602049ae1d1fdda71bacb2fbe9d579df297f51dea363b573d5e70",
+    "native/candidate04/whole_native_text_all.json": "04102ab61b58c85fe956b2072877bab042341847a5a1f8323b77638e0174e652",
+    "native/candidate04/candidate04.kmb": "72c37fcd020fc06bf68d106ecc4cf4b0be16e5b77bf98a8eeeb1f48f3b118dad",
+    "native/candidate04/SOURCE_READY.json": "c7573bd185c51ef2bce3784e2e167446160fee1cd973cacdb3572fa427a2ed17"
+  }
+}

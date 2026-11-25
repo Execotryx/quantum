@@ -1,0 +1,61 @@
+{
+  "backend_inventory_sha256": "132405912244d6232e4ea7fb3c9e941f8cbfbfe8cc51dd49ab3fccb609166237",
+  "dataset": "https://www.kaggle.com/datasets/syed3000/vqcc-own-circuit-portfolio/versions/12",
+  "outcome": "source_bytes_and_control_identities_verified_admission_pending_build_trace",
+  "pins": {
+    "banked_artifact": {
+      "path": "runs/open-circuits-20261114/d4-build-a/dqi.kmb",
+      "sha256": "53d8b2edf251e2a0c54c401a97d1396c7ed309e1cbfaab8d54a2c99a11ed6552"
+    },
+    "banked_member": {
+      "path": "docs/evidence/vendored-dqi/dqi-v8.json",
+      "sha256": "1e2ab08fb1637505069413a9aab1e70a9492e4ac1b56c1089c9777cc5705a920"
+    },
+    "historical_profile": {
+      "path": "docs/evidence/d4-extraction-repair-20261115/profile.json",
+      "sha256": "ee65029e9ee6231751e5bd49f5cc634a8429ebd027729342f323214b7e812881"
+    },
+    "member_registration": {
+      "path": "docs/evidence/vendored-dqi/salts.json",
+      "sha256": "be02cd9a038ba645860b99504548653449720b220f3b0e3d8e3de75a3c3b01eb"
+    },
+    "pole_witnesses": {
+      "path": "docs/evidence/d4-compact-repair-20261115/multiple-poles.json",
+      "sha256": "0b7f4ab02c435e28e5aaf7596913e453d4ddf474b797f0e384cf10ab52b4794b"
+    },
+    "publisher_checksums": {
+      "path": "runs/d4-open-successor/syed-v12-intake/SHA256SUMS",
+      "sha256": "0324a756234ec6f0900b31543267618410f888ed7fb1a5d32c4eaf5885f25964"
+    },
+    "publisher_license": {
+      "path": "runs/d4-open-successor/syed-v12-intake/LICENSE",
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "repair_control": {
+      "path": "docs/evidence/d4-extraction-repair-20261115/full-cloud/campaign/banked/summary.json",
+      "sha256": "bdf2b3a15a237b8784fc17a994db18d16bf13d8f7c57f57c3a476b621bfbc061"
+    },
+    "repair_registration": {
+      "path": "docs/evidence/d4-extraction-repair-20261115/full-cloud-registration.json",
+      "sha256": "e915b6bf22544acb34d9ef23dcfab9736e2a00ddb5cc95a749568d91e2952a16"
+    },
+    "residual_comparison": {
+      "path": "docs/evidence/d4-compact-repair-20261115/matched-residual.json",
+      "sha256": "73ea4c28f60f9aa7f4c3b559366424283d23f23118dfd518d765bfcefa255e96"
+    },
+    "source_archive": {
+      "path": "runs/d4-open-successor/syed-v12-intake/dqi_source_zip",
+      "sha256": "49e2b331d4008afb724985caf1038765b7a910f08838b590bf6e8fb692772763"
+    },
+    "source_build_lock": {
+      "path": "runs/d4-open-successor/source-requirements.lock",
+      "sha256": "1bdd61c02faf6bc49e2769cfb065805470421df04638480b7e5b5fffc7b72777"
+    },
+    "upstream_notice": {
+      "path": "runs/d4-open-successor/syed-v12-intake/dqi_source/NOTICE",
+      "sha256": "3e0eea3a45192471eb7d3f9ceb8f47c070d45a9e46ee6553ccd60ed17f8bfa13"
+    }
+  },
+  "published_candidate_sha256": "7cbe8ecf6f6e9743529b574f019504bb1712ce06fbb570c719ce9d9e2c914cd9",
+  "verified_archive_file_count": 431
+}

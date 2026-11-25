@@ -1,0 +1,17 @@
+{
+  "status": "PARENT_REVIEW_ACCEPTED_NATIVE_COMPONENT_FOR_COMPOSITION",
+  "utc": "2026-11-12T03:52:45.610411+00:00",
+  "route": "AR001 coefficient top transfer",
+  "result_manifest_sha256": "a6e245671f11c7b73f00e7745bf38788d3ffcb7627f3f83f3572673b6cd79d9d",
+  "proof_sha256": "61af67c62a26f6777a54533703f2e1dafacdca4d130735de8f85b5b494937642",
+  "source_ready_sha256": "2ba6a7d540a1e1bd171ef2cae5ecbbf6ce816eec7bbff14896fea9c606b19e05",
+  "all_result_and_source_pins_checked": true,
+  "component_native_proved": true,
+  "full_native_circuit_qualification": false,
+  "official_verifier_pass": false,
+  "component_delta_E": -5,
+  "component_fixture_peak61_includes13_originalA_anchors": true,
+  "production_peak_not_established_by_fixture_alone": true,
+  "complete_composed_native_peak_and_count_still_required": true,
+  "complete_four_salts_default_batch_required": true
+}

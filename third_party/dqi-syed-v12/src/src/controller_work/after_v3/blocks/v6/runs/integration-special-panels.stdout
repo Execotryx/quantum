@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/e5e4bb56acc7/controller_work/after_v3/blocks/v6/prepare_integration_special_panels.py", line 212, in <module>
+    raise SystemExit(main())
+                     ~~~~^^
+  File "/workspace/scratch/e5e4bb56acc7/controller_work/after_v3/blocks/v6/prepare_integration_special_panels.py", line 121, in main
+    assert canonical_id(prior_zero) == ZERO_ID
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

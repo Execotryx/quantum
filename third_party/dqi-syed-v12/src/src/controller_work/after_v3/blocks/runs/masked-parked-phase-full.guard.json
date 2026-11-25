@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "/workspace/scratch/e5e4bb56acc7/controller_work/after_v3/blocks/check_masked_parked_scale_phase.py",
+    "--output",
+    "controller_work/after_v3/blocks/runs/masked-parked-phase-full"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794391814.2377114,
+  "rss_soft": 1200000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 73080832,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 16,
+  "elapsed_seconds": 3.5079450607299805,
+  "current_rss": 34979840,
+  "available_bytes": 9549975552,
+  "exit_code": 0
+}

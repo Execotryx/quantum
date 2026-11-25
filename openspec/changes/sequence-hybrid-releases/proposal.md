@@ -1,3 +1,5 @@
+> Status: paused on 2026-11-14, pending release-v8-public-base-archives. Do not implement further until resolved.
+
 ## Why
 
 The v5 archive (`2ad0d5d7…b3db9`, local 1.6561824298) is prepared but not

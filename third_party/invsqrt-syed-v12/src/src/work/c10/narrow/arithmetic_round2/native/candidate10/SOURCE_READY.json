@@ -1,0 +1,58 @@
+{
+  "status": "FROZEN_NATIVE_COMPOSITION_SOURCE_READY",
+  "files": [
+    {
+      "path": "arithmetic_variant.py",
+      "bytes": 4928,
+      "sha256": "1212eb8d1c23f9601c1dda9d0032d8709471052ae9fa9eb982298cdb000d8c63"
+    },
+    {
+      "path": "generate.py",
+      "bytes": 5248,
+      "sha256": "a3bed2d51ecf9a5790d1a208aee24462487d1811b02a9416a3c179de08bf5838"
+    },
+    {
+      "path": "prove50.py",
+      "bytes": 5616,
+      "sha256": "a6f1e286306150c95b72863a331e9632dda20b2bcce33ca743ce06d06e959542"
+    },
+    {
+      "path": "native_batch.py",
+      "bytes": 1498,
+      "sha256": "9b83b54a01dc6176ff0ac4b45ef60aac1d420fd80392253ab0dcd396a1e16dd9"
+    },
+    {
+      "path": "lifecycle10.py",
+      "bytes": 6484,
+      "sha256": "da7de4046f690ebd53d023ad5f1fde5c3ce423a6505f3a98f881167876f4479c"
+    },
+    {
+      "path": "freeze_gate.py",
+      "bytes": 10256,
+      "sha256": "f4cb94aa761e68b75d11eae3c44632ff8fda36d0af7531603129c6c5844ae185"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2603,
+      "sha256": "64c7c2c9959d68b279b91c6a6b06e3f7a289248418f18ceced6c221c77c776ba"
+    },
+    {
+      "path": "COMPLETE_GATE.json",
+      "bytes": 8645,
+      "sha256": "eb427769c7166ea94422a4d910cd47a2284c38f46f4eb311885ed6b86e6eb714"
+    },
+    {
+      "path": "PARENT_ACCEPTED.json",
+      "bytes": 464,
+      "sha256": "284a8f73c7cfda88e57d87f7123d0f8d3e0c1154d595b1a05c7868258b0c57dc"
+    },
+    {
+      "path": "INPUTS.json",
+      "bytes": 93918,
+      "sha256": "45e416686f28385837970e9c89a6b5fca3cb791fbf0cb45dde430ad778b1aa98"
+    }
+  ],
+  "all_selected_components_native_proved": true,
+  "whole_native_and_official_pending": true,
+  "fresh_window_guard_required": true
+}

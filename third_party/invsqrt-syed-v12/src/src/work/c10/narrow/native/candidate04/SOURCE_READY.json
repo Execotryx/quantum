@@ -1,0 +1,76 @@
+{
+  "status": "FROZEN_CANDIDATE04_SOURCE_READY_NOT_NATIVE_EXECUTED",
+  "files": [
+    {
+      "path": "INPUTS.json",
+      "bytes": 9120,
+      "sha256": "a4245198d8174e6c179880d62b2f7068e5ce46a4d08f7e85895fbd065670425e"
+    },
+    {
+      "path": "PLAN.md",
+      "bytes": 3715,
+      "sha256": "fe3a5705995198dbb9c680aa80ec0b1cfa79d7cbc505da645ead9c9a001b06d4"
+    },
+    {
+      "path": "RESUME.md",
+      "bytes": 2481,
+      "sha256": "f634254c2733785ee8751a5ec3b5489a0b4239dfd5f03e8314226e34775b753d"
+    },
+    {
+      "path": "STATIC_AUDIT.json",
+      "bytes": 599,
+      "sha256": "6db4fb6fb1eb93a2af793c29681f34e02d0ee955c137bb5b84c6e9f63f828032"
+    },
+    {
+      "path": "generate.py",
+      "bytes": 4313,
+      "sha256": "e69395ced648ae6475eaa0d42d9fbcc297592403bdc16f9dc8ec981bc1a6321c"
+    },
+    {
+      "path": "oracle50.py",
+      "bytes": 1841,
+      "sha256": "836fe4a39975279fd1fd343d8dabbfbf40c934d8eaf374db22329c05d4182854"
+    },
+    {
+      "path": "prove50.py",
+      "bytes": 11892,
+      "sha256": "ca33b397fd5cfef333a4bac65c69b82e1cf89e2a6bf91646ed06a17eef216a64"
+    },
+    {
+      "path": "run_batch.py",
+      "bytes": 2886,
+      "sha256": "10fa226bd758cf66ada535ef563e24bf150220d454983583aaeaa9ceccd06aa0"
+    },
+    {
+      "path": "static_audit.py",
+      "bytes": 5026,
+      "sha256": "2fcee844ae9fca26a5b6a2f65255db81aca4788eb73efd31927dabd6f4c7fc55"
+    },
+    {
+      "path": "variant.py",
+      "bytes": 7348,
+      "sha256": "da023f7bc56995b9a8764a35c25b782f579b46e5a663e5b7100690819513e7ce"
+    }
+  ],
+  "expected_resources": {
+    "Q": 49,
+    "Toffolis": 1562.5,
+    "T": 4,
+    "R": 34,
+    "proved_margin_lower_bound_units64": 124286782,
+    "rotation_charge_upper_bound": 238.0530968204069,
+    "complete_cost_upper_bound": 88276.10174419993
+  },
+  "native_execution_owner": "parent shared strict native guard",
+  "required_hard_address_space": 536870912,
+  "command": "/usr/bin/python3.13 narrow/native/candidate04/run_batch.py --full-proof",
+  "first_subprocess": "full exact quantize50 scan; emission refuses a missing, failing or inconsistent receipt",
+  "baseline_sources_unchanged": true,
+  "previous_candidates_preserved": [
+    "candidate01",
+    "candidate02",
+    "candidate03"
+  ],
+  "phase_grid_turns": "1/1125899906842624",
+  "native_execution_performed": false
+}

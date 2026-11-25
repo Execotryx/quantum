@@ -1,0 +1,77 @@
+{
+  "status": "UNIVERSAL",
+  "address_width": 7,
+  "seed": 0,
+  "candidates": 256,
+  "helper_ands": 11,
+  "quadratic_rank": 128,
+  "steps": [
+    {
+      "left": 2,
+      "right": 1,
+      "truth": 181483929024500513847133123963609712776,
+      "quadratic_rank": 34
+    },
+    {
+      "left": 8,
+      "right": 4,
+      "truth": 319019586840962221640188233472310046720,
+      "quadratic_rank": 40
+    },
+    {
+      "left": 32,
+      "right": 16,
+      "truth": 340277174624079928654192539534171832320,
+      "quadratic_rank": 47
+    },
+    {
+      "left": 74,
+      "right": 9,
+      "truth": 90565423725261443190496998246647861640,
+      "quadratic_rank": 55
+    },
+    {
+      "left": 70,
+      "right": 520,
+      "truth": 1016453017637501239939518950654622720,
+      "quadratic_rank": 64
+    },
+    {
+      "left": 176,
+      "right": 1288,
+      "truth": 10635185602256934045579984620996266120,
+      "quadratic_rank": 74
+    },
+    {
+      "left": 57,
+      "right": 270,
+      "truth": 22805258999721487256241378175424401704,
+      "quadratic_rank": 85
+    },
+    {
+      "left": 24,
+      "right": 8523,
+      "truth": 922687377860417850989095982803875840,
+      "quadratic_rank": 97
+    },
+    {
+      "left": 12808,
+      "right": 1544,
+      "truth": 1109085463406966732379524518459270784,
+      "quadratic_rank": 110
+    },
+    {
+      "left": 50435,
+      "right": 29,
+      "truth": 109166180720548279014120542583749083466,
+      "quadratic_rank": 124
+    },
+    {
+      "left": 64,
+      "right": 4,
+      "truth": 320265757102059730301108577278172856320,
+      "quadratic_rank": 128
+    }
+  ],
+  "seconds": 0.39445453199732583
+}

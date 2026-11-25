@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "controller_work/after_v3/blocks/check_forward_preimage.py",
+    "--output",
+    "controller_work/after_v3/blocks/runs/preimage-full"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794391028.9950812,
+  "rss_soft": 3000000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 181010432,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 5,
+  "elapsed_seconds": 213.70089316368103,
+  "current_rss": 77164544,
+  "available_bytes": 9498054656,
+  "exit_code": 0
+}

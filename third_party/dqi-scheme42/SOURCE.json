@@ -1,0 +1,55 @@
+{
+  "name": "Nasir Ali GF(4096) scheme42",
+  "url": "https://github.com/nasir26/vqcc-kaggle",
+  "revision": "55161390efc3e8604bab56f3f31e4abbf34c7764",
+  "authors": [
+    "Nasir Ali"
+  ],
+  "spdx": "Apache-2.0",
+  "retrieved_utc": "2026-11-15T10:08:39+00:00",
+  "files": [
+    {
+      "path": "LICENSE",
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    {
+      "path": "src/scheme42.py",
+      "bytes": 3000,
+      "sha256": "ffce2483078a4f2ceb57a4b499770692448458dbf9e4d38f0c3d3ee186a8fb56"
+    },
+    {
+      "path": "src/tower.py",
+      "bytes": 11604,
+      "sha256": "7091580fdee847981c92517f7d462efb533acd77eb6682ce3f827abfabb86f98"
+    }
+  ],
+  "published_outputs": [
+    {
+      "name": "scheme42.txt",
+      "sha256": "19ee4259f4d20a779d2484b3dea635d2e0efd23fce39c859e70228f668e53093"
+    }
+  ],
+  "admission": {
+    "explicit_license": {
+      "passed": true,
+      "evidence": "Origin LICENSE and README declare Apache-2.0 for repository code."
+    },
+    "generating_source": {
+      "passed": true,
+      "evidence": "tasks/dqi/scheme42.py generates the tensor using the adjacent tower.py."
+    },
+    "pinned_bytes": {
+      "passed": true,
+      "evidence": "Byte-identical files from Git commit 55161390efc3e8604bab56f3f31e4abbf34c7764."
+    },
+    "no_competition_data": {
+      "passed": true,
+      "evidence": "The generator uses the Python standard library and finite-field constants. The helper's optional Kickmix code is unused, and no backend bytes are vendored."
+    },
+    "not_denylisted": {
+      "passed": true,
+      "evidence": "Independent GF(2^12) interpolation tensor, with no decoder or circuit lineage."
+    }
+  }
+}

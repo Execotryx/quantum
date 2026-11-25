@@ -1,0 +1,35 @@
+{
+  "status": "FROZEN_COMPLETE_Q48_PAPER_GATE_PENDING_NATIVE_AUTHORIZATION",
+  "files": [
+    {
+      "path": "Q48_GATE_PLAN.md",
+      "bytes": 1411,
+      "sha256": "a6d2a1a44f21fbcdd26eda87d0f058874a557207a48853a38ebe0a1214bacbb1"
+    },
+    {
+      "path": "q48_gate_audit.py",
+      "bytes": 20168,
+      "sha256": "d206242903d1bd7e2c07c6e31452f7c24e2ff18281ec7e0cf66dd07cd5a79738"
+    },
+    {
+      "path": "Q48_COMPLETE_PAPER_GATE.md",
+      "bytes": 8459,
+      "sha256": "f524b3216b59a62fac4ff7f882003769d5c611c99e3c2f2e348a6339607094bb"
+    },
+    {
+      "path": "Q48_COMPLETE_PAPER_GATE.json",
+      "bytes": 69161,
+      "sha256": "912da9164095aa996317909903d50162a76eded7ff9a90cbb9299c85c013de2c"
+    },
+    {
+      "path": "CANDIDATE05_REVIEW.json",
+      "bytes": 14372,
+      "sha256": "5470ecd85ca14a598a3debff45f8726b351f44bd7710ba30bf8054db5d28cecf"
+    },
+    {
+      "path": "frozen/manifest_Q48_v1.json",
+      "bytes": 1371,
+      "sha256": "19933f62c2b93f9b66ae8a8cd0d5e3d184987d1bb5e1e8af0e1cdd70254e1be9"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "status": "SOURCE_SNAPSHOT_ONLY",
+  "files": [
+    {
+      "path": "controller_work/after_c5/integration/build_candidate.py",
+      "bytes": 4830,
+      "sha256": "b55637fd5068aa7fd8a824cb18c397d2f0811ffa73a96c09586d660907ab328d"
+    },
+    {
+      "path": "controller_work/after_c5/integration/check_build_equality.py",
+      "bytes": 4404,
+      "sha256": "070383394b79a9d6380b553dc2408f5e0c00f6bd62e628a838d738044f7966fb"
+    },
+    {
+      "path": "controller_work/after_c5/integration/check_candidate.py",
+      "bytes": 3898,
+      "sha256": "1de406fc1f10d001d594255e0c54813715c7a0ef41390a0af468b3f58b5cc416"
+    },
+    {
+      "path": "controller_work/after_c5/integration/check_key_boundary.py",
+      "bytes": 8354,
+      "sha256": "7297f84960ba82538e2b256d79912efd2bcf0650c7adeee6ee52dca64cf5a93c"
+    },
+    {
+      "path": "controller_work/after_c5/integration/event_ledger.py",
+      "bytes": 4608,
+      "sha256": "44ae7bb521f2c99dfcd4eba87468245c1068d2dc6c2d825deb0eddaf43942131"
+    },
+    {
+      "path": "controller_work/after_c5/integration/gen_dqi.py",
+      "bytes": 2319,
+      "sha256": "bd52787fb5713a0fd0687232e97973f4a40462cbe713eb0edfe9af28a9b1b321"
+    },
+    {
+      "path": "controller_work/after_c5/integration/integrated_pipeline.py",
+      "bytes": 9231,
+      "sha256": "dd17ffd28a16864756c71d3ac93d4f65df82540d180b391556a4e5821b87edff"
+    },
+    {
+      "path": "controller_work/after_c5/integration/integration_paths.py",
+      "bytes": 824,
+      "sha256": "ccc302b139a8cd5cb6b113a154e80b325cc9b6d5f5792174d88661a34fc9b591"
+    },
+    {
+      "path": "controller_work/after_c5/integration/source_binding.py",
+      "bytes": 9221,
+      "sha256": "329052854724ab25565caeb107b975041b931c254a843593c16527872a10810e"
+    }
+  ],
+  "source_files": 9,
+  "mutated_original_files": false
+}

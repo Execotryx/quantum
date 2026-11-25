@@ -1,0 +1,28 @@
+{
+  "status": "PARENT_ACCEPTED_COMPLETE_Q48_RING26_AND79_LOADER_PAPER_GATE",
+  "utc": "2026-11-12T01:13:08.489267+00:00",
+  "paper_gate_path": "research/combined_q48_ring26/COMPLETE_GATE.json",
+  "paper_gate_sha256": "49ce6e7007b19abcd533b82a9f291b617cbc1c864a3d66287c0e63a87ebb82c4",
+  "paper_plan_path": "research/combined_q48_ring26/PLAN.md",
+  "paper_plan_sha256": "876140269bae599009af26b566ac4418ee6ef02457afc83ebce61471e4fa661e",
+  "Q": 48,
+  "expected_Toffolis": 1584,
+  "T": 4,
+  "R": 33,
+  "modeled_cost": 87160.70685415737,
+  "checked_pins": 292,
+  "native_build_authorized": true,
+  "native_candidate_directory": "native/candidate07",
+  "all_native_candidates_preserved": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "new_ring26_oracle_required": true,
+  "unchanged_original_tolerance": true,
+  "requires_full_native_and_original_four_salts": true,
+  "no_submission": true
+}

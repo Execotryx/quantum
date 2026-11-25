@@ -1,0 +1,31 @@
+{
+  "status": "PARENT_ACCEPTED_COMPLETE_Q48_PAPER_GATE_NATIVE_BUILD_AUTHORIZED",
+  "created_utc": "2026-11-12T00:00:50.138510+00:00",
+  "native_build_authorized": true,
+  "candidate": "candidate06",
+  "paper_gate_path": "research/joint_loader/Q48_COMPLETE_PAPER_GATE.json",
+  "paper_gate_sha256": "912da9164095aa996317909903d50162a76eded7ff9a90cbb9299c85c013de2c",
+  "frozen_manifest_sha256": "5e4dc2d9f76969993134ba16f04bd5fb114c96863253c00fbc14d3e615faaf45",
+  "parent_checked_source_pins": 255,
+  "independent_carry_cross_review": "consumed_root: all13 obligations and19 ownership cuts accepted; no paper blocker",
+  "Q": 48,
+  "expected_Toffolis": 1591,
+  "T": 4,
+  "R": 34,
+  "rotation_charge": 238.04838838550535,
+  "exact_margin_units64": 124372027,
+  "total_equivalents": 1830.0483883855054,
+  "predicted_complete_cost": 87842.32264250425,
+  "decimal_cost_from_displayed_charge": "87842.32264250425680",
+  "numerical_cost_representation_difference": "6.80E-12",
+  "all_native_candidates_preserved": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "all_original_accuracy_checks_unchanged": true,
+  "full_native_all_input_all_HMR_and_four_official_salts_required": true,
+  "no_submission": true
+}

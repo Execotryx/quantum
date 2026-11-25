@@ -1,0 +1,51 @@
+{
+  "admitted_domain_change": false,
+  "fixture_preparation_executed": false,
+  "format": "DQI_THIRD_PUBLIC_CHART_SOURCE_PREPARATION_V1",
+  "full_key_requires_new_carry_boundary_oracle": true,
+  "incremental_mean_gain_exact": "277582827/4194304",
+  "incremental_static_gain_vs_matched_first2": 55,
+  "key_mean_exact": "28402108715/131072",
+  "key_prefix_static_T": 101087,
+  "key_static_T": 216928,
+  "maximum_Q": 889,
+  "native_executed": false,
+  "source_files": {
+    "controller_work/after_v3/blocks/v5/inverse_retained_norm_deferred.py": {
+      "bytes": 8462,
+      "sha256": "8cb8eaee9312acc81a3048072ec3ddf721399ba8ccdd7eac94002f9d4ec2da46"
+    },
+    "controller_work/after_v3/blocks/v6/KEY_CHECKER_DERIVATION.json": {
+      "bytes": 11061,
+      "sha256": "d875faf50a186d93b59bcceb0f909522ba366a2abf978a5a8a49d87961ed4579"
+    },
+    "controller_work/after_v3/blocks/v6/THIRD_PUBLIC_CHART_GATE.md": {
+      "bytes": 11074,
+      "sha256": "b364a5e5840553614bbd82abcae9bfe285ae6b4e74898eb68d67b8cfbbb9edd0"
+    },
+    "controller_work/after_v3/blocks/v6/boundary_scale_first3.py": {
+      "bytes": 4343,
+      "sha256": "03fe157840d2ccd400aab5bf73fdb46c620c416a6007aa530797cb6db524105c"
+    },
+    "controller_work/after_v3/blocks/v6/check_first3_retained_norm_adapter.py": {
+      "bytes": 18879,
+      "sha256": "3795553ea5ec70155d443a24d90930b9e32b8727d2f15abb98246edec33b4b17"
+    },
+    "controller_work/after_v3/blocks/v6/check_third_pivot_chart.py": {
+      "bytes": 16161,
+      "sha256": "b570fabe7e193827c91ae00290bb85ea74d7d91a03200b1dfcbe9cae34802104"
+    },
+    "controller_work/after_v3/blocks/v6/first3_retained_norm_adapter.py": {
+      "bytes": 8140,
+      "sha256": "6d66d5b5a308e56c50fe628cf0cfecda944db7e9189891d32ab628808d1e4cc8"
+    },
+    "controller_work/after_v3/blocks/v6/prepare_zero_third_fixture.py": {
+      "bytes": 7317,
+      "sha256": "b34ab50ac470bd66a46b175a45c5382123b8c476b35265d431345d2fd2cd10e0"
+    },
+    "controller_work/after_v3/blocks/v6/third_pivot_chart.py": {
+      "bytes": 5712,
+      "sha256": "0a788b7b49b80f8d267d05ac1dc6c067fdb626aaa054d076ce3052948af32166"
+    }
+  }
+}

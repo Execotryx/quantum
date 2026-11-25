@@ -1,0 +1,10 @@
+{
+  "backend_sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+  "build_record_sha256": "a73250884689511a719ae2b86da4ecb5ff72c1e10ca45813636021b305f0a92b",
+  "numpy": "2.3.5",
+  "published_sha256": "53d8b2edf251e2a0c54c401a97d1396c7ed309e1cbfaab8d54a2c99a11ed6552",
+  "python": "3.13.15 (main, Aug 14 2026, 15:34:59) [Clang 22.1.3 ]",
+  "sha256": "53d8b2edf251e2a0c54c401a97d1396c7ed309e1cbfaab8d54a2c99a11ed6552",
+  "source_sha256": "6e9f0028226c240539df18b3ff05f4f533b1ff06902774fa88e13aacbbadbcd6",
+  "status": "go"
+}

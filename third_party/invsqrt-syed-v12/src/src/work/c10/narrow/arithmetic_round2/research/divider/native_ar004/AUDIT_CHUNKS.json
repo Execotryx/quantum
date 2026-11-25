@@ -1,0 +1,10 @@
+{
+  "status": "ALL48_NATIVE_CHUNK_PHASE_AND_RESTORATION_FIELDS_EXPLICITLY_CHECKED",
+  "proof_sha256": "b1e9bf4f4696a25a92512d9f0cba394b8e65be616a368cd506a8a9676907699f",
+  "chunks": 48,
+  "inputs": 3133452,
+  "modulus": 2,
+  "HMR_variables": 583,
+  "each_chunk_all_HMR_phase_input_scratch_reset_checks_pass": true,
+  "each_chunk_zero_fractional_gates_and_final_HMR_terms": true
+}

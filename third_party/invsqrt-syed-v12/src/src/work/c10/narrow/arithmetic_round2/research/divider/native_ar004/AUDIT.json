@@ -1,0 +1,27 @@
+{
+  "status": "AUDITED_NATIVE_AR004_COMPONENT_PASS_NOT_OFFICIAL",
+  "proof_sha256": "b1e9bf4f4696a25a92512d9f0cba394b8e65be616a368cd506a8a9676907699f",
+  "guard_sha256": "b287a438f15a21bcdc92c1e8df85973855eded5ef1f43aaa7234dcd903649889",
+  "source_ready_sha256": "6b33c3b0e619d90bd5bc4674fdc075a91b7170475816ac787b7da8a9f4c6dcfe",
+  "inputs_sha256": "89ca5d0a650e132b92f56c26e4d0c4e14d1d4aecca9224471577bc6906350aed",
+  "native_expected_divider_Toffolis": 578,
+  "Q": 48,
+  "T": 0,
+  "R": 0,
+  "saving_vs_original_E": 9.5,
+  "saving_vs_AR003_E": 8.5,
+  "all_original_inputs": 3133452,
+  "all_HMR_variables": 583,
+  "all24_CarryDebts_consumed": true,
+  "frozen_forward_exact": true,
+  "frozen_input_digest_matched": true,
+  "negative_phase_probes": 2,
+  "checker_selftests": {
+    "positive": 3,
+    "negative": 4
+  },
+  "guard_peak_bytes": 48803840,
+  "native_seconds": 5.787008627012256,
+  "source_pins_rechecked_after_run": true,
+  "whole_fusion_or_official_qualification": false
+}

@@ -1,0 +1,11 @@
+{
+  "backend_sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+  "closed_static": 145428,
+  "declared_qubits": 995,
+  "driver_sha256": "428defd74652cd4c9c6a2bf7a0f5aacaa66bf580284f9ae662ba7ba8db5820dd",
+  "forward_static": 72714,
+  "input_qubits": 929,
+  "layout_audit_sha256": "8cb74f7708f80e692e28e4998bd5a64789404832ae511d099759420aa98a3c30",
+  "minimum_tail_v_slots": 3,
+  "primitive_sha256": "7f520a345b9e552e6d8829b0e2565bfe9be341b6309fda1e8b7566bfc012c51e"
+}

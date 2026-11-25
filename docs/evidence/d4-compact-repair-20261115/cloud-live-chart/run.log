@@ -1,0 +1,10 @@
+launch.sh: OK
+source.tar.gz: OK
+Sun Nov 15 19:42:03 UTC 2026
+aligned chart cases=64 seed=211 scratch=17 gates=1409.484375
+aligned chart cases=64 seed=212 scratch=17 gates=1409.484375
+.termination cases=544 seed=207 scratch=46 gates=2030.202205882353
+termination cases=544 seed=208 scratch=46 gates=2032.59375
+..
+3 passed, 24 deselected in 41.61s
+Sun Nov 15 19:42:47 UTC 2026

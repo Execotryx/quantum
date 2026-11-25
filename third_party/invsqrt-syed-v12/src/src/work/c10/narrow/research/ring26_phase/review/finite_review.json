@@ -1,0 +1,490 @@
+{
+  "status": "PASS_INDEPENDENT_FINITE_REVIEW_ACCURACY_AND_NATIVE_PENDING",
+  "source_pins": [
+    {
+      "path": "native/candidate01/divider.py",
+      "bytes": 13551,
+      "sha256": "d0dbaf6fe4227da988c9cb9e9dee847624992c7c5cce7ab347990d5b0a116c05"
+    },
+    {
+      "path": "native/candidate06/phase06.py",
+      "bytes": 7444,
+      "sha256": "4e979c47bc90317a6ac3576bc74964cf74222c2006e1630f6b17075af51ccdfb"
+    },
+    {
+      "path": "research/postgate_angle_refit/quantize50.json",
+      "bytes": 14672,
+      "sha256": "8670515091475959ab0edeae03cb736cdb1cb66cd7768366e69fafb7eff8bf72"
+    },
+    {
+      "path": "research/stream_phase/alias_ring/phase_ledger.py",
+      "bytes": 7830,
+      "sha256": "e8cc5a9095fd4bf29b5e77c6b58382b54ea46918102dbc10d1cad7c1edb255c3"
+    },
+    {
+      "path": "base/official/verifier_invsqrt/verify_submission_invsqrt.py",
+      "bytes": 17210,
+      "sha256": "ddef520dec6b68d1cf0a6f328ddd36d79eb84570b9192cf3f7acaf073f06733a"
+    },
+    {
+      "path": "research/ring26_phase/basis.py",
+      "bytes": 9040,
+      "sha256": "d9ebae9116afae66f666ba7bb265784ab77165417de71d18b4f845d6669326e2"
+    },
+    {
+      "path": "research/ring26_phase/basis.json",
+      "bytes": 13245,
+      "sha256": "a3bacdd5ef8e16acb8560a40e60e2c998f8171973b1dcc062a47503c5218d744"
+    },
+    {
+      "path": "research/joint_loader/Q48_COMPLETE_PAPER_GATE.json",
+      "bytes": 69161,
+      "sha256": "912da9164095aa996317909903d50162a76eded7ff9a90cbb9299c85c013de2c"
+    }
+  ],
+  "scope": "Exact finite route/affine phase basis/Boolean debt/source ledger; no original-input accuracy run.",
+  "route": {
+    "classes": 11,
+    "labels_per_class": 26,
+    "inverse_classes": 11,
+    "centres": [
+      0,
+      -2,
+      -6,
+      0,
+      -1
+    ],
+    "slots": [
+      21,
+      22,
+      23,
+      24,
+      25,
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "controlled_swaps_per_stage": [
+      12,
+      12,
+      12,
+      12,
+      13
+    ],
+    "per_direction": 61,
+    "omissions": []
+  },
+  "proof": {
+    "affine_word_basis_checks": 286,
+    "free_word_bits": 25,
+    "word_domain_size_per_exponent": 33554432,
+    "seed34_k0_k1_basis_equalities": 52,
+    "arbitrary_old_angle_coefficient_equalities": 1768,
+    "controls_and_thresholds_valid_class_checks": 165,
+    "one_product_threshold_checks": 320,
+    "all_outcome_measurement_coefficient_checks": 1352,
+    "controlled_S_eighth_turn_identity_cases": 4
+  },
+  "difference_formula": "f26 - f27 = w + 1 - 2^k",
+  "baseline_difference_units37_ranges": [
+    {
+      "k": 0,
+      "minimum": 0,
+      "maximum": 0
+    },
+    {
+      "k": 1,
+      "minimum": 0,
+      "maximum": 0
+    },
+    {
+      "k": 2,
+      "minimum": -1,
+      "maximum": 0
+    },
+    {
+      "k": 3,
+      "minimum": -3,
+      "maximum": 0
+    },
+    {
+      "k": 4,
+      "minimum": -7,
+      "maximum": 0
+    },
+    {
+      "k": 5,
+      "minimum": -15,
+      "maximum": 0
+    },
+    {
+      "k": 6,
+      "minimum": -31,
+      "maximum": 0
+    },
+    {
+      "k": 7,
+      "minimum": -63,
+      "maximum": 0
+    },
+    {
+      "k": 8,
+      "minimum": -127,
+      "maximum": 0
+    },
+    {
+      "k": 9,
+      "minimum": -255,
+      "maximum": 0
+    },
+    {
+      "k": 10,
+      "minimum": -511,
+      "maximum": 0
+    }
+  ],
+  "threshold_one_product_formulas": {
+    "1": {
+      "linear_mask": 31,
+      "left_xor_mask": 1,
+      "right_xor_mask": 30
+    },
+    "3": {
+      "linear_mask": 12,
+      "left_xor_mask": 1,
+      "right_xor_mask": 18
+    },
+    "5": {
+      "linear_mask": 56,
+      "left_xor_mask": 1,
+      "right_xor_mask": 20
+    },
+    "7": {
+      "linear_mask": 8,
+      "left_xor_mask": 1,
+      "right_xor_mask": 16
+    },
+    "9": {
+      "linear_mask": 0,
+      "left_xor_mask": 8,
+      "right_xor_mask": 3
+    }
+  },
+  "seed34_angles": [
+    {
+      "site": "base_i0",
+      "units50": 16696,
+      "turns": "2087/140737488355328",
+      "half_turns": "2087/70368744177664",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i1",
+      "units50": 31885,
+      "turns": "31885/1125899906842624",
+      "half_turns": "31885/562949953421312",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i2",
+      "units50": 65753,
+      "turns": "65753/1125899906842624",
+      "half_turns": "65753/562949953421312",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i3",
+      "units50": 131886,
+      "turns": "65943/562949953421312",
+      "half_turns": "65943/281474976710656",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i4",
+      "units50": 261678,
+      "turns": "130839/562949953421312",
+      "half_turns": "130839/281474976710656",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i5",
+      "units50": 525486,
+      "turns": "262743/562949953421312",
+      "half_turns": "262743/281474976710656",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i6",
+      "units50": 1048587,
+      "turns": "1048587/1125899906842624",
+      "half_turns": "1048587/562949953421312",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i7",
+      "units50": 2096433,
+      "turns": "2096433/1125899906842624",
+      "half_turns": "2096433/562949953421312",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i8",
+      "units50": 4194464,
+      "turns": "131077/35184372088832",
+      "half_turns": "131077/17592186044416",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i9",
+      "units50": 8388179,
+      "turns": "8388179/1125899906842624",
+      "half_turns": "8388179/562949953421312",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i10",
+      "units50": 16777422,
+      "turns": "8388711/562949953421312",
+      "half_turns": "8388711/281474976710656",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i11",
+      "units50": 33554147,
+      "turns": "33554147/1125899906842624",
+      "half_turns": "33554147/562949953421312",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i12",
+      "units50": 67108361,
+      "turns": "67108361/1125899906842624",
+      "half_turns": "67108361/562949953421312",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i13",
+      "units50": 134217166,
+      "turns": "67108583/562949953421312",
+      "half_turns": "67108583/281474976710656",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i14",
+      "units50": 268435982,
+      "turns": "134217991/562949953421312",
+      "half_turns": "134217991/281474976710656",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i15",
+      "units50": 536872047,
+      "turns": "536872047/1125899906842624",
+      "half_turns": "536872047/562949953421312",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i16",
+      "units50": 1073743824,
+      "turns": "67108989/70368744177664",
+      "half_turns": "67108989/35184372088832",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i17",
+      "units50": 2147484968,
+      "turns": "268435621/140737488355328",
+      "half_turns": "268435621/70368744177664",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i18",
+      "units50": 4294967019,
+      "turns": "4294967019/1125899906842624",
+      "half_turns": "4294967019/562949953421312",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i19",
+      "units50": 8589934482,
+      "turns": "4294967241/562949953421312",
+      "half_turns": "4294967241/281474976710656",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i20",
+      "units50": 17179868565,
+      "turns": "17179868565/1125899906842624",
+      "half_turns": "17179868565/562949953421312",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i21",
+      "units50": 34359738074,
+      "turns": "17179869037/562949953421312",
+      "half_turns": "17179869037/281474976710656",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i22",
+      "units50": 68719476677,
+      "turns": "68719476677/1125899906842624",
+      "half_turns": "68719476677/562949953421312",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i23",
+      "units50": 137438953062,
+      "turns": "68719476531/562949953421312",
+      "half_turns": "68719476531/281474976710656",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i24",
+      "units50": 274877906104,
+      "turns": "34359738263/140737488355328",
+      "half_turns": "34359738263/70368744177664",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "base_i25",
+      "units50": 549755822080,
+      "turns": "67108865/137438953472",
+      "half_turns": "67108865/68719476736",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "overflow_j0",
+      "units50": 1099511634841,
+      "turns": "1099511634841/1125899906842624",
+      "half_turns": "1099511634841/562949953421312",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "overflow_j1",
+      "units50": 2199023247360,
+      "turns": "268435455/137438953472",
+      "half_turns": "268435455/68719476736",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "overflow_j2",
+      "units50": 4398046519296,
+      "turns": "536870913/137438953472",
+      "half_turns": "536870913/68719476736",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "overflow_j3",
+      "units50": 8796093014016,
+      "turns": "1073741823/137438953472",
+      "half_turns": "1073741823/68719476736",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "overflow_j4",
+      "units50": 17592186036224,
+      "turns": "2147483647/137438953472",
+      "half_turns": "2147483647/68719476736",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "overflow_j5",
+      "units50": 35184372080640,
+      "turns": "4294967295/137438953472",
+      "half_turns": "4294967295/68719476736",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "overflow_j6",
+      "units50": 70368744169472,
+      "turns": "8589934591/137438953472",
+      "half_turns": "8589934591/68719476736",
+      "angle_class": "rotation"
+    },
+    {
+      "site": "global_one",
+      "units50": 982,
+      "turns": "491/562949953421312",
+      "half_turns": "491/281474976710656",
+      "angle_class": "rotation"
+    }
+  ],
+  "global_rotation": {
+    "units50": 982,
+    "turns": "491/562949953421312",
+    "schedule": "Restored explicit W25=1 after inverse route, before X/free.",
+    "required": true
+  },
+  "seed_global_zero33": {
+    "R": 33,
+    "T": 4,
+    "phase_Toffolis": 139,
+    "constant_difference_units50": -982,
+    "constant_difference_units64": -16089088,
+    "inherits_k0_k1_equality": false,
+    "accuracy_pending": true
+  },
+  "fixed_phase": {
+    "overflow7": "1 feature AND and 1 T",
+    "overflow8": "controlled S via 3 T, no feature owner",
+    "overflow9": "Z(c), since threshold10 implies rotated bit9=1",
+    "direct_Clifford_Z_POW_calls": 1,
+    "T": 4
+  },
+  "phase_components": {
+    "controlled_swaps": 122,
+    "alias_frame": 2,
+    "p_c": 2,
+    "nonlinear_thresholds": 5,
+    "conditional_features": 8
+  },
+  "phase_Toffolis": 139,
+  "R": 34,
+  "T": 4,
+  "peak_owner_components": {
+    "root": 12,
+    "exponent": 4,
+    "remainder": 14,
+    "quotient_history": 13,
+    "known_one": 1,
+    "p_c": 2,
+    "threshold": 1,
+    "feature": 1
+  },
+  "peak_Q": 48,
+  "entry_exit_owners": 43,
+  "complete_paper_Toffolis": 1585,
+  "first_preparation_peak": 48,
+  "second_preparation_peak": 48,
+  "accuracy_margin": null,
+  "rotation_charge": null,
+  "complete_cost": null,
+  "all_input_accuracy_run": false,
+  "native_runtime_imported": false,
+  "native_emission": false,
+  "official_qualification": false,
+  "original_tolerance_unchanged": true,
+  "source_comparison": "Independent finite calculations agree with pinned stream basis receipt.",
+  "seconds": 0.02917017501022201,
+  "peak_rss_kib": 14204,
+  "review_script_sha256": "e27b244b240c4e1ad6199a510d0e5ec6582b5ba957fff43a13be91034814a302"
+}

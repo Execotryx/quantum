@@ -1,0 +1,32 @@
+{
+  "status": "NATIVE_COMPONENT_SOURCE_READY_NOT_EXECUTED",
+  "accepted_paper_gate_sha256": "2f71c632aa1e950e60afa47a700c39841282f5abd9496861f1e1d89aa43afc3c",
+  "forward_E": 52,
+  "roundtrip_expected_E": 96.5,
+  "expected_native_local_Q": 46,
+  "files": [
+    {
+      "path": "normalization96.py",
+      "bytes": 3308,
+      "sha256": "a3d644d83e9c815157aeffa283301d021c89d3da27a129453697f78953cc96d4"
+    },
+    {
+      "path": "prove_normalization96.py",
+      "bytes": 6351,
+      "sha256": "219b3db05f09567a869e8563cb05e19c8f59052771798c3a5d8ca5335ef9c814"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1068,
+      "sha256": "4a452127499ac9a06c1d8b9e8bd486a8182733a5a8cd04dbd218f0093c55c116"
+    },
+    {
+      "path": "INPUTS.json",
+      "bytes": 61546,
+      "sha256": "413513a6e2f89fdc8a3255daee9655e141c3f1456422d9c4ed27f98a5568cc12"
+    }
+  ],
+  "input_pins": 326,
+  "protected_sources_changed": false,
+  "integration_api": "forward(builder,x22,flags4); inverse is unchanged private old source; no install mutation"
+}

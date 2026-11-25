@@ -1,0 +1,3974 @@
+{
+  "status": "EMITTED_NATIVE_ARITHMETIC_COMPOSITION_NOT_YET_QUALIFIED",
+  "candidate": "candidate11r2",
+  "Q": 48,
+  "exact_native_expectation": {
+    "status": "EXACT_EXPECTATION_FROM_CLASSICAL_GUARDS",
+    "assumptions": [
+      "Every active HMR measures a computational-basis wire and has a fair independent outcome.",
+      "Conditional costs count instruction execution, independently of quantum control values."
+    ],
+    "accounting": "exact Boolean guards; GF2-rank enumeration of affine leaves",
+    "rank_cap": 12,
+    "maximum_rank_used": 7,
+    "syntactic_measurements": 1301,
+    "static": {
+      "toffoli_like": 1644,
+      "T": 3,
+      "generic_rotations": 33
+    },
+    "mean": {
+      "toffoli_like": "195673/128",
+      "T": "3",
+      "generic_rotations": "33"
+    },
+    "mean_numeric": {
+      "toffoli_like": 1528.6953125,
+      "T": 3.0,
+      "generic_rotations": 33.0
+    },
+    "mean_Toffoli_plus_T_quarter": "195769/128",
+    "independent_condition_depth_not_assumed": true,
+    "official_verified": false
+  },
+  "paper_rotation_charge": 230.84805946161188,
+  "paper_cost": 84494.08185415737,
+  "components_expected_Toffolis": {
+    "normalization": 94.75,
+    "consuming_root": 192,
+    "divider": 577.5,
+    "residual_product": 227.5,
+    "coefficient_arithmetic": 118,
+    "seed": 13.65625,
+    "root_frames": 4,
+    "metadata": 6,
+    "retired_root_restoration": 20,
+    "first_loader": 60,
+    "second_loader": 78,
+    "shared_table_cleanup": 6.2890625,
+    "phase_endpoint": 131
+  },
+  "cuts": [
+    {
+      "name": "normalized",
+      "live_qubits": 26,
+      "peak_so_far": 46,
+      "instruction_cut": 628,
+      "owners": {
+        "n": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 51.5,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "consumed_root",
+      "live_qubits": 26,
+      "peak_so_far": 46,
+      "instruction_cut": 1657,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 147.5,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "body_entry",
+      "live_qubits": 26,
+      "peak_so_far": 46,
+      "instruction_cut": 1657,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 147.5,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "first_table",
+      "live_qubits": 42,
+      "peak_so_far": 48,
+      "instruction_cut": 5871,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q43",
+          "q45",
+          "q39",
+          "q41",
+          "q37",
+          "q35",
+          "q33",
+          "q31",
+          "q29",
+          "q27",
+          "q44",
+          "q42",
+          "q40"
+        ],
+        "H": [
+          "q38",
+          "q36",
+          "q34"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 207.5,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "first_coefficient",
+      "live_qubits": 45,
+      "peak_so_far": 48,
+      "instruction_cut": 6185,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q43",
+          "q45",
+          "q39",
+          "q41",
+          "q37",
+          "q35",
+          "q33",
+          "q31",
+          "q29",
+          "q27",
+          "q44",
+          "q42",
+          "q40"
+        ],
+        "H": [
+          "q38",
+          "q36",
+          "q34",
+          "q47",
+          "q46"
+        ],
+        "snapshot": [
+          "q26"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 251.5,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "first_metadata_retired",
+      "live_qubits": 39,
+      "peak_so_far": 48,
+      "instruction_cut": 6214,
+      "owners": {},
+      "cumulative_expected": {
+        "toffoli_like": 252.5,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "seed_ready",
+      "live_qubits": 45,
+      "peak_so_far": 48,
+      "instruction_cut": 6321,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q43",
+          "q45",
+          "q39",
+          "q41",
+          "q37",
+          "q35",
+          "q33",
+          "q31",
+          "q29",
+          "q27",
+          "q44",
+          "q42",
+          "q40"
+        ],
+        "seed": [
+          "q34",
+          "q36",
+          "q38",
+          "q47",
+          "q28",
+          "q26"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 262.5,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "signed_product15",
+      "live_qubits": 44,
+      "peak_so_far": 48,
+      "instruction_cut": 7309,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "P": [
+          "q34",
+          "q36",
+          "q38",
+          "q47",
+          "q28",
+          "q26",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q43",
+          "q45",
+          "q39",
+          "q41",
+          "q37",
+          "q35",
+          "q33",
+          "q31",
+          "q29",
+          "q27",
+          "q44",
+          "q42",
+          "q40"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 364.5,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "coefficient_retired_for_divider",
+      "live_qubits": 31,
+      "peak_so_far": 48,
+      "instruction_cut": 7322,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "P": [
+          "q34",
+          "q36",
+          "q38",
+          "q47",
+          "q28",
+          "q26",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 364.5,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "divider_return",
+      "live_qubits": 31,
+      "peak_so_far": 48,
+      "instruction_cut": 17893,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "P": [
+          "q34",
+          "q36",
+          "q38",
+          "q47",
+          "q28",
+          "q26",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q32",
+          "q46"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1073.0,
+        "T": 3.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "second_table",
+      "live_qubits": 43,
+      "peak_so_far": 48,
+      "instruction_cut": 22599,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "None",
+          "None",
+          "None",
+          "q18",
+          "None",
+          "q20",
+          "q21"
+        ],
+        "P": [
+          "q34",
+          "q36",
+          "q38",
+          "q47",
+          "q28",
+          "q26",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q32",
+          "q46"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q44",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37"
+        ],
+        "H": [
+          "q41",
+          "q39",
+          "q30"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1152.0,
+        "T": 3.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "second_H3_ready",
+      "live_qubits": 44,
+      "peak_so_far": 48,
+      "instruction_cut": 22615,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "None",
+          "None",
+          "None",
+          "q18",
+          "None",
+          "q20",
+          "q21"
+        ],
+        "P": [
+          "q34",
+          "q36",
+          "q38",
+          "q47",
+          "q28",
+          "q26",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q32",
+          "q46"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q44",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37"
+        ],
+        "H": [
+          "q41",
+          "q39",
+          "q30",
+          "q7"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1153.0,
+        "T": 3.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "second_a6_retired",
+      "live_qubits": 43,
+      "peak_so_far": 48,
+      "instruction_cut": 22616,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "None",
+          "None",
+          "None",
+          "q18",
+          "None",
+          "q20",
+          "None"
+        ],
+        "P": [
+          "q34",
+          "q36",
+          "q38",
+          "q47",
+          "q28",
+          "q26",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q32",
+          "q46"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q44",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37"
+        ],
+        "H": [
+          "q41",
+          "q39",
+          "q30",
+          "q7"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1153.0,
+        "T": 3.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "second_coefficient",
+      "live_qubits": 45,
+      "peak_so_far": 48,
+      "instruction_cut": 22913,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "None",
+          "None",
+          "None",
+          "q18",
+          "None",
+          "q20",
+          "None"
+        ],
+        "P": [
+          "q34",
+          "q36",
+          "q38",
+          "q47",
+          "q28",
+          "q26",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q32",
+          "q46"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q44",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37"
+        ],
+        "H": [
+          "q41",
+          "q39",
+          "q30",
+          "q7",
+          "q21"
+        ],
+        "snapshot": [
+          "q8"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1195.0,
+        "T": 3.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "second_metadata_retired",
+      "live_qubits": 43,
+      "peak_so_far": 48,
+      "instruction_cut": 23002,
+      "owners": {},
+      "cumulative_expected": {
+        "toffoli_like": 1195.0,
+        "T": 3.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "inverse_product_data",
+      "live_qubits": 44,
+      "peak_so_far": 48,
+      "instruction_cut": 23004,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "None",
+          "None",
+          "None",
+          "q18",
+          "None",
+          "q20",
+          "None"
+        ],
+        "word": [
+          "q34",
+          "q36",
+          "q38",
+          "q47",
+          "q28",
+          "q26",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q32",
+          "q46",
+          "q7"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q44",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37"
+        ],
+        "H": [
+          "q41",
+          "q39",
+          "q30"
+        ],
+        "snapshot": [
+          "q8"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1195.0,
+        "T": 3.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "seed_cleared",
+      "live_qubits": 38,
+      "peak_so_far": 48,
+      "instruction_cut": 25854,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q45",
+          "q14",
+          "None",
+          "None",
+          "None",
+          "q18",
+          "None",
+          "q20",
+          "None"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q32",
+          "q46",
+          "q7"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q44",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37"
+        ],
+        "H": [
+          "q41",
+          "q39",
+          "q30"
+        ],
+        "snapshot": [
+          "q8"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1324.15625,
+        "T": 3.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "coefficient_sources_restored",
+      "live_qubits": 41,
+      "peak_so_far": 48,
+      "instruction_cut": 25883,
+      "owners": {},
+      "cumulative_expected": {
+        "toffoli_like": 1327.15625,
+        "T": 3.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "A_restored",
+      "live_qubits": 40,
+      "peak_so_far": 48,
+      "instruction_cut": 26385,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q45",
+          "q14",
+          "None",
+          "None",
+          "None",
+          "q18",
+          "None",
+          "q20",
+          "q26"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q32",
+          "q46",
+          "q7"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "A": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q44",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37"
+        ],
+        "H": [
+          "q41",
+          "q39",
+          "q30",
+          "q9",
+          "q43"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1363.15625,
+        "T": 3.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "raw_root_restored_with_paid_phase_product",
+      "live_qubits": 45,
+      "peak_so_far": 48,
+      "instruction_cut": 27260,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q45",
+          "q14",
+          "q26",
+          "q34",
+          "q36",
+          "q18",
+          "q38",
+          "q20",
+          "q47"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q32",
+          "q46",
+          "q7"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "A": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q44",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37"
+        ],
+        "H": [
+          "q41",
+          "q39",
+          "q30",
+          "q9",
+          "q43"
+        ],
+        "phase_snapshot": [
+          "q8"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1383.15625,
+        "T": 3.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "body_return",
+      "live_qubits": 26,
+      "peak_so_far": 48,
+      "instruction_cut": 35815,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q45",
+          "q14",
+          "q26",
+          "q34",
+          "q36",
+          "q18",
+          "q38",
+          "q20",
+          "q47"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q32",
+          "q46",
+          "q7"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1389.4453125,
+        "T": 3.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "body_restored",
+      "live_qubits": 26,
+      "peak_so_far": 48,
+      "instruction_cut": 35815,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q45",
+          "q14",
+          "q26",
+          "q34",
+          "q36",
+          "q18",
+          "q38",
+          "q20",
+          "q47"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q32",
+          "q46",
+          "q7"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1389.4453125,
+        "T": 3.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "root_restored",
+      "live_qubits": 26,
+      "peak_so_far": 48,
+      "instruction_cut": 37028,
+      "owners": {
+        "n": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q32",
+          "q46",
+          "q7",
+          "q10",
+          "q11",
+          "q12",
+          "q45",
+          "q14",
+          "q26",
+          "q34",
+          "q36",
+          "q18",
+          "q38",
+          "q20",
+          "q47"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1485.4453125,
+        "T": 3.0,
+        "generic_rotations": 33.0
+      }
+    },
+    {
+      "name": "logical_input_restored",
+      "live_qubits": 22,
+      "peak_so_far": 48,
+      "instruction_cut": 37283,
+      "owners": {
+        "x": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q32",
+          "q46",
+          "q7",
+          "q10",
+          "q11",
+          "q12",
+          "q45",
+          "q14",
+          "q26",
+          "q34",
+          "q36",
+          "q18",
+          "q38",
+          "q20",
+          "q47"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1528.6953125,
+        "T": 3.0,
+        "generic_rotations": 33.0
+      }
+    }
+  ],
+  "owner_trace": [
+    {
+      "label": "body_entry",
+      "live_owners": 26
+    },
+    {
+      "label": "first_table",
+      "live_owners": 42
+    },
+    {
+      "label": "first_coefficient",
+      "live_owners": 45
+    },
+    {
+      "label": "first_metadata_retired",
+      "live_owners": 39
+    },
+    {
+      "label": "seed_ready",
+      "live_owners": 45
+    },
+    {
+      "label": "signed_product15",
+      "live_owners": 44
+    },
+    {
+      "label": "coefficient_retired_for_divider",
+      "live_owners": 31
+    },
+    {
+      "label": "divider_return",
+      "live_owners": 31
+    },
+    {
+      "label": "second_table",
+      "live_owners": 43
+    },
+    {
+      "label": "second_H3_ready",
+      "live_owners": 44
+    },
+    {
+      "label": "second_a6_retired",
+      "live_owners": 43
+    },
+    {
+      "label": "second_coefficient",
+      "live_owners": 45
+    },
+    {
+      "label": "second_metadata_retired",
+      "live_owners": 43
+    },
+    {
+      "label": "inverse_product_data",
+      "live_owners": 44
+    },
+    {
+      "label": "seed_cleared",
+      "live_owners": 38
+    },
+    {
+      "label": "coefficient_sources_restored",
+      "live_owners": 41
+    },
+    {
+      "label": "A_restored",
+      "live_owners": 40
+    },
+    {
+      "label": "raw_root_restored_with_paid_phase_product",
+      "live_owners": 45
+    },
+    {
+      "label": "body_return",
+      "live_owners": 26
+    }
+  ],
+  "final_Clifford_layout_swaps": [
+    [
+      "q32",
+      "q7"
+    ],
+    [
+      "q46",
+      "q8"
+    ],
+    [
+      "q32",
+      "q9"
+    ],
+    [
+      "q45",
+      "q13"
+    ],
+    [
+      "q26",
+      "q15"
+    ],
+    [
+      "q34",
+      "q16"
+    ],
+    [
+      "q36",
+      "q17"
+    ],
+    [
+      "q38",
+      "q19"
+    ],
+    [
+      "q47",
+      "q21"
+    ]
+  ],
+  "route_trace": [
+    {
+      "component": "conjugated_coset_banks_route59",
+      "inverse": false,
+      "ring_bits": 26,
+      "swap_count": 59,
+      "pair_count": 59,
+      "expected_Toffolis": 59,
+      "expected_T": 0,
+      "generic_rotations": 0,
+      "measurement_returns": 0,
+      "local_HMR_functions": 0,
+      "new_quantum_owners": 0,
+      "entry_owners": 47,
+      "exit_owners": 47,
+      "peak_owners": 47,
+      "all_controls_restored": true,
+      "original_permutation_preserved": true,
+      "odd_bank_is_exact_translation_conjugate": true,
+      "known_one_return": null,
+      "gates": [
+        {
+          "index": 0,
+          "positions": [
+            11,
+            13
+          ],
+          "affine_expression_mask": 93,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q40",
+            "q44"
+          ]
+        },
+        {
+          "index": 1,
+          "positions": [
+            9,
+            15
+          ],
+          "affine_expression_mask": 93,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q5",
+            "q29"
+          ]
+        },
+        {
+          "index": 2,
+          "positions": [
+            7,
+            17
+          ],
+          "affine_expression_mask": 93,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q3",
+            "q33"
+          ]
+        },
+        {
+          "index": 3,
+          "positions": [
+            5,
+            19
+          ],
+          "affine_expression_mask": 93,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q1",
+            "q37"
+          ]
+        },
+        {
+          "index": 4,
+          "positions": [
+            3,
+            21
+          ],
+          "affine_expression_mask": 121,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q26",
+            "q39"
+          ]
+        },
+        {
+          "index": 5,
+          "positions": [
+            1,
+            23
+          ],
+          "affine_expression_mask": 13,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q47",
+            "q43"
+          ]
+        },
+        {
+          "index": 6,
+          "positions": [
+            9,
+            13
+          ],
+          "affine_expression_mask": 116,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q5",
+            "q44"
+          ]
+        },
+        {
+          "index": 7,
+          "positions": [
+            7,
+            15
+          ],
+          "affine_expression_mask": 116,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q3",
+            "q29"
+          ]
+        },
+        {
+          "index": 8,
+          "positions": [
+            5,
+            17
+          ],
+          "affine_expression_mask": 116,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q1",
+            "q33"
+          ]
+        },
+        {
+          "index": 9,
+          "positions": [
+            3,
+            19
+          ],
+          "affine_expression_mask": 116,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q26",
+            "q37"
+          ]
+        },
+        {
+          "index": 10,
+          "positions": [
+            23,
+            25
+          ],
+          "affine_expression_mask": 116,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q43",
+            "q7"
+          ]
+        },
+        {
+          "index": 11,
+          "positions": [
+            7,
+            13
+          ],
+          "affine_expression_mask": 89,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q3",
+            "q44"
+          ]
+        },
+        {
+          "index": 12,
+          "positions": [
+            5,
+            15
+          ],
+          "affine_expression_mask": 89,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q1",
+            "q29"
+          ]
+        },
+        {
+          "index": 13,
+          "positions": [
+            3,
+            17
+          ],
+          "affine_expression_mask": 89,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q26",
+            "q33"
+          ]
+        },
+        {
+          "index": 14,
+          "positions": [
+            1,
+            19
+          ],
+          "affine_expression_mask": 125,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q47",
+            "q37"
+          ]
+        },
+        {
+          "index": 15,
+          "positions": [
+            21,
+            25
+          ],
+          "affine_expression_mask": 9,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q39",
+            "q7"
+          ]
+        },
+        {
+          "index": 16,
+          "positions": [
+            9,
+            11
+          ],
+          "affine_expression_mask": 89,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q5",
+            "q40"
+          ]
+        },
+        {
+          "index": 17,
+          "positions": [
+            11,
+            15
+          ],
+          "affine_expression_mask": 115,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q40",
+            "q29"
+          ]
+        },
+        {
+          "index": 18,
+          "positions": [
+            9,
+            17
+          ],
+          "affine_expression_mask": 115,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q5",
+            "q33"
+          ]
+        },
+        {
+          "index": 19,
+          "positions": [
+            7,
+            19
+          ],
+          "affine_expression_mask": 115,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q3",
+            "q37"
+          ]
+        },
+        {
+          "index": 20,
+          "positions": [
+            5,
+            21
+          ],
+          "affine_expression_mask": 115,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q1",
+            "q39"
+          ]
+        },
+        {
+          "index": 21,
+          "positions": [
+            3,
+            23
+          ],
+          "affine_expression_mask": 115,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q26",
+            "q43"
+          ]
+        },
+        {
+          "index": 22,
+          "positions": [
+            1,
+            25
+          ],
+          "affine_expression_mask": 7,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q47",
+            "q7"
+          ]
+        },
+        {
+          "index": 23,
+          "positions": [
+            0,
+            24
+          ],
+          "affine_expression_mask": 93,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q38",
+            "q9"
+          ]
+        },
+        {
+          "index": 24,
+          "positions": [
+            2,
+            22
+          ],
+          "affine_expression_mask": 93,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q28",
+            "q45"
+          ]
+        },
+        {
+          "index": 25,
+          "positions": [
+            4,
+            20
+          ],
+          "affine_expression_mask": 93,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q0",
+            "q41"
+          ]
+        },
+        {
+          "index": 26,
+          "positions": [
+            6,
+            18
+          ],
+          "affine_expression_mask": 93,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q2",
+            "q35"
+          ]
+        },
+        {
+          "index": 27,
+          "positions": [
+            8,
+            16
+          ],
+          "affine_expression_mask": 121,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q4",
+            "q31"
+          ]
+        },
+        {
+          "index": 28,
+          "positions": [
+            10,
+            14
+          ],
+          "affine_expression_mask": 13,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q6",
+            "q27"
+          ]
+        },
+        {
+          "index": 29,
+          "positions": [
+            0,
+            22
+          ],
+          "affine_expression_mask": 116,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q38",
+            "q45"
+          ]
+        },
+        {
+          "index": 30,
+          "positions": [
+            2,
+            20
+          ],
+          "affine_expression_mask": 116,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q28",
+            "q41"
+          ]
+        },
+        {
+          "index": 31,
+          "positions": [
+            4,
+            18
+          ],
+          "affine_expression_mask": 116,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q0",
+            "q35"
+          ]
+        },
+        {
+          "index": 32,
+          "positions": [
+            6,
+            16
+          ],
+          "affine_expression_mask": 116,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q2",
+            "q31"
+          ]
+        },
+        {
+          "index": 33,
+          "positions": [
+            10,
+            12
+          ],
+          "affine_expression_mask": 116,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q6",
+            "q42"
+          ]
+        },
+        {
+          "index": 34,
+          "positions": [
+            0,
+            20
+          ],
+          "affine_expression_mask": 89,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q38",
+            "q41"
+          ]
+        },
+        {
+          "index": 35,
+          "positions": [
+            2,
+            18
+          ],
+          "affine_expression_mask": 89,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q28",
+            "q35"
+          ]
+        },
+        {
+          "index": 36,
+          "positions": [
+            4,
+            16
+          ],
+          "affine_expression_mask": 89,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q0",
+            "q31"
+          ]
+        },
+        {
+          "index": 37,
+          "positions": [
+            6,
+            14
+          ],
+          "affine_expression_mask": 125,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q2",
+            "q27"
+          ]
+        },
+        {
+          "index": 38,
+          "positions": [
+            8,
+            12
+          ],
+          "affine_expression_mask": 9,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q4",
+            "q42"
+          ]
+        },
+        {
+          "index": 39,
+          "positions": [
+            22,
+            24
+          ],
+          "affine_expression_mask": 89,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q45",
+            "q9"
+          ]
+        },
+        {
+          "index": 40,
+          "positions": [
+            2,
+            24
+          ],
+          "affine_expression_mask": 115,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q28",
+            "q9"
+          ]
+        },
+        {
+          "index": 41,
+          "positions": [
+            4,
+            22
+          ],
+          "affine_expression_mask": 115,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q0",
+            "q45"
+          ]
+        },
+        {
+          "index": 42,
+          "positions": [
+            6,
+            20
+          ],
+          "affine_expression_mask": 115,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q2",
+            "q41"
+          ]
+        },
+        {
+          "index": 43,
+          "positions": [
+            8,
+            18
+          ],
+          "affine_expression_mask": 115,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q4",
+            "q35"
+          ]
+        },
+        {
+          "index": 44,
+          "positions": [
+            10,
+            16
+          ],
+          "affine_expression_mask": 115,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q6",
+            "q31"
+          ]
+        },
+        {
+          "index": 45,
+          "positions": [
+            12,
+            14
+          ],
+          "affine_expression_mask": 7,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q42",
+            "q27"
+          ]
+        },
+        {
+          "index": 46,
+          "positions": [
+            0,
+            25
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q38",
+            "q7"
+          ]
+        },
+        {
+          "index": 47,
+          "positions": [
+            1,
+            24
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q47",
+            "q9"
+          ]
+        },
+        {
+          "index": 48,
+          "positions": [
+            2,
+            23
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q28",
+            "q43"
+          ]
+        },
+        {
+          "index": 49,
+          "positions": [
+            3,
+            22
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q26",
+            "q45"
+          ]
+        },
+        {
+          "index": 50,
+          "positions": [
+            4,
+            21
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q0",
+            "q39"
+          ]
+        },
+        {
+          "index": 51,
+          "positions": [
+            5,
+            20
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q1",
+            "q41"
+          ]
+        },
+        {
+          "index": 52,
+          "positions": [
+            6,
+            19
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q2",
+            "q37"
+          ]
+        },
+        {
+          "index": 53,
+          "positions": [
+            7,
+            18
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q3",
+            "q35"
+          ]
+        },
+        {
+          "index": 54,
+          "positions": [
+            8,
+            17
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q4",
+            "q33"
+          ]
+        },
+        {
+          "index": 55,
+          "positions": [
+            9,
+            16
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q5",
+            "q31"
+          ]
+        },
+        {
+          "index": 56,
+          "positions": [
+            10,
+            15
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q6",
+            "q29"
+          ]
+        },
+        {
+          "index": 57,
+          "positions": [
+            11,
+            14
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q40",
+            "q27"
+          ]
+        },
+        {
+          "index": 58,
+          "positions": [
+            12,
+            13
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q42",
+            "q44"
+          ]
+        }
+      ]
+    },
+    {
+      "component": "conjugated_coset_banks_route59",
+      "inverse": true,
+      "ring_bits": 26,
+      "swap_count": 58,
+      "pair_count": 59,
+      "expected_Toffolis": 58,
+      "expected_T": 0,
+      "generic_rotations": 0,
+      "measurement_returns": 1,
+      "local_HMR_functions": 1,
+      "new_quantum_owners": 0,
+      "entry_owners": 47,
+      "exit_owners": 47,
+      "peak_owners": 47,
+      "all_controls_restored": true,
+      "original_permutation_preserved": true,
+      "odd_bank_is_exact_translation_conjugate": true,
+      "known_one_return": {
+        "component": "known_one_inverse_swap",
+        "expected_Toffolis": 0,
+        "expected_T": 0,
+        "generic_rotations": 0,
+        "local_HMR_functions": 1,
+        "new_quantum_owners": 0,
+        "input_one_restored": true,
+        "control_and_data_restored": true,
+        "exact_phase_including_global_sign": true
+      },
+      "gates": [
+        {
+          "index": 58,
+          "positions": [
+            12,
+            13
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q42",
+            "q44"
+          ]
+        },
+        {
+          "index": 57,
+          "positions": [
+            11,
+            14
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q40",
+            "q27"
+          ]
+        },
+        {
+          "index": 56,
+          "positions": [
+            10,
+            15
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q6",
+            "q29"
+          ]
+        },
+        {
+          "index": 55,
+          "positions": [
+            9,
+            16
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q5",
+            "q31"
+          ]
+        },
+        {
+          "index": 54,
+          "positions": [
+            8,
+            17
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q4",
+            "q33"
+          ]
+        },
+        {
+          "index": 53,
+          "positions": [
+            7,
+            18
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q3",
+            "q35"
+          ]
+        },
+        {
+          "index": 52,
+          "positions": [
+            6,
+            19
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q2",
+            "q37"
+          ]
+        },
+        {
+          "index": 51,
+          "positions": [
+            5,
+            20
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q1",
+            "q41"
+          ]
+        },
+        {
+          "index": 50,
+          "positions": [
+            4,
+            21
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q0",
+            "q39"
+          ]
+        },
+        {
+          "index": 49,
+          "positions": [
+            3,
+            22
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q26",
+            "q45"
+          ]
+        },
+        {
+          "index": 48,
+          "positions": [
+            2,
+            23
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q28",
+            "q43"
+          ]
+        },
+        {
+          "index": 47,
+          "positions": [
+            1,
+            24
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q47",
+            "q9"
+          ]
+        },
+        {
+          "index": 46,
+          "positions": [
+            0,
+            25
+          ],
+          "affine_expression_mask": 3,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q38",
+            "q7"
+          ]
+        },
+        {
+          "index": 45,
+          "positions": [
+            12,
+            14
+          ],
+          "affine_expression_mask": 7,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q42",
+            "q27"
+          ]
+        },
+        {
+          "index": 44,
+          "positions": [
+            10,
+            16
+          ],
+          "affine_expression_mask": 115,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q6",
+            "q31"
+          ]
+        },
+        {
+          "index": 43,
+          "positions": [
+            8,
+            18
+          ],
+          "affine_expression_mask": 115,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q4",
+            "q35"
+          ]
+        },
+        {
+          "index": 42,
+          "positions": [
+            6,
+            20
+          ],
+          "affine_expression_mask": 115,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q2",
+            "q41"
+          ]
+        },
+        {
+          "index": 41,
+          "positions": [
+            4,
+            22
+          ],
+          "affine_expression_mask": 115,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q0",
+            "q45"
+          ]
+        },
+        {
+          "index": 40,
+          "positions": [
+            2,
+            24
+          ],
+          "affine_expression_mask": 115,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q28",
+            "q9"
+          ]
+        },
+        {
+          "index": 39,
+          "positions": [
+            22,
+            24
+          ],
+          "affine_expression_mask": 89,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q45",
+            "q9"
+          ]
+        },
+        {
+          "index": 38,
+          "positions": [
+            8,
+            12
+          ],
+          "affine_expression_mask": 9,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q4",
+            "q42"
+          ]
+        },
+        {
+          "index": 37,
+          "positions": [
+            6,
+            14
+          ],
+          "affine_expression_mask": 125,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q2",
+            "q27"
+          ]
+        },
+        {
+          "index": 36,
+          "positions": [
+            4,
+            16
+          ],
+          "affine_expression_mask": 89,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q0",
+            "q31"
+          ]
+        },
+        {
+          "index": 35,
+          "positions": [
+            2,
+            18
+          ],
+          "affine_expression_mask": 89,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q28",
+            "q35"
+          ]
+        },
+        {
+          "index": 34,
+          "positions": [
+            0,
+            20
+          ],
+          "affine_expression_mask": 89,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q38",
+            "q41"
+          ]
+        },
+        {
+          "index": 33,
+          "positions": [
+            10,
+            12
+          ],
+          "affine_expression_mask": 116,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q6",
+            "q42"
+          ]
+        },
+        {
+          "index": 32,
+          "positions": [
+            6,
+            16
+          ],
+          "affine_expression_mask": 116,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q2",
+            "q31"
+          ]
+        },
+        {
+          "index": 31,
+          "positions": [
+            4,
+            18
+          ],
+          "affine_expression_mask": 116,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q0",
+            "q35"
+          ]
+        },
+        {
+          "index": 30,
+          "positions": [
+            2,
+            20
+          ],
+          "affine_expression_mask": 116,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q28",
+            "q41"
+          ]
+        },
+        {
+          "index": 29,
+          "positions": [
+            0,
+            22
+          ],
+          "affine_expression_mask": 116,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q38",
+            "q45"
+          ]
+        },
+        {
+          "index": 28,
+          "positions": [
+            10,
+            14
+          ],
+          "affine_expression_mask": 13,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q6",
+            "q27"
+          ]
+        },
+        {
+          "index": 27,
+          "positions": [
+            8,
+            16
+          ],
+          "affine_expression_mask": 121,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q4",
+            "q31"
+          ]
+        },
+        {
+          "index": 26,
+          "positions": [
+            6,
+            18
+          ],
+          "affine_expression_mask": 93,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q2",
+            "q35"
+          ]
+        },
+        {
+          "index": 25,
+          "positions": [
+            4,
+            20
+          ],
+          "affine_expression_mask": 93,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q0",
+            "q41"
+          ]
+        },
+        {
+          "index": 24,
+          "positions": [
+            2,
+            22
+          ],
+          "affine_expression_mask": 93,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q28",
+            "q45"
+          ]
+        },
+        {
+          "index": 23,
+          "positions": [
+            0,
+            24
+          ],
+          "affine_expression_mask": 93,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q38",
+            "q9"
+          ]
+        },
+        {
+          "index": 22,
+          "positions": [
+            1,
+            25
+          ],
+          "affine_expression_mask": 7,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q47",
+            "q7"
+          ]
+        },
+        {
+          "index": 21,
+          "positions": [
+            3,
+            23
+          ],
+          "affine_expression_mask": 115,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q26",
+            "q43"
+          ]
+        },
+        {
+          "index": 20,
+          "positions": [
+            5,
+            21
+          ],
+          "affine_expression_mask": 115,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q1",
+            "q39"
+          ]
+        },
+        {
+          "index": 19,
+          "positions": [
+            7,
+            19
+          ],
+          "affine_expression_mask": 115,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q3",
+            "q37"
+          ]
+        },
+        {
+          "index": 18,
+          "positions": [
+            9,
+            17
+          ],
+          "affine_expression_mask": 115,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q5",
+            "q33"
+          ]
+        },
+        {
+          "index": 17,
+          "positions": [
+            11,
+            15
+          ],
+          "affine_expression_mask": 115,
+          "kind": "CSWAP",
+          "arguments": [
+            "q22",
+            "q40",
+            "q29"
+          ]
+        },
+        {
+          "index": 16,
+          "positions": [
+            9,
+            11
+          ],
+          "affine_expression_mask": 89,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q5",
+            "q40"
+          ]
+        },
+        {
+          "index": 15,
+          "positions": [
+            21,
+            25
+          ],
+          "affine_expression_mask": 9,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q39",
+            "q7"
+          ]
+        },
+        {
+          "index": 14,
+          "positions": [
+            1,
+            19
+          ],
+          "affine_expression_mask": 125,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q47",
+            "q37"
+          ]
+        },
+        {
+          "index": 13,
+          "positions": [
+            3,
+            17
+          ],
+          "affine_expression_mask": 89,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q26",
+            "q33"
+          ]
+        },
+        {
+          "index": 12,
+          "positions": [
+            5,
+            15
+          ],
+          "affine_expression_mask": 89,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q1",
+            "q29"
+          ]
+        },
+        {
+          "index": 11,
+          "positions": [
+            7,
+            13
+          ],
+          "affine_expression_mask": 89,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q3",
+            "q44"
+          ]
+        },
+        {
+          "index": 10,
+          "positions": [
+            23,
+            25
+          ],
+          "affine_expression_mask": 116,
+          "kind": "known_one_measurement_return",
+          "arguments": [
+            "q23",
+            "q43",
+            "q7"
+          ]
+        },
+        {
+          "index": 9,
+          "positions": [
+            3,
+            19
+          ],
+          "affine_expression_mask": 116,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q26",
+            "q37"
+          ]
+        },
+        {
+          "index": 8,
+          "positions": [
+            5,
+            17
+          ],
+          "affine_expression_mask": 116,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q1",
+            "q33"
+          ]
+        },
+        {
+          "index": 7,
+          "positions": [
+            7,
+            15
+          ],
+          "affine_expression_mask": 116,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q3",
+            "q29"
+          ]
+        },
+        {
+          "index": 6,
+          "positions": [
+            9,
+            13
+          ],
+          "affine_expression_mask": 116,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q5",
+            "q44"
+          ]
+        },
+        {
+          "index": 5,
+          "positions": [
+            1,
+            23
+          ],
+          "affine_expression_mask": 13,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q47",
+            "q43"
+          ]
+        },
+        {
+          "index": 4,
+          "positions": [
+            3,
+            21
+          ],
+          "affine_expression_mask": 121,
+          "kind": "CSWAP",
+          "arguments": [
+            "q24",
+            "q26",
+            "q39"
+          ]
+        },
+        {
+          "index": 3,
+          "positions": [
+            5,
+            19
+          ],
+          "affine_expression_mask": 93,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q1",
+            "q37"
+          ]
+        },
+        {
+          "index": 2,
+          "positions": [
+            7,
+            17
+          ],
+          "affine_expression_mask": 93,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q3",
+            "q33"
+          ]
+        },
+        {
+          "index": 1,
+          "positions": [
+            9,
+            15
+          ],
+          "affine_expression_mask": 93,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q5",
+            "q29"
+          ]
+        },
+        {
+          "index": 0,
+          "positions": [
+            11,
+            13
+          ],
+          "affine_expression_mask": 93,
+          "kind": "CSWAP",
+          "arguments": [
+            "q23",
+            "q40",
+            "q44"
+          ]
+        }
+      ]
+    }
+  ],
+  "phase_angle_records": [
+    {
+      "index": 0,
+      "site": "base_i0",
+      "target": "q39",
+      "new_half_turns": "2087/70368744177664",
+      "turn_units50": 16696,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 1,
+      "site": "base_i1",
+      "target": "q45",
+      "new_half_turns": "31885/562949953421312",
+      "turn_units50": 31885,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 2,
+      "site": "base_i2",
+      "target": "q43",
+      "new_half_turns": "65753/562949953421312",
+      "turn_units50": 65753,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 3,
+      "site": "base_i3",
+      "target": "q9",
+      "new_half_turns": "65943/281474976710656",
+      "turn_units50": 131886,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 4,
+      "site": "base_i4",
+      "target": "q7",
+      "new_half_turns": "130839/281474976710656",
+      "turn_units50": 261678,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 5,
+      "site": "base_i5",
+      "target": "q38",
+      "new_half_turns": "262743/281474976710656",
+      "turn_units50": 525486,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 6,
+      "site": "base_i6",
+      "target": "q47",
+      "new_half_turns": "1048587/562949953421312",
+      "turn_units50": 1048587,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 7,
+      "site": "base_i7",
+      "target": "q28",
+      "new_half_turns": "2096433/562949953421312",
+      "turn_units50": 2096433,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 8,
+      "site": "base_i8",
+      "target": "q26",
+      "new_half_turns": "-4398046380027/17592186044416",
+      "turn_units50": -140737484160864,
+      "angle_class": "generic",
+      "emitted": true,
+      "original_turn_units50": 4194464,
+      "exact_shift_turn_units50": -140737488355328,
+      "shift_compensated_by_fixed_tail": true
+    },
+    {
+      "index": 9,
+      "site": "base_i9",
+      "target": "q0",
+      "new_half_turns": "8388179/562949953421312",
+      "turn_units50": 8388179,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 10,
+      "site": "base_i10",
+      "target": "q1",
+      "new_half_turns": "8388711/281474976710656",
+      "turn_units50": 16777422,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 11,
+      "site": "base_i11",
+      "target": "q2",
+      "new_half_turns": "33554147/562949953421312",
+      "turn_units50": 33554147,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 12,
+      "site": "base_i12",
+      "target": "q3",
+      "new_half_turns": "67108361/562949953421312",
+      "turn_units50": 67108361,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 13,
+      "site": "base_i13",
+      "target": "q4",
+      "new_half_turns": "67108583/281474976710656",
+      "turn_units50": 134217166,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 14,
+      "site": "base_i14",
+      "target": "q5",
+      "new_half_turns": "134217991/281474976710656",
+      "turn_units50": 268435982,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 15,
+      "site": "base_i15",
+      "target": "q6",
+      "new_half_turns": "536872047/562949953421312",
+      "turn_units50": 536872047,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 16,
+      "site": "base_i16",
+      "target": "q40",
+      "new_half_turns": "67108989/35184372088832",
+      "turn_units50": 1073743824,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 17,
+      "site": "base_i17",
+      "target": "q42",
+      "new_half_turns": "268435621/70368744177664",
+      "turn_units50": 2147484968,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 18,
+      "site": "base_i18",
+      "target": "q44",
+      "new_half_turns": "4294967019/562949953421312",
+      "turn_units50": 4294967019,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 19,
+      "site": "base_i19",
+      "target": "q27",
+      "new_half_turns": "4294967241/281474976710656",
+      "turn_units50": 8589934482,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 20,
+      "site": "base_i20",
+      "target": "q29",
+      "new_half_turns": "17179868565/562949953421312",
+      "turn_units50": 17179868565,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 21,
+      "site": "base_i21",
+      "target": "q31",
+      "new_half_turns": "17179869037/281474976710656",
+      "turn_units50": 34359738074,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 22,
+      "site": "base_i22",
+      "target": "q33",
+      "new_half_turns": "68719477849/562949953421312",
+      "turn_units50": 68719477849,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 23,
+      "site": "base_i23",
+      "target": "q35",
+      "new_half_turns": "68719477117/281474976710656",
+      "turn_units50": 137438954234,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 24,
+      "site": "base_i24",
+      "target": "q37",
+      "new_half_turns": "68719476819/140737488355328",
+      "turn_units50": 274877907276,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 25,
+      "site": "base_i25",
+      "target": "q41",
+      "new_half_turns": "274877910945/281474976710656",
+      "turn_units50": 549755821890,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 26,
+      "site": "overflow_j0",
+      "target": "q30",
+      "new_half_turns": "1099511634651/562949953421312",
+      "turn_units50": 1099511634651,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 27,
+      "site": "overflow_j1",
+      "target": "q30",
+      "new_half_turns": "2199023260937/562949953421312",
+      "turn_units50": 2199023260937,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 28,
+      "site": "overflow_j2",
+      "target": "q30",
+      "new_half_turns": "4398046507155/562949953421312",
+      "turn_units50": 4398046507155,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 29,
+      "site": "overflow_j3",
+      "target": "q30",
+      "new_half_turns": "268435455/17179869184",
+      "turn_units50": 8796092989440,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 30,
+      "site": "overflow_j4",
+      "target": "q30",
+      "new_half_turns": "536870911/17179869184",
+      "turn_units50": 17592186011648,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 31,
+      "site": "overflow_j5",
+      "target": "q30",
+      "new_half_turns": "1073741823/17179869184",
+      "turn_units50": 35184372056064,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 32,
+      "site": "overflow_j6",
+      "target": "q30",
+      "new_half_turns": "2147483647/17179869184",
+      "turn_units50": 70368744144896,
+      "angle_class": "generic",
+      "emitted": true
+    },
+    {
+      "index": 33,
+      "site": "global_one",
+      "target": "q7",
+      "new_half_turns": "0",
+      "turn_units50": 0,
+      "angle_class": "Clifford",
+      "emitted": false
+    }
+  ],
+  "phase_trace": [
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 44,
+      "wires": [
+        "q8"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 45,
+      "wires": [
+        "q7"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 46,
+      "wires": [
+        "q32"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 47,
+      "wires": [
+        "q46"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 48,
+      "wires": [
+        "q30"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 48,
+      "wires": [
+        "q30"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 48,
+      "wires": [
+        "q30"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 48,
+      "wires": [
+        "q30"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 48,
+      "wires": [
+        "q30"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 48,
+      "wires": [
+        "q30"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 48,
+      "wires": [
+        "q30"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 48,
+      "wires": [
+        "q30"
+      ]
+    },
+    {
+      "event": "complete",
+      "entry_owners": 43,
+      "exit_owners": 43,
+      "observed_peak_owners": 48,
+      "generic_calls": 33,
+      "T_calls": 3,
+      "direct_Clifford_Z_POW_calls": 3,
+      "global_identity_validated_and_omitted": true,
+      "expected_Toffolis": 131,
+      "local_HMR_functions": 12,
+      "all_local_outcomes_repaid_before_exit": true,
+      "no_TableDebts_transfer": true,
+      "fixed_phase_records": [
+        {
+          "site": "direct_overflow_j7_j8",
+          "half_turns": "-1/4",
+          "target": "q22",
+          "kind": "T"
+        },
+        {
+          "site": "direct_overflow_j7_j8",
+          "half_turns": "1/4",
+          "target": "q26",
+          "kind": "T"
+        },
+        {
+          "site": "direct_overflow_j7_j8",
+          "half_turns": "1/4",
+          "target": "q30",
+          "kind": "T"
+        },
+        {
+          "site": "direct_overflow_j7_j8",
+          "half_turns": "3/2",
+          "target": "q25",
+          "kind": "Clifford"
+        },
+        {
+          "site": "direct_overflow_j7_j8",
+          "half_turns": "1/2",
+          "target": "q30",
+          "kind": "Clifford"
+        },
+        {
+          "site": "overflow_j9",
+          "half_turns": "1",
+          "target": "q46",
+          "kind": "Clifford"
+        }
+      ],
+      "fixed_tail_component": {
+        "component": "direct_three_T_tail_with_existing_R8_shift",
+        "expected_Toffolis": 1,
+        "expected_T": 3,
+        "new_generic_rotations": 0,
+        "existing_generic_site": 8,
+        "exact_angle_shift_turn_units50": -140737488355328,
+        "local_HMR_functions": 1,
+        "temporary_qubits": 1,
+        "entry_owners": 47,
+        "exit_owners": 47,
+        "peak_owners": 48,
+        "all_existing_owner_frames_restored": true,
+        "phase_exact_with_declared_existing_R_shift": true,
+        "caller_retains_j9_Z_c": true,
+        "no_component_Z_c_added": true,
+        "modelled_E_gain_vs_four_T": 0.25,
+        "modelled_Q48_cost_gain_vs_four_T": 12
+      },
+      "first_feature_component": {
+        "component": "direct_first_generic_overflow_feature",
+        "expected_Toffolis": 1,
+        "expected_T": 0,
+        "generic_rotations": 1,
+        "local_HMR_functions": 1,
+        "temporary_qubits": 1,
+        "entry_owners": 47,
+        "exit_owners": 47,
+        "peak_owners": 48,
+        "exact_angle_half_turns": "1099511634651/562949953421312",
+        "phase_exact": true
+      },
+      "compact_feature_components": [
+        {
+          "component": "compact_generic_overflow",
+          "j": 2,
+          "terms": [
+            3,
+            17,
+            68,
+            72
+          ],
+          "expected_Toffolis": 2,
+          "expected_T": 0,
+          "generic_rotations": 1,
+          "local_HMR_functions": 1,
+          "temporary_qubits": 1,
+          "entry_owners": 47,
+          "exit_owners": 47,
+          "peak_owners": 48,
+          "exact_angle_half_turns": "4398046507155/562949953421312",
+          "phase_exact": true
+        },
+        {
+          "component": "compact_generic_overflow",
+          "j": 4,
+          "terms": [
+            5,
+            17,
+            72,
+            80,
+            96
+          ],
+          "expected_Toffolis": 2,
+          "expected_T": 0,
+          "generic_rotations": 1,
+          "local_HMR_functions": 1,
+          "temporary_qubits": 1,
+          "entry_owners": 47,
+          "exit_owners": 47,
+          "peak_owners": 48,
+          "exact_angle_half_turns": "536870911/17179869184",
+          "phase_exact": true
+        },
+        {
+          "component": "compact_generic_overflow",
+          "j": 6,
+          "terms": [
+            17,
+            72
+          ],
+          "expected_Toffolis": 2,
+          "expected_T": 0,
+          "generic_rotations": 1,
+          "local_HMR_functions": 1,
+          "temporary_qubits": 1,
+          "entry_owners": 47,
+          "exit_owners": 47,
+          "peak_owners": 48,
+          "exact_angle_half_turns": "2147483647/17179869184",
+          "phase_exact": true
+        }
+      ],
+      "frame_component": {
+        "component": "snapshot_sigma25_frame_restore",
+        "expected_Toffolis": 0,
+        "expected_T": 0,
+        "generic_rotations": 0,
+        "local_HMR_functions": 1,
+        "entry_owners": 44,
+        "exit_owners": 43,
+        "retained_snapshot_erased": true,
+        "all_conditional_phase_corrections_Clifford": true
+      },
+      "all_33_generic_angles_unchanged": false,
+      "unchanged_generic_site_count": 33,
+      "unchanged_generic_site_functions": true,
+      "exact_complete_phase_and_accuracy_margin_unchanged": true,
+      "existing_generic_angle_changes": [
+        {
+          "site": 8,
+          "original_turn_units50": 4194464,
+          "exact_shift_turn_units50": -140737488355328,
+          "new_turn_units50": -140737484160864
+        }
+      ],
+      "modelled_Q48_cost_gain_vs_route59_tail4": 12,
+      "one_inverse_CSWAP_replaced_by_complete_measurement_return": true,
+      "controlled_route_forward_Toffolis": 59,
+      "controlled_route_inverse_Toffolis": 58,
+      "route_component_sha256": "45fe73074df71a4b81e3b141f541ee8dff92eeba359739208777e96add6f03f9",
+      "route_native_proof_sha256": "d987db85b83b8ba1a8bd5f9c8d0a1a48bce8b45817261e20f3c4a8039019ae82",
+      "odd_bank_is_exact_translation_conjugate": true,
+      "known_one_return_gate_index": 10
+    }
+  ],
+  "selected_seed_composition": {
+    "forward_Toffolis": 10,
+    "cleanup_Toffolis": 3.65625,
+    "total_Toffolis": 13.65625
+  },
+  "seed_forward": {
+    "status": "EMITTED_EXACT_DIRECT_R2_SEED_FORWARD_NATIVE_PENDING",
+    "entry_owners": 39,
+    "exit_owners": 45,
+    "local_peak_owner_bound": 47,
+    "original_forward_Toffolis": 11,
+    "expected_forward_Toffolis": 10,
+    "same_three_signed_row_kernels": true,
+    "same_six_deferred_carry_signs": true,
+    "physical_raw_root_unchanged_at_return": true,
+    "raw_v3_never_modified": true,
+    "extra_snapshot_owners": 0,
+    "extra_HMR_variables": 0,
+    "final_seed5_prepared_first": true,
+    "complete_seed_expected_Toffolis": 14.078125,
+    "complete_seed_saving_vs_candidate07": 3.421875,
+    "complete_seed_saving_vs_port02": 1,
+    "no_new_T_or_generic_rotations": true,
+    "no_arithmetic_kernel_changes": true
+  },
+  "seed_cleanup": {
+    "status": "EMITTED_COMPACT_FACTORED_SEED_CLEANUP_NATIVE_PENDING",
+    "expected_cleanup_Toffolis": 3.65625,
+    "expected_cleanup_fraction": "117/32",
+    "expected_helper_fraction": "85/32",
+    "expected_CCZ_fraction": "1",
+    "expected_complete_seed_with_forward10": 13.65625,
+    "expected_complete_seed_with_forward10_fraction": "437/32",
+    "expected_complete_seed_with_original_forward11_fraction": "469/32",
+    "forward_not_changed_by_this_component": true,
+    "incremental_E_saving_vs_batched_fraction": "27/64",
+    "incremental_Q48_cost_saving": 20.25,
+    "entry_owners": 44,
+    "exit_owners": 38,
+    "peak_owners": 47,
+    "helper_owner_count": 3,
+    "original_helper_indices": [
+      0,
+      2,
+      3
+    ],
+    "helper_activation_ranks": [
+      5,
+      4,
+      2
+    ],
+    "helper_activation_coefficient_masks": [
+      [
+        16,
+        32,
+        52,
+        128,
+        256
+      ],
+      [
+        32,
+        52,
+        128,
+        256
+      ],
+      [
+        32,
+        128
+      ]
+    ],
+    "conditional_parity_CCZ_frames": [
+      {
+        "seed_bit": 4,
+        "factors": [
+          16,
+          16416,
+          16448
+        ],
+        "pivots": [
+          4,
+          5,
+          6
+        ],
+        "Clifford_CX_count": 4
+      },
+      {
+        "seed_bit": 3,
+        "factors": [
+          272,
+          288,
+          8320
+        ],
+        "pivots": [
+          4,
+          5,
+          7
+        ],
+        "Clifford_CX_count": 6
+      }
+    ],
+    "cleanup_syntactic_HMR_count": 9,
+    "all_six_original_carry_signs_repaid": true,
+    "all_seed_and_helper_signs_repaid": true,
+    "every_parity_frame_restored": true,
+    "raw_v3_never_modified": true,
+    "no_adaptive_carry_branch_expansion": true,
+    "no_early_carry_repayment": true,
+    "expected_T": 0,
+    "generic_rotations": 0,
+    "no_arithmetic_changes": true,
+    "plan_sha256": "8aec38ead3edc6fd4d4b586c3c83e44e31a5d94c9aed022bfa24cc45839a7c66"
+  },
+  "table_cleanup": {
+    "status": "EMITTED_PAID_R18_COMPONENT_NATIVE_PROOF_PENDING",
+    "expected_Toffolis": 6.2890625,
+    "expected_fraction": [
+      805,
+      128
+    ],
+    "entry": 45,
+    "return_owners": 26,
+    "capture_peak": 45,
+    "cleanup_peak_bound": 45,
+    "trace": [
+      45,
+      44,
+      43,
+      42,
+      41,
+      40,
+      39,
+      38,
+      37,
+      43,
+      42,
+      41,
+      40,
+      39,
+      38,
+      37,
+      36,
+      35,
+      34,
+      33,
+      32,
+      31,
+      30,
+      29,
+      28,
+      27,
+      26
+    ],
+    "output_signs_repaid": 18,
+    "paid_product_sign_repaid": true,
+    "helper_signs_all_branches_repaid": true,
+    "incoming_table_debts_repaid": 108,
+    "incoming_flush_unchanged": true,
+    "compute_sites": 29,
+    "helper_activation_users": [
+      [
+        0,
+        2,
+        3,
+        7,
+        8,
+        9
+      ],
+      [
+        0,
+        2,
+        3,
+        7
+      ],
+      [
+        0,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8
+      ],
+      [
+        0,
+        2,
+        3,
+        7
+      ],
+      [
+        0,
+        2,
+        3,
+        7
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "producer_added_Toffolis": 0,
+    "producer_added_CNOTs": 3,
+    "root_frame_and_arithmetic_callbacks_external_and_unchanged": true,
+    "certificate_sha256": "65db554daa9e98228137b785b58694b3d5f3b9821f9384069778bdf1ed31ca96"
+  },
+  "selected_phase_component": "phase_port04_tail3_with_port03_seed_loaders_and_fixed_v3_cleanup",
+  "phase_basis": "ring26_global_zero33",
+  "phase_modulus": 1125899906842624,
+  "model_sha256": "24fff823faa911afe93d02afc3ded0bbd156a210a85f1265c989a087f8fd1219",
+  "accuracy_receipt_sha256": "c0eab1edd234e32d5baa1a51a0fec46abf82165d3973ffda825d2149f67f11e5",
+  "quantized_exact_minimum_margin_units64": 124370688,
+  "independent_phase_units50_sha256": "8bd482a8957cd387a2b212afdaca656947b7f89c983d67ff4eea4e14c3b0a26a",
+  "paper_gate_sha256": "2c52b8a7290ee6980243eba9b5e24ee6771e6b1069013299895a0d3c73854341",
+  "parent_authorization_sha256": "0ae7e5decba1e4d1f3e013eecade9815da420f90019af7b7e67fd322d2118e13",
+  "source_ready_sha256": "a0b2b497a0fcea879e5a1c199246cd28a0b7b9a705270acf83346a6fa2b34bf9",
+  "input_manifest_sha256": "eb4f5f6b4cf62a737974d1fd8b3eee6b33f8590585e8a201cac1f32bc02c6688",
+  "actual_HMR_variables": 1301,
+  "selected_Pro2_phase_component_sources_unchanged": true,
+  "complete_phase_accuracy_oracle_unchanged": true,
+  "site8_exact_shift_units50": -140737488355328,
+  "supplied_fixed_tail_compensates_site8_shift": true,
+  "all_prior_candidates_unchanged": true,
+  "official_verifier": false,
+  "no_submission": true,
+  "kmb_sha256": "f8e27f80524334867a63c324bc766ca51ca4a815be583c63f5ca53396a252a2f",
+  "native_text_sha256": "55f5c05f75c45ebbe4eb2bd4ad5946b156f77bf802551dcf6fe4a609c9aa4b5a",
+  "bytes": 313597,
+  "emission_seconds": 18.026943345000063,
+  "native_sources": {
+    "arithmetic_variant.py": "8b875094b47787072a4cd25fa0aa9216cecf40ebbdcd0abad722a1200e575459",
+    "freeze_gate.py": "4a121c5723fe51be30413d803fe7b46d401cbf91de20092a9807ccf51070054b",
+    "generate.py": "41945ada905c56f4ec386fa76a0262f512d8246e4f61b04c9037dc0b1509e406",
+    "lifecycle11r2.py": "31ba1d47112f01e98bf739e35b8a31715e157e50b669639da994a53822fb0878",
+    "native_batch.py": "9b83b54a01dc6176ff0ac4b45ef60aac1d420fd80392253ab0dcd396a1e16dd9",
+    "prove50.py": "310bc3a18dd562d84df85dcc24097b941c1aca4cf44815593b898e24c01b62ca"
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "status": "COMPLETE_TRIANGULAR_U12_PAPER_GATE_PASS_NATIVE_PENDING",
+  "input_pins": {
+    "u12_certificate.py": "0ef7b7e28bebebe9b2b1ed3cc486c1cd0d8709cac27ad528a062bd7f6a7efc25",
+    "local_algebra.json": "978c2adafd8d3355558a5e672982623372d459dec610273e1e43847681cc4c14",
+    "model_interface.json": "876246eb40158ad9695302f68dd413b0991ba6be423aad9abe6200528204be29"
+  },
+  "results": [
+    {
+      "status": "COMPLETE_MATHEMATICAL_BOOLEAN_GATE_PHASE_OWNERSHIP_PASS_NOT_NATIVE",
+      "Q_cap": 45,
+      "all_abstract_inputs": 32768,
+      "forward_Toffolis": 13,
+      "cleanup_Toffolis": 1,
+      "total_Toffolis": 14,
+      "T": 0,
+      "R": 0,
+      "peak": 45,
+      "per_bit_forward": [
+        {
+          "bit": 0,
+          "Toffolis": 0
+        },
+        {
+          "bit": 1,
+          "Toffolis": 1
+        },
+        {
+          "bit": 2,
+          "Toffolis": 1
+        },
+        {
+          "bit": 3,
+          "Toffolis": 1
+        },
+        {
+          "bit": 4,
+          "Toffolis": 1
+        },
+        {
+          "bit": 5,
+          "Toffolis": 1
+        },
+        {
+          "bit": 6,
+          "Toffolis": 1
+        },
+        {
+          "bit": 7,
+          "Toffolis": 1
+        },
+        {
+          "bit": 8,
+          "Toffolis": 1
+        },
+        {
+          "bit": 9,
+          "Toffolis": 1
+        },
+        {
+          "bit": 10,
+          "Toffolis": 1
+        },
+        {
+          "bit": 11,
+          "Toffolis": 1
+        },
+        {
+          "bit": 12,
+          "Toffolis": 1
+        },
+        {
+          "bit": 13,
+          "Toffolis": 1
+        }
+      ],
+      "forward_HMR_symbols": 2,
+      "total_HMR_symbols": 16,
+      "source_counts": {
+        "CX": 99,
+        "X": 3,
+        "CCX": 14,
+        "HMR": 16,
+        "conditional_Z": 56,
+        "classical_branch_Z": 3,
+        "conditional_CZ": 40
+      },
+      "all_data_restored": true,
+      "all_scratch_zero": true,
+      "all_HMR_signs_paid": true,
+      "original_P_owner_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "returned_P_owner_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        26,
+        25
+      ],
+      "accuracy": "Identical u12 word on the entire abstract input cube; both frozen normalized model interface certificates transfer exactly."
+    },
+    {
+      "status": "COMPLETE_MATHEMATICAL_BOOLEAN_GATE_PHASE_OWNERSHIP_PASS_NOT_NATIVE",
+      "Q_cap": 49,
+      "all_abstract_inputs": 32768,
+      "forward_Toffolis": 13,
+      "cleanup_Toffolis": 1,
+      "total_Toffolis": 14,
+      "T": 0,
+      "R": 0,
+      "peak": 45,
+      "per_bit_forward": [
+        {
+          "bit": 0,
+          "Toffolis": 0
+        },
+        {
+          "bit": 1,
+          "Toffolis": 1
+        },
+        {
+          "bit": 2,
+          "Toffolis": 1
+        },
+        {
+          "bit": 3,
+          "Toffolis": 1
+        },
+        {
+          "bit": 4,
+          "Toffolis": 1
+        },
+        {
+          "bit": 5,
+          "Toffolis": 1
+        },
+        {
+          "bit": 6,
+          "Toffolis": 1
+        },
+        {
+          "bit": 7,
+          "Toffolis": 1
+        },
+        {
+          "bit": 8,
+          "Toffolis": 1
+        },
+        {
+          "bit": 9,
+          "Toffolis": 1
+        },
+        {
+          "bit": 10,
+          "Toffolis": 1
+        },
+        {
+          "bit": 11,
+          "Toffolis": 1
+        },
+        {
+          "bit": 12,
+          "Toffolis": 1
+        },
+        {
+          "bit": 13,
+          "Toffolis": 1
+        }
+      ],
+      "forward_HMR_symbols": 2,
+      "total_HMR_symbols": 16,
+      "source_counts": {
+        "CX": 99,
+        "X": 3,
+        "CCX": 14,
+        "HMR": 16,
+        "conditional_Z": 56,
+        "classical_branch_Z": 3,
+        "conditional_CZ": 40
+      },
+      "all_data_restored": true,
+      "all_scratch_zero": true,
+      "all_HMR_signs_paid": true,
+      "original_P_owner_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "returned_P_owner_ids": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        26,
+        25
+      ],
+      "accuracy": "Identical u12 word on the entire abstract input cube; both frozen normalized model interface certificates transfer exactly."
+    }
+  ],
+  "prior_initializer_E": 25,
+  "new_initializer_E": 14,
+  "saving_E": 11,
+  "prior_complete_Q49_paper_cost": 89664.03208522254,
+  "new_complete_Q49_paper_cost": 89125.03208522254,
+  "no_native_emission": true,
+  "seconds": 1.934645173008903,
+  "peak_rss_kib": 15156
+}

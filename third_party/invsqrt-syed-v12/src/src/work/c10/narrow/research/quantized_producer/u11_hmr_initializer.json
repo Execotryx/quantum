@@ -1,0 +1,168 @@
+{
+  "scope": "EXACT_BOOLEAN_MEASUREMENT_PHASE_CERTIFICATE_AND_PAPER_COUNT_NOT_NATIVE",
+  "mathematical": {
+    "all_abstract_input_cases": 16384,
+    "forward_carry_function_checks": 180224,
+    "accumulator_erasure_function_checks": 212992,
+    "all_measurement_outcomes": "Every individual sign function equals its correction for outcomes0 and1 on every input; linearity in measurement outcomes proves their arbitrary joint combination.",
+    "branch_constants": "Included explicitly by codebook.emit_phase as Z on the classical outcome.",
+    "outside_unsigned_range": [
+      [
+        4095,
+        1,
+        0
+      ]
+    ],
+    "domain": "Boolean phases are valid on all16384 abstract cases modulo8192. The sole negative-integer case is independently absent from every normalized input of both actual models."
+  },
+  "plans": {
+    "carry": {
+      "width": 2,
+      "constant": true,
+      "linear": 3,
+      "edges": [],
+      "products": [],
+      "product_linear": 3
+    },
+    "low": {
+      "width": 3,
+      "constant": true,
+      "linear": 7,
+      "edges": [],
+      "products": [],
+      "product_linear": 7
+    },
+    "middle": {
+      "width": 4,
+      "constant": false,
+      "linear": 15,
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "products": [],
+      "product_linear": 15
+    },
+    "high": {
+      "width": 3,
+      "constant": true,
+      "linear": 7,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "products": [],
+      "product_linear": 7
+    }
+  },
+  "rows": [
+    {
+      "Q_cap": 48,
+      "status": "SOURCE_EXPANDED_PAPER_AND_EXACT_BOOLEAN_ONLY",
+      "forward_Toffolis": 12,
+      "cleanup_Toffolis": 0,
+      "total_E": 12,
+      "T": 0,
+      "R": 0,
+      "component_peak": 47,
+      "data_before": 45,
+      "data_after": 44,
+      "final_data": 31,
+      "all_increment_carry_debts_consumed": true,
+      "replaced_j10_total": 34.5,
+      "saving": 22.5,
+      "new_core": 624.5
+    },
+    {
+      "Q_cap": 49,
+      "status": "SOURCE_EXPANDED_PAPER_AND_EXACT_BOOLEAN_ONLY",
+      "forward_Toffolis": 12,
+      "cleanup_Toffolis": 0,
+      "total_E": 12,
+      "T": 0,
+      "R": 0,
+      "component_peak": 47,
+      "data_before": 45,
+      "data_after": 44,
+      "final_data": 31,
+      "all_increment_carry_debts_consumed": true,
+      "replaced_j10_total": 32.5,
+      "saving": 20.5,
+      "new_core": 605.5
+    },
+    {
+      "Q_cap": 50,
+      "status": "SOURCE_EXPANDED_PAPER_AND_EXACT_BOOLEAN_ONLY",
+      "forward_Toffolis": 12,
+      "cleanup_Toffolis": 0,
+      "total_E": 12,
+      "T": 0,
+      "R": 0,
+      "component_peak": 47,
+      "data_before": 45,
+      "data_after": 44,
+      "final_data": 31,
+      "all_increment_carry_debts_consumed": true,
+      "replaced_j10_total": 30.0,
+      "saving": 18.0,
+      "new_core": 595.0
+    },
+    {
+      "Q_cap": 51,
+      "status": "SOURCE_EXPANDED_PAPER_AND_EXACT_BOOLEAN_ONLY",
+      "forward_Toffolis": 12,
+      "cleanup_Toffolis": 0,
+      "total_E": 12,
+      "T": 0,
+      "R": 0,
+      "component_peak": 47,
+      "data_before": 45,
+      "data_after": 44,
+      "final_data": 31,
+      "all_increment_carry_debts_consumed": true,
+      "replaced_j10_total": 29.0,
+      "saving": 17.0,
+      "new_core": 585.5
+    },
+    {
+      "Q_cap": 52,
+      "status": "SOURCE_EXPANDED_PAPER_AND_EXACT_BOOLEAN_ONLY",
+      "forward_Toffolis": 12,
+      "cleanup_Toffolis": 0,
+      "total_E": 12,
+      "T": 0,
+      "R": 0,
+      "component_peak": 47,
+      "data_before": 45,
+      "data_after": 44,
+      "final_data": 31,
+      "all_increment_carry_debts_consumed": true,
+      "replaced_j10_total": 28.5,
+      "saving": 16.5,
+      "new_core": 576.5
+    }
+  ],
+  "actual_model_prefix_sha256": "781f5bf9a4ccf4f163980e5f88ce80e6ed9a86aaec7cde94c0707590c8d2dc06",
+  "accuracy_change": "None",
+  "native_gate": "Component saving only. Complete producer lifecycle must clear the full paper gate before any native construction."
+}

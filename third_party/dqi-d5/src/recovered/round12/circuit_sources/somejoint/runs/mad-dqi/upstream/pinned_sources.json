@@ -1,0 +1,138 @@
+{
+  "notebook": {
+    "ref": "manwithacat/dqi-classical-mask-projection-9-13909",
+    "version": 2,
+    "run_id": 362021360,
+    "sha256": "bd403c9c5761c3dbe031fa47f66351dd6d3fd99b04c17351f36f0c22952e4211",
+    "somejoint_source": "https://www.kaggle.com/code/somejoint/quantum-circuits-8-95-lb-cost-breakdown",
+    "attribution": "SomeJoint / Agniv Banerjee: decoder; Manwithacat: mask projection"
+  },
+  "files": [
+    {
+      "path": "common.py",
+      "bytes": 1097,
+      "sha256": "6355728b19eeff09601c5e0716b0c023c2716b7489f2ddc440cd8a9f805d66eb",
+      "canonical_text_sha256": "f21e9ff6fb5b6f2e665deb546c2751e4ae826cd305931a37a2e328906abea0d7"
+    },
+    {
+      "path": "tower.py",
+      "bytes": 7587,
+      "sha256": "50a58753e4191ca5520b1ecb6b590c6bd3ef1910a6f6ab7ee36b82dae7752336",
+      "canonical_text_sha256": "9e7bd85201a783be5eedbecb2161f425df5c7815dae4fd367a01677366dddcc5"
+    },
+    {
+      "path": "recursive.py",
+      "bytes": 9136,
+      "sha256": "960fe44761389f8a558989479b354e63617099de31e396c74a1e0595ed97671f",
+      "canonical_text_sha256": "d8fb02e40c042e2c84df11fc0d29bb0a7cb583eac773e0c063e1c13ad96d80d7"
+    },
+    {
+      "path": "narrow.py",
+      "bytes": 1883,
+      "sha256": "e25527421be561a50fbbb4a89b28dbf46e68916d08b68005506ec7be2bcf6f32",
+      "canonical_text_sha256": "3ede87c02962ddf3827fbabfa47bcbe14a455318838b531a3649fac727f56dcf"
+    },
+    {
+      "path": "sweep.py",
+      "bytes": 3382,
+      "sha256": "06f9f94509213722a42b706172b4d39efc993909f616e0d841aae20e95edd736",
+      "canonical_text_sha256": "019fb28b0144d65ec3004426c5f512e1ce743e355ab9d2c04961c16559153ca0"
+    },
+    {
+      "path": "cubic.py",
+      "bytes": 7270,
+      "sha256": "7e5dbe263f7799e31d272e587a39bb1b37dac2ffe5311355c36f3645ffc385e0",
+      "canonical_text_sha256": "c74e40a0f0ec1d93bf1bd6a64b71794002bc8db62baf05ffbefa2efda174f58a"
+    },
+    {
+      "path": "evaluation.py",
+      "bytes": 1798,
+      "sha256": "59e32fb69f7d47929c64f1f79ad2f4e5b30021c8d2b6980f8c13a15768917387",
+      "canonical_text_sha256": "499cb9faf95027d3c9cecca317d251ebaaf309d7aee7e2de4c9b115a2295bc76"
+    },
+    {
+      "path": "early_a.py",
+      "bytes": 3149,
+      "sha256": "a505a750673fd6cbbcdfb65ea7b624286bf2a1d7c83f3d68b28def3130088401",
+      "canonical_text_sha256": "3336ddb6e634437d7f328de78fdfce1acd0cf2090e1ccb69b11390f2970b2cf2"
+    },
+    {
+      "path": "zero_chain.py",
+      "bytes": 3336,
+      "sha256": "001bdff58887d5d949b51cdde692310b4f28ca5076b5d089c50e6d2a0aded064",
+      "canonical_text_sha256": "dd4e7c3e8edbe2fb0c33ebb12b12ff4c5ab0315ca47b2c7d94f25c66e7917021"
+    },
+    {
+      "path": "counter.py",
+      "bytes": 1752,
+      "sha256": "b20d664e6e2bf4803d8659b4246036b53663733bcddef4854ec5fad77ef8a8f5",
+      "canonical_text_sha256": "13950281035350b8a4336da90f1d7a9bda453223af02ae78f9b3e1bd7bbd3380"
+    },
+    {
+      "path": "quotient.py",
+      "bytes": 6510,
+      "sha256": "8d676e612722fe10846a1c555b5a2f187afda4478e11bf7e9d6cc88a1795fc75",
+      "canonical_text_sha256": "47b87ca6306ba6a4866e84d434570a8fb2bb0035ff166e3f29088cfdf772405f"
+    },
+    {
+      "path": "forney_control.py",
+      "bytes": 3975,
+      "sha256": "8640644155f587e74a22eddb184fa046d462f0bc806b5b8421c31dfa1e212b1f",
+      "canonical_text_sha256": "2c343b082f9d5700453f479fd69049e82c5f5e27c9d25962fbead43422fb1e29"
+    },
+    {
+      "path": "quotient_hmr.py",
+      "bytes": 3756,
+      "sha256": "adf3cab22b253eb3037c2364669dc927bb91e2f0c3edb1e3297f53cd6a1372f2",
+      "canonical_text_sha256": "155ff7954c10bc25708c8e6fce9f0dd6d73a973d581f5e8978c367c4f1652651"
+    },
+    {
+      "path": "static_divisions.py",
+      "bytes": 9473,
+      "sha256": "765c33ac58b5ab74c2cc430c24a69c2571bfdf960521acc7844ed94597d3c05a",
+      "canonical_text_sha256": "7bc9f4d8a4517158c5a62dc657de8d1e27d8f5b4d294bbb28256773e0cb8670d"
+    },
+    {
+      "path": "compact_euclid.py",
+      "bytes": 13742,
+      "sha256": "7bdb83639f1c23ef3f5dc8641203801bb4e1be08356450b65ec80f83a727072a",
+      "canonical_text_sha256": "02e78391cde317b1de1bc7f60193560990c9a47640d4d20a119d58fbdb09b1fc"
+    },
+    {
+      "path": "continued_fraction/jfraction_decoder.py",
+      "bytes": 7544,
+      "sha256": "417b92e91b618bb80c442230162f711485a3b543f4deedae35645470a9bd3272",
+      "canonical_text_sha256": "532d21556fa7981e73e68bd91f2fdb49ca7091a4daca0267be35ffe8fa563ee3"
+    },
+    {
+      "path": "continued_fraction/jfraction_gap_decoder.py",
+      "bytes": 10599,
+      "sha256": "e0b01f5b74610cb948353959184c051b7249b427454d16325ac43f77dd7caf9f",
+      "canonical_text_sha256": "c41f980ff7778234f4a098c15a3d52657a33f5a9748d8dbc31d4c646675c3ed6"
+    },
+    {
+      "path": "continued_fraction/poly_arithmetic.py",
+      "bytes": 7896,
+      "sha256": "752b2f3d60d1adbe8668e63e740414ef8a0d9daa0da64f2e8d6d0424ef317794",
+      "canonical_text_sha256": "f26338b25b7c9623e3690fb4e571e87c47391943fe9742016d52a644dfe4a975"
+    },
+    {
+      "path": "continued_fraction/keyeq/model_fast_extraction.py",
+      "bytes": 7263,
+      "sha256": "0e5c0d49bc8926ba0d58ea698c97aac4366a137cc6df2bb4c2ea41aad41ca65c",
+      "canonical_text_sha256": "77fb085f1bf0a1a22167d5010e9ad327295c83555d9c539ca0a5187d82ef0336"
+    },
+    {
+      "path": "continued_fraction/keyeq/model_jfraction.py",
+      "bytes": 8305,
+      "sha256": "2491eb35dacae88f1910d0b020fc6f83c788831ed9e9d481614c3d0f4c342075",
+      "canonical_text_sha256": "e3c3b83a76b520b1720eee865aca20b72433211dbb5c10f422e2abf08be4d1b9"
+    },
+    {
+      "path": "continued_fraction/mask_projection.py",
+      "bytes": 5422,
+      "sha256": "f9b1d06197de0f5cf006e9d3ce3d99d0381a351b75157186dc7057553c5a0886",
+      "canonical_text_sha256": "21476b1931a0d9d5ace2ad5a25e6fdb2fb1e04c303fce0cd35e84486b68c681e"
+    }
+  ]
+}

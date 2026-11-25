@@ -1,0 +1,23 @@
+{
+  "status": "COMPLETE_COMPOSITION_PAPER_SOURCE_READY_NOT_RUN",
+  "files": [
+    {
+      "path": "PLAN.md",
+      "bytes": 1900,
+      "sha256": "d12cfd11443ad5f4b6cb51ebaf2ae71fc98d116779bf6e13b0a6cc91f6c358c4"
+    },
+    {
+      "path": "study.py",
+      "bytes": 6788,
+      "sha256": "73fe92d402f4a34472ac09beede18fbac73116abdac151509f7fc4e67abeeb47"
+    },
+    {
+      "path": "INPUTS.json",
+      "bytes": 65089,
+      "sha256": "0479e09b6ae3574906cc876efa24e0fb2baab9156dc3d17c4150b12a07fdf812"
+    }
+  ],
+  "input_pins": 342,
+  "native_execution": false,
+  "guard_seconds": 30
+}

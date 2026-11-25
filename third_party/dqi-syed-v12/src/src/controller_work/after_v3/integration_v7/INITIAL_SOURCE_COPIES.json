@@ -1,0 +1,67 @@
+{
+  "copies": [
+    {
+      "child": "v7_paths.py",
+      "initial_child_sha256": "eb0a45e35c3816cedd945347bfa149034cf481d068f9f933a9c42aca776cdffd",
+      "parent": "v6_paths.py",
+      "parent_sha256": "eb0a45e35c3816cedd945347bfa149034cf481d068f9f933a9c42aca776cdffd"
+    },
+    {
+      "child": "v7_binding.py",
+      "initial_child_sha256": "0fb6223eabed1f18b9e48490a34a05f8aedecdefa93dc8d15d80c317a41d16e6",
+      "parent": "v6_binding.py",
+      "parent_sha256": "46476d02e7b76464e163622e22eb16e024a179c22fda916e233b86573f9f846b"
+    },
+    {
+      "child": "v7_pipeline.py",
+      "initial_child_sha256": "188cfdc598057768997865c7819b4b6c00cd5fb5e7054a2485ee289151fd22d7",
+      "parent": "v6_pipeline.py",
+      "parent_sha256": "309c75ead9244c53e61fef9eaf8d1c6a0c1d2110de707a61ea75d54a342e0606"
+    },
+    {
+      "child": "v7_events.py",
+      "initial_child_sha256": "185abc5bbe9b9865c6790faa6409540fb78766d48825b365677c07a9a0e0e3ac",
+      "parent": "v6_events.py",
+      "parent_sha256": "d44ff2142bd44ae685fd23184103d06cc75211ac4182aada01edada55eea646d"
+    },
+    {
+      "child": "build_v7.py",
+      "initial_child_sha256": "96aa4401a1a9e90ea9777b52f5a749cbefd7f2030336412e0a76114aeb47cb8d",
+      "parent": "build_v6.py",
+      "parent_sha256": "80b9032c526a82e4d2a81556a6d597453787d0084d2b5f93df75a73282d556de"
+    },
+    {
+      "child": "gen_dqi.py",
+      "initial_child_sha256": "576e735e30cd291ed2f699ae84d6d5b6c8db153a9e7fd5afe3ff4f87d9805c46",
+      "parent": "gen_dqi.py",
+      "parent_sha256": "b9c0b55964ca4d43d832d53936a560dab6a58097f7d7ba9192728ce829d87020"
+    },
+    {
+      "child": "check_key_boundary.py",
+      "initial_child_sha256": "1ed7275eaf97165222bf39e0f5231a62c583f2e078f90b5c7603bb78b456f8e0",
+      "parent": "check_key_boundary.py",
+      "parent_sha256": "524825e0ae6cddf42fc642c892d89d42cac6e7542a173786c80c63aeb03bf159"
+    },
+    {
+      "child": "check_candidate.py",
+      "initial_child_sha256": "9a02ab4092f07936dc548c882feaa5b0ab949fed8ce71b4ff0b24a7c3f09c169",
+      "parent": "check_candidate.py",
+      "parent_sha256": "53a51e2970efc72d1577cd86111955576e3a9f2bd0c26e8abbddb46a6c6c02f5"
+    },
+    {
+      "child": "check_build_equality.py",
+      "initial_child_sha256": "6d99d1ea8012af4aa4ddc330de0f5101b077b271a395455ac56002a444cddc0d",
+      "parent": "check_build_equality.py",
+      "parent_sha256": "6928b596fe7c06800e3dcc38be1e584b434b05eef9883346d636e206e84845a2"
+    },
+    {
+      "child": "prepare_component_gates.py",
+      "initial_child_sha256": "5afb4249a88adc9febd856803a5d833b55f42dfa716ddd4001764ff06f9871d0",
+      "parent": "prepare_component_gates.py",
+      "parent_sha256": "f3b11a10365acd1641ac02b627be73828ec933b0e3d9093d03ad848717615d0d"
+    }
+  ],
+  "format": "DQI_V7_INITIAL_SOURCE_COPIES_V1",
+  "parent": "controller_work/after_v3/integration_v6",
+  "status": "SOURCE_PREPARATION_NOT_NATIVE"
+}

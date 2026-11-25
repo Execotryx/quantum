@@ -1,0 +1,67 @@
+{
+  "ast_scope": "Remove module docstrings; for the single stage_label row only, normalize the sole literal argument of Step.gauge_shared_source carrier.unpark. All other AST nodes and all other source bytes remain exact.",
+  "changes": [
+    {
+      "fragment_occurrences": 1,
+      "kind": "module_docstring",
+      "module": "window_tensor_shared",
+      "new_bytes": 5965,
+      "new_fragment": "Domain: flags f,m,t = zero(quotient_leader,F[-1],G[-1]) are one",
+      "new_sha256": "683d02a8640cbcca0013ca685d00a8212b035c31915779fcbe16110514e24ae8",
+      "normalized_ast_sha256": "34d9b2ddc44dcbceb1448e47c041f22632bb6aa92ad6ad509b2de6cedfdc2782",
+      "old_bytes": 5952,
+      "old_fragment": "Domain: flags f,m,t = zero(q1,F[-1],G[-1]) are one",
+      "old_sha256": "d6c6e1a0d09be3deba8cae6811600d3c7432986c0b8a2632143578232bfb9b35",
+      "source": "controller_work/after_c5/arithmetic_t/window_tensor_shared.py",
+      "target": "controller_work/after_c5/release_v3/normalized/window_tensor_shared.py"
+    },
+    {
+      "call_attribute": "unpark",
+      "class_name": "Step",
+      "fragment_occurrences": 1,
+      "kind": "stage_label",
+      "method_name": "gauge_shared_source",
+      "module": "local_flag_window",
+      "new_bytes": 12827,
+      "new_fragment": "'top17 return: pay old constant quotient before neighbor'",
+      "new_literal_value": "top17 return: pay old constant quotient before neighbor",
+      "new_sha256": "bd58bbb619c4cf27ad28cec0443a3305b1e3db2af93638c31d09c86e8284dd41",
+      "normalized_ast_sha256": "3fb3cf3ae553333aa6df7d08dc1a23e6e3f25401a2ddc2e4de4863d1ad536e8e",
+      "old_bytes": 12812,
+      "old_fragment": "'top17 return: pay old q0 before neighbor'",
+      "old_literal_value": "top17 return: pay old q0 before neighbor",
+      "old_sha256": "3ce54f8ec5b7b5d9012aaccd4ad99eace81169f4ca96712e3806240ca44d9555",
+      "receiver_name": "carrier",
+      "source": "controller_work/after_c5/converter_width/local_flag_defer/local_flag_window.py",
+      "target": "controller_work/after_c5/release_v3/normalized/local_flag_window.py"
+    },
+    {
+      "fragment_occurrences": 1,
+      "kind": "module_docstring",
+      "module": "direct_carry_first2",
+      "new_bytes": 5987,
+      "new_fragment": "P1=node_constant/(1/Y1+P0(alpha1)), with node_constant=6.",
+      "new_sha256": "fdb519bd501df5df70bd3571742964496e622951290d92f5479b4380c832772e",
+      "normalized_ast_sha256": "64d380c6fc40d6430face3a3c89ad6f2129300d4daeb6458c6e0a4ee47c8f8fb",
+      "old_bytes": 5967,
+      "old_fragment": "P1=q01/(1/Y1+P0(alpha1)), with q01=6.",
+      "old_sha256": "5ce1b329b45c37388f1e0d8ce8a54770d52be359bc18fa2d783e0784dc7faf47",
+      "source": "controller_work/after_c5/extractor_width/direct_carry_first2.py",
+      "target": "controller_work/after_c5/release_v3/normalized/direct_carry_first2.py"
+    }
+  ],
+  "circuit_identity_confirmed": false,
+  "copyright": "Copyright 2026 Syed Asad Ali",
+  "credits": [
+    "Opus",
+    "Astra"
+  ],
+  "expected_circuit_sha256": "ed5a3014c1eaeb1855fc820f4f1076d1f70fe69edf5632482c62fb24f2b87c7a",
+  "format": "DQI_V3_NONSEMANTIC_SOURCE_NORMALIZATION_V1",
+  "license": "Apache-2.0",
+  "normalized_module_count": 3,
+  "official_results_relabelled": false,
+  "original_census_rules_modified": false,
+  "original_files_edited": false,
+  "status": "PREPARED_EXACT_TEXT_DERIVATION_NOT_NATIVE_QUALIFIED"
+}

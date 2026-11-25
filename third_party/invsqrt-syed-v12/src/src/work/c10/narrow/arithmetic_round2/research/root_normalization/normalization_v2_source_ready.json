@@ -1,0 +1,9 @@
+{
+  "status": "SOURCE_READY_NOT_EXECUTED_WAITING_SHARED_SLOT",
+  "source_sha256": "73774fd158bf0d2170a1f08ed72ce6a64b864c61b1ed64169872314a0aade88a",
+  "inputs_sha256": "f09e600b2d78558d1d5a6fa61cbf60cd17f48920184f5e8cf6d5d269487111bf",
+  "input_pins": 321,
+  "paper_delta_E": -1,
+  "modeled_peak": 46,
+  "native_execution": false
+}

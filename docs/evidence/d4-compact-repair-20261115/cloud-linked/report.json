@@ -1,0 +1,63 @@
+{
+  "backend_inventory_sha256": "132405912244d6232e4ea7fb3c9e941f8cbfbfe8cc51dd49ab3fccb609166237",
+  "captures": {
+    "s2/batch-045312.json": "38f94a8f866e10bdc31cfca4490f45cf345310c5a8b6dd4919c755ebe35fb4b1",
+    "s6/batch-013056.json": "b9cb413ab625ea41ab39d298a2d127521050cde7eed7b955eb42df527b7138ab",
+    "s6/batch-073984.json": "7df8ef3c8a646c4b0c4af6ce1349db175a1f77d768f103a7364352bfc0cc2b32",
+    "s6/batch-102144.json": "66734206a57b592afb5a68f3baf5a386ff7e35ea6d3f3da568941870f2e6c0d7",
+    "s7/batch-046592.json": "685d5ac2db3a6d8921a4a49579c376868039f0d832d56461fd911731dd7fc92a",
+    "s7/batch-052736.json": "e4fbcc4c067c165fa3d8cd2fa63e00b6a0ad8fdb2f01136e19ed5919be747925"
+  },
+  "declared_qubits": 1833,
+  "diagnostic_prepared_padding_weights": [
+    0,
+    26,
+    29,
+    31,
+    32,
+    33,
+    34,
+    35
+  ],
+  "diagnostic_syndrome_copy_qubits": 840,
+  "driver_sha256": "c3ddd5253fe292d5a32297ff840fe8c961a7e6e573f5df38f867e68583f58766",
+  "extraction": {
+    "declared_qubits": 944,
+    "executed_means": [
+      215084.53333333333,
+      215103.6
+    ]
+  },
+  "inputs": [
+    "s2/45440",
+    "s2/45439",
+    "s6/13238",
+    "s6/13237",
+    "s6/74119",
+    "s6/74118",
+    "s7/46728",
+    "s7/46727",
+    "s6/102316",
+    "s6/102315",
+    "s7/52983",
+    "s7/52982",
+    "constructed/0",
+    "constructed/34",
+    "constructed/35"
+  ],
+  "runs": [
+    {
+      "count": 15,
+      "executed_mean": 263117.0,
+      "seed": 991
+    },
+    {
+      "count": 15,
+      "executed_mean": 263102.2,
+      "seed": 992
+    }
+  ],
+  "source_sha256": "6e9f0028226c240539df18b3ff05f4f533b1ff06902774fa88e13aacbbadbcd6",
+  "static_toffoli_like": 267545,
+  "supplied_head_and_tail": true
+}

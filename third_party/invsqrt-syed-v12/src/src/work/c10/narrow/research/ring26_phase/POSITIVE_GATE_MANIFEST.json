@@ -1,0 +1,27 @@
+{
+  "status": "FROZEN_COMPLETE_POSITIVE_RING26_PAPER_GATE_PARENT_AUTHORIZATION_PENDING",
+  "files": [
+    {
+      "path": "audit_positive_gate.py",
+      "bytes": 14020,
+      "sha256": "4304636a67339ef85516c9e52eb3712131dfc9d7d4de3a6652a5298a94bbd45b"
+    },
+    {
+      "path": "frozen/global_zero33.json",
+      "bytes": 94965,
+      "sha256": "c0eab1edd234e32d5baa1a51a0fec46abf82165d3973ffda825d2149f67f11e5"
+    },
+    {
+      "path": "global_zero33.guard.json",
+      "bytes": 13045,
+      "sha256": "8b523871550d786417325baf354f7ae5ed10d7cd2236895c5fce62eab4f3fdf7"
+    },
+    {
+      "path": "COMPLETE_GATE_RING26_ZERO33.json",
+      "bytes": 45542,
+      "sha256": "b579924175ee8e73c61c2f945b2d85e8ba2e536a8dbd8288a8332628142cd569"
+    }
+  ],
+  "old_source_ready_sha256": "fb35ffc208a309f2c7cbb84654d30421a1ac640dd74c35cb9d0142fc3c52feb2",
+  "native_code_created": false
+}

@@ -1,0 +1,95 @@
+{
+  "checked_on": "2026-11-14",
+  "scope": "Fixed candidate list in vendor-public-inplace-dqi",
+  "candidates": {
+    "D2": {
+      "status": "excluded_license_scope",
+      "origin": "https://www.kaggle.com/datasets/ahoirg/qcc-reproducible-circuit-assets/versions/1",
+      "revision": 1,
+      "authors": ["Ali Haydar Özdağ / ahoirg", "Agniv Banerjee / SomeJoint", "yoyobar"],
+      "origin_output_sha256": "fb2da4f299c4d41e421e5e57d07915599617291ab1c41d4e0fcefa6db1f2079c",
+      "hint": "match",
+      "source_sha256": {
+        "build_dqi.py": "80c39449bff91743b43d63e46e39a6e39ca40b46e252b9fff2f52acc56cacd8a",
+        "dqi-source-bundle.json": "a7f22360aa7d1f5137b8cd2c6525e7eb05f826a031fcd751ce56f388aee5fafe",
+        "dataset-metadata.json": "19d923b56defe92a02d6f3c28e3049d8d2b15bd46998f4e9f679675836921335",
+        "LICENSE-SomeJoint.txt": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+        "NOTICE.md": "fc2ba2bf5e6452e2fe234c0052479d16e1a14d29e924ca00ba8fbe1749a1a0bc"
+      },
+      "observations": [
+        "The original builder and its bundle specify the same output hash. All 248 embedded source, plan and helper hashes verified.",
+        "The actual builder consumes only the authenticated bundle and separately installed Kickmix and psutil. None of its Python files name the denylisted binary or the Schur decoder.",
+        "The current Kaggle catalog declares Apache 2.0. The pinned version-1 dataset-metadata.json declares Other, and version-1 NOTICE says the supplied license covers the inherited SomeJoint kit and reserves the terms of other contributions.",
+        "The adapted carry helper references yoyobar's r10 patch. The credited patch's boundary audit identifies another build and supplies no explicit license for the exact adapted D2 helper and wrapper. CREDITS also acknowledges earlier Schur design and classical models from the unlicensed jday96314 repository."
+      ],
+      "reconsider_if": "The source author supplies explicit Apache-2.0 coverage of the pinned version-1 adapted helper and wrapper, with any retained third-party terms."
+    },
+    "D3": {
+      "status": "excluded_parent_admission",
+      "author": "wahyurahmaniar",
+      "author_profile": "https://www.kaggle.com/wahyurahmaniar",
+      "hint_prefix": "c453c7ac",
+      "hint": "unverified",
+      "searched_locations": [
+        "Kaggle user, notebook and dataset search for wahyurahmaniar",
+        "Kaggle content and public web search for c453c7ac and wahyurahmaniar DQI",
+        "Kaggle discussion 754793, which identifies other 892-qubit variants with different hashes"
+      ],
+      "remaining": "The required D2 parent failed admission. The author's exact patch release, revision, license and published output have not been identified."
+    },
+    "D4": {
+      "status": "admitted",
+      "author": "Agniv Banerjee / SomeJoint",
+      "origin": "https://www.kaggle.com/code/somejoint/quantum-circuits-22-75-local-gm-897-qubit-dqi",
+      "retrieval_mirror": "https://www.kaggle.com/code/cosmorin/quantum-somejoint-22-75-guard-verified",
+      "mirror_version": 1,
+      "mirror_api_response_sha256": "f0b61a37d91e5f6ff68707067a5de952dd29ebf8923fce14f677b42f19675c55",
+      "revision": "a4b5a8c288f17f8c09469820848d2d7c16e16044",
+      "hint_prefix": "c300b06e",
+      "hint": "mismatch",
+      "origin_output_sha256": "53d8b2edf251e2a0c54c401a97d1396c7ed309e1cbfaab8d54a2c99a11ed6552",
+      "origin_output_hash_sources": ["Embedded original source build.py", "Original notebook MEMBERS table"],
+      "vendored_manifest": "third_party/dqi-d4/SOURCE.json",
+      "vendored_manifest_sha256": "6e9f0028226c240539df18b3ff05f4f533b1ff06902774fa88e13aacbbadbcd6",
+      "observations": [
+        "The original notebook could not be downloaded directly. The version-1 Cosmorin mirror reports changing only the separate VERIFY cell, and retains the SomeJoint source block and author license statement.",
+        "Every embedded source pin was checked. The 79 retained DQI files contain no competition assets or circuit binaries. The DQI builder reads its bundled sources and JSON plans and uses separately installed Kickmix.",
+        "The original credits mention the unlicensed Schur design and classical models in the design ancestry. None of the bound build inputs refers to or loads that source."
+      ],
+      "regeneration": "Two clean builds reproduced the pinned origin digest. See d4-regeneration."
+    },
+    "D5": {
+      "status": "admitted",
+      "origin": "https://www.kaggle.com/datasets/mrmeows/qcc-1375-open-circuits/versions/5",
+      "revision": 5,
+      "origin_output_sha256": "e8083195cec294f2adde9f1b991bcc348233f549a49e5083ac25a12d0777385b",
+      "origin_output_hash_sources": ["circuits/DQI_NOTICE.txt", "circuits/SHA256SUMS"],
+      "vendored_manifest": "third_party/dqi-d5/SOURCE.json",
+      "vendored_manifest_sha256": "9f1191f6a8118975f94bf9547b652311085ffa21024a4e8d5594c8a2b42c7ff4",
+      "source_manifest_sha256": "8d7025ec98619e212108e4951ca825674721c3a9b19adf8f6f3bcf5a60ec45e5",
+      "excluded_origin_files": [
+        "decoder/lab/official/dqi/__init__.py",
+        "decoder/lab/official/dqi/dqi_reference_circuit.py",
+        "decoder/lab/official/dqi/verify_submission_dqi.py",
+        "decoder/lab/official/kickmix/LICENSE.txt"
+      ],
+      "regeneration": "Two clean builds reproduced the pinned origin digest. See d5-regeneration."
+    },
+    "D5-Ozer": {
+      "status": "excluded_unverified_source",
+      "author": "Ahmed Berat Özer",
+      "patch": "merged_own_shared",
+      "parent": "D5",
+      "searched_locations": [
+        "https://www.kaggle.com/code/ahmedberatozer/quantum-ai-df-thc-group-compression (current notebook v23 source)",
+        "https://www.kaggle.com/datasets/ahmedberatozer/vqcc-v8-components/versions/1 (DQI file listing and DQI_NOTICE.md)",
+        "https://www.kaggle.com/datasets/ahmedberatozer/vqcc-v9-components/versions/1 (DQI file listing and DQI_NOTICE.md)",
+        "https://www.kaggle.com/datasets/ahmedberatozer/vqcc-v18-portfolio/versions/1 (file listing and CREDITS.md)",
+        "https://www.kaggle.com/datasets/ahmedberatozer/vqcc-v19-portfolio/versions/1 (file listing and CREDITS.md)",
+        "https://www.kaggle.com/datasets/ahmedberatozer/vqcc-v23-portfolio/versions/1 (file listing and CREDITS.md)",
+        "https://www.kaggle.com/datasets/mrmeows/qcc-1375-open-circuits/versions/5 (Q880 source manifest)"
+      ],
+      "reason": "No inspected origin supplies the named patch with a pinned D5 parent and an explicit license. Özer's v8 and v9 DQI source releases describe Schur-family or SomeJoint builds. They provide no qualifying patch for Q880."
+    }
+  }
+}

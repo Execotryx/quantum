@@ -1,0 +1,57 @@
+{
+  "status": "EXACT_EIGHT_COORDINATE_INVERSE_PAPER_PROVED_NOT_NATIVE",
+  "files": [
+    {
+      "path": "PLAN.md",
+      "bytes": 3892,
+      "sha256": "09e462fbc076cf49ab3f71e0a9c27491ac2bfdfd70b7315a85574f8123d408ec"
+    },
+    {
+      "path": "study_v2.py",
+      "bytes": 14158,
+      "sha256": "918723beb61a8f121ea7f97e2fd0d43d3407aaf316b02dcce372fd8cfc3d7cbb"
+    },
+    {
+      "path": "INPUTS.json",
+      "bytes": 61132,
+      "sha256": "d9a0b499de24c0d75faa74f42a83294b8cded417efe75112d0cd49063a4ebd24"
+    },
+    {
+      "path": "SOURCE_READY_V2.json",
+      "bytes": 787,
+      "sha256": "4d20a61264b86c2743e2ace0162e4faff85dfe40e67cc2f71db24ad9588fc299"
+    },
+    {
+      "path": "study.json",
+      "bytes": 6375,
+      "sha256": "cd63f9d2a6597d9f98cecc3bc8cc6c87628c189a01778af8da78901d2ea03d0f"
+    },
+    {
+      "path": "guard.json",
+      "bytes": 2752,
+      "sha256": "abd6922405a4ee42616e1d6ca80810d6e06ef25196f73733af81b7d7387b86c7"
+    },
+    {
+      "path": "run.log",
+      "bytes": 3861,
+      "sha256": "b7a0fb0f5d3d06444edf7e825971ac036b0321bd14d4b4bdbd9db986ab05f0ed"
+    },
+    {
+      "path": "SELECTION.md",
+      "bytes": 379,
+      "sha256": "c725903fa6017966ee37c46e6d570e53deec393c82869ea24da23d4b1df61d4d"
+    }
+  ],
+  "inverse_E": 43.25,
+  "forward_unchanged_E": 52,
+  "isolated_full_component_E": 95.25,
+  "modeled_inverse_peak": 30,
+  "globalQ": 48,
+  "original_inputs_per_branch": 3133452,
+  "four_selected_HMR_assignments_checked": true,
+  "every_other_active_HMR_symbol_checked": true,
+  "negative_helper_fix_check_passed": true,
+  "native_execution": false,
+  "official_execution": false,
+  "combined_with_RN2D_not_credited_here": true
+}

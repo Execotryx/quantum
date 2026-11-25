@@ -1,0 +1,68 @@
+{
+  "status": "POSITIVE_COMPLETE_ROOT_DELTA_PAPER_GATE_NATIVE_PENDING_PARENT_REVIEW",
+  "utc": "2026-11-12T03:50:23.508783+00:00",
+  "scope": "Own root component only; complete unchanged candidate07 repriced, no native emission or official run.",
+  "baseline_root_E": 198,
+  "candidate_root_E": 192,
+  "saving_E": 6,
+  "forward_E": 96,
+  "inverse_E": 96,
+  "modeled_local_peak_including_flags4": 39,
+  "global_Q": 48,
+  "unchanged_body_owner_interface": "root12 + modular signed residual10 + flags4 =26; no held helper or unpaid phase",
+  "complete_expected_Toffolis": 1578,
+  "T": 4,
+  "R": 33,
+  "rotation_charge": 230.84805946161188,
+  "complete_expected_cost": 86872.70685415737,
+  "native_or_official_measured_cost": null,
+  "accuracy_model_unchanged": true,
+  "normalized_inputs_checked": 3145728,
+  "HMR_symbols_per_input": 168,
+  "all_local_HMR_sign_checks": 528482304,
+  "source_counter_only": true,
+  "native_build_authorized": false,
+  "execution_guard_completed_cleanly": true,
+  "files": [
+    {
+      "path": "RN3_SOURCE_AWARE_ROOT_PLAN.md",
+      "bytes": 3427,
+      "sha256": "b67242c90296240aab5f0feb4010ba4999ba60ec0fa6d34ce0fe431dfa0a2f85"
+    },
+    {
+      "path": "source_aware_root.py",
+      "bytes": 11988,
+      "sha256": "0271673e452fbe5df53b49e34c8f929e43199ee3be501cc317670e15163f28ee"
+    },
+    {
+      "path": "INPUTS.json",
+      "bytes": 59741,
+      "sha256": "6fcf34c6aa7e80ba4b0e1f7cb7d747f8970a192d80d20aadc403a4e099a526be"
+    },
+    {
+      "path": "SOURCE_READY.json",
+      "bytes": 406,
+      "sha256": "cbe53f6ec567f703173b19230a251984d9b25e2fa0b21943ba5d70771ca69845"
+    },
+    {
+      "path": "source_aware_root.json",
+      "bytes": 10877,
+      "sha256": "1b873318b3f27bb3a5a035ba6d569387157663a3a154dd771c7f71936b3712e1"
+    },
+    {
+      "path": "source_aware_root_run2.guard.json",
+      "bytes": 3555,
+      "sha256": "20df18cfa4d343c2a0406717b400ac8d778ad530632108a421ba1b922bb220ab"
+    },
+    {
+      "path": "source_aware_root_run2.log",
+      "bytes": 3652,
+      "sha256": "9ce72da8b80126062a452658b269fd61318ef72639fd779505415f14ebad1c70"
+    },
+    {
+      "path": "source_aware_root.queue_expired.json",
+      "bytes": 618,
+      "sha256": "f51e3fb9619e0a17805bcd869ae6a0585fb5142bfe14bc208d30ad44bad84e7d"
+    }
+  ]
+}

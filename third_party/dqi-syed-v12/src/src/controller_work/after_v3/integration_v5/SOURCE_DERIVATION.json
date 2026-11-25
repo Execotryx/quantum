@@ -1,0 +1,136 @@
+{
+  "changed_pipeline_and_events": {
+    "v5_events.py": {
+      "changed_or_added_top_level_functions_or_classes": [
+        "Events"
+      ],
+      "new_sha256": "b9bc736bc65dec2a8052ef2f189df3a5bd7e83a0f8a00e8043ddd06e76cf9b84",
+      "parent_path": "controller_work/after_v3/integration_v4/v4_events.py",
+      "parent_sha256": "e88c35391485c80f0127408e1988ebe68523b854c348a6fecf16ed17c3a4ba96",
+      "removed_top_level_functions_or_classes": [],
+      "unchanged_top_level_functions_or_classes": []
+    },
+    "v5_pipeline.py": {
+      "changed_or_added_top_level_functions_or_classes": [
+        "configure",
+        "assert_bindings",
+        "runtime_bindings",
+        "source_ledger",
+        "expected_mean",
+        "emit_key_prefix",
+        "emit_key_closing"
+      ],
+      "new_sha256": "32b89202ec5eed5ef030d5f9982b1b0ecd5ab738a9020e3e40991c1a801e849c",
+      "parent_path": "controller_work/after_v3/integration_v4/v4_pipeline.py",
+      "parent_sha256": "24d48d2d02f555b1dff03732f96b1fb9ca564a6bacece36142e53086288e40eb",
+      "removed_top_level_functions_or_classes": [],
+      "unchanged_top_level_functions_or_classes": [
+        "emit",
+        "finish_geometry_binding"
+      ]
+    }
+  },
+  "exact_wrapper_copies": [
+    {
+      "exact_literal_changes": [
+        [
+          "v4",
+          "v5"
+        ],
+        [
+          "V4",
+          "V5"
+        ]
+      ],
+      "new_name": "build_v5.py",
+      "new_sha256": "74e9370e275f19bc3e1c9f263cf37494277c06499bf157128be9b197f02b08f7",
+      "no_other_change": true,
+      "parent_path": "controller_work/after_v3/integration_v4/build_v4.py",
+      "parent_sha256": "78b8ce24d74782c765a6b2dd7481dc4a20d984c3d32896a33af779293ac3919b"
+    },
+    {
+      "exact_literal_changes": [
+        [
+          "v4",
+          "v5"
+        ],
+        [
+          "V4",
+          "V5"
+        ]
+      ],
+      "new_name": "gen_dqi.py",
+      "new_sha256": "9251d2378047d32de1f12f1f5d23ac927ab04d5e1f8afd72ebb9a720aec42e9f",
+      "no_other_change": true,
+      "parent_path": "controller_work/after_v3/integration_v4/gen_dqi.py",
+      "parent_sha256": "b946191162785af21a80e7f9022d872b42ce38740ebe60e26142b149ebe687f1"
+    },
+    {
+      "exact_literal_changes": [
+        [
+          "v4",
+          "v5"
+        ],
+        [
+          "V4",
+          "V5"
+        ]
+      ],
+      "new_name": "check_build_equality.py",
+      "new_sha256": "0df19f87b37f16a116c6ad7231aae0e6f0650b1d3340b9f8d1497d9f0cce5c9b",
+      "no_other_change": true,
+      "parent_path": "controller_work/after_v3/integration_v4/check_build_equality.py",
+      "parent_sha256": "9d6d220d0e9ce49248ae6247ddea7d48efdfb4552ae0b7f67ac96662b68781a4"
+    },
+    {
+      "exact_literal_changes": [
+        [
+          "v4",
+          "v5"
+        ],
+        [
+          "V4",
+          "V5"
+        ]
+      ],
+      "new_name": "check_candidate.py",
+      "new_sha256": "26d3519c10ac08588dd5eadaf79fce725e9d7ed80429f7f53d56c51c7a54b3f1",
+      "no_other_change": true,
+      "parent_path": "controller_work/after_v3/integration_v4/check_candidate.py",
+      "parent_sha256": "2fc0eb71cf9d283626ebc0df2d4fb100123cc4d31e1199ec3c899afcefd7f648"
+    },
+    {
+      "exact_literal_changes": [
+        [
+          "v4",
+          "v5"
+        ],
+        [
+          "V4",
+          "V5"
+        ]
+      ],
+      "new_name": "check_key_boundary.py",
+      "new_sha256": "6b8851be258d3590666419c2ef28ee187a9da73cd5d5847b498d484d97f543e3",
+      "no_other_change": true,
+      "parent_path": "controller_work/after_v3/integration_v4/check_key_boundary.py",
+      "parent_sha256": "3bd68519b87fdf72fd5d62f9935e2b5563f5ab0f9d7112487070a4b35aedb68a"
+    }
+  ],
+  "format": "DQI_V5_SOURCE_DERIVATION_V1",
+  "inherited_transpose_packet_literal_derivation_sha256": "8ca3ea41c67f14c2ef5fdfe6a683b2b06ab8c1415b4d4bc1cae4c47903f98d00",
+  "module_imports": 0,
+  "native_jobs": 0,
+  "new_pure_binding_and_producer": [
+    "v5_paths.py",
+    "v5_binding.py",
+    "prepare_component_gates.py"
+  ],
+  "new_sampler_draws": 0,
+  "reproduced_transpose_files": {
+    "check_transpose14_preimage.py": "64b8e50eb58f1310c1f79faec0a47c97db42807ffae5a6d5b358574f583e15fb",
+    "transpose14_core.py": "8b5eb93766ac6d9ef638594829ec8f6d27945e84b610c718b4cf9bea73ab039d",
+    "transpose14_window.py": "1c25f660a58f7907602e60cfc32fbfc51a2775023cc911e33d5d10c2860236b4"
+  },
+  "status": "SOURCE_ONLY_EXACT_WRAPPER_COPIES_AND_EXPLICIT_PROVIDER_CHANGES"
+}

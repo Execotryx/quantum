@@ -1,0 +1,3171 @@
+{
+  "status": "EMITTED_NATIVE_CANDIDATE_NOT_YET_PROVED_OR_OFFICIALLY_VERIFIED",
+  "candidate": "candidate06_complete_Q48",
+  "Q": 48,
+  "exact_native_expectation": {
+    "status": "EXACT_EXPECTATION_FROM_CLASSICAL_GUARDS",
+    "assumptions": [
+      "Every active HMR measures a computational-basis wire and has a fair independent outcome.",
+      "Conditional costs count instruction execution, independently of quantum control values."
+    ],
+    "accounting": "exact Boolean guards; GF2-rank enumeration of affine leaves",
+    "rank_cap": 12,
+    "maximum_rank_used": 1,
+    "syntactic_measurements": 1322,
+    "static": {
+      "toffoli_like": 1678,
+      "T": 4,
+      "generic_rotations": 34
+    },
+    "mean": {
+      "toffoli_like": "1591",
+      "T": "4",
+      "generic_rotations": "34"
+    },
+    "mean_numeric": {
+      "toffoli_like": 1591.0,
+      "T": 4.0,
+      "generic_rotations": 34.0
+    },
+    "mean_Toffoli_plus_T_quarter": "1592",
+    "independent_condition_depth_not_assumed": true,
+    "official_verified": false
+  },
+  "paper_rotation_charge": 238.04838838550535,
+  "paper_cost": 87842.32264250425,
+  "components_expected_Toffolis": {
+    "normalization": 97.5,
+    "consuming_root": 198,
+    "divider_disposable_feed": 587.5,
+    "paired_product_disposable_owned_carries": 240.5,
+    "coefficient_rows_two_forward_one_inverse": 123,
+    "seed": 17.5,
+    "coefficient_R_frames": 4,
+    "H3_H4_preparation_and_restoration": 7,
+    "root_value_decoder": 21,
+    "first_loader": 61,
+    "framed_second_loader": 80,
+    "shared_table_cleanup": 9,
+    "compact_endpoint_with_route_omission": 145
+  },
+  "cuts": [
+    {
+      "name": "normalized",
+      "live_qubits": 26,
+      "peak_so_far": 46,
+      "instruction_cut": 382,
+      "owners": {
+        "n": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 53.0,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "consumed_root",
+      "live_qubits": 26,
+      "peak_so_far": 46,
+      "instruction_cut": 1410,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 152.0,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "body_entry",
+      "live_qubits": 26,
+      "peak_so_far": 46,
+      "instruction_cut": 1410,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 152.0,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "first_table",
+      "live_qubits": 42,
+      "peak_so_far": 48,
+      "instruction_cut": 5611,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q45",
+          "q44",
+          "q41",
+          "q43",
+          "q39",
+          "q37",
+          "q35",
+          "q33",
+          "q31",
+          "q29",
+          "q27",
+          "q42",
+          "q40"
+        ],
+        "H": [
+          "q38",
+          "q36",
+          "q34"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 213.0,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "first_coefficient",
+      "live_qubits": 45,
+      "peak_so_far": 48,
+      "instruction_cut": 5925,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q45",
+          "q44",
+          "q41",
+          "q43",
+          "q39",
+          "q37",
+          "q35",
+          "q33",
+          "q31",
+          "q29",
+          "q27",
+          "q42",
+          "q40"
+        ],
+        "H": [
+          "q38",
+          "q36",
+          "q34",
+          "q47",
+          "q46"
+        ],
+        "snapshot": [
+          "q26"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 257.0,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "first_metadata_retired",
+      "live_qubits": 39,
+      "peak_so_far": 48,
+      "instruction_cut": 5954,
+      "owners": {},
+      "cumulative_expected": {
+        "toffoli_like": 258.0,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "seed_ready",
+      "live_qubits": 45,
+      "peak_so_far": 48,
+      "instruction_cut": 6063,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q45",
+          "q44",
+          "q41",
+          "q43",
+          "q39",
+          "q37",
+          "q35",
+          "q33",
+          "q31",
+          "q29",
+          "q27",
+          "q42",
+          "q40"
+        ],
+        "seed": [
+          "q26",
+          "q34",
+          "q36",
+          "q38",
+          "q46",
+          "q47"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 269.0,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "signed_product15",
+      "live_qubits": 44,
+      "peak_so_far": 48,
+      "instruction_cut": 7054,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "P": [
+          "q26",
+          "q34",
+          "q36",
+          "q38",
+          "q46",
+          "q47",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q45",
+          "q44",
+          "q41",
+          "q43",
+          "q39",
+          "q37",
+          "q35",
+          "q33",
+          "q31",
+          "q29",
+          "q27",
+          "q42",
+          "q40"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 372.0,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "coefficient_retired_for_divider",
+      "live_qubits": 31,
+      "peak_so_far": 48,
+      "instruction_cut": 7067,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "P": [
+          "q26",
+          "q34",
+          "q36",
+          "q38",
+          "q46",
+          "q47",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 372.0,
+        "T": 0.0,
+        "generic_rotations": 0.0
+      }
+    },
+    {
+      "name": "divider_return",
+      "live_qubits": 31,
+      "peak_so_far": 48,
+      "instruction_cut": 17193,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q15",
+          "q16",
+          "q17",
+          "q18",
+          "q19",
+          "q20",
+          "q21"
+        ],
+        "P": [
+          "q26",
+          "q34",
+          "q36",
+          "q38",
+          "q46",
+          "q47",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q32"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1104.5,
+        "T": 4.0,
+        "generic_rotations": 34.0
+      }
+    },
+    {
+      "name": "second_table",
+      "live_qubits": 43,
+      "peak_so_far": 48,
+      "instruction_cut": 22237,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "None",
+          "None",
+          "None",
+          "q18",
+          "None",
+          "q20",
+          "q21"
+        ],
+        "P": [
+          "q26",
+          "q34",
+          "q36",
+          "q38",
+          "q46",
+          "q47",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q32"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37",
+          "q39"
+        ],
+        "H": [
+          "q43",
+          "q41",
+          "q44"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1185.5,
+        "T": 4.0,
+        "generic_rotations": 34.0
+      }
+    },
+    {
+      "name": "second_H3_ready",
+      "live_qubits": 44,
+      "peak_so_far": 48,
+      "instruction_cut": 22253,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "None",
+          "None",
+          "None",
+          "q18",
+          "None",
+          "q20",
+          "q21"
+        ],
+        "P": [
+          "q26",
+          "q34",
+          "q36",
+          "q38",
+          "q46",
+          "q47",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q32"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37",
+          "q39"
+        ],
+        "H": [
+          "q43",
+          "q41",
+          "q44",
+          "q28"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1186.5,
+        "T": 4.0,
+        "generic_rotations": 34.0
+      }
+    },
+    {
+      "name": "second_a6_retired",
+      "live_qubits": 43,
+      "peak_so_far": 48,
+      "instruction_cut": 22254,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "None",
+          "None",
+          "None",
+          "q18",
+          "None",
+          "q20",
+          "None"
+        ],
+        "P": [
+          "q26",
+          "q34",
+          "q36",
+          "q38",
+          "q46",
+          "q47",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q32"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37",
+          "q39"
+        ],
+        "H": [
+          "q43",
+          "q41",
+          "q44",
+          "q28"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1186.5,
+        "T": 4.0,
+        "generic_rotations": 34.0
+      }
+    },
+    {
+      "name": "second_coefficient",
+      "live_qubits": 45,
+      "peak_so_far": 48,
+      "instruction_cut": 22551,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "None",
+          "None",
+          "None",
+          "q18",
+          "None",
+          "q20",
+          "None"
+        ],
+        "P": [
+          "q26",
+          "q34",
+          "q36",
+          "q38",
+          "q46",
+          "q47",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q32"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37",
+          "q39"
+        ],
+        "H": [
+          "q43",
+          "q41",
+          "q44",
+          "q28",
+          "q21"
+        ],
+        "snapshot": [
+          "q8"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1228.5,
+        "T": 4.0,
+        "generic_rotations": 34.0
+      }
+    },
+    {
+      "name": "second_metadata_retired",
+      "live_qubits": 43,
+      "peak_so_far": 48,
+      "instruction_cut": 22640,
+      "owners": {},
+      "cumulative_expected": {
+        "toffoli_like": 1228.5,
+        "T": 4.0,
+        "generic_rotations": 34.0
+      }
+    },
+    {
+      "name": "inverse_product_data",
+      "live_qubits": 44,
+      "peak_so_far": 48,
+      "instruction_cut": 22642,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "None",
+          "None",
+          "None",
+          "q18",
+          "None",
+          "q20",
+          "None"
+        ],
+        "word": [
+          "q26",
+          "q34",
+          "q36",
+          "q38",
+          "q46",
+          "q47",
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q32",
+          "q28"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37",
+          "q39"
+        ],
+        "H": [
+          "q43",
+          "q41",
+          "q44"
+        ],
+        "snapshot": [
+          "q8"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1228.5,
+        "T": 4.0,
+        "generic_rotations": 34.0
+      }
+    },
+    {
+      "name": "seed_cleared",
+      "live_qubits": 38,
+      "peak_so_far": 48,
+      "instruction_cut": 25175,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "None",
+          "None",
+          "None",
+          "q18",
+          "None",
+          "q20",
+          "None"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q32",
+          "q28"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "D": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37",
+          "q39"
+        ],
+        "H": [
+          "q43",
+          "q41",
+          "q44"
+        ],
+        "snapshot": [
+          "q8"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1372.5,
+        "T": 4.0,
+        "generic_rotations": 34.0
+      }
+    },
+    {
+      "name": "coefficient_sources_restored",
+      "live_qubits": 40,
+      "peak_so_far": 48,
+      "instruction_cut": 25198,
+      "owners": {},
+      "cumulative_expected": {
+        "toffoli_like": 1375.5,
+        "T": 4.0,
+        "generic_rotations": 34.0
+      }
+    },
+    {
+      "name": "A_restored",
+      "live_qubits": 39,
+      "peak_so_far": 48,
+      "instruction_cut": 25708,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "None",
+          "None",
+          "None",
+          "q18",
+          "None",
+          "q20",
+          "None"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q32",
+          "q28"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "A": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37",
+          "q39"
+        ],
+        "H": [
+          "q43",
+          "q41",
+          "q44",
+          "q47",
+          "q9"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1416.5,
+        "T": 4.0,
+        "generic_rotations": 34.0
+      }
+    },
+    {
+      "name": "raw_root_restored",
+      "live_qubits": 44,
+      "peak_so_far": 48,
+      "instruction_cut": 26398,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q8",
+          "q45",
+          "q21",
+          "q18",
+          "q26",
+          "q20",
+          "q34"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q32",
+          "q28"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ],
+        "A": [
+          "q15",
+          "q16",
+          "q17",
+          "q19",
+          "q40",
+          "q42",
+          "q27",
+          "q29",
+          "q31",
+          "q33",
+          "q35",
+          "q37",
+          "q39"
+        ],
+        "H": [
+          "q43",
+          "q41",
+          "q44",
+          "q47",
+          "q9"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1438.5,
+        "T": 4.0,
+        "generic_rotations": 34.0
+      }
+    },
+    {
+      "name": "body_return",
+      "live_qubits": 26,
+      "peak_so_far": 48,
+      "instruction_cut": 34863,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q8",
+          "q45",
+          "q21",
+          "q18",
+          "q26",
+          "q20",
+          "q34"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q32",
+          "q28"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1447.5,
+        "T": 4.0,
+        "generic_rotations": 34.0
+      }
+    },
+    {
+      "name": "body_restored",
+      "live_qubits": 26,
+      "peak_so_far": 48,
+      "instruction_cut": 34863,
+      "owners": {
+        "v": [
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q8",
+          "q45",
+          "q21",
+          "q18",
+          "q26",
+          "q20",
+          "q34"
+        ],
+        "h": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q32",
+          "q28"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1447.5,
+        "T": 4.0,
+        "generic_rotations": 34.0
+      }
+    },
+    {
+      "name": "root_restored",
+      "live_qubits": 26,
+      "peak_so_far": 48,
+      "instruction_cut": 36083,
+      "owners": {
+        "n": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q32",
+          "q28",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q8",
+          "q45",
+          "q21",
+          "q18",
+          "q26",
+          "q20",
+          "q34"
+        ],
+        "flags": [
+          "q22",
+          "q23",
+          "q24",
+          "q25"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1546.5,
+        "T": 4.0,
+        "generic_rotations": 34.0
+      }
+    },
+    {
+      "name": "logical_input_restored",
+      "live_qubits": 22,
+      "peak_so_far": 48,
+      "instruction_cut": 36362,
+      "owners": {
+        "x": [
+          "q0",
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q32",
+          "q28",
+          "q10",
+          "q11",
+          "q12",
+          "q13",
+          "q14",
+          "q8",
+          "q45",
+          "q21",
+          "q18",
+          "q26",
+          "q20",
+          "q34"
+        ]
+      },
+      "cumulative_expected": {
+        "toffoli_like": 1591.0,
+        "T": 4.0,
+        "generic_rotations": 34.0
+      }
+    }
+  ],
+  "owner_trace": [
+    {
+      "label": "body_entry",
+      "live_owners": 26
+    },
+    {
+      "label": "first_table",
+      "live_owners": 42
+    },
+    {
+      "label": "first_coefficient",
+      "live_owners": 45
+    },
+    {
+      "label": "first_metadata_retired",
+      "live_owners": 39
+    },
+    {
+      "label": "seed_ready",
+      "live_owners": 45
+    },
+    {
+      "label": "signed_product15",
+      "live_owners": 44
+    },
+    {
+      "label": "coefficient_retired_for_divider",
+      "live_owners": 31
+    },
+    {
+      "label": "divider_return",
+      "live_owners": 31
+    },
+    {
+      "label": "second_table",
+      "live_owners": 43
+    },
+    {
+      "label": "second_H3_ready",
+      "live_owners": 44
+    },
+    {
+      "label": "second_a6_retired",
+      "live_owners": 43
+    },
+    {
+      "label": "second_coefficient",
+      "live_owners": 45
+    },
+    {
+      "label": "second_metadata_retired",
+      "live_owners": 43
+    },
+    {
+      "label": "inverse_product_data",
+      "live_owners": 44
+    },
+    {
+      "label": "seed_cleared",
+      "live_owners": 38
+    },
+    {
+      "label": "coefficient_sources_restored",
+      "live_owners": 40
+    },
+    {
+      "label": "A_restored",
+      "live_owners": 39
+    },
+    {
+      "label": "raw_root_restored",
+      "live_owners": 44
+    },
+    {
+      "label": "body_return",
+      "live_owners": 26
+    }
+  ],
+  "final_Clifford_layout_swaps": [
+    [
+      "q32",
+      "q8"
+    ],
+    [
+      "q28",
+      "q9"
+    ],
+    [
+      "q32",
+      "q15"
+    ],
+    [
+      "q45",
+      "q16"
+    ],
+    [
+      "q21",
+      "q17"
+    ],
+    [
+      "q26",
+      "q19"
+    ],
+    [
+      "q34",
+      "q21"
+    ]
+  ],
+  "route_trace": [
+    {
+      "inverse": false,
+      "start": 10243,
+      "stop": 10329,
+      "old_cswap_arguments": [
+        [
+          "q23",
+          "q36",
+          "q7"
+        ],
+        [
+          "q23",
+          "q38",
+          "q9"
+        ],
+        [
+          "q23",
+          "q46",
+          "q45"
+        ],
+        [
+          "q23",
+          "q47",
+          "q44"
+        ],
+        [
+          "q23",
+          "q0",
+          "q41"
+        ],
+        [
+          "q23",
+          "q1",
+          "q43"
+        ],
+        [
+          "q23",
+          "q2",
+          "q39"
+        ],
+        [
+          "q23",
+          "q3",
+          "q37"
+        ],
+        [
+          "q23",
+          "q4",
+          "q35"
+        ],
+        [
+          "q23",
+          "q5",
+          "q33"
+        ],
+        [
+          "q23",
+          "q6",
+          "q31"
+        ],
+        [
+          "q23",
+          "q40",
+          "q29"
+        ],
+        [
+          "q23",
+          "q42",
+          "q27"
+        ],
+        [
+          "q24",
+          "q8",
+          "q9"
+        ],
+        [
+          "q24",
+          "q36",
+          "q45"
+        ],
+        [
+          "q24",
+          "q38",
+          "q44"
+        ],
+        [
+          "q24",
+          "q46",
+          "q41"
+        ],
+        [
+          "q24",
+          "q47",
+          "q43"
+        ],
+        [
+          "q24",
+          "q0",
+          "q39"
+        ],
+        [
+          "q24",
+          "q1",
+          "q37"
+        ],
+        [
+          "q24",
+          "q2",
+          "q35"
+        ],
+        [
+          "q24",
+          "q3",
+          "q33"
+        ],
+        [
+          "q24",
+          "q4",
+          "q31"
+        ],
+        [
+          "q24",
+          "q5",
+          "q29"
+        ],
+        [
+          "q24",
+          "q6",
+          "q27"
+        ],
+        [
+          "q24",
+          "q40",
+          "q42"
+        ],
+        [
+          "q23",
+          "q8",
+          "q43"
+        ],
+        [
+          "q23",
+          "q36",
+          "q39"
+        ],
+        [
+          "q23",
+          "q38",
+          "q37"
+        ],
+        [
+          "q23",
+          "q46",
+          "q35"
+        ],
+        [
+          "q23",
+          "q47",
+          "q33"
+        ],
+        [
+          "q23",
+          "q0",
+          "q31"
+        ],
+        [
+          "q23",
+          "q1",
+          "q29"
+        ],
+        [
+          "q23",
+          "q2",
+          "q27"
+        ],
+        [
+          "q23",
+          "q3",
+          "q42"
+        ],
+        [
+          "q23",
+          "q4",
+          "q40"
+        ],
+        [
+          "q23",
+          "q5",
+          "q6"
+        ],
+        [
+          "q23",
+          "q41",
+          "q7"
+        ],
+        [
+          "q23",
+          "q44",
+          "q9"
+        ],
+        [
+          "q22",
+          "q36",
+          "q7"
+        ],
+        [
+          "q22",
+          "q38",
+          "q9"
+        ],
+        [
+          "q22",
+          "q46",
+          "q45"
+        ],
+        [
+          "q22",
+          "q47",
+          "q44"
+        ],
+        [
+          "q22",
+          "q0",
+          "q41"
+        ],
+        [
+          "q22",
+          "q1",
+          "q43"
+        ],
+        [
+          "q22",
+          "q2",
+          "q39"
+        ],
+        [
+          "q22",
+          "q3",
+          "q37"
+        ],
+        [
+          "q22",
+          "q4",
+          "q35"
+        ],
+        [
+          "q22",
+          "q5",
+          "q33"
+        ],
+        [
+          "q22",
+          "q6",
+          "q31"
+        ],
+        [
+          "q22",
+          "q40",
+          "q29"
+        ],
+        [
+          "q22",
+          "q42",
+          "q27"
+        ],
+        [
+          "q22",
+          "q8",
+          "q7"
+        ],
+        [
+          "q22",
+          "q36",
+          "q9"
+        ],
+        [
+          "q22",
+          "q38",
+          "q45"
+        ],
+        [
+          "q22",
+          "q46",
+          "q44"
+        ],
+        [
+          "q22",
+          "q47",
+          "q41"
+        ],
+        [
+          "q22",
+          "q0",
+          "q43"
+        ],
+        [
+          "q22",
+          "q1",
+          "q39"
+        ],
+        [
+          "q22",
+          "q2",
+          "q37"
+        ],
+        [
+          "q22",
+          "q3",
+          "q35"
+        ],
+        [
+          "q22",
+          "q4",
+          "q33"
+        ],
+        [
+          "q22",
+          "q5",
+          "q31"
+        ],
+        [
+          "q22",
+          "q6",
+          "q29"
+        ],
+        [
+          "q22",
+          "q40",
+          "q27"
+        ]
+      ],
+      "new_cswap_arguments": [
+        [
+          "q23",
+          "q36",
+          "q9"
+        ],
+        [
+          "q23",
+          "q38",
+          "q45"
+        ],
+        [
+          "q23",
+          "q46",
+          "q44"
+        ],
+        [
+          "q23",
+          "q47",
+          "q41"
+        ],
+        [
+          "q23",
+          "q0",
+          "q43"
+        ],
+        [
+          "q23",
+          "q1",
+          "q39"
+        ],
+        [
+          "q23",
+          "q2",
+          "q37"
+        ],
+        [
+          "q23",
+          "q3",
+          "q35"
+        ],
+        [
+          "q23",
+          "q4",
+          "q33"
+        ],
+        [
+          "q23",
+          "q5",
+          "q31"
+        ],
+        [
+          "q23",
+          "q6",
+          "q29"
+        ],
+        [
+          "q23",
+          "q40",
+          "q27"
+        ],
+        [
+          "q24",
+          "q8",
+          "q45"
+        ],
+        [
+          "q24",
+          "q36",
+          "q44"
+        ],
+        [
+          "q24",
+          "q38",
+          "q41"
+        ],
+        [
+          "q24",
+          "q46",
+          "q43"
+        ],
+        [
+          "q24",
+          "q47",
+          "q39"
+        ],
+        [
+          "q24",
+          "q0",
+          "q37"
+        ],
+        [
+          "q24",
+          "q1",
+          "q35"
+        ],
+        [
+          "q24",
+          "q2",
+          "q33"
+        ],
+        [
+          "q24",
+          "q3",
+          "q31"
+        ],
+        [
+          "q24",
+          "q4",
+          "q29"
+        ],
+        [
+          "q24",
+          "q5",
+          "q27"
+        ],
+        [
+          "q24",
+          "q6",
+          "q42"
+        ],
+        [
+          "q24",
+          "q9",
+          "q7"
+        ],
+        [
+          "q23",
+          "q8",
+          "q39"
+        ],
+        [
+          "q23",
+          "q36",
+          "q37"
+        ],
+        [
+          "q23",
+          "q38",
+          "q35"
+        ],
+        [
+          "q23",
+          "q46",
+          "q33"
+        ],
+        [
+          "q23",
+          "q47",
+          "q31"
+        ],
+        [
+          "q23",
+          "q0",
+          "q29"
+        ],
+        [
+          "q23",
+          "q1",
+          "q27"
+        ],
+        [
+          "q23",
+          "q2",
+          "q42"
+        ],
+        [
+          "q23",
+          "q3",
+          "q40"
+        ],
+        [
+          "q23",
+          "q4",
+          "q6"
+        ],
+        [
+          "q23",
+          "q43",
+          "q7"
+        ],
+        [
+          "q23",
+          "q41",
+          "q9"
+        ],
+        [
+          "q23",
+          "q44",
+          "q45"
+        ],
+        [
+          "q22",
+          "q8",
+          "q7"
+        ],
+        [
+          "q22",
+          "q36",
+          "q9"
+        ],
+        [
+          "q22",
+          "q38",
+          "q45"
+        ],
+        [
+          "q22",
+          "q46",
+          "q44"
+        ],
+        [
+          "q22",
+          "q47",
+          "q41"
+        ],
+        [
+          "q22",
+          "q0",
+          "q43"
+        ],
+        [
+          "q22",
+          "q1",
+          "q39"
+        ],
+        [
+          "q22",
+          "q2",
+          "q37"
+        ],
+        [
+          "q22",
+          "q3",
+          "q35"
+        ],
+        [
+          "q22",
+          "q4",
+          "q33"
+        ],
+        [
+          "q22",
+          "q5",
+          "q31"
+        ],
+        [
+          "q22",
+          "q6",
+          "q29"
+        ],
+        [
+          "q22",
+          "q40",
+          "q27"
+        ],
+        [
+          "q22",
+          "q8",
+          "q9"
+        ],
+        [
+          "q22",
+          "q36",
+          "q45"
+        ],
+        [
+          "q22",
+          "q38",
+          "q44"
+        ],
+        [
+          "q22",
+          "q46",
+          "q41"
+        ],
+        [
+          "q22",
+          "q47",
+          "q43"
+        ],
+        [
+          "q22",
+          "q0",
+          "q39"
+        ],
+        [
+          "q22",
+          "q1",
+          "q37"
+        ],
+        [
+          "q22",
+          "q2",
+          "q35"
+        ],
+        [
+          "q22",
+          "q3",
+          "q33"
+        ],
+        [
+          "q22",
+          "q4",
+          "q31"
+        ],
+        [
+          "q22",
+          "q5",
+          "q29"
+        ],
+        [
+          "q22",
+          "q6",
+          "q27"
+        ],
+        [
+          "q22",
+          "q40",
+          "q42"
+        ]
+      ],
+      "omissions": [
+        {
+          "stage": 0,
+          "positions": [
+            0,
+            26
+          ],
+          "control": "q23",
+          "owners": [
+            "q8",
+            "q7"
+          ]
+        }
+      ]
+    },
+    {
+      "inverse": true,
+      "start": 10475,
+      "stop": 10561,
+      "old_cswap_arguments": [
+        [
+          "q22",
+          "q8",
+          "q7"
+        ],
+        [
+          "q22",
+          "q36",
+          "q9"
+        ],
+        [
+          "q22",
+          "q38",
+          "q45"
+        ],
+        [
+          "q22",
+          "q46",
+          "q44"
+        ],
+        [
+          "q22",
+          "q47",
+          "q41"
+        ],
+        [
+          "q22",
+          "q0",
+          "q43"
+        ],
+        [
+          "q22",
+          "q1",
+          "q39"
+        ],
+        [
+          "q22",
+          "q2",
+          "q37"
+        ],
+        [
+          "q22",
+          "q3",
+          "q35"
+        ],
+        [
+          "q22",
+          "q4",
+          "q33"
+        ],
+        [
+          "q22",
+          "q5",
+          "q31"
+        ],
+        [
+          "q22",
+          "q6",
+          "q29"
+        ],
+        [
+          "q22",
+          "q40",
+          "q27"
+        ],
+        [
+          "q22",
+          "q36",
+          "q7"
+        ],
+        [
+          "q22",
+          "q38",
+          "q9"
+        ],
+        [
+          "q22",
+          "q46",
+          "q45"
+        ],
+        [
+          "q22",
+          "q47",
+          "q44"
+        ],
+        [
+          "q22",
+          "q0",
+          "q41"
+        ],
+        [
+          "q22",
+          "q1",
+          "q43"
+        ],
+        [
+          "q22",
+          "q2",
+          "q39"
+        ],
+        [
+          "q22",
+          "q3",
+          "q37"
+        ],
+        [
+          "q22",
+          "q4",
+          "q35"
+        ],
+        [
+          "q22",
+          "q5",
+          "q33"
+        ],
+        [
+          "q22",
+          "q6",
+          "q31"
+        ],
+        [
+          "q22",
+          "q40",
+          "q29"
+        ],
+        [
+          "q22",
+          "q42",
+          "q27"
+        ],
+        [
+          "q23",
+          "q8",
+          "q43"
+        ],
+        [
+          "q23",
+          "q36",
+          "q39"
+        ],
+        [
+          "q23",
+          "q38",
+          "q37"
+        ],
+        [
+          "q23",
+          "q46",
+          "q35"
+        ],
+        [
+          "q23",
+          "q47",
+          "q33"
+        ],
+        [
+          "q23",
+          "q0",
+          "q31"
+        ],
+        [
+          "q23",
+          "q1",
+          "q29"
+        ],
+        [
+          "q23",
+          "q2",
+          "q27"
+        ],
+        [
+          "q23",
+          "q3",
+          "q42"
+        ],
+        [
+          "q23",
+          "q4",
+          "q40"
+        ],
+        [
+          "q23",
+          "q5",
+          "q6"
+        ],
+        [
+          "q23",
+          "q41",
+          "q7"
+        ],
+        [
+          "q23",
+          "q44",
+          "q9"
+        ],
+        [
+          "q24",
+          "q8",
+          "q9"
+        ],
+        [
+          "q24",
+          "q36",
+          "q45"
+        ],
+        [
+          "q24",
+          "q38",
+          "q44"
+        ],
+        [
+          "q24",
+          "q46",
+          "q41"
+        ],
+        [
+          "q24",
+          "q47",
+          "q43"
+        ],
+        [
+          "q24",
+          "q0",
+          "q39"
+        ],
+        [
+          "q24",
+          "q1",
+          "q37"
+        ],
+        [
+          "q24",
+          "q2",
+          "q35"
+        ],
+        [
+          "q24",
+          "q3",
+          "q33"
+        ],
+        [
+          "q24",
+          "q4",
+          "q31"
+        ],
+        [
+          "q24",
+          "q5",
+          "q29"
+        ],
+        [
+          "q24",
+          "q6",
+          "q27"
+        ],
+        [
+          "q24",
+          "q40",
+          "q42"
+        ],
+        [
+          "q23",
+          "q36",
+          "q7"
+        ],
+        [
+          "q23",
+          "q38",
+          "q9"
+        ],
+        [
+          "q23",
+          "q46",
+          "q45"
+        ],
+        [
+          "q23",
+          "q47",
+          "q44"
+        ],
+        [
+          "q23",
+          "q0",
+          "q41"
+        ],
+        [
+          "q23",
+          "q1",
+          "q43"
+        ],
+        [
+          "q23",
+          "q2",
+          "q39"
+        ],
+        [
+          "q23",
+          "q3",
+          "q37"
+        ],
+        [
+          "q23",
+          "q4",
+          "q35"
+        ],
+        [
+          "q23",
+          "q5",
+          "q33"
+        ],
+        [
+          "q23",
+          "q6",
+          "q31"
+        ],
+        [
+          "q23",
+          "q40",
+          "q29"
+        ],
+        [
+          "q23",
+          "q42",
+          "q27"
+        ]
+      ],
+      "new_cswap_arguments": [
+        [
+          "q22",
+          "q8",
+          "q9"
+        ],
+        [
+          "q22",
+          "q36",
+          "q45"
+        ],
+        [
+          "q22",
+          "q38",
+          "q44"
+        ],
+        [
+          "q22",
+          "q46",
+          "q41"
+        ],
+        [
+          "q22",
+          "q47",
+          "q43"
+        ],
+        [
+          "q22",
+          "q0",
+          "q39"
+        ],
+        [
+          "q22",
+          "q1",
+          "q37"
+        ],
+        [
+          "q22",
+          "q2",
+          "q35"
+        ],
+        [
+          "q22",
+          "q3",
+          "q33"
+        ],
+        [
+          "q22",
+          "q4",
+          "q31"
+        ],
+        [
+          "q22",
+          "q5",
+          "q29"
+        ],
+        [
+          "q22",
+          "q6",
+          "q27"
+        ],
+        [
+          "q22",
+          "q40",
+          "q42"
+        ],
+        [
+          "q22",
+          "q8",
+          "q7"
+        ],
+        [
+          "q22",
+          "q36",
+          "q9"
+        ],
+        [
+          "q22",
+          "q38",
+          "q45"
+        ],
+        [
+          "q22",
+          "q46",
+          "q44"
+        ],
+        [
+          "q22",
+          "q47",
+          "q41"
+        ],
+        [
+          "q22",
+          "q0",
+          "q43"
+        ],
+        [
+          "q22",
+          "q1",
+          "q39"
+        ],
+        [
+          "q22",
+          "q2",
+          "q37"
+        ],
+        [
+          "q22",
+          "q3",
+          "q35"
+        ],
+        [
+          "q22",
+          "q4",
+          "q33"
+        ],
+        [
+          "q22",
+          "q5",
+          "q31"
+        ],
+        [
+          "q22",
+          "q6",
+          "q29"
+        ],
+        [
+          "q22",
+          "q40",
+          "q27"
+        ],
+        [
+          "q23",
+          "q8",
+          "q39"
+        ],
+        [
+          "q23",
+          "q36",
+          "q37"
+        ],
+        [
+          "q23",
+          "q38",
+          "q35"
+        ],
+        [
+          "q23",
+          "q46",
+          "q33"
+        ],
+        [
+          "q23",
+          "q47",
+          "q31"
+        ],
+        [
+          "q23",
+          "q0",
+          "q29"
+        ],
+        [
+          "q23",
+          "q1",
+          "q27"
+        ],
+        [
+          "q23",
+          "q2",
+          "q42"
+        ],
+        [
+          "q23",
+          "q3",
+          "q40"
+        ],
+        [
+          "q23",
+          "q4",
+          "q6"
+        ],
+        [
+          "q23",
+          "q43",
+          "q7"
+        ],
+        [
+          "q23",
+          "q41",
+          "q9"
+        ],
+        [
+          "q23",
+          "q44",
+          "q45"
+        ],
+        [
+          "q24",
+          "q8",
+          "q45"
+        ],
+        [
+          "q24",
+          "q36",
+          "q44"
+        ],
+        [
+          "q24",
+          "q38",
+          "q41"
+        ],
+        [
+          "q24",
+          "q46",
+          "q43"
+        ],
+        [
+          "q24",
+          "q47",
+          "q39"
+        ],
+        [
+          "q24",
+          "q0",
+          "q37"
+        ],
+        [
+          "q24",
+          "q1",
+          "q35"
+        ],
+        [
+          "q24",
+          "q2",
+          "q33"
+        ],
+        [
+          "q24",
+          "q3",
+          "q31"
+        ],
+        [
+          "q24",
+          "q4",
+          "q29"
+        ],
+        [
+          "q24",
+          "q5",
+          "q27"
+        ],
+        [
+          "q24",
+          "q6",
+          "q42"
+        ],
+        [
+          "q24",
+          "q9",
+          "q7"
+        ],
+        [
+          "q23",
+          "q36",
+          "q9"
+        ],
+        [
+          "q23",
+          "q38",
+          "q45"
+        ],
+        [
+          "q23",
+          "q46",
+          "q44"
+        ],
+        [
+          "q23",
+          "q47",
+          "q41"
+        ],
+        [
+          "q23",
+          "q0",
+          "q43"
+        ],
+        [
+          "q23",
+          "q1",
+          "q39"
+        ],
+        [
+          "q23",
+          "q2",
+          "q37"
+        ],
+        [
+          "q23",
+          "q3",
+          "q35"
+        ],
+        [
+          "q23",
+          "q4",
+          "q33"
+        ],
+        [
+          "q23",
+          "q5",
+          "q31"
+        ],
+        [
+          "q23",
+          "q6",
+          "q29"
+        ],
+        [
+          "q23",
+          "q40",
+          "q27"
+        ]
+      ],
+      "omissions": [
+        {
+          "stage": 0,
+          "positions": [
+            0,
+            26
+          ],
+          "control": "q23",
+          "owners": [
+            "q8",
+            "q7"
+          ]
+        }
+      ]
+    }
+  ],
+  "phase_proxy_records": [
+    {
+      "index": 0,
+      "site": "base_i0",
+      "target": "q41",
+      "old_half_turns": "134217729/68719476736",
+      "new_half_turns": "1099511635823/562949953421312"
+    },
+    {
+      "index": 1,
+      "site": "base_i1",
+      "target": "q44",
+      "old_half_turns": "1/34359738368",
+      "new_half_turns": "2087/70368744177664"
+    },
+    {
+      "index": 2,
+      "site": "base_i2",
+      "target": "q45",
+      "old_half_turns": "1/17179869184",
+      "new_half_turns": "31885/562949953421312"
+    },
+    {
+      "index": 3,
+      "site": "base_i3",
+      "target": "q9",
+      "old_half_turns": "1/8589934592",
+      "new_half_turns": "65753/562949953421312"
+    },
+    {
+      "index": 4,
+      "site": "base_i4",
+      "target": "q7",
+      "old_half_turns": "1/4294967296",
+      "new_half_turns": "65943/281474976710656"
+    },
+    {
+      "index": 5,
+      "site": "base_i5",
+      "target": "q8",
+      "old_half_turns": "1/2147483648",
+      "new_half_turns": "130839/281474976710656"
+    },
+    {
+      "index": 6,
+      "site": "base_i6",
+      "target": "q36",
+      "old_half_turns": "1/1073741824",
+      "new_half_turns": "262743/281474976710656"
+    },
+    {
+      "index": 7,
+      "site": "base_i7",
+      "target": "q38",
+      "old_half_turns": "1/536870912",
+      "new_half_turns": "1048587/562949953421312"
+    },
+    {
+      "index": 8,
+      "site": "base_i8",
+      "target": "q46",
+      "old_half_turns": "1/268435456",
+      "new_half_turns": "2096433/562949953421312"
+    },
+    {
+      "index": 9,
+      "site": "base_i9",
+      "target": "q47",
+      "old_half_turns": "1/134217728",
+      "new_half_turns": "131077/17592186044416"
+    },
+    {
+      "index": 10,
+      "site": "base_i10",
+      "target": "q0",
+      "old_half_turns": "1/67108864",
+      "new_half_turns": "8388179/562949953421312"
+    },
+    {
+      "index": 11,
+      "site": "base_i11",
+      "target": "q1",
+      "old_half_turns": "1/33554432",
+      "new_half_turns": "8388711/281474976710656"
+    },
+    {
+      "index": 12,
+      "site": "base_i12",
+      "target": "q2",
+      "old_half_turns": "1/16777216",
+      "new_half_turns": "33554147/562949953421312"
+    },
+    {
+      "index": 13,
+      "site": "base_i13",
+      "target": "q3",
+      "old_half_turns": "1/8388608",
+      "new_half_turns": "67108361/562949953421312"
+    },
+    {
+      "index": 14,
+      "site": "base_i14",
+      "target": "q4",
+      "old_half_turns": "1/4194304",
+      "new_half_turns": "67108583/281474976710656"
+    },
+    {
+      "index": 15,
+      "site": "base_i15",
+      "target": "q5",
+      "old_half_turns": "1/2097152",
+      "new_half_turns": "134217991/281474976710656"
+    },
+    {
+      "index": 16,
+      "site": "base_i16",
+      "target": "q6",
+      "old_half_turns": "1/1048576",
+      "new_half_turns": "536872047/562949953421312"
+    },
+    {
+      "index": 17,
+      "site": "base_i17",
+      "target": "q40",
+      "old_half_turns": "1/524288",
+      "new_half_turns": "67108989/35184372088832"
+    },
+    {
+      "index": 18,
+      "site": "base_i18",
+      "target": "q42",
+      "old_half_turns": "1/262144",
+      "new_half_turns": "268435621/70368744177664"
+    },
+    {
+      "index": 19,
+      "site": "base_i19",
+      "target": "q27",
+      "old_half_turns": "1/131072",
+      "new_half_turns": "4294967019/562949953421312"
+    },
+    {
+      "index": 20,
+      "site": "base_i20",
+      "target": "q29",
+      "old_half_turns": "1/65536",
+      "new_half_turns": "4294967241/281474976710656"
+    },
+    {
+      "index": 21,
+      "site": "base_i21",
+      "target": "q31",
+      "old_half_turns": "1/32768",
+      "new_half_turns": "17179868565/562949953421312"
+    },
+    {
+      "index": 22,
+      "site": "base_i22",
+      "target": "q33",
+      "old_half_turns": "1/16384",
+      "new_half_turns": "17179869037/281474976710656"
+    },
+    {
+      "index": 23,
+      "site": "base_i23",
+      "target": "q35",
+      "old_half_turns": "1/8192",
+      "new_half_turns": "68719476677/562949953421312"
+    },
+    {
+      "index": 24,
+      "site": "base_i24",
+      "target": "q37",
+      "old_half_turns": "1/4096",
+      "new_half_turns": "68719476531/281474976710656"
+    },
+    {
+      "index": 25,
+      "site": "base_i25",
+      "target": "q39",
+      "old_half_turns": "1/2048",
+      "new_half_turns": "34359738263/70368744177664"
+    },
+    {
+      "index": 26,
+      "site": "base_i26",
+      "target": "q43",
+      "old_half_turns": "1/1024",
+      "new_half_turns": "67108865/68719476736"
+    },
+    {
+      "index": 27,
+      "site": "threshold_j0",
+      "target": "q28",
+      "old_half_turns": "-1/512",
+      "new_half_turns": "-1099511634841/562949953421312"
+    },
+    {
+      "index": 28,
+      "site": "overflow_j1",
+      "target": "q28",
+      "old_half_turns": "1/256",
+      "new_half_turns": "268435455/68719476736"
+    },
+    {
+      "index": 29,
+      "site": "overflow_j2",
+      "target": "q30",
+      "old_half_turns": "1/128",
+      "new_half_turns": "536870913/68719476736"
+    },
+    {
+      "index": 30,
+      "site": "overflow_j3",
+      "target": "q28",
+      "old_half_turns": "1/64",
+      "new_half_turns": "1073741823/68719476736"
+    },
+    {
+      "index": 31,
+      "site": "overflow_j4",
+      "target": "q30",
+      "old_half_turns": "1/32",
+      "new_half_turns": "2147483647/68719476736"
+    },
+    {
+      "index": 32,
+      "site": "overflow_j5",
+      "target": "q30",
+      "old_half_turns": "1/16",
+      "new_half_turns": "4294967295/68719476736"
+    },
+    {
+      "index": 33,
+      "site": "overflow_j6",
+      "target": "q30",
+      "old_half_turns": "1/8",
+      "new_half_turns": "8589934591/68719476736"
+    }
+  ],
+  "compact_phase_trace": [
+    {
+      "event": "allocate",
+      "count": 2,
+      "owners": 45,
+      "wires": [
+        "q8",
+        "q7"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 46,
+      "wires": [
+        "q32"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 47,
+      "wires": [
+        "q28"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 47,
+      "wires": [
+        "q28"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 47,
+      "wires": [
+        "q28"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 48,
+      "wires": [
+        "q30"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 47,
+      "wires": [
+        "q28"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 47,
+      "wires": [
+        "q28"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 48,
+      "wires": [
+        "q30"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 47,
+      "wires": [
+        "q28"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 48,
+      "wires": [
+        "q30"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 47,
+      "wires": [
+        "q28"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 48,
+      "wires": [
+        "q30"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 47,
+      "wires": [
+        "q28"
+      ]
+    },
+    {
+      "event": "allocate",
+      "count": 1,
+      "owners": 47,
+      "wires": [
+        "q28"
+      ]
+    },
+    {
+      "event": "complete",
+      "entry_owners": 43,
+      "exit_owners": 43,
+      "observed_peak_owners": 48,
+      "generic_calls": 34,
+      "T_calls": 4,
+      "direct_Clifford_Z_POW_calls": 0,
+      "last_overflow_implemented_as": "CZ(flags1,flags3)",
+      "retained_controls": [
+        "p"
+      ],
+      "expected_Toffolis": 145
+    }
+  ],
+  "phase_modulus": 1125899906842624,
+  "model_sha256": "24fff823faa911afe93d02afc3ded0bbd156a210a85f1265c989a087f8fd1219",
+  "quantize50_sha256": "8670515091475959ab0edeae03cb736cdb1cb66cd7768366e69fafb7eff8bf72",
+  "quantized_exact_minimum_margin_units64": 124372027,
+  "paper_gate_sha256": "912da9164095aa996317909903d50162a76eded7ff9a90cbb9299c85c013de2c",
+  "parent_authorization_sha256": "99ef9a891d4e99b262b1a452ea48b18c536e91e7017f018b77bc37f1793ccffd",
+  "all_prior_candidates_unchanged": true,
+  "official_verifier": false,
+  "no_submission": true,
+  "kmb_sha256": "a918743ed2698925c6e927eeab63c8ca43cd322313c5882cd5a101e390d4d9e1",
+  "bytes": 307762,
+  "emission_seconds": 13.152456417999929,
+  "native_sources": {
+    "audit_tables06_static.py": "747e5248c9a34f40053d650c99800190340046b96498212218d650149ff514f6",
+    "decoder06.py": "9fb7e197e85e343131b200e9ee0c081437b83b6824c615431ba9627d3b67417c",
+    "divider_cleanup06.py": "eef2870d4788d95c59f56f13269f6d4ee858fbc3ac1c6e0ee8353a516292d647",
+    "generate.py": "3c6cd010f31be105c5bfdd8a03694b341ca73a84072fc8a9404f2a904cf9f4df",
+    "lifecycle06.py": "0e38bf25ef639106608b7fb70e863aed75f0fcc82fca9a98e8e94cec905ea8aa",
+    "phase06.py": "4e979c47bc90317a6ac3576bc74964cf74222c2006e1630f6b17075af51ccdfb",
+    "prove50.py": "3728736ac482260eab2e98cd82987a1f2c7bb91d93cd9dfb9c71820d48521753",
+    "run_batch.py": "445dcb481328d4e4222bbaa98e04d0345c59583877bf099302b47e673b718581",
+    "static_phase06.py": "3715cc352f0260adc1ee3002d6fae473d4277de69aef8b9216d79090433e14be",
+    "tables06.py": "f0eef9c8905b0d4e9c20bb286b33d526c0cf0f27ea4bb619c066ea7ed58a690b",
+    "variant.py": "2c9ece9c700b0a87c21c37b9691e4a2a15d8d580cd972eb115d1e918008562c6"
+  }
+}

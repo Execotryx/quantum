@@ -1,0 +1,96 @@
+{
+  "status": "COMPLETE_POSITIVE_PAPER_DELTA_READY_FOR_PARENT_REVIEW",
+  "gate": {
+    "Q": 48,
+    "divider_delta_E": -1,
+    "whole_expected_Toffolis": 1583,
+    "T": 4,
+    "R": 33,
+    "unchanged_rotation_charge": 230.84805946161188,
+    "expected_whole_cost": 87112.70685415737,
+    "endpoint_data_and_phase_model_exactly_unchanged": true
+  },
+  "divider_baseline": {
+    "status": "COMPLETE_SOURCE_COUNTER_NOT_NATIVE",
+    "new_last_row": false,
+    "forward_E": 270.0,
+    "cleanup_E": 317.5,
+    "core_E": 587.5,
+    "T": 0,
+    "R": 0,
+    "peak": 48,
+    "entry_owners": 31,
+    "endpoint_owners": 43,
+    "return_owners": 31,
+    "carry_debts_consumed": 24,
+    "measurement_count": 601,
+    "endpoint_forward_source_unchanged": true
+  },
+  "divider_candidate": {
+    "status": "COMPLETE_SOURCE_COUNTER_NOT_NATIVE",
+    "new_last_row": true,
+    "forward_E": 270.0,
+    "cleanup_E": 316.5,
+    "core_E": 586.5,
+    "T": 0,
+    "R": 0,
+    "peak": 48,
+    "entry_owners": 31,
+    "endpoint_owners": 43,
+    "return_owners": 31,
+    "carry_debts_consumed": 24,
+    "measurement_count": 601,
+    "endpoint_forward_source_unchanged": true
+  },
+  "original_input_restoration": true,
+  "all_65536_prefix_cases_and_symbolic_HMR_signs": true,
+  "negative_phase_omissions_detected": [
+    "top",
+    "sigma"
+  ],
+  "both_complete_preparation_peaks_unchanged": 48,
+  "endpoint_data43_and_phase139_unchanged": true,
+  "no_native_build_or_official_qualification": true,
+  "files": [
+    {
+      "path": "TOP12_PLAN.md",
+      "bytes": 4650,
+      "sha256": "c6b8be7e0c572e28ffb5c952d6c0f7ccf94695a24cedb61b4fa71ec415a313ea"
+    },
+    {
+      "path": "SOURCE_READY_003.json",
+      "bytes": 721,
+      "sha256": "6f5fd2b034bc51c9fc91484830ce21ab9225afef9933232fb82d14864ba03826"
+    },
+    {
+      "path": "INPUTS_002.json",
+      "bytes": 4892,
+      "sha256": "374ef8d0c4b42912636767400e8a0769934fe72f4e965c941e511e8181679bb4"
+    },
+    {
+      "path": "top12_kernel.py",
+      "bytes": 7667,
+      "sha256": "f4367db957bac36fc319389358984ecf00b6b8788b7e19894f0600cf1e68aec5"
+    },
+    {
+      "path": "top12_study.py",
+      "bytes": 10984,
+      "sha256": "fc261288aa82e71240b1c95d0f14f29704fd0703981afb31e735f3c27b8f2d34"
+    },
+    {
+      "path": "top12_study.json",
+      "bytes": 3489,
+      "sha256": "4d8235daaec400914cafb5048b8661bcb714a81041562b65e633973b740b8a5d"
+    },
+    {
+      "path": "top12.guard.json",
+      "bytes": 2218,
+      "sha256": "b7f824875f274cb3ff75c39db2ccf557aca10d5866d37de5e8a5d53ce96d169f"
+    },
+    {
+      "path": "top12.log",
+      "bytes": 3879,
+      "sha256": "168dc8bdad8eb393f654895168dd417cb9323a41364421eea1c51f7dd8e5f3fd"
+    }
+  ]
+}

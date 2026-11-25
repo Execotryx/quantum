@@ -1,0 +1,66 @@
+{
+  "archive_sha256": "b93301f01cd5f4b3fba90d0cdff64c302ce4686adeb25f894f2a893cabffa377",
+  "artifact_hashes": {
+    "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+    "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+    "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+    "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+    "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+    "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+    "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+    "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+    "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+    "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+    "dqi.kmb": "d41de9ee484c18f91245cdb131fe765d638f06bdae955cdb5b2079bbf8c1f090",
+    "invsqrt.kmb": "254279d6ffb1907c60458ef0c8adfcd728e40ea75a44fb754be6346efeef4728"
+  },
+  "baseline_costs": {
+    "dfthcsos": 3355599588.3155375,
+    "dqi": 24439461432712.35,
+    "invsqrt": 2076774.233715282
+  },
+  "compression": "deflate9",
+  "confirmation_salt": "b7c2747ca932fb2d1f8e375364195c1c0da76d59ca47c2d73a370eb6a110ecb7",
+  "dqi_certificate_sha256": "11cea41fc25bf5a5f29b1f9ecd895fb1600c754871d888cf16a8d0ac439f813f",
+  "dqi_pricing_sha256": "e106fae341f6d83c707b19ee9e816db9968cff465bb744610fabf29972c3fdf1",
+  "driver_sha256": "8b393da7aaff0c7d7a8a98d7868c8521e83a39de711de7f6bdc2af395c947668",
+  "full_costs": {
+    "dfthcsos": 3247752448.668952,
+    "dqi": 7061602921960.864,
+    "invsqrt": 411586.9178780867
+  },
+  "metric_salt": "82e01c95a1631bc1849a33e59403db78e4d9862b1578436bd13a97edf6e7db29",
+  "parent_archive_sha256": "5eb18b89d67c8e8593e9acf492727beb13a01f6a2dd67815cfda7dfda303578d",
+  "parent_verification_sha256": "00374224bea16a22d6e275f1db72d64465bf5e56e81cef006c0be2d1d3c7d3c8",
+  "release": "v8.0",
+  "score_conservative": 2.6154247614462554,
+  "score_full": 2.622815603359347,
+  "selection": {
+    "dfthcsos": "fallback",
+    "dqi": "fallback",
+    "invsqrt": "fallback"
+  },
+  "sizes": {
+    "deflate9": 57175328,
+    "stored": 640659514
+  },
+  "stored_regression_sha256": "5eb18b89d67c8e8593e9acf492727beb13a01f6a2dd67815cfda7dfda303578d",
+  "upload_limit": {
+    "checked_on": "2026-11-14",
+    "limit": "unknown",
+    "observation": "The acquired Rules text lists daily submissions and final selections. The live Rules page returned no readable text. No byte limit was established.",
+    "rules": "https://www.kaggle.com/competitions/google-verifiable-quantum-circuit-compilation/rules"
+  },
+  "upload_limit_sha256": "33b7aab5b1354c5649321ccc8c710a1853de68185cc5e052bcf93581d22717f7",
+  "vendored_provenance": {},
+  "zlib_pin": {
+    "python_build": "3.13.15",
+    "python_build_details": [
+      "main",
+      "Aug 14 2026 15:34:59"
+    ],
+    "python_distribution": "uv cpython-3.13.15-linux-x86_64-gnu",
+    "zlib_runtime": "1.3.2"
+  },
+  "zlib_pin_sha256": "2535045dbd7f31713e4585bb6d49bc31825be679c4b9cc9fea2c5709815ee48a"
+}

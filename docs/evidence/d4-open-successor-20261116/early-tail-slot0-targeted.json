@@ -1,0 +1,139 @@
+{
+  "build_sha256": "64da89e495cadf6860749a12295cbf3b8000627db95bc1b3c0c05f8492726a01",
+  "fixture_labels": [
+    "weight-0",
+    "weight-1",
+    "weight-2",
+    "weight-3",
+    "weight-4",
+    "weight-5",
+    "weight-6",
+    "weight-7",
+    "weight-8",
+    "weight-9",
+    "weight-10",
+    "weight-11",
+    "weight-12",
+    "weight-13",
+    "weight-14",
+    "weight-15",
+    "weight-16",
+    "weight-17",
+    "weight-18",
+    "weight-19",
+    "weight-20",
+    "weight-21",
+    "weight-22",
+    "weight-23",
+    "weight-24",
+    "weight-25",
+    "weight-26",
+    "weight-27",
+    "weight-28",
+    "weight-29",
+    "weight-30",
+    "weight-31",
+    "weight-32",
+    "weight-33",
+    "weight-34",
+    "weight-35",
+    "poles-0-1",
+    "poles-0-2",
+    "poles-0-2-4",
+    "poles-0-2-zero-slope"
+  ],
+  "runs": [
+    {
+      "dirty_offsets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mask": "random",
+      "mask_offsets": [],
+      "mean_toffoli_like": 390271.125,
+      "phase_offsets": [],
+      "seed": 761,
+      "value_offsets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "dirty_offsets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mask": "zero",
+      "mask_offsets": [],
+      "mean_toffoli_like": 346027.2,
+      "phase_offsets": [],
+      "seed": 761,
+      "value_offsets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "dirty_offsets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mask": "random",
+      "mask_offsets": [],
+      "mean_toffoli_like": 390262.275,
+      "phase_offsets": [],
+      "seed": 762,
+      "value_offsets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "dirty_offsets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "mask": "zero",
+      "mask_offsets": [],
+      "mean_toffoli_like": 346020.275,
+      "phase_offsets": [],
+      "seed": 762,
+      "value_offsets": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  ]
+}

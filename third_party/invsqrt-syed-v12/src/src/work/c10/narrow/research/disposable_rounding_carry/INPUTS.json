@@ -1,0 +1,682 @@
+{
+  "status": "PINNED_OWN_SOURCE_INPUTS_NO_NATIVE_OR_STUDY_EXECUTION",
+  "original_engine_archive_sha256": "c01e1b58ee945e6c416b6f9d3bb6752fa6d6ad521032b88c3f377a20b5f93935",
+  "inherited_engine_provenance": "Original engine members were byte-compared against the checked checkpoint002 archive in disposable_feed_carry; every pinned file has been rehashed before this study.",
+  "files": [
+    {
+      "path": "PAPER_GATE_RECEIPT_014_VARIANT.json",
+      "bytes": 960,
+      "sha256": "d3ece51a8a4443080d4899f1076cbc1ef85d263057e364de79e1a4cc43ad8a18"
+    },
+    {
+      "path": "base/official/kickmix/kickmix.so",
+      "bytes": 3220392,
+      "sha256": "c66b3216c4029e0cdfd09054306aa0feadf53ab2f50c1164e37f752874e5005e"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/affine_labels.py",
+      "bytes": 9350,
+      "sha256": "1c518415b885d7d8a6dde8d20d80468a8de6af0d80a2d5bcb2732625f0495188"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/affine_table_layout.py",
+      "bytes": 3921,
+      "sha256": "5a652bb0755331907c18c02c1aa26fe1d3d10d55a6fa6513e83213445807cd57"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/asymmetric_full_main.py",
+      "bytes": 12593,
+      "sha256": "2c30a12835e3116dfa04cf40a741451488008045698bdcfac672ce72236687d2"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/asymmetric_middle_main.py",
+      "bytes": 9375,
+      "sha256": "102e9b218f55adda1b9b90d7738e8366d7ac60338714c9046eae4f16ef3de9bf"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/asymmetric_nested_main.py",
+      "bytes": 8654,
+      "sha256": "2054efb163917713681a032a5ea1eb38118761ea61d240bbcd619db06bb1e500"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/balanced_alias_profiles.py",
+      "bytes": 3190,
+      "sha256": "5e4bbdcae8a06fbc3a05d0f01d079ee1d1aa54b754b4b933528086a18d736add"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/balanced_alias_search.py",
+      "bytes": 9262,
+      "sha256": "df13742ec9c1eb8fd949a3e82de94ebec3256fc70a0a8b7e246a49bf248b4aad"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/balanced_model.py",
+      "bytes": 19404,
+      "sha256": "675b96593049b9c7fdea7cd28f09d8959baeec76178c47e63d308cbc85ffa561"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/blo9_pauli.py",
+      "bytes": 9846,
+      "sha256": "c0ded3e93cd11edb2a241ff9efd1abc6e71758856ba440a92b3ec0b37ad7be2f"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/branch_prover.py",
+      "bytes": 15244,
+      "sha256": "3d009334f8d4f37e10368ea5d46b21fa67eace7c3076f476a0b83f166cc769c2"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/c20_routing_math.py",
+      "bytes": 10452,
+      "sha256": "4ed04f9f4fa0f034698f5b2e1e2d4fd2d24246fd60ced6027998d723aafcc6b6"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/c4_routing_math.py",
+      "bytes": 2731,
+      "sha256": "327cce7d57441fc69d6aabf4dc533919db39dbb270db56bbdade35545c1e7035"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/canonical_numeric.py",
+      "bytes": 7971,
+      "sha256": "cf4088b27671bc56c10e2987055167b8025820895d74c0ae7ef255429a1392ea"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/canonical_phase_nudges.py",
+      "bytes": 3659,
+      "sha256": "477dff7a749ff1d23e1a9aa636a4babec6f8d1393dc0d37d3b518bc97a596772"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/coarse_normalization_math.py",
+      "bytes": 9510,
+      "sha256": "f0c75bb312289fef8416d8959c75262208a662c383aa3d3cdb1021ad2d302b02"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/codebook.py",
+      "bytes": 20870,
+      "sha256": "9c6073d78becea467d37805131fdcc572e530c72acef5664b08057ef883f17be"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/conditional_bank.py",
+      "bytes": 7644,
+      "sha256": "1d1906d9e2c818c1d3d3faec8faca25a1c9c6745752695eaad75350d5ed8d797"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/conditioned_terminal.py",
+      "bytes": 6736,
+      "sha256": "47d7c4677e6dd44e5fedd2c283082495753918c12c4508faca8f1fc21cebf685"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/consuming_main.py",
+      "bytes": 20767,
+      "sha256": "5762bd94b843a961f4c2c5d6d9ffc846637d02ecd739b26ab38eaf60e435794d"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/consuming_profile.py",
+      "bytes": 10853,
+      "sha256": "f328be49c7254b9ad7c43e094ea4086462cf954865acd34ef316648c35b94544"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/controlled_table_delta.py",
+      "bytes": 2970,
+      "sha256": "55af92cbcc64ad6b15d655670730f54ff9e5bdd53b70c188196a8f3dd54be811"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/crt_c10_phase.py",
+      "bytes": 14331,
+      "sha256": "2559f1e62ef99b8db47681dc0679c0d0f8ab9a86c60d5e611afd0fd5538f4524"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/crt_c10_synthesis.py",
+      "bytes": 5116,
+      "sha256": "92337178b67640365fa0f7da31a56f7e5f71dc0ae080340debf5bbe64cdcd7f3"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/curvature_inner_pauli.py",
+      "bytes": 13571,
+      "sha256": "cf19e387486e1a9857be4fdba74b161e3be9661f3102a22ccc38c85a7cec6aa4"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/curvature_pair_fusion.py",
+      "bytes": 11186,
+      "sha256": "ea18cb76ecbbf93660b95d32ccdce8020a4d6a0c287ef5f6ba1b64c435081e28"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/curvature_rank_refinement.py",
+      "bytes": 7692,
+      "sha256": "c4bef8d7218e5b8194bea85e19cbd57e2ffa60f0230d2915f582b57f675a9a04"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/curvature_triple_fusion.py",
+      "bytes": 14487,
+      "sha256": "ce07edf3693350a025db757dd35fb43e8dad626f37f6b2d8b241e9d4bb49d7d9"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/cyclic_phase.py",
+      "bytes": 15949,
+      "sha256": "ee2619af8e8d9ef09230d1c29a73e5ca13112d6295dd13b1e9e6c03cc83316b8"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/deferred_phase.py",
+      "bytes": 11638,
+      "sha256": "8eb3bb0cde49e85dae0be4f145e06e915cc96464db535a64d61aeeb2ee5f2b2f"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/dirty_terminal.py",
+      "bytes": 8750,
+      "sha256": "12fa1db8fbec7bb4dddc2905ddbb561249e64c04f18f2cfd3dad3624e63ebf7d"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/early_high.py",
+      "bytes": 16621,
+      "sha256": "8231c6d620c9627a3b99951ab33b46320943d36c17aa7449fa0ffd186aaecc3c"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/fourier_carry_reuse.py",
+      "bytes": 2766,
+      "sha256": "1eeab2b29a590d0206139717363fa7cef81d3e7655fc4a45ca0fdd0183f06f54"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/fourier_main.py",
+      "bytes": 6960,
+      "sha256": "5551a30b06020b542c100e4bf487c387a96f62c5f2f245e22d404dbe7fa812d3"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/fourier_suffix_inverse.py",
+      "bytes": 15222,
+      "sha256": "eec40ad0dcfe472aa878f63beafff4b5147295be40e4e0b1cf6745cc0c08b8f1"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/fourier_suffix_return.py",
+      "bytes": 8840,
+      "sha256": "e9adf7db9cf1442e0fea0146ad29344b1e667472115640d46aa5bc8cad8a3ee1"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/fourier_terminal_recycle.py",
+      "bytes": 9523,
+      "sha256": "63af5998d9a6008c8cb864d999a8ce78b9a479d30250d7730dbbb1c22185aa9f"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/full_r_model.py",
+      "bytes": 24318,
+      "sha256": "85e990489585aebe2a72c4fe7109c3a9a8d6f79da864ca13a3b13236e0ab77db"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/fusion/__init__.py",
+      "bytes": 142,
+      "sha256": "5e5a9c7854e181a3c12f005795a955259c9ba6f34b0d1c35ff3998b203265d40"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/fusion/arithmetic.py",
+      "bytes": 11723,
+      "sha256": "154621ee98dd8139eab601d5d794be881a5ebf38ebe1c542cf69b8fb97ee1453"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/fusion/compiler.py",
+      "bytes": 5156,
+      "sha256": "3980ca204863364f75e8d52b2e52a2515764da5dd5915aee7f347d7d325b06bb"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/fusion/lookup.py",
+      "bytes": 11813,
+      "sha256": "f9d78b2cb45575ac73d5d85b1e58f5dea404552b62741eea36196c88999a7b5c"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/fusion/normalization.py",
+      "bytes": 5682,
+      "sha256": "460b711c0d3c84fd1237d4500a927fb4dc543ff342d7bfbdcfa6243ae88cd20c"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/high_c4_phase.py",
+      "bytes": 9213,
+      "sha256": "968df8719b5f4950bc620d3d854d7b53778600ea018d11177356b74a006f1db4"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/high_geodesic_math.py",
+      "bytes": 8774,
+      "sha256": "a3869420e37c9e4a2dfc25d46d7dff25bead965d456b3f7a5f1a916864e20f10"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/high_increment.py",
+      "bytes": 5604,
+      "sha256": "3cc306915a17dbb6b894416aa16cb55e83ca571ae920247936a383c6d3f1bb87"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/high_ownership.py",
+      "bytes": 7657,
+      "sha256": "6366b624364f037688c7d2ac8f6386886c34baca71a05f93200f467738df35f6"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/high_product_share.py",
+      "bytes": 16263,
+      "sha256": "93a6bbd55afd76f53b474450b649abe7a94916c739c4ec91f7eb1f2261687f91"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/high_slack_math.py",
+      "bytes": 12336,
+      "sha256": "b27579da4997ff9f0f2eb7ca81e91f35a2e0832c29587a0c84c7a5dc5b9b38e3"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/high_slack_phase.py",
+      "bytes": 3936,
+      "sha256": "f0036b522914a8c072bf254be1e13b643f513b9dcb112f7c1dfd0e4a0627a975"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/initial_retained.py",
+      "bytes": 5400,
+      "sha256": "64ca812951d99ae0dbf76c226f5423613704f581d249a4b70ffd86e8cacdb09e"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/joint_inverse_lookup.py",
+      "bytes": 13991,
+      "sha256": "c26e9af8fe7556f6c0acaa58303c6b1f22ef11b64a0c1a9142313002d53170e8"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/joint_refine.py",
+      "bytes": 12627,
+      "sha256": "647b6d372d3efa55dca67d22fcc8d84ed8113d77e758be5745bf9648915b5631"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/late_packed_cleanup.py",
+      "bytes": 10096,
+      "sha256": "3bae2519dfc6d38d1599ccf27675302f07950693b4a11792f6f9b5fddd1cdb25"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/margin_lp.py",
+      "bytes": 3377,
+      "sha256": "f6d7e402ba81f009ea916314bb9e12b64fc9595c996b97a898ecc4ac875f2a78"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/merged_phase.py",
+      "bytes": 7014,
+      "sha256": "8782cbf6c035e07c36efd5c2e82c8696d28fa17680248d66a5b353046697a876"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/minrank_lookup.py",
+      "bytes": 8775,
+      "sha256": "b41283fb2ad3341de7b7a8137db730fb75e3c416480e4e6d31a5e07c661c688d"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/nested_main_window.py",
+      "bytes": 12528,
+      "sha256": "8f068cfbd51629c3224ca4c9c53deaf0e1ccd1dae34e15c9d8ce3b4bfdb6375d"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/nested_virtual.py",
+      "bytes": 7017,
+      "sha256": "f62c55ed71a04442142366ddbd964f71178308b36f40a6a48ea8db1d915859ac"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/new_lookup_design.py",
+      "bytes": 12913,
+      "sha256": "68f83d4cd788c7a377e73b001a6dc221cccfc1ad99d8977081b9d170aaef9341"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/normalization_fused.py",
+      "bytes": 5365,
+      "sha256": "b4f8d3c0871abc5cd68e2c537cc65203a08a65f32c1d16767ab1c4d3d5c65089"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/numerical_core.py",
+      "bytes": 4900,
+      "sha256": "0b4e07c1699e48a9b5e35b2235e1d7574111b92541df664444b8fc8cfdb7c42f"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/owned_initial_controls.py",
+      "bytes": 17865,
+      "sha256": "df7525a05162d9f860f0a075195275b4e7c6979de5dafa6f38daac8459ac6ad7"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/packed_phase.py",
+      "bytes": 10292,
+      "sha256": "85cb6c271f7c4ebbc7cfb40495f5e8ba94cca20afd65b494bc62ac4cface8dd5"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/packed_shift.py",
+      "bytes": 10600,
+      "sha256": "609503e6031494380190ea02cb2d99fb19f608253b537170e973e5665579932e"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/paired_arithmetic.py",
+      "bytes": 22363,
+      "sha256": "a10b28423640a50a45a6ab23d3604dd869c26943b0ed12021526e87d1fbf8ccc"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/phase_aware_partitions.py",
+      "bytes": 3747,
+      "sha256": "a36030d99ae6a52315fbea441032898f79aa43954fe950402eeed7336d4bc7c9"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/phase_geometry.py",
+      "bytes": 9064,
+      "sha256": "a345df4b98948e5d5b26463fda64e566a12c3f9c9fc72536d52c1fcfe82bc770"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/prefix_normalization.py",
+      "bytes": 8094,
+      "sha256": "e2bbda858bbdf7eb1ecbf11d8eee6e6f14a89484274065559c4daedafd874f27"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/profiles.py",
+      "bytes": 3589,
+      "sha256": "a3e014d5544d9b1adbec60dc0b93d1b26ad12616c592a92129a9dc46e7926436"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/quadratic_terms.py",
+      "bytes": 3940,
+      "sha256": "3cf00a5af4227daee8c7d93102bc04ec4c2f25da3662e140069494d6f93f63ef"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/r17_lookup.py",
+      "bytes": 13371,
+      "sha256": "5f3e811f08c28818671d8c741d1d2700d3569fa404bca79f2102fe3869890ed4"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/radix4_semilog_normalization.py",
+      "bytes": 11556,
+      "sha256": "ea87e7606e2a1096beb56bb212f5b5a2ad7aa0509ce297bd84f6628d519ba210"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/rare_phase_pass.py",
+      "bytes": 13719,
+      "sha256": "5b66d23ec6da6851f14b2e0a24017dbe940a2339c8fce27d4d623dd56e065e19"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/recycled_grandchild_main.py",
+      "bytes": 16274,
+      "sha256": "c05802282d35927fbd7489e4de29bc7c0732ee27a0aa0429606097dbf4cc5662"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/reduced_low_lookup.py",
+      "bytes": 2627,
+      "sha256": "272b5a096c23523e0eeba415627745613ad42aa3d4f1377fee5967f3fe5eb653"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/reencode_math.py",
+      "bytes": 16784,
+      "sha256": "dcdee64c219483f2f67e91aed15eab71b15e05558786d35307acbcb7d935e993"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/reencode_synthesis.py",
+      "bytes": 15994,
+      "sha256": "479dcc80a781f70186fcc86fcd2e92871a906e51e3e6c1801720c3f0c86a6a78"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/reencoded_c20_phase.py",
+      "bytes": 14164,
+      "sha256": "e1964ef4d289385fee65679bd6b19cd2a02b8345d591acde5879b5ab744b0d1d"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/refined_generator.py",
+      "bytes": 9369,
+      "sha256": "679781a61ba62fed9f5a4c83e4c8b2fc629f22c2d7034786b383b30d825450d7"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/reflection_low_route.py",
+      "bytes": 18868,
+      "sha256": "c00bebc092ff3c09a880eab104e5cdbb2f0135ab02a9c9b8ab87fefde106de76"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/residual_phase_fit.py",
+      "bytes": 5397,
+      "sha256": "efdc8f9bcea998d9444ab2f7978d152c26605e93b5f3f507affa824d9dec295a"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/restore_outer_exact_rank.py",
+      "bytes": 8429,
+      "sha256": "a72c1d857ed7561db773ba8e41925486c4ff81cef86cc836772dccfc28ed001f"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/retained_address.py",
+      "bytes": 1551,
+      "sha256": "e0a994e8f1c58d3491ee21c56cfe2989b1d8f80d68ffb0966a75193af1f9b20d"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/retained_products.py",
+      "bytes": 19472,
+      "sha256": "b67409253cb145e731cc42159bc1b3f751d3d16563d71b77663eb0ebd62ea0df"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/return_from_low.py",
+      "bytes": 8536,
+      "sha256": "eeb413d4fb9af24323b6b8b0371f4364242661f18a9bd8db3f8fd75b283f58e9"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/scheduled_generator.py",
+      "bytes": 31594,
+      "sha256": "fd00fc47c9656e1b487f1a3fd031c90f61c39cac5292a56a980a3591cc9a8f32"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/shared_normalization_controls.py",
+      "bytes": 13183,
+      "sha256": "878233be0ca21c3453a3030af3c58205b0353a2e61200dbe27cbd9e055acb514"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/simultaneous_quadratic.py",
+      "bytes": 14752,
+      "sha256": "53df0b33820aff15f58bbf1b0d86d61522c4abe1b771265d6d7d61937f0d160e"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/split_bounded.py",
+      "bytes": 8714,
+      "sha256": "48f762ead65b57ffd0248375e5807e66794e6649be35902c483e69b4e265f8da"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/split_lookup.py",
+      "bytes": 18486,
+      "sha256": "1416d04f317af8ae748b7a06e073c47c9a8697e1fdd11fc4958ca4cfa4b35a5f"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/stage93_curvature_forward_pair.py",
+      "bytes": 8815,
+      "sha256": "bbc752dc6d09a64a6842bf602c42f74570d2fa3727c470f3eca7edf775c16df7"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/stage93_phase_threshold_handoff.py",
+      "bytes": 11156,
+      "sha256": "a4d2affce91cc817389f8b226a78c0023b94f7c498d02d8bbb786f2c5c6058a6"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/stage94_bit_normalization.py",
+      "bytes": 7995,
+      "sha256": "f8f3b6fbe1f545c4d4a72e781c127d4296aa570840227f3d75399d3c48e28bdd"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/stage94_bit_normalization_forward.py",
+      "bytes": 12459,
+      "sha256": "16e0b6b5ce54a09f3c1d62abea29c957e875f7492eaa70bb0a3e0057ed9e34bc"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/stage94_bit_normalization_inverse.py",
+      "bytes": 9839,
+      "sha256": "82ff65309f2d13dfc78ede89b0515e8d892b03c4518a3b43af0d3af5ee7c8116"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/stage94_bit_routing_math.py",
+      "bytes": 7091,
+      "sha256": "90961eea87b046591ae4c579c5cd945022b773690469c9736fda7bead0580d84"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/stage94_normalization_forward.py",
+      "bytes": 9529,
+      "sha256": "780639b9c8742e1c5cf939d810657cadc0c24590df8f23f1c93ef6d635c9b1dc"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/staged_arithmetic.py",
+      "bytes": 16564,
+      "sha256": "2d6788e22f655f6d06da4d6f2f68d5da95fae19e3e453a413e0fb0844117cf59"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/staggered_restore.py",
+      "bytes": 1476,
+      "sha256": "e57462c235c83a7ad0c6abb10dbc66101b83294870ccd210637bcc98f50da6b6"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/tail43_hook.py",
+      "bytes": 9182,
+      "sha256": "ce450d2c389cd9ccbfc07169d749ba4c8ddc37c80ae7531f2a4836e3789d057b"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/ternary_c5.py",
+      "bytes": 9340,
+      "sha256": "4df42eda9486b59f1c4d866416c77d0afac293f5dab682cb124b579d1fdfe55e"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/thermometer_cleanup.py",
+      "bytes": 5506,
+      "sha256": "3e6efd0145521b93e706d29331b56b46d493b54cda2652265fe4b58d89a4cf50"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/threshold_phase_ledger.py",
+      "bytes": 8792,
+      "sha256": "23b6c844bd63c22343ba8e673f1f0e80aed43ab0c61c729a10ef7f062e246562"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/top_virtual_main.py",
+      "bytes": 5636,
+      "sha256": "484639650afe3839331c3113c9e4a38285ed7f97666f38faa8e42d54b277e946"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/transition_codebook.py",
+      "bytes": 20010,
+      "sha256": "39e516b7bfa4fd9745dff4a56c63a03c861788a051412f9f6465cfcc65607ca0"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/universal_phase_basis.py",
+      "bytes": 7802,
+      "sha256": "74ba951317fa5c0fb1bd67f9cc13384c456286de62d1337695332344dbff1334"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/variable_lsb_main.py",
+      "bytes": 7555,
+      "sha256": "4a101072584161e29b865c09994aa5fe13186fea30f1d59ea9b8f7dbd1ecb24c"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/virtual_lsb.py",
+      "bytes": 10226,
+      "sha256": "a1eb2cb80aa2e7291169459f7b8f7dcecb58ca037578c608ff74594e4aeb60e0"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/virtual_main.py",
+      "bytes": 5272,
+      "sha256": "43bb564ce2a129dc3f847606e177602e111ce94c82a42cc50d9fc7a393c4de02"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/window_resynthesis.py",
+      "bytes": 14215,
+      "sha256": "3df5afd60f198607fe4b9be7f422f25d57b8ba6dfcaf16efea1db754910f8436"
+    },
+    {
+      "path": "native/candidate01/common.py",
+      "bytes": 3343,
+      "sha256": "9872e64213a4219522a87efc49d1aa549a04e43ae3fb51c9d5b762b1ea6535ab"
+    },
+    {
+      "path": "native/candidate01/divider.py",
+      "bytes": 13551,
+      "sha256": "d0dbaf6fe4227da988c9cb9e9dee847624992c7c5cce7ab347990d5b0a116c05"
+    },
+    {
+      "path": "native/candidate01/lifecycle.py",
+      "bytes": 15973,
+      "sha256": "47b73f1f24ea027eedcbd1950cde7fc2535b32afeeb2e366ebdc4b6f1eb3c068"
+    },
+    {
+      "path": "native/candidate01/lifecycle_paper_replay.json",
+      "bytes": 2015,
+      "sha256": "13d50aad29561bc921bdf3f8bfc7e108dc994399157678db5d312ed3dfae0d84"
+    },
+    {
+      "path": "native/candidate01/root_decode.py",
+      "bytes": 1591,
+      "sha256": "cce7cdba0fa3afd537366af3c40d803569c5a7d99d28ba10fa46f3e8bd0d5537"
+    },
+    {
+      "path": "native/candidate01/tables.py",
+      "bytes": 10489,
+      "sha256": "cf2c83b6db5d1b1e2a63f4fe6e84976192a49eabb74e370ee2376fc4300659d3"
+    },
+    {
+      "path": "native/candidate02/INPUTS.json",
+      "bytes": 4803,
+      "sha256": "8521586ac83d0fd9bca51947525c9df09c8e68304d2ea92626b258574d5affbe"
+    },
+    {
+      "path": "native/candidate02/variant.py",
+      "bytes": 3469,
+      "sha256": "5fc151b1a633a36be4733ee23bdb66acd18504950124c54506adf25250e7e487"
+    },
+    {
+      "path": "research/disposable_feed_carry/REPORT.md",
+      "bytes": 3160,
+      "sha256": "6b470dd5556936bebe3d7e1d3b7d9ec5bab2f3103237a94ae0ad64636fed5df9"
+    },
+    {
+      "path": "research/disposable_feed_carry/SOURCE_PINS.json",
+      "bytes": 33407,
+      "sha256": "9d43ca99e7a56913938087d5d180e9a7b6a54edfcc1ab2414944ce6861d91ae4"
+    },
+    {
+      "path": "research/joint_loader/frozen/loader16_first60.json",
+      "bytes": 511451,
+      "sha256": "3bcbd49ad53c0e2661bbc1112d172c854d4bf50ba4ea1f9a119a077f8e6cd9fd"
+    },
+    {
+      "path": "research/joint_loader/frozen/loader16_second73.json",
+      "bytes": 472549,
+      "sha256": "52db753c9efef945c9194ed4a39ec3b250221b69eb10e0030dc2a283f659eafc"
+    },
+    {
+      "path": "research/joint_loader/frozen/retained_table_cleanup9.json",
+      "bytes": 228186,
+      "sha256": "6a48b472433918d2c51f30e6eeb1d9933fdf1aa4ae9f83b93129fd8ac103b6b5"
+    },
+    {
+      "path": "research/lifecycle_schedule/seed_phase_cleanup_conditional.json",
+      "bytes": 12356,
+      "sha256": "71f0fcb5645fd32cf128c310c5e5cba406d1ad33c02b4f37e51869ee845ed466"
+    },
+    {
+      "path": "research/lifecycle_schedule/slope_h3_h4_retirement_v3.json",
+      "bytes": 6444,
+      "sha256": "1e5afe12bc0a9005bb3705afdc564f30c0861d99970d31f71d9b7c2556e17721"
+    },
+    {
+      "path": "research/postgate_angle_refit/quantize50_bound.json",
+      "bytes": 16208,
+      "sha256": "fdbd64481c3e876ac88a6a0ad80c44a8b019807cc5d3b5cdee5bd12a59630ac1"
+    },
+    {
+      "path": "research/quantized_producer/framed_retained5_best21_snapshot.json",
+      "bytes": 27402,
+      "sha256": "3b6fa7059bee77bb9abe6c7395cd8ff2f2899843523188c60d513e6c5d381def"
+    },
+    {
+      "path": "research/recompute_root/initializer_u12/local_algebra.json",
+      "bytes": 9627,
+      "sha256": "978c2adafd8d3355558a5e672982623372d459dec610273e1e43847681cc4c14"
+    },
+    {
+      "path": "research/recompute_root/models/phasefit_z1_K7_G4_m37_virtual_quadS2_36_12c0.json",
+      "bytes": 474447,
+      "sha256": "24fff823faa911afe93d02afc3ded0bbd156a210a85f1265c989a087f8fd1219"
+    },
+    {
+      "path": "research/stream_phase/alias_ring/phase_ledger.py",
+      "bytes": 7830,
+      "sha256": "e8cc5a9095fd4bf29b5e77c6b58382b54ea46918102dbc10d1cad7c1edb255c3"
+    },
+    {
+      "path": "research/stream_phase/drive_paper_ledger.py",
+      "bytes": 7367,
+      "sha256": "d2e03ab32c5082d1f8d274c733ee7fa53be24a2c86ca5b0b47a10adbea612b19"
+    },
+    {
+      "path": "research/stream_phase/inverse_policy_check.json",
+      "bytes": 6072,
+      "sha256": "b14120fe748b0a3a2d51ddab3bba588510ec655be1d2796449965adc1d85d092"
+    },
+    {
+      "path": "research/stream_phase/inverse_policy_paper.py",
+      "bytes": 5021,
+      "sha256": "35a183cefff6c588e935d7fa75411102a4b6d546def38f1135fe15d892e38352"
+    }
+  ]
+}

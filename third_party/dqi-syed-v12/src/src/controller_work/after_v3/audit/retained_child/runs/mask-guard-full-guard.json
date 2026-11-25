@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "controller_work/after_v3/audit/retained_child/check_quotient_phase84_mask_guard.py",
+    "--output",
+    "controller_work/after_v3/audit/retained_child/runs/mask-guard-full",
+    "--cases",
+    "4096"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794391768.7922475,
+  "rss_soft": 1200000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 56135680,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 5,
+  "elapsed_seconds": 12.568179845809937,
+  "current_rss": 34193408,
+  "available_bytes": 9615998976,
+  "exit_code": 0
+}

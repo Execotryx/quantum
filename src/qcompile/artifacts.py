@@ -5,7 +5,9 @@ import re
 import shutil
 import stat
 import zipfile
+import zlib
 from pathlib import Path, PurePosixPath
+from typing import Literal
 
 import numpy as np
 
@@ -115,14 +117,29 @@ def hashes(artifacts):
     return {name: record["sha256"] for name, record in artifacts.items()}
 
 
-def deterministic_zip(path, files):
+def deterministic_zip(
+    path, files, *,
+    compression: Literal["stored", "deflate9"] = "stored",
+    zlib_runtime: str | None = None,
+):
     validate_layout(files)
+    if compression not in ("stored", "deflate9"):
+        raise ValidationError("unknown ZIP compression mode")
+    deflate = compression == "deflate9"
+    if deflate and zlib_runtime != zlib.ZLIB_RUNTIME_VERSION:
+        raise ValidationError("deflate9 requires the pinned zlib runtime version")
     with zipfile.ZipFile(path, "x", allowZip64=True) as archive:
         for name in sorted(files):
             source = Path(files[name])
             if not source.is_file() or source.is_symlink():
                 raise ValidationError(f"missing regular archive input: {name}")
-            with source.open("rb") as src, archive.open(zip_info(name), "w", force_zip64=True) as dest:
+            item = zip_info(name)
+            if deflate:
+                item.file_size = source.stat().st_size
+                item.compress_type = zipfile.ZIP_DEFLATED
+                # Python 3.12 exposes the compression level under the private name.
+                setattr(item, "compress_level" if hasattr(item, "compress_level") else "_compresslevel", 9)
+            with source.open("rb") as src, archive.open(item, "w", force_zip64=not deflate) as dest:
                 shutil.copyfileobj(src, dest, 1 << 20)
 
 

@@ -1,0 +1,19 @@
+{
+  "status": "PASS_NATIVE_COMPONENT",
+  "cap": 44,
+  "forward_Q_including4spectators": 42,
+  "inverse_Q_including4spectators": 42,
+  "forward_static_toffoli": 103,
+  "inverse_static_toffoli": 103,
+  "checks": [
+    {
+      "seed": 0,
+      "shots": 3145728,
+      "forward_and_roundtrip": "PASS",
+      "mean_toffoli_roundtrip": 206.0
+    }
+  ],
+  "exhaustive": true,
+  "elapsed_seconds": 21.53459858894348,
+  "scope": "Native representation component, not official complete invsqrt verifier."
+}

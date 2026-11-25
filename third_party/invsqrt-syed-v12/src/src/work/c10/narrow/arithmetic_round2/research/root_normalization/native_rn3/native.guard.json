@@ -1,0 +1,133 @@
+{
+  "status": "COMPLETED",
+  "work_window_sha256": "18a44534df9aaa46f4ab3bcaeb452e46cad3a7bd317a0edf798ee37ecde622fe",
+  "work_window_path": "/workspace/scratch/40c9505bd2bc/narrow/arithmetic_round2/WORK_WINDOW.json",
+  "source_helpers_sha256": "6795b9ac76c889da1aa311ae59da5d1f1a6000a5c0cfbeec142185091943b202",
+  "cgroup_counters": "UNAVAILABLE_IN_EXEC_SANDBOX_NOT_CLAIMED_CHECKED",
+  "substitute_envelope": "Hard RLIMIT_AS plus lower aggregate RSS cap, current host headroom, bounded descendants and shared lock",
+  "limits": {
+    "per_process_hard_address_bytes": 536870912,
+    "aggregate_RSS_stop_bytes": 805306368,
+    "minimum_host_available_bytes": 4294967296,
+    "live_process_cap": 8
+  },
+  "command": [
+    "/usr/bin/python3.13",
+    "narrow/arithmetic_round2/research/root_normalization/native_rn3/prove_root192.py",
+    "--chunk",
+    "65536"
+  ],
+  "timeout_seconds": 120.0,
+  "automatic_workload_retries": 0,
+  "peak_aggregate_rss_bytes": 37183488,
+  "peak_process_count": 1,
+  "minimum_host_available_bytes": 9228939264,
+  "started_unix": 1794455580.1748698,
+  "samples": [
+    {
+      "elapsed_seconds": 0.20159224900999106,
+      "aggregate_rss_bytes": 25550848,
+      "live_processes": 1,
+      "host_available_bytes": 9246781440
+    },
+    {
+      "elapsed_seconds": 0.4059496170084458,
+      "aggregate_rss_bytes": 36659200,
+      "live_processes": 1,
+      "host_available_bytes": 9238904832
+    },
+    {
+      "elapsed_seconds": 0.6071637920103967,
+      "aggregate_rss_bytes": 37052416,
+      "live_processes": 1,
+      "host_available_bytes": 9233338368
+    },
+    {
+      "elapsed_seconds": 0.6787709260097472,
+      "aggregate_rss_bytes": 37052416,
+      "live_processes": 1,
+      "host_available_bytes": 9231196160
+    },
+    {
+      "elapsed_seconds": 0.8169944760011276,
+      "aggregate_rss_bytes": 37052416,
+      "live_processes": 1,
+      "host_available_bytes": 9238908928
+    },
+    {
+      "elapsed_seconds": 0.9641378770029405,
+      "aggregate_rss_bytes": 37052416,
+      "live_processes": 1,
+      "host_available_bytes": 9238503424
+    },
+    {
+      "elapsed_seconds": 1.159660122008063,
+      "aggregate_rss_bytes": 37052416,
+      "live_processes": 1,
+      "host_available_bytes": 9238503424
+    },
+    {
+      "elapsed_seconds": 1.3608666330110282,
+      "aggregate_rss_bytes": 37183488,
+      "live_processes": 1,
+      "host_available_bytes": 9231147008
+    },
+    {
+      "elapsed_seconds": 1.4044153160066344,
+      "aggregate_rss_bytes": 37183488,
+      "live_processes": 1,
+      "host_available_bytes": 9229770752
+    },
+    {
+      "elapsed_seconds": 1.5988668930076528,
+      "aggregate_rss_bytes": 37183488,
+      "live_processes": 1,
+      "host_available_bytes": 9228943360
+    },
+    {
+      "elapsed_seconds": 1.7637009660102194,
+      "aggregate_rss_bytes": 37183488,
+      "live_processes": 1,
+      "host_available_bytes": 9228943360
+    },
+    {
+      "elapsed_seconds": 1.9514838559989585,
+      "aggregate_rss_bytes": 37183488,
+      "live_processes": 1,
+      "host_available_bytes": 9228939264
+    },
+    {
+      "elapsed_seconds": 1.9536490450118436,
+      "aggregate_rss_bytes": 37183488,
+      "live_processes": 1,
+      "host_available_bytes": 9228939264
+    },
+    {
+      "elapsed_seconds": 1.973686715005897,
+      "aggregate_rss_bytes": 0,
+      "live_processes": 0,
+      "host_available_bytes": 9237110784
+    }
+  ],
+  "child_cleanup": {
+    "term_sent_pids": [],
+    "kill_sent_pids": [],
+    "reaped_pids": [],
+    "remaining_pids": [],
+    "zombie_pids": [],
+    "dead_pids": [],
+    "remaining_states": {},
+    "complete": true
+  },
+  "queue_wait_seconds": 0.0006006369949318469,
+  "preflight_host": {
+    "total_bytes": 10451427328,
+    "available_bytes": 9261961216
+  },
+  "elapsed_seconds": 1.9949286359915277,
+  "subreaper_enabled": true,
+  "child_pid": 5,
+  "stop_reason": "completed",
+  "returncode": 0,
+  "output_bytes": 6202
+}

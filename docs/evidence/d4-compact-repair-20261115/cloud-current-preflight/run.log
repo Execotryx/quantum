@@ -1,0 +1,20 @@
+launch.sh: OK
+source.tar.gz: OK
+Sun Nov 15 23:43:50 UTC 2026
+unit-tail static stage counts {'extract': 64397, 'certificate': 0, 'synthesis': 26689, 'normalize': 2715, 'convert': 51404, 'scan': 44275, 'unconvert': 53430, 'unnormalize': 2715, 'unsynthesis': 39151, 'uncertificate': 0, 'unextract': 125407} cumulative widths {'extract': 920, 'certificate': 920, 'synthesis': 920, 'normalize': 920, 'convert': 920, 'scan': 920, 'unconvert': 920, 'unnormalize': 920, 'unsynthesis': 920, 'uncertificate': 920, 'unextract': 920}
+unit-tail padded=False first=True degree-cert=True norms=True live-degree=False seed=715 full=False qubits=920 gates=91069.5
+unit-tail padded=False first=True degree-cert=True norms=True live-degree=False seed=715 full=True qubits=920 gates=403342.5
+unit-tail padded=False first=True degree-cert=True norms=True live-degree=False seed=716 full=False qubits=920 gates=91048.0
+unit-tail padded=False first=True degree-cert=True norms=True live-degree=False seed=716 full=True qubits=920 gates=403506.5
+.unit-tail static stage counts {'extract': 64397, 'certificate': 0, 'synthesis': 28207, 'normalize': 2726, 'convert': 51404, 'scan': 48300, 'unconvert': 53430, 'unnormalize': 2725, 'unsynthesis': 40669, 'uncertificate': 0, 'unextract': 125407} cumulative widths {'extract': 920, 'certificate': 920, 'synthesis': 920, 'normalize': 920, 'convert': 926, 'scan': 926, 'unconvert': 926, 'unnormalize': 926, 'unsynthesis': 926, 'uncertificate': 926, 'unextract': 926}
+unit-tail padded=False first=True degree-cert=True norms=True live-degree=True seed=715 full=False qubits=920 gates=92223.83333333333
+unit-tail padded=False first=True degree-cert=True norms=True live-degree=True seed=715 full=True qubits=926 gates=409905.8333333333
+unit-tail padded=False first=True degree-cert=True norms=True live-degree=True seed=716 full=False qubits=920 gates=92256.0
+unit-tail padded=False first=True degree-cert=True norms=True live-degree=True seed=716 full=True qubits=926 gates=409931.0
+.incoming s6 degree=32 seed=747 qubits=939 mean_gates=422360.5
+incoming s6 degree=32 seed=748 qubits=939 mean_gates=422378.5
+.incoming s7 degree=33 seed=747 qubits=940 mean_gates=431991.75
+incoming s7 degree=33 seed=748 qubits=940 mean_gates=431886.0
+.
+4 passed, 50 deselected in 591.43s (0:09:51)
+Sun Nov 15 23:53:43 UTC 2026

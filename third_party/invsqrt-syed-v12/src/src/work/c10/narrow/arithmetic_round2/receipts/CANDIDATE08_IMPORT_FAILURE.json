@@ -1,0 +1,17 @@
+{
+  "status": "BUILD_STOPPED_BEFORE_EMISSION_MODULE_BINDING_FAILURE",
+  "utc": "2026-11-12T04:33:46.477422+00:00",
+  "candidate": "candidate08",
+  "source_ready_sha256": "a36603e5eb79450295a57ff47380d5f946a57b2ffe7173b570d82eb466860435",
+  "guard_sha256": "67f12c634429aa79757727826263e885730aa24d7656fc9be02c07f93f75e99c",
+  "log_sha256": "fb65a513f5d5033f9021643838010992034d418108a80582030a3a389c88d1bb",
+  "guard_returncode": 1,
+  "guard_cleanup_complete": true,
+  "circuit_emitted": false,
+  "native_proof_run": false,
+  "official_verifier_run": false,
+  "cause": "tables07.py imports the canonical variant name; the new composition loaded the same pinned candidate07 module only under a private alias.",
+  "correction": "Fresh candidate09 binds the immutable candidate07 module directly under canonical name variant; all inherited source and all arithmetic gates remain unchanged.",
+  "unchanged_five_component_native_proofs": true,
+  "no_workload_limit_hit": true
+}

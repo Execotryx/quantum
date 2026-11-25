@@ -1,0 +1,18 @@
+launch.sh: OK
+source.tar.gz: OK
+Contract source hashes verified
+metric started
+Mon Nov 16 22:04:45 UTC 2026
+Traceback (most recent call last):
+  File "/dev/shm/d4-aggregate20-20261117/source/tools/dqi_open_portfolio.py", line 153, in <module>
+    main()
+    ~~~~^^
+  File "/dev/shm/d4-aggregate20-20261117/source/tools/dqi_open_portfolio.py", line 149, in main
+    measure(args.registration, args.archive, args.backend, args.output, args.role)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/dev/shm/d4-aggregate20-20261117/source/tools/dqi_open_portfolio.py", line 113, in measure
+    artifacts = manifest(output / "extracted", origin="generated",
+                         provenance="Fresh extraction of above-20 portfolio registration")
+  File "/home/execotryx_gmail_com/d4-aggregate20-20261117/source/src/qcompile/artifacts.py", line 84, in manifest
+    raise ValidationError("artifact must be a regular file, not a link")
+qcompile.errors.ValidationError: artifact must be a regular file, not a link

@@ -1,0 +1,34 @@
+{
+  "status": "SOURCE_READY_STATIC_COMPONENT_PASS_NATIVE_WHOLE_PROOF_PENDING",
+  "api": "load_joint16(builder,address7,variant=first|second,debts=shared_TableDebts)->A13,Hlow3",
+  "first_Toffolis": 61,
+  "second_Toffolis": 79,
+  "first_HMR_debts": 45,
+  "second_HMR_debts": 65,
+  "peak": 48,
+  "cleanup_Toffolis": 9,
+  "shared_class_identity": "variant.inherited_module(tables06).TableDebts",
+  "all_128_rows_and_symbolic_HMR_generators_checked": true,
+  "source_files": [
+    {
+      "path": "tables07.py",
+      "bytes": 6050,
+      "sha256": "3834990b7546026372722abc5fefb24fb4effd889dfd29743353a174753ea88e"
+    },
+    {
+      "path": "audit_tables07_static.py",
+      "bytes": 13554,
+      "sha256": "e70706e498681c81089c44d18e6de830af5cb917b512740b54f57988e9a8edc3"
+    },
+    {
+      "path": "tables07_static_audit.json",
+      "bytes": 2937,
+      "sha256": "c433c64c5f1f286709d9c1c28115b001294912e5c336757552dc4dca9d8ca400"
+    },
+    {
+      "path": "TABLES07_PLAN.md",
+      "bytes": 632,
+      "sha256": "803a43d6ad3d58d562eef970903a98f6e7840517728648e6e00a51f1b3dabc67"
+    }
+  ]
+}

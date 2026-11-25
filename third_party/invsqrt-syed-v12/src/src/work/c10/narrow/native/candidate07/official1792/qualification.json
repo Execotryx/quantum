@@ -1,0 +1,125 @@
+{
+  "status": "QUALIFIED_FOUR_ORIGINAL_SALTS_AND_COMPLETE_NATIVE_PROOF",
+  "circuit_sha256": "ea5677b1686a28a092751bd15240dd0d54af112488758a35dc6b986fa479efe8",
+  "native_proof_sha256": "12d18f2c972bc929bba3b2baadb0db3001fe73c47205cef172375d4905e37071",
+  "Q": 48,
+  "required_salts": [
+    "default",
+    "1",
+    "2",
+    "3"
+  ],
+  "required_inputs": 3133452,
+  "shots_per_input": 64,
+  "original_tolerance_unchanged": true,
+  "verifier_wrapper_sha256": "aef104e3b7f267b22401c4c8723685f4f1960b3072ec2f59dac5f3bb47172892",
+  "no_submission": true,
+  "batch_size": 1792,
+  "max_workers": 2,
+  "full_original_verifier_checks": true,
+  "started_utc": "2026-11-12T01:55:34.135834+00:00",
+  "max_new_salts_this_group": 2,
+  "qualified": true,
+  "results": [
+    {
+      "salt": "default",
+      "official_result": {
+        "status": "PASS",
+        "score": 87160.71731626114,
+        "toffoli_equivalent": 1815.8482774221072,
+        "toffoli_count": 1584.0002179604953,
+        "max_toffoli_count": 1671,
+        "t_count": 4.0,
+        "rotation_count": 33.0,
+        "rotation_eps": 6.418510368591089e-13,
+        "num_qubits": 48,
+        "reaction_depth": 1368,
+        "num_ops": 36105,
+        "verified_shots": 200540928,
+        "worst_error_over_tolerance": 0.973575996935943,
+        "worst_x": 54566,
+        "circuit_sha256": "ea5677b1686a28a092751bd15240dd0d54af112488758a35dc6b986fa479efe8"
+      },
+      "record_sha256": "4dd335df745e89864391f23c0b5c44e9240fd375f602c99f549e9abcdf1b4c46",
+      "official_json_sha256": "689ece34afb37811ab95abdd348681b8ff7305f562faba1ba2b7f27e22f05350"
+    },
+    {
+      "salt": "1",
+      "official_result": {
+        "status": "PASS",
+        "score": 87160.79677726772,
+        "toffoli_equivalent": 1815.8499328597443,
+        "toffoli_count": 1584.0018733981324,
+        "max_toffoli_count": 1671,
+        "t_count": 4.0,
+        "rotation_count": 33.0,
+        "rotation_eps": 6.418510368591089e-13,
+        "num_qubits": 48,
+        "reaction_depth": 1368,
+        "num_ops": 36105,
+        "verified_shots": 200540928,
+        "worst_error_over_tolerance": 0.973575996935943,
+        "worst_x": 54566,
+        "circuit_sha256": "ea5677b1686a28a092751bd15240dd0d54af112488758a35dc6b986fa479efe8"
+      },
+      "record_sha256": "86f051b7af2e971c0bfb7fea77e87ca7e7c818b2ff65f111b97beef139525bae",
+      "official_json_sha256": "67fa7417393643a3eaabb0b73e128f8a7966a9fa8445768afba4ab89f0a03e43"
+    },
+    {
+      "salt": "2",
+      "official_result": {
+        "status": "PASS",
+        "score": 87160.6823485163,
+        "toffoli_equivalent": 1815.847548927423,
+        "toffoli_count": 1583.9994894658112,
+        "max_toffoli_count": 1671,
+        "t_count": 4.0,
+        "rotation_count": 33.0,
+        "rotation_eps": 6.418510368591089e-13,
+        "num_qubits": 48,
+        "reaction_depth": 1368,
+        "num_ops": 36105,
+        "verified_shots": 200540928,
+        "worst_error_over_tolerance": 0.973575996935943,
+        "worst_x": 54566,
+        "circuit_sha256": "ea5677b1686a28a092751bd15240dd0d54af112488758a35dc6b986fa479efe8"
+      },
+      "record_sha256": "851a13e4af8a1f02a90bac6fd53b70553107f61f6821a3fe5eff1dabf1da2210",
+      "official_json_sha256": "de5946a83692e7cb277b64bc4fb06896931e3df580d9848bb31de06ee019de24"
+    },
+    {
+      "salt": "3",
+      "official_result": {
+        "status": "PASS",
+        "score": 87160.73906503854,
+        "toffoli_equivalent": 1815.848730521636,
+        "toffoli_count": 1584.0006710600242,
+        "max_toffoli_count": 1671,
+        "t_count": 4.0,
+        "rotation_count": 33.0,
+        "rotation_eps": 6.418510368591089e-13,
+        "num_qubits": 48,
+        "reaction_depth": 1368,
+        "num_ops": 36105,
+        "verified_shots": 200540928,
+        "worst_error_over_tolerance": 0.973575996935943,
+        "worst_x": 54566,
+        "circuit_sha256": "ea5677b1686a28a092751bd15240dd0d54af112488758a35dc6b986fa479efe8"
+      },
+      "record_sha256": "324a572665aadfa83a50dd664d4701c1248dd63fa5046e3253b2620438c94d7f",
+      "official_json_sha256": "34796ae57cb8fb364d0fdd55c112f7e4b1a0e01317aeb6ad96fc85a65595b60f"
+    }
+  ],
+  "elapsed_seconds": 1365.4162212910014,
+  "default_score": 87160.71731626114,
+  "score_range": [
+    87160.6823485163,
+    87160.79677726772
+  ],
+  "conservative_score": 87160.79677726772,
+  "total_official_shots": 802163712,
+  "all_salts_beat_stage97": true,
+  "all_salts_meet_target": true,
+  "all_salts_meet_stretch": false,
+  "finished_utc": "2026-11-12T02:18:19.553643+00:00"
+}

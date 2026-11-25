@@ -1,0 +1,589 @@
+{
+  "status": "PASS_FINITE_RING26_BASIS_AND_COMPLETE_PAPER_RESOURCE_LEDGER_ACCURACY_PENDING",
+  "source_pins": {
+    "native/candidate01/divider.py": "d0dbaf6fe4227da988c9cb9e9dee847624992c7c5cce7ab347990d5b0a116c05",
+    "native/candidate06/phase06.py": "4e979c47bc90317a6ac3576bc74964cf74222c2006e1630f6b17075af51ccdfb",
+    "research/postgate_angle_refit/quantize50.json": "8670515091475959ab0edeae03cb736cdb1cb66cd7768366e69fafb7eff8bf72",
+    "checkpoint002/cleanroom/baseline_stage97/engine/quadratic_terms.py": "3cf00a5af4227daee8c7d93102bc04ec4c2f25da3662e140069494d6f93f63ef",
+    "base/official/verifier_invsqrt/verify_submission_invsqrt.py": "ddef520dec6b68d1cf0a6f328ddd36d79eb84570b9192cf3f7acaf073f06733a",
+    "PAPER_GATE_RECEIPT_018_VARIANT.json": "99ef9a891d4e99b262b1a452ea48b18c536e91e7017f018b77bc37f1793ccffd",
+    "research/joint_loader/Q48_COMPLETE_PAPER_GATE.json": "912da9164095aa996317909903d50162a76eded7ff9a90cbb9299c85c013de2c"
+  },
+  "ring_bits": 26,
+  "arbitrary_phase_bits": 25,
+  "known_one_bits": 1,
+  "exponent_classes": 11,
+  "centres": [
+    0,
+    -2,
+    -6,
+    0,
+    -1
+  ],
+  "active": [
+    30,
+    6,
+    27,
+    3,
+    17,
+    9,
+    18,
+    10,
+    23,
+    15,
+    20
+  ],
+  "controls": [
+    [
+      2,
+      4,
+      8
+    ],
+    [
+      0,
+      4,
+      16
+    ],
+    [
+      0,
+      2,
+      4,
+      16
+    ],
+    [
+      0,
+      1,
+      4,
+      8
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "thresholds": {
+    "1": [
+      1,
+      2,
+      4,
+      8,
+      16,
+      3,
+      5,
+      9,
+      17
+    ],
+    "2": [
+      2,
+      4,
+      8,
+      16
+    ],
+    "3": [
+      4,
+      8,
+      3,
+      17
+    ],
+    "4": [
+      4,
+      8
+    ],
+    "5": [
+      8,
+      16,
+      32,
+      5,
+      17
+    ],
+    "6": [
+      8,
+      16,
+      32
+    ],
+    "7": [
+      8,
+      17
+    ],
+    "8": [
+      8
+    ],
+    "9": [
+      9,
+      10
+    ],
+    "10": [
+      32
+    ]
+  },
+  "threshold_Toffolis": {
+    "1": 1,
+    "2": 0,
+    "3": 1,
+    "4": 0,
+    "5": 1,
+    "6": 0,
+    "7": 1,
+    "8": 0,
+    "9": 1
+  },
+  "swaps_per_stage": [
+    12,
+    12,
+    12,
+    12,
+    13
+  ],
+  "slots": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "boolean_checks": 165,
+  "phase_basis_checks": 286,
+  "independent_HMR_phase_coefficient_checks": 1352,
+  "old_new_original_phase_difference": "w+1-2^k",
+  "seed_refitted_phase_equal_for_k": [
+    0,
+    1
+  ],
+  "baseline_coefficients_units37": [
+    2,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    1024,
+    2048,
+    4096,
+    8192,
+    16384,
+    32768,
+    65536,
+    131072,
+    262144,
+    524288,
+    1048576,
+    2097152,
+    4194304,
+    8388608,
+    16777216,
+    33554432,
+    67108864,
+    134217728,
+    268435456,
+    536870912,
+    1073741824,
+    2147483648,
+    4294967296,
+    8589934592,
+    1
+  ],
+  "seed_angles_units50": [
+    16696,
+    31885,
+    65753,
+    131886,
+    261678,
+    525486,
+    1048587,
+    2096433,
+    4194464,
+    8388179,
+    16777422,
+    33554147,
+    67108361,
+    134217166,
+    268435982,
+    536872047,
+    1073743824,
+    2147484968,
+    4294967019,
+    8589934482,
+    17179868565,
+    34359738074,
+    68719476677,
+    137438953062,
+    274877906104,
+    549755822080,
+    1099511634841,
+    2199023247360,
+    4398046519296,
+    8796093014016,
+    17592186036224,
+    35184372080640,
+    70368744169472,
+    982
+  ],
+  "seed_angle_sites": [
+    {
+      "site": "base_i0",
+      "turn_units50": 16696,
+      "turns": "2087/140737488355328",
+      "half_turns": "2087/70368744177664",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": 5111808
+    },
+    {
+      "site": "base_i1",
+      "turn_units50": 31885,
+      "turns": "31885/1125899906842624",
+      "half_turns": "31885/562949953421312",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": -14467072
+    },
+    {
+      "site": "base_i2",
+      "turn_units50": 65753,
+      "turns": "65753/1125899906842624",
+      "half_turns": "65753/562949953421312",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": 3555328
+    },
+    {
+      "site": "base_i3",
+      "turn_units50": 131886,
+      "turns": "65943/562949953421312",
+      "half_turns": "65943/281474976710656",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": 13336576
+    },
+    {
+      "site": "base_i4",
+      "turn_units50": 261678,
+      "turns": "130839/562949953421312",
+      "half_turns": "130839/281474976710656",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": -7634944
+    },
+    {
+      "site": "base_i5",
+      "turn_units50": 525486,
+      "turns": "262743/562949953421312",
+      "half_turns": "262743/281474976710656",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": 19628032
+    },
+    {
+      "site": "base_i6",
+      "turn_units50": 1048587,
+      "turns": "1048587/1125899906842624",
+      "half_turns": "1048587/562949953421312",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": 180224
+    },
+    {
+      "site": "base_i7",
+      "turn_units50": 2096433,
+      "turns": "2096433/1125899906842624",
+      "half_turns": "2096433/562949953421312",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": -11780096
+    },
+    {
+      "site": "base_i8",
+      "turn_units50": 4194464,
+      "turns": "131077/35184372088832",
+      "half_turns": "131077/17592186044416",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": 2621440
+    },
+    {
+      "site": "base_i9",
+      "turn_units50": 8388179,
+      "turns": "8388179/1125899906842624",
+      "half_turns": "8388179/562949953421312",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": -7028736
+    },
+    {
+      "site": "base_i10",
+      "turn_units50": 16777422,
+      "turns": "8388711/562949953421312",
+      "half_turns": "8388711/281474976710656",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": 3375104
+    },
+    {
+      "site": "base_i11",
+      "turn_units50": 33554147,
+      "turns": "33554147/1125899906842624",
+      "half_turns": "33554147/562949953421312",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": -4669440
+    },
+    {
+      "site": "base_i12",
+      "turn_units50": 67108361,
+      "turns": "67108361/1125899906842624",
+      "half_turns": "67108361/562949953421312",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": -8241152
+    },
+    {
+      "site": "base_i13",
+      "turn_units50": 134217166,
+      "turns": "67108583/562949953421312",
+      "half_turns": "67108583/281474976710656",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": -9207808
+    },
+    {
+      "site": "base_i14",
+      "turn_units50": 268435982,
+      "turns": "134217991/562949953421312",
+      "half_turns": "134217991/281474976710656",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": 8617984
+    },
+    {
+      "site": "base_i15",
+      "turn_units50": 536872047,
+      "turns": "536872047/1125899906842624",
+      "half_turns": "536872047/562949953421312",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": 18595840
+    },
+    {
+      "site": "base_i16",
+      "turn_units50": 1073743824,
+      "turns": "67108989/70368744177664",
+      "half_turns": "67108989/35184372088832",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": 32768000
+    },
+    {
+      "site": "base_i17",
+      "turn_units50": 2147484968,
+      "turns": "268435621/140737488355328",
+      "half_turns": "268435621/70368744177664",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": 21626880
+    },
+    {
+      "site": "base_i18",
+      "turn_units50": 4294967019,
+      "turns": "4294967019/1125899906842624",
+      "half_turns": "4294967019/562949953421312",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": -4538368
+    },
+    {
+      "site": "base_i19",
+      "turn_units50": 8589934482,
+      "turns": "4294967241/562949953421312",
+      "half_turns": "4294967241/281474976710656",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": -1802240
+    },
+    {
+      "site": "base_i20",
+      "turn_units50": 17179868565,
+      "turns": "17179868565/1125899906842624",
+      "half_turns": "17179868565/562949953421312",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": -10141696
+    },
+    {
+      "site": "base_i21",
+      "turn_units50": 34359738074,
+      "turns": "17179869037/562949953421312",
+      "half_turns": "17179869037/281474976710656",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": -4816896
+    },
+    {
+      "site": "base_i22",
+      "turn_units50": 68719476677,
+      "turns": "68719476677/1125899906842624",
+      "half_turns": "68719476677/562949953421312",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": -966656
+    },
+    {
+      "site": "base_i23",
+      "turn_units50": 137438953062,
+      "turns": "68719476531/562949953421312",
+      "half_turns": "68719476531/281474976710656",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": -6717440
+    },
+    {
+      "site": "base_i24",
+      "turn_units50": 274877906104,
+      "turns": "34359738263/140737488355328",
+      "half_turns": "34359738263/70368744177664",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": -13762560
+    },
+    {
+      "site": "base_i25",
+      "turn_units50": 549755822080,
+      "turns": "67108865/137438953472",
+      "half_turns": "67108865/68719476736",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": 134217728
+    },
+    {
+      "site": "overflow_j0",
+      "turn_units50": 1099511634841,
+      "turns": "1099511634841/1125899906842624",
+      "half_turns": "1099511634841/562949953421312",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": 115752960
+    },
+    {
+      "site": "overflow_j1",
+      "turn_units50": 2199023247360,
+      "turns": "268435455/137438953472",
+      "half_turns": "268435455/68719476736",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": -134217728
+    },
+    {
+      "site": "overflow_j2",
+      "turn_units50": 4398046519296,
+      "turns": "536870913/137438953472",
+      "half_turns": "536870913/68719476736",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": 134217728
+    },
+    {
+      "site": "overflow_j3",
+      "turn_units50": 8796093014016,
+      "turns": "1073741823/137438953472",
+      "half_turns": "1073741823/68719476736",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": -134217728
+    },
+    {
+      "site": "overflow_j4",
+      "turn_units50": 17592186036224,
+      "turns": "2147483647/137438953472",
+      "half_turns": "2147483647/68719476736",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": -134217728
+    },
+    {
+      "site": "overflow_j5",
+      "turn_units50": 35184372080640,
+      "turns": "4294967295/137438953472",
+      "half_turns": "4294967295/68719476736",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": -134217728
+    },
+    {
+      "site": "overflow_j6",
+      "turn_units50": 70368744169472,
+      "turns": "8589934591/137438953472",
+      "half_turns": "8589934591/68719476736",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": -134217728
+    },
+    {
+      "site": "global_one",
+      "turn_units50": 982,
+      "turns": "491/562949953421312",
+      "half_turns": "491/281474976710656",
+      "angle_class": "rotation",
+      "identity": false,
+      "delta_turn_units64": -118128640
+    }
+  ],
+  "phase_components_expected_Toffolis": {
+    "route": 122,
+    "endpoint_frames": 2,
+    "p_c": 2,
+    "thresholds": 5,
+    "features": 8
+  },
+  "phase_expected_Toffolis": 139,
+  "T": 4,
+  "R": 34,
+  "entry_exit_owners": 43,
+  "peak_owners": {
+    "data": 43,
+    "one": 1,
+    "p_c": 2,
+    "threshold": 1,
+    "feature": 1,
+    "total": 48
+  },
+  "global_rotation_schedule": "After inverse route, on restored explicitW25=1; before X/reset/free.",
+  "complete_gate": {
+    "Q": 48,
+    "expected_Toffolis": 1585,
+    "T": 4,
+    "R": 34,
+    "both_preparation_peaks": 48,
+    "accuracy_margin": null,
+    "rotation_charge": null,
+    "complete_cost": null,
+    "comparison_cost": 87842.32264250425
+  },
+  "original_tolerance_unchanged": true,
+  "native_runtime_imported": false,
+  "native_emission": false,
+  "seconds": 0.02295668699662201,
+  "peak_rss_kib": 14020
+}

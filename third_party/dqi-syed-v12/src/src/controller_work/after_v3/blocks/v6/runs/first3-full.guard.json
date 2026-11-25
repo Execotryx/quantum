@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "/workspace/scratch/e5e4bb56acc7/controller_work/after_v3/blocks/v6/check_first3_retained_norm_adapter.py",
+    "--output",
+    "controller_work/after_v3/blocks/v6/runs/first3-full"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794398427.167218,
+  "rss_soft": 3000000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 480940032,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 14,
+  "elapsed_seconds": 298.6459505558014,
+  "current_rss": 173768704,
+  "available_bytes": 9396080640,
+  "exit_code": 0
+}

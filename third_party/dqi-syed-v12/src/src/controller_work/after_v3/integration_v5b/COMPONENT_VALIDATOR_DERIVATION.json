@@ -1,0 +1,93 @@
+{
+  "derived_functions": [
+    {
+      "edits": [
+        [
+          "metrics['key_pair_static_T'] == 216986 and metrics['prefix_static_T'] == 101058",
+          "metrics['key_pair_static_T'] == 216983 and metrics['prefix_static_T'] == 101055"
+        ],
+        [
+          "metrics['full_pair_static_T'] == 216989",
+          "metrics['full_pair_static_T'] == 216986"
+        ],
+        [
+          "metrics['static_T_model_delta_from_v4'] == -243",
+          "metrics['static_T_model_delta_from_v4'] == -246"
+        ],
+        [
+          "-Fraction(1020002241,4194304)",
+          "-Fraction(1032585153,4194304)"
+        ],
+        [
+          "Fraction(909157644619,4194304)",
+          "Fraction(909145061707,4194304)"
+        ],
+        [
+          "maximum_additional_helpers=24,all_owned_storage_bits_reset=True)",
+          "maximum_additional_helpers=24,all_owned_storage_bits_reset=True,deferred_prefix_mask_paid=True)"
+        ],
+        [
+          "    require({row['panel'] for row in report['runs']} == {'prefix','pair'}, 'Unknown or missing key panel')",
+          "    require(metrics['prefix_phase_debts_retired'] == 3\n            and metrics['prefix_seam']['retained_Q'] == 865\n            and metrics['prefix_seam']['initially_zero_tail_flag_index'] == 864\n            and metrics['prefix_seam']['carry_indices'] == metrics['seam']['carry_indices'] == list(range(840,864)),\n            'Both public carry lifetimes and all matched debts are required')\n    require({row['panel'] for row in report['runs']} == {'prefix','pair'}, 'Unknown or missing key panel')"
+        ],
+        [
+          "    cover(report['seam_runs'],SEEDS_KEY,782,'start','shots')\n    for row in report['seam_runs']:\n        require(row['panel'] == 'public_carry_seam' and row['constant_carry_error_case_ids'] == []\n                and row['probe_error_case_ids'] == [] and row['scratch_errors'] is False\n                and row['phase_checked'] is False,\n                'Public-carry seam failed or its open phase was mislabelled')",
+          "    require({row['panel'] for row in report['seam_runs']} ==\n            {'prefix_public_carry_seam','return_public_carry_seam'}, 'Both public-carry seams are required')\n    for panel in ('prefix_public_carry_seam','return_public_carry_seam'):\n        rows = [row for row in report['seam_runs'] if row['panel'] == panel]\n        cover(rows,SEEDS_KEY,782,'start','shots')\n        for row in rows:\n            require(row['constant_carry_error_case_ids'] == [] and row['probe_error_case_ids'] == []\n                    and row['scratch_errors'] is False and row['initial_tail_flag_error'] is False\n                    and row['phase_checked'] is False,\n                    'Matched public-carry seam failed or its open phase was mislabelled')"
+        ]
+      ],
+      "new_function": "check_matched_key",
+      "new_function_sha256": "e6d14afc6bd1045f753a91d091a1eed7476009f10ac89be33be0d3f71654e2ce",
+      "parent_function": "check_first_two",
+      "parent_function_sha256": "c770cde9fb0e98826779a42f4a3433de6b5fff08353dd8b4c47793c68fb288ef"
+    },
+    {
+      "edits": [
+        [
+          "metrics['static_T'] == 115043",
+          "metrics['static_T'] == 115025"
+        ],
+        [
+          "metrics['circuit_static_T'] == 115046",
+          "metrics['circuit_static_T'] == 115028"
+        ],
+        [
+          "metrics['delta_static_T'] == -38",
+          "metrics['delta_static_T'] == -56"
+        ],
+        [
+          "metrics['HMR_event_multiset_unchanged'] is True",
+          "metrics['HMR_event_multiset_unchanged'] is False\n            and metrics['exact_event_changes_only_paired62_names_and_rhs35'] is True\n            and metrics['incremental_static_delta_vs_transpose14'] == -18\n            and Fraction(metrics['incremental_mean_delta_vs_transpose14_exact']) == -Fraction(150994935,8388608)"
+        ],
+        [
+          "Fraction(metrics['delta_uniform_fresh_mask_mean_T_exact']) == -38",
+          "Fraction(metrics['delta_uniform_fresh_mask_mean_T_exact']) == -56+Fraction(18,1 << 24)"
+        ],
+        [
+          "    require(metrics['expectation']['events'] == baseline['expectation']['events']",
+          "    expected_events = []\n    for old_event in baseline['expectation']['events']:\n        event = dict(old_event)\n        if event['name'].startswith('paired_dual63_'):\n            event['name'] = event['name'].replace('paired_dual63_', 'paired_dual62_')\n            if event['name'] == 'paired_dual62_rhs_zero':\n                require(event['conditional_T'] == 36 and event['mask_bits'] == 24\n                        and event['occurrences'] == 18, 'Unexpected original paired-mask event')\n                event['conditional_T'] = 35\n                event['total_discount_exact'] = str(Fraction(18*35,1 << 24))\n        expected_events.append(event)\n    require(metrics['expectation']['events'] == expected_events"
+        ],
+        [
+          "Fraction(baseline['expectation']['expected_T_exact'])-38,",
+          "Fraction(baseline['expectation']['expected_T_exact'])-56+Fraction(18,1 << 24),"
+        ],
+        [
+          "    require(len(metrics['paired_phase_calls']) == 18",
+          "    require(len(metrics['paired_phase_calls']) == 18\n            and all(row['targets'] == 2 and row['static_T'] == 89 and row['peak_owned_helpers'] == 22\n                    for row in metrics['paired_phase_calls'])"
+        ]
+      ],
+      "new_function": "check_preimage62",
+      "new_function_sha256": "75ce7f7f74bafe469e26a0559393d96bd9ad510b831d346fe5dec7c4bc9bd68e",
+      "parent_function": "check_preimage",
+      "parent_function_sha256": "0b653da2dbd44627ee98d6836dee08d6f26b3cf170afe552b4d217a7f88ffc66"
+    }
+  ],
+  "format": "DQI_V5B_ADDITIONAL_VALIDATOR_DERIVATION_V1",
+  "initial_v5_producer_sha256": "b6b206fe355bdc8724db3eb22920276538f156ef0fb970216317c1a8494a9988",
+  "native_or_producer_run": false,
+  "new_functions": [
+    "check_matched_norm",
+    "check_cubic20",
+    "check_quotient62"
+  ],
+  "status": "SOURCE_ONLY_NOT_GATE_EXECUTION"
+}

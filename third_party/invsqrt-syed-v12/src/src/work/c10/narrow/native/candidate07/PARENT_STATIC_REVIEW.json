@@ -1,0 +1,17 @@
+{
+  "status": "PARENT_STATIC_SOURCE_AND_PIN_REVIEW_PASS_NOT_NATIVE_EXECUTED",
+  "utc": "2026-11-12T01:18:18.072549+00:00",
+  "checked_external_input_pins": 304,
+  "component_ready_hashes": {
+    "PHASE07_READY.json": "b2be235d16daffa0af58db2176993ceed3f11ecfb530f12b8e3cb29231b390a5",
+    "TABLES07_READY.json": "02c8ff7803737ff506d93a334ce66b82a1ada6d268a1681f07d7b8ef077495d1"
+  },
+  "independent_review_sha256": "1504b3d7d8ee352808745d92a9cd3e233a915193ef14f0e3ab6640098d3319d1",
+  "root_source_api_matches_phase_oracle_proof": true,
+  "new_oracle_explicitly_local": true,
+  "original_checker_and_all_phase_checks_retained": true,
+  "complete_gate_before_native_source": true,
+  "all_previous_candidates_unchanged": true,
+  "native_execution_performed": false,
+  "no_submission": true
+}

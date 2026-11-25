@@ -1,0 +1,60 @@
+{
+  "fixtures_sha256": "009b91702832e3c27276d4361e81b8e43cbaf9e0a345fec100ba823805adfd81",
+  "repeat_count": 4,
+  "results": {
+    "control": {
+      "checks": [
+        {
+          "dirty_offsets": [],
+          "mask_offsets": [],
+          "mean_toffoli_like": 430822.875,
+          "phase_offsets": [
+            9,
+            10,
+            22,
+            24,
+            30
+          ],
+          "seed": 111501,
+          "value_offsets": []
+        },
+        {
+          "dirty_offsets": [],
+          "mask_offsets": [],
+          "mean_toffoli_like": 430814.3125,
+          "phase_offsets": [
+            9,
+            10,
+            22,
+            24,
+            30
+          ],
+          "seed": 111502,
+          "value_offsets": []
+        }
+      ],
+      "sha256": "53d8b2edf251e2a0c54c401a97d1396c7ed309e1cbfaab8d54a2c99a11ed6552"
+    },
+    "homogeneous-1-7": {
+      "checks": [
+        {
+          "dirty_offsets": [],
+          "mask_offsets": [],
+          "mean_toffoli_like": 430152.5625,
+          "phase_offsets": [],
+          "seed": 111501,
+          "value_offsets": []
+        },
+        {
+          "dirty_offsets": [],
+          "mask_offsets": [],
+          "mean_toffoli_like": 430145.25,
+          "phase_offsets": [],
+          "seed": 111502,
+          "value_offsets": []
+        }
+      ],
+      "sha256": "09467ecc12eb50a6a79f0706690a7018a29ecb6679d7e6c15c5b1754fde8db6a"
+    }
+  }
+}

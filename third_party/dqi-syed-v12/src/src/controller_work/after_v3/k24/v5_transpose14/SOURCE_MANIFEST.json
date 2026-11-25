@@ -1,0 +1,54 @@
+{
+  "admitted_domain_change": false,
+  "expected_Q": 889,
+  "expected_full_preimage_cases": 266,
+  "expected_isolated_cases": 256,
+  "expected_pair_delta_static_and_mean_T": -38,
+  "expected_pair_mean_exact": "3933395305086733/34359738368",
+  "expected_prefix_static_T": 57034,
+  "expected_preimage_static_T": 115043,
+  "files": {
+    "EXISTING_PROFILE_SUPPLEMENT.json": {
+      "bytes": 24729,
+      "sha256": "58303e050c3caa104bf5538ba76fd159cfb3b054addbfc5a02f343b0d1edd3dc"
+    },
+    "README.md": {
+      "bytes": 9685,
+      "sha256": "6eb6813300665791c890a811753ff61e9b8d2cb8c652b8de4da8b8211060d049"
+    },
+    "SOURCE_DERIVATION.json": {
+      "bytes": 16409,
+      "sha256": "8ca3ea41c67f14c2ef5fdfe6a683b2b06ab8c1415b4d4bc1cae4c47903f98d00"
+    },
+    "SOURCE_PREPARATION_CHECKS.json": {
+      "bytes": 1140,
+      "sha256": "4248698dd83b14a4cab7375d96e74824fc97e5a7ca9ba4ad63cdde2849b30c05"
+    },
+    "check_handoff_m11.py": {
+      "bytes": 4335,
+      "sha256": "530de18308390713ad79a1a018a7fd77ba9f8395ac4253d92f04cdae77d88250"
+    },
+    "check_transpose14_preimage.py": {
+      "bytes": 26433,
+      "sha256": "64b8e50eb58f1310c1f79faec0a47c97db42807ffae5a6d5b358574f583e15fb"
+    },
+    "profile_supplement.py": {
+      "bytes": 7304,
+      "sha256": "315bcf5c76b04aece6b294bbbd00ef6610f8e18ef1d920f18173dd66004cb50b"
+    },
+    "transpose14_core.py": {
+      "bytes": 12819,
+      "sha256": "8b5eb93766ac6d9ef638594829ec8f6d27945e84b610c718b4cf9bea73ab039d"
+    },
+    "transpose14_window.py": {
+      "bytes": 15241,
+      "sha256": "1c25f660a58f7907602e60cfc32fbfc51a2775023cc911e33d5d10c2860236b4"
+    },
+    "variant_support.py": {
+      "bytes": 4482,
+      "sha256": "f0bd00e712d1f73790dd724d749de8541a492f404efde9867a9a3372d1298f0c"
+    }
+  },
+  "format": "DQI_TRANSPOSE14_COMPONENT_SOURCE_PACKET_V1",
+  "status": "SOURCE_PREPARED_NATIVE_PENDING"
+}

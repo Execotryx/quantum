@@ -1,0 +1,90 @@
+{
+  "banked_sha256": "53d8b2edf251e2a0c54c401a97d1396c7ed309e1cbfaab8d54a2c99a11ed6552",
+  "batches": [
+    {
+      "banked": {
+        "dirty_offsets": [],
+        "mask_offsets": [],
+        "mean_toffoli_like": 430819.0859375,
+        "phase_offsets": [
+          128
+        ],
+        "value_offsets": []
+      },
+      "batch_start": 45312,
+      "candidate": {
+        "dirty_offsets": [],
+        "mask_offsets": [],
+        "mean_toffoli_like": 429839.7734375,
+        "phase_offsets": [
+          128
+        ],
+        "value_offsets": []
+      },
+      "draw": "s2"
+    },
+    {
+      "banked": {
+        "dirty_offsets": [],
+        "mask_offsets": [],
+        "mean_toffoli_like": 430822.484375,
+        "phase_offsets": [
+          182
+        ],
+        "value_offsets": []
+      },
+      "batch_start": 13056,
+      "candidate": {
+        "dirty_offsets": [],
+        "mask_offsets": [],
+        "mean_toffoli_like": 429841.09375,
+        "phase_offsets": [],
+        "value_offsets": []
+      },
+      "draw": "s6"
+    },
+    {
+      "banked": {
+        "dirty_offsets": [],
+        "mask_offsets": [],
+        "mean_toffoli_like": 430822.3984375,
+        "phase_offsets": [
+          135
+        ],
+        "value_offsets": []
+      },
+      "batch_start": 73984,
+      "candidate": {
+        "dirty_offsets": [],
+        "mask_offsets": [],
+        "mean_toffoli_like": 429837.9453125,
+        "phase_offsets": [],
+        "value_offsets": []
+      },
+      "draw": "s6"
+    },
+    {
+      "banked": {
+        "dirty_offsets": [],
+        "mask_offsets": [],
+        "mean_toffoli_like": 430821.671875,
+        "phase_offsets": [
+          136
+        ],
+        "value_offsets": []
+      },
+      "batch_start": 46592,
+      "candidate": {
+        "dirty_offsets": [],
+        "mask_offsets": [],
+        "mean_toffoli_like": 429838.1328125,
+        "phase_offsets": [],
+        "value_offsets": []
+      },
+      "draw": "s7"
+    }
+  ],
+  "candidate_sha256": "3e84ab705377f851a4c081ed8499031361fb16f2ec33d81f49157f79efd7bbcc",
+  "profile_sha256": "e9595f9802c204fc2a57d11907607a01f54725ad823a12b96c140b847bb3d6fe",
+  "shots": 1024
+}

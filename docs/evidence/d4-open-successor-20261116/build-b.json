@@ -1,0 +1,34 @@
+{
+  "artifact": {
+    "path": "runs/d4-open-successor/syed-v12-build-b/dqi.kmb",
+    "sha256": "7cbe8ecf6f6e9743529b574f019504bb1712ce06fbb570c719ce9d9e2c914cd9"
+  },
+  "environment_lock": {
+    "path": "runs/d4-open-successor/source-requirements.lock",
+    "sha256": "1bdd61c02faf6bc49e2769cfb065805470421df04638480b7e5b5fffc7b72777"
+  },
+  "generated_bytes": 455590024,
+  "generator_report": {
+    "path": "runs/d4-open-successor/syed-v12-build-b/scratch/dqi_build.391eKd/build-v6/build.json",
+    "sha256": "fe5ba8eab32c6a686b5c61b27712ebb21b26dc847d9c2ca1efd7958ded4dd41c"
+  },
+  "generator_seconds": 157.11978785000008,
+  "guard_elapsed_seconds": 305.7176396846771,
+  "guard_peak_group_rss_bytes": 1036214272,
+  "memory_guard": {
+    "path": "runs/d4-open-successor/syed-v12-build-b/scratch/dqi_build.391eKd/build-v6/memory-guard.json",
+    "sha256": "29952de5ea1d269d171caefeb44d514821ebdfd37692c308adfea900b2c26a5b"
+  },
+  "peak_observed_stage_allocated": 877,
+  "qubits": 889,
+  "sha256": "7cbe8ecf6f6e9743529b574f019504bb1712ce06fbb570c719ce9d9e2c914cd9",
+  "source": {
+    "path": "runs/d4-open-successor/syed-v12-intake/dqi_source_zip",
+    "sha256": "49e2b331d4008afb724985caf1038765b7a910f08838b590bf6e8fb692772763"
+  },
+  "source_inventory": {
+    "path": "runs/d4-open-successor/syed-v12-build-b/scratch/dqi_build.391eKd/build-v6/source-inventory.json",
+    "sha256": "44f7d7c71766420e40f7d18a55d9a1e10ce0b264c61f955d9aa3ffd635c72d00"
+  },
+  "static_toffoli_like": 384003
+}

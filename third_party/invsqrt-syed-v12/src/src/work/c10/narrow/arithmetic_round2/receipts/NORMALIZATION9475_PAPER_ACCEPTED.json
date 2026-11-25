@@ -1,0 +1,30 @@
+{
+  "status": "POSITIVE_COMPLETE_PAPER_GATE_ACCEPTED_ISOLATED_NATIVE_AUTHORIZED",
+  "utc": "2026-11-12T05:02:13.946517+00:00",
+  "route": "RN2-D plus RN2-F eight-coordinate normalization",
+  "manifest_sha256": "752fd0c9047070f290e9d92503aa55e377958733077225cf93f7c6044dfbd378",
+  "paper_sha256": "9e5e0b2ec626d2893d12762593ca7b08c787f827f4cbfae1c59186ffcd4ff6a6",
+  "source_ready_sha256": "09e165c6b7e73cdd1de4016461a9340c97f83b996590d36d0ff56e01745a7ca9",
+  "guard_sha256": "19c9f4b797ab7b17b479e4c558a6ca9dc7566ed71a8244fe4c807caf0e687024",
+  "source_pins_checked": 349,
+  "component_forward_E": 51.5,
+  "component_inverse_E": 43.25,
+  "component_total_E": 94.75,
+  "additional_saving_E_vs_RN2B": 1.75,
+  "modeled_local_peak": 46,
+  "Q_global": 48,
+  "native_build_authorized": true,
+  "required_native_checks": [
+    "full original input domain",
+    "all active HMR transcripts with conditional helper outcomes",
+    "exact original forward normalization and inverse restoration",
+    "expanded original forward parity symbols",
+    "zero-initialized inactive helper measurement destinations",
+    "all flags and scratch zero",
+    "negative omitted helper correction"
+  ],
+  "normalization95_fallback_preserved": true,
+  "protected_phase_loaders_endpoint_and_angles_unchanged": true,
+  "full_composed_native_and_four_default_batch_salts_required": true,
+  "expected_not_measured": true
+}

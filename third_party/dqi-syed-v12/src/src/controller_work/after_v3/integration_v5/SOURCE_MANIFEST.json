@@ -1,0 +1,96 @@
+{
+  "component_gate_plan_sha256": "0b4932be57dadb5ea3f70794d7635ed9b5db09a34f4ed4a05e5a3acf6d4b0518",
+  "expected_Q": 889,
+  "expected_static_T": 384068,
+  "files": {
+    "COMPONENT_GATE_PLAN.json": {
+      "bytes": 11904,
+      "sha256": "0b4932be57dadb5ea3f70794d7635ed9b5db09a34f4ed4a05e5a3acf6d4b0518"
+    },
+    "DERIVATION_IN_PROGRESS.json": {
+      "bytes": 3235,
+      "sha256": "866c3ebf2c5cee862444dbf5470068a642ac3a47834b2ca38880397ca8d97e89"
+    },
+    "DOMAIN_TRANSFER_ARGUMENT.md": {
+      "bytes": 5512,
+      "sha256": "fc51b67b613ccbd4e459460ac4b9f94dda9f297161f168e0fbb570ecdaefcf89"
+    },
+    "README.md": {
+      "bytes": 7954,
+      "sha256": "0e1452d9517c94f00871c7f9344a965b4f5871da7b731873dfcfcc8a2e1cd960"
+    },
+    "SOURCE_DERIVATION.json": {
+      "bytes": 4450,
+      "sha256": "d86eca1067754f80c93f5e343b16b9735ae51ae531f426568d27da391abde3de"
+    },
+    "SOURCE_MODEL_LEDGER.json": {
+      "bytes": 1951,
+      "sha256": "ae360eb17e1b938b25e7fe28bb8080b7e6359eff7833941663a5753dd5f06af8"
+    },
+    "SOURCE_PREPARATION_CHECKS.json": {
+      "bytes": 1917,
+      "sha256": "07a2dabfa6f6a739833a0ee80426793e444876e761c6641f8058e396ab8bf593"
+    },
+    "build_v5.py": {
+      "bytes": 4411,
+      "sha256": "74e9370e275f19bc3e1c9f263cf37494277c06499bf157128be9b197f02b08f7"
+    },
+    "check_build_equality.py": {
+      "bytes": 4381,
+      "sha256": "0df19f87b37f16a116c6ad7231aae0e6f0650b1d3340b9f8d1497d9f0cce5c9b"
+    },
+    "check_candidate.py": {
+      "bytes": 4134,
+      "sha256": "26d3519c10ac08588dd5eadaf79fce725e9d7ed80429f7f53d56c51c7a54b3f1"
+    },
+    "check_key_boundary.py": {
+      "bytes": 8291,
+      "sha256": "6b8851be258d3590666419c2ef28ee187a9da73cd5d5847b498d484d97f543e3"
+    },
+    "gen_dqi.py": {
+      "bytes": 1763,
+      "sha256": "9251d2378047d32de1f12f1f5d23ac927ab04d5e1f8afd72ebb9a720aec42e9f"
+    },
+    "prepare_component_gates.py": {
+      "bytes": 23589,
+      "sha256": "b6b206fe355bdc8724db3eb22920276538f156ef0fb970216317c1a8494a9988"
+    },
+    "v5_binding.py": {
+      "bytes": 13013,
+      "sha256": "6483e60a487e4783ebe63f47705b7ca2bf3d1ec17e4f54431983f22727792df2"
+    },
+    "v5_events.py": {
+      "bytes": 3654,
+      "sha256": "b9bc736bc65dec2a8052ef2f189df3a5bd7e83a0f8a00e8043ddd06e76cf9b84"
+    },
+    "v5_paths.py": {
+      "bytes": 773,
+      "sha256": "7d96bde0b1b82c192521c7042f0f90d3222ec2b086e169f4b0f7aaa6ff3bef74"
+    },
+    "v5_pipeline.py": {
+      "bytes": 11170,
+      "sha256": "32b89202ec5eed5ef030d5f9982b1b0ecd5ab738a9020e3e40991c1a801e849c"
+    }
+  },
+  "format": "DQI_FIXED_V5_SOURCE_PREPARATION_PACKET_V1",
+  "historical_initial_copy_record": "DERIVATION_IN_PROGRESS.json",
+  "independent_reviews": {
+    "controller_work/after_v3/audit/V5_TRANSPOSE14_SOURCE_REVIEW.md": "a6007def704d0ba7bad95cf252ab8d4f244c58c2782a6f19b3354da96a08375c",
+    "controller_work/after_v3/blocks/V5_RETAINED_NORM_BINDING_REVIEW.md": "fdc4573b694cf1358af12b98724781da82ff2c2ccdd40a744a0cf3f26e144b44",
+    "controller_work/after_v3/k24/V5_COMPONENT_GATE_SOURCE_REVIEW.md": "40e6221a0d3655dcab55a3309da84a4198e7abc0083d91b6bd1314fbd9fb8d73"
+  },
+  "native_gate_manifest_present_at_preparation": false,
+  "native_jobs_run_by_preparer": 0,
+  "new_admitted_domain_event": false,
+  "producer_run_by_preparer": false,
+  "required_new_component_gates": 4,
+  "sampler_draws_by_preparer": 0,
+  "scope": "Prepared fixed sources and source reviews only. Actual component manifest, joined builds/panels and fresh original official runs remain separate.",
+  "selected_changes": [
+    "production_first_two_closed_inverse195",
+    "public_transpose_window14"
+  ],
+  "source_mean_T_exact": "13168886125240077/34359738368",
+  "source_mean_is_official_measurement": false,
+  "status": "SOURCE_REVIEWED_NEW_NATIVE_GATES_PENDING"
+}

@@ -1,0 +1,127 @@
+{
+  "status": "PASS_COMPLETE_NORMALIZATION9475_PAPER_COMPOSITION_NOT_NATIVE",
+  "original_inputs_per_selected_branch": 3133452,
+  "selected_original_HMR_outcomes": [
+    "B",
+    "T3"
+  ],
+  "selected_branch_weights": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+  ],
+  "forward_parity_expanded_into_original_symbols": true,
+  "all_other_active_HMR_symbols_independent": true,
+  "rows": [
+    {
+      "branch": {
+        "mB": 0,
+        "m3": 0
+      },
+      "forward_E": 51.5,
+      "inverse_E": 41.0,
+      "total_E": 92.5,
+      "modeled_forward_peak": 46,
+      "modeled_inverse_peak": 30,
+      "static_HMR_events": 30,
+      "active_independent_HMR_symbols": 26,
+      "inactive_helper_measurements": 2,
+      "all_data_and_owner_order_restored": true,
+      "all_scratch_flags_zero": true,
+      "unpaid_HMR_symbols": []
+    },
+    {
+      "branch": {
+        "mB": 1,
+        "m3": 0
+      },
+      "forward_E": 51.5,
+      "inverse_E": 43.0,
+      "total_E": 94.5,
+      "modeled_forward_peak": 46,
+      "modeled_inverse_peak": 30,
+      "static_HMR_events": 30,
+      "active_independent_HMR_symbols": 26,
+      "inactive_helper_measurements": 2,
+      "all_data_and_owner_order_restored": true,
+      "all_scratch_flags_zero": true,
+      "unpaid_HMR_symbols": []
+    },
+    {
+      "branch": {
+        "mB": 0,
+        "m3": 1
+      },
+      "forward_E": 51.5,
+      "inverse_E": 44.0,
+      "total_E": 95.5,
+      "modeled_forward_peak": 46,
+      "modeled_inverse_peak": 30,
+      "static_HMR_events": 30,
+      "active_independent_HMR_symbols": 28,
+      "inactive_helper_measurements": 0,
+      "all_data_and_owner_order_restored": true,
+      "all_scratch_flags_zero": true,
+      "unpaid_HMR_symbols": []
+    },
+    {
+      "branch": {
+        "mB": 1,
+        "m3": 1
+      },
+      "forward_E": 51.5,
+      "inverse_E": 45.0,
+      "total_E": 96.5,
+      "modeled_forward_peak": 46,
+      "modeled_inverse_peak": 30,
+      "static_HMR_events": 30,
+      "active_independent_HMR_symbols": 28,
+      "inactive_helper_measurements": 0,
+      "all_data_and_owner_order_restored": true,
+      "all_scratch_flags_zero": true,
+      "unpaid_HMR_symbols": []
+    }
+  ],
+  "negative_omitted_helper_fix": {
+    "branch": {
+      "mB": 0,
+      "m3": 1
+    },
+    "forward_E": 51.5,
+    "inverse_E": 44.0,
+    "total_E": 95.5,
+    "modeled_forward_peak": 46,
+    "modeled_inverse_peak": 30,
+    "static_HMR_events": 30,
+    "active_independent_HMR_symbols": 28,
+    "inactive_helper_measurements": 0,
+    "all_data_and_owner_order_restored": true,
+    "all_scratch_flags_zero": true,
+    "unpaid_HMR_symbols": [
+      29
+    ]
+  },
+  "forward_E": 51.5,
+  "inverse_E": 43.25,
+  "total_E": 94.75,
+  "modeled_forward_peak": 46,
+  "modeled_inverse_peak": 30,
+  "external_boundary_owners": 26,
+  "complete_Q": 48,
+  "complete_expected_Toffolis_vs_candidate09": 1566.75,
+  "T": 4,
+  "R": 33,
+  "unchanged_rotation_charge": 230.84805946161188,
+  "complete_expected_cost": 86332.70685415737,
+  "normalization_T": 0,
+  "normalization_R": 0,
+  "numeric_error_change": 0,
+  "protected_phase_loaders_endpoint_unchanged": true,
+  "native_execution": false,
+  "official_execution": false,
+  "source_sha256": "73fe92d402f4a34472ac09beede18fbac73116abdac151509f7fc4e67abeeb47",
+  "inputs_sha256": "0479e09b6ae3574906cc876efa24e0fb2baab9156dc3d17c4150b12a07fdf812",
+  "seconds": 0.6475583209976321,
+  "peak_rss_kib": 64536
+}

@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "controller_work/after_v3/blocks/v6/prepare_integration_special_panels.py",
+    "--output",
+    "controller_work/after_v3/blocks/v6/runs/integration-special-panels"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794399321.7361274,
+  "rss_soft": 1500000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 33415168,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 5,
+  "elapsed_seconds": 0.4056828022003174,
+  "current_rss": 33415168,
+  "available_bytes": 9635954688,
+  "exit_code": 1
+}

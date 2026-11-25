@@ -1,3 +1,5 @@
+> Status: paused on 2026-11-14, pending vendor-public-inplace-dqi. Do not implement further until resolved.
+
 ## Why
 
 DQI is still the pinned reference at 1.0× and is the largest remaining

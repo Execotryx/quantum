@@ -1,0 +1,13 @@
+launch.sh: OK
+source.tar.gz: OK
+Sun Nov 15 21:33:22 UTC 2026
+......affine extraction group=None quotient=False first=True seed=941 qubits=921 gates=209116.0
+affine extraction group=None quotient=False first=True seed=942 qubits=921 gates=209184.83333333334
+...unit-tail static stage counts {'extract': 67277, 'certificate': 0, 'synthesis': 26929, 'normalize': 2715, 'convert': 51404, 'scan': 44275, 'unconvert': 53430, 'unnormalize': 2715, 'unsynthesis': 39391, 'uncertificate': 0, 'unextract': 134047} cumulative widths {'extract': 922, 'certificate': 922, 'synthesis': 922, 'normalize': 922, 'convert': 922, 'scan': 922, 'unconvert': 922, 'unnormalize': 922, 'unsynthesis': 922, 'uncertificate': 922, 'unextract': 922}
+unit-tail padded=False first=True degree-cert=True norms=True seed=715 full=False qubits=922 gates=94184.5
+unit-tail padded=False first=True degree-cert=True norms=True seed=715 full=True qubits=922 gates=415475.5
+unit-tail padded=False first=True degree-cert=True norms=True seed=716 full=False qubits=922 gates=94184.5
+unit-tail padded=False first=True degree-cert=True norms=True seed=716 full=True qubits=922 gates=415535.5
+.
+10 passed, 37 deselected in 123.95s (0:02:03)
+Sun Nov 15 21:35:28 UTC 2026

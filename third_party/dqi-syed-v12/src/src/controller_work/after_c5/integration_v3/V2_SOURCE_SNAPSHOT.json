@@ -1,0 +1,78 @@
+{
+  "status": "SNAPSHOT_V2_SOURCE_AND_RECEIPT_BYTES_ONLY",
+  "files": [
+    {
+      "path": "controller_work/after_c5/integration_v2/build_candidate.py",
+      "sha256": "e23868051a25aa9dfa71d7162fb2f02ee99927a1ec29ab179cd7f8589df0bf99",
+      "bytes": 5074
+    },
+    {
+      "path": "controller_work/after_c5/integration_v2/check_build_equality.py",
+      "sha256": "070383394b79a9d6380b553dc2408f5e0c00f6bd62e628a838d738044f7966fb",
+      "bytes": 4404
+    },
+    {
+      "path": "controller_work/after_c5/integration_v2/check_candidate.py",
+      "sha256": "1de406fc1f10d001d594255e0c54813715c7a0ef41390a0af468b3f58b5cc416",
+      "bytes": 3898
+    },
+    {
+      "path": "controller_work/after_c5/integration_v2/check_key_boundary.py",
+      "sha256": "7297f84960ba82538e2b256d79912efd2bcf0650c7adeee6ee52dca64cf5a93c",
+      "bytes": 8354
+    },
+    {
+      "path": "controller_work/after_c5/integration_v2/event_ledger.py",
+      "sha256": "44ae7bb521f2c99dfcd4eba87468245c1068d2dc6c2d825deb0eddaf43942131",
+      "bytes": 4608
+    },
+    {
+      "path": "controller_work/after_c5/integration_v2/gen_dqi.py",
+      "sha256": "a0da2a99c9b3ba834bb477f1881262b8d96e58aab1438e11d18c9db0d99375e4",
+      "bytes": 2475
+    },
+    {
+      "path": "controller_work/after_c5/integration_v2/integrated_pipeline.py",
+      "sha256": "97077098d24bf34861dc2fae3bcefba18e144dd9a53b241d3ae20026364538db",
+      "bytes": 11582
+    },
+    {
+      "path": "controller_work/after_c5/integration_v2/integration_paths.py",
+      "sha256": "aeb6ff1f2f63722fe6d94af64b0f1a1ca83983c21235ef7d41233651e18549ed",
+      "bytes": 827
+    },
+    {
+      "path": "controller_work/after_c5/integration_v2/source_binding.py",
+      "sha256": "e25f26e74742f744ac4e1b4d388d96e33fcb65da930e92b2549319d567ea9ec9",
+      "bytes": 12344
+    }
+  ],
+  "receipt_files": [
+    {
+      "path": "controller_work/after_c5/integration_v2/runs/a/build/build.json",
+      "sha256": "1a90cf57eae39a92fd2f8d011c920644f88b22af33eafb7863ccf9c1c469e8c2",
+      "bytes": 58322
+    },
+    {
+      "path": "controller_work/after_c5/integration_v2/runs/a/build/source-inventory.json",
+      "sha256": "36bbaf510af7f046d3d71a4c3e6c7910906078d5da73e411cc4c81ed75a410ae",
+      "bytes": 71978
+    },
+    {
+      "path": "controller_work/after_c5/integration_v2/runs/b/build/build.json",
+      "sha256": "1eeaba5f25c99a64269494ad5fe5d05c1cb3b21ea816408ac9c408174591dece",
+      "bytes": 58208
+    },
+    {
+      "path": "controller_work/after_c5/integration_v2/runs/b/build/source-inventory.json",
+      "sha256": "36bbaf510af7f046d3d71a4c3e6c7910906078d5da73e411cc4c81ed75a410ae",
+      "bytes": 71978
+    },
+    {
+      "path": "controller_work/after_c5/integration_v2/runs/build-equality.json",
+      "sha256": "ab08c565bc6891253f694254cdcc741a05ea90463e8707619d76f9f1e6728dd6",
+      "bytes": 5021
+    }
+  ],
+  "scope": "No circuit or run directory copied. These byte bindings preserve v2 and are not v3 native evidence."
+}

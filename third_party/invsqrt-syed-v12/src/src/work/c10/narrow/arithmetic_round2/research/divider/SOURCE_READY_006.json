@@ -1,0 +1,50 @@
+{
+  "status": "PAPER_HISTORY12_RETIREMENT_SOURCE_READY",
+  "files": [
+    {
+      "path": "HISTORY12_PLAN.md",
+      "bytes": 2595,
+      "sha256": "4b0ce6138bbb3872df3704b7e92f5fc70ba78d3f0b693d1237cf962fd99402c4"
+    },
+    {
+      "path": "history12_kernel.py",
+      "bytes": 2736,
+      "sha256": "1dc5022918a0a47663ec3ad812cdff67f93ee0c1646f3e4db59ee7881c847afe"
+    },
+    {
+      "path": "history12_study.py",
+      "bytes": 7816,
+      "sha256": "fcedae75ed24e28245dffd514b7b8564eaaedb646add7e0ef926f64e0e6d6c8e"
+    },
+    {
+      "path": "top12_kernel.py",
+      "bytes": 7667,
+      "sha256": "f4367db957bac36fc319389358984ecf00b6b8788b7e19894f0600cf1e68aec5"
+    },
+    {
+      "path": "top12_study.py",
+      "bytes": 10984,
+      "sha256": "fc261288aa82e71240b1c95d0f14f29704fd0703981afb31e735f3c27b8f2d34"
+    },
+    {
+      "path": "boundary_phase_screen_v2.py",
+      "bytes": 7575,
+      "sha256": "00d702f157059e3faa86d63abf40ddb970765de6d2eb68658a83cf3f6bd9e54a"
+    },
+    {
+      "path": "SOURCE_READY_003.json",
+      "bytes": 721,
+      "sha256": "6f5fd2b034bc51c9fc91484830ce21ab9225afef9933232fb82d14864ba03826"
+    },
+    {
+      "path": "INPUTS_002.json",
+      "bytes": 4892,
+      "sha256": "374ef8d0c4b42912636767400e8a0769934fe72f4e965c941e511e8181679bb4"
+    },
+    {
+      "path": "../../receipts/DIVIDER_TOP12_PAPER_ACCEPTED.json",
+      "bytes": 711,
+      "sha256": "e456c71521e28655929367f47b9c383c918eff5f1bf3908f9b35d4236a621688"
+    }
+  ]
+}

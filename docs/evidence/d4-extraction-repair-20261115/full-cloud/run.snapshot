@@ -1,0 +1,43 @@
+program.tar.gz: OK
+candidate.kmb.gz: OK
+launch.sh: OK
+registration.json: OK
+/dev/shm/d4-repair.IXdx9Z/candidate.kmb: OK
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/root        29G   27G  1.5G  95% /
+tmpfs           7.9G  781M  7.1G  10% /dev/shm
+Sun Nov 15 14:08:09 UTC 2026
+candidate s1 started
+candidate s1: PASS value=0 phase=0
+candidate s2 started
+candidate s2: PASS value=0 phase=0
+candidate s3 started
+candidate s3: PASS value=0 phase=0
+candidate s4 started
+candidate s4: PASS value=0 phase=0
+candidate s5 started
+candidate s5: PASS value=0 phase=0
+candidate s6 started
+candidate s6: PASS value=1 phase=0
+candidate s7 started
+candidate s7: PASS value=1 phase=0
+candidate s8 started
+candidate s8: PASS value=0 phase=0
+Sun Nov 15 14:55:38 UTC 2026
+banked s1 started
+banked s1: PASS value=0 phase=0
+banked s2 started
+banked s2: PASS value=0 phase=0
+banked s3 started
+banked s3: PASS value=0 phase=0
+banked s4 started
+banked s4: PASS value=0 phase=0
+banked s5 started
+banked s5: PASS value=0 phase=0
+banked s6 started
+banked s6: PASS value=0 phase=0
+banked s7 started
+banked s7: PASS value=0 phase=0
+banked s8 started
+banked s8: PASS value=0 phase=0
+Sun Nov 15 15:28:34 UTC 2026

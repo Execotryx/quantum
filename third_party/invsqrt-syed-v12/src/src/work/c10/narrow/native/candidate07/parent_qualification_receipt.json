@@ -1,0 +1,53 @@
+{
+  "status": "PARENT_ACCEPTED_QUALIFIED_CANDIDATE07",
+  "utc": "2026-11-12T02:19:20.245259+00:00",
+  "qualification_sha256": "5339a28dad6fcbbcf3801e16a707eb0c8d5e743a7c9e61b9b57f9cbbe17c38bb",
+  "circuit_sha256": "ea5677b1686a28a092751bd15240dd0d54af112488758a35dc6b986fa479efe8",
+  "native_proof_sha256": "12d18f2c972bc929bba3b2baadb0db3001fe73c47205cef172375d4905e37071",
+  "checked_frozen_source_and_input_pins": 321,
+  "original_salts": [
+    "default",
+    "1",
+    "2",
+    "3"
+  ],
+  "shots_per_salt": 200540928,
+  "total_official_shots": 802163712,
+  "Q": 48,
+  "native_expected_Toffolis": 1584,
+  "T": 4,
+  "R": 33,
+  "default_score": 87160.71731626114,
+  "conservative_score": 87160.79677726772,
+  "score_range": [
+    87160.6823485163,
+    87160.79677726772
+  ],
+  "conservative_improvement_vs_stage97": 5118.153222732275,
+  "conservative_margin_vs_target": 2826.203222732278,
+  "stretch_met": false,
+  "original_tolerance_unchanged": true,
+  "completed_resource_guards": [
+    {
+      "path": "native/candidate07/batch_guard.json",
+      "sha256": "67b9d4fbc35b245c8af83833eac3a5deb7437e41f55d854b7eaee6f2e47bf615",
+      "peak_aggregate_rss_bytes": 81432576,
+      "cleanup_complete": true
+    },
+    {
+      "path": "native/candidate07/official1792/group1.guard.json",
+      "sha256": "a42ed4d3608d2b251e860e24c9b873a0904cc4c958db8fa1d900b9b74aa4636b",
+      "peak_aggregate_rss_bytes": 535752704,
+      "cleanup_complete": true
+    },
+    {
+      "path": "native/candidate07/official1792/group2.guard.json",
+      "sha256": "b48ebe49f7e0e6dd7b2e425be9824f8dda8ed4fbbef7eb3d9a577a9c917bbe0d",
+      "peak_aggregate_rss_bytes": 542289920,
+      "cleanup_complete": true
+    }
+  ],
+  "original_Q52_standalone_allowance_not_crossed": true,
+  "explicitly_repriced_complete_Q48_gate": true,
+  "no_submission": true
+}

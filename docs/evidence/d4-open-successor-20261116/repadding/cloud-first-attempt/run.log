@@ -1,0 +1,23 @@
+launch.sh: OK
+source.tar.gz: OK
+Mon Nov 16 16:00:26 UTC 2026
+banked started
+banked done: 897 qubits, panel means [430821.43, 430822.6]
+candidate started
+candidate done: 891 qubits, panel means [394196.26, 394197.29]
+Mon Nov 16 16:01:47 UTC 2026
+Traceback (most recent call last):
+  File "/dev/shm/d4-open-repadding-20261116/source/tools/dqi_open_campaign.py", line 126, in <module>
+    main()
+    ~~~~^^
+  File "/dev/shm/d4-open-repadding-20261116/source/tools/dqi_open_campaign.py", line 122, in main
+    evaluate(args.registration, args.backend, args.output, args.workers)
+    ~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/dev/shm/d4-open-repadding-20261116/source/tools/dqi_open_campaign.py", line 85, in evaluate
+    paired.evaluate(*common, role, draw_limit=2)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/dev/shm/d4-open-repadding-20261116/source/tools/dqi_repair_campaign.py", line 95, in evaluate
+    from dqi_development import pooled_price
+  File "/dev/shm/d4-open-repadding-20261116/source/tools/dqi_development.py", line 14, in <module>
+    from invsqrt_direct import run_job
+ModuleNotFoundError: No module named 'invsqrt_direct'

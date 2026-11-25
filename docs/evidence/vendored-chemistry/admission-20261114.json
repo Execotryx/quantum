@@ -1,0 +1,235 @@
+{
+  "checked_on": "2026-11-14",
+  "decision": "no_go",
+  "ledger": {
+    "files": [
+      {
+        "path": "manifest.csv",
+        "sha256": "182d2685407d7ff0a0c5f2c6152f65964066a831c518a599b2887201fd705b18"
+      },
+      {
+        "path": "parts/factorizations.csv",
+        "sha256": "27cc8af94b79fdbe548ee07005402d2d8d2952c9bda3294119bef512c0e8d4f6"
+      },
+      {
+        "path": "parts/angle_circuits.csv",
+        "sha256": "0894677011395c8275d2dcdd486e7f1731889cb8aff57fb20e536dc1a3366415"
+      }
+    ],
+    "role": "secondary evidence for upstream artifact hashes and attribution",
+    "url": "https://www.kaggle.com/datasets/manwithacat/vqcc-apache-public-circuits/versions/125"
+  },
+  "pairings": {
+    "P1": {
+      "disposition": "hash_reference_only",
+      "loaders": {
+        "admission": "An origin revision with the required plan and loader files, explicit source license, and corresponding outputs was not established. The configured Kaggle CLI returned Not found for the author notebook listings with and without the competition filter. The public dataset listing returned one unrelated dataset.",
+        "attributed_author": "wahyurahmaniar",
+        "published_outputs": [],
+        "required_configuration": {
+          "J": 5,
+          "address_rows": 1363,
+          "brot": 8
+        },
+        "required_files": [
+          "plan.py",
+          "loader.py"
+        ]
+      },
+      "table": {
+        "admission": "The author provides the C40 fit and export code. All seven arrays in the originating v9 export equal the source dataset checkpoint arrays. Use the origin hash, which differs from the OpenSpec hint, for any future rebuild comparison.",
+        "array_comparison": {
+          "different": [
+            "W",
+            "H2_I"
+          ],
+          "maximum_absolute_differences": {
+            "H2_I": 0.10463010991234323,
+            "W": 0.12059081925303765
+          },
+          "same": [
+            "U",
+            "H1_I",
+            "Hsym_lower",
+            "tree_edges",
+            "angle_words",
+            "brot"
+          ]
+        },
+        "base_archive_sha256": "2906c285dfcb93eccc225b8d10c4dfa154b8560dbb3f3dbac6a9e98dea256aa7",
+        "base_author": "Lera (marculera)",
+        "base_fitted_checkpoint_sha256": "b72a108f9c563c18bdc45e1133c09c88e2dbc327f307d6c454aa5fa5d735639f",
+        "base_license": {
+          "evidence": [
+            "LICENSE",
+            "NOTICE",
+            "author dataset metadata"
+          ],
+          "spdx": "Apache-2.0"
+        },
+        "base_notebook": {
+          "source_sha256": "7beab11740d7cef070c5312fee127dffc4f7f218feeb182f9325890a8ecac2e8",
+          "url": "https://www.kaggle.com/code/marculera/df-thc-10x-compact-groups-from-the-hamiltonian",
+          "version": 10
+        },
+        "base_notebook_export_sha256": "7d67ff6b14bb130a59c51f1179b6830246342feb9af1c3ff0627d2f02f01b61c",
+        "base_revision": "704091bf1e1325b090202343e4d8130ff1c80b64",
+        "base_source": "https://www.kaggle.com/datasets/marculera/dfthc-compact-pipeline/versions/7",
+        "origin_output": {
+          "arrays_equal_to_checkpoint": ["U", "W", "H2_I", "H1_I", "Hsym_lower", "tree_edges", "angle_words"],
+          "hint": "mismatch",
+          "hint_prefix": "89357442",
+          "ledger_path": "factorizations/b163954eb5ac.npz",
+          "name": "dfthcsos/submission.npz",
+          "notebook_version": 9,
+          "sha256": "2601de783b2a36dfb3d3a582ef0deef82681c7da791b4b818cce596d027f5550",
+          "source_notebook": "https://www.kaggle.com/code/marculera/df-thc-10x-compact-groups-from-the-hamiltonian"
+        },
+        "reference": {
+          "first_observed_notebook": "https://www.kaggle.com/code/kawh1111/qcomp-harvest-v32",
+          "first_observed_version": 2,
+          "hint": "match_to_secondary_reference",
+          "hint_prefix": "89357442",
+          "ledger_path": "factorizations/e745e906c698.npz",
+          "license_evidence": "The ledger reports Apache-2.0 on the notebook; the originating exact weights generator and its license remain unverified.",
+          "name": "dfthcsos/submission.npz",
+          "sha256": "893574424ea1b2d8ec2d90e3bd8e922dcbafde3aa4d569d70de129f75106ae60"
+        }
+      }
+    },
+    "P2": {
+      "assembly": {
+        "files": [
+          "NOTICE-v7.md",
+          "receipts/v7-submission-manifest.json",
+          "notebooks/generate-submission-v7.ipynb"
+        ],
+        "finding": "The v7 notebook repacks downloaded binaries. Its repository also contains a separate banked-family generator.",
+        "revision": "f4dd22d26a31b23a24db25ef461ddff4efcc3f85",
+        "url": "https://github.com/EigenOS-Quantum/eigenos-vqcc/tree/f4dd22d26a31b23a24db25ef461ddff4efcc3f85"
+      },
+      "disposition": "hash_reference_only",
+      "loaders": {
+        "author": "qwertykeypadapple",
+        "family_hint": "match",
+        "family_identifier": "a344f422f2e0",
+        "family_sha256": "a344f422f2e03d23c3795443ad47cff16758c5e18a6af097536bb9f64a9418f7",
+        "license_evidence": {
+          "note": "Origin NOTICE licenses source and plans. The dataset is marked Other for its mixed portfolio.",
+          "notice_sha256": "471c53a1d08fd4e3877c85dad5b09bcc072c71204874866210d28a8bf84a61bd",
+          "scope": [
+            "src/",
+            "plans/"
+          ],
+          "spdx": "Apache-2.0"
+        },
+        "notebook_source_sha256": "c427907d6e4c98bd6ee394ec98f4edd65062babbd211829769adea302b03e7e6",
+        "notebook_version": 1,
+        "origin": "https://www.kaggle.com/code/qwertykeypadapple/qcc-kernel-search-24-65",
+        "published_outputs": [
+          {
+            "bytes": 413385,
+            "name": "dfthcsos/angle_k_0.kmb",
+            "sha256": "2665ce00a1704f63e9d7d3532877568a86bd4d95a90d21e62fd1a9f81ff68298"
+          },
+          {
+            "bytes": 410647,
+            "name": "dfthcsos/angle_k_1.kmb",
+            "sha256": "4a551d80b9845030ff32fed85066de9d1d2aaf1629d4f560abf4a533f8848034"
+          },
+          {
+            "bytes": 411019,
+            "name": "dfthcsos/angle_k_2.kmb",
+            "sha256": "67fd7e8f917da9b52ff017787973e447bc3935c8fd768a1c8198d39aa1c6193f"
+          },
+          {
+            "bytes": 408565,
+            "name": "dfthcsos/angle_k_3.kmb",
+            "sha256": "0d96dcfd083d448eda6ae1156f9037a8f5c044e4db13b8fa4d0b4faf98a6269b"
+          },
+          {
+            "bytes": 362425,
+            "name": "dfthcsos/angle_k_4.kmb",
+            "sha256": "a2b1bddb016684e770d237d4937abc3773015017a12177cc769217f02d928bb4"
+          },
+          {
+            "bytes": 362028,
+            "name": "dfthcsos/angle_k_5.kmb",
+            "sha256": "e5a93b28520c35ce8244e2b79fe59ca9f06575ba1890d39788d8d4c5446e049b"
+          },
+          {
+            "bytes": 364878,
+            "name": "dfthcsos/angle_k_6.kmb",
+            "sha256": "ccdcb391f67e720e53434a1c2deaa6d3499ef86cf8663db42523cca11775638e"
+          },
+          {
+            "bytes": 363581,
+            "name": "dfthcsos/angle_k_7.kmb",
+            "sha256": "7a4e30f7112cd70d5c1adb1a1b6861eb9ed548c3277ee2e80efb20e49382d5f7"
+          },
+          {
+            "bytes": 364774,
+            "name": "dfthcsos/angle_k_8.kmb",
+            "sha256": "a04028ecf1002a9f7b43f2b6d4621d76d858264fca008661e22a18900b7268ff"
+          },
+          {
+            "bytes": 363298,
+            "name": "dfthcsos/angle_k_9.kmb",
+            "sha256": "60c4c540710a1ad71c4e67b48c84383902cd2c11bacf2c9408b44c57a52f0b5e"
+          },
+          {
+            "bytes": 365906,
+            "name": "dfthcsos/angle_k_10.kmb",
+            "sha256": "e832d29420b4beffc017cc688b0d552354681162faf3cef0ac3b4732d33a4f28"
+          },
+          {
+            "bytes": 368374,
+            "name": "dfthcsos/angle_k_11.kmb",
+            "sha256": "91d72f75bc5d33feadc33635de06052314ee75c708abcf867e3a3374e8f6029d"
+          },
+          {
+            "bytes": 362461,
+            "name": "dfthcsos/angle_k_12.kmb",
+            "sha256": "1cc58e1bf53f1020cc46a1720f4dca9db8d82b56024a2ea0119486af6b9add41"
+          },
+          {
+            "bytes": 363208,
+            "name": "dfthcsos/angle_k_13.kmb",
+            "sha256": "167b7d5a45dcf09139dd31cd8283b8493cde0dbceeba72eea64970398e0d2b78"
+          },
+          {
+            "bytes": 365401,
+            "name": "dfthcsos/angle_k_14.kmb",
+            "sha256": "929035ff8206ad7879d6255cddf25cd3e46f54a67984aa765a50d84d78550caa"
+          }
+        ],
+        "source_dataset": "https://www.kaggle.com/datasets/qwertykeypadapple/qcc-kernel-search-portfolio/versions/1",
+        "source_entrypoint": {
+          "path": "src/marculera_plan_build.py",
+          "sha256": "b39e46c6be48425f73cff8f5e393a8a8908d3c59d3b2339c8f084a9071a5e5d3"
+        }
+      },
+      "table": {
+        "author": "Kaliden Aiarys",
+        "license_evidence": "The ledger reports Apache-2.0 for the origin notebook; the inaccessible generating source and its license were not verified directly.",
+        "notebook_version": 1,
+        "origin": "https://www.kaggle.com/code/kalidenaiarys/quantum-circuit-compilation-public-lb-24-59425",
+        "successor": {
+          "url": "https://www.kaggle.com/code/kalidenaiarys/24-80179-public-lb-quantum-circuit-compilation",
+          "version": 9,
+          "finding": "The source copies a selected existing ZIP and checks its hash. It supplies no P2 table generator."
+        },
+        "reference": {
+          "hint": "mismatch",
+          "hint_prefix": "b93b4db795e7",
+          "ledger_path": "factorizations/b93b4db795e7.npz",
+          "name": "dfthcsos/submission.npz",
+          "sha256": "b463690f734a8c4aae5c19677d7be6ae7589f05d69ad06b93f1c166d671af9df"
+        },
+        "source_pull_status": 404
+      }
+    }
+  },
+  "reason": "Neither fixed pairing has an admitted generating source for both components.",
+  "stage": "admission"
+}

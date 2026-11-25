@@ -1,0 +1,21 @@
+{
+  "backend_sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+  "banked_d4_sha256": "53d8b2edf251e2a0c54c401a97d1396c7ed309e1cbfaab8d54a2c99a11ed6552",
+  "circuit_sha256": "a44bdf032e965707cc1d07228258eb07786f9d1b07e094a5d90d1f2fb4b4bff5",
+  "driver_sha256": "0295f54c694677b303147cf76833580055e7fe506d2844f1768c811156ec02ec",
+  "implementation_sha256": {
+    "src/qcompile/dqi/decoder.py": "8ede70defa5c85a3acc0334195926e7458353d7d0a4d131d3009e8f1ca4eea43",
+    "src/qcompile/dqi/field.py": "8669c691af4649eb58fba39d55842f2dd9cbdd2bbe6eb32bdc6321cf6836beaa",
+    "src/qcompile/vendored/dqi_d4.py": "a030bfa619c0fd7a84ffe74fa99fb5c4cfadd7d733eef1d6cc63aeb8fe5e1938",
+    "src/qcompile/vendored/dqi_d4_validation.py": "3f2eb930df8c810ba7d5a660f6c2f1e8a97508beff50a0d643f1a484f19d5884",
+    "tools/dqi_phase_profile.py": "0f6e60a489c657a26320d50c459a87317ed919434c9e0e90db600b6088adb798",
+    "tools/dqi_repaired_candidate.py": "0295f54c694677b303147cf76833580055e7fe506d2844f1768c811156ec02ec"
+  },
+  "polynomial_bank_width": 54,
+  "qubits": 4081,
+  "scan_count": 4095,
+  "source_sha256": "6e9f0028226c240539df18b3ff05f4f533b1ff06902774fa88e13aacbbadbcd6",
+  "static_toffoli_like": 3243349,
+  "status": "experimental",
+  "visible_failure_bits": 7
+}

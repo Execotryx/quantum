@@ -1,0 +1,18 @@
+{
+  "backend_sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+  "source_sha256": "6e9f0028226c240539df18b3ff05f4f533b1ff06902774fa88e13aacbbadbcd6",
+  "batch_receipts": {
+    "s6": {
+      "result": "b9d584eb7872dc28ea3576ece254493e1c28fdaba36d3c031996bb0731a393cc",
+      "batches": {
+        "batch-102144.json": "66734206a57b592afb5a68f3baf5a386ff7e35ea6d3f3da568941870f2e6c0d7"
+      }
+    },
+    "s7": {
+      "result": "7a3529c29b7ee6eb58ba4f260da4b2a1897f164905ba2d07848a61ae52001294",
+      "batches": {
+        "batch-052736.json": "e4fbcc4c067c165fa3d8cd2fa63e00b6a0ad8fdb2f01136e19ed5919be747925"
+      }
+    }
+  }
+}

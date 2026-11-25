@@ -1,0 +1,33 @@
+{
+  "backend_inventory_sha256": "132405912244d6232e4ea7fb3c9e941f8cbfbfe8cc51dd49ab3fccb609166237",
+  "candidates": {
+    "d4": {
+      "artifact": "runs/open-circuits-20261114/d4-build-a/dqi.kmb",
+      "build_receipts": {
+        "runs/open-circuits-20261114/d4-build-a/regeneration.json": "4e61e1ab4f97ae6c57ef3197bc1729fb3d65893c61868c21eab3d290a294b296",
+        "runs/open-circuits-20261114/d4-build-b/regeneration.json": "d669021a13f7f7145de25fe12da18e9407f7ef6c12343259283fc36177407e7d"
+      },
+      "sha256": "53d8b2edf251e2a0c54c401a97d1396c7ed309e1cbfaab8d54a2c99a11ed6552"
+    },
+    "d5": {
+      "artifact": "runs/open-circuits-20261114/d5-build-a/dqi.kmb",
+      "build_receipts": {
+        "runs/open-circuits-20261114/d5-build-a/regeneration.json": "0e0b7680882d24b8b1adb7344e5b1b193b38339c784bfe990c918b9fcdf7f6a2",
+        "runs/open-circuits-20261114/d5-build-b/regeneration.json": "940763fa85f01b2f2331ed6d6d1dc4d66b4782cf535eebf65ee7a11c23025d65"
+      },
+      "sha256": "e8083195cec294f2adde9f1b991bcc348233f549a49e5083ac25a12d0777385b"
+    }
+  },
+  "driver_sha256": "38750e6831e6e9c0617e38816c21e2aba5518c5be2235c795c641dcdfa7a9637",
+  "salts": [
+    "0633bb8902ae1d546c475c537639d64960817d3bd7e3c5dfacda66325aaa1319",
+    "9349040db3344316a723c06df24335e0935f7d39012cf13e65bcbec1c51aadb2",
+    "33510340aab4af6ad43b0ee29c68fc4ceb8abc38af12f8300cb573ea78134980",
+    "7e21782e52ddae7d95e661c7098a573bab4e2ca9dd4797f70ad642759ec7cba6",
+    "36e05d442917d144a4865b2a860e660497abf06b213d581e1999b05c5ae72327",
+    "f6515d1fe5667cc61546081e9df78cba56334f80b88af7536a54cf8119ebbb34",
+    "2bccb4e6e320abffa64cc748e32550f23b5179c57b318257652aaf6fb36d8901",
+    "3c8cc32c09cd670f4208ca2ec8c7972ac4a4f34048b05018fc68113d41ad41e3"
+  ],
+  "shots": 102400
+}

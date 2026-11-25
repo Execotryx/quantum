@@ -1,0 +1,63 @@
+{
+  "status": "COMPLETE_EXACT_PAPER_COMPONENT_PROVED_NOT_NATIVE",
+  "utc": "2026-11-12T04:58:09.582128+00:00",
+  "component": "normalization_phase_parity",
+  "certificate": {
+    "status": "PASS_PURE_BOOLEAN_ALL_ORIGINAL_INPUTS_ALL_ORIGINAL_HMR_SYMBOLS_NOT_NATIVE",
+    "original_inputs": 3133452,
+    "forward_E": 51.5,
+    "unchanged_inverse_E": 44.5,
+    "total_E": 96.0,
+    "modeled_forward_peak": 46,
+    "modeled_inverse_peak": 32,
+    "forward_HMR_symbols": 20,
+    "total_HMR_symbols": 30,
+    "forward_charged_condition_HMR_masks": [
+      87040
+    ],
+    "all_charged_conditions_nonzero_affine": true,
+    "cubic_outcomes_merged": 4,
+    "all_original_owners_restored": true,
+    "all_scratch_flags_zero": true,
+    "every_independent_HMR_coefficient_zero": true,
+    "mathematical_phase_error": 0,
+    "T": 0,
+    "R": 0,
+    "seconds": 0.9761314079951262,
+    "peak_rss_kib": 67576
+  },
+  "guard_status": "COMPLETED",
+  "guard_returncode": 0,
+  "guard_peak_RSS": 81125376,
+  "guard_cleanup_complete": true,
+  "files": [
+    {
+      "path": "normalization_phase_parity/SOURCE_READY.json",
+      "bytes": 682,
+      "sha256": "4378a4dcbf09f830d928c54bb92385f699aefed1a07fceb2744e2e97fa75224b"
+    },
+    {
+      "path": "normalization_phase_parity/study.json",
+      "bytes": 1753,
+      "sha256": "534e6e0f22ce539b83b5598219771eca50892cd0c1e6139fd844396e6765414c"
+    },
+    {
+      "path": "normalization_math_batch/result.json",
+      "bytes": 764,
+      "sha256": "5a931b8e0d20d8b0653aae459e0af2a5b4af44be2ab990984185b8c983df06db"
+    },
+    {
+      "path": "normalization_math_batch/guard.json",
+      "bytes": 3892,
+      "sha256": "49f60d1c3988cb94fd682396d7a94a5f7150a42bd2d0e2fb2b3c09b6acc6c4c7"
+    },
+    {
+      "path": "normalization_math_batch/run.log",
+      "bytes": 7462,
+      "sha256": "d7247d8459c5f9d822348e53c5024b9a6afcd539adc5ed5028f490890b55931d"
+    }
+  ],
+  "native_emission": false,
+  "official_execution": false,
+  "combined_component_not_credited_here": true
+}

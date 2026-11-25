@@ -1,0 +1,285 @@
+{
+  "status": "COMPLETE_POSITIVE_PAPER_COMPOSITION_GATE_NOT_WHOLE_NATIVE_OR_OFFICIAL",
+  "utc": "2026-11-12T05:16:33.042876+00:00",
+  "candidate": "candidate10",
+  "Q": 48,
+  "expected_Toffolis": 1548.75,
+  "T": 4,
+  "R": 33,
+  "rotation_charge": 230.84805946161188,
+  "expected_cost": 85468.70685415737,
+  "saving_from_candidate07_E": 35.25,
+  "components_expected_Toffolis": {
+    "normalization": 94.75,
+    "consuming_root": 192,
+    "divider": 578,
+    "residual_product": 228.5,
+    "coefficient_arithmetic": 118,
+    "seed": 17.5,
+    "root_frames": 4,
+    "metadata": 7,
+    "retired_root_restoration": 21,
+    "first_loader": 61,
+    "second_loader": 79,
+    "shared_table_cleanup": 9,
+    "phase_endpoint": 139
+  },
+  "first_preparation_peak": 48,
+  "second_preparation_peak": 48,
+  "endpoint_peak": 48,
+  "peak_ledger": [
+    {
+      "stage": "normalization",
+      "data": {
+        "input": 22,
+        "flags": 4
+      },
+      "scratch_upper_bound": 20,
+      "peak": 46
+    },
+    {
+      "stage": "consuming_root",
+      "data": {
+        "input_or_root_residual": 22,
+        "flags": 4
+      },
+      "scratch_upper_bound": 13,
+      "peak": 39
+    },
+    {
+      "stage": "first_loader",
+      "data": {
+        "root": 12,
+        "residual": 10,
+        "flags": 4,
+        "D": 13,
+        "H": 3
+      },
+      "scratch_upper_bound": 6,
+      "peak": 48
+    },
+    {
+      "stage": "first_coefficient",
+      "data": {
+        "root": 12,
+        "residual": 10,
+        "flags": 4,
+        "D": 13,
+        "H": 5,
+        "snapshot": 1
+      },
+      "scratch_upper_bound": 3,
+      "peak": 48
+    },
+    {
+      "stage": "product_forward",
+      "data": {
+        "root": 12,
+        "word": 16,
+        "flags": 4,
+        "D": 13
+      },
+      "scratch_upper_bound": 3,
+      "peak": 48
+    },
+    {
+      "stage": "phase_endpoint_and_divider_inverse",
+      "data": {
+        "root": 12,
+        "remainder": 14,
+        "history": 13,
+        "flags": 4
+      },
+      "scratch_upper_bound": 5,
+      "peak": 48
+    },
+    {
+      "stage": "second_loader",
+      "data": {
+        "retained_root": 8,
+        "product": 15,
+        "flags": 4,
+        "D": 13,
+        "H": 3
+      },
+      "scratch_upper_bound": 5,
+      "peak": 48
+    },
+    {
+      "stage": "second_coefficient",
+      "data": {
+        "retained_root": 7,
+        "product": 15,
+        "flags": 4,
+        "D": 13,
+        "H": 5,
+        "snapshot": 1
+      },
+      "scratch_upper_bound": 3,
+      "peak": 48
+    },
+    {
+      "stage": "inverse_product_after_v3_retirement",
+      "data": {
+        "retained_root": 6,
+        "word": 16,
+        "flags": 4,
+        "D": 13,
+        "H": 3,
+        "snapshot": 1
+      },
+      "scratch_upper_bound": 5,
+      "peak": 48
+    },
+    {
+      "stage": "v3_restoration",
+      "data": {
+        "retained_root": 7,
+        "word": 16,
+        "flags": 4,
+        "D": 13,
+        "H": 3,
+        "snapshot": 1
+      },
+      "scratch_upper_bound": 0,
+      "peak": 44
+    },
+    {
+      "stage": "coefficient_inverse",
+      "data": {
+        "retained_root": 7,
+        "residual": 10,
+        "flags": 4,
+        "D": 13,
+        "H": 5,
+        "snapshot": 1
+      },
+      "scratch_upper_bound": 5,
+      "peak": 45
+    },
+    {
+      "stage": "root_decoder",
+      "data": {
+        "restored_root": 12,
+        "residual": 10,
+        "flags": 4,
+        "A": 13,
+        "H": 5
+      },
+      "scratch_upper_bound": 0,
+      "peak": 44
+    }
+  ],
+  "original_exact_minimum_margin_units64": 124370688,
+  "original_worst_error_to_tolerance": 0.973575996935943,
+  "independent_phase_units50_sha256": "8bd482a8957cd387a2b212afdaca656947b7f89c983d67ff4eea4e14c3b0a26a",
+  "accuracy_receipt_sha256": "c0eab1edd234e32d5baa1a51a0fec46abf82165d3973ffda825d2149f67f11e5",
+  "original_tolerance_unchanged": true,
+  "protected_phase_tables_angles_oracle_unchanged": true,
+  "all_new_component_HMR_phases_accounted": true,
+  "all_old_carry_and_table_debts_preserved": true,
+  "component_native_proofs": {
+    "normalization": {
+      "native_acceptance": {
+        "path": "arithmetic_round2/receipts/NORMALIZATION9475_NATIVE_ACCEPTED.json",
+        "bytes": 1124,
+        "sha256": "d8e0a5125c3f2444b9775d3032d4e5dbce2b460bcf1e3aa1559cd679faad561f"
+      },
+      "result_manifest": {
+        "path": "arithmetic_round2/research/root_normalization/native_rn2df/RESULT_MANIFEST.json",
+        "bytes": 2702,
+        "sha256": "41ee5035081b4a91643e04a36b8f6af57dc4c89dfff21f0328aa657851e3891b"
+      },
+      "component_expected_Toffolis": 94.75,
+      "native_proof_sha256": "f8289e3010b6e520dc2f8445f7f8467ca26085f9f69da53e2bea28135627a0cf",
+      "guard_sha256": "6dcf07eea41bed863df2cdaa574d7bfea433f92fe7e9846e6419cc66bb35f181"
+    },
+    "root": {
+      "native_acceptance": {
+        "path": "arithmetic_round2/receipts/ROOT_RN3_NATIVE_ACCEPTED.json",
+        "bytes": 651,
+        "sha256": "b489854b85e2b9c214f379d127db52feff26d2cefeaef2583a206984b0248d92"
+      },
+      "result_manifest": {
+        "path": "arithmetic_round2/research/root_normalization/native_rn3/RESULT_MANIFEST.json",
+        "bytes": 3098,
+        "sha256": "af02893b495400bf0bf16b5727c939383bd2c5d49a9ea0062e85ab1ddfcf778d"
+      },
+      "component_expected_Toffolis": 192,
+      "native_proof_sha256": "388b327f5fdd775232cb557f8c6cf899e737b29fe86a4b5893034b80d8ca8243",
+      "guard_sha256": "70bf17cb87e61e49504b616bc55f2492d1c79951db5ec7564e44ee516b4798e7"
+    },
+    "divider": {
+      "native_acceptance": {
+        "path": "arithmetic_round2/receipts/DIVIDER_HISTORY12_NATIVE_ACCEPTED.json",
+        "bytes": 1050,
+        "sha256": "2ac3013515db15125aa7444e9db6dabca16bf89df9b4131bf0c41445b7e3114c"
+      },
+      "result_manifest": {
+        "path": "arithmetic_round2/research/divider/native_ar004/MANIFEST_RESULTS.json",
+        "bytes": 3367,
+        "sha256": "d47b9c6695a257cb58bd1ee6839ad7e06d6ab9cce5e88c7694033358b9da74de"
+      },
+      "component_expected_Toffolis": 578,
+      "native_proof_sha256": "b1e9bf4f4696a25a92512d9f0cba394b8e65be616a368cd506a8a9676907699f",
+      "guard_sha256": "b287a438f15a21bcdc92c1e8df85973855eded5ef1f43aaa7234dcd903649889"
+    },
+    "product": {
+      "native_acceptance": {
+        "path": "arithmetic_round2/receipts/PRODUCT_V3_NATIVE_ACCEPTED.json",
+        "bytes": 1159,
+        "sha256": "736276ce1b5284101df25609307a2da4d1e3d7bd3da42c72541e65f524a4aa71"
+      },
+      "result_manifest": {
+        "path": "arithmetic_round2/research/product_coefficient/native_v3/RESULT_MANIFEST.json",
+        "bytes": 2645,
+        "sha256": "21ce0f3f02016730f2eb7a6f4d3c40a1e8d50fe1f3fdeef285ee19c46507c813"
+      },
+      "component_expected_Toffolis": 228.5,
+      "native_proof_sha256": "6cbc795189bc052e990284d03200c80ed14ac850906feeb44e78586e6a7320e0",
+      "guard_sha256": "46fe5830023a339c8027c8f728cc608d16ec999e46c6624369e111770c2087cc"
+    },
+    "coefficient": {
+      "native_acceptance": {
+        "path": "arithmetic_round2/receipts/COEFFICIENT_TOP_NATIVE_ACCEPTED.json",
+        "bytes": 873,
+        "sha256": "32960f11eb019d6b5ddb38bf12f907e862b6ed49af25e9b992e378dd4ceba235"
+      },
+      "result_manifest": {
+        "path": "arithmetic_round2/research/product_coefficient/TOP_TRANSFER_RESULT_MANIFEST.json",
+        "bytes": 1821,
+        "sha256": "a6e245671f11c7b73f00e7745bf38788d3ffcb7627f3f83f3572673b6cd79d9d"
+      },
+      "component_expected_Toffolis": 118,
+      "native_proof_sha256": "61af67c62a26f6777a54533703f2e1dafacdca4d130735de8f85b5b494937642",
+      "guard_sha256": "68e12f1d45a4f7cae9cc00ecb3f0098ce5803daaf9160091a9564e64554c1583"
+    }
+  },
+  "adapter_paths": {
+    "normalization": "arithmetic_round2/research/root_normalization/native_rn2df/normalization9475.py",
+    "root": "arithmetic_round2/research/root_normalization/native_rn3/root192.py",
+    "divider": "arithmetic_round2/research/divider/native_ar004/adapter.py",
+    "product": "arithmetic_round2/research/product_coefficient/native_v3/adapter.py",
+    "coefficient": "arithmetic_round2/research/product_coefficient/native_transfer.py"
+  },
+  "composition_current_handles_and_module_isolation_required": true,
+  "whole_native_proof_required": true,
+  "original_exact50_checker_required": true,
+  "official_salts": [
+    "default",
+    1,
+    2,
+    3
+  ],
+  "official_batch_size": 256,
+  "actual_verifier_command_must_omit_batch_size": true,
+  "report_maximum_four_salt_cost": true,
+  "official_verified": false,
+  "no_submission": true,
+  "copyright": "Copyright 2026 Syed Asad Ali",
+  "license": "Apache-2.0",
+  "credits": [
+    "Opus",
+    "Astra"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "status": "FROZEN_INDEPENDENT_PAPER_COMPOSITION_REVIEW",
+  "files": [
+    {
+      "path": "PLAN.md",
+      "bytes": 1042,
+      "sha256": "f32f6bb9abce296d54be18e2d5e2af4f6c199e55661673ae8950ba6f7f2aae0c"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 3632,
+      "sha256": "5fa855b0d6cf17ac1b92ca5b13e1f4db6ff4260c9f93d55dc86022b8a1d13ba8"
+    },
+    {
+      "path": "REVIEW.json",
+      "bytes": 3353,
+      "sha256": "d3315e49812d943147cd56ae501540d92676f63be22cb8db6fb8f26e96f9bdb6"
+    },
+    {
+      "path": "SOURCES.json",
+      "bytes": 2957,
+      "sha256": "ddf025cfdce6df3183e9f7978aa11cdae5d327999dccc35ac5afa7833f05b368"
+    }
+  ]
+}

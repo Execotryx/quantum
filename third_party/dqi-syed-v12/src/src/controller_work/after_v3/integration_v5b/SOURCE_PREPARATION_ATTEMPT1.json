@@ -1,0 +1,9 @@
+{
+  "module_imports": 0,
+  "native_jobs": 0,
+  "reason": "The first descriptive-copy check expected one added line; the actual key wrapper has the documented -3 assertion adjustment plus two explanatory comment lines.",
+  "runtime_sources_modified": false,
+  "sampler_draws": 0,
+  "source_model_ledger_already_written_sha256": "6ec92fadb7976376464d2742dcdcdd57bcf7d4b85d9f27f1357d62dac5181a25",
+  "status": "STOPPED_METADATA_DERIVATION_ASSERTION_ONLY"
+}

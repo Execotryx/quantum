@@ -1,0 +1,33 @@
+{
+  "status": "AUTHORIZED_COMPONENT_NATIVE_SOURCE_READY",
+  "files": [
+    {
+      "path": "native_transfer.py",
+      "bytes": 3881,
+      "sha256": "e006beab571434e561eeefb9e4e4b789e0061569af4bea9d8667c748c297be41"
+    },
+    {
+      "path": "component_text_proof.py",
+      "bytes": 4923,
+      "sha256": "b1b8eb2bb7d6aebfc14797a2a146f19e5b00ecd1acd16efebb7beb4138c7bed1"
+    },
+    {
+      "path": "prove_native_transfer.py",
+      "bytes": 9823,
+      "sha256": "0546d921fa2500a51b4220096e34c7f3437f641ec23047a6e0708f63b4ccaa4a"
+    },
+    {
+      "path": "SOURCE_INPUTS.json",
+      "bytes": 4560,
+      "sha256": "0f14c805afea26f702981b30851589e9b4b994f88438872b7c9785f5248b2976"
+    },
+    {
+      "path": "TOP_TRANSFER_PAPER.json",
+      "bytes": 5221,
+      "sha256": "2fce920baf7cbf0bdf1fe34811fb6c269b3f7b2784d01b184ed525a61471704a"
+    }
+  ],
+  "complete_paper_gate_sha256": "2fce920baf7cbf0bdf1fe34811fb6c269b3f7b2784d01b184ed525a61471704a",
+  "no_frozen_source_edits": true,
+  "new_guard_required": true
+}

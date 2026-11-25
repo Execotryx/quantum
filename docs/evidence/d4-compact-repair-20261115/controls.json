@@ -1,0 +1,29 @@
+{
+  "backend_inventory_sha256": "132405912244d6232e4ea7fb3c9e941f8cbfbfe8cc51dd49ab3fccb609166237",
+  "circuits": {
+    "banked": "53d8b2edf251e2a0c54c401a97d1396c7ed309e1cbfaab8d54a2c99a11ed6552",
+    "homogeneous": "09467ecc12eb50a6a79f0706690a7018a29ecb6679d7e6c15c5b1754fde8db6a",
+    "full_grid": "a44bdf032e965707cc1d07228258eb07786f9d1b07e094a5d90d1f2fb4b4bff5"
+  },
+  "evidence_sha256": {
+    "docs/evidence/d4-extraction-repair-20261115/full-cloud-registration.json": "e915b6bf22544acb34d9ef23dcfab9736e2a00ddb5cc95a749568d91e2952a16",
+    "docs/evidence/d4-extraction-repair-20261115/full-cloud/campaign/candidate/summary.json": "a640ea7c548b70c56a9b4f3291359f780106e152e1baf415a10e8d4845044190",
+    "docs/evidence/d4-extraction-repair-20261115/full-cloud/campaign/candidate/s6.json": "7929a8c9f1e28c020e7cc97da0ef149a5480e61388a865d1ffcc52d7bc00cd5c",
+    "docs/evidence/d4-extraction-repair-20261115/full-cloud/campaign/candidate/s7.json": "d24911bfa042201e99e0a2987900d90cf2a5cfea36218e7718808e0be1ac60b6",
+    "docs/evidence/d4-extraction-repair-20261115/full-build-a.json": "2a1714478697f2a0a8db8eecab46ab2f3a9f23ab6de2d4a7569b1e3d93510249",
+    "docs/evidence/d4-extraction-repair-20261115/full-build-b.json": "2a1714478697f2a0a8db8eecab46ab2f3a9f23ab6de2d4a7569b1e3d93510249",
+    "docs/evidence/d4-extraction-repair-20261115/full-matched.json": "12a59b46b086a0f22b5a3f4c60f62dc5cceeb996dbf2bb6ee742740f30b83a3a",
+    "docs/evidence/d4-extraction-repair-20261115/homogeneous-1-7-profile.json": "6becb72aba49fe53e2cb3ccc48dac76beac942be75f2203a684dc1ecf0311665",
+    "docs/evidence/d4-extraction-repair-20261115/homogeneous-1-7-matched.json": "2e8e768f3db1bc0936fca68fbca7a4fc5b7583672e4630ee4c4b8fc1e14468ed",
+    "docs/evidence/vendored-dqi/dqi-v8.json": "1e2ab08fb1637505069413a9aab1e70a9492e4ac1b56c1089c9777cc5705a920",
+    "third_party/dqi-d4/SOURCE.json": "6e9f0028226c240539df18b3ff05f4f533b1ff06902774fa88e13aacbbadbcd6",
+    "docs/evidence/dqi-phase-replay-20261115/results/s2/batch-045312.json": "38f94a8f866e10bdc31cfca4490f45cf345310c5a8b6dd4919c755ebe35fb4b1",
+    "docs/evidence/dqi-phase-replay-20261115/results/s6/batch-013056.json": "b9cb413ab625ea41ab39d298a2d127521050cde7eed7b955eb42df527b7138ab",
+    "docs/evidence/dqi-phase-replay-20261115/results/s6/batch-073984.json": "7df8ef3c8a646c4b0c4af6ce1349db175a1f77d768f103a7364352bfc0cc2b32",
+    "docs/evidence/dqi-phase-replay-20261115/results/s7/batch-046592.json": "685d5ac2db3a6d8921a4a49579c376868039f0d832d56461fd911731dd7fc92a"
+  },
+  "replay_draws": [
+    6,
+    7
+  ]
+}

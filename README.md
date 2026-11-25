@@ -3,7 +3,31 @@
 A Python toolchain for reproducible quantum-circuit compilation experiments,
 independent mathematical checks, and local verification against pinned evaluators.
 
+## Licensing and third-party sources
+
+qcompile is licensed under Apache 2.0. See the [license](LICENSE), the
+[attribution notice](NOTICE), and the [third-party source policy](third_party/).
+
 ## Current state
+
+The independently rebuilt hybrid archive scored **26.78302388** in full cloud
+verification and **26.78303192** on a distinct confirmation salt. Its repaired
+DQI decoder reduced pooled cost by **9.72%** against banked D4.
+[Cloud results and rebuild report](docs/d4-aggregate-independent-rebuild-26-11-2026-02-03-16.md)
+
+The v8.0 archive scored **2.6228156034** in both the full metric and fresh
+confirmation on Google Cloud. The routed decoder lowered DQI cost by **71.11%**
+from v6. [v8.0 verification and release record](docs/v8.0-release-15-11-2026-15-01-00.md)
+
+Agniv Banerjee (SomeJoint) and the credited contributors' Apache-2.0
+897-qubit decoder passed the registered pooled pricing screen and was banked as
+`dqi-v8`. Its pooled DQI cost was **416,454,072,253.15**.
+[Decoder comparison and credits](docs/dqi-public-pricing-15-11-2026-15-01-00.md)
+The multiplier audit found that D4 already uses 42 Toffolis per full-field
+product. [Multiplier audit](docs/dqi-multiplier-audit-15-11-2026-15-21-00.md)
+
+The public inverse-square-root screen retained the confirmed v6 circuit.
+[Source admission findings](docs/invsqrt-public-admission-15-11-2026-15-06-00.md)
 
 The v6 hybrid passed all three benchmarks on a fresh archive extraction
 in Google Cloud. Its aggregate score was **1.7339568375**, up **4.70%**

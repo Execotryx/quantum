@@ -1,0 +1,173 @@
+{
+  "status": "INDEPENDENT_COMPLETE_ROOT_TAIL_PAPER_AUDIT_PASS_NOT_NATIVE",
+  "local_exact_phase": [
+    {
+      "inverse": false,
+      "input_cases": 4,
+      "Toffolis": 2,
+      "helpers": 2,
+      "carry_equals_original_b": true,
+      "x2_unchanged": true,
+      "expected_output_pair": "11",
+      "all_HMR_signs": [
+        {
+          "measured_truth": 0,
+          "correction_truth": 0
+        },
+        {
+          "measured_truth": 15,
+          "correction_truth": 15
+        }
+      ],
+      "all_outcome_combinations_proved": 4
+    },
+    {
+      "inverse": true,
+      "input_cases": 4,
+      "Toffolis": 2,
+      "helpers": 2,
+      "carry_equals_original_b": true,
+      "x2_unchanged": true,
+      "expected_output_pair": "00",
+      "all_HMR_signs": [
+        {
+          "measured_truth": 0,
+          "correction_truth": 0
+        },
+        {
+          "measured_truth": 15,
+          "correction_truth": 15
+        }
+      ],
+      "all_outcome_combinations_proved": 4
+    }
+  ],
+  "baseline": {
+    "specialized": false,
+    "forward_E": 103.0,
+    "inverse_E": 103.0,
+    "total_E": 206.0,
+    "peak": 42,
+    "retained_exponent_flags": 4,
+    "final_live": 26,
+    "late_steps": [
+      {
+        "direction": "forward",
+        "j": 11,
+        "low_width": 3,
+        "high_width": 11,
+        "source_width": 9,
+        "carry_disjoint": true,
+        "data_before": 28,
+        "data_after": 28,
+        "root_helper_owners": 2,
+        "Toffolis": 12.0
+      },
+      {
+        "direction": "forward",
+        "j": 12,
+        "low_width": 3,
+        "high_width": 12,
+        "source_width": 10,
+        "carry_disjoint": true,
+        "data_before": 30,
+        "data_after": 30,
+        "root_helper_owners": 2,
+        "Toffolis": 13.0
+      },
+      {
+        "direction": "inverse",
+        "j": 12,
+        "low_width": 3,
+        "high_width": 12,
+        "source_width": 10,
+        "carry_disjoint": true,
+        "data_before": 30,
+        "data_after": 30,
+        "root_helper_owners": 2,
+        "Toffolis": 13.0
+      },
+      {
+        "direction": "inverse",
+        "j": 11,
+        "low_width": 3,
+        "high_width": 11,
+        "source_width": 9,
+        "carry_disjoint": true,
+        "data_before": 28,
+        "data_after": 28,
+        "root_helper_owners": 2,
+        "Toffolis": 12.0
+      }
+    ],
+    "final_map": "Original norm22 restored on same owners; exponent flags4 untouched."
+  },
+  "specialized": {
+    "specialized": true,
+    "forward_E": 99.0,
+    "inverse_E": 99.0,
+    "total_E": 198.0,
+    "peak": 41,
+    "retained_exponent_flags": 4,
+    "final_live": 26,
+    "late_steps": [
+      {
+        "direction": "forward",
+        "j": 11,
+        "low_width": 3,
+        "high_width": 11,
+        "source_width": 9,
+        "carry_disjoint": true,
+        "data_before": 28,
+        "data_after": 28,
+        "root_helper_owners": 0,
+        "Toffolis": 10.0
+      },
+      {
+        "direction": "forward",
+        "j": 12,
+        "low_width": 3,
+        "high_width": 12,
+        "source_width": 10,
+        "carry_disjoint": true,
+        "data_before": 30,
+        "data_after": 30,
+        "root_helper_owners": 0,
+        "Toffolis": 11.0
+      },
+      {
+        "direction": "inverse",
+        "j": 12,
+        "low_width": 3,
+        "high_width": 12,
+        "source_width": 10,
+        "carry_disjoint": true,
+        "data_before": 30,
+        "data_after": 30,
+        "root_helper_owners": 0,
+        "Toffolis": 11.0
+      },
+      {
+        "direction": "inverse",
+        "j": 11,
+        "low_width": 3,
+        "high_width": 11,
+        "source_width": 9,
+        "carry_disjoint": true,
+        "data_before": 28,
+        "data_after": 28,
+        "root_helper_owners": 0,
+        "Toffolis": 10.0
+      }
+    ],
+    "final_map": "Original norm22 restored on same owners; exponent flags4 untouched."
+  },
+  "complete_saving_E": 8,
+  "T_change": 0,
+  "R_change": 0,
+  "accuracy_change": 0,
+  "inverse_precondition": "The two low1 bits are the exact forward image after all later root steps and residual conversion have been reversed.",
+  "high_arithmetic_equivalence": "The new carry b is the exact original preserved input value of the old copy c. It is disjoint from older_root and high in both directions. No duplicate-source or borrow-owner assumption is made.",
+  "no_original_source_modified": true,
+  "no_native_builder": true
+}

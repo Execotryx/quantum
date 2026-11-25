@@ -1,0 +1,70 @@
+{
+  "status": "COMPLETE_NORMALIZATION9475_PAPER_GATE_READY_FOR_PARENT_NATIVE_ACCEPTANCE",
+  "utc": "2026-11-12T05:01:36.903104+00:00",
+  "files": [
+    {
+      "path": "PLAN.md",
+      "bytes": 1900,
+      "sha256": "d12cfd11443ad5f4b6cb51ebaf2ae71fc98d116779bf6e13b0a6cc91f6c358c4"
+    },
+    {
+      "path": "study.py",
+      "bytes": 6788,
+      "sha256": "73fe92d402f4a34472ac09beede18fbac73116abdac151509f7fc4e67abeeb47"
+    },
+    {
+      "path": "INPUTS.json",
+      "bytes": 65089,
+      "sha256": "0479e09b6ae3574906cc876efa24e0fb2baab9156dc3d17c4150b12a07fdf812"
+    },
+    {
+      "path": "SOURCE_READY.json",
+      "bytes": 588,
+      "sha256": "09e165c6b7e73cdd1de4016461a9340c97f83b996590d36d0ff56e01745a7ca9"
+    },
+    {
+      "path": "study.json",
+      "bytes": 3416,
+      "sha256": "9e5e0b2ec626d2893d12762593ca7b08c787f827f4cbfae1c59186ffcd4ff6a6"
+    },
+    {
+      "path": "guard.json",
+      "bytes": 2742,
+      "sha256": "19c9f4b797ab7b17b479e4c558a6ca9dc7566ed71a8244fe4c807caf0e687024"
+    },
+    {
+      "path": "run.log",
+      "bytes": 3802,
+      "sha256": "38107a444d72642dec2fe5ec878c3b8fce77f0ddec68e924c2365009cc20fdbb"
+    }
+  ],
+  "complete_ledger": {
+    "component_forward_E": 51.5,
+    "component_inverse_E": 43.25,
+    "component_total_E": 94.75,
+    "modeled_forward_peak": 46,
+    "modeled_inverse_peak": 30,
+    "boundary_owners": 26,
+    "globalQ": 48,
+    "complete_Toffolis_vs_candidate09": 1566.75,
+    "T": 4,
+    "R": 33,
+    "rotation_charge": 230.84805946161188,
+    "expected_complete_cost": 86332.70685415737
+  },
+  "proof": {
+    "original_inputs_per_selected_branch": 3133452,
+    "selected_branches": 4,
+    "static_HMR_events": 30,
+    "all_other_active_HMR_symbols_independent": true,
+    "forward_parity_expanded": true,
+    "all_phase_coefficients_zero": true,
+    "all_original_owners_restored": true,
+    "all_scratch_flags_zero": true,
+    "negative_omitted_helper_fix_detected": true
+  },
+  "native_emission": false,
+  "official_execution": false,
+  "parent_acceptance_required": true,
+  "fallback_component": "normalization95_combined, separately frozen and unchanged"
+}

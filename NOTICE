@@ -1,0 +1,60 @@
+qcompile
+Copyright 2026 Viktoriya (Execotryx) and contributors.
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This product includes third-party software listed below.
+
+Nasir Ali GF(4096) scheme42
+Upstream: https://github.com/nasir26/vqcc-kaggle
+Source revision: 55161390efc3e8604bab56f3f31e4abbf34c7764
+Author: Nasir Ali
+License: Apache-2.0
+
+The original finite-field tensor generator and its arithmetic module are
+retained under third_party/dqi-scheme42 for the multiplier audit.
+
+
+mrmeows Q880 DQI
+Upstream: https://www.kaggle.com/datasets/mrmeows/qcc-1375-open-circuits/versions/5
+Dataset revision: 5
+Authors: mrmeows / team selenium, Dmitrii Gluzdov, Agniv Banerjee / SomeJoint, ViberTeam, manwithacat, and Phuc Thai
+License: Apache-2.0
+
+dqi.kmb is built from Dmitrii Gluzdov's Apache-2.0 round12 source (with SomeJoint / Agniv Banerjee's Bezout/Hankel phase solve, ViberTeam, manwithacat mask projection and Phuc Thai lineage), plus my exact arithmetic replacements. source/dqi_q880 rebuilds it byte for byte (sha256 e8083195cec294f2adde9f1b991bcc348233f549a49e5083ac25a12d0777385b). Upstream license and notice files are retained in that folder.
+
+
+SomeJoint 897-qubit DQI streamed conversion
+Upstream: https://www.kaggle.com/code/somejoint/quantum-circuits-22-75-local-gm-897-qubit-dqi
+Source revision: a4b5a8c288f17f8c09469820848d2d7c16e16044
+Authors: Agniv Banerjee / SomeJoint and credited contributors below
+License: Apache-2.0
+
+## Credits and licence
+
+- **invsqrt:** **Akmal Xodarev (busyaprime)**: the main lookup of mrmeows' 63-qubit circuit, re-synthesized with 172 AND gates instead of 186, which lowers its cost by 0.85%. **mrmeows**: the rest of the 63-qubit circuit, and the storage and uncomputation changes from 78 qubits. On the public line of **Akmal Xodarev** (busyaprime), **Phuc Thai** (DePie), **Dmitrii Gluzdov** and **marsyas**, as mrmeows' credit chain names it.
+- **DQI:** **Our research team** of AI agents (GPT-6 Astra leading two GPT-6 Astra designers, three GPT-6.1 Sol builders and three GPT-6.1 Terra reviewers, directed by Claude for Agniv Banerjee, SomeJoint): the aligned conversion route with measured low heads, the streamed full-head fusion with a monic root, the small truncated products and the replay erasure. **GPT-6 Astra Pro**: the 897-qubit decoder it starts from, with its homogeneous external chains and 658-Toffoli jet. **Ahmed Berat Özer**: the narrowing of our fused decoder in his version 9, from which our 883-qubit decoder came. **Alex Chilton**: the 883-qubit Schur decoder whose design it starts from, based on **jday96314**'s QuantumAI decoder and classical models (that repository states no license). **mrmeows** and **Ahmed Berat Özer**: the public mask projection of round17 and version 8, after **manwithacat**'s classical-mask projection. Earlier links of the design: **Dmitrii Gluzdov**'s round12 decoder, **Agniv Banerjee (SomeJoint)**'s Bézout–Hankel phase solve, **ViberTeam** and **Phuc Thai (DePie)**.
+- **Chemistry:** **Kirill Tymchishin (kirilltym)**: the exact gauge on the factors, which gives this file its own `W` and `H2_I`, and these 15 circuits. **Our research team** of AI agents, directed by Claude for Agniv Banerjee (SomeJoint): the arrays `angle_words`, `U`, `tree_edges`, `brot`, `H1_I` and `Hsym_lower`, byte for byte those of our public dataset qcc-our-chemistry-b143-c60-xor2. **Vladislav Lavrentev (lightningv08)**: the five-word loader. **heliosli** and **avazaku**: loaders that borrow the words' top bits. **Ahmed Berat Özer**: the version 8 factorization and the kernel-relation compiler. **mrmeows**: the paired-product lookup algebra and the 8-bit regime.
+
+**Inherited lineage**, as the fullest public chain names it: Agniv Banerjee (SomeJoint), Dmitrii Gluzdov, ViberTeam / Artem1410 / anazemcev, manwithacat, Phuc Thai (DePie), Kozykorpesh (kozykappa), Michael Rustad, Akmal Xodarev (busyaprime), marsyas, Sumit Chongder, Rudra Bhaskar, Zongao Bian, Mizero Lucky Gall, Gu et al. and Guang Hao Low.
+
+Thanks to **Google Quantum AI** and the competition authors for the tasks, the verifiers and Kickmix, which keep their own terms. The circuits keep their authors' licences; the notebook code is Apache-2.0. If we have left anyone out of a chain, tell us in the comments and we will add them.
+
+Syed Asad Ali DQI v12 generator
+Upstream: https://www.kaggle.com/datasets/syed3000/vqcc-own-circuit-portfolio/versions/12
+Dataset revision: 12
+Original builder: Syed Asad Ali, with collaborators credited in the upstream NOTICE
+License: Apache-2.0
+
+The source package and its original notice are under third_party/dqi-syed-v12.
+The early-tail and padding-exchange decoder derives from this generator.
+
+Syed Asad Ali v12 inverse-square-root generator
+Syed Asad Ali v12 chemistry loader generator
+Upstream: https://www.kaggle.com/datasets/syed3000/vqcc-own-circuit-portfolio/versions/12
+Dataset revision: 12
+Original builder: Syed Asad Ali, with collaborators credited in the upstream notices
+License: Apache-2.0
+
+The companion generators and notices are under third_party/invsqrt-syed-v12
+and third_party/dfthcsos-syed-v12. The chemistry factorization is retained
+licensed input data with its published identity.

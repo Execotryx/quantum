@@ -1,0 +1,190 @@
+{
+  "status": "COMPLETE_POSITIVE_HISTORY12_PAPER_GATE_AUDITED_NATIVE_PENDING",
+  "copyright": "Copyright2026 Syed Asad Ali. Apache-2.0. Credits Opus and Astra.",
+  "resources": {
+    "Q": 48,
+    "divider_expected_Toffolis": 578,
+    "divider_T": 0,
+    "divider_R": 0,
+    "forward_E": 270,
+    "cleanup_E": 308,
+    "delta_vs_original_divider": -9.5,
+    "delta_vs_native_AR003": -8.5
+  },
+  "whole_candidate07_only": {
+    "Q": 48,
+    "expected_Toffolis": 1574.5,
+    "T": 4,
+    "R": 33,
+    "rotation_charge": 230.84805946161188,
+    "expected_cost": 86704.70685415737
+  },
+  "other_round2_savings_not_combined": true,
+  "component_ledger": [
+    {
+      "component": "unchanged_forward",
+      "E": 270
+    },
+    {
+      "component": "inverse_rows35_through25",
+      "E": 98.5
+    },
+    {
+      "component": "inverse_feed_rows24_through13_with_12_carry_preparations",
+      "E": 192
+    },
+    {
+      "component": "history12_restoration",
+      "E": 1
+    },
+    {
+      "component": "accepted_AR003_last_feed_and_initializer_cleanup",
+      "E": 16.5
+    }
+  ],
+  "owners": [
+    {
+      "cut": "entry",
+      "root": 12,
+      "product": 15,
+      "exponent": 4,
+      "total": 31
+    },
+    {
+      "cut": "unchanged_endpoint",
+      "root": 12,
+      "remainder": 14,
+      "history": 13,
+      "exponent": 4,
+      "total": 43
+    },
+    {
+      "cut": "after_history12_retirement",
+      "root": 12,
+      "remainder": 14,
+      "history": 12,
+      "exponent": 4,
+      "total": 42
+    },
+    {
+      "cut": "before_AR003_j12",
+      "total": 43
+    },
+    {
+      "cut": "return",
+      "root": 12,
+      "product": 15,
+      "exponent": 4,
+      "total": 31
+    }
+  ],
+  "proof": {
+    "original_inputs": 3133452,
+    "interval": [
+      1,
+      3133453
+    ],
+    "end_exclusive": true,
+    "chunks": 48,
+    "independent_HMR_symbols": 583,
+    "every_HMR_monomial_coefficient_zero": true,
+    "all24_CarryDebts_consumed": true,
+    "both_history_retirement_outcomes": true,
+    "zero_additional_phase": true,
+    "endpoint_data_and_forward_source_unchanged": true,
+    "input_prefix_sha256": "b167d1d9c5fab68cabab01bb7947c84dd719b72b9bbc1caa1567c66f29ba0794",
+    "native": false
+  },
+  "scope": {
+    "valid_original_inputs_with_root4095": 336,
+    "minimum_actual_U_at_root4095": -8128,
+    "abstract_counterexamples": [
+      {
+        "v": 4095,
+        "P": 18432,
+        "U": -14336,
+        "u12": 8191,
+        "sigma12": 0,
+        "sigma13": 1,
+        "decoded": 1
+      },
+      {
+        "v": 4095,
+        "P": 20480,
+        "U": -12288,
+        "u12": 8192,
+        "sigma12": 1,
+        "sigma13": 0,
+        "decoded": 0
+      }
+    ],
+    "unrestricted_abstract_promise_not_claimed": true
+  },
+  "native_obligations": [
+    "Native emitted cleanup must count578 atQ48 and preserve all43 endpoint owners before retirement.",
+    "Use exact actual-model domain, not unrestricted root/P cube; retain root4095 counterexamples.",
+    "Prove native full-domain all-HMR roundtrip and unchanged forward/endpoint identity; include omitted-retirement-phase negative probe.",
+    "Propagate current reallocated product and initial-sign owner IDs.",
+    "Parent whole integration and allfour official verifier salts at original tolerance remain mandatory."
+  ],
+  "source_and_result_pins": [
+    {
+      "path": "arithmetic_round2/research/divider/HISTORY12_PLAN.md",
+      "bytes": 2595,
+      "sha256": "4b0ce6138bbb3872df3704b7e92f5fc70ba78d3f0b693d1237cf962fd99402c4"
+    },
+    {
+      "path": "arithmetic_round2/research/divider/HISTORY12_ANALYTIC.md",
+      "bytes": 2295,
+      "sha256": "69c6f1daa0acf0902491843a50cf3989623f634dde832508f0a97db80ee0b9ed"
+    },
+    {
+      "path": "arithmetic_round2/research/divider/history12_kernel.py",
+      "bytes": 2736,
+      "sha256": "1dc5022918a0a47663ec3ad812cdff67f93ee0c1646f3e4db59ee7881c847afe"
+    },
+    {
+      "path": "arithmetic_round2/research/divider/history12_study.py",
+      "bytes": 7816,
+      "sha256": "fcedae75ed24e28245dffd514b7b8564eaaedb646add7e0ef926f64e0e6d6c8e"
+    },
+    {
+      "path": "arithmetic_round2/research/divider/SOURCE_READY_006.json",
+      "bytes": 1483,
+      "sha256": "d2dba815ccbd4b090196c41a839f884b523ebce53e5ac9dff7fc68e76d73530a"
+    },
+    {
+      "path": "arithmetic_round2/research/divider/history12_study.json",
+      "bytes": 18937,
+      "sha256": "4639dc85582bbff4d77aecc8bd004dcd205531299358d5415ca4430e4773439d"
+    },
+    {
+      "path": "arithmetic_round2/research/divider/serial_paper001.guard.json",
+      "bytes": 33370,
+      "sha256": "a2164530e89bf7a6fb3167c3e64edfef33deec9b745b272cf19ab52a10f11ca8"
+    },
+    {
+      "path": "arithmetic_round2/research/divider/SERIAL_PAPER_BATCH_001.json",
+      "bytes": 1877,
+      "sha256": "d5d1c7611c59a1c42033436032408e6cd5a786d3ba2b1f56c678d28cc3d09350"
+    },
+    {
+      "path": "arithmetic_round2/research/divider/PAPER_QUEUE_OUTCOMES_002.json",
+      "bytes": 2765,
+      "sha256": "642f639f4a598194ba8cd4e187383f4091c100b75472f993052dcef11909d3e1"
+    },
+    {
+      "path": "arithmetic_round2/research/divider/native_ar003/NATIVE_PROOF.json",
+      "bytes": 59285,
+      "sha256": "ea39d76e9febad7e6afb38f2218fea2b1ed46f2f27fe29fdea2533dee98a99ad"
+    },
+    {
+      "path": "arithmetic_round2/research/product_coefficient/HISTORY12_INTERFACE_REVIEW.json",
+      "bytes": 2587,
+      "sha256": "eac70c9d74cc88bbd1af703dc96e55dd2339e83a55de0f338e560461224206d1"
+    }
+  ],
+  "guard_peak_bytes": 66998272,
+  "guard_completed": true,
+  "source_pins_rechecked_after_execution": true
+}

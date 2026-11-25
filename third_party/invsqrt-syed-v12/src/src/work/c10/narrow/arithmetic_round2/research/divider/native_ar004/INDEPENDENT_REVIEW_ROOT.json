@@ -1,0 +1,45 @@
+{
+  "status": "READ_ONLY_AR004_ACTUAL_DOMAIN_AND_OWNER_REVIEW_NO_BLOCKER",
+  "files": [
+    {
+      "path": "arithmetic_round2/research/divider/native_ar004/adapter.py",
+      "bytes": 2952,
+      "sha256": "9b2f24691a337dfe27f9f47477fbb97f671075dfe313e5a360f5c8ec8635b493"
+    },
+    {
+      "path": "arithmetic_round2/research/divider/native_ar004/prove.py",
+      "bytes": 15241,
+      "sha256": "1d15be0485da70617017dafaed6e3889f009c8b57bd55bd59b2d206800267352"
+    },
+    {
+      "path": "arithmetic_round2/research/divider/history12_kernel.py",
+      "bytes": 2736,
+      "sha256": "1dc5022918a0a47663ec3ad812cdff67f93ee0c1646f3e4db59ee7881c847afe"
+    },
+    {
+      "path": "arithmetic_round2/research/divider/top12_kernel.py",
+      "bytes": 7667,
+      "sha256": "f4367db957bac36fc319389358984ecf00b6b8788b7e19894f0600cf1e68aec5"
+    },
+    {
+      "path": "native/candidate01/divider.py",
+      "bytes": 13551,
+      "sha256": "d0dbaf6fe4227da988c9cb9e9dee847624992c7c5cce7ab347990d5b0a116c05"
+    }
+  ],
+  "scope": "Actual-domain encoding, root boundary samples, endpoint recurrence, owner restoration and phase-obligation review only. No import, execution or native result claim.",
+  "findings": [
+    "model_input packs current(v12,P15,flags4) into31bits using the unchanged frozen C/U0 model; integer inequalities independently validate the floating square-root floor before use. Product bit shifts and signed-U15 bounds match the selected source interface.",
+    "Boundary samples use every root4096..8191, ceil(square/16) and the next-root upper bound, then inward rounding to multiples4. Their original x values are valid and their recovered root assertions cover both ends of every root interval. Sample16384 is exactly divisible by256.",
+    "endpoint_values independently starts from u12=4094-3v+b13-2b14+b12 and records sigma12..24 before the consuming feed recurrence. Its later taper arithmetic and14-bit signed wrap agree with the unchanged physical source convention.",
+    "The component preserves the exact original forward text. It therefore inherits the qualified forward/phase-value chart; the new all-domain roundtrip/all-HMR proof will isolate whether cleanup is its exact inverse on that declared domain.",
+    "Only history12 is measured out. Its actual outcome is paid by the reviewed quadratic currentroot/history13 identity. It is reconstructed before the final feed, and token.initial_u[13] is rebound to that current owner. The direct sign and original carry debt have independent negative probes.",
+    "Full proof loops all original x=1..3133452, matches the frozen AR003 encoded-input digest, checks every reset and all583 static HMR variables, with no claim about arbitrary unrelated root/product inputs.",
+    "restore31 allocates only existing zero capacity to48, updates current owner mappings through Clifford swaps, and frees all non-original owners. No stale input-register assumption remains."
+  ],
+  "native_execution": false,
+  "official_execution": false,
+  "pending": [
+    "Frozen complete source manifest review and native batch results remain parent/owning-agent responsibilities."
+  ]
+}

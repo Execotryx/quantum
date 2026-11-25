@@ -1,3 +1,5 @@
+> Status: paused on 2026-11-14, pending vendor-public-c40-chemistry. Do not implement further until resolved.
+
 ## Why
 
 `fit-dfthc-alternating-projection` chose among qualifying lanes by "the

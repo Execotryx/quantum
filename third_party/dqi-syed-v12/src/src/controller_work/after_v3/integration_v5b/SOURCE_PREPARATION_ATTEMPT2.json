@@ -1,0 +1,8 @@
+{
+  "module_imports": 0,
+  "native_jobs": 0,
+  "reason": "The emit AST differs only in its explicit candidate label post_v3_fixed_v5_T_only -> post_v3_fixed_v5b_T_only. The first metadata assertion had omitted this label normalization.",
+  "runtime_sources_modified": false,
+  "sampler_draws": 0,
+  "status": "STOPPED_METADATA_AST_LABEL_ASSERTION_ONLY"
+}

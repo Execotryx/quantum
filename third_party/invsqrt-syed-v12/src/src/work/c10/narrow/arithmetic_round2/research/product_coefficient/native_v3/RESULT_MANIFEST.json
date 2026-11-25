@@ -1,0 +1,67 @@
+{
+  "status": "PASS_NATIVE_AR005_COMPONENT_READY_FOR_PARENT_COMPOSITION_NOT_OFFICIAL",
+  "files": [
+    {
+      "path": "arithmetic_round2/research/product_coefficient/native_v3/PLAN.md",
+      "bytes": 3498,
+      "sha256": "21449b5ad7eef4d0acb13df75c587b6f42bbe441f1d7cf0d175aa55a3e57a9b5"
+    },
+    {
+      "path": "arithmetic_round2/research/product_coefficient/native_v3/adapter.py",
+      "bytes": 5462,
+      "sha256": "c98b28f7d30a9f410c5bc4ae012eeb656bff80e908df75cfe6bcc5f02ba0eaed"
+    },
+    {
+      "path": "arithmetic_round2/research/product_coefficient/native_v3/prove.py",
+      "bytes": 14723,
+      "sha256": "92c7209129636c049e6dfa234bca2025e2c1c5ad243e63273d6d2f5eaf9fee18"
+    },
+    {
+      "path": "arithmetic_round2/research/product_coefficient/native_v3/SOURCE_READY.json",
+      "bytes": 2787,
+      "sha256": "51c641a60c22a025ae135cec4eac4d6a178ea71e97dc8fd5db30d7ed2412f245"
+    },
+    {
+      "path": "arithmetic_round2/research/product_coefficient/native_v3/native.guard.json",
+      "bytes": 19175,
+      "sha256": "46fe5830023a339c8027c8f728cc608d16ec999e46c6624369e111770c2087cc"
+    },
+    {
+      "path": "arithmetic_round2/research/product_coefficient/native_v3/native.guard.log",
+      "bytes": 14219,
+      "sha256": "ab286fe6548c9f60c100575c6f1abd3f069e25a82536c40674da0537bf3b1add"
+    },
+    {
+      "path": "arithmetic_round2/research/product_coefficient/native_v3/result/PROOF.json",
+      "bytes": 57274,
+      "sha256": "6cbc795189bc052e990284d03200c80ed14ac850906feeb44e78586e6a7320e0"
+    },
+    {
+      "path": "arithmetic_round2/research/product_coefficient/native_v3/result/seed_product_v3_roundtrip.kmb",
+      "bytes": 30584,
+      "sha256": "bdfc81f9ed95dd37ad4659e014a4e58f14776b332a31669283496a2aeece0060"
+    },
+    {
+      "path": "arithmetic_round2/research/product_coefficient/native_v3/result/seed_product_v3_roundtrip.kmx",
+      "bytes": 41255,
+      "sha256": "a0ad2fd2a60a28951f87516f3dbcf98269b585394943821819dcde9c9be4c30f"
+    }
+  ],
+  "Q": 48,
+  "product_and_recovery_E": 228.5,
+  "unchanged_seed_E": 17.5,
+  "saving_E_vs_AR002": 9.5,
+  "model_root_residual_inputs": 4194304,
+  "formal_spectators": 11,
+  "all_HMR_variables": 247,
+  "all64_native_text_chunks_pass": true,
+  "negative_phase_and_data_tests_pass": true,
+  "actual_guard_completed": true,
+  "mutable_v3_owner_required": true,
+  "adapter_API": "product_inverse(builder,v,D,word,token,dirty,baseline=old_lifecycle)->(seed,h); v must be a list and is updated in place",
+  "precondition_owners": 44,
+  "inverse_owners": 43,
+  "postcondition_owners": 44,
+  "full_invsqrt_native": false,
+  "official_verifier": false
+}

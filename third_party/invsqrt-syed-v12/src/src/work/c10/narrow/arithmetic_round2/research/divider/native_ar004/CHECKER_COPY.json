@@ -1,0 +1,10 @@
+{
+  "status": "EXACT_BYTE_COPY_NO_CHECKER_CHANGES",
+  "source_path": "arithmetic_round2/research/divider/native_ar003/checker31.py",
+  "source_sha256": "665952a09d594b0912257c6ee8175c9092d94006600314f3a0c9fa00ca1bef6c",
+  "copy_sha256": "665952a09d594b0912257c6ee8175c9092d94006600314f3a0c9fa00ca1bef6c",
+  "input_bits": 31,
+  "phase_modulus": 2,
+  "all_instruction_phase_reset_and_owner_checks_preserved": true,
+  "whole_fusion_checker_not_changed": true
+}

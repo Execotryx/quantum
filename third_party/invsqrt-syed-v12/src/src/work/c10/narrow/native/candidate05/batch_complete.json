@@ -1,0 +1,83 @@
+{
+  "status": "PASS_CANDIDATE05_NATIVE_BATCH_NOT_OFFICIAL",
+  "jobs": [
+    {
+      "command": [
+        "/usr/bin/python3.13",
+        "/workspace/scratch/40c9505bd2bc/narrow/native/candidate05/generate.py"
+      ],
+      "returncode": 0,
+      "seconds": 4.74441288500384
+    },
+    {
+      "command": [
+        "/usr/bin/python3.13",
+        "/workspace/scratch/40c9505bd2bc/narrow/native/candidate05/prove50.py",
+        "--mode",
+        "selftest",
+        "--output",
+        "/workspace/scratch/40c9505bd2bc/narrow/native/candidate05/checker50_selftest.json"
+      ],
+      "returncode": 0,
+      "seconds": 0.37287206600012723
+    },
+    {
+      "command": [
+        "/usr/bin/python3.13",
+        "/workspace/scratch/40c9505bd2bc/narrow/native/candidate05/prove50.py",
+        "--mode",
+        "sample",
+        "--shots",
+        "8192",
+        "--seeds",
+        "0,1,2,3",
+        "--output",
+        "/workspace/scratch/40c9505bd2bc/narrow/native/candidate05/whole_native_sample.json"
+      ],
+      "returncode": 0,
+      "seconds": 1.169089299000916
+    },
+    {
+      "command": [
+        "/usr/bin/python3.13",
+        "/workspace/scratch/40c9505bd2bc/narrow/native/candidate05/prove50.py",
+        "--mode",
+        "text",
+        "--last",
+        "1025",
+        "--chunk",
+        "1024",
+        "--output",
+        "/workspace/scratch/40c9505bd2bc/narrow/native/candidate05/whole_native_text_diagnostic.json"
+      ],
+      "returncode": 0,
+      "seconds": 1.1786455239926
+    },
+    {
+      "command": [
+        "/usr/bin/python3.13",
+        "/workspace/scratch/40c9505bd2bc/narrow/native/candidate05/prove50.py",
+        "--mode",
+        "text",
+        "--output",
+        "/workspace/scratch/40c9505bd2bc/narrow/native/candidate05/whole_native_text_all.json"
+      ],
+      "returncode": 0,
+      "seconds": 12.819877062996966
+    }
+  ],
+  "full_domain_text_proof": true,
+  "serial_subprocesses": true,
+  "hard_address_space": 536870912,
+  "seconds": 20.34103154100012,
+  "official_verifier": false,
+  "old_candidates_preserved": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "repeated_quantize_scan": false,
+  "unchanged_pinned_angle_receipt": true,
+  "no_submission": true
+}

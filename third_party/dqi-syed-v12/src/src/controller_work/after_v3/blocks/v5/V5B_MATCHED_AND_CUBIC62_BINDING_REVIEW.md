@@ -1,0 +1,17 @@
+# Narrow v5b provider and event review
+
+Copyright 2026 Syed Asad Ali. Apache-2.0. Credits: Opus and Astra.
+
+**Source review: no blocker found in the selected provider and event changes.** This review binds `integration_v5b/v5b_pipeline.py` SHA-256 `14bb85846d910eaf9ea9300bb604c818d28421ac7b48df8f8fa325091abf5b5e` and `v5b_events.py` SHA-256 `f30e2d2ecd75bc9ac1559ca056d9fdf2205ff20d4137d020c46d7a2c93c67795`. I read both complete files. The source binding, gate producer, full native candidate and official runs remain separate gates; no import, builder or native action was performed here.
+
+The old arithmetic is loaded first, its generic return provider is set to the already selected last-return module, and only then is the matched first-two adapter imported. Its captured generic arithmetic is therefore the intended provider. The adapter's original normalized extractor and arithmetic identities are asserted before replacing `P.Extractor`. The global old closed-inverse binding remains identified honestly; this candidate does not replace it as a way of changing unrelated callers.
+
+The production-only constant-one carry is the declared adapter ABI. Prefix checks require exactly three open191T PrefixRecords with actual six-bit masks. Closing requires three195T receipts, complete owned-bank resets, all three matched debts paid, and the exact public carry seam reached. Deferred prefix debts are paid by zero-T CZ at the already computed matching return witness, so no new event is added. This review does not turn the old arbitrary-initial-carry component cases into clean-storage promises.
+
+Both real paired-scale callers use the new paired62 module, and the quantum phase identity and62T/22-helper constants are asserted. The window sets contain both17 and14, and the selected transpose handoff remains the exact provider already prepared for that placement. The increase from18 to22 phase helpers is expressly recorded; no width improvement or compatibility with an unrelated future width variant is inferred.
+
+The event installation occurs after all providers are imported. The existing alias-aware scalar wrapper owns the three fresh six-bit return masks exactly once. The complete key Counter has four scalar inverse events including the unchanged last return, and no old retained-child or outer54 events. The complete paired Counter requires exactly18 new exclusive-overlap27 events,18 RHS-zero35 events and18 all-mask-zero27 events, while rejecting old paired names. All other event counts are explicitly retained; no extra manual discount is assigned to the matched prefix's zero-T repayment.
+
+I independently evaluated only the pure `expected_mean` function extracted by AST into a standard-library Fraction namespace. At384047 static T and4025 scan points, it gives exactly `13168164570771213/34359738368`. The static delta from initial v5 is21, comprising three fixed prefix gates and18 new main-branch phase gates; its exact mean saving is `176160759/8388608`. Source-derived66 key/116 whole nested stages are clearly labelled and do not cause a second subtraction of the same arithmetic saving.
+
+This note is a narrow source gate. Actual completed isolated and production matched-stack checks, the combined paired62/transpose14 caller check, the new nine-gate binding plan, full candidate reproduction, source census and official cost measurements still control qualification. The frozen initial v5 and v4 files remain unchanged.

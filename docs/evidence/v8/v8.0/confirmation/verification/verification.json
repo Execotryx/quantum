@@ -1,0 +1,288 @@
+{
+  "artifact_hashes": {
+    "dfthcsos/angle_k_0.kmb": "d743390da8099073f4e392218182579909a8ceb72fd13be1d65e39c6d115aae8",
+    "dfthcsos/angle_k_1.kmb": "a945234ef270e8e73988ca8db7899dee1ae67f8d5248aaa8d2dead18d0622573",
+    "dfthcsos/angle_k_2.kmb": "94a864ca372d008f1ebdebaeec03922a570cc1cb03f16ad2b8ad9cf66cae211d",
+    "dfthcsos/angle_k_3.kmb": "41e57580095e9ace562645d62c084e521df298a56b10211bdacfbc346bea6062",
+    "dfthcsos/angle_k_4.kmb": "be680bf2701a20f196710d6f2ca7d7f750c818ad404277574985c442c3cfbbb2",
+    "dfthcsos/angle_k_5.kmb": "c2999b053d36794914e826f40406967eef4952296115db7719a39306adebd553",
+    "dfthcsos/angle_k_6.kmb": "d475fdadf3315f022102f3d6d162acc0d84f1048936d177251da9b28c705d591",
+    "dfthcsos/angle_k_7.kmb": "5a8b7c9d2f82fa0997af52cb13d85ffaf854f1f0c82fdbe10a76ed755e6ba7fc",
+    "dfthcsos/angle_k_8.kmb": "ad2f111579d9646e65df04b9157769d367cf34c0d0c5cfbff4c9f0532191afd4",
+    "dfthcsos/submission.npz": "14d5cc25eb3bf82a9ccb87c811db28d127bef6d28697dd190dc1e875de3bfe69",
+    "dqi.kmb": "d41de9ee484c18f91245cdb131fe765d638f06bdae955cdb5b2079bbf8c1f090",
+    "invsqrt.kmb": "254279d6ffb1907c60458ef0c8adfcd728e40ea75a44fb754be6346efeef4728"
+  },
+  "backend_hash": "636936decdb34eaa235f223799bec54b707d964ae9c3583c2fbd362d31a450f0",
+  "complete": true,
+  "contract_hash": "fbd6d649c648ad4d44d7c356d490b732f59bd0ead32155fbbcdbd0b9a21f031a",
+  "coverage": "unmodified official verifier completed",
+  "diagnostic": "worker exit code 0",
+  "elapsed_seconds": 1028.0033435999999,
+  "environment": {
+    "cpu_count": 2,
+    "dependencies": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "scipy": "1.17.0"
+    },
+    "dependency_lock_sha256": "4f06a31150b1944e0818a5260aedee16c28cbfd233dd0baa4f7d0ce03b657ea8",
+    "dirty": true,
+    "numpy_backend": {
+      "Build Dependencies": {
+        "blas": {
+          "detection method": "pkgconfig",
+          "found": true,
+          "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+          "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+          "name": "scipy-openblas",
+          "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+          "pc file directory": "/project/.openblas",
+          "version": "0.3.30"
+        },
+        "lapack": {
+          "detection method": "pkgconfig",
+          "found": true,
+          "include directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/include",
+          "lib directory": "/opt/_internal/cpython-3.13.8/lib/python3.13/site-packages/scipy_openblas64/lib",
+          "name": "scipy-openblas",
+          "openblas configuration": "OpenBLAS 0.3.30  USE64BITINT DYNAMIC_ARCH NO_AFFINITY Haswell MAX_THREADS=64",
+          "pc file directory": "/project/.openblas",
+          "version": "0.3.30"
+        }
+      },
+      "Compilers": {
+        "c": {
+          "commands": "cc",
+          "linker": "ld.bfd",
+          "name": "gcc",
+          "version": "14.2.1"
+        },
+        "c++": {
+          "commands": "c++",
+          "linker": "ld.bfd",
+          "name": "gcc",
+          "version": "14.2.1"
+        },
+        "cython": {
+          "commands": "cython",
+          "linker": "cython",
+          "name": "cython",
+          "version": "3.2.1"
+        }
+      },
+      "Machine Information": {
+        "build": {
+          "cpu": "x86_64",
+          "endian": "little",
+          "family": "x86_64",
+          "system": "linux"
+        },
+        "host": {
+          "cpu": "x86_64",
+          "endian": "little",
+          "family": "x86_64",
+          "system": "linux"
+        }
+      },
+      "Python Information": {
+        "path": "/tmp/build-env-w_be3r90/bin/python",
+        "version": "3.13"
+      },
+      "SIMD Extensions": {
+        "baseline": [
+          "SSE",
+          "SSE2",
+          "SSE3"
+        ],
+        "found": [
+          "SSSE3",
+          "SSE41",
+          "POPCNT",
+          "SSE42",
+          "AVX",
+          "F16C",
+          "FMA3",
+          "AVX2"
+        ],
+        "not found": [
+          "AVX512F",
+          "AVX512CD",
+          "AVX512_KNL",
+          "AVX512_KNM",
+          "AVX512_SKX",
+          "AVX512_CLX",
+          "AVX512_CNL",
+          "AVX512_ICL",
+          "AVX512_SPR"
+        ]
+      }
+    },
+    "platform": "Linux-7.0.0-1014-gcp-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "python": "3.13.14 (main, Jul 18 2026, 17:02:37) [Clang 22.1.3 ]",
+    "source_revision": "88ee03305bc9f560b00cc677e48d27244a03cbcd",
+    "thread_settings": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    }
+  },
+  "kind": "official_metric_execution",
+  "logs": {
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "83c2337253a7939189e7525a17483fa049c1fd2b43c8681fbcc97377fb1a657c"
+  },
+  "official_results": {
+    "claim": "sampled circuit acceptance under local salt and official metric; no coherent proof",
+    "completed": true,
+    "confirmation_observed": {
+      "k": 0,
+      "n": 102400
+    },
+    "costs": {
+      "dfthcsos": 3247752448.668952,
+      "dqi": 7061602921960.864,
+      "invsqrt": 411586.9178780867
+    },
+    "counts_note": "Counters require explicit source-reconciled mappings into real verifier returns.",
+    "coverage_counts": {
+      "dfthcsos": {
+        "completed": 254464,
+        "expected": 254464
+      },
+      "dqi": {
+        "completed": 102400,
+        "expected": 102400
+      },
+      "invsqrt": {
+        "completed": 200540928,
+        "expected": 200540928
+      }
+    },
+    "max_rss_platform_units": 5012208,
+    "pid": 1071,
+    "raw_verifier_results": {
+      "dfthcsos": {
+        "batch_size": 9,
+        "brot": 12,
+        "lambda_eff": 49.301369250574396,
+        "metrics": {
+          "E_SOS": -22144.23882724429,
+          "E_gap": 3.965477244291833,
+          "Lambda": 308.4559397330945,
+          "error_1": 0.0031851950317996216,
+          "error_2": 0.018639570630974368,
+          "gap_in_domain": true,
+          "lambda_eff": 49.301369250574396
+        },
+        "num_circuits": 9,
+        "num_ops": 2063857,
+        "num_qubits": 742,
+        "reaction_depth": 99,
+        "resources": {
+          "angles_persistent_qubits": 108,
+          "angles_qubits": 128,
+          "angles_selection_qubits": 12,
+          "angles_temporary_qubits": 8,
+          "angles_toffoli": 75024.0,
+          "angles_toffoli_per_pass": 37512.0,
+          "angles_within_cap": true,
+          "brot": 12,
+          "givens_rotations_toffoli": 3450,
+          "heuristic_persistent_qubits": 90,
+          "heuristic_qubits": 634,
+          "heuristic_temporary_qubits": 544,
+          "heuristic_toffoli": 13757,
+          "inner_state_prep_persistent_qubits": 44,
+          "inner_state_prep_qubits": 588,
+          "inner_state_prep_temporary_qubits": 544,
+          "inner_state_prep_toffoli": 9461,
+          "keep_bits": 10,
+          "outer_state_prep_persistent_qubits": 46,
+          "outer_state_prep_qubits": 416,
+          "outer_state_prep_temporary_qubits": 370,
+          "outer_state_prep_toffoli": 846,
+          "persistent_qubits": 198,
+          "qubits": 742,
+          "temporary_qubits": 544,
+          "toffoli": 88781.0
+        },
+        "score": 3247752448.668952,
+        "status": "PASS",
+        "submission_sha256": "09d50afaaca17334503ee807e91778c6200b81598937af2712a2e6f030ba6900",
+        "toffoli_count": 88781.0,
+        "verified_shots": 254464
+      },
+      "dqi": {
+        "circuit_sha256": "d41de9ee484c18f91245cdb131fe765d638f06bdae955cdb5b2079bbf8c1f090",
+        "degree": 12,
+        "effective_error_rate": 0.0008660587301657926,
+        "empirical_error_rate": 0.0,
+        "log2_delta": -128.0,
+        "m": 4095,
+        "max_toffoli_count": 1571803,
+        "mean_error_weight": 31.046737331746634,
+        "n": 70,
+        "num_bits": 49147,
+        "num_ops": 65687768,
+        "num_qubits": 1942,
+        "phase_errors": 0,
+        "r": 2016,
+        "reaction_depth": 54737,
+        "repetition_factor": 1.1912604648115832,
+        "score": 7061602921960.864,
+        "shot_operation_counts": {
+          "BIT_STORE0": 10756915200,
+          "CCX": 150845747200,
+          "CCZ": 5031936000,
+          "CSWAP": 5074944000,
+          "CX": 5538380945616,
+          "CZ": 117075642469,
+          "HMR": 160025702400,
+          "INFO_TAG": 119403724800,
+          "POP_CONDITION": 21028659200,
+          "PUSH_CONDITION": 21028659200,
+          "R": 149268787200,
+          "SWAP": 133781094400,
+          "X": 25117696000,
+          "Z": 157700985
+        },
+        "status": "PASS",
+        "toffoli_count": 1571803.0,
+        "value_errors": 0,
+        "verified_shots": 102400
+      },
+      "invsqrt": {
+        "circuit_sha256": "254279d6ffb1907c60458ef0c8adfcd728e40ea75a44fb754be6346efeef4728",
+        "max_toffoli_count": 2503,
+        "num_ops": 55385,
+        "num_qubits": 150,
+        "reaction_depth": 1102,
+        "rotation_count": 35.0,
+        "rotation_eps": 1.1587494041843706e-12,
+        "score": 411586.9178780867,
+        "status": "PASS",
+        "t_count": 1.0,
+        "toffoli_count": 2503.0,
+        "toffoli_equivalent": 2743.9127858539114,
+        "verified_shots": 200540928,
+        "worst_error_over_tolerance": 0.6677104117799098,
+        "worst_x": 940030
+      }
+    },
+    "rss_units": "bytes on macOS, KiB on Linux",
+    "verification_shot_divisor": 1
+  },
+  "remote_accepted": false,
+  "request_hash": "575c8d1e5f839f258dad30bd1b724088d70355fe1e971baab6f5524f3e7d4303",
+  "role": "confirmation",
+  "schema_version": 1,
+  "seed_policy": {
+    "distribution": "v8.0 complete pinned metric on fresh extraction",
+    "role": "confirmation",
+    "salt": "b7c2747ca932fb2d1f8e375364195c1c0da76d59ca47c2d73a370eb6a110ecb7"
+  },
+  "status": "passed",
+  "tier": "full"
+}

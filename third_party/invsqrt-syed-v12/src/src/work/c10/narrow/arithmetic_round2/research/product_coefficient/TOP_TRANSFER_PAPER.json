@@ -1,0 +1,239 @@
+{
+  "status": "POSITIVE_COMPLETE_PAPER_GATE_EXACT_INTEGER_IDENTITIES_NOT_NATIVE",
+  "created_utc": "2026-11-12T03:34:55.795606+00:00",
+  "baseline": "candidate07",
+  "source_pins_sha256": "0f14c805afea26f702981b30851589e9b4b994f88438872b7c9785f5248b2976",
+  "proof": {
+    "row_input_combinations": 16384,
+    "original_carry_equalities": 81920,
+    "source_range": [
+      0,
+      31
+    ],
+    "original_target_range": [
+      0,
+      127
+    ],
+    "incoming_carry_values": [
+      0,
+      1
+    ],
+    "signed_frames": [
+      0,
+      1
+    ],
+    "shortened_low6_restored": true,
+    "top_measurement_plus_wrap_plus_saved_sign_zero": true,
+    "old_merged_forward_outcomes_arbitrary": true,
+    "reason": "Pointwise equality of every original carry coefficient proves any XOR of the two independent forward records.",
+    "new_local_carry_HMR_proof": "Uses existing exact compute/erase carry identities; fresh emitted native proof still required.",
+    "omitted_wrap_phase_negative_witness_count": 4096,
+    "omitted_saved_top_phase_negative_witness_count": 8192
+  },
+  "old_inverse_E": 41,
+  "new_inverse_E": 36,
+  "coefficient_before_E": 123,
+  "coefficient_after_E": 118,
+  "savings_E": 5,
+  "new_internal_clean_carries": 5,
+  "old_rows": [
+    {
+      "digit": 0,
+      "source_extent": 1,
+      "width": 7,
+      "source_carry_E": 1,
+      "inverse_E": 6,
+      "total_E": 7
+    },
+    {
+      "digit": 1,
+      "source_extent": 2,
+      "width": 7,
+      "source_carry_E": 1,
+      "inverse_E": 6,
+      "total_E": 7
+    },
+    {
+      "digit": 2,
+      "source_extent": 3,
+      "width": 7,
+      "source_carry_E": 1,
+      "inverse_E": 6,
+      "total_E": 7
+    },
+    {
+      "digit": 3,
+      "source_extent": 4,
+      "width": 7,
+      "source_carry_E": 1,
+      "inverse_E": 6,
+      "total_E": 7
+    },
+    {
+      "digit": 4,
+      "source_extent": 5,
+      "width": 7,
+      "source_carry_E": 1,
+      "inverse_E": 6,
+      "total_E": 7
+    }
+  ],
+  "new_rows": [
+    {
+      "digit": 0,
+      "source_extent": 1,
+      "width": 6,
+      "source_carry_E": 1,
+      "inverse_E": 5,
+      "final_Pauli_phase_E": 0,
+      "retained_original_forward_carry_positions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "total_E": 6
+    },
+    {
+      "digit": 1,
+      "source_extent": 2,
+      "width": 6,
+      "source_carry_E": 1,
+      "inverse_E": 5,
+      "final_Pauli_phase_E": 0,
+      "retained_original_forward_carry_positions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "total_E": 6
+    },
+    {
+      "digit": 2,
+      "source_extent": 3,
+      "width": 6,
+      "source_carry_E": 1,
+      "inverse_E": 5,
+      "final_Pauli_phase_E": 0,
+      "retained_original_forward_carry_positions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "total_E": 6
+    },
+    {
+      "digit": 3,
+      "source_extent": 4,
+      "width": 6,
+      "source_carry_E": 1,
+      "inverse_E": 5,
+      "final_Pauli_phase_E": 0,
+      "retained_original_forward_carry_positions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "total_E": 6
+    },
+    {
+      "digit": 4,
+      "source_extent": 5,
+      "width": 6,
+      "source_carry_E": 1,
+      "inverse_E": 5,
+      "final_Pauli_phase_E": 0,
+      "retained_original_forward_carry_positions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "total_E": 6
+    }
+  ],
+  "top_transfer": {
+    "extra_quantum_owners": 0,
+    "HMR_count_delta": 0,
+    "extra_CX": 2,
+    "existing_snapshot_released_once": true,
+    "transferred_top_constant_through_shortened_rows": true,
+    "existing_final_saved_bit_phase_repayment_reused": true,
+    "all_table_debts_unchanged": true
+  },
+  "ownership": [
+    {
+      "cut": "coefficient_inverse_entry",
+      "live": 40
+    },
+    {
+      "cut": "high_wrap_ready",
+      "live": 41
+    },
+    {
+      "cut": "high_inverse_peak",
+      "live": 45
+    },
+    {
+      "cut": "high_inverse_return",
+      "live": 40
+    },
+    {
+      "cut": "transferred_snapshot_freed",
+      "live": 39
+    },
+    {
+      "cut": "source_carry_prepared",
+      "live": 40
+    },
+    {
+      "cut": "five_inverse_carries",
+      "live": 45
+    },
+    {
+      "cut": "coefficient_inverse_return",
+      "live": 39
+    }
+  ],
+  "complete_components_E": {
+    "normalization": 97.5,
+    "root": 198,
+    "divider": 587.5,
+    "product": 240.5,
+    "coefficient": 118,
+    "seed": 17.5,
+    "root_frames": 4,
+    "metadata": 7,
+    "root_decoder": 21,
+    "first_loader": 61,
+    "second_loader": 79,
+    "table_cleanup": 9,
+    "endpoint": 139
+  },
+  "complete_Q": 48,
+  "first_preparation_peak": 48,
+  "second_preparation_peak": 48,
+  "endpoint_peak": 48,
+  "expected_Toffolis": 1579.0,
+  "T": 4,
+  "R": 33,
+  "rotation_charge": 230.84805946161188,
+  "expected_complete_cost": 86920.70685415737,
+  "original_exact_margin_units64": 124370688,
+  "phase_and_numerical_model_unchanged": true,
+  "native_component_proved": false,
+  "full_native_proved": false,
+  "official_verified": false,
+  "root_review_required_before_native": true,
+  "native_execution": false,
+  "elapsed_seconds": 0.0890434449975146,
+  "peak_rss_kib": 11692
+}

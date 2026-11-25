@@ -1,0 +1,37 @@
+{
+  "average_mean_toffoli_like": 430822.88079589844,
+  "cost": 414840001725.7007,
+  "coverage": 819200,
+  "failures_by_salt": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "official_reference_ratio": 58.9129817063113,
+  "passes": 8,
+  "phase_errors": 0,
+  "priced_failures": 1,
+  "qubits": 897,
+  "registration_sha256": "e915b6bf22544acb34d9ef23dcfab9736e2a00ddb5cc95a749568d91e2952a16",
+  "repetition_factor": 1.1967314991687559,
+  "result_sha256": {
+    "s1.json": "3852d60a096b80746704acd425026a5f79c93920fc760435c704cffeade6dee0",
+    "s2.json": "dcaf9bc3f4b138e2e7681c17b1b7d2d2b2e44402c98395e2a228f08c37840c13",
+    "s3.json": "42d8ca9d2541ffbec7a0e6776e84686a93db7a532fc6b0532919d6957b8abf8f",
+    "s4.json": "7cf7db2f7db169abd7ed489bb53692443503e53c5f49876ab6fe3eb14c6ad9d9",
+    "s5.json": "1a2f9d7d769a23cfd7f7a4725af2386f50df6278d72b2f44aa456d81c8817d67",
+    "s6.json": "4d222222d005251076782f9d709ffefcdbddf671f9e04544ef6d9f412cf276b8",
+    "s7.json": "1bc879fb6665d3c139a6216d77591bec94d747d54492f677343ed918e269ce39",
+    "s8.json": "dfb63ea1475d65eba259fd41d1820c3936523b338b7ea0bb51d179cb9461e3b7"
+  },
+  "role": "banked",
+  "static_toffoli_like": 444667,
+  "total_failures": 0,
+  "upper_error_rate": 0.0009104197583220583,
+  "value_errors": 0
+}

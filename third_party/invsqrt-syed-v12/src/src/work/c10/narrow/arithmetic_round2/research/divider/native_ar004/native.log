@@ -1,0 +1,150 @@
+
+[strict_guard] {"event": "preflight_passed", "elapsed_seconds": 0.006588307005586103, "limits": {"per_process_hard_address_bytes": 536870912, "aggregate_RSS_stop_bytes": 805306368, "minimum_host_available_bytes": 4294967296, "live_process_cap": 8}}
+{"progress": "AR004_native_all_input_HMR", "inputs": 786432, "seconds": 2.7635957180027617}
+{"progress": "AR004_native_all_input_HMR", "inputs": 1572864, "seconds": 3.736339888011571}
+{"progress": "AR004_native_all_input_HMR", "inputs": 2359296, "seconds": 4.876860934004071}
+{"progress": "AR004_native_all_input_HMR", "inputs": 3133452, "seconds": 5.782720559000154}
+{
+  "status": "PASS_NATIVE_AR004_DIVIDER_COMPONENT_NOT_OFFICIAL",
+  "resources": {
+    "forward": {
+      "Q": 46,
+      "native_expected_counts": {
+        "status": "EXACT_EXPECTATION_FROM_CLASSICAL_GUARDS",
+        "assumptions": [
+          "Every active HMR measures a computational-basis wire and has a fair independent outcome.",
+          "Conditional costs count instruction execution, independently of quantum control values."
+        ],
+        "accounting": "exact Boolean guards; GF2-rank enumeration of affine leaves",
+        "rank_cap": 12,
+        "maximum_rank_used": 0,
+        "syntactic_measurements": 235,
+        "static": {
+          "toffoli_like": 270,
+          "T": 0,
+          "generic_rotations": 0
+        },
+        "mean": {
+          "toffoli_like": "270",
+          "T": "0",
+          "generic_rotations": "0"
+        },
+        "mean_numeric": {
+          "toffoli_like": 270.0,
+          "T": 0.0,
+          "generic_rotations": 0.0
+        },
+        "mean_Toffoli_plus_T_quarter": "270",
+        "independent_condition_depth_not_assumed": true,
+        "official_verified": false
+      },
+      "kmb_sha256": "f2af43e88ecb0d95d8527e371e9946aba309fa3900144c5a73c63157deb595f3",
+      "kmx_sha256": "de8a4fb3e332db0283ec527f88bef248d2b69aaa2c71fe243205239a5234b2d5"
+    },
+    "roundtrip": {
+      "Q": 48,
+      "native_expected_counts": {
+        "status": "EXACT_EXPECTATION_FROM_CLASSICAL_GUARDS",
+        "assumptions": [
+          "Every active HMR measures a computational-basis wire and has a fair independent outcome.",
+          "Conditional costs count instruction execution, independently of quantum control values."
+        ],
+        "accounting": "exact Boolean guards; GF2-rank enumeration of affine leaves",
+        "rank_cap": 12,
+        "maximum_rank_used": 1,
+        "syntactic_measurements": 583,
+        "static": {
+          "toffoli_like": 628,
+          "T": 0,
+          "generic_rotations": 0
+        },
+        "mean": {
+          "toffoli_like": "578",
+          "T": "0",
+          "generic_rotations": "0"
+        },
+        "mean_numeric": {
+          "toffoli_like": 578.0,
+          "T": 0.0,
+          "generic_rotations": 0.0
+        },
+        "mean_Toffoli_plus_T_quarter": "578",
+        "independent_condition_depth_not_assumed": true,
+        "official_verified": false
+      },
+      "kmb_sha256": "a3061154341f4f52f318132815758cc7042a5d7cb1c4ca40acdfc898253dfe91",
+      "kmx_sha256": "92eac7b70271fc6687a55317db88f0451a29a7568442c8a970da0f78bd78abc9"
+    }
+  },
+  "forward_native_text_identical_to_candidate07_arithmetic": true,
+  "frozen_forward_native_sha256": "de8a4fb3e332db0283ec527f88bef248d2b69aaa2c71fe243205239a5234b2d5",
+  "unchanged_endpoint_owners": 43,
+  "inverse_intermediate_data_owners": 42,
+  "restoration_Toffolis": 1,
+  "negative_phase_probes": [
+    {
+      "omitted": "retirement",
+      "rejected": true,
+      "error": "('Unpaid native HMR phase', 187896832, '0x80000000000000000000000000000000000000000000000000000000000', 1)",
+      "native_text_sha256": "3d12c7157055e2b27b7dbe4b174ee2b2eeba5fd2511fe9a1993add854cfdad89"
+    },
+    {
+      "omitted": "original_carry",
+      "rejected": true,
+      "error": "('Unpaid native HMR phase', 200302594, '0x4000', 1)",
+      "native_text_sha256": "8c6ab15d34da6774858cc3f98519e20be58307fc2188969b28a618ec8b36bc78"
+    }
+  ],
+  "all_original_inputs": 3133452,
+  "every_HMR_transcript_proved": true,
+  "independent_HMR_variables": 583,
+  "exact_zero_roundtrip_phase": true,
+  "original_input_values_and_all_scratch_restored": true,
+  "all_resets_provably_zero": true,
+  "original_input_interval": [
+    1,
+    3133453
+  ],
+  "end_exclusive": true,
+  "phase_modulus": 2,
+  "component_input_digest": "a8635d548aaf5a57a5968f920f7c5efb92e17381f4182ed22884e1751cf7aa00",
+  "frozen_AR003_input_digest_matched": true,
+  "proof_fixture_layout_swaps": [
+    [
+      "q45",
+      "q25"
+    ],
+    [
+      "q45",
+      "q26"
+    ]
+  ],
+  "original_divider_E": 587.5,
+  "new_divider_E": 578.0,
+  "saving_E": 9.5,
+  "saving_over_AR003_E": 8.5,
+  "all24_CarryDebts_consumed": true,
+  "unrestricted_root_product_promise_not_claimed": true,
+  "endpoint_phase_model_and_all_frozen_sources_unchanged": true,
+  "model_sha256": "24fff823faa911afe93d02afc3ded0bbd156a210a85f1265c989a087f8fd1219",
+  "adapter_sha256": "9b2f24691a337dfe27f9f47477fbb97f671075dfe313e5a360f5c8ec8635b493",
+  "kernel_sha256": "1dc5022918a0a47663ec3ad812cdff67f93ee0c1646f3e4db59ee7881c847afe",
+  "proof_sha256": "1d15be0485da70617017dafaed6e3889f009c8b57bd55bd59b2d206800267352",
+  "checker_sha256": "665952a09d594b0912257c6ee8175c9092d94006600314f3a0c9fa00ca1bef6c",
+  "source_ready_sha256": "6b33c3b0e619d90bd5bc4674fdc075a91b7170475816ac787b7da8a9f4c6dcfe",
+  "inputs_sha256": "89ca5d0a650e132b92f56c26e4d0c4e14d1d4aecca9224471577bc6906350aed",
+  "acceptance_sha256": "d188e0b75ffa397879884f4d77c64fa409b4cada180e5253244f415d84e1d8e7",
+  "checker_selftest": {
+    "positive": 3,
+    "negative": 4,
+    "native_phase_modulus": 2,
+    "input_register_bits": 31,
+    "checker_sha256": "665952a09d594b0912257c6ee8175c9092d94006600314f3a0c9fa00ca1bef6c"
+  },
+  "whole_fusion_native_or_official_qualification": false,
+  "official_verifier_run": false,
+  "seconds": 5.787008627012256,
+  "peak_RSS_KiB": 47660
+}
+
+[strict_guard] {"event": "finished", "elapsed_seconds": 6.754985657011275, "status": "COMPLETED", "returncode": 0, "peak_rss": 48803840}

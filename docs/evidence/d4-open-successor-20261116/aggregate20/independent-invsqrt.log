@@ -1,0 +1,32 @@
+python 3.13.15 (linux x86_64), numpy 2.2.4
+relocated 11 files to /tmp/qcompile-aggregate-rebuild.E1AonMXI/invsqrt_build.sCg7oh/tree
+build: s15k7a at Q46, 26 patch args, work tree /tmp/qcompile-aggregate-rebuild.E1AonMXI/invsqrt_build.sCg7oh/tree
+generator done (13 s)
+pipeline done (84 s)
+post pass done (112 s)
+proof: PASS_EXACT_NATIVE_TEXT_ALL_REQUESTED_INPUTS_ALL_HMR_TRANSCRIPTS
+wall time 112 s; work tree /tmp/qcompile-aggregate-rebuild.E1AonMXI/invsqrt_build.sCg7oh
+BUILT invsqrt.kmb 321aff83636214196daa9cbc9dcc9c5e12a155bcff8d9989e98b8cee40935177
+	Command being timed: "bash /tmp/qcompile-aggregate-rebuild.E1AonMXI/invsqrt/invsqrt_source/build.sh /mnt/e/sources/python/quantum/vendor/official/kickmix /mnt/e/sources/python/quantum/vendor/official/verifiers /mnt/e/sources/python/quantum/runs/d4-open-successor/aggregate20-independent-resume-r2/invsqrt"
+	User time (seconds): 92.33
+	System time (seconds): 4.24
+	Percent of CPU this job got: 86%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:52.28
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 584240
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 1603
+	Minor (reclaiming a frame) page faults: 701186
+	Voluntary context switches: 66387
+	Involuntary context switches: 521
+	Swaps: 0
+	File system inputs: 53361
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

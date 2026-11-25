@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "/workspace/scratch/e5e4bb56acc7/controller_work/after_v3/blocks/v5/check_first2_retained_norm_adapter.py",
+    "--output",
+    "controller_work/after_v3/blocks/v5/runs/first2-stack-full"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794397275.7267108,
+  "rss_soft": 3000000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 481566720,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 12,
+  "elapsed_seconds": 272.99736189842224,
+  "current_rss": 104476672,
+  "available_bytes": 9389805568,
+  "exit_code": 0
+}

@@ -1,0 +1,407 @@
+{
+  "status": "PASS_ALL_NORMALIZED_SOURCE_VALUES_AND_ALL_HMR_SIGNS_NOT_NATIVE",
+  "normalized_inputs": 3145728,
+  "input_interval": [
+    1048576,
+    4194304
+  ],
+  "end_exclusive": true,
+  "root_formula": "v=isqrt(16*n)-4096",
+  "residual_formula": "h=(64*n-(8193+2*v)^2)//64",
+  "Toffolis_roundtrip": 198,
+  "peak_including_exponent_flags4": 41,
+  "all_known_pair_conditions_checked": true,
+  "all_original_data_restored": true,
+  "all_scratch_released_zero": true,
+  "all_HMR_sign_functions_checked": 541065216,
+  "measurement_outcomes": "Every individual HMR coefficient vanishes on every normalized input; linearity proves all joint outcomes.",
+  "chunks": [
+    {
+      "first": 1048576,
+      "stop": 1114112,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 1114112,
+      "stop": 1179648,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 1179648,
+      "stop": 1245184,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 1245184,
+      "stop": 1310720,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 1310720,
+      "stop": 1376256,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 1376256,
+      "stop": 1441792,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 1441792,
+      "stop": 1507328,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 1507328,
+      "stop": 1572864,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 1572864,
+      "stop": 1638400,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 1638400,
+      "stop": 1703936,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 1703936,
+      "stop": 1769472,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 1769472,
+      "stop": 1835008,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 1835008,
+      "stop": 1900544,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 1900544,
+      "stop": 1966080,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 1966080,
+      "stop": 2031616,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 2031616,
+      "stop": 2097152,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 2097152,
+      "stop": 2162688,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 2162688,
+      "stop": 2228224,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 2228224,
+      "stop": 2293760,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 2293760,
+      "stop": 2359296,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 2359296,
+      "stop": 2424832,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 2424832,
+      "stop": 2490368,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 2490368,
+      "stop": 2555904,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 2555904,
+      "stop": 2621440,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 2621440,
+      "stop": 2686976,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 2686976,
+      "stop": 2752512,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 2752512,
+      "stop": 2818048,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 2818048,
+      "stop": 2883584,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 2883584,
+      "stop": 2949120,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 2949120,
+      "stop": 3014656,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 3014656,
+      "stop": 3080192,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 3080192,
+      "stop": 3145728,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 3145728,
+      "stop": 3211264,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 3211264,
+      "stop": 3276800,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 3276800,
+      "stop": 3342336,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 3342336,
+      "stop": 3407872,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 3407872,
+      "stop": 3473408,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 3473408,
+      "stop": 3538944,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 3538944,
+      "stop": 3604480,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 3604480,
+      "stop": 3670016,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 3670016,
+      "stop": 3735552,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 3735552,
+      "stop": 3801088,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 3801088,
+      "stop": 3866624,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 3866624,
+      "stop": 3932160,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 3932160,
+      "stop": 3997696,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 3997696,
+      "stop": 4063232,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 4063232,
+      "stop": 4128768,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    },
+    {
+      "first": 4128768,
+      "stop": 4194304,
+      "inputs": 65536,
+      "HMR_symbols": 172,
+      "Toffolis": 198,
+      "peak": 41
+    }
+  ],
+  "seconds": 1.3397690679994412,
+  "peak_rss_kib": 30736,
+  "native_builder_or_simulator": false
+}

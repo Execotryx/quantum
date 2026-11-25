@@ -1,0 +1,76 @@
+{
+  "admitted_source_manifest_sha256": "eb85ba836ddc31166d1a6284f1a8c493dba73efe87d79c4519dc547d492990ae",
+  "artifact": "runs/d4-open-successor/early-tail-repad-a/dqi.kmb",
+  "backend_inventory_sha256": "132405912244d6232e4ea7fb3c9e941f8cbfbfe8cc51dd49ab3fccb609166237",
+  "build_receipts": [
+    "073196db1c92cebc1e0aa224d23344da350267aa14f90862b0c4b3daab3413cd",
+    "b7abd273c42e02689af3bc45ae078fd77247911e444888196ce8a755db4d2a7f"
+  ],
+  "comparison": {
+    "banked": {
+      "draws": {
+        "s1.json": "e0614d6b73a146c8c0e737c15bd9c28bfa50f9e4a9c1a9f6a624355801da6974",
+        "s2.json": "6f266931d772a9849e44398727710fb72dedaecd67bba44bde1f0dc2d5558d50",
+        "s3.json": "f551566765262e4aea7332064ee0b71c4a1996ab440b370f0d6b0289608e7f1d",
+        "s4.json": "174d6ee91a1274e11f323409cd23348333e67af71ec1c06c61d923a5da02ad8d",
+        "s5.json": "72d4905abc2f20506fd2f340aecef5d3a643a7a5c42cfe49ca3f5cc16f430e9b",
+        "s6.json": "0570afc5a931338163e5570cbd78b6cabccf6e31b59c51d433553c4fd80f8ebf",
+        "s7.json": "c21707d64aa4e95df7d0bd35f2589e8fb600bb3b4b646d2c8615cb623e2b9c3b",
+        "s8.json": "7b6fba34f41b64160e338a83d9e65de2ed85b2869c398b9331fc8e9ee1953276"
+      },
+      "pooled": {
+        "cost": 416454209396.2843,
+        "failures_by_salt": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          2,
+          0
+        ],
+        "priced_failures": 2,
+        "repetition_factor": 1.2013880602795501,
+        "total_failures": 4,
+        "upper_error_rate": 0.0009488155716079551
+      }
+    },
+    "candidate": {
+      "draws": {
+        "s1.json": "e6d08294434d240b473531d6a9c12334cfcb6e4e3c6eb76902516ac5efb3721e",
+        "s2.json": "86594cd8451bf227b17e4f8c744f505acd205b313a3c4c20a170688e92021ce0",
+        "s3.json": "f2ed9e06344f820446892d72f21325babc078e1f5087f2796177b8b21c54c994",
+        "s4.json": "d859315aa8a5414fd3e111e7bfd9c223be498376eebf6f8a4dcb71efa058234f",
+        "s5.json": "c576d210ddd6089e842d8d58e90bd345e2e1f0e732589474fcc1e954780b191a",
+        "s6.json": "4b4ae2ad19117e761ee5f23712108d48fbcaca83a37f20470a96c7887461dec3",
+        "s7.json": "6a3ad3dbcb4feb55144775822eb592e69e843fc5fe085b443eabd2ea0f43e69e",
+        "s8.json": "5a78a06b5d3e247aa72e86fd075553188377653e419857e6bc9cc6231aee78e5"
+      },
+      "pooled": {
+        "cost": 375969428171.0458,
+        "failures_by_salt": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "priced_failures": 2,
+        "repetition_factor": 1.2013880602795501,
+        "total_failures": 6,
+        "upper_error_rate": 0.0009488155716079551
+      }
+    }
+  },
+  "decision_sha256": "68549842950d1f183d8a9fd2da0919b49ca265d3bb43a22140a5a2dae76baf47",
+  "member": "dqi-open-repadding",
+  "native_preflight_sha256": "38d17f093a484557265ae323c8bebae6c5eaef8f4713fc7734faece78fc42ac3",
+  "registration_sha256": "d5177b28f67f6f9a2fe5d498f5d10078027377569dd7c004fbda57c29d87202e",
+  "sha256": "c726a6426612ce094ac0ea98d0fabafbe323c09d4fd078e3d2b037fa4bd5c5f7",
+  "status": "qualified_pending_independent_confirmation",
+  "supersedes_sha256": "53d8b2edf251e2a0c54c401a97d1396c7ed309e1cbfaab8d54a2c99a11ed6552"
+}

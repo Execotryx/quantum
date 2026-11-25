@@ -1,0 +1,107 @@
+{
+  "status": "SOURCE_HASH_AUDIT_BEFORE_IMPLEMENTATION",
+  "fa004_outer_sha256_reported_verified_by_parent": "cc9c7ff098e037015a254d2c8b0ad82d14f8ea91b1ea60676c3ca71ddb43fcd4",
+  "fa004_manifest_sha256": "2e7a5af61a84d7736353cdcc0d5f4a8eebf34aa10c2b91e0c5ca27ab659ac889",
+  "fa004_members_independently_checked": 8,
+  "files": [
+    {
+      "path": "arithmetic_round2/inputs/fa004_v6/fa004/reports/FA004-v6_report.md",
+      "bytes": 10080,
+      "sha256": "a19af0c6d4808c4377c9a39af359b209bb071bcfd811fdb8dfa1378dbb5d4c13",
+      "verified_against": "arithmetic_round2/inputs/fa004_v6/RELEASE_MANIFEST.json"
+    },
+    {
+      "path": "arithmetic_round2/inputs/fa004_v6/fa004/arithmetic/PARENT_TOP_PAULI_INTERFACE.md",
+      "bytes": 9172,
+      "sha256": "09397af3eca08577d9243baf2d07769e691f6523927d59fb399781ba530e8057",
+      "verified_against": "arithmetic_round2/inputs/fa004_v6/RELEASE_MANIFEST.json"
+    },
+    {
+      "path": "arithmetic_round2/inputs/fa004_v6/fa004/arithmetic/SOURCE_AWARE_OUTER_INTERFACE.md",
+      "bytes": 5934,
+      "sha256": "8769470f3fbc3c5afaf12495f7e8905da70200d5e00557b72a9024db3be75db5",
+      "verified_against": "arithmetic_round2/inputs/fa004_v6/RELEASE_MANIFEST.json"
+    },
+    {
+      "path": "arithmetic_round2/inputs/fa004_v6/fa004/arithmetic/PAULI_ZERO_BRANCH_INTERFACE.md",
+      "bytes": 6150,
+      "sha256": "5aa5aab1b3df332e148661a6b2b3b700036c3b67f714ffb1fed4cb3640ba42f9",
+      "verified_against": "arithmetic_round2/inputs/fa004_v6/RELEASE_MANIFEST.json"
+    },
+    {
+      "path": "arithmetic_round2/inputs/fa004_v6/source_fa004_v6/engine/parent_top_pauli.py",
+      "bytes": 11996,
+      "sha256": "d2c10226a39ca86bec46bd493b7162ce6ebfac77d4e3c93d9bf2f0e527102df3",
+      "verified_against": "arithmetic_round2/inputs/fa004_v6/RELEASE_MANIFEST.json"
+    },
+    {
+      "path": "arithmetic_round2/inputs/fa004_v6/source_fa004_v6/engine/pauli_zero_branch.py",
+      "bytes": 7526,
+      "sha256": "202023837c78faac0daef965a4f979d24e9bf8cc47bda839baa5206dbc2ab85a",
+      "verified_against": "arithmetic_round2/inputs/fa004_v6/RELEASE_MANIFEST.json"
+    },
+    {
+      "path": "arithmetic_round2/inputs/fa004_v6/source_fa004_v6/engine/branch_fourier_inverse.py",
+      "bytes": 13522,
+      "sha256": "1390478e9b4d973266fef945a4ba44e8b426d5c8cbae5fa84cc31f3efca72304",
+      "verified_against": "arithmetic_round2/inputs/fa004_v6/RELEASE_MANIFEST.json"
+    },
+    {
+      "path": "arithmetic_round2/inputs/fa004_v6/source_fa004_v6/engine/paired_arithmetic.py",
+      "bytes": 22363,
+      "sha256": "a10b28423640a50a45a6ab23d3604dd869c26943b0ed12021526e87d1fbf8ccc",
+      "verified_against": "arithmetic_round2/inputs/fa004_v6/RELEASE_MANIFEST.json"
+    },
+    {
+      "path": "native/candidate01/lifecycle.py",
+      "bytes": 15973,
+      "sha256": "47b73f1f24ea027eedcbd1950cde7fc2535b32afeeb2e366ebdc4b6f1eb3c068"
+    },
+    {
+      "path": "native/candidate01/common.py",
+      "bytes": 3343,
+      "sha256": "9872e64213a4219522a87efc49d1aa549a04e43ae3fb51c9d5b762b1ea6535ab"
+    },
+    {
+      "path": "native/candidate06/lifecycle06.py",
+      "bytes": 10299,
+      "sha256": "0e38bf25ef639106608b7fb70e863aed75f0fcc82fca9a98e8e94cec905ea8aa"
+    },
+    {
+      "path": "native/candidate07/candidate07.build.json",
+      "bytes": 63823,
+      "sha256": "89bd012c7c50844d098e22f5b6e0c578fa0d9ed5fffea834384b4a709f038762"
+    },
+    {
+      "path": "native/candidate07/whole_native_text_all.json",
+      "bytes": 52738,
+      "sha256": "12d18f2c972bc929bba3b2baadb0db3001fe73c47205cef172375d4905e37071"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/paired_arithmetic.py",
+      "bytes": 22363,
+      "sha256": "a10b28423640a50a45a6ab23d3604dd869c26943b0ed12021526e87d1fbf8ccc"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/fusion/arithmetic.py",
+      "bytes": 11723,
+      "sha256": "154621ee98dd8139eab601d5d794be881a5ebf38ebe1c542cf69b8fb97ee1453"
+    },
+    {
+      "path": "research/retire_a5_product/RESULT_MANIFEST.json",
+      "bytes": 972,
+      "sha256": "dee495d7834f9f9d85b7e5a0ee09f191047fea4a5b165b96bba3236c87d1953c"
+    },
+    {
+      "path": "research/timed_a5_restore/RESULT_MANIFEST.json",
+      "bytes": 962,
+      "sha256": "d21836a585992a541caf60124ed9e47b31407c37f7c14cbc39d9085c263ad0e9"
+    },
+    {
+      "path": "research/q47_first_a6_lifecycle/RESULT_MANIFEST.json",
+      "bytes": 971,
+      "sha256": "d77831fc04a1453f33385ad15e344741d26f9435495531130415097ba6e7c8a2"
+    }
+  ],
+  "native_execution": false
+}

@@ -1,0 +1,116 @@
+{
+  "status": "FROZEN_CANDIDATE07_COMPLETE_Q48_RING26_SOURCE_READY_NOT_NATIVE_EXECUTED",
+  "files": [
+    {
+      "path": "INDEPENDENT_NATIVE_SOURCE_REVIEW.json",
+      "bytes": 6230,
+      "sha256": "1504b3d7d8ee352808745d92a9cd3e233a915193ef14f0e3ab6640098d3319d1"
+    },
+    {
+      "path": "INPUTS.json",
+      "bytes": 57553,
+      "sha256": "df3d932917e1c0c7b9a6f0bea7b575190a22eb4d27b16a347524fbd208daa414"
+    },
+    {
+      "path": "PARENT_STATIC_REVIEW.json",
+      "bytes": 790,
+      "sha256": "153bf4cbadd6bbc98bef3d67318abdb0832e6f8204e599296f7fd0fb2da6126a"
+    },
+    {
+      "path": "PHASE07_READY.json",
+      "bytes": 8523,
+      "sha256": "b2be235d16daffa0af58db2176993ceed3f11ecfb530f12b8e3cb29231b390a5"
+    },
+    {
+      "path": "PLAN.md",
+      "bytes": 3211,
+      "sha256": "e2d14f9ce5cf8ab221debb5f31a47d548f6b3487d42af75820f6821643871251"
+    },
+    {
+      "path": "RESUME.md",
+      "bytes": 937,
+      "sha256": "8f1e3d7cc776d939769958e5ed492826fbc98e6008261af7910acd877d1847db"
+    },
+    {
+      "path": "TABLES07_PLAN.md",
+      "bytes": 632,
+      "sha256": "803a43d6ad3d58d562eef970903a98f6e7840517728648e6e00a51f1b3dabc67"
+    },
+    {
+      "path": "TABLES07_READY.json",
+      "bytes": 1095,
+      "sha256": "02c8ff7803737ff506d93a334ce66b82a1ada6d268a1681f07d7b8ef077495d1"
+    },
+    {
+      "path": "audit_tables07_static.py",
+      "bytes": 13554,
+      "sha256": "e70706e498681c81089c44d18e6de830af5cb917b512740b54f57988e9a8edc3"
+    },
+    {
+      "path": "generate.py",
+      "bytes": 5049,
+      "sha256": "f29a6c89a0372302854c8a6c2662db34cb44e856743f9fc711c9ba2aa269cca1"
+    },
+    {
+      "path": "oracle50.py",
+      "bytes": 2880,
+      "sha256": "df311f0844c7cf72c7dedeff891442ad9da6f88cb727a724c832a3611684e3ff"
+    },
+    {
+      "path": "phase07.py",
+      "bytes": 9599,
+      "sha256": "c200e2f9749e3a89adc17ad9837005e0a28e794622e5fbece3551275f1de8f20"
+    },
+    {
+      "path": "prove50.py",
+      "bytes": 13697,
+      "sha256": "d079cefb01fa88581cf279e99590ad74610551861658f5fef65ff9071650216e"
+    },
+    {
+      "path": "run_batch.py",
+      "bytes": 3025,
+      "sha256": "906d64eed736a3d7a1d495bfea4f9f5882fcd849a67b721c2b0855c97670ba52"
+    },
+    {
+      "path": "tables07.py",
+      "bytes": 6050,
+      "sha256": "3834990b7546026372722abc5fefb24fb4effd889dfd29743353a174753ea88e"
+    },
+    {
+      "path": "tables07_static_audit.json",
+      "bytes": 2937,
+      "sha256": "c433c64c5f1f286709d9c1c28115b001294912e5c336757552dc4dca9d8ca400"
+    },
+    {
+      "path": "variant.py",
+      "bytes": 5421,
+      "sha256": "2b14bea6fcedfa772daf3f5b9c5176e3434fe23ed90b8300d586bd230711f616"
+    }
+  ],
+  "expected_resources": {
+    "Q": 48,
+    "Toffolis": 1584,
+    "T": 4,
+    "R": 33,
+    "exact_margin_units64": 124370688,
+    "rotation_charge": 230.84805946161188,
+    "predicted_complete_cost": 87160.70685415737
+  },
+  "parent_authorization_sha256": "f8cfe4331b37a5184a4aab17ee85b4ac892c08c2cfb863fc4b1c1b3c9978262e",
+  "input_manifest_sha256": "df3d932917e1c0c7b9a6f0bea7b575190a22eb4d27b16a347524fbd208daa414",
+  "independent_phase_units50_sha256": "8bd482a8957cd387a2b212afdaca656947b7f89c983d67ff4eea4e14c3b0a26a",
+  "native_execution_owner": "parent shared strict native guard",
+  "required_hard_address_space": 536870912,
+  "command": "/usr/bin/python3.13 narrow/native/candidate07/run_batch.py --full-proof",
+  "previous_candidates_preserved": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "phase_grid_turns": "1/1125899906842624",
+  "native_execution_performed": false,
+  "no_submission": true
+}

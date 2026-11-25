@@ -1,0 +1,14 @@
+{
+  "status": "PARENT_REVIEW_ACCEPTED_NATIVE_COMPONENT_FOR_COMPOSITION",
+  "utc": "2026-11-12T03:57:44.581743+00:00",
+  "route": "RN3-A source-aware root",
+  "result_manifest_sha256": "af02893b495400bf0bf16b5727c939383bd2c5d49a9ea0062e85ab1ddfcf778d",
+  "native_proof_sha256": "388b327f5fdd775232cb557f8c6cf899e737b29fe86a4b5893034b80d8ca8243",
+  "component_native_Toffolis": 192,
+  "actual_local_native_Q": 39,
+  "saving_E": 6,
+  "all_normalized_inputs": 3145728,
+  "hybrid_new_forward_original_inverse_proved": true,
+  "all_HMR_restoration_scratch_and_phase_checks_enabled": true,
+  "full_native_and_four_default_batch_salts_still_required": true
+}

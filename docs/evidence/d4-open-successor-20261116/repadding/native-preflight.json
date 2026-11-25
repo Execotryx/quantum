@@ -1,0 +1,744 @@
+{
+  "fixture_labels": [
+    "weight-0",
+    "weight-1",
+    "weight-2",
+    "weight-3",
+    "weight-4",
+    "weight-5",
+    "weight-6",
+    "weight-7",
+    "weight-8",
+    "weight-9",
+    "weight-10",
+    "weight-11",
+    "weight-12",
+    "weight-13",
+    "weight-14",
+    "weight-15",
+    "weight-16",
+    "weight-17",
+    "weight-18",
+    "weight-19",
+    "weight-20",
+    "weight-21",
+    "weight-22",
+    "weight-23",
+    "weight-24",
+    "weight-25",
+    "weight-26",
+    "weight-27",
+    "weight-28",
+    "weight-29",
+    "weight-30",
+    "weight-31",
+    "weight-32",
+    "weight-33",
+    "weight-34",
+    "weight-35",
+    "poles-0-1",
+    "poles-0-2",
+    "poles-0-2-4",
+    "poles-0-2-zero-slope"
+  ],
+  "native_gate_passed": true,
+  "registration_sha256": "7a5a6180ba0cee8815a934349af9524613ce233ce3b48b477d5a2e9bc43c3296",
+  "roles": {
+    "banked": {
+      "archived": [
+        {
+          "capture": "docs/evidence/dqi-phase-replay-20261115/results/s2/batch-045312.json",
+          "capture_sha256": "38f94a8f866e10bdc31cfca4490f45cf345310c5a8b6dd4919c755ebe35fb4b1",
+          "dirty_offsets": [],
+          "mask_offsets": [],
+          "mean_toffoli_like": 430819.0859375,
+          "phase_offsets": [
+            128
+          ],
+          "value_offsets": []
+        },
+        {
+          "capture": "docs/evidence/dqi-phase-replay-20261115/results/s6/batch-013056.json",
+          "capture_sha256": "b9cb413ab625ea41ab39d298a2d127521050cde7eed7b955eb42df527b7138ab",
+          "dirty_offsets": [],
+          "mask_offsets": [],
+          "mean_toffoli_like": 430822.484375,
+          "phase_offsets": [
+            182
+          ],
+          "value_offsets": []
+        },
+        {
+          "capture": "docs/evidence/dqi-phase-replay-20261115/results/s6/batch-073984.json",
+          "capture_sha256": "7df8ef3c8a646c4b0c4af6ce1349db175a1f77d768f103a7364352bfc0cc2b32",
+          "dirty_offsets": [],
+          "mask_offsets": [],
+          "mean_toffoli_like": 430822.3984375,
+          "phase_offsets": [
+            135
+          ],
+          "value_offsets": []
+        },
+        {
+          "capture": "docs/evidence/dqi-phase-replay-20261115/results/s7/batch-046592.json",
+          "capture_sha256": "685d5ac2db3a6d8921a4a49579c376868039f0d832d56461fd911731dd7fc92a",
+          "dirty_offsets": [],
+          "mask_offsets": [],
+          "mean_toffoli_like": 430821.671875,
+          "phase_offsets": [
+            136
+          ],
+          "value_offsets": []
+        },
+        {
+          "capture": "docs/evidence/d4-compact-repair-20261115/cloud-replay/captures/s6/batch-102144.json",
+          "capture_sha256": "66734206a57b592afb5a68f3baf5a386ff7e35ea6d3f3da568941870f2e6c0d7",
+          "dirty_offsets": [],
+          "mask_offsets": [],
+          "mean_toffoli_like": 430824.1171875,
+          "phase_offsets": [
+            172
+          ],
+          "value_offsets": []
+        },
+        {
+          "capture": "docs/evidence/d4-compact-repair-20261115/cloud-replay/captures/s7/batch-052736.json",
+          "capture_sha256": "e4fbcc4c067c165fa3d8cd2fa63e00b6a0ad8fdb2f01136e19ed5919be747925",
+          "dirty_offsets": [],
+          "mask_offsets": [],
+          "mean_toffoli_like": 430824.125,
+          "phase_offsets": [],
+          "value_offsets": []
+        }
+      ],
+      "gate_ceiling": 430823.1373828125,
+      "matched_clean": false,
+      "panels": [
+        {
+          "batches": [
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430818.6484375,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430820.921875,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430822.90625,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430821.234375,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430821.3984375,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430820.6796875,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430821.3046875,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430822.2578125,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430822.53125,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430819.0,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430824.15625,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430824.0859375,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430819.484375,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430824.3046875,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430820.9296875,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430819.046875,
+              "phase_offsets": [],
+              "value_offsets": []
+            }
+          ],
+          "mean_toffoli_like": 430821.4306640625,
+          "seed": 62018
+        },
+        {
+          "batches": [
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430822.3046875,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430823.9453125,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430819.8515625,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430822.765625,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430820.2265625,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430822.84375,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430822.3515625,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430823.0625,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430822.984375,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430820.8515625,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430823.8203125,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430823.6640625,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430824.828125,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430823.0546875,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430820.359375,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 430824.734375,
+              "phase_offsets": [],
+              "value_offsets": []
+            }
+          ],
+          "mean_toffoli_like": 430822.60302734375,
+          "seed": 91384
+        }
+      ],
+      "panels_clear_ceiling": true,
+      "qubits": 897,
+      "static_toffoli_like": 444667,
+      "targeted": [
+        {
+          "dirty_offsets": [],
+          "mask": "random",
+          "mask_offsets": [],
+          "mean_toffoli_like": 430822.45,
+          "phase_offsets": [
+            36,
+            38,
+            39
+          ],
+          "seed": 761,
+          "value_offsets": []
+        },
+        {
+          "dirty_offsets": [],
+          "mask": "zero",
+          "mask_offsets": [],
+          "mean_toffoli_like": 430822.45,
+          "phase_offsets": [],
+          "seed": 761,
+          "value_offsets": []
+        },
+        {
+          "dirty_offsets": [],
+          "mask": "random",
+          "mask_offsets": [],
+          "mean_toffoli_like": 430832.9,
+          "phase_offsets": [
+            36,
+            37,
+            38
+          ],
+          "seed": 762,
+          "value_offsets": []
+        },
+        {
+          "dirty_offsets": [],
+          "mask": "zero",
+          "mask_offsets": [],
+          "mean_toffoli_like": 430832.9,
+          "phase_offsets": [],
+          "seed": 762,
+          "value_offsets": []
+        }
+      ]
+    },
+    "candidate": {
+      "archived": [
+        {
+          "capture": "docs/evidence/dqi-phase-replay-20261115/results/s2/batch-045312.json",
+          "capture_sha256": "38f94a8f866e10bdc31cfca4490f45cf345310c5a8b6dd4919c755ebe35fb4b1",
+          "dirty_offsets": [],
+          "mask_offsets": [],
+          "mean_toffoli_like": 394199.58203125,
+          "phase_offsets": [],
+          "value_offsets": []
+        },
+        {
+          "capture": "docs/evidence/dqi-phase-replay-20261115/results/s6/batch-013056.json",
+          "capture_sha256": "b9cb413ab625ea41ab39d298a2d127521050cde7eed7b955eb42df527b7138ab",
+          "dirty_offsets": [],
+          "mask_offsets": [],
+          "mean_toffoli_like": 394191.7265625,
+          "phase_offsets": [],
+          "value_offsets": []
+        },
+        {
+          "capture": "docs/evidence/dqi-phase-replay-20261115/results/s6/batch-073984.json",
+          "capture_sha256": "7df8ef3c8a646c4b0c4af6ce1349db175a1f77d768f103a7364352bfc0cc2b32",
+          "dirty_offsets": [],
+          "mask_offsets": [],
+          "mean_toffoli_like": 394197.61328125,
+          "phase_offsets": [],
+          "value_offsets": []
+        },
+        {
+          "capture": "docs/evidence/dqi-phase-replay-20261115/results/s7/batch-046592.json",
+          "capture_sha256": "685d5ac2db3a6d8921a4a49579c376868039f0d832d56461fd911731dd7fc92a",
+          "dirty_offsets": [],
+          "mask_offsets": [],
+          "mean_toffoli_like": 394201.51171875,
+          "phase_offsets": [],
+          "value_offsets": []
+        },
+        {
+          "capture": "docs/evidence/d4-compact-repair-20261115/cloud-replay/captures/s6/batch-102144.json",
+          "capture_sha256": "66734206a57b592afb5a68f3baf5a386ff7e35ea6d3f3da568941870f2e6c0d7",
+          "dirty_offsets": [],
+          "mask_offsets": [],
+          "mean_toffoli_like": 394197.11328125,
+          "phase_offsets": [],
+          "value_offsets": []
+        },
+        {
+          "capture": "docs/evidence/d4-compact-repair-20261115/cloud-replay/captures/s7/batch-052736.json",
+          "capture_sha256": "e4fbcc4c067c165fa3d8cd2fa63e00b6a0ad8fdb2f01136e19ed5919be747925",
+          "dirty_offsets": [],
+          "mask_offsets": [],
+          "mean_toffoli_like": 394207.40234375,
+          "phase_offsets": [],
+          "value_offsets": []
+        }
+      ],
+      "gate_ceiling": 436645.00567017903,
+      "matched_clean": true,
+      "panels": [
+        {
+          "batches": [
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394188.68359375,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394192.22265625,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394193.60546875,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394203.40625,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394200.89453125,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394194.0390625,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394187.19921875,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394199.27734375,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394195.51953125,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394201.0703125,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394201.72265625,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394197.6484375,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394204.95703125,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394196.34765625,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394195.98046875,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394187.65625,
+              "phase_offsets": [],
+              "value_offsets": []
+            }
+          ],
+          "mean_toffoli_like": 394196.2644042969,
+          "seed": 62018
+        },
+        {
+          "batches": [
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394194.2578125,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394200.7578125,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394187.80078125,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394194.30078125,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394202.04296875,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394205.53515625,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394199.41015625,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394187.453125,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394199.8125,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394197.546875,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394203.6328125,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394186.1640625,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394202.33203125,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394195.875,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394200.4453125,
+              "phase_offsets": [],
+              "value_offsets": []
+            },
+            {
+              "dirty_offsets": [],
+              "mask_offsets": [],
+              "mean_toffoli_like": 394199.2578125,
+              "phase_offsets": [],
+              "value_offsets": []
+            }
+          ],
+          "mean_toffoli_like": 394197.2890625,
+          "seed": 91384
+        }
+      ],
+      "panels_clear_ceiling": true,
+      "qubits": 891,
+      "static_toffoli_like": 395571,
+      "targeted": [
+        {
+          "dirty_offsets": [],
+          "mask": "random",
+          "mask_offsets": [],
+          "mean_toffoli_like": 394213.825,
+          "phase_offsets": [],
+          "seed": 761,
+          "value_offsets": []
+        },
+        {
+          "dirty_offsets": [],
+          "mask": "zero",
+          "mask_offsets": [],
+          "mean_toffoli_like": 349969.9,
+          "phase_offsets": [],
+          "seed": 761,
+          "value_offsets": []
+        },
+        {
+          "dirty_offsets": [],
+          "mask": "random",
+          "mask_offsets": [],
+          "mean_toffoli_like": 394203.925,
+          "phase_offsets": [],
+          "seed": 762,
+          "value_offsets": []
+        },
+        {
+          "dirty_offsets": [],
+          "mask": "zero",
+          "mask_offsets": [],
+          "mean_toffoli_like": 349961.925,
+          "phase_offsets": [],
+          "seed": 762,
+          "value_offsets": []
+        }
+      ]
+    }
+  }
+}

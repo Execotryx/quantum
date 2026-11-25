@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "/workspace/scratch/e5e4bb56acc7/controller_work/after_v3/k24/v5_transpose14/check_transpose14_preimage.py",
+    "--output",
+    "controller_work/after_v3/k24/v5_transpose14/runs/preimage-full"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794397736.9956505,
+  "rss_soft": 3000000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 186085376,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 10,
+  "elapsed_seconds": 103.97589373588562,
+  "current_rss": 79208448,
+  "available_bytes": 9484083200,
+  "exit_code": 0
+}

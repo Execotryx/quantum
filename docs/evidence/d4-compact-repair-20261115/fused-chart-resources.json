@@ -1,0 +1,39 @@
+{
+  "adapter_sha256": {
+    "dqi_d4.py": "9d4993d2492d307e11f75308647c7f19dc68804d87ecc3ecdc0936cc4e8ac0d5",
+    "dqi_d4_compact.py": "55baeb35bf8a2c75fdee0047ee9720697ea3674fe8949b41ed62ea10726dcc5f"
+  },
+  "backend_inventory_sha256": "132405912244d6232e4ea7fb3c9e941f8cbfbfe8cc51dd49ab3fccb609166237",
+  "boundaries": {
+    "deferred_phase": {
+      "classical_bits": 866,
+      "closed_static": 94260,
+      "declared_qubits": 993,
+      "forward_static": 40497,
+      "initial_qubits": 945
+    },
+    "derivative_replay": {
+      "classical_bits": 1045,
+      "closed_static": 267348,
+      "declared_qubits": 944,
+      "forward_static": 73841
+    },
+    "repaid_immediately": {
+      "classical_bits": 64,
+      "closed_static": 107328,
+      "declared_qubits": 1011,
+      "forward_static": 53664,
+      "initial_qubits": 945
+    },
+    "scalar_replay": {
+      "classical_bits": 1045,
+      "closed_static": 217572,
+      "declared_qubits": 944,
+      "forward_static": 73841
+    }
+  },
+  "driver_sha256": "5946b612434163534c39eefef5120329cb12ec30f431e7267df2b9ff8c9c420e",
+  "layout_audit_sha256": "8cb74f7708f80e692e28e4998bd5a64789404832ae511d099759420aa98a3c30",
+  "minimum_tail_v_slots": 3,
+  "source_sha256": "6e9f0028226c240539df18b3ff05f4f533b1ff06902774fa88e13aacbbadbcd6"
+}

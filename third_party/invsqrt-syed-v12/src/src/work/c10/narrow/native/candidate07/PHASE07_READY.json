@@ -1,0 +1,332 @@
+{
+  "status": "SOURCE_READY_STATIC_FINITE_PASS_NATIVE_AND_OFFICIAL_PENDING",
+  "candidate": "candidate07",
+  "files": [
+    {
+      "path": "phase07.py",
+      "bytes": 9599,
+      "sha256": "c200e2f9749e3a89adc17ad9837005e0a28e794622e5fbece3551275f1de8f20"
+    },
+    {
+      "path": "oracle50.py",
+      "bytes": 2880,
+      "sha256": "df311f0844c7cf72c7dedeff891442ad9da6f88cb727a724c832a3611684e3ff"
+    },
+    {
+      "path": "prove50.py",
+      "bytes": 13697,
+      "sha256": "d079cefb01fa88581cf279e99590ad74610551861658f5fef65ff9071650216e"
+    },
+    {
+      "path": "variant.py",
+      "bytes": 5421,
+      "sha256": "2b14bea6fcedfa772daf3f5b9c5176e3434fe23ed90b8300d586bd230711f616"
+    },
+    {
+      "path": "generate.py",
+      "bytes": 5049,
+      "sha256": "f29a6c89a0372302854c8a6c2662db34cb44e856743f9fc711c9ba2aa269cca1"
+    },
+    {
+      "path": "run_batch.py",
+      "bytes": 3025,
+      "sha256": "906d64eed736a3d7a1d495bfea4f9f5882fcd849a67b721c2b0855c97670ba52"
+    }
+  ],
+  "inputs_manifest_sha256": "df3d932917e1c0c7b9a6f0bea7b575190a22eb4d27b16a347524fbd208daa414",
+  "inherited_pins_checked": 304,
+  "phase_source_pins_checked": 7,
+  "ast_parse_all_sources": true,
+  "root_owned_api_static_review": "PASS",
+  "native_runtime_imported": false,
+  "native_execution": false,
+  "official_verifier": false,
+  "finite_basis_cases": 286,
+  "route_labels_checked": 286,
+  "threshold_class_checks": 110,
+  "inverse_basis_cases": 286,
+  "fixed_and_new_angle_classification": [
+    {
+      "index": 0,
+      "turn_units50": 16696,
+      "half_turns": "2087/70368744177664",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 1,
+      "turn_units50": 31885,
+      "half_turns": "31885/562949953421312",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 2,
+      "turn_units50": 65753,
+      "half_turns": "65753/562949953421312",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 3,
+      "turn_units50": 131886,
+      "half_turns": "65943/281474976710656",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 4,
+      "turn_units50": 261678,
+      "half_turns": "130839/281474976710656",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 5,
+      "turn_units50": 525486,
+      "half_turns": "262743/281474976710656",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 6,
+      "turn_units50": 1048587,
+      "half_turns": "1048587/562949953421312",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 7,
+      "turn_units50": 2096433,
+      "half_turns": "2096433/562949953421312",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 8,
+      "turn_units50": 4194464,
+      "half_turns": "131077/17592186044416",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 9,
+      "turn_units50": 8388179,
+      "half_turns": "8388179/562949953421312",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 10,
+      "turn_units50": 16777422,
+      "half_turns": "8388711/281474976710656",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 11,
+      "turn_units50": 33554147,
+      "half_turns": "33554147/562949953421312",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 12,
+      "turn_units50": 67108361,
+      "half_turns": "67108361/562949953421312",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 13,
+      "turn_units50": 134217166,
+      "half_turns": "67108583/281474976710656",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 14,
+      "turn_units50": 268435982,
+      "half_turns": "134217991/281474976710656",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 15,
+      "turn_units50": 536872047,
+      "half_turns": "536872047/562949953421312",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 16,
+      "turn_units50": 1073743824,
+      "half_turns": "67108989/35184372088832",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 17,
+      "turn_units50": 2147484968,
+      "half_turns": "268435621/70368744177664",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 18,
+      "turn_units50": 4294967019,
+      "half_turns": "4294967019/562949953421312",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 19,
+      "turn_units50": 8589934482,
+      "half_turns": "4294967241/281474976710656",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 20,
+      "turn_units50": 17179868565,
+      "half_turns": "17179868565/562949953421312",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 21,
+      "turn_units50": 34359738074,
+      "half_turns": "17179869037/281474976710656",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 22,
+      "turn_units50": 68719477849,
+      "half_turns": "68719477849/562949953421312",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 23,
+      "turn_units50": 137438954234,
+      "half_turns": "68719477117/281474976710656",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 24,
+      "turn_units50": 274877907276,
+      "half_turns": "68719476819/140737488355328",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 25,
+      "turn_units50": 549755821890,
+      "half_turns": "274877910945/281474976710656",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 26,
+      "turn_units50": 1099511634651,
+      "half_turns": "1099511634651/562949953421312",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 27,
+      "turn_units50": 2199023260937,
+      "half_turns": "2199023260937/562949953421312",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 28,
+      "turn_units50": 4398046507155,
+      "half_turns": "4398046507155/562949953421312",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 29,
+      "turn_units50": 8796092989440,
+      "half_turns": "268435455/17179869184",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 30,
+      "turn_units50": 17592186011648,
+      "half_turns": "536870911/17179869184",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 31,
+      "turn_units50": 35184372056064,
+      "half_turns": "1073741823/17179869184",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 32,
+      "turn_units50": 70368744144896,
+      "half_turns": "2147483647/17179869184",
+      "kind": "generic",
+      "emitted": true
+    },
+    {
+      "index": 33,
+      "turn_units50": 0,
+      "half_turns": "0",
+      "kind": "Clifford",
+      "emitted": false
+    }
+  ],
+  "phase_modulus": 1125899906842624,
+  "half_turn_denominator": 562949953421312,
+  "phase_expected_Toffolis": 139,
+  "phase_expected_T": 4,
+  "phase_expected_R": 33,
+  "phase_entry_exit_owners": 43,
+  "phase_peak": 48,
+  "phase_ledger": {
+    "route": 122,
+    "endpoint_frames": 2,
+    "p_c": 2,
+    "thresholds": 5,
+    "features": 8
+  },
+  "phase_local_HMR_functions": 15,
+  "phase_local_debts": "All immediately corrected within endpoint; none transferred to table ledger.",
+  "complete_gate": {
+    "Q": 48,
+    "Toffolis_expected": 1584,
+    "T": 4,
+    "R": 33,
+    "cost_paper": 87160.70685415737
+  },
+  "fit_path": "research/ring26_phase/frozen/global_zero33.json",
+  "fit_sha256": "c0eab1edd234e32d5baa1a51a0fec46abf82165d3973ffda825d2149f67f11e5",
+  "independent_phase_units50_sha256": "8bd482a8957cd387a2b212afdaca656947b7f89c983d67ff4eea4e14c3b0a26a",
+  "expected_minimum_margin_units64": 124370688,
+  "no_old_phase_oracle_reused": true,
+  "all_native_domain_HMR_and_tolerance_checks_remain_required": true,
+  "new_proof_required_metadata": [
+    "independent_full_ring26_digest_matched=whole",
+    "independent_full_ring26_fit_digest_matched=whole",
+    "phase_exactly_matches_frozen_integer_model=True",
+    "every_HMR_transcript_proved=True",
+    "all_resets_provably_zero=True",
+    "local_oracle_sha256",
+    "local_proof_source_sha256",
+    "phase_source_sha256",
+    "accuracy_receipt_path",
+    "accuracy_receipt_sha256",
+    "phase_units50_sha256",
+    "independent_phase_units50_sha256"
+  ],
+  "licensing": "Apache-2.0; Copyright 2026 Syed Asad Ali; credits Opus and Astra"
+}

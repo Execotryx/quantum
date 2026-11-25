@@ -1,0 +1,1022 @@
+{
+  "changed_existing_files": false,
+  "component_correctness_claim": false,
+  "decoder_builds": 0,
+  "input_sources": {
+    "controller_work/after_v3/scan/zero_mask_scan.py": "cacf6f97a639ff6b89d500e9cb9e2d427819ba461635cd6407a573d1668b53f1",
+    "controller_work/night_schedule/scan10.py": "14a4e8e90dcc3b5f4b0dc3cc4ad5e306ebe55c87ca4185bc583f1ed9311f8b21",
+    "controller_work/work/round2/milestone152/source/narrow_field130.py": "f021152bc598f334d854bfba13b9f228cd6a0b751010dde10c9341203bd49bf6"
+  },
+  "native_simulations": 0,
+  "rows": [
+    {
+      "Q": 34,
+      "explicit_allocation_trace_first_two": [
+        {
+          "action": "alloc_bits",
+          "cell": 0,
+          "count": 11,
+          "live": 11
+        },
+        {
+          "action": "free_bits",
+          "cell": 0,
+          "count": 11,
+          "live": 0
+        },
+        {
+          "action": "alloc_bits",
+          "cell": 1,
+          "count": 11,
+          "live": 11
+        },
+        {
+          "action": "free_bits",
+          "cell": 1,
+          "count": 11,
+          "live": 0
+        }
+      ],
+      "instructions": 18368,
+      "mode": "plain_baseline",
+      "native_del_and_trace_first_two": [
+        {
+          "cell": 0,
+          "explicit_live_bits": 0,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 0,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 0,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 0,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 0,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 0,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 0,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 0,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 0,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 0,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 0,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 0,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 0,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 0,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 0,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 0,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 0,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 0,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 0,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 0,
+          "return_type": "NoneType"
+        }
+      ],
+      "num_allocated_bits_attribute": null,
+      "num_allocated_bits_attribute_type": "NoneType",
+      "num_bits": 49152,
+      "point_cells": 64,
+      "stages": [
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 0,
+          "instructions": 0,
+          "num_bits": 49140,
+          "stage": "declared_inputs"
+        },
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 11,
+          "instructions": 287,
+          "num_bits": 49152,
+          "stage": "point_1"
+        },
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 11,
+          "instructions": 574,
+          "num_bits": 49152,
+          "stage": "point_2"
+        },
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 11,
+          "instructions": 1148,
+          "num_bits": 49152,
+          "stage": "point_4"
+        },
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 11,
+          "instructions": 2296,
+          "num_bits": 49152,
+          "stage": "point_8"
+        },
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 11,
+          "instructions": 4592,
+          "num_bits": 49152,
+          "stage": "point_16"
+        },
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 11,
+          "instructions": 9184,
+          "num_bits": 49152,
+          "stage": "point_32"
+        },
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 11,
+          "instructions": 18368,
+          "num_bits": 49152,
+          "stage": "point_64"
+        },
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 11,
+          "instructions": 18368,
+          "num_bits": 49152,
+          "stage": "all_explicit_workspace_retired"
+        }
+      ],
+      "static_T": 704
+    },
+    {
+      "Q": 34,
+      "explicit_allocation_trace_first_two": [
+        {
+          "action": "alloc_bits",
+          "cell": 0,
+          "count": 1,
+          "live": 1
+        },
+        {
+          "action": "alloc_bits",
+          "cell": 0,
+          "count": 11,
+          "live": 12
+        },
+        {
+          "action": "free_bits",
+          "cell": 0,
+          "count": 11,
+          "live": 1
+        },
+        {
+          "action": "free_bits",
+          "cell": 0,
+          "count": 1,
+          "live": 0
+        },
+        {
+          "action": "alloc_bits",
+          "cell": 1,
+          "count": 1,
+          "live": 1
+        },
+        {
+          "action": "alloc_bits",
+          "cell": 1,
+          "count": 11,
+          "live": 12
+        },
+        {
+          "action": "free_bits",
+          "cell": 1,
+          "count": 11,
+          "live": 1
+        },
+        {
+          "action": "free_bits",
+          "cell": 1,
+          "count": 1,
+          "live": 0
+        }
+      ],
+      "instructions": 19392,
+      "mode": "plain_conditional",
+      "native_del_and_trace_first_two": [
+        {
+          "cell": 0,
+          "explicit_live_bits": 1,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 1,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 1,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 1,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 1,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 1,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 1,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 1,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 1,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 1,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 1,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 1,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 1,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 1,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 1,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 1,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 1,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 1,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 1,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 1,
+          "return_type": "NoneType"
+        }
+      ],
+      "num_allocated_bits_attribute": null,
+      "num_allocated_bits_attribute_type": "NoneType",
+      "num_bits": 49153,
+      "point_cells": 64,
+      "stages": [
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 0,
+          "instructions": 0,
+          "num_bits": 49140,
+          "stage": "declared_inputs"
+        },
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 12,
+          "instructions": 303,
+          "num_bits": 49153,
+          "stage": "point_1"
+        },
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 12,
+          "instructions": 606,
+          "num_bits": 49153,
+          "stage": "point_2"
+        },
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 12,
+          "instructions": 1212,
+          "num_bits": 49153,
+          "stage": "point_4"
+        },
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 12,
+          "instructions": 2424,
+          "num_bits": 49153,
+          "stage": "point_8"
+        },
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 12,
+          "instructions": 4848,
+          "num_bits": 49153,
+          "stage": "point_16"
+        },
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 12,
+          "instructions": 9696,
+          "num_bits": 49153,
+          "stage": "point_32"
+        },
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 12,
+          "instructions": 19392,
+          "num_bits": 49153,
+          "stage": "point_64"
+        },
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 12,
+          "instructions": 19392,
+          "num_bits": 49153,
+          "stage": "all_explicit_workspace_retired"
+        }
+      ],
+      "static_T": 704
+    },
+    {
+      "Q": 34,
+      "explicit_allocation_trace_first_two": [
+        {
+          "action": "alloc_bits",
+          "cell": -1,
+          "count": 322,
+          "live": 322
+        },
+        {
+          "action": "free_bits",
+          "cell": -1,
+          "count": 322,
+          "live": 0
+        },
+        {
+          "action": "alloc_bits",
+          "cell": -1,
+          "count": 192,
+          "live": 192
+        },
+        {
+          "action": "alloc_bits",
+          "cell": -1,
+          "count": 127,
+          "live": 319
+        },
+        {
+          "action": "alloc_bits",
+          "cell": -1,
+          "count": 3,
+          "live": 322
+        },
+        {
+          "action": "free_bits",
+          "cell": -1,
+          "count": 127,
+          "live": 195
+        },
+        {
+          "action": "alloc_bits",
+          "cell": -1,
+          "count": 12,
+          "live": 207
+        },
+        {
+          "action": "alloc_bits",
+          "cell": -1,
+          "count": 3,
+          "live": 210
+        },
+        {
+          "action": "free_bits",
+          "cell": -1,
+          "count": 3,
+          "live": 207
+        },
+        {
+          "action": "free_bits",
+          "cell": -1,
+          "count": 192,
+          "live": 15
+        },
+        {
+          "action": "free_bits",
+          "cell": -1,
+          "count": 3,
+          "live": 12
+        },
+        {
+          "action": "alloc_bits",
+          "cell": 0,
+          "count": 11,
+          "live": 23
+        },
+        {
+          "action": "free_bits",
+          "cell": 0,
+          "count": 11,
+          "live": 12
+        },
+        {
+          "action": "alloc_bits",
+          "cell": 1,
+          "count": 11,
+          "live": 23
+        },
+        {
+          "action": "free_bits",
+          "cell": 1,
+          "count": 11,
+          "live": 12
+        }
+      ],
+      "instructions": 19039,
+      "mode": "pool_baseline",
+      "native_del_and_trace_first_two": [
+        {
+          "cell": 0,
+          "explicit_live_bits": 12,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 12,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 12,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 12,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 12,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 12,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 12,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 12,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 12,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 12,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 12,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 12,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 12,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 12,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 12,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 12,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 12,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 12,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 12,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 12,
+          "return_type": "NoneType"
+        }
+      ],
+      "num_allocated_bits_attribute": null,
+      "num_allocated_bits_attribute_type": "NoneType",
+      "num_bits": 49463,
+      "point_cells": 64,
+      "stages": [
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 0,
+          "instructions": 0,
+          "num_bits": 49140,
+          "stage": "declared_inputs"
+        },
+        {
+          "explicit_live_workspace": 12,
+          "explicit_workspace_peak": 322,
+          "instructions": 659,
+          "num_bits": 49462,
+          "stage": "selector_topology_only_label_live"
+        },
+        {
+          "explicit_live_workspace": 12,
+          "explicit_workspace_peak": 322,
+          "instructions": 946,
+          "num_bits": 49463,
+          "stage": "point_1"
+        },
+        {
+          "explicit_live_workspace": 12,
+          "explicit_workspace_peak": 322,
+          "instructions": 1233,
+          "num_bits": 49463,
+          "stage": "point_2"
+        },
+        {
+          "explicit_live_workspace": 12,
+          "explicit_workspace_peak": 322,
+          "instructions": 1807,
+          "num_bits": 49463,
+          "stage": "point_4"
+        },
+        {
+          "explicit_live_workspace": 12,
+          "explicit_workspace_peak": 322,
+          "instructions": 2955,
+          "num_bits": 49463,
+          "stage": "point_8"
+        },
+        {
+          "explicit_live_workspace": 12,
+          "explicit_workspace_peak": 322,
+          "instructions": 5251,
+          "num_bits": 49463,
+          "stage": "point_16"
+        },
+        {
+          "explicit_live_workspace": 12,
+          "explicit_workspace_peak": 322,
+          "instructions": 9843,
+          "num_bits": 49463,
+          "stage": "point_32"
+        },
+        {
+          "explicit_live_workspace": 12,
+          "explicit_workspace_peak": 322,
+          "instructions": 19027,
+          "num_bits": 49463,
+          "stage": "point_64"
+        },
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 322,
+          "instructions": 19039,
+          "num_bits": 49463,
+          "stage": "all_explicit_workspace_retired"
+        }
+      ],
+      "static_T": 704
+    },
+    {
+      "Q": 34,
+      "explicit_allocation_trace_first_two": [
+        {
+          "action": "alloc_bits",
+          "cell": -1,
+          "count": 322,
+          "live": 322
+        },
+        {
+          "action": "free_bits",
+          "cell": -1,
+          "count": 322,
+          "live": 0
+        },
+        {
+          "action": "alloc_bits",
+          "cell": -1,
+          "count": 192,
+          "live": 192
+        },
+        {
+          "action": "alloc_bits",
+          "cell": -1,
+          "count": 127,
+          "live": 319
+        },
+        {
+          "action": "alloc_bits",
+          "cell": -1,
+          "count": 3,
+          "live": 322
+        },
+        {
+          "action": "free_bits",
+          "cell": -1,
+          "count": 127,
+          "live": 195
+        },
+        {
+          "action": "alloc_bits",
+          "cell": -1,
+          "count": 12,
+          "live": 207
+        },
+        {
+          "action": "alloc_bits",
+          "cell": -1,
+          "count": 3,
+          "live": 210
+        },
+        {
+          "action": "free_bits",
+          "cell": -1,
+          "count": 3,
+          "live": 207
+        },
+        {
+          "action": "free_bits",
+          "cell": -1,
+          "count": 192,
+          "live": 15
+        },
+        {
+          "action": "free_bits",
+          "cell": -1,
+          "count": 3,
+          "live": 12
+        },
+        {
+          "action": "alloc_bits",
+          "cell": 0,
+          "count": 1,
+          "live": 13
+        },
+        {
+          "action": "alloc_bits",
+          "cell": 0,
+          "count": 11,
+          "live": 24
+        },
+        {
+          "action": "free_bits",
+          "cell": 0,
+          "count": 11,
+          "live": 13
+        },
+        {
+          "action": "free_bits",
+          "cell": 0,
+          "count": 1,
+          "live": 12
+        },
+        {
+          "action": "alloc_bits",
+          "cell": 1,
+          "count": 1,
+          "live": 13
+        },
+        {
+          "action": "alloc_bits",
+          "cell": 1,
+          "count": 11,
+          "live": 24
+        },
+        {
+          "action": "free_bits",
+          "cell": 1,
+          "count": 11,
+          "live": 13
+        },
+        {
+          "action": "free_bits",
+          "cell": 1,
+          "count": 1,
+          "live": 12
+        }
+      ],
+      "instructions": 20063,
+      "mode": "pool_conditional",
+      "native_del_and_trace_first_two": [
+        {
+          "cell": 0,
+          "explicit_live_bits": 13,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 13,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 13,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 13,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 13,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 13,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 13,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 13,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 13,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 0,
+          "explicit_live_bits": 13,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 13,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 13,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 13,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 13,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 13,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 13,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 13,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 13,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 13,
+          "return_type": "NoneType"
+        },
+        {
+          "cell": 1,
+          "explicit_live_bits": 13,
+          "return_type": "NoneType"
+        }
+      ],
+      "num_allocated_bits_attribute": null,
+      "num_allocated_bits_attribute_type": "NoneType",
+      "num_bits": 49463,
+      "point_cells": 64,
+      "stages": [
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 0,
+          "instructions": 0,
+          "num_bits": 49140,
+          "stage": "declared_inputs"
+        },
+        {
+          "explicit_live_workspace": 12,
+          "explicit_workspace_peak": 322,
+          "instructions": 659,
+          "num_bits": 49462,
+          "stage": "selector_topology_only_label_live"
+        },
+        {
+          "explicit_live_workspace": 12,
+          "explicit_workspace_peak": 322,
+          "instructions": 962,
+          "num_bits": 49463,
+          "stage": "point_1"
+        },
+        {
+          "explicit_live_workspace": 12,
+          "explicit_workspace_peak": 322,
+          "instructions": 1265,
+          "num_bits": 49463,
+          "stage": "point_2"
+        },
+        {
+          "explicit_live_workspace": 12,
+          "explicit_workspace_peak": 322,
+          "instructions": 1871,
+          "num_bits": 49463,
+          "stage": "point_4"
+        },
+        {
+          "explicit_live_workspace": 12,
+          "explicit_workspace_peak": 322,
+          "instructions": 3083,
+          "num_bits": 49463,
+          "stage": "point_8"
+        },
+        {
+          "explicit_live_workspace": 12,
+          "explicit_workspace_peak": 322,
+          "instructions": 5507,
+          "num_bits": 49463,
+          "stage": "point_16"
+        },
+        {
+          "explicit_live_workspace": 12,
+          "explicit_workspace_peak": 322,
+          "instructions": 10355,
+          "num_bits": 49463,
+          "stage": "point_32"
+        },
+        {
+          "explicit_live_workspace": 12,
+          "explicit_workspace_peak": 322,
+          "instructions": 20051,
+          "num_bits": 49463,
+          "stage": "point_64"
+        },
+        {
+          "explicit_live_workspace": 0,
+          "explicit_workspace_peak": 322,
+          "instructions": 20063,
+          "num_bits": 49463,
+          "stage": "all_explicit_workspace_retired"
+        }
+      ],
+      "static_T": 704
+    }
+  ],
+  "selector_executed": false,
+  "source_sha256": "b3d3cefefecae8550eafa2009ae80ea608b7ffbf255e890a55c88655617e8922",
+  "status": "OBSERVED_TINY_NATIVE_POINT_ALLOCATION_ONLY"
+}

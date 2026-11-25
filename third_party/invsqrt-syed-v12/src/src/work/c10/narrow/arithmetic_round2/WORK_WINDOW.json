@@ -1,0 +1,34 @@
+{
+  "status": "USER_AUTHORIZED_NEW_ARITHMETIC_WORK_WINDOW",
+  "created_utc": "2026-11-12T03:32:13.631731+00:00",
+  "user_authorization": "New work window from now until15:00PKT today(10:00UTC); fresh guard receipts; unchanged memory,process,accuracy and verifier checks. Final four original salts use default batchsize. No submissions.",
+  "stop_utc": "2026-11-12T10:00:00Z",
+  "stop_PKT": "2026-11-12 15:00 PKT",
+  "launch_cutoff_utc": "2026-11-12T09:50:00Z",
+  "worker_hard_stop_utc": "2026-11-12T09:55:00Z",
+  "previous_cutoff_superseded_by_explicit_user_authorization": true,
+  "previous_guards_preserved": true,
+  "native_envelope": {
+    "per_process_hard_address_bytes": 536870912,
+    "aggregate_RSS_stop_bytes": 805306368,
+    "minimum_host_available_bytes": 4294967296,
+    "live_process_cap": 8
+  },
+  "official_envelope": {
+    "per_process_hard_address_bytes": 671088640,
+    "aggregate_RSS_stop_bytes": 671088640,
+    "minimum_host_available_bytes": 4294967296,
+    "live_process_cap": 6,
+    "max_workers": 2
+  },
+  "shared_lock": "/tmp/invsqrt-resource-guard-1000.lock",
+  "automatic_workload_retries": 0,
+  "cgroup_counters": "UNAVAILABLE_IN_EXEC_SANDBOX_NOT_CLAIMED_CHECKED",
+  "original_verifier_sha256": "ddef520dec6b68d1cf0a6f328ddd36d79eb84570b9192cf3f7acaf073f06733a",
+  "original_tolerance_unchanged": true,
+  "final_official_batch_size": 256,
+  "omit_batch_size_argument_for_final_official_salts": true,
+  "expected_final_shots_per_salt": 200540928,
+  "candidate07_inherited_pins_verified": 304,
+  "no_submission": true
+}

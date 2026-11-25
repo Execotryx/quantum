@@ -1,0 +1,48 @@
+{
+  "status": "RING26_PAPER_SOURCE_READY_NO_FULL_DOMAIN_EXECUTION",
+  "files": [
+    {
+      "path": "PLAN.md",
+      "bytes": 4907,
+      "sha256": "41d4f69e1c0f0021fe5296153f74a9d0a0e87b83312db9c8ef27a18a7eaaf7a9"
+    },
+    {
+      "path": "RESUME.md",
+      "bytes": 1812,
+      "sha256": "353a1b7d47d9dea7c8ad60c9ae603ad6e7d9daa41e272c81157818a7e3d449e3"
+    },
+    {
+      "path": "basis.py",
+      "bytes": 9040,
+      "sha256": "d9ebae9116afae66f666ba7bb265784ab77165417de71d18b4f845d6669326e2"
+    },
+    {
+      "path": "basis.json",
+      "bytes": 13245,
+      "sha256": "a3bacdd5ef8e16acb8560a40e60e2c998f8171973b1dcc062a47503c5218d744"
+    },
+    {
+      "path": "run_study.py",
+      "bytes": 21843,
+      "sha256": "d814aadb637b6c45b4a63320dc85e0305a2fbc3640b7d06f5d784ce9d08cccee"
+    },
+    {
+      "path": "INPUTS.json",
+      "bytes": 52119,
+      "sha256": "a65a700111c0e06ba3189499c708f3c76c48a6df3df6715b8b40a02090442cd5"
+    }
+  ],
+  "source_pin_count": 276,
+  "full_domain_run_owner": "parent shared guard",
+  "seed_command": "/usr/bin/python3.13 narrow/research/ring26_phase/run_study.py --mode seed",
+  "optional_fit_command": "/usr/bin/python3.13 narrow/research/ring26_phase/run_study.py --mode fit --case global_zero33",
+  "Q": 48,
+  "expected_Toffolis": 1585,
+  "phase_expected_Toffolis": 139,
+  "seed_generic_rotations": [
+    34,
+    33
+  ],
+  "T": 4,
+  "native_authorized": false
+}

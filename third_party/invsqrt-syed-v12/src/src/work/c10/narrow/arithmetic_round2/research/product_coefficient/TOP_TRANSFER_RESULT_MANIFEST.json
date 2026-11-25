@@ -1,0 +1,57 @@
+{
+  "status": "NATIVE_COMPONENT_PASS_NOT_FULL_CIRCUIT_OR_OFFICIAL",
+  "files": [
+    {
+      "path": "TOP_TRANSFER_NATIVE_SOURCE_READY.json",
+      "bytes": 1021,
+      "sha256": "2ba6a7d540a1e1bd171ef2cae5ecbbf6ce816eec7bbff14896fea9c606b19e05"
+    },
+    {
+      "path": "top_transfer_native_attempt02.guard.json",
+      "bytes": 2736,
+      "sha256": "68e12f1d45a4f7cae9cc00ecb3f0098ce5803daaf9160091a9564e64554c1583"
+    },
+    {
+      "path": "top_transfer_native_attempt02.guard.log",
+      "bytes": 5113,
+      "sha256": "91b2afa68adb2277f55a55385ea4739dffeaf0e7a64d4b1313d06867524231c7"
+    },
+    {
+      "path": "top_transfer_native/PROOF.json",
+      "bytes": 4725,
+      "sha256": "61af67c62a26f6777a54533703f2e1dafacdca4d130735de8f85b5b494937642"
+    },
+    {
+      "path": "top_transfer_native/coefficient_two_forward_inverse.kmb",
+      "bytes": 10970,
+      "sha256": "e9271fc9c186ed7264bcc5a90bcd980ae4c330a07d1bf439a3aa46f6f29d5f4c"
+    },
+    {
+      "path": "top_transfer_native/coefficient_two_forward_inverse.kmx",
+      "bytes": 15096,
+      "sha256": "474647486aeeee08a73de648348eb99cc89a8248dc965cf25465b1175257f3a2"
+    },
+    {
+      "path": "top_transfer_native/row.kmb",
+      "bytes": 1596,
+      "sha256": "1c9eb3ff15c00fba54317f59630e783fc40b4a959193fe871f4abe32e2447316"
+    },
+    {
+      "path": "top_transfer_native/row.kmx",
+      "bytes": 1957,
+      "sha256": "f58ae99f881c51909048cdd85c20cad80614ed4fe1a16c15fd811afb662b4af2"
+    }
+  ],
+  "coefficient_expected_E": 118,
+  "baseline_E": 123,
+  "saving_E": 5,
+  "production_Q": 48,
+  "no_original_accuracy_change": true,
+  "parent_accepted_paper": "arithmetic_round2/receipts/COEFFICIENT_TOP_PAPER_ACCEPTED.json",
+  "license": "Apache-2.0",
+  "copyright": "Copyright 2026 Syed Asad Ali",
+  "credits": [
+    "Opus",
+    "Astra"
+  ]
+}

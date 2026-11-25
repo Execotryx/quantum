@@ -1,0 +1,503 @@
+{
+  "status": "POSITIVE_COMPLETE_V3_RETIREMENT_PAPER_GATE_NOT_NATIVE",
+  "source_pins": [
+    {
+      "path": "native/candidate01/lifecycle.py",
+      "bytes": 15973,
+      "sha256": "47b73f1f24ea027eedcbd1950cde7fc2535b32afeeb2e366ebdc4b6f1eb3c068"
+    },
+    {
+      "path": "native/candidate01/common.py",
+      "bytes": 3343,
+      "sha256": "9872e64213a4219522a87efc49d1aa549a04e43ae3fb51c9d5b762b1ea6535ab"
+    },
+    {
+      "path": "checkpoint002/cleanroom/baseline_stage97/engine/paired_arithmetic.py",
+      "bytes": 22363,
+      "sha256": "a10b28423640a50a45a6ab23d3604dd869c26943b0ed12021526e87d1fbf8ccc"
+    },
+    {
+      "path": "research/recompute_root/models/phasefit_z1_K7_G4_m37_virtual_quadS2_36_12c0.json",
+      "bytes": 474447,
+      "sha256": "24fff823faa911afe93d02afc3ded0bbd156a210a85f1265c989a087f8fd1219"
+    },
+    {
+      "path": "arithmetic_round2/research/product_coefficient/native_known_zero_product.py",
+      "bytes": 6162,
+      "sha256": "7eff15c3f096dadd908d2b87770a3701f1bd53f71aaf368d8589e7d8fabdf243"
+    }
+  ],
+  "semantic_identity": {
+    "all4096_model_seed6_values_match_source_replay": true,
+    "root_inputs": 4096,
+    "seed_prefix_row_replays": 12288,
+    "low_root_assignments": 16,
+    "local_HMR_phase_cases": 32,
+    "recovery_Toffoli": 1,
+    "recovery_CX": 6,
+    "recovery_X": 1,
+    "new_output_owners": 1,
+    "extra_helpers": 0,
+    "data_and_controls_restored": true,
+    "all_actual_v3_measurement_outcomes_repaid": true,
+    "omitted_Z_negative_cases": 8,
+    "omitted_linear_c_term_data_failures": 8,
+    "seed5_identity": "seed5=1 XOR v3 XOR MAJ(v0,v1,v2)",
+    "actual_product_native_all_HMR_proof_still_required": true
+  },
+  "control_AR002": {
+    "status": "ACTUAL_SOURCE_RESOURCE_AND_DEBT_COUNTER_NOT_NATIVE_OR_DATA_PROOF",
+    "retire_v3": false,
+    "Q": 48,
+    "peak": 48,
+    "seed_forward_E": 11.0,
+    "seed_cleanup_E": 6.5,
+    "seed_total_E": 17.5,
+    "product_forward_E": 103.0,
+    "product_inverse_E": 135.0,
+    "product_pair_E": 238.0,
+    "root_recovery_E": 0.0,
+    "complete_product_and_recovery_E": 238.0,
+    "complete_seed_product_recovery_E": 255.5,
+    "inverse_owners": 44,
+    "inverse_owner_map": {
+      "root": [
+        "q0",
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q8",
+        "q10"
+      ],
+      "D": [
+        "q26",
+        "q27",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q36",
+        "q37",
+        "q38"
+      ],
+      "word": [
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q44",
+        "q43",
+        "q12",
+        "q13",
+        "q14",
+        "q15",
+        "q16",
+        "q17",
+        "q18",
+        "q19",
+        "q20",
+        "q21"
+      ],
+      "flags": [
+        "q22",
+        "q23",
+        "q24",
+        "q25"
+      ],
+      "Hlow": [
+        "q11",
+        "q9",
+        "q7"
+      ],
+      "saved_A6": "q6"
+    },
+    "actual_dirty_owners": [
+      "q0",
+      "q1",
+      "q2",
+      "q3",
+      "q4",
+      "q8",
+      "q10",
+      "q22",
+      "q23",
+      "q24",
+      "q25",
+      "q11",
+      "q9",
+      "q7",
+      "q6"
+    ],
+    "inverse_rows": [],
+    "restored_before_seed_cleanup_owners": 44,
+    "final_owners": 38,
+    "all10_original_product_CarryDebts_consumed": true,
+    "all3_seed_CarryDebts_and6_original_records_preserved_until_seed_cleanup": true,
+    "all_original_seed_records_consumed_by_unchanged_cleanup": true,
+    "actual_v3_measurement_paid_once": false,
+    "all_explicit_classical_bits_freed": true,
+    "caller_v3_is_current_physical_owner": true,
+    "final_Clifford_layout_restoration_required_if_physical_handle_changes": true,
+    "no_new_table_debt": true,
+    "AR002_special_row_not_added_to43_owner_count": true,
+    "external_boundary_handoff_unpriced_and_not_functionally_proved_here": true
+  },
+  "candidate": {
+    "status": "ACTUAL_SOURCE_RESOURCE_AND_DEBT_COUNTER_NOT_NATIVE_OR_DATA_PROOF",
+    "retire_v3": true,
+    "Q": 48,
+    "peak": 48,
+    "seed_forward_E": 11.0,
+    "seed_cleanup_E": 6.5,
+    "seed_total_E": 17.5,
+    "product_forward_E": 103.0,
+    "product_inverse_E": 124.5,
+    "product_pair_E": 227.5,
+    "root_recovery_E": 1.0,
+    "complete_product_and_recovery_E": 228.5,
+    "complete_seed_product_recovery_E": 246.0,
+    "inverse_owners": 43,
+    "inverse_owner_map": {
+      "root": [
+        "q0",
+        "q1",
+        "q2",
+        "q4",
+        "q8",
+        "q10"
+      ],
+      "D": [
+        "q26",
+        "q27",
+        "q28",
+        "q29",
+        "q30",
+        "q31",
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q36",
+        "q37",
+        "q38"
+      ],
+      "word": [
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q44",
+        "q43",
+        "q12",
+        "q13",
+        "q14",
+        "q15",
+        "q16",
+        "q17",
+        "q18",
+        "q19",
+        "q20",
+        "q21"
+      ],
+      "flags": [
+        "q22",
+        "q23",
+        "q24",
+        "q25"
+      ],
+      "Hlow": [
+        "q11",
+        "q9",
+        "q7"
+      ],
+      "saved_A6": "q6"
+    },
+    "actual_dirty_owners": [
+      "q0",
+      "q1",
+      "q2",
+      "q4",
+      "q8",
+      "q10",
+      "q22",
+      "q23",
+      "q24",
+      "q25",
+      "q11",
+      "q9",
+      "q7",
+      "q6"
+    ],
+    "inverse_rows": [
+      {
+        "row": 9,
+        "expected_E": 18.0,
+        "data_owners": 43,
+        "debt_positions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "debt_consumed": true,
+        "owned_carry_released": false,
+        "regenerations": [],
+        "conditional_regeneration_E": 0
+      },
+      {
+        "row": 8,
+        "expected_E": 16.5,
+        "data_owners": 43,
+        "debt_positions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "debt_consumed": true,
+        "owned_carry_released": false,
+        "regenerations": [],
+        "conditional_regeneration_E": 0
+      },
+      {
+        "row": 7,
+        "expected_E": 16.5,
+        "data_owners": 43,
+        "debt_positions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "debt_consumed": true,
+        "owned_carry_released": true,
+        "regenerations": [
+          {
+            "conditional_depth": 1,
+            "expected_E": 0.5
+          }
+        ],
+        "conditional_regeneration_E": 0.5
+      },
+      {
+        "row": 6,
+        "expected_E": 15.0,
+        "data_owners": 43,
+        "debt_positions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "debt_consumed": true,
+        "owned_carry_released": true,
+        "regenerations": [
+          {
+            "conditional_depth": 1,
+            "expected_E": 0.5
+          }
+        ],
+        "conditional_regeneration_E": 0.5
+      },
+      {
+        "row": 5,
+        "expected_E": 13.5,
+        "data_owners": 43,
+        "debt_positions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "debt_consumed": true,
+        "owned_carry_released": true,
+        "regenerations": [
+          {
+            "conditional_depth": 1,
+            "expected_E": 0.5
+          }
+        ],
+        "conditional_regeneration_E": 0.5
+      },
+      {
+        "row": 4,
+        "expected_E": 12.0,
+        "data_owners": 43,
+        "debt_positions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "debt_consumed": true,
+        "owned_carry_released": true,
+        "regenerations": [
+          {
+            "conditional_depth": 1,
+            "expected_E": 0.5
+          }
+        ],
+        "conditional_regeneration_E": 0.5
+      },
+      {
+        "row": 3,
+        "expected_E": 10.5,
+        "data_owners": 43,
+        "debt_positions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "debt_consumed": true,
+        "owned_carry_released": true,
+        "regenerations": [
+          {
+            "conditional_depth": 1,
+            "expected_E": 0.5
+          }
+        ],
+        "conditional_regeneration_E": 0.5
+      },
+      {
+        "row": 2,
+        "expected_E": 9.0,
+        "data_owners": 43,
+        "debt_positions": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "debt_consumed": true,
+        "owned_carry_released": true,
+        "regenerations": [
+          {
+            "conditional_depth": 1,
+            "expected_E": 0.5
+          }
+        ],
+        "conditional_regeneration_E": 0.5
+      },
+      {
+        "row": 1,
+        "expected_E": 7.5,
+        "data_owners": 43,
+        "debt_positions": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "debt_consumed": true,
+        "owned_carry_released": true,
+        "regenerations": [
+          {
+            "conditional_depth": 1,
+            "expected_E": 0.5
+          }
+        ],
+        "conditional_regeneration_E": 0.5
+      },
+      {
+        "row": 0,
+        "expected_E": 6.0,
+        "data_owners": 43,
+        "debt_positions": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "debt_consumed": true,
+        "owned_carry_released": false,
+        "regenerations": [],
+        "conditional_regeneration_E": 0
+      }
+    ],
+    "restored_before_seed_cleanup_owners": 44,
+    "final_owners": 38,
+    "all10_original_product_CarryDebts_consumed": true,
+    "all3_seed_CarryDebts_and6_original_records_preserved_until_seed_cleanup": true,
+    "all_original_seed_records_consumed_by_unchanged_cleanup": true,
+    "actual_v3_measurement_paid_once": true,
+    "all_explicit_classical_bits_freed": true,
+    "caller_v3_is_current_physical_owner": true,
+    "final_Clifford_layout_restoration_required_if_physical_handle_changes": true,
+    "no_new_table_debt": true,
+    "AR002_special_row_not_added_to43_owner_count": true,
+    "external_boundary_handoff_unpriced_and_not_functionally_proved_here": true
+  },
+  "complete_saving_E": 9.5,
+  "complete_expected_Toffolis_on_current_arithmetic_composition": 1559.0,
+  "Q": 48,
+  "T": 4,
+  "R": 33,
+  "rotation_charge": 230.84805946161188,
+  "modeled_complete_cost": 85960.70685415737,
+  "first_preparation_peak": 48,
+  "second_preparation_peak": 48,
+  "endpoint_peak": 48,
+  "original_approximation_and_epsilon_unchanged": true,
+  "all4_original_salts_still_required": true,
+  "no_phase_endpoint_rotations_loaders_or_external_cleanup_changes": true,
+  "unchanged_seed_interface_only": true,
+  "external_pro2_unverified_changes_not_assumed": true,
+  "source_counter_includes_no_native_builder": true,
+  "actual_native_all_HMR_pending": true,
+  "full_native_qualification": false,
+  "official_qualification": false,
+  "parent_acceptance_required_before_native": true,
+  "elapsed_seconds": 0.20712443500815425,
+  "peak_rss_kib": 24052
+}

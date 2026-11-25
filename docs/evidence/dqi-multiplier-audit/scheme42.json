@@ -1,0 +1,9 @@
+{
+  "status": "pass",
+  "basis": "0x1053 polynomial",
+  "conversion": "identity",
+  "pairs": 16777216,
+  "term_count": 42,
+  "tensor_sha256": "19ee4259f4d20a779d2484b3dea635d2e0efd23fce39c859e70228f668e53093",
+  "source_sha256": "791b457b1280c3d96c0297d5c657a8eba70463847122c5da591803e960147199"
+}

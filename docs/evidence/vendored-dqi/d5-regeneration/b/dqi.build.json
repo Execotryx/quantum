@@ -1,0 +1,206 @@
+{
+  "scope": "Full candidate build; verification is a separate step",
+  "baseline_sha256": "835414f51eff796282be942f86e0f479901597c144481653eed63402cb6e4ea0",
+  "patches": [
+    {
+      "path": "/mnt/e/sources/python/quantum/third_party/dqi-d5/src/round13/extraction/norm_guard_scaling.py",
+      "sha256": "4b51bb7ebadf69f18f4537a6a07d598549d5e537d027657356edb36651537abc",
+      "installation_result": {
+        "scalar_zero_test_width": 6,
+        "expected_saving_per_cache": 12,
+        "phase_scaling_patched": true
+      }
+    },
+    {
+      "path": "/mnt/e/sources/python/quantum/third_party/dqi-d5/src/round13/phase/top_quotient.py",
+      "sha256": "8b98cc062dd069f7be1a00734f69e4e6cfa0a7a4a68d81c5bd5ddcc09c1d2afd",
+      "installation_result": null
+    },
+    {
+      "path": "/mnt/e/sources/python/quantum/third_party/dqi-d5/src/round13/conversion/banded_conversion.py",
+      "sha256": "2e6372495e15c4e6d24e36d43277f5b672240b092bc1c3d9addabac45f237925",
+      "installation_result": null
+    },
+    {
+      "path": "/mnt/e/sources/python/quantum/third_party/dqi-d5/src/improvements/conversion/gap_polynomial_conversion.py",
+      "sha256": "b71f719ee78ae8b738ba1a202f0bae91966ec47c52aba63acfd831353fb5067e",
+      "installation_result": null
+    },
+    {
+      "path": "/mnt/e/sources/python/quantum/third_party/dqi-d5/src/improvements/phase/encoded_gap.py",
+      "sha256": "629992f089f12b726287ec97397e678aac2290e1b84b97fed7073a5443153294",
+      "installation_result": null
+    },
+    {
+      "path": "/mnt/e/sources/python/quantum/third_party/dqi-d5/src/improvements/extraction/extraction_improvements.py",
+      "sha256": "cc8b88ddd36ee29f567ef16d0ab884d0b7ff6359ffb62ec404d02543660d4004",
+      "installation_result": {
+        "compact_h_filter": true,
+        "specialized_gold_self_products": true,
+        "reused_top_update_word": true
+      }
+    },
+    {
+      "path": "/mnt/e/sources/python/quantum/third_party/dqi-d5/src/improvements/root/fast_mask_projection.py",
+      "sha256": "e461e8d4350c0bc621ba60e118052f3a11d89745b810951a92af94292aa1e568",
+      "installation_result": {
+        "mask_projection": "exact sparse mixed-radix4095 DFT",
+        "radices": [
+          3,
+          3,
+          5,
+          7,
+          13
+        ],
+        "changes_quantum_arithmetic": false
+      }
+    }
+  ],
+  "recipe": {
+    "history": 10,
+    "threshold": 16,
+    "replan": true,
+    "compact": true,
+    "own_reused": true,
+    "stage_policy": [
+      [
+        0,
+        "own"
+      ],
+      [
+        2,
+        "own"
+      ],
+      [
+        4,
+        "own"
+      ],
+      [
+        6,
+        "own"
+      ],
+      [
+        8,
+        "own"
+      ],
+      [
+        10,
+        "own"
+      ],
+      [
+        12,
+        "own"
+      ],
+      [
+        14,
+        "own"
+      ],
+      [
+        16,
+        "own"
+      ],
+      [
+        18,
+        "own"
+      ],
+      [
+        20,
+        "own"
+      ],
+      [
+        22,
+        "own"
+      ],
+      [
+        24,
+        "own"
+      ],
+      [
+        26,
+        "own"
+      ],
+      [
+        28,
+        "own"
+      ],
+      [
+        30,
+        "own"
+      ],
+      [
+        32,
+        "single"
+      ],
+      [
+        33,
+        "own"
+      ]
+    ]
+  },
+  "num_qubits": 880,
+  "num_bits": 148273,
+  "static_toffolis": 906693,
+  "num_ops": 75019313,
+  "stages": [
+    {
+      "boundary": "initialization",
+      "toffolis_cumulative": 0,
+      "toffolis_since_previous": 0,
+      "peak_qubits": 840,
+      "live_qubits": 850,
+      "ops_cumulative": 3595172,
+      "elapsed_seconds": 19.341303178999965
+    },
+    {
+      "boundary": "moment_to_fraction",
+      "toffolis_cumulative": 292686,
+      "toffolis_since_previous": 292686,
+      "peak_qubits": 878,
+      "live_qubits": 850,
+      "ops_cumulative": 18144769,
+      "elapsed_seconds": 40.982237741000006
+    },
+    {
+      "boundary": "fraction_to_polynomials",
+      "toffolis_cumulative": 355310,
+      "toffolis_since_previous": 62624,
+      "peak_qubits": 878,
+      "live_qubits": 850,
+      "ops_cumulative": 23430794,
+      "elapsed_seconds": 48.24543799899999
+    },
+    {
+      "boundary": "phase_correction",
+      "toffolis_cumulative": 551383,
+      "toffolis_since_previous": 196073,
+      "peak_qubits": 880,
+      "live_qubits": 850,
+      "ops_cumulative": 55183688,
+      "elapsed_seconds": 60.286989690999974
+    },
+    {
+      "boundary": "polynomials_to_fraction",
+      "toffolis_cumulative": 614007,
+      "toffolis_since_previous": 62624,
+      "peak_qubits": 880,
+      "live_qubits": 850,
+      "ops_cumulative": 60469713,
+      "elapsed_seconds": 68.26361247400001
+    },
+    {
+      "boundary": "fraction_to_moments",
+      "toffolis_cumulative": 906693,
+      "toffolis_since_previous": 292686,
+      "peak_qubits": 880,
+      "live_qubits": 840,
+      "ops_cumulative": 75019313,
+      "elapsed_seconds": 91.29131564400001
+    }
+  ],
+  "phase_arithmetic": null,
+  "build_seconds": 92.42137765199999,
+  "path": "/mnt/e/sources/python/quantum/runs/open-circuits-20261114/d5-build-b/dqi.kmb",
+  "sha256": "e8083195cec294f2adde9f1b991bcc348233f549a49e5083ac25a12d0777385b",
+  "bytes": 722541720,
+  "elapsed_seconds": 103.80853156400002
+}

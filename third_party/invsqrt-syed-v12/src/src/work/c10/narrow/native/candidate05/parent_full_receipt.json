@@ -1,0 +1,20 @@
+{
+  "status": "PARENT_ACCEPTED_COMPLETE_NATIVE05_PROOF_NOT_OFFICIAL",
+  "checked_source_and_input_pins": 79,
+  "circuit_sha256": "2abfa873b6d495398e4429250423e2c8eb8eda1c735b7401d45bf4c16fff4cbe",
+  "native_proof_sha256": "785794a93762eb35a5ea4d7355752e522e9cfb8ea4dfa98b174058b3154622f0",
+  "native_build_sha256": "88ed8deabec782691184b1b89943c98dd3d7a1cd9653027492b22625a31f106c",
+  "quantize50_sha256": "8670515091475959ab0edeae03cb736cdb1cb66cd7768366e69fafb7eff8bf72",
+  "proved_inputs": 3133452,
+  "chunks": 48,
+  "every_HMR_transcript": true,
+  "HMR_variables": 1298,
+  "exact_margin_units64": 124372027,
+  "Q": 49,
+  "expected_Toffolis": 1560.5,
+  "T": 4,
+  "R": 34,
+  "rotation_charge": 238.04838838550535,
+  "predicted_complete_cost": 88177.87103088977,
+  "all_four_original_salts_pending": true
+}

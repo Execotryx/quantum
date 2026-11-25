@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "/workspace/scratch/e5e4bb56acc7/controller_work/after_v3/blocks/v5_cubic_phase20/check_cubic_trace_quotient20.py",
+    "--per-source",
+    "64",
+    "--output",
+    "controller_work/after_v3/blocks/v5_cubic_phase20/runs/cubic20-full"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794396891.1518307,
+  "rss_soft": 2500000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 52727808,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 8,
+  "elapsed_seconds": 1.84761381149292,
+  "current_rss": 39264256,
+  "available_bytes": 9393135616,
+  "exit_code": 0
+}

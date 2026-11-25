@@ -1,0 +1,141 @@
+{
+  "status": "PASS_INDEPENDENT_READ_ONLY_SOURCE_REVIEW_NO_NATIVE_EXECUTION",
+  "reviewer": "/root/consumed_root",
+  "source_pins": {
+    "PAPER_GATE_RECEIPT_022_VARIANT.json": "f8cfe4331b37a5184a4aab17ee85b4ac892c08c2cfb863fc4b1c1b3c9978262e",
+    "research/combined_q48_ring26/COMPLETE_GATE.json": "49ce6e7007b19abcd533b82a9f291b617cbc1c864a3d66287c0e63a87ebb82c4",
+    "research/ring26_phase/COMPLETE_GATE_RING26_ZERO33.json": "b579924175ee8e73c61c2f945b2d85e8ba2e536a8dbd8288a8332628142cd569",
+    "research/ring26_phase/frozen/global_zero33.json": "c0eab1edd234e32d5baa1a51a0fec46abf82165d3973ffda825d2149f67f11e5",
+    "research/ring26_phase/basis.json": "a3bacdd5ef8e16acb8560a40e60e2c998f8171973b1dcc062a47503c5218d744",
+    "native/candidate07/phase07.py": "c200e2f9749e3a89adc17ad9837005e0a28e794622e5fbece3551275f1de8f20",
+    "native/candidate07/oracle50.py": "df311f0844c7cf72c7dedeff891442ad9da6f88cb727a724c832a3611684e3ff",
+    "native/candidate07/prove50.py": "d079cefb01fa88581cf279e99590ad74610551861658f5fef65ff9071650216e",
+    "native/candidate07/tables07.py": "3834990b7546026372722abc5fefb24fb4effd889dfd29743353a174753ea88e",
+    "native/candidate07/tables07_static_audit.json": "c433c64c5f1f286709d9c1c28115b001294912e5c336757552dc4dca9d8ca400",
+    "native/candidate01/whole_model.py": "740b3530990003de29fc3a29726c1ac7f97aa29467fc14fd7608f5c5f58bfca4",
+    "native/candidate01/whole_text_symbolic.py": "5c8ac00c902d6d202bf2cb1cde47a8014047482876e356a0741c11c85e171220",
+    "native/candidate01/divider.py": "d0dbaf6fe4227da988c9cb9e9dee847624992c7c5cce7ab347990d5b0a116c05",
+    "native/candidate06/lifecycle06.py": "0e38bf25ef639106608b7fb70e863aed75f0fcc82fca9a98e8e94cec905ea8aa",
+    "native/candidate06/decoder06.py": "9fb7e197e85e343131b200e9ee0c081437b83b6824c615431ba9627d3b67417c",
+    "native/candidate06/tables06.py": "f0eef9c8905b0d4e9c20bb286b33d526c0cf0f27ea4bb619c066ea7ed58a690b",
+    "native/candidate06/phase06.py": "4e979c47bc90317a6ac3576bc74964cf74222c2006e1630f6b17075af51ccdfb",
+    "native/candidate07/variant.py": "2b14bea6fcedfa772daf3f5b9c5176e3434fe23ed90b8300d586bd230711f616",
+    "native/candidate07/generate.py": "f29a6c89a0372302854c8a6c2662db34cb44e856743f9fc711c9ba2aa269cca1",
+    "native/candidate07/run_batch.py": "906d64eed736a3d7a1d495bfea4f9f5882fcd849a67b721c2b0855c97670ba52"
+  },
+  "inherited_complete_gate_source_pins_checked": 292,
+  "table_static_audit_source_pins_checked": 13,
+  "AST_parsed_without_import": [
+    "phase07.py",
+    "oracle50.py",
+    "prove50.py",
+    "tables07.py",
+    "variant.py",
+    "generate.py",
+    "run_batch.py"
+  ],
+  "blocking_findings": [],
+  "phase_review": {
+    "entry_exit_owners": 43,
+    "peak_owners": 48,
+    "word": "25 flipped signs sigma36..sigma12 followed by one; original27 low one is omitted",
+    "u11_u12_untouched_by_word": true,
+    "route_centres": [
+      0,
+      -2,
+      -6,
+      0,
+      -1
+    ],
+    "route_independent_of_candidate05_mutated_centres": true,
+    "swaps_each_direction": 61,
+    "old27_omitted_swap_credit_used": false,
+    "expected_endpoint_Toffolis": 139,
+    "generic_rotations": 33,
+    "fixed_T": 4,
+    "fixed_direct_Clifford_Z_POW": 1,
+    "identity_global_site_explicit_and_not_emitted": true,
+    "local_HMR_functions_repaid_before_return": 15,
+    "new_deferred_TableDebts_or_CarryDebts": 0,
+    "alias_frame_and_all_control_frames_restored": true
+  },
+  "oracle_review": {
+    "arithmetic_model_loaded_by_explicit_path_and_unique_module_name": true,
+    "old_candidate04_oracle_used": false,
+    "arithmetic_and_new_phase_are_separate": true,
+    "old27_phase_inverted_to_P27_with_low_and_top_one_checks": true,
+    "new_word_relation": "W=P27>>1, r=ROL26(W,k), w=W>>(26-k)",
+    "new_baseline": "2*r + 2^27*(r mod 2^k) + 1 = 2*W*2^k + 2*w + 1",
+    "old_to_new_baseline_difference": "w+1-2^k",
+    "direct_new_features_equal_scaled_baseline_plus_delta_modulo_2pow50": true,
+    "fixed_overflow_j7_j8_j9_terms_retained": true,
+    "global_coefficient_zero": true,
+    "integer_magnitudes_fit_signed64": true,
+    "expected_full_phase50_sha256": "8bd482a8957cd387a2b212afdaca656947b7f89c983d67ff4eea4e14c3b0a26a"
+  },
+  "proof_review": {
+    "unique_local_new_oracle_binding": true,
+    "pinned_original_generic_symbolic_checker": true,
+    "checker_semantic_change_only_expected_modulus_2pow50": true,
+    "positive_selftests": 5,
+    "negative_selftests": 9,
+    "old37_units_and_noncanonical50_units_rejected": true,
+    "input_interval": [
+      1,
+      3133453
+    ],
+    "inputs": 3133452,
+    "all_HMR_transcripts_checked_symbolically": true,
+    "fractional_phase_HMR_independence_checked": true,
+    "restored_original_input_scratch_zero_resets_zero_checked": true,
+    "fresh_full_native_phase_digest_must_equal_new_frozen_fit": true,
+    "only_explicit_SymbolicLimitError_splits_chunks": true,
+    "circuit_build_gate_and_accuracy_hashes_cross_checked": true,
+    "native_Q_Toff_T_R_checked": [
+      48,
+      1584,
+      4,
+      33
+    ],
+    "old_whole_proof_relabelled": false
+  },
+  "table_lifecycle_review": {
+    "shared_TableDebts_and_cleanup_module_identity": true,
+    "lifecycle06_and_decoder06_unchanged": true,
+    "first_loader_E": 61,
+    "second_loader_E": 79,
+    "second_loader_HMR_functions": 65,
+    "second_fixed_address_slots": [
+      3,
+      5,
+      6
+    ],
+    "second_consumed_address_slots": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "second_new_zero_owners": 17,
+    "second_work_cap": 21,
+    "second_loader_return_owners": 43,
+    "early_four_outcomes_TableDebts_only": true,
+    "only_late_a6_direct_decoder_Z": true,
+    "full_lifecycle_E": 562
+  },
+  "complete_expected_gate": {
+    "Q": 48,
+    "Toffolis": 1584,
+    "T": 4,
+    "R": 33,
+    "rotation_charge": 230.84805946161188,
+    "cost": 87160.70685415737,
+    "minimum_margin_units64": 124370688
+  },
+  "scope": "Independent human-readable source/phase/ownership/schema review plus AST/hash checks. No emitter, model scan, checker self-test, simulator or native proof executed by this review.",
+  "native_modules_imported": false,
+  "native_circuit_emitted": false,
+  "native_proof_run": false,
+  "official_verifier_run": false,
+  "no_submission": true
+}

@@ -1,0 +1,117 @@
+{
+  "status": "SOURCE_READY_PARENT_QUEUE_ONLY_NO_EXECUTION",
+  "files": [
+    {
+      "path": "adaptive_loader_v2.py",
+      "bytes": 10054,
+      "sha256": "449baf2429a0c93be220cc5c706e29820f6c70c03d66fd7ac62d66099c3ffaf7"
+    },
+    {
+      "path": "replay_loader_v2.py",
+      "bytes": 6824,
+      "sha256": "76b62776cc9d28b9e9facec349e38c2076ee64459cc595ca0443c30ee53b3800"
+    },
+    {
+      "path": "input_retiring_loader.py",
+      "bytes": 10810,
+      "sha256": "6a7652cf14f559c575db451b431a6e2096e1abc8bd55154ea199e9bb4a076959"
+    },
+    {
+      "path": "target_seed_loader.py",
+      "bytes": 8352,
+      "sha256": "55f4d36febbbf82b382ae66252426869958b11f9e8a6f82b7b2812a0c71b0dbc"
+    },
+    {
+      "path": "replay_adaptive_loader.py",
+      "bytes": 7541,
+      "sha256": "20c6117da43cf750843ad1028eab9cbf9561ab69b335a8731c3805e52cc945b0"
+    },
+    {
+      "path": "adaptive_product_bank.py",
+      "bytes": 13287,
+      "sha256": "d34fc08537c856d5a50655eea48db2cc6e0ffc430256cebb678605937c49f54f"
+    },
+    {
+      "path": "subspace_frontier.py",
+      "bytes": 13942,
+      "sha256": "55e248695d0c7992f1b971fcd1edea6d237e96eb66f5f06e355188f29c4a366f"
+    },
+    {
+      "path": "bank_frontier.py",
+      "bytes": 9725,
+      "sha256": "c9c022d6e221aca5521f033466c9cf12b7d68b4b35984a3f8330c08fbab29d03"
+    },
+    {
+      "path": "atomic_io.py",
+      "bytes": 402,
+      "sha256": "d14b9399c4db60e39894f5661b7d775fe9ecc76eedc701046b8e4eb6bf64d7df"
+    },
+    {
+      "path": "inputs/codebook.py",
+      "bytes": 20870,
+      "sha256": "9c6073d78becea467d37805131fdcc572e530c72acef5664b08057ef883f17be"
+    },
+    {
+      "path": "inputs/phasefit_z1_K7_G4_m37_virtual_quadS2_36_12c0.json",
+      "bytes": 474447,
+      "sha256": "24fff823faa911afe93d02afc3ded0bbd156a210a85f1265c989a087f8fd1219"
+    },
+    {
+      "path": "phase_bank7_seed0.json",
+      "bytes": 1646,
+      "sha256": "34b23c05ae3c22122c8e0d37442f10132a91c53e32d0388cae9448adf7e78f28"
+    },
+    {
+      "path": "random_product_subspace.cpp",
+      "bytes": 1990,
+      "sha256": "57c3db6badb971daa6489dadd3c1b0c0318958445e37c715163bc14cf1a6f8c3"
+    },
+    {
+      "path": "random_product_subspace.bin",
+      "bytes": 21880,
+      "sha256": "d7a1a2142e76ac0c8442729cfaa761601e6c3f45a519901829beaff1921d8094"
+    },
+    {
+      "path": "frozen/retained_table_cleanup9.json",
+      "bytes": 228186,
+      "sha256": "6a48b472433918d2c51f30e6eeb1d9933fdf1aa4ae9f83b93129fd8ac103b6b5"
+    },
+    {
+      "path": "../quantized_producer/framed_retained5_best21_snapshot.json",
+      "bytes": 27402,
+      "sha256": "3b6fa7059bee77bb9abe6c7395cd8ff2f2899843523188c60d513e6c5d381def"
+    },
+    {
+      "path": "../../native/candidate01/lifecycle.py",
+      "bytes": 15973,
+      "sha256": "47b73f1f24ea027eedcbd1950cde7fc2535b32afeeb2e366ebdc4b6f1eb3c068"
+    },
+    {
+      "path": "../../native/candidate01/root_decode.py",
+      "bytes": 1591,
+      "sha256": "cce7cdba0fa3afd537366af3c40d803569c5a7d99d28ba10fa46f3e8bd0d5537"
+    },
+    {
+      "path": "run_loader_followup003.py",
+      "bytes": 6286,
+      "sha256": "20915a226a437aebc8638cc12b315cef49871c16a3429dcce194544da7f3f27a"
+    },
+    {
+      "path": "FOLLOWUP003_PLAN.md",
+      "bytes": 3571,
+      "sha256": "8b3a6839e912d6bf14ce6d0671bd90109954ea77cf03b18484a1abd38ccb6539"
+    },
+    {
+      "path": "search/v2_first_q48_cap22_s8.json",
+      "bytes": 357651,
+      "sha256": "722578071128eccef2e33f4d99d5e073ea84d260281584f6451c7f73cb68653a"
+    }
+  ],
+  "global_hard_seconds": 90,
+  "worker_AS_MiB": 128,
+  "batch_AS_MiB": 512,
+  "three_sequential_jobs": true,
+  "native_execution": false,
+  "resume_prefix_immutable": true,
+  "syntax_checked_without_import": true
+}

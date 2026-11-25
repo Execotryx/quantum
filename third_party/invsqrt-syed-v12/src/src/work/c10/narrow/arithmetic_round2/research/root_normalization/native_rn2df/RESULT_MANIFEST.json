@@ -1,0 +1,80 @@
+{
+  "status": "NATIVE_COMPONENT_COMPLETE_NOT_FULL_FUSION_QUALIFICATION",
+  "component": "RN2-D/F normalization94.75",
+  "utc": "2026-11-12T05:08:24.828817+00:00",
+  "actual_native_local_Q": 46,
+  "exact_native_expected_Toffolis_roundtrip": 94.75,
+  "every_active_HMR_transcript_proved": true,
+  "all_original_inputs_covered": 3133452,
+  "negative_helper_phase_omission_rejected": true,
+  "source_ready_sha256": "db30d9244f206325ddf310f2955488680672a2b94938ff2b801874e7d761ba23",
+  "native_proof_sha256": "f8289e3010b6e520dc2f8445f7f8467ca26085f9f69da53e2bea28135627a0cf",
+  "guard_sha256": "6dcf07eea41bed863df2cdaa574d7bfea433f92fe7e9846e6419cc66bb35f181",
+  "files": [
+    {
+      "path": "INPUTS.json",
+      "bytes": 67264,
+      "sha256": "ba144ac21432fbfd77c96dfb0c5c995048e675bd75ccfc161a87bf9180be6217"
+    },
+    {
+      "path": "NATIVE_PROOF.json",
+      "bytes": 12611,
+      "sha256": "f8289e3010b6e520dc2f8445f7f8467ca26085f9f69da53e2bea28135627a0cf"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1248,
+      "sha256": "8c7024d95ac6dcdd46946a98f6ea914e0656736c8fac57b16dcb9430e394f6c7"
+    },
+    {
+      "path": "SOURCE_READY.json",
+      "bytes": 920,
+      "sha256": "db30d9244f206325ddf310f2955488680672a2b94938ff2b801874e7d761ba23"
+    },
+    {
+      "path": "guard.json",
+      "bytes": 3242,
+      "sha256": "6dcf07eea41bed863df2cdaa574d7bfea433f92fe7e9846e6419cc66bb35f181"
+    },
+    {
+      "path": "negative_omitted_helper_fix.kmx",
+      "bytes": 10920,
+      "sha256": "00f3151164169c31d5ecbcff582aec965e901fc46c088a0979cf47068f00856f"
+    },
+    {
+      "path": "normalization9475.py",
+      "bytes": 8896,
+      "sha256": "95d6e2ac6ae838459310e77b5f05c3a77c8ee29b37e622888769dd8a83fefc81"
+    },
+    {
+      "path": "normalization9475_forward.kmb",
+      "bytes": 5770,
+      "sha256": "e745204ea4a0a1a2059f5b18563b55f58f1d65d153d8b02e256a736b8fd31a1c"
+    },
+    {
+      "path": "normalization9475_forward.kmx",
+      "bytes": 7779,
+      "sha256": "767af8ef0833a430d01a28c1b5327f4c9372223ac74a97e2972e2d345bc9520c"
+    },
+    {
+      "path": "normalization9475_roundtrip.kmb",
+      "bytes": 8013,
+      "sha256": "66166ce9cdba28c4c344239aa35fce3d267a588ed9342691913d62f62fded8e1"
+    },
+    {
+      "path": "normalization9475_roundtrip.kmx",
+      "bytes": 10931,
+      "sha256": "9388a8012d59fae0d13f85946eafc6dbde997ae9ad60b06282844ca584b4f39a"
+    },
+    {
+      "path": "prove_normalization9475.py",
+      "bytes": 9214,
+      "sha256": "c957c07bc5992d416cb97236461b7c1084cc527389bf9f0f343d3b019d341d59"
+    },
+    {
+      "path": "run.log",
+      "bytes": 3156,
+      "sha256": "0c42a07e6493d2d55661c80280ad4e2e101568d55d7300d1f42d459885c742e6"
+    }
+  ]
+}

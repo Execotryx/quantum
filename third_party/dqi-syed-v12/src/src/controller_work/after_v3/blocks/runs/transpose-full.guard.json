@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "/workspace/scratch/e5e4bb56acc7/controller_work/after_v3/blocks/check_transpose_retained.py",
+    "--output",
+    "controller_work/after_v3/blocks/runs/transpose-full"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794391883.5187542,
+  "rss_soft": 3000000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 45563904,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 20,
+  "elapsed_seconds": 66.36191272735596,
+  "current_rss": 39497728,
+  "available_bytes": 9604947968,
+  "exit_code": 0
+}

@@ -1,0 +1,223 @@
+{
+  "bank_member_record_sha256": "1e2ab08fb1637505069413a9aab1e70a9492e4ac1b56c1089c9777cc5705a920",
+  "cloud_stages": {
+    "collapse-fusion": {
+      "cloud_receipt_archive_sha256": "90a3fc44a1b2b75af3c3785ebfbb119bde0dfcc8187811a2b2a9c76748268621",
+      "run_log_sha256": "dd6a7867f1812a2d87c6d66de7609384b131ee9345b05544dc7b7cf7335a0e5e",
+      "staged_file_sha256": {
+        "launch.sh": "4db2f6ef1e650eea0193b5144df2ebfcf3b8122b374fd499e1501bd5c37c34a2",
+        "source.tar.gz": "cb563573e1fd1d221b8d0ac16e198e41efaf04e6b44919fa79e69ed891f9660b"
+      },
+      "vm_stop_sha256": "a49a17b6e2fcda75da8251701c9649c8e63142c2bc8653c0f32ac2598e3d9509"
+    },
+    "degree31-live-route": {
+      "cloud_receipt_archive_sha256": "52666d81e47eebcc71a7cb796a115bf86016dba5a25c89f438c00432b7eb660a",
+      "run_log_sha256": "7bf4ff77daa2b24b06669f327a0a43900b611e7547cf3372b474f0c9b8f773af",
+      "staged_file_sha256": {
+        "launch.sh": "5f9ebf7f50f798f9c230f2795d82d5fd30132dba0c446a04dc361973700956ef",
+        "source.tar.gz": "cecefdc8e7d38ce55a76f479dcc1fb1896e3a82059699c919792c44731c801b9"
+      },
+      "vm_stop_sha256": "b03bb00c8fafad15f12563a1b5010438f7f41fc26bb6bd611d020b908121205d"
+    },
+    "incoming-pole-scratch": {
+      "cloud_receipt_archive_sha256": "52a28128162a453bce5a4d6eddcf25aee09f94ca8e0b49f36d3788431e580f27",
+      "run_log_sha256": "edd055d6d05be0bceeefdfb4430654728d5e14946725c1524441de78a326343f",
+      "staged_file_sha256": {
+        "launch.sh": "ccb46bb7f9a6ae5e95edaaac9843b6855d38452b9c812e7afe5c0cb306030b13",
+        "source.tar.gz": "21499aa9ed1791c4fe01d9347ca00271b29b89a50b2a545bff0221698fd651f4"
+      },
+      "vm_stop_sha256": "deb82ab495447431bbe21ece0a670855afe2a9a80c7cfdc380e1a2640c6c2810"
+    },
+    "regular-tail-determinant": {
+      "cloud_receipt_archive_sha256": "a55fc2d7e362319d54d3bf2eebb803dc4cc1991c8093d206eaf4ac735579a918",
+      "run_log_sha256": "b17817aec7d21856da5f7ce314946c55dd37c06f3e99baf57307b6a24ef58c72",
+      "staged_file_sha256": {
+        "launch.sh": "64ddf688bf963b6c2d827283e4f4815a2f5169a29fd8536d1a72d4fcdd9e13a9",
+        "source.tar.gz": "1f7df44a33f5731b04b105b3e86009ae524b502b0006c9f42bf8f1cf8a711198"
+      },
+      "vm_stop_sha256": "31bd1d6da80a5575761a26265aa9d29509d9e3063f2ba572d0523305f2b7f504"
+    },
+    "tail-early-gate": {
+      "cloud_receipt_archive_sha256": "a80712cf49d2f1b0c09de140488cf936716c3b2f66b7ab50bfc6ab24ad3838e9",
+      "run_log_sha256": "5e49f7257a97b31bd88950ad81497d87409b23fa1078f9bdf68da6d4cf9caab4",
+      "staged_file_sha256": {
+        "launch.sh": "dc257b723ed71f0c82d96890e26ba1f3954bf62d0507bbfb6c74ea6d65d88402",
+        "source.tar.gz": "a5c483fbf38fd1d2731ab443a176b320b381ddb96d744e0f2a57333da9edebae"
+      },
+      "vm_stop_sha256": "483e7686402a641101cab8a5bcb79ce6dcf22573acf10b7f257580a7ee44f80f"
+    }
+  },
+  "current_source_preflight": {
+    "cloud_receipt_archive_sha256": "2582ebb6f59bfc766b827e253bd6306d9664c94acee669b4c51517100306ded8",
+    "passed_tests": 4,
+    "results": {
+      "fixed_degree31": {
+        "disposition": "captured chart and degree fixed at construction",
+        "gate_ceiling": 409551.2449745362,
+        "gate_overage": -6044.744974536181,
+        "maximum_observed_executed_mean": 403506.5,
+        "price_screen_passed": true,
+        "qubits": 920
+      },
+      "incoming_s6": {
+        "disposition": "separate incoming route above price ceiling",
+        "gate_ceiling": 393144.96733824804,
+        "gate_overage": 29233.53266175196,
+        "maximum_observed_executed_mean": 422378.5,
+        "price_screen_passed": false,
+        "qubits": 939
+      },
+      "incoming_s7": {
+        "disposition": "separate incoming route above price ceiling",
+        "gate_ceiling": 392308.93361979106,
+        "gate_overage": 39682.81638020894,
+        "maximum_observed_executed_mean": 431991.75,
+        "price_screen_passed": false,
+        "qubits": 940
+      },
+      "live_degree31": {
+        "disposition": "separate guarded route above price ceiling",
+        "gate_ceiling": 404261.0798978017,
+        "gate_overage": 5669.920102198317,
+        "maximum_observed_executed_mean": 409931.0,
+        "price_screen_passed": false,
+        "qubits": 926
+      }
+    },
+    "run_log_sha256": "9e4cf07c336a268e865fd913b027c22164e21bd329f8e9d156e5cd9ba39745a5",
+    "staged_file_sha256": {
+      "launch.sh": "604396badfdba0cff2d063c9d5eae5bd8ae478ed0e77bf10e8976cfe96a7bf42",
+      "source.tar.gz": "448b490dd81941d71a515788ff19e5645dd6047d9476408ec46c43476b2e9572"
+    },
+    "vm_stop_sha256": "11a234b57d21ef1d0ba4809bb5b99371469aaf9336b6d5d8ff748017d719d86d"
+  },
+  "disposition": "retain_banked_d4_for_measured_candidates",
+  "full_cloud_receipt_archive_sha256": "422d174ad5442fbb8925f4d9c9bc6a1013f7e9e3ad4579ccc3953eead2d5e187",
+  "full_cloud_registration_sha256": "e915b6bf22544acb34d9ef23dcfab9736e2a00ddb5cc95a749568d91e2952a16",
+  "lanes": {
+    "fixed_degree31": {
+      "gate_ceiling": 409551.2449745361,
+      "gate_overage": 5984.255025463877,
+      "maximum_observed_executed_mean": 415535.5,
+      "qubits": 920,
+      "scope": "captured degree-31 chart",
+      "stage": "degree31-live-route"
+    },
+    "homogeneous_1_7": {
+      "gate_ceiling": 424176.929656844,
+      "gate_overage": 5971.632843155996,
+      "matched_sha256": "2e8e768f3db1bc0936fca68fbca7a4fc5b7583672e4630ee4c4b8fc1e14468ed",
+      "maximum_observed_executed_mean": 430148.5625,
+      "qubits": 904,
+      "remaining_historical_phase_shot": 45440,
+      "scope": "matched historical batches"
+    },
+    "incoming_s6": {
+      "gate_ceiling": 393144.96733824804,
+      "gate_overage": 40709.03266175196,
+      "maximum_observed_executed_mean": 433854.0,
+      "qubits": 939,
+      "scope": "separate degree-32 pole route",
+      "stage": "incoming-pole-scratch"
+    },
+    "incoming_s7": {
+      "gate_ceiling": 392308.93361979106,
+      "gate_overage": 51483.81638020894,
+      "maximum_observed_executed_mean": 443792.75,
+      "qubits": 940,
+      "scope": "separate degree-33 pole route",
+      "stage": "incoming-pole-scratch"
+    },
+    "live_degree31": {
+      "gate_ceiling": 404261.07989780174,
+      "gate_overage": 17544.086768864945,
+      "maximum_observed_executed_mean": 421805.1666666667,
+      "qubits": 926,
+      "scope": "guarded degree-31 chart",
+      "stage": "degree31-live-route"
+    },
+    "marked_full_weight": {
+      "gate_ceiling": 339142.0132708822,
+      "gate_overage": 155987.16319970606,
+      "maximum_observed_executed_mean": 495129.17647058825,
+      "qubits": 1011,
+      "scope": "shared probe with explicit rejected-input wire",
+      "stage": "tail-early-gate"
+    },
+    "regular_full_weight": {
+      "gate_ceiling": 321109.2454398269,
+      "gate_overage": 170508.51926605543,
+      "maximum_observed_executed_mean": 491617.76470588235,
+      "qubits": 1039,
+      "scope": "shared probe with regular full-weight tail",
+      "stage": "regular-tail-determinant"
+    },
+    "shared_fused": {
+      "gate_ceiling": 368417.65729243,
+      "gate_overage": 100170.88116910844,
+      "maximum_observed_executed_mean": 468588.53846153844,
+      "qubits": 970,
+      "scope": "shared captured-input probe",
+      "stage": "collapse-fusion"
+    }
+  },
+  "marked_width_ceiling_at_observed_mean": 836,
+  "pooled_reference": {
+    "banked": {
+      "circuit_sha256": "53d8b2edf251e2a0c54c401a97d1396c7ed309e1cbfaab8d54a2c99a11ed6552",
+      "cost": 414840001725.7007,
+      "failures_by_salt": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "maximum_executed_mean": 430823.1373828125,
+      "passes": 8,
+      "phase_errors": 0,
+      "priced_failures": 1,
+      "qubits": 897,
+      "repetition_factor": 1.1967314991687559,
+      "summary_sha256": "bdf2b3a15a237b8784fc17a994db18d16bf13d8f7c57f57c3a476b621bfbc061",
+      "total_failures": 0,
+      "upper_error_rate": 0.0009104197583220583,
+      "value_errors": 0,
+      "verified_shots": 819200
+    },
+    "candidate": {
+      "circuit_sha256": "a44bdf032e965707cc1d07228258eb07786f9d1b07e094a5d90d1f2fb4b4bff5",
+      "cost": 63747071243053.88,
+      "failures_by_salt": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0
+      ],
+      "maximum_executed_mean": 3198381.94234375,
+      "passes": 8,
+      "phase_errors": 0,
+      "priced_failures": 1,
+      "qubits": 4081,
+      "repetition_factor": 1.1967314991687559,
+      "summary_sha256": "a640ea7c548b70c56a9b4f3291359f780106e152e1baf415a10e8d4845044190",
+      "total_failures": 2,
+      "upper_error_rate": 0.0009104197583220583,
+      "value_errors": 2,
+      "verified_shots": 819200
+    }
+  },
+  "residual_matched_sha256": "73ea4c28f60f9aa7f4c3b559366424283d23f23118dfd518d765bfcefa255e96",
+  "unresolved": [
+    "mixed full-weight exact phase",
+    "qualification at the priced resource gate",
+    "new candidate matched and full pooled verification"
+  ]
+}

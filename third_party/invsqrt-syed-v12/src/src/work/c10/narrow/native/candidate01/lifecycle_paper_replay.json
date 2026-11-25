@@ -1,0 +1,96 @@
+{
+  "status": "PASS_ACTUAL_EMITTER_SOURCE_COUNTER_NOT_NATIVE",
+  "expected_E": 543.5,
+  "peak": 49,
+  "final_live": 26,
+  "cut_counts": {
+    "body_entry": 0.0,
+    "first_table": 60.0,
+    "first_coefficient": 104.0,
+    "first_metadata_retired": 105.0,
+    "seed_ready": 116.0,
+    "signed_product15": 219.0,
+    "coefficient_retired_for_divider": 219.0,
+    "divider_return": 219.0,
+    "second_table": 292.0,
+    "second_coefficient": 336.0,
+    "second_metadata_retired": 336.0,
+    "inverse_product_data": 336.0,
+    "seed_cleared": 468.5,
+    "coefficient_sources_restored": 471.5,
+    "A_restored": 512.5,
+    "raw_root_restored": 534.5,
+    "body_return": 543.5
+  },
+  "trace": [
+    {
+      "label": "body_entry",
+      "live_owners": 26
+    },
+    {
+      "label": "first_table",
+      "live_owners": 42
+    },
+    {
+      "label": "first_coefficient",
+      "live_owners": 45
+    },
+    {
+      "label": "first_metadata_retired",
+      "live_owners": 39
+    },
+    {
+      "label": "seed_ready",
+      "live_owners": 45
+    },
+    {
+      "label": "signed_product15",
+      "live_owners": 44
+    },
+    {
+      "label": "coefficient_retired_for_divider",
+      "live_owners": 31
+    },
+    {
+      "label": "divider_return",
+      "live_owners": 31
+    },
+    {
+      "label": "second_table",
+      "live_owners": 47
+    },
+    {
+      "label": "second_coefficient",
+      "live_owners": 45
+    },
+    {
+      "label": "second_metadata_retired",
+      "live_owners": 43
+    },
+    {
+      "label": "inverse_product_data",
+      "live_owners": 44
+    },
+    {
+      "label": "seed_cleared",
+      "live_owners": 38
+    },
+    {
+      "label": "coefficient_sources_restored",
+      "live_owners": 40
+    },
+    {
+      "label": "A_restored",
+      "live_owners": 39
+    },
+    {
+      "label": "raw_root_restored",
+      "live_owners": 44
+    },
+    {
+      "label": "body_return",
+      "live_owners": 26
+    }
+  ],
+  "source_sha256": "47b73f1f24ea027eedcbd1950cde7fc2535b32afeeb2e366ebdc4b6f1eb3c068"
+}

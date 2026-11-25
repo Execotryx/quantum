@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "controller_work/after_v3/k24/adaptive_gauge_v2/check_adaptive_gauge64_v2.py",
+    "--output",
+    "controller_work/after_v3/k24/adaptive_gauge_v2/runs/full",
+    "--batch-size",
+    "80"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794410247.05869,
+  "rss_soft": 3000000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 401195008,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 5,
+  "elapsed_seconds": 128.8839943408966,
+  "current_rss": 250974208,
+  "available_bytes": 9257508864,
+  "exit_code": 0
+}

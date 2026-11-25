@@ -1,0 +1,34 @@
+{
+  "bounded_pure_classical_input_reconstructions": 5,
+  "copies": [
+    {
+      "edits": 1,
+      "exact_literal_derivation": true,
+      "file": "transpose14_core.py",
+      "sha256": "8b5eb93766ac6d9ef638594829ec8f6d27945e84b610c718b4cf9bea73ab039d"
+    },
+    {
+      "edits": 2,
+      "exact_literal_derivation": true,
+      "file": "transpose14_window.py",
+      "sha256": "1c25f660a58f7907602e60cfc32fbfc51a2775023cc911e33d5d10c2860236b4"
+    },
+    {
+      "edits": 25,
+      "exact_literal_derivation": true,
+      "file": "check_transpose14_preimage.py",
+      "sha256": "64b8e50eb58f1310c1f79faec0a47c97db42807ffae5a6d5b358574f583e15fb"
+    }
+  ],
+  "core_all_functions_unchanged_except_recursive_import": true,
+  "native_runs": 0,
+  "native_status": "PENDING_ROOT_GUARDED_RUNS",
+  "new_population_draws": 0,
+  "original_component_cases": 256,
+  "source_only_scope": true,
+  "status": "PASS_SOURCE_ONLY_LITERAL_AST_AND_EXISTING_INPUT_CHECKS",
+  "supplement_component_cases": 10,
+  "supplement_cutoff_only_excluded_cases": 6,
+  "supplement_whole_decoder_admitted_cases": 4,
+  "window_all_function_and_class_AST_unchanged": true
+}

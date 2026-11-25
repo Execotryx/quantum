@@ -1,0 +1,119 @@
+{
+  "component_plan_sha256": "62caf1f761113ae527d1715c9aaf06f3094bfa02aaf5f9abaae8d938c9e9b627",
+  "component_plan_source_pins": 132,
+  "files": {
+    "COMPONENT_GATE_PLAN.json": {
+      "bytes": 37437,
+      "sha256": "62caf1f761113ae527d1715c9aaf06f3094bfa02aaf5f9abaae8d938c9e9b627"
+    },
+    "COMPONENT_VALIDATOR_DERIVATION.json": {
+      "bytes": 967,
+      "sha256": "21b0be90d872804e7e07f1409753b52728242927e92111a0b1af9b2279ff6b78"
+    },
+    "DOMAIN_TRANSFER_ARGUMENT.md": {
+      "bytes": 8331,
+      "sha256": "f543b43072cd290eb88ce18ea08ed24e74ff01355a130a8464df54ab84a47f9e"
+    },
+    "INITIAL_SOURCE_COPIES.json": {
+      "bytes": 3711,
+      "sha256": "7b17148b7ccf8d6bd15e3ac52abbb6edcd39c2affaebf9b47e7ad22e304df646"
+    },
+    "JOINED_PANEL_PLAN.json": {
+      "bytes": 10913,
+      "sha256": "9adb5bba21de563991065793e4ffc24fcbe7351a5381952ed6a247bd601d97b0"
+    },
+    "README.md": {
+      "bytes": 8516,
+      "sha256": "29d8cad8a89807f516d7d9dbaa49e8e521f2171fc1d2218c503c45971e093ef2"
+    },
+    "SOURCE_DERIVATION.json": {
+      "bytes": 46352,
+      "sha256": "897bbd459c69619cb845673425ee5ff1088c56822024f24635c0f012c9a98b48"
+    },
+    "SOURCE_EDIT_ATTEMPT1.json": {
+      "bytes": 409,
+      "sha256": "d105e6818f5f9606d566fca355b9df9f232e1466891a2d6119e1dc19943573af"
+    },
+    "SOURCE_MODEL_LEDGER.json": {
+      "bytes": 1622,
+      "sha256": "9cbd98b32f4066c4cc93c9106f6084ab25bffba1117083dfc3235df1de8dbc30"
+    },
+    "SOURCE_PREPARATION_CHECKS.json": {
+      "bytes": 965,
+      "sha256": "4048d7f8f39af9e8279778d1caf6bbde9ab56af88420427473a66973b5b4cb19"
+    },
+    "WIDTH_COMPATIBILITY.md": {
+      "bytes": 1557,
+      "sha256": "887a717d38aadab531c6ce9efc9997b5ad723cb9d2a64af334913d8f48c44367"
+    },
+    "build_v6.py": {
+      "bytes": 4411,
+      "sha256": "80b9032c526a82e4d2a81556a6d597453787d0084d2b5f93df75a73282d556de"
+    },
+    "check_build_equality.py": {
+      "bytes": 4381,
+      "sha256": "6928b596fe7c06800e3dcc38be1e584b434b05eef9883346d636e206e84845a2"
+    },
+    "check_candidate.py": {
+      "bytes": 4134,
+      "sha256": "53a51e2970efc72d1577cd86111955576e3a9f2bd0c26e8abbddb46a6c6c02f5"
+    },
+    "check_key_boundary.py": {
+      "bytes": 8840,
+      "sha256": "524825e0ae6cddf42fc642c892d89d42cac6e7542a173786c80c63aeb03bf159"
+    },
+    "gen_dqi.py": {
+      "bytes": 1763,
+      "sha256": "b9c0b55964ca4d43d832d53936a560dab6a58097f7d7ba9192728ce829d87020"
+    },
+    "prepare_component_gates.py": {
+      "bytes": 58309,
+      "sha256": "f3b11a10365acd1641ac02b627be73828ec933b0e3d9093d03ad848717615d0d"
+    },
+    "v6_binding.py": {
+      "bytes": 17265,
+      "sha256": "46476d02e7b76464e163622e22eb16e024a179c22fda916e233b86573f9f846b"
+    },
+    "v6_events.py": {
+      "bytes": 3945,
+      "sha256": "d44ff2142bd44ae685fd23184103d06cc75211ac4182aada01edada55eea646d"
+    },
+    "v6_paths.py": {
+      "bytes": 846,
+      "sha256": "eb0a45e35c3816cedd945347bfa149034cf481d068f9f933a9c42aca776cdffd"
+    },
+    "v6_pipeline.py": {
+      "bytes": 14059,
+      "sha256": "309c75ead9244c53e61fef9eaf8d1c6a0c1d2110de707a61ea75d54a342e0606"
+    }
+  },
+  "format": "DQI_FIXED_V6_SOURCE_PREPARATION_PACKET_V1",
+  "independent_reviews": {
+    "controller_work/after_v3/audit/V6_SPECIAL_PANELS_V2_SOURCE_REVIEW.md": "d42b88d7b999f9e9e081506b940c0b92f5065feb59c6222dd8fe05800c081c3d",
+    "controller_work/after_v3/blocks/v6/V6_PIPELINE_EVENT_CONTACT_REVIEW.md": "c5614a862f469afbf1aa1c9da4461a698b6438f63d81dcb5100c28c961136189",
+    "controller_work/after_v3/k24/V6_ELEVEN_GATE_SOURCE_REVIEW.md": "90b76e1a7846cc6d6b3fc9f448f91cf0e5d419f7e356cec94435923a56ba394f"
+  },
+  "internal_source_generation": "integration_v6",
+  "joined_roles": 8,
+  "measured_whole_mean_T": null,
+  "native_jobs_run_by_preparer": 0,
+  "native_manifest_present_at_snapshot": false,
+  "new_admitted_event": false,
+  "new_sampler_draws": 0,
+  "official_price": null,
+  "preserved_v5b_source_manifest_sha256": "b15aa9cfa6cfee388adfd0e544807ef09ab5f5ca788a3f37b13641bb14be53d6",
+  "public_release_label": "v5",
+  "required_component_gates": 11,
+  "scope": "Immutable source preparation and independent source reviews. Root must create the actual eleven-gate manifest, then build/qualify the complete tape and fresh original official runs. The public release label does not alter internal provenance paths.",
+  "selected_width_compatibility": {
+    "future_width_merge_requires_new_lifetime_gate": true,
+    "prior_quotient63_helpers": 18,
+    "quotient62_helpers": 22,
+    "third_prefix_owned_tail_predicate": true,
+    "third_return_24_helpers_plus_separate_predicate": true
+  },
+  "source_model_Q": 889,
+  "source_model_expected_T_exact": "13165890612252429/34359738368",
+  "source_model_static_T": 383992,
+  "status": "SOURCE_REVIEWED_COMPONENT_MANIFEST_PENDING_ROOT"
+}

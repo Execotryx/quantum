@@ -1,0 +1,16 @@
+{
+  "aggregate": 2.622815603359347,
+  "costs": {
+    "dfthcsos": 3247752448.668952,
+    "dqi": 7061602921960.864,
+    "invsqrt": 411586.9178780867
+  },
+  "ratios": {
+    "dfthcsos": 1.0332066995102367,
+    "dqi": 3.4608943185842582,
+    "invsqrt": 5.04577318545977
+  },
+  "registration_sha256": "4eb301f96a9da22760f44947c540edeb191a81ab981b0460a4f76da006da3531",
+  "status": "go",
+  "verification_sha256": "19005ec6c7468cdd55e6f185d9dd5c97eb07ffb21de344435c0a03a07cd574ab"
+}

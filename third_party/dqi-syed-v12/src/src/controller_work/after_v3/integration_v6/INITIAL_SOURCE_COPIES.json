@@ -1,0 +1,156 @@
+{
+  "files": [
+    {
+      "literal_renames": [
+        [
+          "v5b",
+          "v6"
+        ],
+        [
+          "V5B",
+          "V6"
+        ]
+      ],
+      "source": "controller_work/after_v3/integration_v5b/v5b_paths.py",
+      "source_sha256": "88f08ee397533c102d789016ce9627fdd0bd7f65082c6e418045c84694cedffc",
+      "target": "v6_paths.py"
+    },
+    {
+      "literal_renames": [
+        [
+          "v5b",
+          "v6"
+        ],
+        [
+          "V5B",
+          "V6"
+        ]
+      ],
+      "source": "controller_work/after_v3/integration_v5b/v5b_pipeline.py",
+      "source_sha256": "14bb85846d910eaf9ea9300bb604c818d28421ac7b48df8f8fa325091abf5b5e",
+      "target": "v6_pipeline.py"
+    },
+    {
+      "literal_renames": [
+        [
+          "v5b",
+          "v6"
+        ],
+        [
+          "V5B",
+          "V6"
+        ]
+      ],
+      "source": "controller_work/after_v3/integration_v5b/v5b_events.py",
+      "source_sha256": "f30e2d2ecd75bc9ac1559ca056d9fdf2205ff20d4137d020c46d7a2c93c67795",
+      "target": "v6_events.py"
+    },
+    {
+      "literal_renames": [
+        [
+          "v5b",
+          "v6"
+        ],
+        [
+          "V5B",
+          "V6"
+        ]
+      ],
+      "source": "controller_work/after_v3/integration_v5b/v5b_binding.py",
+      "source_sha256": "e50cbe2372a99c5b954a4b94e9a213d773f9d939ab1fea0bd0b2613a83b72126",
+      "target": "v6_binding.py"
+    },
+    {
+      "literal_renames": [
+        [
+          "v5b",
+          "v6"
+        ],
+        [
+          "V5B",
+          "V6"
+        ]
+      ],
+      "source": "controller_work/after_v3/integration_v5b/build_v5b.py",
+      "source_sha256": "b0df43c57fd8138a37b37f00086ad88c4acd34d0f9e90ca2ace65a42c98d77c3",
+      "target": "build_v6.py"
+    },
+    {
+      "literal_renames": [
+        [
+          "v5b",
+          "v6"
+        ],
+        [
+          "V5B",
+          "V6"
+        ]
+      ],
+      "source": "controller_work/after_v3/integration_v5b/gen_dqi.py",
+      "source_sha256": "ba324c9d5e901710f6ecaec6894e59db58e5ca11d9356ce2c8f6d78810bc61fd",
+      "target": "gen_dqi.py"
+    },
+    {
+      "literal_renames": [
+        [
+          "v5b",
+          "v6"
+        ],
+        [
+          "V5B",
+          "V6"
+        ]
+      ],
+      "source": "controller_work/after_v3/integration_v5b/check_key_boundary.py",
+      "source_sha256": "b4422fe7ac38ce5d73bd13acc48dd24bcd0003ee90a2d93649bb6890d56497c2",
+      "target": "check_key_boundary.py"
+    },
+    {
+      "literal_renames": [
+        [
+          "v5b",
+          "v6"
+        ],
+        [
+          "V5B",
+          "V6"
+        ]
+      ],
+      "source": "controller_work/after_v3/integration_v5b/check_candidate.py",
+      "source_sha256": "c266336dd3f8bb82c05831784b34f6d1a63a6e9c78f0cc173ce02dc25e11ca78",
+      "target": "check_candidate.py"
+    },
+    {
+      "literal_renames": [
+        [
+          "v5b",
+          "v6"
+        ],
+        [
+          "V5B",
+          "V6"
+        ]
+      ],
+      "source": "controller_work/after_v3/integration_v5b/check_build_equality.py",
+      "source_sha256": "39df1fefc6a8029b9398a8f69ea46e5c1ca411ebe552dd819639b8dd4286648e",
+      "target": "check_build_equality.py"
+    },
+    {
+      "literal_renames": [
+        [
+          "v5b",
+          "v6"
+        ],
+        [
+          "V5B",
+          "V6"
+        ]
+      ],
+      "source": "controller_work/after_v3/integration_v5b/prepare_component_gates.py",
+      "source_sha256": "064711f96902297c9c1cfcc579bb7afed73a27e10113e7bd9bc54d69bd425b6d",
+      "target": "prepare_component_gates.py"
+    }
+  ],
+  "format": "DQI_V6_INITIAL_SOURCE_DERIVATION_V1",
+  "status": "SOURCE_ONLY_INITIAL_COPIES_REQUIRING_EXPLICIT_EDITS"
+}

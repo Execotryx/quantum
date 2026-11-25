@@ -1,0 +1,42 @@
+{
+  "status": "COMPACT_PHASE_SOURCE_READY_STATIC_CERTIFIED_NOT_NATIVE",
+  "files": [
+    {
+      "path": "PHASE06_PLAN.md",
+      "bytes": 1853,
+      "sha256": "83c061f098efedcf1fb9f6a0a2b85fc0aa4082a7a8cd531e32ceef5039cb3c58"
+    },
+    {
+      "path": "phase06.py",
+      "bytes": 7444,
+      "sha256": "4e979c47bc90317a6ac3576bc74964cf74222c2006e1630f6b17075af51ccdfb"
+    },
+    {
+      "path": "static_phase06.py",
+      "bytes": 4885,
+      "sha256": "3715cc352f0260adc1ee3002d6fae473d4277de69aef8b9216d79090433e14be"
+    },
+    {
+      "path": "PHASE06_STATIC.json",
+      "bytes": 2474,
+      "sha256": "76de35990d65d790361d71b255102902c135ba02b2509fd9b000af5e36a61c01"
+    }
+  ],
+  "api": "phase06.install(previous05), after previous05.install()",
+  "component_resources": {
+    "Toffolis": 145,
+    "T": 4,
+    "R": 34,
+    "peak": 48,
+    "entry": 43,
+    "exit": 43
+  },
+  "proxy_call_counts": {
+    "generic": 34,
+    "T": 4,
+    "direct_Clifford_Z_POW": 0
+  },
+  "last_overflow": "explicitCZ(flags1,flags3)",
+  "native_execution_performed": false,
+  "native_execution_owner": "parent shared strict guard"
+}

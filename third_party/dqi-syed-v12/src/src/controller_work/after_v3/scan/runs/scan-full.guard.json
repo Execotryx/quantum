@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "controller_work/after_v3/scan/check_zero_mask_scan.py",
+    "--output",
+    "controller_work/after_v3/scan/runs/scan-full",
+    "--positions",
+    "4095",
+    "--arbitrary-cases",
+    "8",
+    "--physical-per-weight",
+    "1"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794390192.2038298,
+  "rss_soft": 2000000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 182181888,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 5,
+  "elapsed_seconds": 55.66109824180603,
+  "current_rss": 149213184,
+  "available_bytes": 9456484352,
+  "exit_code": 0
+}

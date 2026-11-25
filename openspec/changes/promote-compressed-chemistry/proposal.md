@@ -1,3 +1,5 @@
+> Status: paused on 2026-11-14, pending vendor-public-c40-chemistry. Do not implement further until resolved.
+
 ## Why
 
 Every stage after the fit already exists as a supervised command:

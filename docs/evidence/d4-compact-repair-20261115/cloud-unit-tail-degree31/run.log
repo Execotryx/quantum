@@ -1,0 +1,10 @@
+launch.sh: OK
+source.tar.gz: OK
+Sun Nov 15 21:07:19 UTC 2026
+unit-tail padded=False seed=715 full=False qubits=922 gates=104055.5
+unit-tail padded=False seed=715 full=True qubits=945 gates=438316.0
+unit-tail padded=False seed=716 full=False qubits=922 gates=104057.0
+unit-tail padded=False seed=716 full=True qubits=945 gates=438249.0
+.
+1 passed, 39 deselected in 93.88s (0:01:33)
+Sun Nov 15 21:08:54 UTC 2026

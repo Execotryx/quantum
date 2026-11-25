@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "/workspace/scratch/e5e4bb56acc7/controller_work/after_v3/blocks/v5_cubic_phase20/check_quotient_phase62.py",
+    "--per-mode",
+    "4096",
+    "--output",
+    "controller_work/after_v3/blocks/v5_cubic_phase20/runs/phase62-full"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794397630.2078884,
+  "rss_soft": 2500000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 176967680,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 12,
+  "elapsed_seconds": 9.865025520324707,
+  "current_rss": 137494528,
+  "available_bytes": 9403719680,
+  "exit_code": 0
+}

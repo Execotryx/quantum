@@ -10,8 +10,10 @@ import numpy as np
 import pytest
 
 from qcompile.artifacts import deterministic_npz
+from qcompile.component_confirmations import HYBRID_COVERAGE
 from qcompile.experiments import screen_outcome
-from qcompile.io import read_json, sha256, write_json
+from qcompile.io import identity, read_json, sha256, write_json
+from qcompile.official import METRIC_V10_SHA256
 from qcompile.worker import load_metric
 
 SUBMISSIONS = (
@@ -49,6 +51,63 @@ def official(project_root):
 )
 def test_screen_outcome(trace, flags, expected):
     assert screen_outcome(trace, 0.0195, **flags) == expected
+
+
+def test_v8_upload_gate_binds_full_receipts(monkeypatch, tools, tmp_path):
+    receipt, _, _ = tools
+    release = import_module("v8_reconcile")
+    monkeypatch.setattr(release, "ROOT", tmp_path)
+    archive = tmp_path / "submission.zip"
+    archive.write_bytes(b"v8 upload fixture")
+    digest = sha256(archive)
+    members = {"dqi.kmb": "a" * 64}
+    costs = dict.fromkeys(("dqi", "invsqrt", "dfthcsos"), 1.0)
+    registration = tmp_path / "registration.json"
+    write_json(registration, {
+        "archive_sha256": digest, "artifact_hashes": members, "metric_salt": "m" * 64,
+        "confirmation_salt": "c" * 64, "score_conservative": 1.0, "score_full": 1.0,
+        "baseline_costs": costs, "full_costs": costs,
+    })
+    backend = {"metric_sha256": METRIC_V10_SHA256}
+    coverage = {**HYBRID_COVERAGE, "dfthcsos": 77 * 64}
+    for role, seed_role in (("metric", "official_local"), ("confirmation", "confirmation")):
+        directory = tmp_path / role
+        write_json(directory / "preflight.json", {
+            "archive_sha256": digest, "members": members, "metric_sha256": METRIC_V10_SHA256,
+            "checks": {"dfthcsos": {"shape": [1, 1, 1]}},
+        })
+        path = directory / "verification/request.json"
+        seed_policy = {"role": seed_role, "salt": role[0] * 64}
+        common = {"seed_policy": seed_policy, "environment": {}, "tier": "full", "contract_hash": "contract"}
+        write_json(path, {**common, "backend": backend, "artifacts": {"dqi.kmb": {"sha256": members["dqi.kmb"]}}})
+        report = path.with_name("verification.json")
+        write_json(report, {
+            **common, "kind": "official_metric_execution", "status": "passed", "complete": True,
+            "backend_hash": identity(backend), "role": seed_role, "request_hash": sha256(path),
+            "artifact_hashes": members,
+            "official_results": {
+                "costs": costs,
+                "coverage_counts": {key: {"completed": count, "expected": count} for key, count in coverage.items()},
+                "raw_verifier_results": {
+                    key: {"status": "PASS", "verified_shots": count} for key, count in coverage.items()
+                },
+            },
+        })
+        write_json(directory / "decision.json", {
+            "status": "go", "registration_sha256": sha256(registration),
+            "verification_sha256": sha256(report), "aggregate": 1.0,
+        })
+    listing = tmp_path / "listing.csv"
+    message = receipt.submission_message("v8.0", digest)
+    listing.write_text(SUBMISSIONS + f"175,submission.zip,2026-11-15T00:00:00Z,{message},complete,1.0,\n")
+    output = tmp_path / "reconciled.json"
+    release.reconcile(listing, archive, output)
+    assert read_json(output)["reconciled"]
+    preflight_path = tmp_path / "confirmation/preflight.json"
+    preflight = read_json(preflight_path)
+    write_json(preflight_path, {**preflight, "archive_sha256": "b" * 64}, replace=True)
+    with pytest.raises(ValueError, match="confirmation evidence"):
+        release.release_evidence(archive)
 
 
 def test_bound_external_observation_and_immutable_ledger(tools, tmp_path):
@@ -190,6 +249,9 @@ def test_pinned_conservative_pricing(tools, official):
     )
     zero = development.conservative_price(trials, api)
     assert zero["priced_failures"] == 2
+    pooled = development.pooled_price(trials[:2], api)
+    assert pooled["priced_failures"] == 2
+    assert pooled["cost"] == zero["cost"]
     trials[-1].update(value_errors=5, phase_errors=7)
     stressed = development.conservative_price(trials, api)
     assert stressed["priced_failures"] == 14

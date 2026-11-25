@@ -1,0 +1,22 @@
+{
+  "actual_native_manifest_created": false,
+  "component_producer_run": false,
+  "component_source_pins": 132,
+  "format": "DQI_V6_BOUNDED_SOURCE_PREPARATION_CHECKS_V1",
+  "full_mean_exact": "13165890612252429/34359738368",
+  "full_static_model": 383992,
+  "inherited_nine_plan_rows_identical": true,
+  "inherited_plan_pins": 78,
+  "joined_roles": 8,
+  "mandatory_component_gates": 11,
+  "native_builds_or_tests": 0,
+  "new_python_ASTs": 10,
+  "only_executed_source_fragments": "Two pure Fraction expected_mean functions; no module imports.",
+  "plan_sha256": "62caf1f761113ae527d1715c9aaf06f3094bfa02aaf5f9abaae8d938c9e9b627",
+  "preserved_v5b_packet_files": 21,
+  "production_modules_imported": false,
+  "runtime_derivation_sha256": "897bbd459c69619cb845673425ee5ff1088c56822024f24635c0f012c9a98b48",
+  "sampler_or_classifier_calls": 0,
+  "status": "PASS_SOURCE_IDENTITIES_AST_AND_EXACT_LEDGER_ONLY",
+  "v5b_incremental_mean_saving_exact": "277582827/4194304"
+}

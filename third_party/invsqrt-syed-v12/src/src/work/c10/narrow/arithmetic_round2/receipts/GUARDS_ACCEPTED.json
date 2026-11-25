@@ -1,0 +1,10 @@
+{
+  "status": "NEW_WINDOW_GUARDS_ACCEPTED_STATIC_REVIEW_AND_BOTH_PREFLIGHTS",
+  "utc": "2026-11-12T03:33:09.502905+00:00",
+  "review_sha256": "e68565a15fc6b46da5bc558afc86b16aac9871789886bc41bb6c19b4b6df37be",
+  "window_sha256": "18a44534df9aaa46f4ab3bcaeb452e46cad3a7bd317a0edf798ee37ecde622fe",
+  "native_preflight_sha256": "97307a0e7e7c40683653be353a80a1b06ff150d1c3577fe43e7888f5b7340f7a",
+  "official_preflight_sha256": "3b8fd793cf23e3956a77f19db011433796b8139ade30cbcaa14b15d0714be6d3",
+  "unchanged_resource_limits": true,
+  "no_accuracy_or_verifier_modifications": true
+}

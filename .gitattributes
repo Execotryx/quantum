@@ -1,0 +1,4 @@
+LICENSE text eol=lf
+third_party/*/src/** -text
+third_party/*/LICENSE -text
+third_party/*/NOTICE -text

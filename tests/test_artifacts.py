@@ -1,5 +1,6 @@
 import stat
 import zipfile
+import zlib
 
 import pytest
 
@@ -13,12 +14,27 @@ def test_deterministic_zip_extract_and_manifest(tmp_path, artifact_set):
     files = {name: item["path"] for name, item in artifact_set.items()}
     a, b = tmp_path / "a.zip", tmp_path / "b.zip"
     deterministic_zip(a, files)
-    deterministic_zip(b, dict(reversed(list(files.items()))))
+    deterministic_zip(b, dict(reversed(list(files.items()))), compression="stored")
     assert a.read_bytes() == b.read_bytes()
     observed = extract_archive(a, tmp_path / "extracted", expected=hashes(artifact_set))
     assert observed == hashes(artifact_set)
     with pytest.raises(ValidationError, match="must not exist"):
         extract_archive(a, tmp_path / "extracted")
+
+
+def test_pinned_deflate_builds_are_deterministic(tmp_path, artifact_set):
+    files = {name: item["path"] for name, item in artifact_set.items()}
+    a, b = tmp_path / "a.zip", tmp_path / "b.zip"
+    with pytest.raises(ValidationError, match="pinned zlib"):
+        deterministic_zip(a, files, compression="deflate9", zlib_runtime="0")
+    assert not a.exists()
+    for path, inputs in ((a, files), (b, dict(reversed(list(files.items()))))):
+        deterministic_zip(path, inputs, compression="deflate9", zlib_runtime=zlib.ZLIB_RUNTIME_VERSION)
+    assert a.read_bytes() == b.read_bytes()
+    with zipfile.ZipFile(a) as archive:
+        assert archive.namelist() == sorted(files)
+        assert all(info.compress_type == zipfile.ZIP_DEFLATED and not info.extra for info in archive.infolist())
+    assert extract_archive(a, tmp_path / "extract", expected=hashes(artifact_set)) == hashes(artifact_set)
 
 
 @pytest.mark.parametrize(
@@ -53,9 +69,11 @@ def test_extraction_checks_everything_before_use(tmp_path, mutation):
         if mutation == "duplicate":
             with pytest.warns(UserWarning):
                 archive.writestr("invsqrt.kmb", b"duplicate")
-    args = {"max_bytes": 1} if mutation == "oversize" else {}
-    if mutation == "wrong_hash":
-        args["expected"] = dict.fromkeys(NAMES, "0" * 64)
     with pytest.raises(ValidationError):
-        extract_archive(path, tmp_path / "extract", **args)
+        extract_archive(
+            path,
+            tmp_path / "extract",
+            max_bytes=1 if mutation == "oversize" else 8 << 30,
+            expected=dict.fromkeys(NAMES, "0" * 64) if mutation == "wrong_hash" else None,
+        )
     assert not (tmp_path / "escape").exists()

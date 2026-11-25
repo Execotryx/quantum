@@ -1,0 +1,31 @@
+{
+  "backend_sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+  "coordinate": 12,
+  "layouts": [
+    {
+      "closed_static": 3564,
+      "declared_qubits": 235,
+      "forward_static": 1782,
+      "input_qubits": 169,
+      "length_u": 6,
+      "length_v": 4
+    },
+    {
+      "closed_static": 8604,
+      "declared_qubits": 571,
+      "forward_static": 4302,
+      "input_qubits": 505,
+      "length_u": 20,
+      "length_v": 18
+    },
+    {
+      "closed_static": 14004,
+      "declared_qubits": 931,
+      "forward_static": 7002,
+      "input_qubits": 865,
+      "length_u": 35,
+      "length_v": 33
+    }
+  ],
+  "primitive_sha256": "4f149c797d049f88b135fa93bc5f27c0d8e83649e402bc8295a10d5c4aaa61cc"
+}

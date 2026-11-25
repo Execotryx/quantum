@@ -1,0 +1,53 @@
+{
+  "status": "PROTECTED_PHASE_LOADER_ORACLE_INTERFACES_FROZEN_FOR_ARITHMETIC_ROUND",
+  "created_utc": "2026-11-12T03:44:35.538479+00:00",
+  "files": [
+    {
+      "path": "native/candidate07/phase07.py",
+      "sha256": "c200e2f9749e3a89adc17ad9837005e0a28e794622e5fbece3551275f1de8f20"
+    },
+    {
+      "path": "native/candidate07/tables07.py",
+      "sha256": "3834990b7546026372722abc5fefb24fb4effd889dfd29743353a174753ea88e"
+    },
+    {
+      "path": "native/candidate07/oracle50.py",
+      "sha256": "df311f0844c7cf72c7dedeff891442ad9da6f88cb727a724c832a3611684e3ff"
+    },
+    {
+      "path": "native/candidate07/prove50.py",
+      "sha256": "d079cefb01fa88581cf279e99590ad74610551861658f5fef65ff9071650216e"
+    },
+    {
+      "path": "native/candidate07/variant.py",
+      "sha256": "2b14bea6fcedfa772daf3f5b9c5176e3434fe23ed90b8300d586bd230711f616"
+    },
+    {
+      "path": "native/candidate07/SOURCE_READY.json",
+      "sha256": "f83afb14d599c704b32118abe75d0a4cbf2a71b85aa96f76fa24a9877477ab06"
+    },
+    {
+      "path": "native/candidate07/INPUTS.json",
+      "sha256": "df3d932917e1c0c7b9a6f0bea7b575190a22eb4d27b16a347524fbd208daa414"
+    },
+    {
+      "path": "research/ring26_phase/frozen/global_zero33.json",
+      "sha256": "c0eab1edd234e32d5baa1a51a0fec46abf82165d3973ffda825d2149f67f11e5"
+    }
+  ],
+  "protected_resources": {
+    "phase_endpoint_expected_Toffolis": 139,
+    "first_loader_expected_Toffolis": 61,
+    "second_loader_expected_Toffolis": 79,
+    "shared_table_cleanup_expected_Toffolis": 9,
+    "T": 4,
+    "generic_rotations": 33,
+    "rotation_charge": 230.84805946161188
+  },
+  "phase_modulus": 1125899906842624,
+  "phase_units50_sha256": "8bd482a8957cd387a2b212afdaca656947b7f89c983d67ff4eea4e14c3b0a26a",
+  "original_exact_margin_units64": 124370688,
+  "width_saving_requires_all_binding_cuts": true,
+  "no_faked_allocation_counters_or_relaxed_assertions": true,
+  "new_qualified_Pro2_component_may_supersede_only_after_review": true
+}

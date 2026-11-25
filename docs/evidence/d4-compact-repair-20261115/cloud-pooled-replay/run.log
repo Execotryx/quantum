@@ -1,0 +1,18 @@
+launch.sh: OK
+source.tar.gz: OK
+Sun Nov 15 19:57:35 UTC 2026
+aligned chart width=5 cases=64 seed=211 scratch=17 gates=1079.5
+aligned chart width=5 cases=64 seed=212 scratch=17 gates=1079.625
+.aligned chart width=10 cases=64 seed=211 scratch=17 gates=1811.5
+aligned chart width=10 cases=64 seed=212 scratch=17 gates=1811.625
+.pooled row=0 seed=301 forward=True eligible=9/11 qubits=1239 gates=36391.90909090909
+pooled row=0 seed=301 forward=False eligible=9/11 qubits=1239 gates=72786.54545454546
+pooled row=0 seed=302 forward=True eligible=9/11 qubits=1239 gates=36390.09090909091
+pooled row=0 seed=302 forward=False eligible=9/11 qubits=1239 gates=72781.0
+.pooled row=1 seed=301 forward=True eligible=9/11 qubits=1239 gates=36391.90909090909
+pooled row=1 seed=301 forward=False eligible=9/11 qubits=1239 gates=72786.54545454546
+pooled row=1 seed=302 forward=True eligible=9/11 qubits=1239 gates=36390.09090909091
+pooled row=1 seed=302 forward=False eligible=9/11 qubits=1239 gates=72781.0
+.
+4 passed, 26 deselected in 24.64s
+Sun Nov 15 19:58:01 UTC 2026

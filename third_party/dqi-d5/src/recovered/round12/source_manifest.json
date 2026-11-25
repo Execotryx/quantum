@@ -1,0 +1,1188 @@
+{
+  "dataset": "dmitriigluzdov/vqcc-femoco-public-factorization",
+  "version": 9,
+  "license": "Apache 2.0",
+  "source_files": 131,
+  "failures": 0,
+  "bytes": 1195955,
+  "files": [
+    {
+      "name": "circuit_sources/chemistry_r5.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fchemistry_r5.py?datasetVersionNumber=9",
+      "expected_bytes": 5969,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 5969,
+      "sha256": "0829e861a04188a4c689ae868903c4d7464ce37bb494a8949a7ed2913c5cc8e3"
+    },
+    {
+      "name": "circuit_sources/compact_gap_variant.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fcompact_gap_variant.py?datasetVersionNumber=9",
+      "expected_bytes": 8398,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 8398,
+      "sha256": "5206a2d109071dc3c9dd275249ea93c17b3c77f6e3b5cbac359d545e8a98ea8a"
+    },
+    {
+      "name": "circuit_sources/compact_lifetime_kernels.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fcompact_lifetime_kernels.py?datasetVersionNumber=9",
+      "expected_bytes": 7114,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 7114,
+      "sha256": "f47670b0b7c912055a55edba3153a0690473f71e7f31e03204f3b2f39bd90805"
+    },
+    {
+      "name": "circuit_sources/domain_compile.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdomain_compile.py?datasetVersionNumber=9",
+      "expected_bytes": 5778,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 5778,
+      "sha256": "c72bc15f9c1c1f2e5ef05346baec5786df06e3178479f2763544c30425356c76"
+    },
+    {
+      "name": "circuit_sources/dqi/common.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdqi%2Fcommon.py?datasetVersionNumber=9",
+      "expected_bytes": 1074,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 1074,
+      "sha256": "f21e9ff6fb5b6f2e665deb546c2751e4ae826cd305931a37a2e328906abea0d7"
+    },
+    {
+      "name": "circuit_sources/dqi/compact_euclid.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdqi%2Fcompact_euclid.py?datasetVersionNumber=9",
+      "expected_bytes": 13397,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 13397,
+      "sha256": "02e78391cde317b1de1bc7f60193560990c9a47640d4d20a119d58fbdb09b1fc"
+    },
+    {
+      "name": "circuit_sources/dqi/continued_fraction/jfraction_decoder.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdqi%2Fcontinued_fraction%2Fjfraction_decoder.py?datasetVersionNumber=9",
+      "expected_bytes": 7349,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 7349,
+      "sha256": "532d21556fa7981e73e68bd91f2fdb49ca7091a4daca0267be35ffe8fa563ee3"
+    },
+    {
+      "name": "circuit_sources/dqi/continued_fraction/jfraction_gap_decoder.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdqi%2Fcontinued_fraction%2Fjfraction_gap_decoder.py?datasetVersionNumber=9",
+      "expected_bytes": 10334,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 10334,
+      "sha256": "c41f980ff7778234f4a098c15a3d52657a33f5a9748d8dbc31d4c646675c3ed6"
+    },
+    {
+      "name": "circuit_sources/dqi/continued_fraction/keyeq/model_fast_extraction.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdqi%2Fcontinued_fraction%2Fkeyeq%2Fmodel_fast_extraction.py?datasetVersionNumber=9",
+      "expected_bytes": 7085,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 7085,
+      "sha256": "77fb085f1bf0a1a22167d5010e9ad327295c83555d9c539ca0a5187d82ef0336"
+    },
+    {
+      "name": "circuit_sources/dqi/continued_fraction/keyeq/model_jfraction.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdqi%2Fcontinued_fraction%2Fkeyeq%2Fmodel_jfraction.py?datasetVersionNumber=9",
+      "expected_bytes": 8049,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 8049,
+      "sha256": "e3c3b83a76b520b1720eee865aca20b72433211dbb5c10f422e2abf08be4d1b9"
+    },
+    {
+      "name": "circuit_sources/dqi/continued_fraction/mask_projection.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdqi%2Fcontinued_fraction%2Fmask_projection.py?datasetVersionNumber=9",
+      "expected_bytes": 5275,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 5275,
+      "sha256": "21476b1931a0d9d5ace2ad5a25e6fdb2fb1e04c303fce0cd35e84486b68c681e"
+    },
+    {
+      "name": "circuit_sources/dqi/continued_fraction/poly_arithmetic.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdqi%2Fcontinued_fraction%2Fpoly_arithmetic.py?datasetVersionNumber=9",
+      "expected_bytes": 7719,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 7719,
+      "sha256": "f26338b25b7c9623e3690fb4e571e87c47391943fe9742016d52a644dfe4a975"
+    },
+    {
+      "name": "circuit_sources/dqi/counter.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdqi%2Fcounter.py?datasetVersionNumber=9",
+      "expected_bytes": 1703,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 1703,
+      "sha256": "13950281035350b8a4336da90f1d7a9bda453223af02ae78f9b3e1bd7bbd3380"
+    },
+    {
+      "name": "circuit_sources/dqi/cubic.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdqi%2Fcubic.py?datasetVersionNumber=9",
+      "expected_bytes": 7112,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 7112,
+      "sha256": "c74e40a0f0ec1d93bf1bd6a64b71794002bc8db62baf05ffbefa2efda174f58a"
+    },
+    {
+      "name": "circuit_sources/dqi/early_a.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdqi%2Fearly_a.py?datasetVersionNumber=9",
+      "expected_bytes": 3074,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3074,
+      "sha256": "3336ddb6e634437d7f328de78fdfce1acd0cf2090e1ccb69b11390f2970b2cf2"
+    },
+    {
+      "name": "circuit_sources/dqi/evaluation.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdqi%2Fevaluation.py?datasetVersionNumber=9",
+      "expected_bytes": 1749,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 1749,
+      "sha256": "499cb9faf95027d3c9cecca317d251ebaaf309d7aee7e2de4c9b115a2295bc76"
+    },
+    {
+      "name": "circuit_sources/dqi/forney_control.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdqi%2Fforney_control.py?datasetVersionNumber=9",
+      "expected_bytes": 3876,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3876,
+      "sha256": "2c343b082f9d5700453f479fd69049e82c5f5e27c9d25962fbead43422fb1e29"
+    },
+    {
+      "name": "circuit_sources/dqi/narrow.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdqi%2Fnarrow.py?datasetVersionNumber=9",
+      "expected_bytes": 1830,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 1830,
+      "sha256": "3ede87c02962ddf3827fbabfa47bcbe14a455318838b531a3649fac727f56dcf"
+    },
+    {
+      "name": "circuit_sources/dqi/quotient.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdqi%2Fquotient.py?datasetVersionNumber=9",
+      "expected_bytes": 6373,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 6373,
+      "sha256": "47b87ca6306ba6a4866e84d434570a8fb2bb0035ff166e3f29088cfdf772405f"
+    },
+    {
+      "name": "circuit_sources/dqi/quotient_hmr.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdqi%2Fquotient_hmr.py?datasetVersionNumber=9",
+      "expected_bytes": 3673,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3673,
+      "sha256": "155ff7954c10bc25708c8e6fce9f0dd6d73a973d581f5e8978c367c4f1652651"
+    },
+    {
+      "name": "circuit_sources/dqi/recursive.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdqi%2Frecursive.py?datasetVersionNumber=9",
+      "expected_bytes": 8933,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 8933,
+      "sha256": "d8fb02e40c042e2c84df11fc0d29bb0a7cb583eac773e0c063e1c13ad96d80d7"
+    },
+    {
+      "name": "circuit_sources/dqi/static_divisions.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdqi%2Fstatic_divisions.py?datasetVersionNumber=9",
+      "expected_bytes": 9259,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 9259,
+      "sha256": "7bc9f4d8a4517158c5a62dc657de8d1e27d8f5b4d294bbb28256773e0cb8670d"
+    },
+    {
+      "name": "circuit_sources/dqi/sweep.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdqi%2Fsweep.py?datasetVersionNumber=9",
+      "expected_bytes": 3288,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3288,
+      "sha256": "019fb28b0144d65ec3004426c5f512e1ce743e355ab9d2c04961c16559153ca0"
+    },
+    {
+      "name": "circuit_sources/dqi/tower.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdqi%2Ftower.py?datasetVersionNumber=9",
+      "expected_bytes": 7416,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 7416,
+      "sha256": "9e7bd85201a783be5eedbecb2161f425df5c7815dae4fd367a01677366dddcc5"
+    },
+    {
+      "name": "circuit_sources/dqi/zero_chain.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fdqi%2Fzero_chain.py?datasetVersionNumber=9",
+      "expected_bytes": 3249,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3249,
+      "sha256": "dd4e7c3e8edbe2fb0c33ebb12b12ff4c5ab0315ca47b2c7d94f25c66e7917021"
+    },
+    {
+      "name": "circuit_sources/marsyas/build.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fmarsyas%2Fbuild.py?datasetVersionNumber=9",
+      "expected_bytes": 26633,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 26633,
+      "sha256": "eef91d07c4c99d92545272d5d6e4daeb78a925e3d7307d27b093699d34f49e3e"
+    },
+    {
+      "name": "circuit_sources/marsyas/calib.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fmarsyas%2Fcalib.py?datasetVersionNumber=9",
+      "expected_bytes": 4761,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 4761,
+      "sha256": "9777a679e6ace7e8df67ed61df2a5d61e91a2f7d542161916d48ba1f33e9f209"
+    },
+    {
+      "name": "circuit_sources/marsyas/check.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fmarsyas%2Fcheck.py?datasetVersionNumber=9",
+      "expected_bytes": 2621,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 2621,
+      "sha256": "2644d8d137efec140b3a5e95d47810fb9cec604752e50dff9f341f67880c48c1"
+    },
+    {
+      "name": "circuit_sources/marsyas/exact.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fmarsyas%2Fexact.py?datasetVersionNumber=9",
+      "expected_bytes": 5592,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 5592,
+      "sha256": "3bb4a976bdaea773ed6d8c9c574b2a9dca28d0ceaee19261348874b4faf4b5c2"
+    },
+    {
+      "name": "circuit_sources/marsyas/fit.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fmarsyas%2Ffit.py?datasetVersionNumber=9",
+      "expected_bytes": 5296,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 5296,
+      "sha256": "0ab68492466fde0156cb54379a4e18d6673b183d83e4674101f55b58a43111d0"
+    },
+    {
+      "name": "circuit_sources/marsyas/hsplit.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fmarsyas%2Fhsplit.py?datasetVersionNumber=9",
+      "expected_bytes": 18663,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 18663,
+      "sha256": "fc1fa942a08425bc580980d980b3cd34bfcda47f6db6b7ab137595ae2d4513ec"
+    },
+    {
+      "name": "circuit_sources/marsyas/model.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fmarsyas%2Fmodel.py?datasetVersionNumber=9",
+      "expected_bytes": 9185,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 9185,
+      "sha256": "65bf89538e736f5d02add43c7f74bb57c02b4fa3f699df02b9e83cd984a58162"
+    },
+    {
+      "name": "circuit_sources/marsyas/run.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fmarsyas%2Frun.py?datasetVersionNumber=9",
+      "expected_bytes": 5179,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 5179,
+      "sha256": "34260ed900fbedc209664c54cb7b0421506548ccd9a50bf3e89085f7900da9cf"
+    },
+    {
+      "name": "circuit_sources/matrix_pair_kernels.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fmatrix_pair_kernels.py?datasetVersionNumber=9",
+      "expected_bytes": 23694,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 23694,
+      "sha256": "262ccbc491950b82c9eea5ff6f66983888997b3f15122c91825ec6d1c6dca81d"
+    },
+    {
+      "name": "circuit_sources/mc4_inverse.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fmc4_inverse.py?datasetVersionNumber=9",
+      "expected_bytes": 3418,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3418,
+      "sha256": "ec1e66bcd1ba8723792238be68f91dfc887170cc8a11f81d81420d25d26b5ce4"
+    },
+    {
+      "name": "circuit_sources/merge_kernels.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fmerge_kernels.py?datasetVersionNumber=9",
+      "expected_bytes": 16265,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 16265,
+      "sha256": "e6b5053fcbdf60bc72a96c4c4c2923f666296059f7e08e56da3fff8a11c4d75e"
+    },
+    {
+      "name": "circuit_sources/merged_own.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fmerged_own.py?datasetVersionNumber=9",
+      "expected_bytes": 12752,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 12752,
+      "sha256": "ce970c1baca745b09ebf3c4a4e3f73f59bb4f14d8e9b6276b5e9988f2b11c526"
+    },
+    {
+      "name": "circuit_sources/norm_recycle_inverse.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fnorm_recycle_inverse.py?datasetVersionNumber=9",
+      "expected_bytes": 2411,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 2411,
+      "sha256": "a2d136d74ac0acebe48023a73d9b0583a3cfc85fac809c1a757fbee30b8e239e"
+    },
+    {
+      "name": "circuit_sources/paired_kernels.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fpaired_kernels.py?datasetVersionNumber=9",
+      "expected_bytes": 16533,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 16533,
+      "sha256": "acbe7508ee68330666c6dd640b8b255de06fff61d8e3b9d847391aa925020016"
+    },
+    {
+      "name": "circuit_sources/phase_tensor.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fphase_tensor.py?datasetVersionNumber=9",
+      "expected_bytes": 8315,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 8315,
+      "sha256": "433ebd7a9e392aa2dbf4483142e997ecb6d96b6ed6957d0de5b227722cfa2856"
+    },
+    {
+      "name": "circuit_sources/port_pipeline.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fport_pipeline.py?datasetVersionNumber=9",
+      "expected_bytes": 242,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 242,
+      "sha256": "561eb0a0aedef8ed83093ab5cf401ab1fba3fae425cafb5cd0fbc02a47fd440f"
+    },
+    {
+      "name": "circuit_sources/public_inv_payload.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fpublic_inv_payload.py?datasetVersionNumber=9",
+      "expected_bytes": 346671,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 346671,
+      "sha256": "5b9d8f907e326433f972f6ed1cbf8acc7fc1dc6d07e35fd15f1c9b03bd486d7e"
+    },
+    {
+      "name": "circuit_sources/public_v11.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fpublic_v11.py?datasetVersionNumber=9",
+      "expected_bytes": 2049,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 2049,
+      "sha256": "d2ed9e19310b352137f09d9b54c6fb23d3950753e0307ddd2fb1a9ac31ee0dd9"
+    },
+    {
+      "name": "circuit_sources/qcc_pipeline.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fqcc_pipeline.py?datasetVersionNumber=9",
+      "expected_bytes": 1675,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 1675,
+      "sha256": "e1e2a26514a980c9da0bcd2a3614e3315b9780274859cd63f5cbb385a10dc64a"
+    },
+    {
+      "name": "circuit_sources/quadratic_cube.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fquadratic_cube.py?datasetVersionNumber=9",
+      "expected_bytes": 2808,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 2808,
+      "sha256": "9d8dac8a7fb88169923e0defe7f467fef606437b67add35182e1d85b0e9252ba"
+    },
+    {
+      "name": "circuit_sources/round10_dqi.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fround10_dqi.py?datasetVersionNumber=9",
+      "expected_bytes": 8170,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 8170,
+      "sha256": "fc8ed478684b79da49130bde7a28522a7f4ba16bfbcda100187a7d043de2d0e5"
+    },
+    {
+      "name": "circuit_sources/round10_fit.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fround10_fit.py?datasetVersionNumber=9",
+      "expected_bytes": 5257,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 5257,
+      "sha256": "3ae38a7c4bb5e959328a0f1500ad81696d6a527d6dda96643ac7586cd7d17500"
+    },
+    {
+      "name": "circuit_sources/round10_inv.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fround10_inv.py?datasetVersionNumber=9",
+      "expected_bytes": 11477,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 11477,
+      "sha256": "8450a5ccbc2730d59abea83d36688036dd614d3054757f623f9bdc35bea91cb9"
+    },
+    {
+      "name": "circuit_sources/round10_lookup.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fround10_lookup.py?datasetVersionNumber=9",
+      "expected_bytes": 4176,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 4176,
+      "sha256": "6444cef6426ea9f3485792118e1ae714d4b765e20ae4d1a9fa0b57f6173a5bc7"
+    },
+    {
+      "name": "circuit_sources/round10_virtual.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fround10_virtual.py?datasetVersionNumber=9",
+      "expected_bytes": 6233,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 6233,
+      "sha256": "6b72cfb26841262d33a6fa27ab109310a93f1b066fd2afe206a1c308eb27d5bb"
+    },
+    {
+      "name": "circuit_sources/round11_dqi.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fround11_dqi.py?datasetVersionNumber=9",
+      "expected_bytes": 7566,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 7566,
+      "sha256": "983ae4b8cd1c45620a04cae5de687f62a3373292e1d20242101e701260acdc9e"
+    },
+    {
+      "name": "circuit_sources/round11_history.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fround11_history.py?datasetVersionNumber=9",
+      "expected_bytes": 3946,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3946,
+      "sha256": "0f9bae9614ced0379d43456e3333132a37105ec0f0f935bb2f1d8d09afe345ed"
+    },
+    {
+      "name": "circuit_sources/round11_lookup.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fround11_lookup.py?datasetVersionNumber=9",
+      "expected_bytes": 3247,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3247,
+      "sha256": "aec079afd1370eaa7e9251dd18901c3755b265e3ee50b85e6d587b9ec23bc2f6"
+    },
+    {
+      "name": "circuit_sources/round12_dqi.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fround12_dqi.py?datasetVersionNumber=9",
+      "expected_bytes": 5304,
+      "status": "already retrieved",
+      "bytes": 5304,
+      "sha256": "4e30172d1afa6015f8adf1823845d45ca565809a6a14baf51d7d72c1f53a2b19"
+    },
+    {
+      "name": "circuit_sources/round5_marsyas_build.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fround5_marsyas_build.py?datasetVersionNumber=9",
+      "expected_bytes": 1952,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 1952,
+      "sha256": "b6d3d8d05e2c6370a606ac80a79be334296c7eaf51691c6635eeb684b012ae17"
+    },
+    {
+      "name": "circuit_sources/round5_marsyas_tables.json",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fround5_marsyas_tables.json?datasetVersionNumber=9",
+      "expected_bytes": 6071,
+      "status": 200,
+      "content_type": "application/json",
+      "bytes": 6071,
+      "sha256": "1ebfdee7574bc1da05f315290760accbf582e82bf2caa2829fe35b9488ed6ea4"
+    },
+    {
+      "name": "circuit_sources/round5_selected_inv.json",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fround5_selected_inv.json?datasetVersionNumber=9",
+      "expected_bytes": 194,
+      "status": 200,
+      "content_type": "application/json",
+      "bytes": 194,
+      "sha256": "566f69bd57bc8556fdce92c624d493c78c51962f9dcc1e445aefb5e390ec6194"
+    },
+    {
+      "name": "circuit_sources/round5_virtual.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fround5_virtual.py?datasetVersionNumber=9",
+      "expected_bytes": 3834,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3834,
+      "sha256": "13c72596a67b8b60ffa73e06219c27dc969af91534fac82cb904c7de726e0c54"
+    },
+    {
+      "name": "circuit_sources/round6_dqi.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fround6_dqi.py?datasetVersionNumber=9",
+      "expected_bytes": 4694,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 4694,
+      "sha256": "18b76a6e086e37149a4a985d1679bec7b30df443041e0865b2d14c09a80d0fdd"
+    },
+    {
+      "name": "circuit_sources/round6_hmr.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fround6_hmr.py?datasetVersionNumber=9",
+      "expected_bytes": 2390,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 2390,
+      "sha256": "1c8447a51850b9ea6d2c592b853e3c7d1c01378833f79a2641e673bd1d3478e8"
+    },
+    {
+      "name": "circuit_sources/round9_marsyas_phase.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fround9_marsyas_phase.py?datasetVersionNumber=9",
+      "expected_bytes": 3564,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3564,
+      "sha256": "4df703e891f629a1288bf8680967a83ecc1e0f765c887ae82b9e8f37fc453a11"
+    },
+    {
+      "name": "circuit_sources/round9_pointer.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fround9_pointer.py?datasetVersionNumber=9",
+      "expected_bytes": 12464,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 12464,
+      "sha256": "8c90977a52beb9938b45fbffc70a4561c14368bd285be85ee5e60dbae58c821c"
+    },
+    {
+      "name": "circuit_sources/selected_dqi.json",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fselected_dqi.json?datasetVersionNumber=9",
+      "expected_bytes": 722,
+      "status": 200,
+      "content_type": "application/json",
+      "bytes": 722,
+      "sha256": "ced7a08b32a3c241200f80c8d66437d467c9c2fac48a84643ef3847c4a855e26"
+    },
+    {
+      "name": "circuit_sources/selected_inv78.json",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fselected_inv78.json?datasetVersionNumber=9",
+      "expected_bytes": 104,
+      "status": 200,
+      "content_type": "application/json",
+      "bytes": 104,
+      "sha256": "329552638eebd8db7f9d4694a971fd992e597d4012a4108eeef3ac055a086b8b"
+    },
+    {
+      "name": "circuit_sources/selected_invsqrt.json",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fselected_invsqrt.json?datasetVersionNumber=9",
+      "expected_bytes": 11728,
+      "status": 200,
+      "content_type": "application/json",
+      "bytes": 11728,
+      "sha256": "7eb8d467ef56d99a421a0ac4c09b96944db8e791c15e5692907d04f61fb2824a"
+    },
+    {
+      "name": "circuit_sources/selected_phase_fit.json",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fselected_phase_fit.json?datasetVersionNumber=9",
+      "expected_bytes": 1327,
+      "status": 200,
+      "content_type": "application/json",
+      "bytes": 1327,
+      "sha256": "e02d62cba8fe76b2eb631ac8a176f05b3f617a3298b4a1965ad6203d518cf868"
+    },
+    {
+      "name": "circuit_sources/smallspace_inverse.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsmallspace_inverse.py?datasetVersionNumber=9",
+      "expected_bytes": 3995,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3995,
+      "sha256": "669bbb035cdc0eef5f113cf1c6627f23464c6dd8c0c38c4cc36042c2614a7173"
+    },
+    {
+      "name": "circuit_sources/somejoint/invsqrt/public/LICENSE",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Finvsqrt%2Fpublic%2FLICENSE?datasetVersionNumber=9",
+      "expected_bytes": 11560,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 11560,
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "name": "circuit_sources/somejoint/invsqrt/public/NOTICE",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Finvsqrt%2Fpublic%2FNOTICE?datasetVersionNumber=9",
+      "expected_bytes": 12261,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 12261,
+      "sha256": "1234ffea53bca2963afcdae38edb4c2d8a5b74b2434e23b77eb2ccbc2c048ff3"
+    },
+    {
+      "name": "circuit_sources/somejoint/notebooks/LICENSE",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fnotebooks%2FLICENSE?datasetVersionNumber=9",
+      "expected_bytes": 11560,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 11560,
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "name": "circuit_sources/somejoint/notebooks/check-submission",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fnotebooks%2Fcheck-submission?datasetVersionNumber=9",
+      "expected_bytes": 2760,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 2760,
+      "sha256": "594d27d892852dd1a965e6c3a34c27720c4762f0ae27077434ce35c1fe961965"
+    },
+    {
+      "name": "circuit_sources/somejoint/notebooks/extra-format.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fnotebooks%2Fextra-format.py?datasetVersionNumber=9",
+      "expected_bytes": 1625,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 1625,
+      "sha256": "83cd1f48741cc1bb6c3c7140e36449196e4c56b3e2f5bb7f755a302172ef602c"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/build.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fbuild.py?datasetVersionNumber=9",
+      "expected_bytes": 2743,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 2743,
+      "sha256": "0fcd3390f4e913246e9341a3647c9ba2fdfa2c3da801786923d6753254817e1c"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/central2/bezout_model.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fcentral2%2Fbezout_model.py?datasetVersionNumber=9",
+      "expected_bytes": 10974,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 10974,
+      "sha256": "c8b3ad09b82150aa1dbd5dd60c4e0449a950cf99fc87bdc56403ebaf7b1bfce0"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/central2/border_circuit.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fcentral2%2Fborder_circuit.py?datasetVersionNumber=9",
+      "expected_bytes": 11618,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 11618,
+      "sha256": "4a4c01e1a303bfca33310f8ccefdb17e3aeedc68ef0d23af417dde5065cf640a"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/central2/central_circuit.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fcentral2%2Fcentral_circuit.py?datasetVersionNumber=9",
+      "expected_bytes": 13323,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 13323,
+      "sha256": "ec7a541431151eb0242044fbe158a4481fcf950cae14e6cc1d8b1ef935d0c070"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/central2/forney_bezout.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fcentral2%2Fforney_bezout.py?datasetVersionNumber=9",
+      "expected_bytes": 3326,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3326,
+      "sha256": "484e63751071364cc98dbc69007f0d95accf4beedf134b017ba1da37cc8ab165"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/central2/half_circuit.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fcentral2%2Fhalf_circuit.py?datasetVersionNumber=9",
+      "expected_bytes": 8668,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 8668,
+      "sha256": "931659a90b9e578c33755658bbcb240ce5b7bfa23421b6a6844603ddc487f89d"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/central2/inplace_poly.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fcentral2%2Finplace_poly.py?datasetVersionNumber=9",
+      "expected_bytes": 8320,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 8320,
+      "sha256": "92dad6fe4bba654fc3a9ca916d6c98ff972b2be7c352c517888262b84e943477"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/central2/recursive_ldu.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fcentral2%2Frecursive_ldu.py?datasetVersionNumber=9",
+      "expected_bytes": 6335,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 6335,
+      "sha256": "75551b383cf548b1b32c98943c9324dc446cabc6c1d587e3f223753f7518f015"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/central2/retry_circuit.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fcentral2%2Fretry_circuit.py?datasetVersionNumber=9",
+      "expected_bytes": 9069,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 9069,
+      "sha256": "cde64a3b85fb9e91af34cf59d57918c51ff7764b136abf453ceccc8a8b831c45"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/cyclic_gold.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fcyclic_gold.py?datasetVersionNumber=9",
+      "expected_bytes": 4042,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 4042,
+      "sha256": "eef582955b5e7ba9005774b970d10ede3667ee83878bdce454dd238d9ff4afd1"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/gold26/gold_cube.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fgold26%2Fgold_cube.py?datasetVersionNumber=9",
+      "expected_bytes": 4228,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 4228,
+      "sha256": "b8a9b6f90428082f78fa9f72bc768f39cd03357f1718db8ebbfb22a646741961"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/gold26/gold_forms.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fgold26%2Fgold_forms.py?datasetVersionNumber=9",
+      "expected_bytes": 8320,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 8320,
+      "sha256": "92dad6fe4bba654fc3a9ca916d6c98ff972b2be7c352c517888262b84e943477"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/gold26/hermitian12-search-check.json",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fgold26%2Fhermitian12-search-check.json?datasetVersionNumber=9",
+      "expected_bytes": 2764,
+      "status": 200,
+      "content_type": "application/json",
+      "bytes": 2764,
+      "sha256": "dd17ae5a1975409961507762fe4792d7bb21039b7ffd42de943b869849760acc"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/gold_extraction.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fgold_extraction.py?datasetVersionNumber=9",
+      "expected_bytes": 3045,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3045,
+      "sha256": "de8d4a5cb4c8e0e4e02609cb0605636b1c972373ba7f601e9a9e0391ab4f1c5c"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/hankel_half.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fhankel_half.py?datasetVersionNumber=9",
+      "expected_bytes": 3085,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3085,
+      "sha256": "f7c889e610597513649e5c67303852a9355c4540b2147e4fed0c81bc28910b56"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/runtime.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fruntime.py?datasetVersionNumber=9",
+      "expected_bytes": 2803,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 2803,
+      "sha256": "26f506f49987d8f450ba6f2be4ec8abfb1d685ad4ecfa5070d81341d51dafa99"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/LICENSE.txt",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2FLICENSE.txt?datasetVersionNumber=9",
+      "expected_bytes": 11560,
+      "status": 200,
+      "content_type": "text/plain",
+      "bytes": 11560,
+      "sha256": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/NOTICE.txt",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2FNOTICE.txt?datasetVersionNumber=9",
+      "expected_bytes": 2097,
+      "status": 200,
+      "content_type": "text/plain",
+      "bytes": 2097,
+      "sha256": "daf8734e9954e27a218466e01fb18a80ad80844ce925bb1df98fe94bb375771b"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/build_merge_dqi.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fbuild_merge_dqi.py?datasetVersionNumber=9",
+      "expected_bytes": 7172,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 7172,
+      "sha256": "1b34162b915f13a7bbdf1f5118bbcc3ce462071cb3271dd1975260e7c2048922"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/build_paired_dqi.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fbuild_paired_dqi.py?datasetVersionNumber=9",
+      "expected_bytes": 3227,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3227,
+      "sha256": "06ac76eac63e293004691d7feceec5bfd4a2c328b9a09ea40dbc95e758fa62d3"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/build_projected_dqi.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fbuild_projected_dqi.py?datasetVersionNumber=9",
+      "expected_bytes": 8042,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 8042,
+      "sha256": "9ac5018cbb04e0e308b9a8bdf8c67d01b05f5a220773c5d2208597216ebcbffd"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/compact_gap_variant.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fcompact_gap_variant.py?datasetVersionNumber=9",
+      "expected_bytes": 8592,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 8592,
+      "sha256": "4b0bbc2e04b6a479e8046f8a68cef11922a4b23c5a8c1112b6edc88698c32cbc"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/compact_lifetime_kernels.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fcompact_lifetime_kernels.py?datasetVersionNumber=9",
+      "expected_bytes": 7284,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 7284,
+      "sha256": "d9a1118b6496974f06d4aec8bdaa53a0cbec7bd48c84fd9134decaf07e37fc0d"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/matrix_pair_kernels.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fmatrix_pair_kernels.py?datasetVersionNumber=9",
+      "expected_bytes": 24209,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 24209,
+      "sha256": "b2d324ef2e0b43b89b93b963b0f5d95eef534c8faa47e545856626a04181d611"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/mc4_inverse.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fmc4_inverse.py?datasetVersionNumber=9",
+      "expected_bytes": 3495,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3495,
+      "sha256": "55a4fec13a946048b3393c94d75b15ea4b1f6f8bf40751f913867cd4869ad9a1"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/merge_kernels.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fmerge_kernels.py?datasetVersionNumber=9",
+      "expected_bytes": 16644,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 16644,
+      "sha256": "5044d536fe4d6258b827f7c64df590ae49496203c7736c0b0a09c1f1b6d24258"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/norm_recycle_inverse.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fnorm_recycle_inverse.py?datasetVersionNumber=9",
+      "expected_bytes": 2464,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 2464,
+      "sha256": "873f861f2222f02a7c151742ddc3f5ef652788c9b3f45886ddefe59628470a14"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/one_mask_inverse.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fone_mask_inverse.py?datasetVersionNumber=9",
+      "expected_bytes": 2168,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 2168,
+      "sha256": "eb7807d65efc3a7ee1dcf7b9d208a983a993f4d64123ac6843b6f5c3d506876d"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/paired_kernels.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fpaired_kernels.py?datasetVersionNumber=9",
+      "expected_bytes": 16964,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 16964,
+      "sha256": "8fcfdd6b96b46d91ed983a7b1e3b1fc0699252d48a06a8506adeb7ba84acfd76"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/phase_tensor.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fphase_tensor.py?datasetVersionNumber=9",
+      "expected_bytes": 8525,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 8525,
+      "sha256": "b1dd2d603ac3091cf61738d5606df5d02cbaee69a8a499b09018af94f7a03efc"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/pinned_sources.json",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fpinned_sources.json?datasetVersionNumber=9",
+      "expected_bytes": 5903,
+      "status": 200,
+      "content_type": "application/json",
+      "bytes": 5903,
+      "sha256": "85b0f63e2a66639516b0f939e6ef7c5e15b3b1192f02f826e8e9d9818ed5b381"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/pointer_phase_codec.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fpointer_phase_codec.py?datasetVersionNumber=9",
+      "expected_bytes": 3744,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3744,
+      "sha256": "7aa7ca2d83de681325c8c93b48596cde9d478e99644e1ea5361aa46f7f6215e0"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/quadratic_cube.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fquadratic_cube.py?datasetVersionNumber=9",
+      "expected_bytes": 2871,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 2871,
+      "sha256": "6cc2636007c842337ce68dbe4a4585a34e71090d25c4d365c63ccabbab814706"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/smallspace_inverse.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fsmallspace_inverse.py?datasetVersionNumber=9",
+      "expected_bytes": 4085,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 4085,
+      "sha256": "bd210144cc03f118d425785c19297223f08d9f2ec646e46f152d78f946d0a39f"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/triple_matrix.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Ftriple_matrix.py?datasetVersionNumber=9",
+      "expected_bytes": 8353,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 8353,
+      "sha256": "ea061ca04ea17548249fdf616c0467393008bd23a34625e5f4d63e847185afd7"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/triple_ordinary.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Ftriple_ordinary.py?datasetVersionNumber=9",
+      "expected_bytes": 3665,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3665,
+      "sha256": "a84d00c337cce27c99db3f2215ba780a582d4e084a45dc3ebe89cfb34505abda"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/upstream/dqi/common.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fupstream%2Fdqi%2Fcommon.py?datasetVersionNumber=9",
+      "expected_bytes": 1097,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 1097,
+      "sha256": "6355728b19eeff09601c5e0716b0c023c2716b7489f2ddc440cd8a9f805d66eb"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/upstream/dqi/compact_euclid.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fupstream%2Fdqi%2Fcompact_euclid.py?datasetVersionNumber=9",
+      "expected_bytes": 13742,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 13742,
+      "sha256": "7bdb83639f1c23ef3f5dc8641203801bb4e1be08356450b65ec80f83a727072a"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/upstream/dqi/continued_fraction/jfraction_decoder.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fupstream%2Fdqi%2Fcontinued_fraction%2Fjfraction_decoder.py?datasetVersionNumber=9",
+      "expected_bytes": 7544,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 7544,
+      "sha256": "417b92e91b618bb80c442230162f711485a3b543f4deedae35645470a9bd3272"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/upstream/dqi/continued_fraction/jfraction_gap_decoder.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fupstream%2Fdqi%2Fcontinued_fraction%2Fjfraction_gap_decoder.py?datasetVersionNumber=9",
+      "expected_bytes": 10599,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 10599,
+      "sha256": "e0b01f5b74610cb948353959184c051b7249b427454d16325ac43f77dd7caf9f"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/upstream/dqi/continued_fraction/keyeq/model_fast_extraction.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fupstream%2Fdqi%2Fcontinued_fraction%2Fkeyeq%2Fmodel_fast_extraction.py?datasetVersionNumber=9",
+      "expected_bytes": 7263,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 7263,
+      "sha256": "0e5c0d49bc8926ba0d58ea698c97aac4366a137cc6df2bb4c2ea41aad41ca65c"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/upstream/dqi/continued_fraction/keyeq/model_jfraction.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fupstream%2Fdqi%2Fcontinued_fraction%2Fkeyeq%2Fmodel_jfraction.py?datasetVersionNumber=9",
+      "expected_bytes": 8305,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 8305,
+      "sha256": "2491eb35dacae88f1910d0b020fc6f83c788831ed9e9d481614c3d0f4c342075"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/upstream/dqi/continued_fraction/mask_projection.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fupstream%2Fdqi%2Fcontinued_fraction%2Fmask_projection.py?datasetVersionNumber=9",
+      "expected_bytes": 5422,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 5422,
+      "sha256": "f9b1d06197de0f5cf006e9d3ce3d99d0381a351b75157186dc7057553c5a0886"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/upstream/dqi/continued_fraction/poly_arithmetic.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fupstream%2Fdqi%2Fcontinued_fraction%2Fpoly_arithmetic.py?datasetVersionNumber=9",
+      "expected_bytes": 7896,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 7896,
+      "sha256": "752b2f3d60d1adbe8668e63e740414ef8a0d9daa0da64f2e8d6d0424ef317794"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/upstream/dqi/counter.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fupstream%2Fdqi%2Fcounter.py?datasetVersionNumber=9",
+      "expected_bytes": 1752,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 1752,
+      "sha256": "b20d664e6e2bf4803d8659b4246036b53663733bcddef4854ec5fad77ef8a8f5"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/upstream/dqi/cubic.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fupstream%2Fdqi%2Fcubic.py?datasetVersionNumber=9",
+      "expected_bytes": 7270,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 7270,
+      "sha256": "7e5dbe263f7799e31d272e587a39bb1b37dac2ffe5311355c36f3645ffc385e0"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/upstream/dqi/early_a.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fupstream%2Fdqi%2Fearly_a.py?datasetVersionNumber=9",
+      "expected_bytes": 3149,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3149,
+      "sha256": "a505a750673fd6cbbcdfb65ea7b624286bf2a1d7c83f3d68b28def3130088401"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/upstream/dqi/evaluation.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fupstream%2Fdqi%2Fevaluation.py?datasetVersionNumber=9",
+      "expected_bytes": 1798,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 1798,
+      "sha256": "59e32fb69f7d47929c64f1f79ad2f4e5b30021c8d2b6980f8c13a15768917387"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/upstream/dqi/forney_control.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fupstream%2Fdqi%2Fforney_control.py?datasetVersionNumber=9",
+      "expected_bytes": 3975,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3975,
+      "sha256": "8640644155f587e74a22eddb184fa046d462f0bc806b5b8421c31dfa1e212b1f"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/upstream/dqi/narrow.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fupstream%2Fdqi%2Fnarrow.py?datasetVersionNumber=9",
+      "expected_bytes": 1883,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 1883,
+      "sha256": "e25527421be561a50fbbb4a89b28dbf46e68916d08b68005506ec7be2bcf6f32"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/upstream/dqi/quotient.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fupstream%2Fdqi%2Fquotient.py?datasetVersionNumber=9",
+      "expected_bytes": 6510,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 6510,
+      "sha256": "8d676e612722fe10846a1c555b5a2f187afda4478e11bf7e9d6cc88a1795fc75"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/upstream/dqi/quotient_hmr.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fupstream%2Fdqi%2Fquotient_hmr.py?datasetVersionNumber=9",
+      "expected_bytes": 3756,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3756,
+      "sha256": "adf3cab22b253eb3037c2364669dc927bb91e2f0c3edb1e3297f53cd6a1372f2"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/upstream/dqi/recursive.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fupstream%2Fdqi%2Frecursive.py?datasetVersionNumber=9",
+      "expected_bytes": 9136,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 9136,
+      "sha256": "960fe44761389f8a558989479b354e63617099de31e396c74a1e0595ed97671f"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/upstream/dqi/static_divisions.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fupstream%2Fdqi%2Fstatic_divisions.py?datasetVersionNumber=9",
+      "expected_bytes": 9473,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 9473,
+      "sha256": "765c33ac58b5ab74c2cc430c24a69c2571bfdf960521acc7844ed94597d3c05a"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/upstream/dqi/sweep.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fupstream%2Fdqi%2Fsweep.py?datasetVersionNumber=9",
+      "expected_bytes": 3382,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3382,
+      "sha256": "06f9f94509213722a42b706172b4d39efc993909f616e0d841aae20e95edd736"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/upstream/dqi/tower.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fupstream%2Fdqi%2Ftower.py?datasetVersionNumber=9",
+      "expected_bytes": 7587,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 7587,
+      "sha256": "50a58753e4191ca5520b1ecb6b590c6bd3ef1910a6f6ab7ee36b82dae7752336"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/upstream/dqi/zero_chain.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fupstream%2Fdqi%2Fzero_chain.py?datasetVersionNumber=9",
+      "expected_bytes": 3336,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 3336,
+      "sha256": "001bdff58887d5d949b51cdde692310b4f28ca5076b5d089c50e6d2a0aded064"
+    },
+    {
+      "name": "circuit_sources/somejoint/runs/mad-dqi/upstream/zero_mask_inverse.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fsomejoint%2Fruns%2Fmad-dqi%2Fupstream%2Fzero_mask_inverse.py?datasetVersionNumber=9",
+      "expected_bytes": 2698,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 2698,
+      "sha256": "cd92aa5c074f00018dd996624fabea12d3a2bd8e658cd6ac79529c5f2ee82747"
+    },
+    {
+      "name": "circuit_sources/zero_mask_inverse.py",
+      "url": "https://www.kaggle.com/api/v1/datasets/download/dmitriigluzdov/vqcc-femoco-public-factorization/circuit_sources%2Fzero_mask_inverse.py?datasetVersionNumber=9",
+      "expected_bytes": 2635,
+      "status": 200,
+      "content_type": "application/octet-stream",
+      "bytes": 2635,
+      "sha256": "610a6b2ea677489d3ae856ca9c9c051b14dacd2d4b1226c531243bc8ef1413bc"
+    }
+  ]
+}

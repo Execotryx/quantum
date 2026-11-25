@@ -1,0 +1,31 @@
+{
+  "status": "PARENT_AUTHORIZED_ISOLATED_NATIVE_SOURCE_READY_NOT_RUN",
+  "files": [
+    {
+      "path": "normalization9475.py",
+      "bytes": 8896,
+      "sha256": "95d6e2ac6ae838459310e77b5f05c3a77c8ee29b37e622888769dd8a83fefc81"
+    },
+    {
+      "path": "prove_normalization9475.py",
+      "bytes": 9214,
+      "sha256": "c957c07bc5992d416cb97236461b7c1084cc527389bf9f0f343d3b019d341d59"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1248,
+      "sha256": "8c7024d95ac6dcdd46946a98f6ea914e0656736c8fac57b16dcb9430e394f6c7"
+    },
+    {
+      "path": "INPUTS.json",
+      "bytes": 67264,
+      "sha256": "ba144ac21432fbfd77c96dfb0c5c995048e675bd75ccfc161a87bf9180be6217"
+    }
+  ],
+  "input_pins": 352,
+  "expected_E": 94.75,
+  "expected_native_local_Q": 46,
+  "global_Q": 48,
+  "paper_acceptance_sha256": "c6e795219c98415c078c010023004def1a76b2785779955c95d1f4f3c62f40bd",
+  "official_execution": false
+}

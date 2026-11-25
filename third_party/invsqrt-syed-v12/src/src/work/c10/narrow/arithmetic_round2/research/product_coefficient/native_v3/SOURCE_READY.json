@@ -1,0 +1,76 @@
+{
+  "status": "SOURCE_READY_AUTHORIZED_NATIVE_COMPONENT_NOT_EXECUTED",
+  "route": "AR005",
+  "Q": 48,
+  "expected_fixture_Toffolis": 246,
+  "product_recovery_E": 228.5,
+  "saving_E_vs_AR002": 9.5,
+  "files": [
+    {
+      "path": "arithmetic_round2/research/product_coefficient/native_v3/PLAN.md",
+      "bytes": 3498,
+      "sha256": "21449b5ad7eef4d0acb13df75c587b6f42bbe441f1d7cf0d175aa55a3e57a9b5"
+    },
+    {
+      "path": "arithmetic_round2/research/product_coefficient/native_v3/adapter.py",
+      "bytes": 5462,
+      "sha256": "c98b28f7d30a9f410c5bc4ae012eeb656bff80e908df75cfe6bcc5f02ba0eaed"
+    },
+    {
+      "path": "arithmetic_round2/research/product_coefficient/native_v3/prove.py",
+      "bytes": 14723,
+      "sha256": "92c7209129636c049e6dfa234bca2025e2c1c5ad243e63273d6d2f5eaf9fee18"
+    },
+    {
+      "path": "arithmetic_round2/receipts/PRODUCT_V3_PAPER_ACCEPTED.json",
+      "bytes": 1268,
+      "sha256": "72fe5dcd5afb57baea23099619bcec05d4ca738a6787d289bd0badfb0ec6b80f"
+    },
+    {
+      "path": "arithmetic_round2/research/product_coefficient/V3_SEED_RETIREMENT_PAPER.json",
+      "bytes": 11444,
+      "sha256": "4e9c7bfaafc06eeda4c35f8d69b2ab6c66b95db99e9aac70213363a4f1d0d040"
+    },
+    {
+      "path": "arithmetic_round2/research/product_coefficient/V3_SEED_RETIREMENT_SOURCE_READY.json",
+      "bytes": 1975,
+      "sha256": "37e0081a4439e67b903beffeca35f4c0cf8b1855e03b984e909a24c82c1a13fe"
+    },
+    {
+      "path": "arithmetic_round2/research/product_coefficient/component_text_proof.py",
+      "bytes": 4923,
+      "sha256": "b1b8eb2bb7d6aebfc14797a2a146f19e5b00ecd1acd16efebb7beb4138c7bed1"
+    },
+    {
+      "path": "native/candidate01/common.py",
+      "bytes": 3343,
+      "sha256": "9872e64213a4219522a87efc49d1aa549a04e43ae3fb51c9d5b762b1ea6535ab"
+    },
+    {
+      "path": "native/candidate01/lifecycle.py",
+      "bytes": 15973,
+      "sha256": "47b73f1f24ea027eedcbd1950cde7fc2535b32afeeb2e366ebdc4b6f1eb3c068"
+    },
+    {
+      "path": "native/candidate07/INPUTS.json",
+      "bytes": 57553,
+      "sha256": "df3d932917e1c0c7b9a6f0bea7b575190a22eb4d27b16a347524fbd208daa414"
+    },
+    {
+      "path": "arithmetic_round2/tools/strict_guard.py",
+      "bytes": 8974,
+      "sha256": "bc01e3aa123f56bbf815bf55a0bef93ebc08f7dd0b99e51c0082ea96b3ba45bc"
+    },
+    {
+      "path": "arithmetic_round2/research/root_normalization/V3_SEED_RETIREMENT_STATIC_REVIEW.json",
+      "bytes": 2493,
+      "sha256": "f61acd49357da3b5cda1e8d63cc9a7a44800c4ff8437b1bf1abc9fa1183c68ba"
+    }
+  ],
+  "requires_fresh_guard": true,
+  "all304_inherited_pins_checked_by_worker": true,
+  "command": "/usr/bin/python3.13 arithmetic_round2/research/product_coefficient/native_v3/prove.py",
+  "timeout_seconds": 120,
+  "cpu_seconds": 110,
+  "hard_AS_MiB": 512
+}

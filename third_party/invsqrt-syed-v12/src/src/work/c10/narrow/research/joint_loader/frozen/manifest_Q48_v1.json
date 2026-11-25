@@ -1,0 +1,41 @@
+{
+  "status": "FROZEN_EXACT_MATHEMATICAL_Q48_LOADERS_INDEPENDENT_REPLAY_PASS_NATIVE_PENDING",
+  "files": [
+    {
+      "source": "search/v3_first_q48_cap22_s8_resume002.json",
+      "path": "frozen/loader16_first61_Q48.json",
+      "bytes": 488989,
+      "sha256": "4857688e595af50828d7bedf0bc745eaaed8d10767e2e6ca6f77802887e1ad48"
+    },
+    {
+      "source": "search/v3_first_q48_cap22_s8_resume002.replay.json",
+      "path": "frozen/loader16_first61_Q48.replay.json",
+      "bytes": 3238,
+      "sha256": "e5998730a420e33b03d9fba84dedb363710a8d3a04cd16abcdece4c79071a3a4"
+    },
+    {
+      "source": "search/v2_framed_second_q48_cap21_s9.json",
+      "path": "frozen/loader16_second80_framed_Q48.json",
+      "bytes": 519686,
+      "sha256": "e4f007d322caae5c77b3d61c61d73fb239126e67a488238ece442b1f51d8a805"
+    },
+    {
+      "source": "search/v2_framed_second_q48_cap21_s9.replay.json",
+      "path": "frozen/loader16_second80_framed_Q48.replay.json",
+      "bytes": 4070,
+      "sha256": "0fce54f7e7e148bb7f4b4c474d1c2e886064d4cdd53c53c8d5d5fde704efb6e7"
+    }
+  ],
+  "first_Toffolis": 61,
+  "second_Toffolis": 80,
+  "T": 0,
+  "rotations": 0,
+  "first_other_owners": 26,
+  "first_work_peak": 22,
+  "second_other_owners": 27,
+  "second_work_peak": 21,
+  "Q": 48,
+  "final_cleanup_E": 9,
+  "root_value_decoder_E": 21,
+  "native_interface_changes_required": true
+}

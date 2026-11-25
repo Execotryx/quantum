@@ -1,0 +1,101 @@
+{
+  "status": "PASS_INDEPENDENT_PAPER_COMPOSITION_SAME_LIFECYCLE_INTERFACE_NATIVE_PENDING",
+  "Q": 48,
+  "expected_Toffolis": 1584,
+  "T": 4,
+  "R": 33,
+  "rotation_charge": 230.84805946161188,
+  "complete_predicted_cost": 87160.70685415737,
+  "lifecycle_E": 562,
+  "components_expected_Toffolis": {
+    "normalization": 97.5,
+    "consuming_root": 198,
+    "divider_disposable_feed": 587.5,
+    "paired_product_disposable_owned_carries": 240.5,
+    "coefficient_rows_two_forward_one_inverse": 123,
+    "seed": 17.5,
+    "coefficient_R_frames": 4,
+    "H3_H4_preparation_and_restoration": 7,
+    "root_value_decoder": 21,
+    "first_loader": 61,
+    "framed_second_loader": 79,
+    "shared_table_cleanup": 9,
+    "ring26_endpoint": 139
+  },
+  "unchanged_arithmetic_interface": true,
+  "model_sha256": "24fff823faa911afe93d02afc3ded0bbd156a210a85f1265c989a087f8fd1219",
+  "new_second_loader": {
+    "certificate_path": "research/joint_loader/search/v7_second_q48_delay_raw_suffix004_s109.json",
+    "certificate_sha256": "5276e10525e98c6dbf6dc215e2a525441ba36ce0342e3f2dd937a2720e085da1",
+    "replay_sha256": "0edcf9053f9bba1684eb4473584aa725aafdbbf3bdc55212f50440a2ae5c9baf",
+    "Toffolis": 79,
+    "fixed_address_slots": [
+      3,
+      5,
+      6
+    ],
+    "existing_work_inputs": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "new_zero_owners": 17,
+    "allocated_pool": 21,
+    "fixed_owners": 27,
+    "peak": 48,
+    "return_owners": 43,
+    "HMR_debts": 65,
+    "old_HMR_debts": 64,
+    "exact_A13_Hlow3_outputs_independently_compared": true,
+    "original_raw128_row_truths": true,
+    "step_kinds": {
+      "bank": 11,
+      "Clifford_frame_then_HMR": 98,
+      "CCX_new_coordinate": 66,
+      "XOR_product_existing_coordinate": 2,
+      "final_output_Clifford_frame": 2
+    }
+  },
+  "first_loader": {
+    "Toffolis": 61,
+    "new_zero_owners": 22,
+    "fixed_owners": 26,
+    "peak": 48,
+    "return_owners": 42,
+    "unchanged": true
+  },
+  "debt_ownership": {
+    "all_loader_mixed_signs": "TableDebts only",
+    "late_second_a6": "sole direct raw-root Z",
+    "current_D13": "first_D list, repaid on second D",
+    "snapshot": "separate paired snapshot debt",
+    "coefficient_and_product": "unchanged CarryDebts and all conditional regenerations",
+    "seed": "unchanged six carries and17.5E cleanup"
+  },
+  "phase": {
+    "basis_sha256": "a3bacdd5ef8e16acb8560a40e60e2c998f8171973b1dcc062a47503c5218d744",
+    "fit_sha256": "c0eab1edd234e32d5baa1a51a0fec46abf82165d3973ffda825d2149f67f11e5",
+    "phase50_sha256": "8bd482a8957cd387a2b212afdaca656947b7f89c983d67ff4eea4e14c3b0a26a",
+    "exact_original_inputs": 3133452,
+    "minimum_margin_units64": 124370688,
+    "original_tolerance_unchanged": true,
+    "ring_bits": 26,
+    "global_one_angle_units50": 0,
+    "endpoint_entry_exit_owners": 43,
+    "peak": 48,
+    "E": 139
+  },
+  "checked_ring_source_pins": 276,
+  "paper_gate_only": true,
+  "native_authorization": false,
+  "native_obligations": [
+    "Update second-loader65-debt assertion; no duplicate raw-bit Z",
+    "Report actual whole HMR count",
+    "New26-ring predicates,angles and independent integer50 oracle/digest",
+    "Fresh complete native original-domain/all-HMR proof",
+    "Four original official salts after parent authorization"
+  ],
+  "no_native_sources_changed": true,
+  "no_search_or_native_run": true
+}

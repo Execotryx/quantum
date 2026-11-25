@@ -1,0 +1,4056 @@
+{
+  "backend_sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+  "decoder_sha256": "53d8b2edf251e2a0c54c401a97d1396c7ed309e1cbfaab8d54a2c99a11ed6552",
+  "peak_live_qubits": 897,
+  "primitives": [
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "shifted_product",
+      "peak_live": 894,
+      "source": "exp/r-main/stream/direct_kernels.py",
+      "static_calls": 44,
+      "unconditional_calls": 44,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 894,
+          "static_calls": 4,
+          "unconditional_toffolis": 252
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 893,
+          "static_calls": 4,
+          "unconditional_toffolis": 294
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 893,
+          "static_calls": 4,
+          "unconditional_toffolis": 336
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 892,
+          "static_calls": 4,
+          "unconditional_toffolis": 378
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 892,
+          "static_calls": 4,
+          "unconditional_toffolis": 420
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 891,
+          "static_calls": 4,
+          "unconditional_toffolis": 462
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 891,
+          "static_calls": 4,
+          "unconditional_toffolis": 504
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 890,
+          "static_calls": 4,
+          "unconditional_toffolis": 546
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 890,
+          "static_calls": 4,
+          "unconditional_toffolis": 588
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 889,
+          "static_calls": 4,
+          "unconditional_toffolis": 630
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 876,
+          "static_calls": 4,
+          "unconditional_toffolis": 672
+        }
+      ],
+      "mean_calls_per_shot": 44,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "_erase_norm",
+      "peak_live": 892,
+      "source": "playbook/kit/decoder/exp/arithmetic/field.py",
+      "static_calls": 548,
+      "unconditional_calls": 548,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 856,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 857,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 858,
+          "static_calls": 64,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 859,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 860,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 861,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 862,
+          "static_calls": 2,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 863,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 864,
+          "static_calls": 18,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 865,
+          "static_calls": 59,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 866,
+          "static_calls": 3,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 867,
+          "static_calls": 3,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 868,
+          "static_calls": 6,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 869,
+          "static_calls": 3,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 870,
+          "static_calls": 12,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 871,
+          "static_calls": 5,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 872,
+          "static_calls": 6,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 873,
+          "static_calls": 5,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 874,
+          "static_calls": 6,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 875,
+          "static_calls": 7,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 876,
+          "static_calls": 4,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 877,
+          "static_calls": 4,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 878,
+          "static_calls": 22,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 879,
+          "static_calls": 5,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 880,
+          "static_calls": 96,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 881,
+          "static_calls": 8,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 882,
+          "static_calls": 5,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 883,
+          "static_calls": 8,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 884,
+          "static_calls": 13,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 885,
+          "static_calls": 71,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 886,
+          "static_calls": 8,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 887,
+          "static_calls": 7,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 888,
+          "static_calls": 7,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 889,
+          "static_calls": 7,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 890,
+          "static_calls": 10,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 891,
+          "static_calls": 67,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 892,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        }
+      ],
+      "mean_calls_per_shot": 548,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "_norm_xor",
+      "peak_live": 892,
+      "source": "playbook/kit/decoder/exp/arithmetic/field.py",
+      "static_calls": 9,
+      "unconditional_calls": 9,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 1,
+          "peak_live_qubits": 884,
+          "static_calls": 1,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 1,
+          "peak_live_qubits": 885,
+          "static_calls": 1,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 1,
+          "peak_live_qubits": 886,
+          "static_calls": 1,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 1,
+          "peak_live_qubits": 887,
+          "static_calls": 1,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 1,
+          "peak_live_qubits": 888,
+          "static_calls": 1,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 1,
+          "peak_live_qubits": 889,
+          "static_calls": 1,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 1,
+          "peak_live_qubits": 890,
+          "static_calls": 1,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 1,
+          "peak_live_qubits": 891,
+          "static_calls": 1,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 1,
+          "peak_live_qubits": 892,
+          "static_calls": 1,
+          "unconditional_toffolis": 15
+        }
+      ],
+      "mean_calls_per_shot": 9,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "_phase_norm",
+      "peak_live": 892,
+      "source": "playbook/kit/decoder/exp/arithmetic/field.py",
+      "static_calls": 566,
+      "unconditional_calls": 566,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 856,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 857,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 858,
+          "static_calls": 64,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 859,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 860,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 861,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 862,
+          "static_calls": 2,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 863,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 864,
+          "static_calls": 18,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 865,
+          "static_calls": 59,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 866,
+          "static_calls": 3,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 867,
+          "static_calls": 3,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 868,
+          "static_calls": 6,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 869,
+          "static_calls": 3,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 870,
+          "static_calls": 12,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 871,
+          "static_calls": 5,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 872,
+          "static_calls": 6,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 873,
+          "static_calls": 5,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 874,
+          "static_calls": 6,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 875,
+          "static_calls": 7,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 876,
+          "static_calls": 4,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 877,
+          "static_calls": 4,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 878,
+          "static_calls": 22,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 879,
+          "static_calls": 5,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 880,
+          "static_calls": 96,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 881,
+          "static_calls": 8,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 882,
+          "static_calls": 5,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 883,
+          "static_calls": 10,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 884,
+          "static_calls": 15,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 885,
+          "static_calls": 73,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 886,
+          "static_calls": 10,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 887,
+          "static_calls": 9,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 888,
+          "static_calls": 9,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 889,
+          "static_calls": 9,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 890,
+          "static_calls": 12,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 891,
+          "static_calls": 69,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 892,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        }
+      ],
+      "mean_calls_per_shot": 566,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": true,
+      "field": "GF(2^12)",
+      "function": "erase_product",
+      "peak_live": 897,
+      "source": "playbook/kit/decoder/exp/arithmetic/field.py",
+      "static_calls": 552,
+      "unconditional_calls": 552,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 862,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 876,
+          "static_calls": 5,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 882,
+          "static_calls": 16,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 883,
+          "static_calls": 226,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 884,
+          "static_calls": 11,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 885,
+          "static_calls": 2,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 886,
+          "static_calls": 6,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 887,
+          "static_calls": 2,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 888,
+          "static_calls": 2,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 889,
+          "static_calls": 13,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 890,
+          "static_calls": 16,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 891,
+          "static_calls": 16,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 892,
+          "static_calls": 14,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 893,
+          "static_calls": 14,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 894,
+          "static_calls": 14,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 895,
+          "static_calls": 14,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 896,
+          "static_calls": 17,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 897,
+          "static_calls": 163,
+          "unconditional_toffolis": 0
+        }
+      ],
+      "mean_calls_per_shot": 552,
+      "input_output_basis": "0x1053 polynomial at the full-field boundary; phase variants apply a phase or erase rather than returning a product"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "mul_xor",
+      "peak_live": 886,
+      "source": "playbook/kit/decoder/exp/arithmetic/field.py",
+      "static_calls": 306,
+      "unconditional_calls": 306,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 1,
+          "peak_live_qubits": 860,
+          "static_calls": 282,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 1,
+          "peak_live_qubits": 883,
+          "static_calls": 6,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 1,
+          "peak_live_qubits": 884,
+          "static_calls": 5,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 1,
+          "peak_live_qubits": 886,
+          "static_calls": 13,
+          "unconditional_toffolis": 42
+        }
+      ],
+      "mean_calls_per_shot": 306,
+      "input_output_basis": "0x1053 polynomial at the full-field boundary; phase variants apply a phase or erase rather than returning a product"
+    },
+    {
+      "at_decoder_live_peak": true,
+      "field": "GF(2^12)",
+      "function": "mul_xor0",
+      "peak_live": 897,
+      "source": "playbook/kit/decoder/exp/arithmetic/field.py",
+      "static_calls": 4290,
+      "unconditional_calls": 4290,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 850,
+          "static_calls": 68,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 859,
+          "static_calls": 68,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 861,
+          "static_calls": 66,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 862,
+          "static_calls": 305,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 863,
+          "static_calls": 1,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 864,
+          "static_calls": 14,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 865,
+          "static_calls": 30,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 866,
+          "static_calls": 34,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 867,
+          "static_calls": 38,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 868,
+          "static_calls": 42,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 869,
+          "static_calls": 46,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 870,
+          "static_calls": 50,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 871,
+          "static_calls": 54,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 872,
+          "static_calls": 118,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 873,
+          "static_calls": 30,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 875,
+          "static_calls": 3,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 876,
+          "static_calls": 87,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 882,
+          "static_calls": 21,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 883,
+          "static_calls": 30,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 884,
+          "static_calls": 36,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 885,
+          "static_calls": 10,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 886,
+          "static_calls": 4,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 887,
+          "static_calls": 1308,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 888,
+          "static_calls": 17,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 889,
+          "static_calls": 105,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 890,
+          "static_calls": 184,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 891,
+          "static_calls": 160,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 892,
+          "static_calls": 136,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 893,
+          "static_calls": 112,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 894,
+          "static_calls": 61,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 895,
+          "static_calls": 85,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 896,
+          "static_calls": 500,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 897,
+          "static_calls": 467,
+          "unconditional_toffolis": 42
+        }
+      ],
+      "mean_calls_per_shot": 4290,
+      "input_output_basis": "0x1053 polynomial at the full-field boundary; phase variants apply a phase or erase rather than returning a product"
+    },
+    {
+      "at_decoder_live_peak": true,
+      "field": "GF(2^12)",
+      "function": "phase_product",
+      "peak_live": 897,
+      "source": "playbook/kit/decoder/exp/arithmetic/field.py",
+      "static_calls": 1868,
+      "unconditional_calls": 1868,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 852,
+          "static_calls": 64,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 853,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 854,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 855,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 856,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 857,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 858,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 859,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 860,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 861,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 862,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 863,
+          "static_calls": 2,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 864,
+          "static_calls": 14,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 865,
+          "static_calls": 17,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 866,
+          "static_calls": 17,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 867,
+          "static_calls": 17,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 868,
+          "static_calls": 17,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 869,
+          "static_calls": 17,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 870,
+          "static_calls": 17,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 871,
+          "static_calls": 79,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 872,
+          "static_calls": 442,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 873,
+          "static_calls": 12,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 874,
+          "static_calls": 33,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 875,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 876,
+          "static_calls": 14,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 877,
+          "static_calls": 66,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 878,
+          "static_calls": 12,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 879,
+          "static_calls": 12,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 880,
+          "static_calls": 12,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 881,
+          "static_calls": 12,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 882,
+          "static_calls": 28,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 883,
+          "static_calls": 238,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 884,
+          "static_calls": 22,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 885,
+          "static_calls": 12,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 886,
+          "static_calls": 6,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 887,
+          "static_calls": 233,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 888,
+          "static_calls": 2,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 889,
+          "static_calls": 30,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 890,
+          "static_calls": 34,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 891,
+          "static_calls": 34,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 892,
+          "static_calls": 32,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 893,
+          "static_calls": 32,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 894,
+          "static_calls": 32,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 895,
+          "static_calls": 32,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 896,
+          "static_calls": 34,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 897,
+          "static_calls": 180,
+          "unconditional_toffolis": 0
+        }
+      ],
+      "mean_calls_per_shot": 1868,
+      "input_output_basis": "0x1053 polynomial at the full-field boundary; phase variants apply a phase or erase rather than returning a product"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "phase_inverse34",
+      "peak_live": 893,
+      "source": "playbook/kit/decoder/exp/fold_cached_norm/phase34.py",
+      "static_calls": 38,
+      "unconditional_calls": 38,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 871,
+          "static_calls": 1,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 872,
+          "static_calls": 1,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 883,
+          "static_calls": 3,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 884,
+          "static_calls": 1,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 885,
+          "static_calls": 1,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 886,
+          "static_calls": 2,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 887,
+          "static_calls": 2,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 888,
+          "static_calls": 2,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 889,
+          "static_calls": 2,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 890,
+          "static_calls": 2,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 891,
+          "static_calls": 2,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 892,
+          "static_calls": 2,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 893,
+          "static_calls": 17,
+          "unconditional_toffolis": 34
+        }
+      ],
+      "mean_calls_per_shot": 38,
+      "input_output_basis": "0x1053 polynomial at the full-field boundary; phase variants apply a phase or erase rather than returning a product"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "erase_norm_via_inverse_cache19",
+      "peak_live": 882,
+      "source": "playbook/kit/decoder/exp/inverse12_escape/joint.py",
+      "static_calls": 17,
+      "unconditional_calls": 17,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 3,
+          "peak_live_qubits": 873,
+          "static_calls": 8,
+          "unconditional_toffolis": 19
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 3,
+          "peak_live_qubits": 874,
+          "static_calls": 1,
+          "unconditional_toffolis": 19
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 3,
+          "peak_live_qubits": 875,
+          "static_calls": 1,
+          "unconditional_toffolis": 19
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 3,
+          "peak_live_qubits": 876,
+          "static_calls": 1,
+          "unconditional_toffolis": 19
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 3,
+          "peak_live_qubits": 877,
+          "static_calls": 1,
+          "unconditional_toffolis": 19
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 3,
+          "peak_live_qubits": 878,
+          "static_calls": 1,
+          "unconditional_toffolis": 19
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 3,
+          "peak_live_qubits": 879,
+          "static_calls": 1,
+          "unconditional_toffolis": 19
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 3,
+          "peak_live_qubits": 880,
+          "static_calls": 1,
+          "unconditional_toffolis": 19
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 3,
+          "peak_live_qubits": 881,
+          "static_calls": 1,
+          "unconditional_toffolis": 19
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 3,
+          "peak_live_qubits": 882,
+          "static_calls": 1,
+          "unconditional_toffolis": 19
+        }
+      ],
+      "mean_calls_per_shot": 17,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "inverse12_keep_inverse_norm64",
+      "peak_live": 880,
+      "source": "playbook/kit/decoder/exp/inverse12_escape/joint.py",
+      "static_calls": 17,
+      "unconditional_calls": 17,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 871,
+          "static_calls": 8,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 872,
+          "static_calls": 1,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 873,
+          "static_calls": 1,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 874,
+          "static_calls": 1,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 875,
+          "static_calls": 1,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 876,
+          "static_calls": 1,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 877,
+          "static_calls": 1,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 878,
+          "static_calls": 1,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 879,
+          "static_calls": 1,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 880,
+          "static_calls": 1,
+          "unconditional_toffolis": 64
+        }
+      ],
+      "mean_calls_per_shot": 17,
+      "input_output_basis": "0x1053 polynomial at the full-field boundary; phase variants apply a phase or erase rather than returning a product"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "inverse_zero",
+      "peak_live": 892,
+      "source": "playbook/kit/decoder/exp/inverse12_escape/zero1.py",
+      "static_calls": 102,
+      "unconditional_calls": 102,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 870,
+          "static_calls": 1,
+          "unconditional_toffolis": 65
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 878,
+          "static_calls": 1,
+          "unconditional_toffolis": 65
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 881,
+          "static_calls": 3,
+          "unconditional_toffolis": 65
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 882,
+          "static_calls": 1,
+          "unconditional_toffolis": 65
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 883,
+          "static_calls": 1,
+          "unconditional_toffolis": 65
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 884,
+          "static_calls": 3,
+          "unconditional_toffolis": 65
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 885,
+          "static_calls": 4,
+          "unconditional_toffolis": 65
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 886,
+          "static_calls": 4,
+          "unconditional_toffolis": 65
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 887,
+          "static_calls": 4,
+          "unconditional_toffolis": 65
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 888,
+          "static_calls": 4,
+          "unconditional_toffolis": 65
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 889,
+          "static_calls": 4,
+          "unconditional_toffolis": 65
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 890,
+          "static_calls": 7,
+          "unconditional_toffolis": 65
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 891,
+          "static_calls": 64,
+          "unconditional_toffolis": 65
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 892,
+          "static_calls": 1,
+          "unconditional_toffolis": 65
+        }
+      ],
+      "mean_calls_per_shot": 102,
+      "input_output_basis": "0x1053 polynomial at the full-field boundary; phase variants apply a phase or erase rather than returning a product"
+    },
+    {
+      "at_decoder_live_peak": true,
+      "field": "GF(2^12)",
+      "function": "inverse_apply_safe",
+      "peak_live": 897,
+      "source": "playbook/kit/decoder/exp/inverse19_joint/kernel.py",
+      "static_calls": 36,
+      "unconditional_calls": 36,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 887,
+          "static_calls": 1,
+          "unconditional_toffolis": 119
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 887,
+          "static_calls": 1,
+          "unconditional_toffolis": 165
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 3,
+          "unconditional_toffolis": 191
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 225
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 317
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 374
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 401
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 428
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 485
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 527
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 896,
+          "static_calls": 1,
+          "unconditional_toffolis": 542
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 581
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 623
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 665
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 895,
+          "static_calls": 1,
+          "unconditional_toffolis": 680
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 707
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 749
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 791
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 895,
+          "static_calls": 1,
+          "unconditional_toffolis": 821
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 833
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 875
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 917
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 894,
+          "static_calls": 1,
+          "unconditional_toffolis": 947
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 896,
+          "static_calls": 1,
+          "unconditional_toffolis": 959
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 894,
+          "static_calls": 1,
+          "unconditional_toffolis": 1085
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 893,
+          "static_calls": 1,
+          "unconditional_toffolis": 1211
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 893,
+          "static_calls": 1,
+          "unconditional_toffolis": 1337
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 892,
+          "static_calls": 1,
+          "unconditional_toffolis": 1463
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 892,
+          "static_calls": 1,
+          "unconditional_toffolis": 1589
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 891,
+          "static_calls": 1,
+          "unconditional_toffolis": 1715
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 891,
+          "static_calls": 1,
+          "unconditional_toffolis": 1841
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 890,
+          "static_calls": 1,
+          "unconditional_toffolis": 1967
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 890,
+          "static_calls": 1,
+          "unconditional_toffolis": 2093
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 889,
+          "static_calls": 1,
+          "unconditional_toffolis": 2219
+        }
+      ],
+      "mean_calls_per_shot": 36,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "inverse_initialized",
+      "peak_live": 882,
+      "source": "playbook/kit/decoder/exp/inverse_search/inverse20.py",
+      "static_calls": 22,
+      "unconditional_calls": 22,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 869,
+          "static_calls": 1,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 881,
+          "static_calls": 3,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 882,
+          "static_calls": 1,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 873,
+          "static_calls": 8,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 874,
+          "static_calls": 1,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 875,
+          "static_calls": 1,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 876,
+          "static_calls": 1,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 877,
+          "static_calls": 1,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 878,
+          "static_calls": 1,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 879,
+          "static_calls": 1,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 880,
+          "static_calls": 1,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 881,
+          "static_calls": 1,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 882,
+          "static_calls": 1,
+          "unconditional_toffolis": 64
+        }
+      ],
+      "mean_calls_per_shot": 22,
+      "input_output_basis": "0x1053 polynomial at the full-field boundary; phase variants apply a phase or erase rather than returning a product"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "phase_inverse12_quantum64",
+      "peak_live": 893,
+      "source": "playbook/kit/decoder/exp/jet24/kernel.py",
+      "static_calls": 38,
+      "unconditional_calls": 38,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 871,
+          "static_calls": 1,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 872,
+          "static_calls": 1,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 883,
+          "static_calls": 3,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 884,
+          "static_calls": 1,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 885,
+          "static_calls": 1,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 886,
+          "static_calls": 2,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 887,
+          "static_calls": 2,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 888,
+          "static_calls": 2,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 889,
+          "static_calls": 2,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 890,
+          "static_calls": 2,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 891,
+          "static_calls": 2,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 892,
+          "static_calls": 2,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 893,
+          "static_calls": 17,
+          "unconditional_toffolis": 34
+        }
+      ],
+      "mean_calls_per_shot": 38,
+      "input_output_basis": "0x1053 polynomial at the full-field boundary; phase variants apply a phase or erase rather than returning a product"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "cached_inverse",
+      "peak_live": 883,
+      "source": "playbook/kit/decoder/exp/jet24/pro_jet.py",
+      "static_calls": 56,
+      "unconditional_calls": 56,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 22,
+          "peak_live_qubits": 883,
+          "static_calls": 56,
+          "unconditional_toffolis": 58
+        }
+      ],
+      "mean_calls_per_shot": 56,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "erase_inverse_cached",
+      "peak_live": 874,
+      "source": "playbook/kit/decoder/exp/jet24/pro_jet.py",
+      "static_calls": 56,
+      "unconditional_calls": 56,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 3,
+          "peak_live_qubits": 874,
+          "static_calls": 56,
+          "unconditional_toffolis": 17
+        }
+      ],
+      "mean_calls_per_shot": 56,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "finish_inverse",
+      "peak_live": 871,
+      "source": "playbook/kit/decoder/exp/jet24/pro_jet.py",
+      "static_calls": 56,
+      "unconditional_calls": 56,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 871,
+          "static_calls": 56,
+          "unconditional_toffolis": 30
+        }
+      ],
+      "mean_calls_per_shot": 56,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "start_inverse",
+      "peak_live": 870,
+      "source": "playbook/kit/decoder/exp/jet24/pro_jet.py",
+      "static_calls": 56,
+      "unconditional_calls": 56,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 18,
+          "peak_live_qubits": 870,
+          "static_calls": 56,
+          "unconditional_toffolis": 33
+        }
+      ],
+      "mean_calls_per_shot": 56,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": true,
+      "field": "GF(2^12)",
+      "function": "phase_inverse36_pivot",
+      "peak_live": 897,
+      "source": "playbook/kit/decoder/exp/mul99/phase36.py",
+      "static_calls": 9,
+      "unconditional_calls": 9,
+      "variants": [
+        {
+          "conditional_toffolis": 144,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 889,
+          "static_calls": 1,
+          "unconditional_toffolis": 24
+        },
+        {
+          "conditional_toffolis": 144,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 890,
+          "static_calls": 1,
+          "unconditional_toffolis": 24
+        },
+        {
+          "conditional_toffolis": 144,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 891,
+          "static_calls": 1,
+          "unconditional_toffolis": 24
+        },
+        {
+          "conditional_toffolis": 144,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 892,
+          "static_calls": 1,
+          "unconditional_toffolis": 24
+        },
+        {
+          "conditional_toffolis": 144,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 893,
+          "static_calls": 1,
+          "unconditional_toffolis": 24
+        },
+        {
+          "conditional_toffolis": 144,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 894,
+          "static_calls": 1,
+          "unconditional_toffolis": 24
+        },
+        {
+          "conditional_toffolis": 144,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 895,
+          "static_calls": 1,
+          "unconditional_toffolis": 24
+        },
+        {
+          "conditional_toffolis": 144,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 896,
+          "static_calls": 1,
+          "unconditional_toffolis": 24
+        },
+        {
+          "conditional_toffolis": 144,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 24
+        }
+      ],
+      "mean_calls_per_shot": 9,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": true,
+      "field": "GF(2^12)",
+      "function": "mul_xor_noscratch",
+      "peak_live": 897,
+      "source": "playbook/kit/decoder/exp/noscratch/kernels.py",
+      "static_calls": 523,
+      "unconditional_calls": 523,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 852,
+          "static_calls": 72,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 853,
+          "static_calls": 2,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 854,
+          "static_calls": 2,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 855,
+          "static_calls": 2,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 856,
+          "static_calls": 2,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 857,
+          "static_calls": 2,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 858,
+          "static_calls": 2,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 859,
+          "static_calls": 2,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 860,
+          "static_calls": 2,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 861,
+          "static_calls": 2,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 875,
+          "static_calls": 33,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 876,
+          "static_calls": 16,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 877,
+          "static_calls": 5,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 878,
+          "static_calls": 5,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 879,
+          "static_calls": 5,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 880,
+          "static_calls": 5,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 881,
+          "static_calls": 5,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 882,
+          "static_calls": 21,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 883,
+          "static_calls": 231,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 884,
+          "static_calls": 7,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 885,
+          "static_calls": 7,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 886,
+          "static_calls": 2,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 887,
+          "static_calls": 2,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 888,
+          "static_calls": 2,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 889,
+          "static_calls": 11,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 890,
+          "static_calls": 11,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 891,
+          "static_calls": 11,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 892,
+          "static_calls": 9,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 893,
+          "static_calls": 9,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 894,
+          "static_calls": 9,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 895,
+          "static_calls": 9,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 896,
+          "static_calls": 9,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 897,
+          "static_calls": 9,
+          "unconditional_toffolis": 42
+        }
+      ],
+      "mean_calls_per_shot": 523,
+      "input_output_basis": "0x1053 polynomial at the full-field boundary; phase variants apply a phase or erase rather than returning a product"
+    },
+    {
+      "at_decoder_live_peak": true,
+      "field": "GF(2^12)",
+      "function": "inverse_stream_noscratch",
+      "peak_live": 897,
+      "source": "playbook/kit/decoder/exp/noscratch/schedules.py",
+      "static_calls": 18,
+      "unconditional_calls": 18,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 889,
+          "static_calls": 2,
+          "unconditional_toffolis": 66
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 890,
+          "static_calls": 2,
+          "unconditional_toffolis": 66
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 891,
+          "static_calls": 2,
+          "unconditional_toffolis": 66
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 892,
+          "static_calls": 2,
+          "unconditional_toffolis": 66
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 893,
+          "static_calls": 2,
+          "unconditional_toffolis": 66
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 894,
+          "static_calls": 2,
+          "unconditional_toffolis": 66
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 895,
+          "static_calls": 2,
+          "unconditional_toffolis": 66
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 896,
+          "static_calls": 2,
+          "unconditional_toffolis": 66
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 897,
+          "static_calls": 2,
+          "unconditional_toffolis": 66
+        }
+      ],
+      "mean_calls_per_shot": 18,
+      "input_output_basis": "0x1053 polynomial at the full-field boundary; phase variants apply a phase or erase rather than returning a product"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "norm_xor_noscratch",
+      "peak_live": 891,
+      "source": "playbook/kit/decoder/exp/noscratch/schedules.py",
+      "static_calls": 264,
+      "unconditional_calls": 264,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 856,
+          "static_calls": 1,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 857,
+          "static_calls": 2,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 858,
+          "static_calls": 64,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 859,
+          "static_calls": 1,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 860,
+          "static_calls": 1,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 861,
+          "static_calls": 1,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 862,
+          "static_calls": 1,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 863,
+          "static_calls": 1,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 864,
+          "static_calls": 1,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 865,
+          "static_calls": 2,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 866,
+          "static_calls": 1,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 867,
+          "static_calls": 1,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 868,
+          "static_calls": 6,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 869,
+          "static_calls": 2,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 870,
+          "static_calls": 2,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 871,
+          "static_calls": 5,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 872,
+          "static_calls": 6,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 873,
+          "static_calls": 6,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 874,
+          "static_calls": 6,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 875,
+          "static_calls": 6,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 876,
+          "static_calls": 6,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 877,
+          "static_calls": 9,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 878,
+          "static_calls": 81,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 879,
+          "static_calls": 1,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 881,
+          "static_calls": 33,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 883,
+          "static_calls": 2,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 884,
+          "static_calls": 2,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 885,
+          "static_calls": 2,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 886,
+          "static_calls": 2,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 887,
+          "static_calls": 2,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 888,
+          "static_calls": 2,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 889,
+          "static_calls": 2,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 890,
+          "static_calls": 2,
+          "unconditional_toffolis": 15
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 891,
+          "static_calls": 2,
+          "unconditional_toffolis": 15
+        }
+      ],
+      "mean_calls_per_shot": 264,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": true,
+      "field": "GF(2^12)",
+      "function": "inverse_apply",
+      "peak_live": 897,
+      "source": "playbook/kit/decoder/exp/safe_scalar/converter.py",
+      "static_calls": 36,
+      "unconditional_calls": 36,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 887,
+          "static_calls": 1,
+          "unconditional_toffolis": 119
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 887,
+          "static_calls": 1,
+          "unconditional_toffolis": 165
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 3,
+          "unconditional_toffolis": 191
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 225
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 317
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 374
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 401
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 428
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 485
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 527
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 896,
+          "static_calls": 1,
+          "unconditional_toffolis": 542
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 581
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 623
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 665
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 895,
+          "static_calls": 1,
+          "unconditional_toffolis": 680
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 707
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 749
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 791
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 895,
+          "static_calls": 1,
+          "unconditional_toffolis": 821
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 833
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 875
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 897,
+          "static_calls": 1,
+          "unconditional_toffolis": 917
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 894,
+          "static_calls": 1,
+          "unconditional_toffolis": 947
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 896,
+          "static_calls": 1,
+          "unconditional_toffolis": 959
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 894,
+          "static_calls": 1,
+          "unconditional_toffolis": 1085
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 893,
+          "static_calls": 1,
+          "unconditional_toffolis": 1211
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 893,
+          "static_calls": 1,
+          "unconditional_toffolis": 1337
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 892,
+          "static_calls": 1,
+          "unconditional_toffolis": 1463
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 892,
+          "static_calls": 1,
+          "unconditional_toffolis": 1589
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 891,
+          "static_calls": 1,
+          "unconditional_toffolis": 1715
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 891,
+          "static_calls": 1,
+          "unconditional_toffolis": 1841
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 890,
+          "static_calls": 1,
+          "unconditional_toffolis": 1967
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 890,
+          "static_calls": 1,
+          "unconditional_toffolis": 2093
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 25,
+          "peak_live_qubits": 889,
+          "static_calls": 1,
+          "unconditional_toffolis": 2219
+        }
+      ],
+      "mean_calls_per_shot": 36,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": true,
+      "field": "GF(2^12)",
+      "function": "masked_product",
+      "peak_live": 897,
+      "source": "playbook/kit/decoder/exp/safe_scalar/converter.py",
+      "static_calls": 64,
+      "unconditional_calls": 64,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 896,
+          "static_calls": 4,
+          "unconditional_toffolis": 54
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 897,
+          "static_calls": 60,
+          "unconditional_toffolis": 54
+        }
+      ],
+      "mean_calls_per_shot": 64,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "q_inverse",
+      "peak_live": 893,
+      "source": "playbook/kit/decoder/exp/safe_scalar/converter.py",
+      "static_calls": 64,
+      "unconditional_calls": 64,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 884,
+          "static_calls": 1,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 885,
+          "static_calls": 15,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 8,
+          "peak_live_qubits": 892,
+          "static_calls": 1,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 8,
+          "peak_live_qubits": 893,
+          "static_calls": 15,
+          "unconditional_toffolis": 34
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 890,
+          "static_calls": 2,
+          "unconditional_toffolis": 65
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 891,
+          "static_calls": 30,
+          "unconditional_toffolis": 65
+        }
+      ],
+      "mean_calls_per_shot": null,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers",
+      "count_unit": "generator entry and resume segments"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "erase_product_zero",
+      "peak_live": 872,
+      "source": "playbook/kit/decoder/final_decoder/conversion.py",
+      "static_calls": 4,
+      "unconditional_calls": 4,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 864,
+          "static_calls": 2,
+          "unconditional_toffolis": 0
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 0,
+          "peak_live_qubits": 872,
+          "static_calls": 2,
+          "unconditional_toffolis": 0
+        }
+      ],
+      "mean_calls_per_shot": 4,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "add_product",
+      "peak_live": 889,
+      "source": "playbook/kit/decoder/final_decoder/decode.py",
+      "static_calls": 4,
+      "unconditional_calls": 4,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 889,
+          "static_calls": 4,
+          "unconditional_toffolis": 42
+        }
+      ],
+      "mean_calls_per_shot": 4,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "controlled_inverse",
+      "peak_live": 881,
+      "source": "playbook/kit/decoder/final_decoder/decode.py",
+      "static_calls": 2,
+      "unconditional_calls": 2,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 19,
+          "peak_live_qubits": 881,
+          "static_calls": 1,
+          "unconditional_toffolis": 64
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 21,
+          "peak_live_qubits": 871,
+          "static_calls": 1,
+          "unconditional_toffolis": 98
+        }
+      ],
+      "mean_calls_per_shot": 2,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "deferred_multiply",
+      "peak_live": 887,
+      "source": "playbook/kit/decoder/final_decoder/decode.py",
+      "static_calls": 2,
+      "unconditional_calls": 2,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 875,
+          "static_calls": 1,
+          "unconditional_toffolis": 42
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 887,
+          "static_calls": 1,
+          "unconditional_toffolis": 42
+        }
+      ],
+      "mean_calls_per_shot": 2,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "multiply",
+      "peak_live": 887,
+      "source": "playbook/kit/decoder/final_decoder/decode.py",
+      "static_calls": 1,
+      "unconditional_calls": 1,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 887,
+          "static_calls": 1,
+          "unconditional_toffolis": 66
+        }
+      ],
+      "mean_calls_per_shot": 1,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "normal_form",
+      "peak_live": 886,
+      "source": "playbook/kit/decoder/final_decoder/decode.py",
+      "static_calls": 2,
+      "unconditional_calls": 2,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 24,
+          "peak_live_qubits": 886,
+          "static_calls": 2,
+          "unconditional_toffolis": 148
+        }
+      ],
+      "mean_calls_per_shot": 2,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "phase_masked_product",
+      "peak_live": 876,
+      "source": "playbook/kit/decoder/final_decoder/decode.py",
+      "static_calls": 4,
+      "unconditional_calls": 4,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 1,
+          "peak_live_qubits": 876,
+          "static_calls": 4,
+          "unconditional_toffolis": 12
+        }
+      ],
+      "mean_calls_per_shot": 4,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "reverse_deferred_multiply",
+      "peak_live": 887,
+      "source": "playbook/kit/decoder/final_decoder/decode.py",
+      "static_calls": 1,
+      "unconditional_calls": 1,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 887,
+          "static_calls": 1,
+          "unconditional_toffolis": 42
+        }
+      ],
+      "mean_calls_per_shot": 1,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "reverse_masked_multiply",
+      "peak_live": 887,
+      "source": "playbook/kit/decoder/final_decoder/decode.py",
+      "static_calls": 4,
+      "unconditional_calls": 4,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 12,
+          "peak_live_qubits": 887,
+          "static_calls": 4,
+          "unconditional_toffolis": 66
+        }
+      ],
+      "mean_calls_per_shot": 4,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    },
+    {
+      "at_decoder_live_peak": false,
+      "field": "GF(2^12)",
+      "function": "term_correction_with_inverse",
+      "peak_live": 889,
+      "source": "playbook/kit/decoder/final_decoder/decode.py",
+      "static_calls": 2,
+      "unconditional_calls": 2,
+      "variants": [
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 13,
+          "peak_live_qubits": 889,
+          "static_calls": 1,
+          "unconditional_toffolis": 86
+        },
+        {
+          "conditional_toffolis": 0,
+          "entry_condition_depth": 0,
+          "extra_live_qubits": 14,
+          "peak_live_qubits": 889,
+          "static_calls": 1,
+          "unconditional_toffolis": 97
+        }
+      ],
+      "mean_calls_per_shot": 2,
+      "input_output_basis": "Composite helper; may operate in internal tower coordinates over the 0x1053 field, on partial forms, or on control registers"
+    }
+  ],
+  "qubits": 897,
+  "source_sha256": "6e9f0028226c240539df18b3ff05f4f533b1ff06902774fa88e13aacbbadbcd6",
+  "static_toffolis": 444667,
+  "inventory_scope": "Function entries on a 12-qubit operand in the exact D4 emission. Nested rows overlap. Extra live qubits are above entry and include local result allocations. Conditional Toffoli counts are static upper bounds."
+}

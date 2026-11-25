@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "controller_work/after_v3/blocks/check_retained_flag_preimage.py",
+    "--output",
+    "controller_work/after_v3/blocks/runs/retained-flag-full"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794391558.2621834,
+  "rss_soft": 3000000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 181248000,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 5,
+  "elapsed_seconds": 155.8137366771698,
+  "current_rss": 77438976,
+  "available_bytes": 9574068224,
+  "exit_code": 0
+}

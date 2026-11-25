@@ -1,0 +1,26 @@
+{
+  "status": "SOURCE_READY_FOR_BOUNDED_BOOLEAN_AND_SOURCE_COUNTER_STUDY",
+  "files": [
+    {
+      "path": "TOP12_PLAN.md",
+      "bytes": 4650,
+      "sha256": "c6b8be7e0c572e28ffb5c952d6c0f7ccf94695a24cedb61b4fa71ec415a313ea"
+    },
+    {
+      "path": "top12_kernel.py",
+      "bytes": 7667,
+      "sha256": "f4367db957bac36fc319389358984ecf00b6b8788b7e19894f0600cf1e68aec5"
+    },
+    {
+      "path": "top12_study.py",
+      "bytes": 10984,
+      "sha256": "fc261288aa82e71240b1c95d0f14f29704fd0703981afb31e735f3c27b8f2d34"
+    },
+    {
+      "path": "INPUTS_002.json",
+      "bytes": 4892,
+      "sha256": "374ef8d0c4b42912636767400e8a0769934fe72f4e965c941e511e8181679bb4"
+    }
+  ],
+  "no_native_emission": true
+}

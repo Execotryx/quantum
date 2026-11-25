@@ -1,0 +1,28 @@
+{
+  "status": "POSITIVE_COMPLETE_PAPER_GATE_ACCEPTED_ISOLATED_NATIVE_AUTHORIZED",
+  "route": "AR005 temporary v3 retirement during inverse product",
+  "paper_sha256": "4e9c7bfaafc06eeda4c35f8d69b2ab6c66b95db99e9aac70213363a4f1d0d040",
+  "source_ready_sha256": "37e0081a4439e67b903beffeca35f4c0cf8b1855e03b984e909a24c82c1a13fe",
+  "guard_sha256": "3e5807ef7fd0a0fc19574ed85b9b75d1d308c20418d9928de730803fbf157f80",
+  "independent_review_sha256": "f61acd49357da3b5cda1e8d63cc9a7a44800c4ff8437b1bf1abc9fa1183c68ba",
+  "source_pins_checked": 9,
+  "Q": 48,
+  "product_pair_E": 227.5,
+  "raw_root_restoration_E": 1,
+  "complete_product_and_recovery_E": 228.5,
+  "saving_E_vs_AR002": 9.5,
+  "native_build_authorized": true,
+  "required_native_checks": [
+    "all valid original/model support",
+    "all original product and seed HMR transcripts",
+    "new raw-v3 HMR correction",
+    "current v3 physical handle and final layout",
+    "all dirty spectators restored",
+    "zero scratch and all reset checks",
+    "negative omitted v3 Z and original carry phase controls"
+  ],
+  "full_composed_native_and_four_default_batch_salts_required": true,
+  "protected_phase_seed_loaders_unchanged": true,
+  "expected_not_measured": true,
+  "utc": "2026-11-12T04:59:10.499175+00:00"
+}

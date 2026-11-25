@@ -1,0 +1,73 @@
+{
+  "status": "FROZEN_CANDIDATE05_SOURCE_READY_NOT_NATIVE_EXECUTED",
+  "files": [
+    {
+      "path": "INPUTS.json",
+      "bytes": 12389,
+      "sha256": "d6d9a82e8042b8219461d9db8e78379b441aa983171a877ccf84fad42aeb2eec"
+    },
+    {
+      "path": "PLAN.md",
+      "bytes": 2615,
+      "sha256": "047594387968c7c5100af50ac093f7653dd3655b08206735bd9fa725841b4431"
+    },
+    {
+      "path": "RESUME.md",
+      "bytes": 2140,
+      "sha256": "158882b4bf533cdc223515a656c8d794c078e0fd3790b7d2f94b51371610d4e3"
+    },
+    {
+      "path": "STATIC_AUDIT.json",
+      "bytes": 534,
+      "sha256": "5a0995fb857eebd017d2febaf276babf8c26e9c5e174b5e219ccf6e140ceff1e"
+    },
+    {
+      "path": "generate.py",
+      "bytes": 4975,
+      "sha256": "57ffa8f207629571319d411f86bc19a23a60bc955653932c720700b9859af7e8"
+    },
+    {
+      "path": "prove50.py",
+      "bytes": 3077,
+      "sha256": "9229fd15c4979efd65a00b3ddcd44a315510dc1cfc3c31dcc86782ba73a42787"
+    },
+    {
+      "path": "run_batch.py",
+      "bytes": 2750,
+      "sha256": "bfb27d92597bbe2311c9364b2342e21bee5ca6c13d4723a9158b11bf1930bd55"
+    },
+    {
+      "path": "static_audit.py",
+      "bytes": 3795,
+      "sha256": "4c3560e5f6dc4262462e59908247ca3c18831f51c486e08b74ef13dd4a98c939"
+    },
+    {
+      "path": "variant.py",
+      "bytes": 5845,
+      "sha256": "dc522e0881a15e7fbe99190df36d2bdbfd2b7c5438c3cd18f25d6537fecd5935"
+    }
+  ],
+  "expected_resources": {
+    "Q": 49,
+    "Toffolis": 1560.5,
+    "T": 4,
+    "R": 34,
+    "exact_margin_units64": 124372027,
+    "rotation_charge": 238.04838838550535,
+    "predicted_complete_cost": 88177.87103088977
+  },
+  "native_execution_owner": "parent shared strict native guard",
+  "required_hard_address_space": 536870912,
+  "command": "/usr/bin/python3.13 narrow/native/candidate05/run_batch.py --full-proof",
+  "unchanged_quantize50_receipt_sha256": "8670515091475959ab0edeae03cb736cdb1cb66cd7768366e69fafb7eff8bf72",
+  "inherited_oracle_sha256": "836fe4a39975279fd1fd343d8dabbfbf40c934d8eaf374db22329c05d4182854",
+  "baseline_sources_unchanged": true,
+  "previous_candidates_preserved": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "phase_grid_turns": "1/1125899906842624",
+  "native_execution_performed": false
+}

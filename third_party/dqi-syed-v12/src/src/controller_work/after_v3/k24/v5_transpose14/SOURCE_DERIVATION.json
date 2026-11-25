@@ -1,0 +1,192 @@
+{
+  "admitted_domain_change": false,
+  "compiler_profile_parameters": [],
+  "copies": [
+    {
+      "edits": [
+        {
+          "after": "    import transpose14_window as raw_lower_window",
+          "before": "    import transpose_handoff_window as raw_lower_window",
+          "occurrences": 1
+        }
+      ],
+      "new_name": "transpose14_core.py",
+      "new_sha256": "8b5eb93766ac6d9ef638594829ec8f6d27945e84b610c718b4cf9bea73ab039d",
+      "old_path": "controller_work/after_v3/blocks/transpose_handoff_core.py",
+      "old_sha256": "c7453a0a4b75819b75bc8fc3c918e0ec33ae52a4ef55f37c10e07a41865fab17"
+    },
+    {
+      "edits": [
+        {
+          "after": "import transpose14_core as C",
+          "before": "import transpose_handoff_core as C",
+          "occurrences": 1
+        },
+        {
+          "after": "TRANSPOSE_WINDOWS={17,14}",
+          "before": "TRANSPOSE_WINDOWS={17}",
+          "occurrences": 1
+        }
+      ],
+      "new_name": "transpose14_window.py",
+      "new_sha256": "1c25f660a58f7907602e60cfc32fbfc51a2775023cc911e33d5d10c2860236b4",
+      "old_path": "controller_work/after_v3/blocks/transpose_handoff_window.py",
+      "old_sha256": "000864e4f2a87465bb882571f79e7c7fd35b04f25779fe4bb947c19183036281"
+    },
+    {
+      "edits": [
+        {
+          "after": "\"\"\"Root-only current-v4 preimage with the added public transpose14 window.\n\nOnly the fixed window placement and its recursive module routing change.\nThe original256 fixtures, value/phase oracle and three seeds are preserved.\nFour actual predicate handoffs,18 paired phases and the complete unchanged\nHMR-event multiset are required. No new gap exclusion or native PASS is\ninferred from the source ledger.\n\"\"\"",
+          "before": "\"\"\"Root-guarded handoff preimage with the joint-norm phase sibling.\n\nBoth actual paired-scale callers use the same provider, with the unchanged\nrare classical-only branch. Eighteen emitted quotient calls and the exact\nnested mask events are required; old exclusive-branch events are absent.\nThe new63-T body saves36*(1-2**-24) expected T beyond the rare-branch bundle.\n\"\"\"",
+          "occurrences": 1
+        },
+        {
+          "after": "import time\n\nimport variant_support as Support\nSupport.enable_import_paths()\nSupport.verify_derivation()\nBASELINE_METRICS = Support.baseline_metrics()\n\nfrom collections import Counter",
+          "before": "import time\n\nfrom collections import Counter",
+          "occurrences": 1
+        },
+        {
+          "after": "AFTER = Support.WORK/'after_c5'",
+          "before": "AFTER = Path(__file__).resolve().parents[2]/'after_c5'",
+          "occurrences": 1
+        },
+        {
+          "after": "import transpose14_core as NewCore",
+          "before": "import transpose_handoff_core as NewCore",
+          "occurrences": 1
+        },
+        {
+          "after": "import transpose14_window as NewWindow",
+          "before": "import transpose_handoff_window as NewWindow",
+          "occurrences": 1
+        },
+        {
+          "after": "EXPECTED_STATIC = 115043",
+          "before": "EXPECTED_STATIC = 115081",
+          "occurrences": 1
+        },
+        {
+          "after": "EXPECTED_MEAN = 114476.87007855662",
+          "before": "EXPECTED_MEAN = 114514.87007855662",
+          "occurrences": 1
+        },
+        {
+          "after": "EXPECTED_PREFIX_STATIC = 57034",
+          "before": "EXPECTED_PREFIX_STATIC = 57053",
+          "occurrences": 1
+        },
+        {
+          "after": "    assert NewWindow.C is NewCore\n    assert NewWindow.WINDOWS == {17, 14} and NewWindow.TRANSPOSE_WINDOWS == {17, 14}\n",
+          "before": "    assert NewWindow.C is NewCore\n",
+          "occurrences": 1
+        },
+        {
+          "after": "        name: digest(Support.BLOCKS/name) for name in PROVIDER_PINS}",
+          "before": "        name: digest(Path(__file__).with_name(name)) for name in PROVIDER_PINS}",
+          "occurrences": 1
+        },
+        {
+          "after": "    assert Path(Transpose.__file__).resolve() == Support.BLOCKS/'window_transpose_handoff.py'\n    assert Path(NewCore.__file__).resolve() == Support.HERE/'transpose14_core.py'\n    assert Path(NewWindow.__file__).resolve() == Support.HERE/'transpose14_window.py'\n    assert NewWindow.WINDOWS == {17, 14} and NewWindow.TRANSPOSE_WINDOWS == {17, 14}",
+          "before": "    assert Path(Transpose.__file__).resolve() == Path(__file__).with_name('window_transpose_handoff.py')",
+          "occurrences": 1
+        },
+        {
+          "after": "    return dict(pins=Runtime.pinned_sources, new_provider_sha256=actual_provider_hashes,\n                public_placement_derivation=Support.verify_derivation(),\n                frozen_v4_evidence=Support.verify_frozen_v4(),",
+          "before": "    return dict(pins=Runtime.pinned_sources, new_provider_sha256=actual_provider_hashes,",
+          "occurrences": 1
+        },
+        {
+          "after": "    assert len(prefix_handoffs) == 2\n    assert Counter(row['n'] for row in prefix_handoffs) == {12: 1, 15: 1}\n    assert all(row['pay_existing_masks'] is True and row['closing'] is False for row in prefix_handoffs)\n    assert Counter(row['m'] for row in prefix_transpose_calls) == {11: 1, 14: 1}",
+          "before": "    assert len(prefix_handoffs) == 1 and prefix_handoffs[0]['n'] == 15\n    assert Counter(row['m'] for row in prefix_transpose_calls) == {14: 1}",
+          "occurrences": 1
+        },
+        {
+          "after": "    assert Counter(row['m'] for row in TRANSPOSE_CALLS) == {11: 2, 14: 2}\n    assert len(TRANSPOSE_HANDOFFS) == 4\n    assert Counter(row['pay_existing_masks'] for row in TRANSPOSE_HANDOFFS) == {False: 2, True: 2}\n    assert sorted((row['n'], row['closing'], row['pay_existing_masks']) for row in TRANSPOSE_HANDOFFS) == [\n        (12, False, True), (12, True, False), (15, False, True), (15, True, False)]",
+          "before": "    assert Counter(row['m'] for row in TRANSPOSE_CALLS) == {14: 2}\n    assert len(TRANSPOSE_HANDOFFS) == 2\n    assert Counter(row['pay_existing_masks'] for row in TRANSPOSE_HANDOFFS) == {False: 1, True: 1}\n    assert all(row['n'] == 15 for row in TRANSPOSE_HANDOFFS)",
+          "occurrences": 1
+        },
+        {
+          "after": "    assert expectation['events'] == BASELINE_METRICS['expectation']['events']\n    assert prefix_expectation['events'] == BASELINE_METRICS['prefix_expectation']['events']\n    assert Fraction(expectation['expected_T_exact']) == Fraction(BASELINE_METRICS['expectation']['expected_T_exact'])-38",
+          "before": "    expected_rare_saving = Fraction(295155, 34359738368)\n    expected_joint_saving = Fraction(36)*(1-Fraction(1, 1 << 24))\n    assert Fraction(expectation['expected_T_exact']) == Fraction(480461172601, 4194304)-expected_rare_saving-expected_joint_saving",
+          "occurrences": 1
+        },
+        {
+          "after": "    metrics = dict(\n        static_T=static-PROBE_T, circuit_static_T=static, probe_T=PROBE_T,\n        Q=circuit.num_qubits, retained_data=RETAINED,\n        prefix_static_T=prefix_static, prefix_expectation=prefix_expectation,\n        expectation=expectation,\n        accepted_v4_preimage_static_T=BASELINE_METRICS['static_T'],\n        accepted_v4_prefix_static_T=BASELINE_METRICS['prefix_static_T'],\n        accepted_v4_preimage_HMR_mean_T=BASELINE_METRICS['expectation']['expected_T'],\n        delta_static_T=-38, prefix_delta_static_T=-19,\n        delta_uniform_fresh_mask_mean_T=-38,\n        delta_uniform_fresh_mask_mean_T_exact='-38',\n        paired_phase_calls=list(PAIRED_CALLS),\n        prefix_forward_calls=prefix_calls, all_forward_calls=list(CALLS),\n        prefix_transpose_calls=prefix_transpose_calls,\n        all_transpose_calls=list(TRANSPOSE_CALLS),\n        prefix_transpose_handoffs=prefix_handoffs,\n        all_transpose_handoffs=list(TRANSPOSE_HANDOFFS),\n        transpose_provider=Pipeline.Window.transpose_tensor.__name__,\n        lower_windows=sorted(NewWindow.WINDOWS),\n        transpose_windows=sorted(NewWindow.TRANSPOSE_WINDOWS),\n        created_local_debts=record.core.local_created,\n        retired_local_debts=record.core.local_retired,\n        maximum_pending_local_masks=record.core.local_max_pending,\n        pending_local_masks_after_pair=len(record.core.local_flags),\n        gauge_parks=carrier.parks, gauge_unparks=carrier.unparks,\n        parked_phase_payments=carrier.parked_phase_payments,\n        top16_gauge_requeries=record.core.gauge_h_requeries,\n        HMR_event_multiset_unchanged=True, additional_excluded_gap_pairs=[],\n        operations=len(circuit), stages=stages,\n    )\n",
+          "before": "    metrics = dict(\n        static_T=static-PROBE_T, circuit_static_T=static, probe_T=PROBE_T,\n        Q=circuit.num_qubits, retained_data=RETAINED,\n        prefix_static_T=prefix_static, prefix_expectation=prefix_expectation,\n        expectation=expectation,\n        accepted_v3_preimage_static_T=115627,\n        accepted_v3_preimage_HMR_mean_T=114916.88131546974,\n        delta_static_T=-546,\n        delta_uniform_fresh_mask_mean_T=-366.01123046875-float(expected_rare_saving)-float(expected_joint_saving),\n        delta_uniform_fresh_mask_mean_T_exact=str(-Fraction(366)-Fraction(46,4096)-expected_rare_saving-expected_joint_saving),\n        rare_branch_additional_static_delta_T=-144,\n        rare_branch_additional_mean_delta_T_exact=str(-expected_rare_saving),\n        rare_branch_additional_mean_delta_T=-float(expected_rare_saving),\n        joint_quotient_calls=list(PAIRED_CALLS),\n        joint_phase_additional_static_delta_T=-36,\n        joint_phase_additional_mean_delta_T_exact=str(-expected_joint_saving),\n        joint_phase_additional_mean_delta_T=-float(expected_joint_saving),\n        transpose_incremental_static_and_expected_delta_T=-198,\n        handoff_additional_static_and_expected_delta_T=-22,\n        mask_guard_additional_exact_expected_delta_T=-0.01123046875,\n        delta_from_retained_flag_static_T=-402,\n        delta_from_retained_flag_expected_T=-222.01123046875-float(expected_rare_saving)-float(expected_joint_saving),\n        delta_from_self_contained_borrowed_static_T=-490,\n        delta_from_self_contained_borrowed_expected_T=-310.01123046875-float(expected_rare_saving)-float(expected_joint_saving),\n        prefix_delta_static_T=-183,\n        prefix_forward_calls=prefix_calls,\n        all_forward_calls=list(CALLS),\n        prefix_transpose_calls=prefix_transpose_calls,\n        all_transpose_calls=list(TRANSPOSE_CALLS),\n        prefix_transpose_handoffs=prefix_handoffs,\n        all_transpose_handoffs=list(TRANSPOSE_HANDOFFS),\n        transpose_provider=Pipeline.Window.transpose_tensor.__name__,\n        created_local_debts=record.core.local_created,\n        retired_local_debts=record.core.local_retired,\n        maximum_pending_local_masks=record.core.local_max_pending,\n        pending_local_masks_after_pair=len(record.core.local_flags),\n        gauge_parks=carrier.parks, gauge_unparks=carrier.unparks,\n        parked_phase_payments=carrier.parked_phase_payments,\n        top16_gauge_requeries=record.core.gauge_h_requeries,\n        operations=len(circuit), stages=stages,\n    )\n",
+          "occurrences": 1
+        },
+        {
+          "after": "    assert not any(args.output.iterdir()), 'Use a fresh empty output directory'",
+          "before": "    assert not (args.output/'report.json').exists(), 'Use a new output directory'",
+          "occurrences": 1
+        },
+        {
+          "after": "    source_before = Support.source_snapshot()\n    frozen_v4_before = Support.verify_frozen_v4()\n    accepted_before = Binding.verify_accepted_sources()\n",
+          "before": "    accepted_before = Binding.verify_accepted_sources()\n",
+          "occurrences": 1
+        },
+        {
+          "after": "    assert accepted_before == accepted_after\n    assert frozen_v4_before == Support.verify_frozen_v4()\n    assert source_before == Support.source_snapshot()\n",
+          "before": "    assert accepted_before == accepted_after\n",
+          "occurrences": 1
+        },
+        {
+          "after": "        status='PASS_NATIVE_TRANSPOSE14_CURRENT_V4_PREIMAGE_COMPONENT_ONLY',\n        scope='Public fixed window placement component; no whole candidate or official price.',\n        copied_source_snapshot=source_before, unchanged_v4_evidence=frozen_v4_before,",
+          "before": "        status='PASS_NATIVE_JOINT63_HANDOFF_PREIMAGE_COMPONENT_ONLY',",
+          "occurrences": 1
+        },
+        {
+          "after": "            'Both paired-scale callers use the unchanged selected-v4 joint63 provider with its rare27 branch.',\n            'The extra transpose14 uses the already required14/12 gap exclusion; no fixtures are newly omitted.',\n            'The four actual handoffs are at exact restored witnesses n12 and n15, one per direction.',",
+          "before": "            'Both paired-scale callers use the joint63 provider with its separately priced rare27 branch.',",
+          "occurrences": 1
+        },
+        {
+          "after": "            'All accepted C5/v3/release and selected-v4 sources and historical receipts remain unchanged.',",
+          "before": "            'All accepted C5/v3/release sources and historical receipts remain unchanged.',",
+          "occurrences": 1
+        },
+        {
+          "after": "import variant_support as Support\nimport profile_supplement as Supplement\n",
+          "before": "import variant_support as Support\n",
+          "occurrences": 1
+        },
+        {
+          "after": "    assert {r['gauge_flag'] for r in fixtures} == {0, 1}\n    original_modes = Counter()\n    for row in fixtures:\n        degrees = row['half_profile']\n        gaps = {a for a, z in zip(degrees, degrees[1:]) if a-z == 2}\n        original_modes[''.join(str(int(n in gaps)) for n in (14, 13, 12))] += 1\n    assert original_modes == {'000': len(used)}\n    supplement, supplement_source = Supplement.fixtures(Ref)\n    fixtures.extend(supplement)\n    assert len(fixtures) == (18 if smoke else 266)\n    return fixtures, dict(path=str(FIXTURES), sha256=FIXTURE_SHA,\n                          original_cases=256, original_used_cases=len(used),\n                          used_cases=len(fixtures), supplement_cases=10,\n                          selected_indices=used, smoke=smoke,\n                          omissions=[] if not smoke else list(range(8, 256)),\n                          original_window14_modes=dict(original_modes),\n                          supplement=supplement_source,\n                          new_population_draws=0, new_physical_inputs=0,\n                          preimage_component_domain_only_supplement=True)\n",
+          "before": "    assert {r['gauge_flag'] for r in fixtures} == {0, 1}\n    return fixtures, dict(path=str(FIXTURES), sha256=FIXTURE_SHA,\n                          original_cases=256, used_cases=len(fixtures),\n                          selected_indices=used, smoke=smoke,\n                          omissions=[] if not smoke else list(range(8, 256)),\n                          new_fixtures_or_random_draws=0)\n",
+          "occurrences": 1
+        },
+        {
+          "after": "        fixture_source=fixture_source, fixtures=len(fixtures),\n        fixture_groups=dict(original_component=fixture_source['original_used_cases'],\n                            existing_profile_supplement=10),",
+          "before": "        fixture_source=fixture_source, fixtures=len(fixtures),",
+          "occurrences": 1
+        }
+      ],
+      "new_name": "check_transpose14_preimage.py",
+      "new_sha256": "64b8e50eb58f1310c1f79faec0a47c97db42807ffae5a6d5b358574f583e15fb",
+      "old_path": "controller_work/after_v3/blocks/check_quotient63_preimage.py",
+      "old_sha256": "c5a74fe0460106d76ee6a214a3977cbc22f7d6622e27393ff63c857149095c30"
+    }
+  ],
+  "format": "DQI_PUBLIC_TRANSPOSE14_EXACT_LITERAL_COPIES_V1",
+  "semantics": {
+    "expected_paired_static_and_mean_delta_T": -38,
+    "expected_prefix_static_delta_T": -19,
+    "new_excluded_gap_pairs": [],
+    "new_lower": [
+      14,
+      17
+    ],
+    "new_transpose": [
+      14,
+      17
+    ],
+    "old_lower": [
+      14,
+      17
+    ],
+    "old_transpose": [
+      17
+    ]
+  },
+  "status": "SOURCE_PREPARED_NATIVE_PENDING"
+}

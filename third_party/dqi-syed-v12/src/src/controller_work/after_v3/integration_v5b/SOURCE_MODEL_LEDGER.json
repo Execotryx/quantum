@@ -1,0 +1,79 @@
+{
+  "Q": 889,
+  "components_static_T": {
+    "extractor_rolling_gauge_padded_seed": 151907,
+    "full_scan": 44275,
+    "polynomial_synthesis": 65076,
+    "preimage_gauge_parking_shared_windows": 115025,
+    "projective_finish": 7856,
+    "shared_finish_outer_reciprocal_seam": -92
+  },
+  "expected_mean_T": 383244.0290940929,
+  "expected_mean_T_exact": "13168164570771213/34359738368",
+  "format": "DQI_V5B_SOURCE_MODEL_LEDGER_V1",
+  "frozen_v4_source_mean_exact": "13178547653656333/34359738368",
+  "frozen_v4_static_T": 384349,
+  "gain_from_initial_v5_source_mean_exact": "176160759/8388608",
+  "gain_from_initial_v5_static_T": 21,
+  "gain_from_v4_source_mean_exact": "2534932345/8388608",
+  "gain_from_v4_static_T": 302,
+  "gains": {
+    "first_two_retained_norm195": {
+      "mean_T_exact": "1020002241/4194304",
+      "static_T": 243
+    },
+    "matched_prefix_norm_debt": {
+      "mean_T_exact": "3",
+      "static_T": 3
+    },
+    "paired_cubic62": {
+      "mean_T_exact": "150994935/8388608",
+      "static_T": 18
+    },
+    "transpose14": {
+      "mean_T_exact": "38",
+      "static_T": 38
+    }
+  },
+  "helper_compatibility": {
+    "future_width_merge_requires_new_lifetime_gate": true,
+    "prior_quotient_phase_helpers": 18,
+    "selected_quotient_phase_helpers": 22
+  },
+  "initial_v5_source_mean_exact": "13168886125240077/34359738368",
+  "initial_v5_static_T": 384068,
+  "key": {
+    "expected_mean_T_exact": "909145061707/4194304",
+    "prefix_static_T": 101055,
+    "static_T": 216983
+  },
+  "measured_mean_T": null,
+  "native_jobs_run_by_preparer": 0,
+  "new_admitted_domain_event": false,
+  "new_population_draws": 0,
+  "norm_stage_counts": {
+    "historical_key": 72,
+    "historical_total": 122,
+    "scope": "Source-derived stages, not instrumented literal calls; no extra discount is inferred from these counts.",
+    "selected_key": 66,
+    "selected_total": 116
+  },
+  "official_banking_gate": "Four fresh original full official runs with actual failure factors and independent positive-error attribution.",
+  "official_cost": null,
+  "physical_scan_positions": 4095,
+  "preimage": {
+    "expected_mean_T_exact": "3932776829832973/34359738368",
+    "prefix_static_T": 57034,
+    "static_T": 115025
+  },
+  "public_cutoff": 15,
+  "selected_changes": [
+    "production_first_two_matched191_195_norm_debts",
+    "public_transpose_window14",
+    "paired_cubic62_trace_phase"
+  ],
+  "status": "SOURCE_MODEL_ONLY_NATIVE_AND_OFFICIAL_PENDING",
+  "total_static_T": 384047,
+  "user_price_goal": 351000000000,
+  "user_price_goal_met": null
+}

@@ -1,0 +1,21 @@
+{
+  "actual_caller_sites_required": 18,
+  "full_native_preimage_required": true,
+  "full_official_required": true,
+  "large_helpers": 22,
+  "large_phase_static_T": 62,
+  "mean_saving": 17.999998927116394,
+  "mean_saving_exact": "150994935/8388608",
+  "new_Q_claimed": false,
+  "new_only_source_mean_exact": "13177929178402573/34359738368",
+  "new_only_source_nominal_cost": 361083440347.26904,
+  "new_population_event": false,
+  "paired_mean_exact": "4260607414245/68719476736",
+  "paired_static_T": 89,
+  "scope": "Additional pairedphase replacement only, no whole bank",
+  "selected_v4_mean_exact": "13178547653656333/34359738368",
+  "small_helpers": 10,
+  "small_phase_static_T": 20,
+  "static_saving_model": 18,
+  "status": "SOURCE_MODEL_NATIVE_PENDING"
+}

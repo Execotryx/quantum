@@ -1,0 +1,170 @@
+{
+  "edits": [
+    {
+      "after": "Root-only production-key gate for the zero-repaired third public chart.",
+      "before": "Root-only production-key gate for matched prefix/return norm debts.",
+      "occurrences": 1
+    },
+    {
+      "after": "The original physical corpus and exclusions remain. One deterministic\nold-admitted physical zero-residue fixture is added. The independent boundary\noracle checks every unchanged head/flag and replays the new common carry\nscale. Both constant-carry seams and the initial tail-bit reset are checked.\nThe old arbitrary-initial-carry component ABI is not borrowed as clean.",
+      "before": "The accepted physical syndrome fixtures and independent key oracle remain\nunchanged. A new intermediate tape directly tests the restored public carry\nbefore the public reset and retained storage use. Arbitrary-initial-carry algebraic fixtures are not admitted\nto this explicitly production-only adapter.",
+      "occurrences": 1
+    },
+    {
+      "after": "ZERO_FIXTURES = HERE/'runs/third-raw-zero/cases.json'\nPREFIX_T = 101058-3+32\nKEY_T = 217229-301",
+      "before": "PREFIX_T = 101058-3\nKEY_T = 217229-246",
+      "occurrences": 1
+    },
+    {
+      "after": "'third_chart_unchanged_key_harness'",
+      "before": "'matched_stack_unchanged_key_harness'",
+      "occurrences": 1
+    },
+    {
+      "after": "first_three_prefix_carry_restored",
+      "before": "first_two_prefix_carry_restored",
+      "occurrences": 1
+    },
+    {
+      "after": "first_three_clean_carry_seam",
+      "before": "first_two_clean_carry_seam",
+      "occurrences": 1
+    },
+    {
+      "after": "    assert all(isinstance(rec,Phase.PrefixRecord) and not rec.closed\n        and rec.prefix_static_T==191 and rec.child_mask_bits==6\n        for rec in key['extraction'].first_inverses)\n    third=key['extraction'].third\n    assert isinstance(third,Adapter.Third.Record) and not third.closed\n    assert third.prefix_static_T==620 and len(third.zero_mask)==1\n    assert len(third.inverses)==3 and all(isinstance(rec,Phase.PrefixRecord)\n        and not rec.closed and rec.prefix_static_T==191 for rec in third.inverses)\n",
+      "before": "    assert all(isinstance(rec,Phase.PrefixRecord) and not rec.closed\n        and rec.prefix_static_T==191 and rec.child_mask_bits==6\n        for rec in key['extraction'].first_inverses)\n",
+      "occurrences": 1
+    },
+    {
+      "after": "rec.closed_inverse_calls==6 and len(rec.borrow_receipts)==6",
+      "before": "rec.closed_inverse_calls==3 and len(rec.borrow_receipts)==3",
+      "occurrences": 1
+    },
+    {
+      "after": "        all_owned_storage_bits_reset=True,deferred_prefix_mask_paid=True) for row in rec.borrow_receipts)\n    assert rec.third.closed and rec.third.zero_mask is None\n    assert rec.third_receipt['prefix_zero_mask_paid'] and rec.third_receipt['return_zero_flag_retired']\n    assert rec.third_receipt['return_static_T']==654 and rec.third_receipt['closed_inverse_calls']==3\n",
+      "before": "        all_owned_storage_bits_reset=True,deferred_prefix_mask_paid=True) for row in rec.borrow_receipts)\n",
+      "occurrences": 1
+    },
+    {
+      "after": "('direct_carry84_selected_target_parities',84,24):32",
+      "before": "('direct_carry84_selected_target_parities',84,24):33",
+      "occurrences": 1
+    },
+    {
+      "after": "('inverse_phase27_12_helpers',27,12):66",
+      "before": "('inverse_phase27_12_helpers',27,12):67",
+      "occurrences": 1
+    },
+    {
+      "after": "('scalar_inverse_six',4,6):7",
+      "before": "('scalar_inverse_six',4,6):4",
+      "occurrences": 1
+    },
+    {
+      "after": "('tail_or_gauge_fresh_zero_phase',22,1):21",
+      "before": "('tail_or_gauge_fresh_zero_phase',22,1):20",
+      "occurrences": 1
+    },
+    {
+      "after": "delta=-Fraction(1310167980,4194304)",
+      "before": "delta=-246-Fraction(12,64)+Fraction(252,1<<24)",
+      "occurrences": 1
+    },
+    {
+      "after": "static_T_model_delta_from_v4=-301,",
+      "before": "static_T_model_delta_from_v4=-246,",
+      "occurrences": 1
+    },
+    {
+      "after": "prefix_seam=prefix_seam_capture[0],prefix_phase_debts_retired=6,\n        third_zero_mask_retired=True,third_receipt=rec.third_receipt)",
+      "before": "prefix_seam=prefix_seam_capture[0],prefix_phase_debts_retired=3)",
+      "occurrences": 1
+    },
+    {
+      "after": "phase_scope='Special prefix HMR debts are intentionally still open'",
+      "before": "phase_scope='First-two prefix HMR debts are intentionally still open'",
+      "occurrences": 1
+    },
+    {
+      "after": "    parser.add_argument('--keep-circuits',action='store_true')\n    parser.add_argument('--zero-fixtures',type=Path,default=ZERO_FIXTURES)\n    parser.add_argument('--require-gauge1',action='store_true')",
+      "before": "    parser.add_argument('--keep-circuits',action='store_true')",
+      "occurrences": 1
+    },
+    {
+      "after": "    args.fixtures_file=DEFAULT_FIXTURES\n    args.extra_fixtures=[RARE_FIXTURES,args.zero_fixtures]\n    preparation_path=args.zero_fixtures.with_name('report.json')\n    preparation=json.loads(preparation_path.read_text())\n    assert preparation['status']=='PREPARED_ADMITTED_PHYSICAL_THIRD_RAW_ZERO_FIXTURE_NOT_NATIVE'\n    assert preparation['cases']==1 and preparation['new_population_draws']==0\n    assert preparation['prepared_cases_sha256']==digest(args.zero_fixtures)\n    assert preparation['unchanged_complete_classifier_admitted'] and preparation['exact_C5_raw_query_zero']\n    fixed_inputs={\n        DEFAULT_FIXTURES:'eb9216d25bd69f17179533932f0ec6a8704860a366117bd370b6eec35495e339',\n        RARE_FIXTURES:'149d50ccac0d343e4479444f1804a01127be648750f12ed9a99b1acc04f5b3d4'}\n    assert all(digest(path)==wanted for path,wanted in fixed_inputs.items())\n    for relative,wanted in preparation['source_bindings'].items():\n        assert digest(ROOT/relative)==wanted,relative",
+      "before": "    args.fixtures_file=DEFAULT_FIXTURES\n    args.extra_fixtures=[RARE_FIXTURES]",
+      "occurrences": 1
+    },
+    {
+      "after": "import first3_retained_norm_adapter as Adapter",
+      "before": "import first2_retained_norm_deferred_adapter as Adapter",
+      "occurrences": 1
+    },
+    {
+      "after": "import boundary_scale_first3 as Boundary\n    rescale_boundary=Boundary.rescale_boundary",
+      "before": "from boundary_scale_adapter import rescale_boundary",
+      "occurrences": 1
+    },
+    {
+      "after": "    oracles=[rescale_boundary(row) for row in old_oracles]",
+      "before": "    oracles=[rescale_boundary(row,variant='first2') for row in old_oracles]",
+      "occurrences": 1
+    },
+    {
+      "after": "assert full_count==783 and len(excluded)==76\n    assert any(row['raw_queries'][2]==0 for row in old_oracles)\n    assert all(row['third_chart']['raw_zero']==(old['raw_queries'][2]==0)\n               for row,old in zip(oracles,old_oracles))",
+      "before": "assert full_count==782 and len(excluded)==76",
+      "occurrences": 1
+    },
+    {
+      "after": "        chosen.update(i for i,oracle in enumerate(oracles) if oracle['gauge']==1)\n        chosen.update(i for i,oracle in enumerate(oracles) if oracle['third_chart']['raw_zero'])",
+      "before": "        chosen.update(i for i,oracle in enumerate(oracles) if oracle['gauge']==1)",
+      "occurrences": 1
+    },
+    {
+      "after": "    assert all(row['changed_carry_variant']=='first3_zero_repaired' for row in oracles)\n    assert any(row['third_chart']['raw_zero'] for row in oracles)\n    if args.require_gauge1:\n        assert any(row['gauge']==1 for row in oracles),'New carry gauge1 requires a real fixture; no old gauge label is reused'",
+      "before": "    assert all(row['changed_carry_variant']=='first2' for row in oracles)\n    assert any(row['gauge']==1 for row in oracles)",
+      "occurrences": 1
+    },
+    {
+      "after": "          (Path(__file__),Path(Adapter.__file__),Path(Adapter.Third.__file__),Path(Phase.__file__),\n           Path(Boundary.__file__),harness_path,DEFAULT_FIXTURES,RARE_FIXTURES,\n           args.zero_fixtures,preparation_path,HERE/'prepare_zero_third_fixture.py')}\n    assert digest(Phase.__file__)=='8cb8eaee9312acc81a3048072ec3ddf721399ba8ccdd7eac94002f9d4ec2da46'",
+      "before": "          (Path(__file__),Path(Adapter.__file__),Path(Phase.__file__),harness_path,\n           DEFAULT_FIXTURES,RARE_FIXTURES)}",
+      "occurrences": 1
+    },
+    {
+      "after": "status='IN_PROGRESS_PRODUCTION_THIRD_ZERO_REPAIRED_CHART'",
+      "before": "status='IN_PROGRESS_PRODUCTION_FIRST_TWO_MATCHED_NORM_DEBTS'",
+      "occurrences": 1
+    },
+    {
+      "after": "        gauges=dict(Counter(row['gauge'] for row in oracles)),\n        actual_new_gauge1_covered=any(row['gauge']==1 for row in oracles),\n        physical_raw_zero_cases=sum(row['third_chart']['raw_zero'] for row in oracles),\n        deterministic_zero_fixture_preparation=preparation,",
+      "before": "        gauges=dict(Counter(row['gauge'] for row in oracles)),",
+      "occurrences": 1
+    },
+    {
+      "after": "            production_special_inverse_provider=Phase.__name__,\n            repaired_third_chart_provider=Adapter.Third.__name__,\n            clean_carry_storage_indices=list(range(24)),\n            prefix_classical_debt_bits=37,six_prefix_masks_paid_from_return_child=True,\n            prefix_zero_mask_paid_at_return_predicate=True)",
+      "before": "            production_first_two_phase_provider=Phase.__name__,\n            clean_carry_storage_indices=list(range(24)),\n            prefix_classical_debt_bits=18,three_prefix_masks_paid_from_return_child=True)",
+      "occurrences": 1
+    },
+    {
+      "after": "                    'The full paired key checks arbitrary diagonal and cubic probes plus all restoration.',\n                    'The new final carry/gauge is independently replayed; old gauge1 labels do not imply new gauge1 coverage.',\n                    'The added physical raw-zero fixture is a deterministic magnitude solve, not a population draw.',",
+      "before": "                    'The full paired key checks arbitrary diagonal and cubic probes plus all restoration.',",
+      "occurrences": 1
+    },
+    {
+      "after": "status='PASS_PRODUCTION_THIRD_ZERO_REPAIRED_CHART_KEY'",
+      "before": "status='PASS_PRODUCTION_FIRST_TWO_MATCHED_NORM_DEBTS_KEY'",
+      "occurrences": 1
+    },
+    {
+      "after": "status='FAILED_OR_INTERRUPTED_PRODUCTION_THIRD_ZERO_REPAIRED_CHART_KEY'",
+      "before": "status='FAILED_OR_INTERRUPTED_PRODUCTION_MATCHED_NORM_DEBTS_KEY'",
+      "occurrences": 1
+    }
+  ],
+  "format": "DQI_THIRD_CHART_KEY_CHECKER_EXACT_LITERAL_DERIVATION_V1",
+  "native_executed": false,
+  "new_path": "controller_work/after_v3/blocks/v6/check_first3_retained_norm_adapter.py",
+  "new_sha256": "3795553ea5ec70155d443a24d90930b9e32b8727d2f15abb98246edec33b4b17",
+  "parent_path": "controller_work/after_v3/blocks/v5/check_first2_retained_norm_deferred_adapter.py",
+  "parent_sha256": "10b879908015940dec875c2adb20b9aa8d9956b7b3c92243bdfe47a9f2df6039"
+}

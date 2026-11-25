@@ -1,0 +1,3510 @@
+{
+  "driver_sha256": "9468cd1678db8105df753b92b1ba08e37d6677bc410545787157f35720d23b10",
+  "early_extractor_sha256": "9e8b216d2203e2ba4a7f0f7072552d53991a29eb7054eee28d6864fe42d2be67",
+  "first_rolling_slot": 0,
+  "qubits": 889,
+  "sha256": "be939f459e4790efaef2a155d9fded70c5940c216ae50c7294c4d4ffa8dfb06c",
+  "source_archive_sha256": "49e2b331d4008afb724985caf1038765b7a910f08838b590bf6e8fb692772763",
+  "stages": [
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 1,
+        "gray_temporary_CX": 4096,
+        "source_bits_consumed": 12,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 48300
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 2,
+        "gray_temporary_CX": 8192,
+        "source_bits_consumed": 24,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 96600
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 3,
+        "gray_temporary_CX": 12288,
+        "source_bits_consumed": 36,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 144900
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 4,
+        "gray_temporary_CX": 16384,
+        "source_bits_consumed": 48,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 193200
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 5,
+        "gray_temporary_CX": 20480,
+        "source_bits_consumed": 60,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 241500
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 6,
+        "gray_temporary_CX": 24576,
+        "source_bits_consumed": 72,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 289800
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 7,
+        "gray_temporary_CX": 28672,
+        "source_bits_consumed": 84,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 338100
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 8,
+        "gray_temporary_CX": 32768,
+        "source_bits_consumed": 96,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 386400
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 9,
+        "gray_temporary_CX": 36864,
+        "source_bits_consumed": 108,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 434700
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 10,
+        "gray_temporary_CX": 40960,
+        "source_bits_consumed": 120,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 483000
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 11,
+        "gray_temporary_CX": 45056,
+        "source_bits_consumed": 132,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 531300
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 12,
+        "gray_temporary_CX": 49152,
+        "source_bits_consumed": 144,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 579600
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 13,
+        "gray_temporary_CX": 53248,
+        "source_bits_consumed": 156,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 627900
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 14,
+        "gray_temporary_CX": 57344,
+        "source_bits_consumed": 168,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 676200
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 15,
+        "gray_temporary_CX": 61440,
+        "source_bits_consumed": 180,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 724500
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 16,
+        "gray_temporary_CX": 65536,
+        "source_bits_consumed": 192,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 772800
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 17,
+        "gray_temporary_CX": 69632,
+        "source_bits_consumed": 204,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 821100
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 18,
+        "gray_temporary_CX": 73728,
+        "source_bits_consumed": 216,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 869400
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 19,
+        "gray_temporary_CX": 77824,
+        "source_bits_consumed": 228,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 917700
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 20,
+        "gray_temporary_CX": 81920,
+        "source_bits_consumed": 240,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 966000
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 21,
+        "gray_temporary_CX": 86016,
+        "source_bits_consumed": 252,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1014300
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 22,
+        "gray_temporary_CX": 90112,
+        "source_bits_consumed": 264,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1062600
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 23,
+        "gray_temporary_CX": 94208,
+        "source_bits_consumed": 276,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1110900
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 24,
+        "gray_temporary_CX": 98304,
+        "source_bits_consumed": 288,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1159200
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 25,
+        "gray_temporary_CX": 102400,
+        "source_bits_consumed": 300,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1207500
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 26,
+        "gray_temporary_CX": 106496,
+        "source_bits_consumed": 312,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1255800
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 27,
+        "gray_temporary_CX": 110592,
+        "source_bits_consumed": 324,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1304100
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 28,
+        "gray_temporary_CX": 114688,
+        "source_bits_consumed": 336,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1352400
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 29,
+        "gray_temporary_CX": 118784,
+        "source_bits_consumed": 348,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1400700
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 30,
+        "gray_temporary_CX": 122880,
+        "source_bits_consumed": 360,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1449000
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 31,
+        "gray_temporary_CX": 126976,
+        "source_bits_consumed": 372,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1497300
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 32,
+        "gray_temporary_CX": 131072,
+        "source_bits_consumed": 384,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1545600
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 33,
+        "gray_temporary_CX": 135168,
+        "source_bits_consumed": 396,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1593900
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 34,
+        "gray_temporary_CX": 139264,
+        "source_bits_consumed": 408,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1642200
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 35,
+        "gray_temporary_CX": 143360,
+        "source_bits_consumed": 420,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1690500
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 36,
+        "gray_temporary_CX": 147456,
+        "source_bits_consumed": 432,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1738800
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 37,
+        "gray_temporary_CX": 151552,
+        "source_bits_consumed": 444,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1787100
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 38,
+        "gray_temporary_CX": 155648,
+        "source_bits_consumed": 456,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1835400
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 39,
+        "gray_temporary_CX": 159744,
+        "source_bits_consumed": 468,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1883700
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 40,
+        "gray_temporary_CX": 163840,
+        "source_bits_consumed": 480,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1932000
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 41,
+        "gray_temporary_CX": 167936,
+        "source_bits_consumed": 492,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1980300
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 42,
+        "gray_temporary_CX": 172032,
+        "source_bits_consumed": 504,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2028600
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 43,
+        "gray_temporary_CX": 176128,
+        "source_bits_consumed": 516,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2076900
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 44,
+        "gray_temporary_CX": 180224,
+        "source_bits_consumed": 528,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2125200
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 45,
+        "gray_temporary_CX": 184320,
+        "source_bits_consumed": 540,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2173500
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 46,
+        "gray_temporary_CX": 188416,
+        "source_bits_consumed": 552,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2221800
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 47,
+        "gray_temporary_CX": 192512,
+        "source_bits_consumed": 564,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2270100
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 48,
+        "gray_temporary_CX": 196608,
+        "source_bits_consumed": 576,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2318400
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 49,
+        "gray_temporary_CX": 200704,
+        "source_bits_consumed": 588,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2366700
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 50,
+        "gray_temporary_CX": 204800,
+        "source_bits_consumed": 600,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2415000
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 51,
+        "gray_temporary_CX": 208896,
+        "source_bits_consumed": 612,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2463300
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 52,
+        "gray_temporary_CX": 212992,
+        "source_bits_consumed": 624,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2511600
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 53,
+        "gray_temporary_CX": 217088,
+        "source_bits_consumed": 636,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2559900
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 54,
+        "gray_temporary_CX": 221184,
+        "source_bits_consumed": 648,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2608200
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 55,
+        "gray_temporary_CX": 225280,
+        "source_bits_consumed": 660,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2656500
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 56,
+        "gray_temporary_CX": 229376,
+        "source_bits_consumed": 672,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2704800
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 57,
+        "gray_temporary_CX": 233472,
+        "source_bits_consumed": 684,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2753100
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 58,
+        "gray_temporary_CX": 237568,
+        "source_bits_consumed": 696,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2801400
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 59,
+        "gray_temporary_CX": 241664,
+        "source_bits_consumed": 708,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2849700
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 60,
+        "gray_temporary_CX": 245760,
+        "source_bits_consumed": 720,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2898000
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 61,
+        "gray_temporary_CX": 249856,
+        "source_bits_consumed": 732,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2946300
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 62,
+        "gray_temporary_CX": 253952,
+        "source_bits_consumed": 744,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2994600
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 63,
+        "gray_temporary_CX": 258048,
+        "source_bits_consumed": 756,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 3042900
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 64,
+        "gray_temporary_CX": 262144,
+        "source_bits_consumed": 768,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 3091200
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 65,
+        "gray_temporary_CX": 266240,
+        "source_bits_consumed": 780,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 3139500
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 66,
+        "gray_temporary_CX": 270336,
+        "source_bits_consumed": 792,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 3187800
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 67,
+        "gray_temporary_CX": 274432,
+        "source_bits_consumed": 804,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 3236100
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 68,
+        "gray_temporary_CX": 278528,
+        "source_bits_consumed": 816,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 3284400
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 69,
+        "gray_temporary_CX": 282624,
+        "source_bits_consumed": 828,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 3332700
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 70,
+        "gray_temporary_CX": 286720,
+        "source_bits_consumed": 840,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 3381000
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "classical_instructions": 409856,
+        "stage": "adaptive64_histogram",
+        "words": 256
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "classical_instructions": 819712,
+        "stage": "adaptive64_histogram",
+        "words": 512
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "classical_instructions": 1229568,
+        "stage": "adaptive64_histogram",
+        "words": 768
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "classical_instructions": 1639424,
+        "stage": "adaptive64_histogram",
+        "words": 1024
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "classical_instructions": 2049280,
+        "stage": "adaptive64_histogram",
+        "words": 1280
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "classical_instructions": 2459136,
+        "stage": "adaptive64_histogram",
+        "words": 1536
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "classical_instructions": 2868992,
+        "stage": "adaptive64_histogram",
+        "words": 1792
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "classical_instructions": 3278848,
+        "stage": "adaptive64_histogram",
+        "words": 2048
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "classical_instructions": 3688704,
+        "stage": "adaptive64_histogram",
+        "words": 2304
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "classical_instructions": 4098560,
+        "stage": "adaptive64_histogram",
+        "words": 2560
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "classical_instructions": 4508416,
+        "stage": "adaptive64_histogram",
+        "words": 2816
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "classical_instructions": 4918272,
+        "stage": "adaptive64_histogram",
+        "words": 3072
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "classical_instructions": 5328128,
+        "stage": "adaptive64_histogram",
+        "words": 3328
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "classical_instructions": 5737984,
+        "stage": "adaptive64_histogram",
+        "words": 3584
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "classical_instructions": 6147840,
+        "stage": "adaptive64_histogram",
+        "words": 3840
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": "adaptive64_syndrome_weight_gauge"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_00"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_01"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_02"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_03"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_04"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_05"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_06"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_07"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_08"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_09"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_10"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_11"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_12"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_13"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_14"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_15"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_16"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_17"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_18"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_19"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_20"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_21"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_22"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_23"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_24"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_25"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_26"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_27"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_28"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_29"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_30"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_31"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_32"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_33"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_prefix_34"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 2,
+        "node": 33,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 3,
+        "node": 32,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 4,
+        "node": 31,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 5,
+        "node": 30,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 6,
+        "node": 29,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 7,
+        "node": 28,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 8,
+        "node": 27,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 9,
+        "node": 26,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 10,
+        "node": 25,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 11,
+        "node": 24,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 12,
+        "node": 23,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 13,
+        "node": 22,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 14,
+        "node": 21,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 15,
+        "node": 20,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 16,
+        "node": 19,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 17,
+        "node": 18,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 18,
+        "node": 17,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 19,
+        "node": 16,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 20,
+        "node": 15,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 21,
+        "node": 14,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 22,
+        "node": 13,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 23,
+        "node": 12,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 24,
+        "node": 11,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 25,
+        "node": 10,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 26,
+        "node": 9,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 27,
+        "node": 8,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 28,
+        "node": 7,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 29,
+        "node": 6,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 30,
+        "node": 5,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 31,
+        "node": 4,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 32,
+        "node": 3,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 33,
+        "node": 2,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 34,
+        "node": 1,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "degree": 35,
+        "node": 0,
+        "stage": "synthesis_prefix"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "odd_border_and_elimination"
+    },
+    {
+      "allocated_qubits": 877,
+      "stage": "odd_full_preimage"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_boundary"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "projective_finish_prefix"
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 1,
+        "point_tests": 0,
+        "public_positions": 31,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 2,
+        "point_tests": 0,
+        "public_positions": 63,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 3,
+        "point_tests": 26,
+        "public_positions": 95,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 4,
+        "point_tests": 58,
+        "public_positions": 127,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 5,
+        "point_tests": 90,
+        "public_positions": 159,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 6,
+        "point_tests": 122,
+        "public_positions": 191,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 7,
+        "point_tests": 154,
+        "public_positions": 223,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 8,
+        "point_tests": 186,
+        "public_positions": 255,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 9,
+        "point_tests": 218,
+        "public_positions": 287,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 10,
+        "point_tests": 250,
+        "public_positions": 319,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 11,
+        "point_tests": 282,
+        "public_positions": 351,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 12,
+        "point_tests": 314,
+        "public_positions": 383,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 13,
+        "point_tests": 346,
+        "public_positions": 415,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 14,
+        "point_tests": 378,
+        "public_positions": 447,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 15,
+        "point_tests": 410,
+        "public_positions": 479,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 16,
+        "point_tests": 442,
+        "public_positions": 511,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 17,
+        "point_tests": 474,
+        "public_positions": 543,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 18,
+        "point_tests": 506,
+        "public_positions": 575,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 19,
+        "point_tests": 538,
+        "public_positions": 607,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 20,
+        "point_tests": 570,
+        "public_positions": 639,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 21,
+        "point_tests": 602,
+        "public_positions": 671,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 22,
+        "point_tests": 634,
+        "public_positions": 703,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 23,
+        "point_tests": 666,
+        "public_positions": 735,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 24,
+        "point_tests": 698,
+        "public_positions": 767,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 25,
+        "point_tests": 730,
+        "public_positions": 799,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 26,
+        "point_tests": 762,
+        "public_positions": 831,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 27,
+        "point_tests": 794,
+        "public_positions": 863,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 28,
+        "point_tests": 826,
+        "public_positions": 895,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 29,
+        "point_tests": 858,
+        "public_positions": 927,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 30,
+        "point_tests": 890,
+        "public_positions": 959,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 31,
+        "point_tests": 922,
+        "public_positions": 991,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 32,
+        "point_tests": 954,
+        "public_positions": 1023,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 33,
+        "point_tests": 986,
+        "public_positions": 1055,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 34,
+        "point_tests": 1018,
+        "public_positions": 1087,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 35,
+        "point_tests": 1050,
+        "public_positions": 1119,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 36,
+        "point_tests": 1082,
+        "public_positions": 1151,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 37,
+        "point_tests": 1114,
+        "public_positions": 1183,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 38,
+        "point_tests": 1146,
+        "public_positions": 1215,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 39,
+        "point_tests": 1178,
+        "public_positions": 1247,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 40,
+        "point_tests": 1210,
+        "public_positions": 1279,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 41,
+        "point_tests": 1242,
+        "public_positions": 1311,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 42,
+        "point_tests": 1274,
+        "public_positions": 1343,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 43,
+        "point_tests": 1306,
+        "public_positions": 1375,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 44,
+        "point_tests": 1338,
+        "public_positions": 1407,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 45,
+        "point_tests": 1370,
+        "public_positions": 1439,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 46,
+        "point_tests": 1402,
+        "public_positions": 1471,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 47,
+        "point_tests": 1434,
+        "public_positions": 1503,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 48,
+        "point_tests": 1466,
+        "public_positions": 1535,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 49,
+        "point_tests": 1498,
+        "public_positions": 1567,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 50,
+        "point_tests": 1530,
+        "public_positions": 1599,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 51,
+        "point_tests": 1562,
+        "public_positions": 1631,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 52,
+        "point_tests": 1594,
+        "public_positions": 1663,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 53,
+        "point_tests": 1626,
+        "public_positions": 1695,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 54,
+        "point_tests": 1658,
+        "public_positions": 1727,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 55,
+        "point_tests": 1690,
+        "public_positions": 1759,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 56,
+        "point_tests": 1722,
+        "public_positions": 1791,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 57,
+        "point_tests": 1754,
+        "public_positions": 1823,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 58,
+        "point_tests": 1786,
+        "public_positions": 1855,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 59,
+        "point_tests": 1818,
+        "public_positions": 1887,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 60,
+        "point_tests": 1850,
+        "public_positions": 1919,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 61,
+        "point_tests": 1882,
+        "public_positions": 1951,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 62,
+        "point_tests": 1914,
+        "public_positions": 1983,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 63,
+        "point_tests": 1946,
+        "public_positions": 2015,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 64,
+        "point_tests": 1978,
+        "public_positions": 2047,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 65,
+        "point_tests": 2010,
+        "public_positions": 2079,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 66,
+        "point_tests": 2042,
+        "public_positions": 2111,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 67,
+        "point_tests": 2074,
+        "public_positions": 2143,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 68,
+        "point_tests": 2106,
+        "public_positions": 2175,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 69,
+        "point_tests": 2138,
+        "public_positions": 2207,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 70,
+        "point_tests": 2170,
+        "public_positions": 2239,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 71,
+        "point_tests": 2202,
+        "public_positions": 2271,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 72,
+        "point_tests": 2234,
+        "public_positions": 2303,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 73,
+        "point_tests": 2266,
+        "public_positions": 2335,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 74,
+        "point_tests": 2298,
+        "public_positions": 2367,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 75,
+        "point_tests": 2330,
+        "public_positions": 2399,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 76,
+        "point_tests": 2362,
+        "public_positions": 2431,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 77,
+        "point_tests": 2394,
+        "public_positions": 2463,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 78,
+        "point_tests": 2426,
+        "public_positions": 2495,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 79,
+        "point_tests": 2458,
+        "public_positions": 2527,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 80,
+        "point_tests": 2490,
+        "public_positions": 2559,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 81,
+        "point_tests": 2522,
+        "public_positions": 2591,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 82,
+        "point_tests": 2554,
+        "public_positions": 2623,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 83,
+        "point_tests": 2586,
+        "public_positions": 2655,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 84,
+        "point_tests": 2618,
+        "public_positions": 2687,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 85,
+        "point_tests": 2650,
+        "public_positions": 2719,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 86,
+        "point_tests": 2682,
+        "public_positions": 2751,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 87,
+        "point_tests": 2714,
+        "public_positions": 2783,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 88,
+        "point_tests": 2746,
+        "public_positions": 2815,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 89,
+        "point_tests": 2778,
+        "public_positions": 2847,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 90,
+        "point_tests": 2810,
+        "public_positions": 2879,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 91,
+        "point_tests": 2842,
+        "public_positions": 2911,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 92,
+        "point_tests": 2874,
+        "public_positions": 2943,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 93,
+        "point_tests": 2906,
+        "public_positions": 2975,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 94,
+        "point_tests": 2938,
+        "public_positions": 3007,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 95,
+        "point_tests": 2970,
+        "public_positions": 3039,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 96,
+        "point_tests": 3002,
+        "public_positions": 3071,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 97,
+        "point_tests": 3034,
+        "public_positions": 3103,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 98,
+        "point_tests": 3066,
+        "public_positions": 3135,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 99,
+        "point_tests": 3098,
+        "public_positions": 3167,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 100,
+        "point_tests": 3130,
+        "public_positions": 3199,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 101,
+        "point_tests": 3162,
+        "public_positions": 3231,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 102,
+        "point_tests": 3194,
+        "public_positions": 3263,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 103,
+        "point_tests": 3226,
+        "public_positions": 3295,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 104,
+        "point_tests": 3258,
+        "public_positions": 3327,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 105,
+        "point_tests": 3290,
+        "public_positions": 3359,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 106,
+        "point_tests": 3322,
+        "public_positions": 3391,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 107,
+        "point_tests": 3354,
+        "public_positions": 3423,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 108,
+        "point_tests": 3386,
+        "public_positions": 3455,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 109,
+        "point_tests": 3418,
+        "public_positions": 3487,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 110,
+        "point_tests": 3450,
+        "public_positions": 3519,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 111,
+        "point_tests": 3482,
+        "public_positions": 3551,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 112,
+        "point_tests": 3514,
+        "public_positions": 3583,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 113,
+        "point_tests": 3546,
+        "public_positions": 3615,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 114,
+        "point_tests": 3578,
+        "public_positions": 3647,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 115,
+        "point_tests": 3610,
+        "public_positions": 3679,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 116,
+        "point_tests": 3642,
+        "public_positions": 3711,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 117,
+        "point_tests": 3674,
+        "public_positions": 3743,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 118,
+        "point_tests": 3706,
+        "public_positions": 3775,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 119,
+        "point_tests": 3738,
+        "public_positions": 3807,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 120,
+        "point_tests": 3770,
+        "public_positions": 3839,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 121,
+        "point_tests": 3802,
+        "public_positions": 3871,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 122,
+        "point_tests": 3834,
+        "public_positions": 3903,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 123,
+        "point_tests": 3866,
+        "public_positions": 3935,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 124,
+        "point_tests": 3898,
+        "public_positions": 3967,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 125,
+        "point_tests": 3930,
+        "public_positions": 3999,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 126,
+        "point_tests": 3962,
+        "public_positions": 4031,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 127,
+        "point_tests": 3994,
+        "public_positions": 4063,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 875,
+      "stage": {
+        "cosets": 128,
+        "point_tests": 4026,
+        "public_positions": 4095,
+        "stage": "adaptive64_scan"
+      }
+    },
+    {
+      "allocated_qubits": 877,
+      "stage": "shared_seam_finish_return_live_inverse"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "shared_seam_undo_odd_full_preimage"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "shared_seam_restored_raw_inputs"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 0,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 1,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 2,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 3,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 4,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 5,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 6,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 7,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 8,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 9,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 10,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 11,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 12,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 13,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 14,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 15,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 16,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 17,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 18,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 19,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 20,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 21,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 22,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 23,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 24,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 25,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 26,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 27,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 28,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 29,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 30,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 31,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 32,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": {
+        "node": 33,
+        "stage": "synthesis_return"
+      }
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_34"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_33"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_32"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_31"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_30"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_29"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_28"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_27"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_26"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_25"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_24"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_23"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_22"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_21"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_20"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_19"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_18"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_17"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_16"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_15"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_14"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_13"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_12"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_11"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_10"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_09"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_08"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_07"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_06"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_05"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_04"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_03"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_02"
+    },
+    {
+      "allocated_qubits": 865,
+      "stage": "raw_query_return_01"
+    },
+    {
+      "allocated_qubits": 864,
+      "stage": "raw_query_return_00"
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 1,
+        "gray_temporary_CX": 4096,
+        "source_bits_consumed": 12,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 48300
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 2,
+        "gray_temporary_CX": 8192,
+        "source_bits_consumed": 24,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 96600
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 3,
+        "gray_temporary_CX": 12288,
+        "source_bits_consumed": 36,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 144900
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 4,
+        "gray_temporary_CX": 16384,
+        "source_bits_consumed": 48,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 193200
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 5,
+        "gray_temporary_CX": 20480,
+        "source_bits_consumed": 60,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 241500
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 6,
+        "gray_temporary_CX": 24576,
+        "source_bits_consumed": 72,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 289800
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 7,
+        "gray_temporary_CX": 28672,
+        "source_bits_consumed": 84,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 338100
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 8,
+        "gray_temporary_CX": 32768,
+        "source_bits_consumed": 96,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 386400
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 9,
+        "gray_temporary_CX": 36864,
+        "source_bits_consumed": 108,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 434700
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 10,
+        "gray_temporary_CX": 40960,
+        "source_bits_consumed": 120,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 483000
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 11,
+        "gray_temporary_CX": 45056,
+        "source_bits_consumed": 132,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 531300
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 12,
+        "gray_temporary_CX": 49152,
+        "source_bits_consumed": 144,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 579600
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 13,
+        "gray_temporary_CX": 53248,
+        "source_bits_consumed": 156,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 627900
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 14,
+        "gray_temporary_CX": 57344,
+        "source_bits_consumed": 168,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 676200
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 15,
+        "gray_temporary_CX": 61440,
+        "source_bits_consumed": 180,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 724500
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 16,
+        "gray_temporary_CX": 65536,
+        "source_bits_consumed": 192,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 772800
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 17,
+        "gray_temporary_CX": 69632,
+        "source_bits_consumed": 204,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 821100
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 18,
+        "gray_temporary_CX": 73728,
+        "source_bits_consumed": 216,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 869400
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 19,
+        "gray_temporary_CX": 77824,
+        "source_bits_consumed": 228,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 917700
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 20,
+        "gray_temporary_CX": 81920,
+        "source_bits_consumed": 240,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 966000
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 21,
+        "gray_temporary_CX": 86016,
+        "source_bits_consumed": 252,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1014300
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 22,
+        "gray_temporary_CX": 90112,
+        "source_bits_consumed": 264,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1062600
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 23,
+        "gray_temporary_CX": 94208,
+        "source_bits_consumed": 276,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1110900
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 24,
+        "gray_temporary_CX": 98304,
+        "source_bits_consumed": 288,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1159200
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 25,
+        "gray_temporary_CX": 102400,
+        "source_bits_consumed": 300,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1207500
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 26,
+        "gray_temporary_CX": 106496,
+        "source_bits_consumed": 312,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1255800
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 27,
+        "gray_temporary_CX": 110592,
+        "source_bits_consumed": 324,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1304100
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 28,
+        "gray_temporary_CX": 114688,
+        "source_bits_consumed": 336,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1352400
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 29,
+        "gray_temporary_CX": 118784,
+        "source_bits_consumed": 348,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1400700
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 30,
+        "gray_temporary_CX": 122880,
+        "source_bits_consumed": 360,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1449000
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 31,
+        "gray_temporary_CX": 126976,
+        "source_bits_consumed": 372,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1497300
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 32,
+        "gray_temporary_CX": 131072,
+        "source_bits_consumed": 384,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1545600
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 33,
+        "gray_temporary_CX": 135168,
+        "source_bits_consumed": 396,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1593900
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 34,
+        "gray_temporary_CX": 139264,
+        "source_bits_consumed": 408,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1642200
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 35,
+        "gray_temporary_CX": 143360,
+        "source_bits_consumed": 420,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1690500
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 36,
+        "gray_temporary_CX": 147456,
+        "source_bits_consumed": 432,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1738800
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 37,
+        "gray_temporary_CX": 151552,
+        "source_bits_consumed": 444,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1787100
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 38,
+        "gray_temporary_CX": 155648,
+        "source_bits_consumed": 456,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1835400
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 39,
+        "gray_temporary_CX": 159744,
+        "source_bits_consumed": 468,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1883700
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 40,
+        "gray_temporary_CX": 163840,
+        "source_bits_consumed": 480,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1932000
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 41,
+        "gray_temporary_CX": 167936,
+        "source_bits_consumed": 492,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 1980300
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 42,
+        "gray_temporary_CX": 172032,
+        "source_bits_consumed": 504,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2028600
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 43,
+        "gray_temporary_CX": 176128,
+        "source_bits_consumed": 516,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2076900
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 44,
+        "gray_temporary_CX": 180224,
+        "source_bits_consumed": 528,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2125200
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 45,
+        "gray_temporary_CX": 184320,
+        "source_bits_consumed": 540,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2173500
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 46,
+        "gray_temporary_CX": 188416,
+        "source_bits_consumed": 552,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2221800
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 47,
+        "gray_temporary_CX": 192512,
+        "source_bits_consumed": 564,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2270100
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 48,
+        "gray_temporary_CX": 196608,
+        "source_bits_consumed": 576,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2318400
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 49,
+        "gray_temporary_CX": 200704,
+        "source_bits_consumed": 588,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2366700
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 50,
+        "gray_temporary_CX": 204800,
+        "source_bits_consumed": 600,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2415000
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 51,
+        "gray_temporary_CX": 208896,
+        "source_bits_consumed": 612,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2463300
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 52,
+        "gray_temporary_CX": 212992,
+        "source_bits_consumed": 624,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2511600
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 53,
+        "gray_temporary_CX": 217088,
+        "source_bits_consumed": 636,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2559900
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 54,
+        "gray_temporary_CX": 221184,
+        "source_bits_consumed": 648,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2608200
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 55,
+        "gray_temporary_CX": 225280,
+        "source_bits_consumed": 660,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2656500
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 56,
+        "gray_temporary_CX": 229376,
+        "source_bits_consumed": 672,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2704800
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 57,
+        "gray_temporary_CX": 233472,
+        "source_bits_consumed": 684,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2753100
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 58,
+        "gray_temporary_CX": 237568,
+        "source_bits_consumed": 696,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2801400
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 59,
+        "gray_temporary_CX": 241664,
+        "source_bits_consumed": 708,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2849700
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 60,
+        "gray_temporary_CX": 245760,
+        "source_bits_consumed": 720,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2898000
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 61,
+        "gray_temporary_CX": 249856,
+        "source_bits_consumed": 732,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2946300
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 62,
+        "gray_temporary_CX": 253952,
+        "source_bits_consumed": 744,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 2994600
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 63,
+        "gray_temporary_CX": 258048,
+        "source_bits_consumed": 756,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 3042900
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 64,
+        "gray_temporary_CX": 262144,
+        "source_bits_consumed": 768,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 3091200
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 65,
+        "gray_temporary_CX": 266240,
+        "source_bits_consumed": 780,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 3139500
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 66,
+        "gray_temporary_CX": 270336,
+        "source_bits_consumed": 792,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 3187800
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 67,
+        "gray_temporary_CX": 274432,
+        "source_bits_consumed": 804,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 3236100
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 68,
+        "gray_temporary_CX": 278528,
+        "source_bits_consumed": 816,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 3284400
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 69,
+        "gray_temporary_CX": 282624,
+        "source_bits_consumed": 828,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 3332700
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": {
+        "blocks": 70,
+        "gray_temporary_CX": 286720,
+        "source_bits_consumed": 840,
+        "stage": "blocked_mask_shear",
+        "target_fanout_CX": 3381000
+      }
+    },
+    {
+      "allocated_qubits": 840,
+      "stage": "all_original_inputs_restored"
+    }
+  ],
+  "static_toffoli_like": 391639,
+  "upstream_circuit_sha256": "7cbe8ecf6f6e9743529b574f019504bb1712ce06fbb570c719ce9d9e2c914cd9"
+}

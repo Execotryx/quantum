@@ -1,0 +1,29 @@
+{
+  "status": "POSITIVE_COMPLETE_PAPER_GATE_ACCEPTED_ISOLATED_NATIVE_AUTHORIZED",
+  "route": "AR004 temporary history12 retirement after endpoint",
+  "paper_sha256": "4639dc85582bbff4d77aecc8bd004dcd205531299358d5415ca4430e4773439d",
+  "complete_gate_sha256": "2ee4a05750543c752b90fe0df096eeea6aacb0a95f8d064424222216392fa11c",
+  "source_ready_sha256": "d2dba815ccbd4b090196c41a839f884b523ebce53e5ac9dff7fc68e76d73530a",
+  "guard_sha256": "a2164530e89bf7a6fb3167c3e64edfef33deec9b745b272cf19ab52a10f11ca8",
+  "independent_review_sha256": "eac70c9d74cc88bbd1af703dc96e55dd2339e83a55de0f338e560461224206d1",
+  "source_pins_checked": 20,
+  "Q": 48,
+  "divider_E": 578,
+  "additional_saving_E_vs_AR003": 8.5,
+  "first_preparation_peak": 48,
+  "second_preparation_peak": 48,
+  "endpoint_peak": 48,
+  "endpoint_data_owners": 43,
+  "native_build_authorized": true,
+  "required_native_checks": [
+    "all3133452 original model inputs",
+    "all HMR transcripts and24CarryDebts",
+    "current reconstructed initial_u[13] handle",
+    "unchanged forward text and endpoint interface",
+    "input and zero scratch restoration",
+    "negative omitted retirement sign and carry correction controls"
+  ],
+  "full_composed_native_and_four_default_batch_salts_required": true,
+  "expected_not_measured": true,
+  "utc": "2026-11-12T04:59:27.790115+00:00"
+}

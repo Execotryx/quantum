@@ -1,0 +1,134 @@
+{
+  "changed_pipeline_and_events": {
+    "v5b_events.py": {
+      "changed_or_added_after_label_normalization": [
+        "Events"
+      ],
+      "new_sha256": "f30e2d2ecd75bc9ac1559ca056d9fdf2205ff20d4137d020c46d7a2c93c67795",
+      "parent_path": "controller_work/after_v3/integration_v5/v5_events.py",
+      "parent_sha256": "b9bc736bc65dec2a8052ef2f189df3a5bd7e83a0f8a00e8043ddd06e76cf9b84",
+      "removed_top_level_functions_or_classes": [],
+      "unchanged_after_explicit_v5_to_v5b_labels": [],
+      "unchanged_top_level_functions_or_classes": []
+    },
+    "v5b_pipeline.py": {
+      "changed_or_added_after_label_normalization": [
+        "assert_bindings",
+        "configure",
+        "emit_key_closing",
+        "emit_key_prefix",
+        "expected_mean",
+        "runtime_bindings",
+        "source_ledger"
+      ],
+      "new_sha256": "14bb85846d910eaf9ea9300bb604c818d28421ac7b48df8f8fa325091abf5b5e",
+      "parent_path": "controller_work/after_v3/integration_v5/v5_pipeline.py",
+      "parent_sha256": "32b89202ec5eed5ef030d5f9982b1b0ecd5ab738a9020e3e40991c1a801e849c",
+      "removed_top_level_functions_or_classes": [],
+      "unchanged_after_explicit_v5_to_v5b_labels": [
+        "emit",
+        "finish_geometry_binding"
+      ],
+      "unchanged_top_level_functions_or_classes": [
+        "finish_geometry_binding"
+      ]
+    }
+  },
+  "exact_wrapper_copies": [
+    {
+      "exact_literal_changes": [
+        [
+          "v5",
+          "v5b"
+        ],
+        [
+          "V5",
+          "V5B"
+        ]
+      ],
+      "new_name": "build_v5b.py",
+      "new_sha256": "b0df43c57fd8138a37b37f00086ad88c4acd34d0f9e90ca2ace65a42c98d77c3",
+      "no_other_change": true,
+      "parent_path": "controller_work/after_v3/integration_v5/build_v5.py",
+      "parent_sha256": "74e9370e275f19bc3e1c9f263cf37494277c06499bf157128be9b197f02b08f7"
+    },
+    {
+      "exact_literal_changes": [
+        [
+          "v5",
+          "v5b"
+        ],
+        [
+          "V5",
+          "V5B"
+        ]
+      ],
+      "new_name": "gen_dqi.py",
+      "new_sha256": "ba324c9d5e901710f6ecaec6894e59db58e5ca11d9356ce2c8f6d78810bc61fd",
+      "no_other_change": true,
+      "parent_path": "controller_work/after_v3/integration_v5/gen_dqi.py",
+      "parent_sha256": "9251d2378047d32de1f12f1f5d23ac927ab04d5e1f8afd72ebb9a720aec42e9f"
+    },
+    {
+      "exact_literal_changes": [
+        [
+          "v5",
+          "v5b"
+        ],
+        [
+          "V5",
+          "V5B"
+        ]
+      ],
+      "new_name": "check_build_equality.py",
+      "new_sha256": "39df1fefc6a8029b9398a8f69ea46e5c1ca411ebe552dd819639b8dd4286648e",
+      "no_other_change": true,
+      "parent_path": "controller_work/after_v3/integration_v5/check_build_equality.py",
+      "parent_sha256": "0df19f87b37f16a116c6ad7231aae0e6f0650b1d3340b9f8d1497d9f0cce5c9b"
+    },
+    {
+      "exact_literal_changes": [
+        [
+          "v5",
+          "v5b"
+        ],
+        [
+          "V5",
+          "V5B"
+        ]
+      ],
+      "new_name": "check_candidate.py",
+      "new_sha256": "c266336dd3f8bb82c05831784b34f6d1a63a6e9c78f0cc173ce02dc25e11ca78",
+      "no_other_change": true,
+      "parent_path": "controller_work/after_v3/integration_v5/check_candidate.py",
+      "parent_sha256": "26d3519c10ac08588dd5eadaf79fce725e9d7ed80429f7f53d56c51c7a54b3f1"
+    },
+    {
+      "exact_literal_changes": [
+        [
+          "v5",
+          "v5b"
+        ],
+        [
+          "V5",
+          "V5B"
+        ],
+        [
+          "    assert prefix_T == expected_prefix, (prefix_T, expected_prefix)\n",
+          "    # The fixed matched-prefix provider saves one unconditional T at each\n    # of the three special inversions; all original oracle checks remain.\n    expected_prefix -= 3\n    assert prefix_T == expected_prefix, (prefix_T, expected_prefix)\n"
+        ]
+      ],
+      "new_name": "check_key_boundary.py",
+      "new_sha256": "b4422fe7ac38ce5d73bd13acc48dd24bcd0003ee90a2d93649bb6890d56497c2",
+      "no_other_change": true,
+      "parent_path": "controller_work/after_v3/integration_v5/check_key_boundary.py",
+      "parent_sha256": "6b8851be258d3590666419c2ef28ee187a9da73cd5d5847b498d484d97f543e3"
+    }
+  ],
+  "format": "DQI_V5B_SOURCE_DERIVATION_V1",
+  "module_imports": 0,
+  "native_jobs": 0,
+  "new_sampler_draws": 0,
+  "status": "SOURCE_ONLY_EXACT_WRAPPER_COPIES_AND_EXPLICIT_PROVIDER_CHANGES",
+  "validator_derivation_sha256": "f2fd0398b6daaea01d1171ffa7e5b6d275f59633bb09a2853b6db55aec77960f"
+}

@@ -1,0 +1,71 @@
+{
+  "status": "COMPLETED",
+  "work_window_sha256": "18a44534df9aaa46f4ab3bcaeb452e46cad3a7bd317a0edf798ee37ecde622fe",
+  "work_window_path": "/workspace/scratch/40c9505bd2bc/narrow/arithmetic_round2/WORK_WINDOW.json",
+  "source_helpers_sha256": "6795b9ac76c889da1aa311ae59da5d1f1a6000a5c0cfbeec142185091943b202",
+  "cgroup_counters": "UNAVAILABLE_IN_EXEC_SANDBOX_NOT_CLAIMED_CHECKED",
+  "substitute_envelope": "Hard RLIMIT_AS plus lower aggregate RSS cap, current host headroom, bounded descendants and shared lock",
+  "limits": {
+    "per_process_hard_address_bytes": 536870912,
+    "aggregate_RSS_stop_bytes": 805306368,
+    "minimum_host_available_bytes": 4294967296,
+    "live_process_cap": 8
+  },
+  "command": [
+    "/usr/bin/python3.13",
+    "narrow/arithmetic_round2/research/divider/top12_study.py"
+  ],
+  "timeout_seconds": 55.0,
+  "automatic_workload_retries": 0,
+  "peak_aggregate_rss_bytes": 31891456,
+  "peak_process_count": 1,
+  "minimum_host_available_bytes": 9312120832,
+  "started_unix": 1794455653.597663,
+  "samples": [
+    {
+      "elapsed_seconds": 0.20093766201171093,
+      "aggregate_rss_bytes": 30765056,
+      "live_processes": 1,
+      "host_available_bytes": 9312444416
+    },
+    {
+      "elapsed_seconds": 0.4045644430007087,
+      "aggregate_rss_bytes": 31629312,
+      "live_processes": 1,
+      "host_available_bytes": 9312120832
+    },
+    {
+      "elapsed_seconds": 0.5755548650049604,
+      "aggregate_rss_bytes": 31891456,
+      "live_processes": 1,
+      "host_available_bytes": 9312120832
+    },
+    {
+      "elapsed_seconds": 0.5960850810079137,
+      "aggregate_rss_bytes": 0,
+      "live_processes": 0,
+      "host_available_bytes": 9312120832
+    }
+  ],
+  "child_cleanup": {
+    "term_sent_pids": [],
+    "kill_sent_pids": [],
+    "reaped_pids": [],
+    "remaining_pids": [],
+    "zombie_pids": [],
+    "dead_pids": [],
+    "remaining_states": {},
+    "complete": true
+  },
+  "queue_wait_seconds": 0.0004776159912580624,
+  "preflight_host": {
+    "total_bytes": 10451427328,
+    "available_bytes": 9329115136
+  },
+  "elapsed_seconds": 0.617947747989092,
+  "subreaper_enabled": true,
+  "child_pid": 5,
+  "stop_reason": "completed",
+  "returncode": 0,
+  "output_bytes": 3489
+}

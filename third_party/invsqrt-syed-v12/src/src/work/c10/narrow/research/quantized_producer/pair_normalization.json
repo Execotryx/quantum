@@ -1,0 +1,337 @@
+{
+  "scope": "NEW_PAIR_NORMALIZATION_PAPER_AND_EXACT_BOOLEAN_ONLY",
+  "route": {
+    "status": "EXACT_ZERO_SUPPORTED_BINARY_BUTTERFLY",
+    "payload_width": 11,
+    "leading_zero_contexts": 12,
+    "virtual_width": 16,
+    "controlled_swaps": 17,
+    "swaps_per_stage": [
+      5,
+      5,
+      4,
+      3
+    ],
+    "virtual_pairs_checked": 88,
+    "virtual_nonzero_uses": 0,
+    "full_position_addition_proved": true,
+    "independent_payload_symbols_proved": true,
+    "forward_and_inverse_proved": true,
+    "selectors_from_prefix_thresholds": true,
+    "source_search_or_saved_plan_inputs": false
+  },
+  "threshold_plans": [
+    {
+      "width": 5,
+      "constant": false,
+      "linear": 31,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "products": [
+        [
+          19,
+          12,
+          0,
+          2
+        ],
+        [
+          8,
+          16,
+          3,
+          4
+        ]
+      ],
+      "product_linear": 31
+    },
+    {
+      "width": 5,
+      "constant": false,
+      "linear": 14,
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "products": [
+        [
+          2,
+          12,
+          1,
+          2
+        ]
+      ],
+      "product_linear": 14
+    },
+    {
+      "width": 5,
+      "constant": false,
+      "linear": 28,
+      "edges": [
+        [
+          2,
+          4
+        ]
+      ],
+      "products": [
+        [
+          4,
+          16,
+          2,
+          4
+        ]
+      ],
+      "product_linear": 28
+    },
+    {
+      "width": 5,
+      "constant": false,
+      "linear": 12,
+      "edges": [],
+      "products": [],
+      "product_linear": 12
+    },
+    {
+      "width": 5,
+      "constant": false,
+      "linear": 8,
+      "edges": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "products": [
+        [
+          19,
+          4,
+          0,
+          2
+        ]
+      ],
+      "product_linear": 8
+    },
+    {
+      "width": 5,
+      "constant": false,
+      "linear": 8,
+      "edges": [
+        [
+          1,
+          2
+        ]
+      ],
+      "products": [
+        [
+          2,
+          4,
+          1,
+          2
+        ]
+      ],
+      "product_linear": 8
+    },
+    {
+      "width": 5,
+      "constant": false,
+      "linear": 8,
+      "edges": [
+        [
+          2,
+          4
+        ]
+      ],
+      "products": [
+        [
+          4,
+          16,
+          2,
+          4
+        ]
+      ],
+      "product_linear": 8
+    },
+    {
+      "width": 5,
+      "constant": false,
+      "linear": 8,
+      "edges": [],
+      "products": [],
+      "product_linear": 8
+    },
+    {
+      "width": 5,
+      "constant": false,
+      "linear": 0,
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "products": [
+        [
+          3,
+          8,
+          0,
+          3
+        ]
+      ],
+      "product_linear": 0
+    },
+    {
+      "width": 5,
+      "constant": false,
+      "linear": 0,
+      "edges": [
+        [
+          1,
+          3
+        ]
+      ],
+      "products": [
+        [
+          2,
+          8,
+          1,
+          3
+        ]
+      ],
+      "product_linear": 0
+    }
+  ],
+  "certificate": {
+    "status": "EXACT_ALL_INPUT_AND_ALL_HMR_PHASE_CERTIFICATE_NOT_NATIVE",
+    "original_inputs": 3133452,
+    "truth_vector_domain_bits": 22,
+    "required_interval": [
+      1,
+      3133452
+    ],
+    "normalized_map": "n=x*4**k, k=floor((22-bit_length(x))/2), n in[2^20,2^22)",
+    "mathematical_phase_error": 0,
+    "all_original_bits_restored": true,
+    "all_scratch_and_flags_zero": true,
+    "forward_measurements": 21,
+    "total_independent_HMR_symbols": 31,
+    "phase_proof": "Every HMR outcome is an independent symbolic coefficient; each complete coefficient truth vector vanishes on every official input.",
+    "forward_E": 53.0,
+    "inverse_expected_E": 44.5,
+    "total_expected_E": 97.5,
+    "peak": 46,
+    "T": 0,
+    "R": 0,
+    "seconds": 0.6911546920018736,
+    "peak_rss_kib": 66208
+  },
+  "paper": [
+    {
+      "Q_cap": 46,
+      "forward_E": 53.0,
+      "inverse_expected_E": 44.5,
+      "total_expected_E": 97.5,
+      "forward_peak": 46,
+      "inverse_peak": 32,
+      "T": 0,
+      "R": 0
+    },
+    {
+      "Q_cap": 47,
+      "forward_E": 53.0,
+      "inverse_expected_E": 44.5,
+      "total_expected_E": 97.5,
+      "forward_peak": 46,
+      "inverse_peak": 32,
+      "T": 0,
+      "R": 0
+    },
+    {
+      "Q_cap": 48,
+      "forward_E": 53.0,
+      "inverse_expected_E": 44.5,
+      "total_expected_E": 97.5,
+      "forward_peak": 46,
+      "inverse_peak": 32,
+      "T": 0,
+      "R": 0
+    },
+    {
+      "Q_cap": 49,
+      "forward_E": 53.0,
+      "inverse_expected_E": 44.5,
+      "total_expected_E": 97.5,
+      "forward_peak": 46,
+      "inverse_peak": 32,
+      "T": 0,
+      "R": 0
+    },
+    {
+      "Q_cap": 50,
+      "forward_E": 53.0,
+      "inverse_expected_E": 44.5,
+      "total_expected_E": 97.5,
+      "forward_peak": 46,
+      "inverse_peak": 32,
+      "T": 0,
+      "R": 0
+    },
+    {
+      "Q_cap": 51,
+      "forward_E": 53.0,
+      "inverse_expected_E": 44.5,
+      "total_expected_E": 97.5,
+      "forward_peak": 46,
+      "inverse_peak": 32,
+      "T": 0,
+      "R": 0
+    },
+    {
+      "Q_cap": 52,
+      "forward_E": 53.0,
+      "inverse_expected_E": 44.5,
+      "total_expected_E": 97.5,
+      "forward_peak": 46,
+      "inverse_peak": 32,
+      "T": 0,
+      "R": 0
+    }
+  ],
+  "excluded_transfer": "The122E Stage94 semilog/packed interface is not used.",
+  "native_gate": "Use only after the full actual lifecycle ledger is updated and clears its paper gate; native proof still required."
+}

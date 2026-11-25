@@ -1,0 +1,104 @@
+{
+  "status": "PASS_SELECTED_COMPLETE_PAIR_AND_PHASE_OWNER_INTERFACE_REVIEW_NOT_NATIVE",
+  "first_Toffolis": 61,
+  "second_Toffolis": 79,
+  "pair_Toffolis": 140,
+  "T": 0,
+  "R": 0,
+  "first_peak": 48,
+  "second_peak": 48,
+  "first_HMR_debts": 45,
+  "second_HMR_debts": 65,
+  "second_existing_work_owners": 4,
+  "second_new_zero_owners": 17,
+  "second_fixed_slots": [
+    3,
+    5,
+    6
+  ],
+  "second_retired_slots": [
+    0,
+    1,
+    2,
+    4
+  ],
+  "first_return_owners": 42,
+  "second_return_owners": 43,
+  "affine_fixed_offsets": [
+    8,
+    4
+  ],
+  "original_raw_row_order": 128,
+  "immutable_prefix_preserved_exactly": true,
+  "cleanup_Toffolis": 9,
+  "root_decoder_Toffolis": 21,
+  "only_direct_root_Z": "actual late a6 measurement; early four receive no duplicate correction",
+  "all_early_mixed_phases": "shared TableDebts through original raw address and restored A/H quadratic chart",
+  "class_identity": "must reuse exact candidate06 TableDebts and cleanup objects",
+  "whole_lifecycle_Toffolis": 562,
+  "whole_expected_Toffolis": 1584,
+  "whole_Q": 48,
+  "whole_T": 4,
+  "whole_R": 33,
+  "whole_rotation_charge": 230.84805946161188,
+  "whole_paper_cost": 87160.70685415737,
+  "native_proof": false,
+  "official_qualification": false,
+  "files": [
+    {
+      "path": "research/joint_loader/frozen/loader16_first61_Q48.json",
+      "bytes": 488989,
+      "sha256": "4857688e595af50828d7bedf0bc745eaaed8d10767e2e6ca6f77802887e1ad48"
+    },
+    {
+      "path": "research/joint_loader/frozen/loader16_first61_Q48.replay.json",
+      "bytes": 3238,
+      "sha256": "e5998730a420e33b03d9fba84dedb363710a8d3a04cd16abcdece4c79071a3a4"
+    },
+    {
+      "path": "research/joint_loader/frozen/loader16_second79_delay_Q48.json",
+      "bytes": 528713,
+      "sha256": "5276e10525e98c6dbf6dc215e2a525441ba36ce0342e3f2dd937a2720e085da1"
+    },
+    {
+      "path": "research/joint_loader/frozen/loader16_second79_delay_Q48.replay.json",
+      "bytes": 4087,
+      "sha256": "0edcf9053f9bba1684eb4473584aa725aafdbbf3bdc55212f50440a2ae5c9baf"
+    },
+    {
+      "path": "research/joint_loader/frozen/retained_table_cleanup9.json",
+      "bytes": 228186,
+      "sha256": "6a48b472433918d2c51f30e6eeb1d9933fdf1aa4ae9f83b93129fd8ac103b6b5"
+    },
+    {
+      "path": "research/quantized_producer/framed_retained5_best21_snapshot.json",
+      "bytes": 27402,
+      "sha256": "3b6fa7059bee77bb9abe6c7395cd8ff2f2899843523188c60d513e6c5d381def"
+    },
+    {
+      "path": "research/candidate07_composition_review/REVIEW.json",
+      "bytes": 3353,
+      "sha256": "d3315e49812d943147cd56ae501540d92676f63be22cb8db6fb8f26e96f9bdb6"
+    },
+    {
+      "path": "PAPER_GATE_RECEIPT_022_VARIANT.json",
+      "bytes": 892,
+      "sha256": "f8cfe4331b37a5184a4aab17ee85b4ac892c08c2cfb863fc4b1c1b3c9978262e"
+    },
+    {
+      "path": "research/combined_q48_ring26/COMPLETE_GATE.json",
+      "bytes": 45829,
+      "sha256": "49ce6e7007b19abcd533b82a9f291b617cbc1c864a3d66287c0e63a87ebb82c4"
+    },
+    {
+      "path": "native/candidate06/tables06.py",
+      "bytes": 6482,
+      "sha256": "f0eef9c8905b0d4e9c20bb286b33d526c0cf0f27ea4bb619c066ea7ed58a690b"
+    },
+    {
+      "path": "native/candidate06/decoder06.py",
+      "bytes": 2202,
+      "sha256": "9fb7e197e85e343131b200e9ee0c081437b83b6824c615431ba9627d3b67417c"
+    }
+  ]
+}

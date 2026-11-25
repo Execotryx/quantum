@@ -1,0 +1,480 @@
+{
+  "cases": [
+    {
+      "draw": "s2",
+      "error_weight": 31,
+      "first_native_rational_mismatch": null,
+      "index": 45440,
+      "local_pole_transfer": {
+        "continuation_degrees": [
+          19,
+          16
+        ],
+        "head": 13
+      },
+      "native_matches_ordinary_words": true,
+      "ordinary_words": [
+        1840,
+        3645,
+        53,
+        2395,
+        1417,
+        1368,
+        2776,
+        535,
+        1362,
+        1943,
+        3376,
+        2657,
+        1276,
+        3319,
+        369,
+        664,
+        2629,
+        3079,
+        1325,
+        1390,
+        2933,
+        404,
+        3716,
+        3768,
+        3499,
+        3356,
+        0,
+        0,
+        2654,
+        4021,
+        1976,
+        2475
+      ],
+      "ordinary_zero_events": [
+        {
+          "group": 6,
+          "local_head": 13
+        }
+      ],
+      "phase_error": true,
+      "rational_poles": [
+        {
+          "degree": 18,
+          "head": 13
+        }
+      ],
+      "residuals_with_future_poles": [
+        {
+          "after_head": 12,
+          "degree": 18,
+          "future_poles": [
+            13
+          ]
+        }
+      ],
+      "termination_head": null
+    },
+    {
+      "draw": "s2",
+      "error_weight": 34,
+      "first_native_rational_mismatch": null,
+      "index": 45439,
+      "local_pole_transfer": null,
+      "native_matches_ordinary_words": true,
+      "ordinary_words": [
+        1373,
+        3346,
+        2931,
+        628,
+        1804,
+        81,
+        537,
+        1224,
+        3541,
+        199,
+        1321,
+        2325,
+        1977,
+        772,
+        1748,
+        1888,
+        1033,
+        3792,
+        2966,
+        1957,
+        1035,
+        172,
+        2156,
+        3267,
+        88,
+        2809,
+        691,
+        2018,
+        3557,
+        1135,
+        1978,
+        3588
+      ],
+      "ordinary_zero_events": [],
+      "phase_error": false,
+      "rational_poles": [],
+      "residuals_with_future_poles": [],
+      "termination_head": null
+    },
+    {
+      "draw": "s6",
+      "error_weight": 32,
+      "first_native_rational_mismatch": {
+        "head": 12,
+        "native": [
+          2173,
+          508
+        ],
+        "rational": [
+          2823,
+          3747
+        ]
+      },
+      "index": 13238,
+      "local_pole_transfer": null,
+      "native_matches_ordinary_words": true,
+      "ordinary_words": [
+        1401,
+        3372,
+        28,
+        1114,
+        1303,
+        374,
+        2867,
+        1413,
+        3738,
+        892,
+        1954,
+        1585,
+        2672,
+        3203,
+        2776,
+        424,
+        3013,
+        3739,
+        3175,
+        3669,
+        481,
+        3052,
+        299,
+        2198,
+        2173,
+        508,
+        2300,
+        1285,
+        383,
+        1617,
+        801,
+        2672
+      ],
+      "ordinary_zero_events": [
+        {
+          "derivative": 3275030,
+          "group": 6,
+          "source_head": 8
+        }
+      ],
+      "phase_error": true,
+      "rational_poles": [],
+      "residuals_with_future_poles": [
+        {
+          "after_head": 8,
+          "degree": 23,
+          "future_poles": [
+            12,
+            13
+          ]
+        }
+      ],
+      "termination_head": 32
+    },
+    {
+      "draw": "s6",
+      "error_weight": 32,
+      "first_native_rational_mismatch": null,
+      "index": 13237,
+      "local_pole_transfer": null,
+      "native_matches_ordinary_words": true,
+      "ordinary_words": [
+        2445,
+        3120,
+        3738,
+        3000,
+        2350,
+        2758,
+        2453,
+        2420,
+        3879,
+        3877,
+        3967,
+        2414,
+        4029,
+        905,
+        1321,
+        901,
+        3826,
+        1513,
+        473,
+        2898,
+        2949,
+        760,
+        3858,
+        2401,
+        3743,
+        1135,
+        1396,
+        2676,
+        1994,
+        189,
+        1761,
+        1354
+      ],
+      "ordinary_zero_events": [],
+      "phase_error": false,
+      "rational_poles": [],
+      "residuals_with_future_poles": [],
+      "termination_head": 32
+    },
+    {
+      "draw": "s6",
+      "error_weight": 29,
+      "first_native_rational_mismatch": {
+        "head": 14,
+        "native": [
+          458,
+          2526
+        ],
+        "rational": [
+          918,
+          3683
+        ]
+      },
+      "index": 74119,
+      "local_pole_transfer": null,
+      "native_matches_ordinary_words": true,
+      "ordinary_words": [
+        4005,
+        1874,
+        3386,
+        1500,
+        928,
+        1055,
+        2731,
+        2863,
+        3157,
+        1346,
+        274,
+        1681,
+        2561,
+        2992,
+        2801,
+        248,
+        3158,
+        2416,
+        688,
+        3826,
+        3750,
+        1962,
+        2508,
+        1412,
+        2868,
+        760,
+        3429,
+        416,
+        458,
+        2526,
+        2725,
+        1100
+      ],
+      "ordinary_zero_events": [
+        {
+          "derivative": 16547885,
+          "group": 7,
+          "source_head": 11
+        }
+      ],
+      "phase_error": true,
+      "rational_poles": [],
+      "residuals_with_future_poles": [
+        {
+          "after_head": 11,
+          "degree": 17,
+          "future_poles": [
+            14,
+            15
+          ]
+        }
+      ],
+      "termination_head": 29
+    },
+    {
+      "draw": "s6",
+      "error_weight": 31,
+      "first_native_rational_mismatch": null,
+      "index": 74118,
+      "local_pole_transfer": null,
+      "native_matches_ordinary_words": true,
+      "ordinary_words": [
+        2199,
+        2036,
+        1973,
+        156,
+        1995,
+        3407,
+        2184,
+        2809,
+        3680,
+        1744,
+        2489,
+        2019,
+        2182,
+        3788,
+        1201,
+        1089,
+        2775,
+        1590,
+        3970,
+        2317,
+        588,
+        3139,
+        647,
+        1006,
+        2622,
+        2673,
+        3031,
+        3785,
+        3244,
+        1934,
+        1249,
+        3692
+      ],
+      "ordinary_zero_events": [],
+      "phase_error": false,
+      "rational_poles": [],
+      "residuals_with_future_poles": [],
+      "termination_head": 31
+    },
+    {
+      "draw": "s7",
+      "error_weight": 29,
+      "first_native_rational_mismatch": {
+        "head": 12,
+        "native": [
+          1481,
+          3604
+        ],
+        "rational": [
+          1151,
+          2848
+        ]
+      },
+      "index": 46728,
+      "local_pole_transfer": null,
+      "native_matches_ordinary_words": true,
+      "ordinary_words": [
+        3218,
+        878,
+        491,
+        3329,
+        1806,
+        1116,
+        1818,
+        1671,
+        2100,
+        3806,
+        2030,
+        2175,
+        3257,
+        2691,
+        1214,
+        2638,
+        680,
+        2287,
+        387,
+        2214,
+        1943,
+        2204,
+        797,
+        2641,
+        1481,
+        3604,
+        1697,
+        633,
+        2185,
+        1439,
+        109,
+        2056
+      ],
+      "ordinary_zero_events": [
+        {
+          "derivative": 8361373,
+          "group": 6,
+          "source_head": 4
+        }
+      ],
+      "phase_error": true,
+      "rational_poles": [],
+      "residuals_with_future_poles": [
+        {
+          "after_head": 4,
+          "degree": 24,
+          "future_poles": [
+            12,
+            13
+          ]
+        }
+      ],
+      "termination_head": 29
+    },
+    {
+      "draw": "s7",
+      "error_weight": 26,
+      "first_native_rational_mismatch": null,
+      "index": 46727,
+      "local_pole_transfer": null,
+      "native_matches_ordinary_words": true,
+      "ordinary_words": [
+        1700,
+        3261,
+        3538,
+        1624,
+        2844,
+        622,
+        1685,
+        2204,
+        3099,
+        1907,
+        2475,
+        646,
+        1104,
+        3208,
+        4056,
+        1633,
+        3865,
+        1377,
+        2826,
+        3747,
+        3093,
+        1531,
+        3875,
+        2610,
+        1623,
+        3839,
+        3795,
+        808,
+        3409,
+        1668,
+        870,
+        1354
+      ],
+      "ordinary_zero_events": [],
+      "phase_error": false,
+      "rational_poles": [],
+      "residuals_with_future_poles": [],
+      "termination_head": 26
+    }
+  ],
+  "native_profile_sha256": "ee65029e9ee6231751e5bd49f5cc634a8429ebd027729342f323214b7e812881"
+}

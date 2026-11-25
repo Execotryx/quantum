@@ -1,0 +1,141 @@
+{
+  "claim": "sampled circuit acceptance under local salt and official metric; no coherent proof",
+  "completed": true,
+  "confirmation_observed": {
+    "k": 0,
+    "n": 102400
+  },
+  "costs": {
+    "dfthcsos": 3247752448.668952,
+    "dqi": 7061602921960.864,
+    "invsqrt": 411586.9178780867
+  },
+  "counts_note": "Counters require explicit source-reconciled mappings into real verifier returns.",
+  "coverage_counts": {
+    "dfthcsos": {
+      "completed": 254464,
+      "expected": 254464
+    },
+    "dqi": {
+      "completed": 102400,
+      "expected": 102400
+    },
+    "invsqrt": {
+      "completed": 200540928,
+      "expected": 200540928
+    }
+  },
+  "max_rss_platform_units": 5012208,
+  "pid": 1071,
+  "raw_verifier_results": {
+    "dfthcsos": {
+      "batch_size": 9,
+      "brot": 12,
+      "lambda_eff": 49.301369250574396,
+      "metrics": {
+        "E_SOS": -22144.23882724429,
+        "E_gap": 3.965477244291833,
+        "Lambda": 308.4559397330945,
+        "error_1": 0.0031851950317996216,
+        "error_2": 0.018639570630974368,
+        "gap_in_domain": true,
+        "lambda_eff": 49.301369250574396
+      },
+      "num_circuits": 9,
+      "num_ops": 2063857,
+      "num_qubits": 742,
+      "reaction_depth": 99,
+      "resources": {
+        "angles_persistent_qubits": 108,
+        "angles_qubits": 128,
+        "angles_selection_qubits": 12,
+        "angles_temporary_qubits": 8,
+        "angles_toffoli": 75024.0,
+        "angles_toffoli_per_pass": 37512.0,
+        "angles_within_cap": true,
+        "brot": 12,
+        "givens_rotations_toffoli": 3450,
+        "heuristic_persistent_qubits": 90,
+        "heuristic_qubits": 634,
+        "heuristic_temporary_qubits": 544,
+        "heuristic_toffoli": 13757,
+        "inner_state_prep_persistent_qubits": 44,
+        "inner_state_prep_qubits": 588,
+        "inner_state_prep_temporary_qubits": 544,
+        "inner_state_prep_toffoli": 9461,
+        "keep_bits": 10,
+        "outer_state_prep_persistent_qubits": 46,
+        "outer_state_prep_qubits": 416,
+        "outer_state_prep_temporary_qubits": 370,
+        "outer_state_prep_toffoli": 846,
+        "persistent_qubits": 198,
+        "qubits": 742,
+        "temporary_qubits": 544,
+        "toffoli": 88781.0
+      },
+      "score": 3247752448.668952,
+      "status": "PASS",
+      "submission_sha256": "09d50afaaca17334503ee807e91778c6200b81598937af2712a2e6f030ba6900",
+      "toffoli_count": 88781.0,
+      "verified_shots": 254464
+    },
+    "dqi": {
+      "circuit_sha256": "d41de9ee484c18f91245cdb131fe765d638f06bdae955cdb5b2079bbf8c1f090",
+      "degree": 12,
+      "effective_error_rate": 0.0008660587301657926,
+      "empirical_error_rate": 0.0,
+      "log2_delta": -128.0,
+      "m": 4095,
+      "max_toffoli_count": 1571803,
+      "mean_error_weight": 31.046737331746634,
+      "n": 70,
+      "num_bits": 49147,
+      "num_ops": 65687768,
+      "num_qubits": 1942,
+      "phase_errors": 0,
+      "r": 2016,
+      "reaction_depth": 54737,
+      "repetition_factor": 1.1912604648115832,
+      "score": 7061602921960.864,
+      "shot_operation_counts": {
+        "BIT_STORE0": 10756915200,
+        "CCX": 150845747200,
+        "CCZ": 5031936000,
+        "CSWAP": 5074944000,
+        "CX": 5538380945616,
+        "CZ": 117075642469,
+        "HMR": 160025702400,
+        "INFO_TAG": 119403724800,
+        "POP_CONDITION": 21028659200,
+        "PUSH_CONDITION": 21028659200,
+        "R": 149268787200,
+        "SWAP": 133781094400,
+        "X": 25117696000,
+        "Z": 157700985
+      },
+      "status": "PASS",
+      "toffoli_count": 1571803.0,
+      "value_errors": 0,
+      "verified_shots": 102400
+    },
+    "invsqrt": {
+      "circuit_sha256": "254279d6ffb1907c60458ef0c8adfcd728e40ea75a44fb754be6346efeef4728",
+      "max_toffoli_count": 2503,
+      "num_ops": 55385,
+      "num_qubits": 150,
+      "reaction_depth": 1102,
+      "rotation_count": 35.0,
+      "rotation_eps": 1.1587494041843706e-12,
+      "score": 411586.9178780867,
+      "status": "PASS",
+      "t_count": 1.0,
+      "toffoli_count": 2503.0,
+      "toffoli_equivalent": 2743.9127858539114,
+      "verified_shots": 200540928,
+      "worst_error_over_tolerance": 0.6677104117799098,
+      "worst_x": 940030
+    }
+  },
+  "rss_units": "bytes on macOS, KiB on Linux",
+  "verification_shot_divisor": 1
+}

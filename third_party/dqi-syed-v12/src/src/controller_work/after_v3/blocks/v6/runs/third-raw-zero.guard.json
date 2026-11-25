@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "/workspace/scratch/e5e4bb56acc7/controller_work/after_v3/blocks/v6/prepare_zero_third_fixture.py",
+    "--output",
+    "controller_work/after_v3/blocks/v6/runs/third-raw-zero"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794397852.1008275,
+  "rss_soft": 1500000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 21192704,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 6,
+  "elapsed_seconds": 0.40423130989074707,
+  "current_rss": 21192704,
+  "available_bytes": 9560829952,
+  "exit_code": 0
+}

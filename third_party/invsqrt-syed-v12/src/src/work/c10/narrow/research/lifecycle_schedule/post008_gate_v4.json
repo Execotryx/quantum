@@ -1,0 +1,510 @@
+{
+  "status": "COMPLETE_POSITIVE_PAPER_CONSTRUCTION_GATE_NATIVE_AND_OFFICIAL_PROOFS_PENDING",
+  "primary_Q": 49,
+  "primary": {
+    "Q": 49,
+    "status": "PAPER_CONSTRUCTION_GATE_PASSES_TARGET_NOT_NATIVE",
+    "complete_components": {
+      "consuming_root": 206,
+      "product": 229.0,
+      "phase_direct": 147.0,
+      "rotation_charge": 247.3782058208682,
+      "coefficient_rows": 123,
+      "coefficient_R_frames": 4,
+      "seed": 17.5,
+      "H3_H4_preparation_and_restoration": 7,
+      "retired_root_decoder": 21,
+      "pure_table_cleanup": 9,
+      "direct_pair_normalization": 97.5,
+      "divider_with_direct_u12": 588.5,
+      "first_actual_loader": 60,
+      "second_actual_loader": 73
+    },
+    "Toffolis_expected": 1581.5,
+    "T": 4,
+    "R": 34,
+    "rotation_charge": 247.3782058208682,
+    "total_E": 1829.8782058208683,
+    "paper_cost": 89664.03208522254,
+    "width_legal": true,
+    "margins": {
+      "stage97": 2614.9179147774557,
+      "target": 322.96791477745865,
+      "stretch": -6924.032085222541
+    },
+    "core_change": {
+      "u11_core": 605.5,
+      "removed_u11_initializer": 12,
+      "removed_j11_total": 30.0,
+      "direct_u12": 25,
+      "saving_E": 17.0,
+      "new_core": 588.5
+    },
+    "first_loader_peak": 49,
+    "second_loader_peak": 49,
+    "normalization_peak": 46,
+    "u12_initializer_peak": 47,
+    "retained_metadata": "R,rawa5,H0..2,oldA6snapshot; inverseword16 gives44data",
+    "seed_cleanup_peak": 47,
+    "coefficient_second_forward_peak": 48,
+    "phase": {
+      "R": 34,
+      "T": 4,
+      "Toffolis": 146.0,
+      "peak": 49
+    },
+    "fallbacks": [
+      {
+        "name": "adaptive133_u11",
+        "total_E": 1846.8782058208683,
+        "cost": 90497.03208522254
+      },
+      {
+        "name": "adaptive138_u12",
+        "total_E": 1834.8782058208683,
+        "cost": 89909.03208522254
+      },
+      {
+        "name": "fixed156_u12",
+        "total_E": 1852.8782058208683,
+        "cost": 90791.03208522254
+      },
+      {
+        "name": "fixed156_u11",
+        "total_E": 1869.8782058208683,
+        "cost": 91624.03208522254
+      }
+    ]
+  },
+  "all_Q_rows": [
+    {
+      "Q": 48,
+      "status": "ACTUAL_LOADERS_EXCEED_Q_CAP",
+      "complete_components": {
+        "consuming_root": 206,
+        "product": 249.5,
+        "phase_direct": 148.0,
+        "rotation_charge": 247.3782058208682,
+        "coefficient_rows": 123,
+        "coefficient_R_frames": 4,
+        "seed": 17.5,
+        "H3_H4_preparation_and_restoration": 7,
+        "retired_root_decoder": 21,
+        "pure_table_cleanup": 9,
+        "direct_pair_normalization": 97.5,
+        "divider_with_direct_u12": 605.0,
+        "first_actual_loader": 60,
+        "second_actual_loader": 73
+      },
+      "Toffolis_expected": 1619.4999999999998,
+      "T": 4,
+      "R": 34,
+      "rotation_charge": 247.3782058208682,
+      "total_E": 1867.878205820868,
+      "paper_cost": 89658.15387940167,
+      "width_legal": false,
+      "margins": {
+        "stage97": 2620.79612059833,
+        "target": 328.8461205983331,
+        "stretch": -6918.153879401667
+      },
+      "core_change": {
+        "u11_core": 624.5,
+        "removed_u11_initializer": 12,
+        "removed_j11_total": 32.5,
+        "direct_u12": 25,
+        "saving_E": 19.5,
+        "new_core": 605.0
+      },
+      "first_loader_peak": 49,
+      "second_loader_peak": 49,
+      "normalization_peak": 46,
+      "u12_initializer_peak": 47,
+      "retained_metadata": "R,rawa5,H0..2,oldA6snapshot; inverseword16 gives44data",
+      "seed_cleanup_peak": 47,
+      "coefficient_second_forward_peak": 48,
+      "phase": {
+        "R": 34,
+        "T": 4,
+        "Toffolis": 147.0,
+        "peak": 48
+      },
+      "fallbacks": [
+        {
+          "name": "adaptive133_u11",
+          "total_E": 1887.378205820868,
+          "cost": 90594.15387940167
+        },
+        {
+          "name": "adaptive138_u12",
+          "total_E": 1872.878205820868,
+          "cost": 89898.15387940167
+        },
+        {
+          "name": "fixed156_u12",
+          "total_E": 1890.878205820868,
+          "cost": 90762.15387940167
+        },
+        {
+          "name": "fixed156_u11",
+          "total_E": 1910.378205820868,
+          "cost": 91698.15387940167
+        }
+      ]
+    },
+    {
+      "Q": 49,
+      "status": "PAPER_CONSTRUCTION_GATE_PASSES_TARGET_NOT_NATIVE",
+      "complete_components": {
+        "consuming_root": 206,
+        "product": 229.0,
+        "phase_direct": 147.0,
+        "rotation_charge": 247.3782058208682,
+        "coefficient_rows": 123,
+        "coefficient_R_frames": 4,
+        "seed": 17.5,
+        "H3_H4_preparation_and_restoration": 7,
+        "retired_root_decoder": 21,
+        "pure_table_cleanup": 9,
+        "direct_pair_normalization": 97.5,
+        "divider_with_direct_u12": 588.5,
+        "first_actual_loader": 60,
+        "second_actual_loader": 73
+      },
+      "Toffolis_expected": 1581.5,
+      "T": 4,
+      "R": 34,
+      "rotation_charge": 247.3782058208682,
+      "total_E": 1829.8782058208683,
+      "paper_cost": 89664.03208522254,
+      "width_legal": true,
+      "margins": {
+        "stage97": 2614.9179147774557,
+        "target": 322.96791477745865,
+        "stretch": -6924.032085222541
+      },
+      "core_change": {
+        "u11_core": 605.5,
+        "removed_u11_initializer": 12,
+        "removed_j11_total": 30.0,
+        "direct_u12": 25,
+        "saving_E": 17.0,
+        "new_core": 588.5
+      },
+      "first_loader_peak": 49,
+      "second_loader_peak": 49,
+      "normalization_peak": 46,
+      "u12_initializer_peak": 47,
+      "retained_metadata": "R,rawa5,H0..2,oldA6snapshot; inverseword16 gives44data",
+      "seed_cleanup_peak": 47,
+      "coefficient_second_forward_peak": 48,
+      "phase": {
+        "R": 34,
+        "T": 4,
+        "Toffolis": 146.0,
+        "peak": 49
+      },
+      "fallbacks": [
+        {
+          "name": "adaptive133_u11",
+          "total_E": 1846.8782058208683,
+          "cost": 90497.03208522254
+        },
+        {
+          "name": "adaptive138_u12",
+          "total_E": 1834.8782058208683,
+          "cost": 89909.03208522254
+        },
+        {
+          "name": "fixed156_u12",
+          "total_E": 1852.8782058208683,
+          "cost": 90791.03208522254
+        },
+        {
+          "name": "fixed156_u11",
+          "total_E": 1869.8782058208683,
+          "cost": 91624.03208522254
+        }
+      ]
+    },
+    {
+      "Q": 50,
+      "status": "PAPER_CONSTRUCTION_GATE_PASSES_STAGE97_NOT_NATIVE",
+      "complete_components": {
+        "consuming_root": 206,
+        "product": 223.0,
+        "phase_direct": 147.0,
+        "rotation_charge": 247.3782058208682,
+        "coefficient_rows": 123,
+        "coefficient_R_frames": 4,
+        "seed": 17.5,
+        "H3_H4_preparation_and_restoration": 7,
+        "retired_root_decoder": 21,
+        "pure_table_cleanup": 9,
+        "direct_pair_normalization": 97.5,
+        "divider_with_direct_u12": 579.0,
+        "first_actual_loader": 60,
+        "second_actual_loader": 73
+      },
+      "Toffolis_expected": 1566.0,
+      "T": 4,
+      "R": 34,
+      "rotation_charge": 247.3782058208682,
+      "total_E": 1814.3782058208683,
+      "paper_cost": 90718.91029104342,
+      "width_legal": true,
+      "margins": {
+        "stage97": 1560.0397089565813,
+        "target": -731.9102910434158,
+        "stretch": -7978.910291043416
+      },
+      "core_change": {
+        "u11_core": 595.0,
+        "removed_u11_initializer": 12,
+        "removed_j11_total": 29.0,
+        "direct_u12": 25,
+        "saving_E": 16.0,
+        "new_core": 579.0
+      },
+      "first_loader_peak": 49,
+      "second_loader_peak": 49,
+      "normalization_peak": 46,
+      "u12_initializer_peak": 47,
+      "retained_metadata": "R,rawa5,H0..2,oldA6snapshot; inverseword16 gives44data",
+      "seed_cleanup_peak": 47,
+      "coefficient_second_forward_peak": 48,
+      "phase": {
+        "R": 34,
+        "T": 4,
+        "Toffolis": 146.0,
+        "peak": 49
+      },
+      "fallbacks": [
+        {
+          "name": "adaptive133_u11",
+          "total_E": 1830.3782058208683,
+          "cost": 91518.91029104342
+        },
+        {
+          "name": "adaptive138_u12",
+          "total_E": 1819.3782058208683,
+          "cost": 90968.91029104342
+        },
+        {
+          "name": "fixed156_u12",
+          "total_E": 1837.3782058208683,
+          "cost": 91868.91029104342
+        },
+        {
+          "name": "fixed156_u11",
+          "total_E": 1853.3782058208683,
+          "cost": 92668.91029104342
+        }
+      ]
+    },
+    {
+      "Q": 51,
+      "status": "PAPER_CONSTRUCTION_GATE_PASSES_STAGE97_NOT_NATIVE",
+      "complete_components": {
+        "consuming_root": 206,
+        "product": 219.0,
+        "phase_direct": 147.0,
+        "rotation_charge": 247.3782058208682,
+        "coefficient_rows": 123,
+        "coefficient_R_frames": 4,
+        "seed": 17.5,
+        "H3_H4_preparation_and_restoration": 7,
+        "retired_root_decoder": 21,
+        "pure_table_cleanup": 9,
+        "direct_pair_normalization": 97.5,
+        "divider_with_direct_u12": 570.0,
+        "first_actual_loader": 60,
+        "second_actual_loader": 73
+      },
+      "Toffolis_expected": 1553.0,
+      "T": 4,
+      "R": 34,
+      "rotation_charge": 247.3782058208682,
+      "total_E": 1801.3782058208683,
+      "paper_cost": 91870.28849686428,
+      "width_legal": true,
+      "margins": {
+        "stage97": 408.66150313572143,
+        "target": -1883.2884968642757,
+        "stretch": -9130.288496864276
+      },
+      "core_change": {
+        "u11_core": 585.5,
+        "removed_u11_initializer": 12,
+        "removed_j11_total": 28.5,
+        "direct_u12": 25,
+        "saving_E": 15.5,
+        "new_core": 570.0
+      },
+      "first_loader_peak": 49,
+      "second_loader_peak": 49,
+      "normalization_peak": 46,
+      "u12_initializer_peak": 47,
+      "retained_metadata": "R,rawa5,H0..2,oldA6snapshot; inverseword16 gives44data",
+      "seed_cleanup_peak": 47,
+      "coefficient_second_forward_peak": 48,
+      "phase": {
+        "R": 34,
+        "T": 4,
+        "Toffolis": 146.0,
+        "peak": 49
+      },
+      "fallbacks": [
+        {
+          "name": "adaptive133_u11",
+          "total_E": 1816.8782058208683,
+          "cost": 92660.78849686428
+        },
+        {
+          "name": "adaptive138_u12",
+          "total_E": 1806.3782058208683,
+          "cost": 92125.28849686428
+        },
+        {
+          "name": "fixed156_u12",
+          "total_E": 1824.3782058208683,
+          "cost": 93043.28849686428
+        },
+        {
+          "name": "fixed156_u11",
+          "total_E": 1839.8782058208683,
+          "cost": 93833.78849686428
+        }
+      ]
+    },
+    {
+      "Q": 52,
+      "status": "PAPER_GATE_FAILS_COST",
+      "complete_components": {
+        "consuming_root": 206,
+        "product": 215.5,
+        "phase_direct": 147.0,
+        "rotation_charge": 247.3782058208682,
+        "coefficient_rows": 123,
+        "coefficient_R_frames": 4,
+        "seed": 17.5,
+        "H3_H4_preparation_and_restoration": 7,
+        "retired_root_decoder": 21,
+        "pure_table_cleanup": 9,
+        "direct_pair_normalization": 97.5,
+        "divider_with_direct_u12": 561.5,
+        "first_actual_loader": 60,
+        "second_actual_loader": 73
+      },
+      "Toffolis_expected": 1541.0,
+      "T": 4,
+      "R": 34,
+      "rotation_charge": 247.3782058208682,
+      "total_E": 1789.3782058208683,
+      "paper_cost": 93047.66670268515,
+      "width_legal": true,
+      "margins": {
+        "stage97": -768.716702685153,
+        "target": -3060.66670268515,
+        "stretch": -10307.66670268515
+      },
+      "core_change": {
+        "u11_core": 576.5,
+        "removed_u11_initializer": 12,
+        "removed_j11_total": 28.0,
+        "direct_u12": 25,
+        "saving_E": 15.0,
+        "new_core": 561.5
+      },
+      "first_loader_peak": 49,
+      "second_loader_peak": 49,
+      "normalization_peak": 46,
+      "u12_initializer_peak": 47,
+      "retained_metadata": "R,rawa5,H0..2,oldA6snapshot; inverseword16 gives44data",
+      "seed_cleanup_peak": 47,
+      "coefficient_second_forward_peak": 48,
+      "phase": {
+        "R": 34,
+        "T": 4,
+        "Toffolis": 146.0,
+        "peak": 49
+      },
+      "fallbacks": [
+        {
+          "name": "adaptive133_u11",
+          "total_E": 1804.3782058208683,
+          "cost": 93827.66670268515
+        },
+        {
+          "name": "adaptive138_u12",
+          "total_E": 1794.3782058208683,
+          "cost": 93307.66670268515
+        },
+        {
+          "name": "fixed156_u12",
+          "total_E": 1812.3782058208683,
+          "cost": 94243.66670268515
+        },
+        {
+          "name": "fixed156_u11",
+          "total_E": 1827.3782058208683,
+          "cost": 95023.66670268515
+        }
+      ]
+    }
+  ],
+  "source_pins": {
+    "research/lifecycle_schedule/post008_gate_v3.py": "ec66f61b38ed835754bac44dfb7debf5d4b357f20800f13c482fd8515d256f07",
+    "research/lifecycle_schedule/post008_gate_v3.json": "c0d3eb4c7a1d829d0aa5964345d57933b3ade122c34105dc67ac7807564bb2ee",
+    "research/lifecycle_schedule/v4_independent_audit.py": "8b472269ff34708b4d77ce16157a40ff175f4206f6484ae9a8e14723213a513d",
+    "research/lifecycle_schedule/v4_independent_audit.json": "da7a8028722569425fedb7f9a50972366fa62136592e37d02a4a8e8ec09bcd75",
+    "research/stream_phase/alias_ring/core_ledger.json": "f7453d1079a0bbd99b06f088cb6cfda045883784e398c31cb05281d4d54f5524",
+    "research/recompute_root/initializer_u12/u12_certificate.py": "0ef7b7e28bebebe9b2b1ed3cc486c1cd0d8709cac27ad528a062bd7f6a7efc25",
+    "research/recompute_root/initializer_u12/local_algebra.json": "978c2adafd8d3355558a5e672982623372d459dec610273e1e43847681cc4c14",
+    "checkpoint002/cleanroom/odd_sqrt/consuming_odd_sqrt.py": "0a60a631cb97dc39ea0e76e7ab2dc26300fd4f96218a73e0e56262c59586c144",
+    "checkpoint002/cleanroom/odd_sqrt/native_q44_exhaustive.json": "08802711598dae3870ab5726b71e6a48457f6104c4a725214c945f0c4caa7915",
+    "research/recompute_root/models/phasefit_z1_K7_G4_m37_virtual_quadS2_36_12c0.json": "24fff823faa911afe93d02afc3ded0bbd156a210a85f1265c989a087f8fd1219",
+    "research/recompute_root/decoder_k8/endpoint_reuse.json": "334ba08ff4baa68f8a7622334320ead48bf811d03aeea3b56430ce02e4de04ac",
+    "research/quantized_producer/framed_retained5_best21_snapshot.json": "3b6fa7059bee77bb9abe6c7395cd8ff2f2899843523188c60d513e6c5d381def",
+    "research/quantized_producer/u11_hmr_initializer.json": "b9e3183ad1291f0805d352ddd6efb37bb7be89d8af68f859ec8c80b76bfda15b",
+    "research/joint_loader/search/subspace16_cap23_s3_raw.json": "8c0f15847a70c68b910f97b3f78c86f64fd55cab7ff4ddf90c3891bec5385a15",
+    "research/joint_loader/search/subspace16_cap18_s2_raw.json": "f5f872c90a48192e08928266fe307a9802e965e58d489f2127e4fcefb16d1916",
+    "research/joint_loader/retained_table_cleanup.json": "6a48b472433918d2c51f30e6eeb1d9933fdf1aa4ae9f83b93129fd8ac103b6b5",
+    "research/quantized_producer/pair_normalization.py": "6af7fc14bc3c904efe480e2e23aee2fcbd97ad23f0a7ba324d8c05e1c8ec17fe",
+    "research/quantized_producer/pair_normalization.json": "16ae519e925ce8964c93329ba34928a954dfe6efa5f353062f369a8f78a4e619",
+    "research/recompute_root/initializer_u12/u12_certificate.json": "3da759edf4c93ef6fc94b6a373661d7729fcba2bfbedccfc34de1bf55f1517c0",
+    "research/recompute_root/initializer_u12/model_interface.json": "876246eb40158ad9695302f68dd413b0991ba6be423aad9abe6200528204be29",
+    "research/joint_loader/frozen/loader16_first62.json": "c8af534ce6f86ef977dfe7c88306f6eb8610584d9571f3b14424539777e32213",
+    "research/joint_loader/frozen/loader16_second76.json": "f29768cfb6f79251c715761fc832feb491f48c729ddb874b725f9926ee5be322",
+    "research/joint_loader/frozen/loader16_first62.replay.json": "fe0355e50b440452cc34cea35bd6dcf349ea76137b9556c9b3f43e814de885a6",
+    "research/joint_loader/frozen/loader16_second76.replay.json": "9c45213ac89d250f9511da5bf9bb47fb983fe14fc15c1ae68535b018e45ef019",
+    "research/joint_loader/frozen/loader16_first60.json": "3bcbd49ad53c0e2661bbc1112d172c854d4bf50ba4ea1f9a119a077f8e6cd9fd",
+    "research/joint_loader/frozen/loader16_second73.json": "52db753c9efef945c9194ed4a39ec3b250221b69eb10e0030dc2a283f659eafc",
+    "research/joint_loader/frozen/loader16_first60.replay.json": "4fbeaff1419fc647498f7762c2e5bed4170c8d2e785c617b9470699d692177b3",
+    "research/joint_loader/frozen/loader16_second73.replay.json": "ee4748459fb24a847f7ed3e2952aa4b26595c144f5a1162e1725fc125ac068ec"
+  },
+  "coefficient_model_sha256": "24fff823faa911afe93d02afc3ded0bbd156a210a85f1265c989a087f8fd1219",
+  "model_margin_units": 31966138,
+  "original_tolerance_unchanged": true,
+  "normalized_endpoint_inputs": 3145728,
+  "endpoint_alias_bit_checks": 207618048,
+  "native_status": "No new complete native circuit, native proof, or official verifier run. The inherited consuming-root component is the sole previously measured native component in this ledger.",
+  "authorization": "The complete paper gate now permits coordinated native construction. A competition result requires native proofs and official saltsdefault,1,2,3.",
+  "native_obligations": [
+    "Emit and natively prove both actual raw-address loader DAGs, their invertible output basis, and all deferred pure-table helper phases. Their peaks are49, so no Q48 claim.",
+    "Compute initialH3 while rawa6 is live, then R-only frame and retire exactlyrawa0,a1,a2,a4,a6; retain raw a5. ComputeH4 before coefficient rows.",
+    "Keep second oldA6 snapshot through inverseproduct. Repay first snapshot at second Aload. Combine identical first/second forward coefficient carry outcomes and repay in matching final inverse.",
+    "Erase H4 thenH3 only at currentD chart; immediately repay their exact quadratic phases. Restore H3 thenH4 after seed cleanup before ANY coefficient inverse mutation.",
+    "Use the exact17.5-E conditional seed cleanup, including old forward carry phases and the measurement-conditioned fifth helper; constants receive their classical-outcome phase.",
+    "Use the paired consuming-product owner handoff, implicit C0=0, reconstituted coefficient, and restored product controls. Arithmetic requires16 word owners in inverse, not15.",
+    "Apply endpoint phase and unroute with exact alias/root frames; restore divider, product, root and normalization; retire no quotient information for free.",
+    "Restore initialA/H and rawaddress before table cleanup; repay dynamic/root/seed debts separately before the9-E puretable cleanup.",
+    "Run complete native proofs and official verifier saltsdefault,1,2,3 at unchanged tolerance. None has run for this branch.",
+    "Emit and natively prove the fresh97.5-E pair-normalizer, including all31 HMR phase generators. It feeds standard n=x*4**k to the consumed root; no semilog alignment or packed count owner is imported.",
+    "Use the25-E directu12 initializer, start recurrence atj12, retain originalP12 aspreviousinput, and use its returned P13/P14 owners on cleanup. Its immediate local carry phases are already paid; no oldj10/j11 token may remain.",
+    "Primary actual loaders are60E and73E, with97 combined deferred pure-table HMR generators. Their A12 reconstruction is included in those counts and each returns the same16 physical outputs. Repay debts on the restored raw+A13+H0..2 rank128 chart before the separately priced9-E table cleanup.",
+    "Propagate newly allocated logical product/root owners through every reverse kernel. Restore original physical input positions by Clifford permutation if needed; never use a stale freed qubit identifier.",
+    "Any native change to the coefficient, seed, phaseword, rotations, or original tolerance invalidates this frozen numerical margin until the exact unchanged-tolerance screen is rerun."
+  ],
+  "no_submission": true
+}

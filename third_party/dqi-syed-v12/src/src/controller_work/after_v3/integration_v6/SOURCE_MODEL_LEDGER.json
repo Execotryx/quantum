@@ -1,0 +1,54 @@
+{
+  "below_351e9": null,
+  "components_static_T": {
+    "extractor_rolling_gauge_padded_seed": 151852,
+    "finish_outer_seam_delta": -92,
+    "preimage_gauge_parking_shared_windows": 115025,
+    "projective_finish": 7856,
+    "scan": 44275,
+    "synthesis": 65076
+  },
+  "format": "DQI_INTERNAL_V6_SOURCE_MODEL_LEDGER_V1",
+  "frozen_v5b": {
+    "mean_exact": "13168164570771213/34359738368",
+    "static_T": 384047
+  },
+  "full_source_mean": 383177.84819089656,
+  "full_source_mean_exact": "13165890612252429/34359738368",
+  "historical_v3_nested_norm_stages": {
+    "key": 72,
+    "total": 122
+  },
+  "incremental_saving_from_v4": {
+    "mean": 368.36838710308075,
+    "mean_exact": "3090097999/8388608",
+    "static_T": 357
+  },
+  "incremental_saving_from_v5b": {
+    "mean": 66.18090319633484,
+    "mean_exact": "277582827/4194304",
+    "static_T": 55
+  },
+  "internal_source_generation": "integration_v6",
+  "key_pair_static_T": 216928,
+  "key_prefix_static_T": 101087,
+  "key_source_mean_exact": "28402108715/131072",
+  "measured_whole_mean_T": null,
+  "native_jobs_by_preparer": 0,
+  "new_admitted_event": false,
+  "new_population_draws": 0,
+  "official_cost": null,
+  "preimage_pair_static_T": 115025,
+  "preimage_prefix_static_T": 57034,
+  "preimage_source_mean_exact": "3932776829832973/34359738368",
+  "public_release_label": "v5",
+  "selected_source_derived_norm_stages": {
+    "additional_discount_credited": false,
+    "key": 64,
+    "literal_call_count": false,
+    "total": 114
+  },
+  "source_model_Q": 889,
+  "status": "SOURCE_MODEL_NOT_WHOLE_NATIVE_OR_OFFICIAL_MEASUREMENT",
+  "total_static_T": 383992
+}

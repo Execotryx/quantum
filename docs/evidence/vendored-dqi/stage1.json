@@ -1,0 +1,41 @@
+{
+  "finalists": [
+    "d4",
+    "d5"
+  ],
+  "ranked": [
+    {
+      "candidate": "d4",
+      "cost": 417908682221.1634,
+      "failures_by_salt": [
+        0,
+        1
+      ],
+      "priced_failures": 3,
+      "receipts": {
+        "pricing/d4/s1.json": "486c5e9aa4deb0a70923ee1771d9a2bf788b3a7a006513903a5b73fd1015a71e",
+        "pricing/d4/s2.json": "6cdde512c4e1859e8da653ca8466702762912707b5fef58b04a15af93ef07ad0"
+      },
+      "repetition_factor": 1.2055843238398525,
+      "total_failures": 1,
+      "upper_error_rate": 0.000983909102617945
+    },
+    {
+      "candidate": "d5",
+      "cost": 842819915403.5186,
+      "failures_by_salt": [
+        0,
+        0
+      ],
+      "priced_failures": 2,
+      "receipts": {
+        "pricing/d5/s1.json": "bf1e4443665f0ba256f35aef8fa9905403ed7cb52d17df556ea8a1cef280790b",
+        "pricing/d5/s2.json": "6495a62a50bb380f817769d61e1c663c498cecd87d57bafea5912079305d7b3d"
+      },
+      "repetition_factor": 1.2013880602795501,
+      "total_failures": 0,
+      "upper_error_rate": 0.0009488155716079551
+    }
+  ],
+  "registration_sha256": "be02cd9a038ba645860b99504548653449720b220f3b0e3d8e3de75a3c3b01eb"
+}

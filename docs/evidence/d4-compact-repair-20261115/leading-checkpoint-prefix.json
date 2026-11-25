@@ -1,0 +1,47 @@
+{
+  "backend_inventory_sha256": "132405912244d6232e4ea7fb3c9e941f8cbfbfe8cc51dd49ab3fccb609166237",
+  "driver_sha256": "b024b5f97de42187a7edb11509131eb6cf881ee85823e290cae67484af0335fa",
+  "fixture_count": 3,
+  "leading_factor_sha256": "4af2fb8dac1a5ff6ae11ede5d5204221c569b0f46025023191ba1ebb2945a2da",
+  "levels": 5,
+  "native": {
+    "closed_static": 64128,
+    "declared_qubits": 1233,
+    "forward_static": 32064,
+    "simulation_seeds": [
+      111,
+      112
+    ]
+  },
+  "plans": [
+    {
+      "calls": 13,
+      "estimated_toffoli": 18420,
+      "scratch_words": 56,
+      "window_words": [
+        1,
+        10,
+        18,
+        26,
+        22,
+        14
+      ]
+    },
+    {
+      "calls": 13,
+      "estimated_toffoli": 13644,
+      "scratch_words": 44,
+      "window_words": [
+        1,
+        6,
+        14,
+        22,
+        18,
+        10
+      ]
+    }
+  ],
+  "requested_coefficients": 24,
+  "source_sha256": "6e9f0028226c240539df18b3ff05f4f533b1ff06902774fa88e13aacbbadbcd6",
+  "witness_sha256": "0b7f4ab02c435e28e5aaf7596913e453d4ddf474b797f0e384cf10ab52b4794b"
+}

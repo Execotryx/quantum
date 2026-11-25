@@ -1,0 +1,133 @@
+{
+  "check_quotient_phase62.py": {
+    "changes": [
+      {
+        "new": "import sys\nsys.path.insert(0, str(Path(__file__).resolve().parents[1]))\nfrom accepted_runtime import load, recheck, digest, loaded_sources",
+        "occurrences": 1,
+        "old": "from accepted_runtime import load, recheck, digest, loaded_sources"
+      },
+      {
+        "new": "Reference = importlib.import_module('quotient_phase63')",
+        "occurrences": 1,
+        "old": "Reference = importlib.import_module('cubic_inverse130')"
+      },
+      {
+        "new": "Candidate = importlib.import_module('quotient_phase62')",
+        "occurrences": 1,
+        "old": "Candidate = importlib.import_module('quotient_phase63')"
+      },
+      {
+        "new": "(62, 22) if kind == 'candidate' else (63, 18)",
+        "occurrences": 1,
+        "old": "(63, 18) if kind == 'candidate' else (65, 22)"
+      },
+      {
+        "new": "for module in (Reference, Candidate, Tensor, importlib.import_module('cubic_trace_quotient20'), importlib.import_module('cubic_inverse130'))",
+        "occurrences": 1,
+        "old": "for module in (Reference, Candidate, Tensor)"
+      },
+      {
+        "new": "IN_PROGRESS_CUBIC20_JOINT_NORM_QUOTIENT_PHASE_COMPONENT",
+        "occurrences": 1,
+        "old": "IN_PROGRESS_JOINT_NORM_QUOTIENT_PHASE_COMPONENT"
+      },
+      {
+        "new": "PASS_NATIVE_CUBIC20_JOINT_NORM_QUOTIENT_PHASE_COMPONENT_ONLY",
+        "occurrences": 1,
+        "old": "PASS_NATIVE_JOINT_NORM_QUOTIENT_PHASE_COMPONENT_ONLY"
+      },
+      {
+        "new": "measured_single_phase_delta_T=-1",
+        "occurrences": 1,
+        "old": "measured_single_phase_delta_T=-2"
+      },
+      {
+        "new": "measured_helper_delta=4",
+        "occurrences": 1,
+        "old": "measured_helper_delta=-4"
+      },
+      {
+        "new": "full_preimage_static_delta_model=-18",
+        "occurrences": 1,
+        "old": "full_preimage_static_delta_model=-36"
+      },
+      {
+        "new": "'-150994935/8388608'",
+        "occurrences": 1,
+        "old": "'-301989870/8388608'"
+      }
+    ],
+    "parent": "controller_work/after_v3/blocks/check_quotient_phase63.py",
+    "parent_sha256": "01db1862063d5fe20a196243c737616ed0ff7630174e71bd0f2b165f27c99775",
+    "sha256": "0f9cc52f12f9eb8121ddaa02d5f5b22aded863775acfa873c1dee0e220562975"
+  },
+  "paired_phase62.py": {
+    "changes": [
+      {
+        "new": "62",
+        "occurrences": 9,
+        "old": "63"
+      },
+      {
+        "new": "Static89",
+        "occurrences": 2,
+        "old": "Static90"
+      },
+      {
+        "new": "22 helpers",
+        "occurrences": 2,
+        "old": "18 helpers"
+      },
+      {
+        "new": "35/2**24",
+        "occurrences": 2,
+        "old": "36/2**24"
+      },
+      {
+        "new": "Fraction(35, 1 << 24)",
+        "occurrences": 1,
+        "old": "Fraction(36, 1 << 24)"
+      },
+      {
+        "new": "'paired_dual62_rhs_zero', 35, 24",
+        "occurrences": 1,
+        "old": "'paired_dual62_rhs_zero', 36, 24"
+      }
+    ],
+    "parent": "controller_work/after_v3/blocks/paired_phase63.py",
+    "parent_sha256": "960f7d1a732eeb8b0246cdb80b3b18110a03be676512670caeb0183af38cd37d",
+    "sha256": "b1e4b759b384a28b1ac557d6b5674319b5403cf53aa03cc0f196b03356d0d150"
+  },
+  "quotient_phase62.py": {
+    "changes": [
+      {
+        "new": "62-T",
+        "occurrences": 1,
+        "old": "63-T"
+      },
+      {
+        "new": "from cubic_trace_quotient20 import phase_trace_quotient_six",
+        "occurrences": 1,
+        "old": "from narrow_field130 import phase_quotients_six6"
+      },
+      {
+        "new": "STATIC_T = 62",
+        "occurrences": 1,
+        "old": "STATIC_T = 63"
+      },
+      {
+        "new": "HELPERS = 22",
+        "occurrences": 1,
+        "old": "HELPERS = 18"
+      },
+      {
+        "new": "    phase_trace_quotient_six(builder, norm, relative)",
+        "occurrences": 1,
+        "old": "    trace_mask = builder.alloc_bits(6)\n    for bit in range(6):\n        builder.bit_store(trace_mask[bit], bool(trace(1 << bit)))\n    phase_quotients_six6(builder, norm, [(relative, trace_mask)])\n    builder.free(trace_mask)"
+      }
+    ],
+    "parent": "controller_work/after_v3/blocks/quotient_phase63.py",
+    "parent_sha256": "f34552c29673a823f1a1f82c05894fd8c0fd5aad443495caa8914570e8262bdb",
+    "sha256": "510b413697d3cd50b3d2c024252552bf294875ab5ff7ffe253f75b437b2fdc06"
+  }
+}

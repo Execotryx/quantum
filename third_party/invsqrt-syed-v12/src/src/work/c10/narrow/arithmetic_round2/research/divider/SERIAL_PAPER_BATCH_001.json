@@ -1,0 +1,35 @@
+{
+  "status": "COMPLETED_SERIAL_FROZEN_DIVIDER_PAPER_BATCH_NOT_NATIVE",
+  "results": [
+    {
+      "name": "history12_full_phase",
+      "action": "executed_once_after_observed_no_run",
+      "result_path": "/workspace/scratch/40c9505bd2bc/narrow/arithmetic_round2/research/divider/history12_study.json",
+      "result_sha256": "4639dc85582bbff4d77aecc8bd004dcd205531299358d5415ca4430e4773439d",
+      "source_ready_sha256": "d2dba815ccbd4b090196c41a839f884b523ebce53e5ac9dff7fc68e76d73530a",
+      "status": "COMPLETE_POSITIVE_HISTORY12_PAPER_GATE_NOT_NATIVE"
+    },
+    {
+      "name": "history12_affine",
+      "action": "executed_once_after_observed_no_run",
+      "result_path": "/workspace/scratch/40c9505bd2bc/narrow/arithmetic_round2/research/divider/history12_affine_screen.json",
+      "result_sha256": "b86a07d1b4e0bd553b768a73143ef8f261833a7786e8bd39a4e0a4fde1b436ad",
+      "source_ready_sha256": "54883025683ea06bd506fd756c6c15120c987092e336426e9b37990c6aa6c1dd",
+      "status": "EXACT_AFFINE_RESTORATION_OBSTRUCTION"
+    },
+    {
+      "name": "original_top",
+      "action": "executed_once_after_observed_no_run",
+      "result_path": "/workspace/scratch/40c9505bd2bc/narrow/arithmetic_round2/research/divider/top_reconstruction_screen.json",
+      "result_sha256": "820e555c9e1bc72ac6dc0b26655617dcb1dbb282c7e55675e9bf1b07de09956f",
+      "source_ready_sha256": "abce24a353eafd9cdbe5ff4f27bceedb19371380e3e67ae46d85771c56a8ebc1",
+      "status": "FINITE_EXACT_TOP_CHART_OBSTRUCTIONS_UNPROVED_SURVIVORS"
+    }
+  ],
+  "queue_outcomes_sha256": "642f639f4a598194ba8cd4e187383f4091c100b75472f993052dcef11909d3e1",
+  "source_ready_sha256": "1be03b8de9f406f69d98e3a52106b4aac2447404bfdb409694cacdded9161ef4",
+  "original_jobs_not_duplicated": true,
+  "automatic_workload_retries": 0,
+  "native_or_official_execution": false,
+  "elapsed_seconds": 37.98183280999365
+}

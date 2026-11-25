@@ -1,0 +1,35 @@
+{
+  "status": "PARENT_AND_INDEPENDENT_STATIC_INTEGRATION_REVIEW_PASS_NO_NATIVE",
+  "reviewed_utc": "2026-11-12T00:06:51.586092+00:00",
+  "parent_checked_input_pins": 254,
+  "independent_review": "stream_phase read-only review of variant/generator/proof/batch, consumed_root and measurement_audit cross-review of lifecycle/table/decoder handoffs",
+  "module_identity": "one local adapter instance under plain and qualified module names",
+  "native_oracle": "immutable candidate04 helper functions and independent exact50 mathematical oracle, with entry-point candidate06 bindings",
+  "expected_resources": {
+    "Q": 48,
+    "Toffolis": 1591,
+    "T": 4,
+    "R": 34
+  },
+  "phase_proxy_counts": [
+    34,
+    4,
+    0
+  ],
+  "all_phase_reset_input_HMR_checks_retained": true,
+  "native_imported": false,
+  "native_executed": false,
+  "source_hashes": {
+    "audit_tables06_static.py": "747e5248c9a34f40053d650c99800190340046b96498212218d650149ff514f6",
+    "decoder06.py": "9fb7e197e85e343131b200e9ee0c081437b83b6824c615431ba9627d3b67417c",
+    "divider_cleanup06.py": "eef2870d4788d95c59f56f13269f6d4ee858fbc3ac1c6e0ee8353a516292d647",
+    "generate.py": "3c6cd010f31be105c5bfdd8a03694b341ca73a84072fc8a9404f2a904cf9f4df",
+    "lifecycle06.py": "0e38bf25ef639106608b7fb70e863aed75f0fcc82fca9a98e8e94cec905ea8aa",
+    "phase06.py": "4e979c47bc90317a6ac3576bc74964cf74222c2006e1630f6b17075af51ccdfb",
+    "prove50.py": "3728736ac482260eab2e98cd82987a1f2c7bb91d93cd9dfb9c71820d48521753",
+    "run_batch.py": "445dcb481328d4e4222bbaa98e04d0345c59583877bf099302b47e673b718581",
+    "static_phase06.py": "3715cc352f0260adc1ee3002d6fae473d4277de69aef8b9216d79090433e14be",
+    "tables06.py": "f0eef9c8905b0d4e9c20bb286b33d526c0cf0f27ea4bb619c066ea7ed58a690b",
+    "variant.py": "2c9ece9c700b0a87c21c37b9691e4a2a15d8d580cd972eb115d1e918008562c6"
+  }
+}

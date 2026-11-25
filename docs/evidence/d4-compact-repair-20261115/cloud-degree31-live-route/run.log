@@ -1,0 +1,16 @@
+launch.sh: OK
+source.tar.gz: OK
+Sun Nov 15 21:50:15 UTC 2026
+...unit-tail static stage counts {'extract': 67277, 'certificate': 0, 'synthesis': 26929, 'normalize': 2715, 'convert': 51404, 'scan': 44275, 'unconvert': 53430, 'unnormalize': 2715, 'unsynthesis': 39391, 'uncertificate': 0, 'unextract': 134047} cumulative widths {'extract': 920, 'certificate': 920, 'synthesis': 920, 'normalize': 920, 'convert': 920, 'scan': 920, 'unconvert': 920, 'unnormalize': 920, 'unsynthesis': 920, 'uncertificate': 920, 'unextract': 920}
+unit-tail padded=False first=True degree-cert=True norms=True live-degree=False seed=715 full=False qubits=920 gates=94184.5
+unit-tail padded=False first=True degree-cert=True norms=True live-degree=False seed=715 full=True qubits=920 gates=415475.5
+unit-tail padded=False first=True degree-cert=True norms=True live-degree=False seed=716 full=False qubits=920 gates=94184.5
+unit-tail padded=False first=True degree-cert=True norms=True live-degree=False seed=716 full=True qubits=920 gates=415535.5
+.unit-tail static stage counts {'extract': 67277, 'certificate': 0, 'synthesis': 28421, 'normalize': 2726, 'convert': 51404, 'scan': 48300, 'unconvert': 53430, 'unnormalize': 2725, 'unsynthesis': 40883, 'uncertificate': 0, 'unextract': 134047} cumulative widths {'extract': 920, 'certificate': 920, 'synthesis': 920, 'normalize': 920, 'convert': 926, 'scan': 926, 'unconvert': 926, 'unnormalize': 926, 'unsynthesis': 926, 'uncertificate': 926, 'unextract': 926}
+unit-tail padded=False first=True degree-cert=True norms=True live-degree=True seed=715 full=False qubits=920 gates=95309.66666666667
+unit-tail padded=False first=True degree-cert=True norms=True live-degree=True seed=715 full=True qubits=926 gates=421805.1666666667
+unit-tail padded=False first=True degree-cert=True norms=True live-degree=True seed=716 full=False qubits=920 gates=95325.16666666667
+unit-tail padded=False first=True degree-cert=True norms=True live-degree=True seed=716 full=True qubits=926 gates=421775.1666666667
+.
+5 passed, 44 deselected in 190.13s (0:03:10)
+Sun Nov 15 21:53:26 UTC 2026

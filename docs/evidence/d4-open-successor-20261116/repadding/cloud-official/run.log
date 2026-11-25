@@ -1,0 +1,45 @@
+launch.sh: OK
+source.tar.gz: OK
+Mon Nov 16 16:06:54 UTC 2026
+banked started
+banked done: 897 qubits, panel means [430821.43, 430822.6]
+candidate started
+candidate done: 891 qubits, panel means [394196.26, 394197.29]
+Mon Nov 16 16:08:13 UTC 2026
+banked s1 started
+banked s1: PASS value=0 phase=1
+banked s2 started
+banked s2: PASS value=0 phase=0
+candidate s1 started
+candidate s1: PASS value=0 phase=0
+candidate s2 started
+candidate s2: PASS value=1 phase=0
+banked s1: PASS value=0 phase=1
+banked s2: PASS value=0 phase=0
+banked s3 started
+banked s3: PASS value=0 phase=0
+banked s4 started
+banked s4: PASS value=0 phase=0
+banked s5 started
+banked s5: PASS value=0 phase=1
+banked s6 started
+banked s6: PASS value=0 phase=0
+banked s7 started
+banked s7: PASS value=0 phase=2
+banked s8 started
+banked s8: PASS value=0 phase=0
+candidate s1: PASS value=0 phase=0
+candidate s2: PASS value=1 phase=0
+candidate s3 started
+candidate s3: PASS value=1 phase=0
+candidate s4 started
+candidate s4: PASS value=1 phase=0
+candidate s5 started
+candidate s5: PASS value=1 phase=0
+candidate s6 started
+candidate s6: PASS value=1 phase=0
+candidate s7 started
+candidate s7: PASS value=0 phase=0
+candidate s8 started
+candidate s8: PASS value=1 phase=0
+Mon Nov 16 17:14:10 UTC 2026

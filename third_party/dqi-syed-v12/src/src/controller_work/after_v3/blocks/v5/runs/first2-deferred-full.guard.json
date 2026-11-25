@@ -1,0 +1,22 @@
+{
+  "command": [
+    "/usr/bin/python3.13",
+    "-B",
+    "/workspace/scratch/e5e4bb56acc7/controller_work/after_v3/blocks/v5/check_first2_retained_norm_deferred_adapter.py",
+    "--output",
+    "controller_work/after_v3/blocks/v5/runs/first2-deferred-full"
+  ],
+  "cwd": "/workspace/scratch/e5e4bb56acc7",
+  "start_unix": 1794399010.0296838,
+  "rss_soft": 3000000000,
+  "available_reserve": 4000000000,
+  "peak_rss": 478236672,
+  "status": "complete",
+  "stopped": false,
+  "save_policy": "Completed-stage logs remain on disk; split the interrupted stage before retry.",
+  "process_group": 22,
+  "elapsed_seconds": 269.04936623573303,
+  "current_rss": 107212800,
+  "available_bytes": 9511043072,
+  "exit_code": 0
+}

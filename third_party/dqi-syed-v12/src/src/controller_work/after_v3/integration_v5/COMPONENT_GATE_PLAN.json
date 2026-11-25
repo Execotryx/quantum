@@ -1,0 +1,296 @@
+{
+  "components": [
+    {
+      "checker": "controller_work/after_v3/blocks/v5/check_inverse_retained_norm195.py",
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/blocks/v5/check_inverse_retained_norm195.py",
+        "--output",
+        "controller_work/after_v3/blocks/v5/runs/norm-stack-full"
+      ],
+      "expected_coverage_and_counts": {
+        "Q": 889,
+        "cases": 20480,
+        "modes": 5,
+        "per_mode": 4096,
+        "seeds": [
+          59191,
+          60191,
+          61191
+        ],
+        "static_T": 195
+      },
+      "full_gate": true,
+      "guard": "controller_work/after_v3/blocks/v5/runs/norm-stack-full.guard.json",
+      "name": "retained_norm195_isolated",
+      "passed_status": "PASS_CLOSED_K24_INVERSE_WITH_RETAINED_NORM_STACK_COMPONENT",
+      "report": "controller_work/after_v3/blocks/v5/runs/norm-stack-full/report.json"
+    },
+    {
+      "checker": "controller_work/after_v3/blocks/v5/check_first2_retained_norm_adapter.py",
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/blocks/v5/check_first2_retained_norm_adapter.py",
+        "--output",
+        "controller_work/after_v3/blocks/v5/runs/first2-stack-full"
+      ],
+      "expected_coverage_and_counts": {
+        "Q": 889,
+        "cases": 782,
+        "original_exclusions": 76,
+        "original_key_domain": 781,
+        "pair_static_T": 216986,
+        "prefix_static_T": 101058,
+        "preserved_physical_gauge_one": 1,
+        "seeds": [
+          147,
+          1147,
+          2147
+        ]
+      },
+      "full_gate": true,
+      "guard": "controller_work/after_v3/blocks/v5/runs/first2-stack-full.guard.json",
+      "name": "first_two_retained_norm_production_key",
+      "passed_status": "PASS_PRODUCTION_FIRST_TWO_RETAINED_NORM_STACK_KEY",
+      "report": "controller_work/after_v3/blocks/v5/runs/first2-stack-full/report.json"
+    },
+    {
+      "checker": "controller_work/after_v3/k24/v5_transpose14/check_handoff_m11.py",
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/k24/v5_transpose14/check_handoff_m11.py",
+        "--output",
+        "controller_work/after_v3/k24/v5_transpose14/runs/handoff-m11-full"
+      ],
+      "expected_coverage_and_counts": {
+        "Q": 889,
+        "cases": 256,
+        "core_static_T": 2724,
+        "seeds": [
+          22901,
+          22902,
+          22903
+        ],
+        "sizes": [
+          11
+        ]
+      },
+      "full_gate": true,
+      "guard": "controller_work/after_v3/k24/v5_transpose14/runs/handoff-m11-full.guard.json",
+      "name": "transpose14_isolated",
+      "passed_status": "PASS_NATIVE_TRANSPOSE_FLAG_HANDOFF_COMPONENT_ONLY",
+      "report": "controller_work/after_v3/k24/v5_transpose14/runs/handoff-m11-full/report.json"
+    },
+    {
+      "checker": "controller_work/after_v3/k24/v5_transpose14/check_transpose14_preimage.py",
+      "command": [
+        "/usr/bin/python3.13",
+        "-B",
+        "controller_work/after_v3/k24/v5_transpose14/check_transpose14_preimage.py",
+        "--output",
+        "controller_work/after_v3/k24/v5_transpose14/runs/preimage-full"
+      ],
+      "expected_coverage_and_counts": {
+        "Q": 889,
+        "cases": 266,
+        "existing_profile_supplement": 10,
+        "original_component": 256,
+        "pair_static_T": 115043,
+        "prefix_static_T": 57034,
+        "seeds": [
+          137,
+          1137,
+          2137
+        ],
+        "supplement_cutoff_only_excluded": 6,
+        "supplement_modes": {
+          "001": 4,
+          "010": 4,
+          "100": 2
+        },
+        "supplement_whole_decoder_admitted": 4
+      },
+      "full_gate": true,
+      "guard": "controller_work/after_v3/k24/v5_transpose14/runs/preimage-full.guard.json",
+      "name": "transpose14_preimage",
+      "passed_status": "PASS_NATIVE_TRANSPOSE14_CURRENT_V4_PREIMAGE_COMPONENT_ONLY",
+      "report": "controller_work/after_v3/k24/v5_transpose14/runs/preimage-full/report.json"
+    }
+  ],
+  "format": "DQI_V5_COMPONENT_GATE_PLAN_V1",
+  "maximum_Q": 889,
+  "new_population_event": false,
+  "physical_scan_positions": 4095,
+  "public_cutoff": 15,
+  "scope": "Source identities and required future full root-run gates only; no native success, source expectation measurement or official score.",
+  "selected_changes": [
+    "production_first_two_closed_inverse195",
+    "public_transpose_window14"
+  ],
+  "source_files": {
+    "controller_work/after_c5/arithmetic_t/runs/first2-physical-gauge1/cases.json": {
+      "bytes": 9872,
+      "sha256": "149d50ccac0d343e4479444f1804a01127be648750f12ed9a99b1acc04f5b3d4"
+    },
+    "controller_work/after_c5/converter_width/runs/full/fixtures.json": {
+      "bytes": 395776,
+      "sha256": "6e023eb39758c15cc5e3835bc6bcdb0f8ad08c3ec15185d2c970dfbb201fac73"
+    },
+    "controller_work/after_c5/extractor_width/boundary_scale_adapter.py": {
+      "bytes": 3232,
+      "sha256": "573434146bd6eb945a524ded811ccc0f245d83e9ab53a98464d9c1c0593b1037"
+    },
+    "controller_work/after_v3/audit/V5_TRANSPOSE14_SOURCE_REVIEW.md": {
+      "bytes": 5638,
+      "sha256": "a6007def704d0ba7bad95cf252ab8d4f244c58c2782a6f19b3354da96a08375c"
+    },
+    "controller_work/after_v3/blocks/V5_RETAINED_NORM_BINDING_REVIEW.md": {
+      "bytes": 4491,
+      "sha256": "fdc4573b694cf1358af12b98724781da82ff2c2ccdd40a744a0cf3f26e144b44"
+    },
+    "controller_work/after_v3/blocks/runs/quotient63-preimage-full/report.json": {
+      "bytes": 217919,
+      "sha256": "461bb69e8825e211ae7ba7a547fe92ce4a4969361c140b52ee71f8bf416d8ebb"
+    },
+    "controller_work/after_v3/blocks/v5/FIRST_TWO_RETAINED_NORM195_GATE.md": {
+      "bytes": 10521,
+      "sha256": "cd901ba39753a298c1c9468da5825129808805d6caf9be208d15b4e10abb2bf0"
+    },
+    "controller_work/after_v3/blocks/v5/FIRST_TWO_RETAINED_NORM195_SOURCES.json": {
+      "bytes": 1095,
+      "sha256": "a2f1552a55a5bea8ace06254aab4a732b24fe0f9c4688a310d9672aeba41ed19"
+    },
+    "controller_work/after_v3/blocks/v5/check_first2_retained_norm_adapter.py": {
+      "bytes": 14127,
+      "sha256": "a3d693d4e283ace090226eb5f45f5f64ca669c9dd4efe3e0f7746630b0538ae7"
+    },
+    "controller_work/after_v3/blocks/v5/check_inverse_retained_norm195.py": {
+      "bytes": 11375,
+      "sha256": "706f5bfc69794b542aa541f87dc0329aa7645a07f792f7c30b5ac218f79be1a7"
+    },
+    "controller_work/after_v3/blocks/v5/first2_retained_norm_adapter.py": {
+      "bytes": 5270,
+      "sha256": "1abb17d7c5943d7bd6bbc389b37113f7166bdff30c29755d0e6e6633e62e80cd"
+    },
+    "controller_work/after_v3/blocks/v5/inverse_retained_norm195.py": {
+      "bytes": 6229,
+      "sha256": "4ae6b746ff165082b8c67ae733f144c16e34ac93d03952676d404f3cfa6b9b50"
+    },
+    "controller_work/after_v3/integration_v5/build_v5.py": {
+      "bytes": 4411,
+      "sha256": "74e9370e275f19bc3e1c9f263cf37494277c06499bf157128be9b197f02b08f7"
+    },
+    "controller_work/after_v3/integration_v5/check_build_equality.py": {
+      "bytes": 4381,
+      "sha256": "0df19f87b37f16a116c6ad7231aae0e6f0650b1d3340b9f8d1497d9f0cce5c9b"
+    },
+    "controller_work/after_v3/integration_v5/check_candidate.py": {
+      "bytes": 4134,
+      "sha256": "26d3519c10ac08588dd5eadaf79fce725e9d7ed80429f7f53d56c51c7a54b3f1"
+    },
+    "controller_work/after_v3/integration_v5/check_key_boundary.py": {
+      "bytes": 8291,
+      "sha256": "6b8851be258d3590666419c2ef28ee187a9da73cd5d5847b498d484d97f543e3"
+    },
+    "controller_work/after_v3/integration_v5/gen_dqi.py": {
+      "bytes": 1763,
+      "sha256": "9251d2378047d32de1f12f1f5d23ac927ab04d5e1f8afd72ebb9a720aec42e9f"
+    },
+    "controller_work/after_v3/integration_v5/prepare_component_gates.py": {
+      "bytes": 23589,
+      "sha256": "b6b206fe355bdc8724db3eb22920276538f156ef0fb970216317c1a8494a9988"
+    },
+    "controller_work/after_v3/integration_v5/v5_binding.py": {
+      "bytes": 13013,
+      "sha256": "6483e60a487e4783ebe63f47705b7ca2bf3d1ec17e4f54431983f22727792df2"
+    },
+    "controller_work/after_v3/integration_v5/v5_events.py": {
+      "bytes": 3654,
+      "sha256": "b9bc736bc65dec2a8052ef2f189df3a5bd7e83a0f8a00e8043ddd06e76cf9b84"
+    },
+    "controller_work/after_v3/integration_v5/v5_paths.py": {
+      "bytes": 773,
+      "sha256": "7d96bde0b1b82c192521c7042f0f90d3222ec2b086e169f4b0f7aaa6ff3bef74"
+    },
+    "controller_work/after_v3/integration_v5/v5_pipeline.py": {
+      "bytes": 11170,
+      "sha256": "32b89202ec5eed5ef030d5f9982b1b0ecd5ab738a9020e3e40991c1a801e849c"
+    },
+    "controller_work/after_v3/k24/FIRST_TWO_RETAINED_NORM195_SOURCE_REVIEW.md": {
+      "bytes": 5502,
+      "sha256": "e1ba20bdf22e570857c5f3dd4de612c3866349c396d949f1ea2d02ffed02028e"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/EXISTING_PROFILE_SUPPLEMENT.json": {
+      "bytes": 24729,
+      "sha256": "58303e050c3caa104bf5538ba76fd159cfb3b054addbfc5a02f343b0d1edd3dc"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/README.md": {
+      "bytes": 9685,
+      "sha256": "6eb6813300665791c890a811753ff61e9b8d2cb8c652b8de4da8b8211060d049"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/SOURCE_DERIVATION.json": {
+      "bytes": 16409,
+      "sha256": "8ca3ea41c67f14c2ef5fdfe6a683b2b06ab8c1415b4d4bc1cae4c47903f98d00"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/SOURCE_MANIFEST.json": {
+      "bytes": 1876,
+      "sha256": "c2a4e114553a3a94f1e136d0beee4adb8e1785545cbec3384ca92b96b4966438"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/SOURCE_PREPARATION_CHECKS.json": {
+      "bytes": 1140,
+      "sha256": "4248698dd83b14a4cab7375d96e74824fc97e5a7ca9ba4ad63cdde2849b30c05"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/check_handoff_m11.py": {
+      "bytes": 4335,
+      "sha256": "530de18308390713ad79a1a018a7fd77ba9f8395ac4253d92f04cdae77d88250"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/check_transpose14_preimage.py": {
+      "bytes": 26433,
+      "sha256": "64b8e50eb58f1310c1f79faec0a47c97db42807ffae5a6d5b358574f583e15fb"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/profile_supplement.py": {
+      "bytes": 7304,
+      "sha256": "315bcf5c76b04aece6b294bbbd00ef6610f8e18ef1d920f18173dd66004cb50b"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/transpose14_core.py": {
+      "bytes": 12819,
+      "sha256": "8b5eb93766ac6d9ef638594829ec8f6d27945e84b610c718b4cf9bea73ab039d"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/transpose14_window.py": {
+      "bytes": 15241,
+      "sha256": "1c25f660a58f7907602e60cfc32fbfc51a2775023cc911e33d5d10c2860236b4"
+    },
+    "controller_work/after_v3/k24/v5_transpose14/variant_support.py": {
+      "bytes": 4482,
+      "sha256": "f0bd00e712d1f73790dd724d749de8541a492f404efde9867a9a3372d1298f0c"
+    },
+    "controller_work/night_c27/arithmetic/panel_audit/check_key_boundary.py": {
+      "bytes": 17015,
+      "sha256": "2a5af18b8b0bd0bc0fef2cacf88dfcf58ce9a88d4c5f8790251f108f2f1a11a2"
+    },
+    "controller_work/night_c27/arithmetic/panel_audit/fixed-prepared/cases.json": {
+      "bytes": 32465629,
+      "sha256": "abcd3a243eae059312a3d39b5fce19be75e0d692beec20cbd5197d30588932a7"
+    },
+    "controller_work/night_c27/arithmetic/panel_audit/physical_boundary_oracle.py": {
+      "bytes": 4162,
+      "sha256": "b2d7871501afdb528820c78989e408098ca441153fa16f98d4b5f9697810db99"
+    },
+    "controller_work/night_c27/arithmetic/panel_audit/prepared/cases.json": {
+      "bytes": 3799574,
+      "sha256": "eb9216d25bd69f17179533932f0ec6a8704860a366117bd370b6eec35495e339"
+    },
+    "controller_work/night_c27/census/reference.py": {
+      "bytes": 7550,
+      "sha256": "a43a7dbf3ef0cb02f8660067a0067c603cf39fe7a552584c3fc9bc228f501aa6"
+    }
+  },
+  "status": "SOURCE_PLAN_NOT_NATIVE_EVIDENCE",
+  "unselected_new_proposals": [
+    "deferred_first_two_prefix_minus3",
+    "cubic_relative_trace62"
+  ]
+}

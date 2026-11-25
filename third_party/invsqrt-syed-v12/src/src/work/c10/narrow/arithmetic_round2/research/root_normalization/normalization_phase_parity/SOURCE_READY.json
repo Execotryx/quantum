@@ -1,0 +1,26 @@
+{
+  "status": "PAPER_SOURCE_READY_NOT_RUN",
+  "files": [
+    {
+      "path": "PLAN.md",
+      "bytes": 3062,
+      "sha256": "7c2ec59786a8fa9fd8ea7901c0f03ae831d92e87acc07f5b33ec9f39b7a17dc1"
+    },
+    {
+      "path": "study.py",
+      "bytes": 8984,
+      "sha256": "354b3fd92b9a028a16f37beee7720c8b066ca6234533c6d1414212b4e5fdc008"
+    },
+    {
+      "path": "INPUTS.json",
+      "bytes": 62432,
+      "sha256": "c50a1e6fff53accfc40b58e5fed8f933e6677b3297d9e3e9b1d551e80877ea43"
+    }
+  ],
+  "input_pins": 330,
+  "target_forward_E": 51.5,
+  "target_isolated_full_component_E": 96.0,
+  "combined_RN2C_not_credited": true,
+  "native_emission": false,
+  "outer_guard_seconds": 30
+}

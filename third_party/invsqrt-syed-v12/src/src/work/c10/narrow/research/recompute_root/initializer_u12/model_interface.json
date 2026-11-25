@@ -1,0 +1,143 @@
+{
+  "status": "EXACT_MATHEMATICAL_DOMAIN_INTERFACE_NOT_NATIVE",
+  "results": [
+    {
+      "model": "phasefit_z1_K8_G3_S5_m37_virtual_margin.json",
+      "sha256": "a18736adbf9ca9ac8c5064498dd3fcd335b4785752ce932b8bd10b98b177cbce",
+      "normalized_inputs": 3145728,
+      "prefix_failures": 0,
+      "initializer_mismatches": 0,
+      "physical_u14_overflows": 0,
+      "previous_bit_failures": 0,
+      "consumed_bit_recovery_failures": 0,
+      "u12_min": -8192,
+      "u12_max": 4096,
+      "u11_min": 0,
+      "u11_max": 4096,
+      "status": "EXACT_ALL_NORMALIZED_INTERFACE_PASS_NOT_NATIVE",
+      "next_recurrence_index": 12,
+      "previous_input": "Original product bit b12",
+      "parity": "r12=2*u12+(1-b12)",
+      "known_prefix_signs": {
+        "sigma9": 1,
+        "sigma10": 1,
+        "sigma11": 0
+      },
+      "low_carry_counts": {
+        "-1": 11934,
+        "0": 1560778,
+        "1": 1560672,
+        "2": 12344
+      },
+      "low_carry_examples": {
+        "-1": {
+          "v": 3,
+          "n": 1050562,
+          "U": -12343,
+          "p12": 0,
+          "p13": 0,
+          "p14": 1,
+          "u12": 4083
+        },
+        "0": {
+          "v": 1,
+          "n": 1049281,
+          "U": 4040,
+          "p12": 0,
+          "p13": 0,
+          "p14": 0,
+          "u12": 4091
+        },
+        "1": {
+          "v": 0,
+          "n": 1048640,
+          "U": 12287,
+          "p12": 0,
+          "p13": 1,
+          "p14": 0,
+          "u12": 4095
+        },
+        "2": {
+          "v": 0,
+          "n": 1048576,
+          "U": 16381,
+          "p12": 1,
+          "p13": 1,
+          "p14": 0,
+          "u12": 4096
+        }
+      }
+    },
+    {
+      "model": "phasefit_z1_K7_G4_m37_virtual_quadS2_36_12c0.json",
+      "sha256": "24fff823faa911afe93d02afc3ded0bbd156a210a85f1265c989a087f8fd1219",
+      "normalized_inputs": 3145728,
+      "prefix_failures": 0,
+      "initializer_mismatches": 0,
+      "physical_u14_overflows": 0,
+      "previous_bit_failures": 0,
+      "consumed_bit_recovery_failures": 0,
+      "u12_min": -8192,
+      "u12_max": 4096,
+      "u11_min": 0,
+      "u11_max": 4096,
+      "status": "EXACT_ALL_NORMALIZED_INTERFACE_PASS_NOT_NATIVE",
+      "next_recurrence_index": 12,
+      "previous_input": "Original product bit b12",
+      "parity": "r12=2*u12+(1-b12)",
+      "known_prefix_signs": {
+        "sigma9": 1,
+        "sigma10": 1,
+        "sigma11": 0
+      },
+      "low_carry_counts": {
+        "-1": 11934,
+        "0": 1560780,
+        "1": 1560669,
+        "2": 12345
+      },
+      "low_carry_examples": {
+        "-1": {
+          "v": 3,
+          "n": 1050562,
+          "U": -12343,
+          "p12": 0,
+          "p13": 0,
+          "p14": 1,
+          "u12": 4083
+        },
+        "0": {
+          "v": 1,
+          "n": 1049281,
+          "U": 4040,
+          "p12": 0,
+          "p13": 0,
+          "p14": 0,
+          "u12": 4091
+        },
+        "1": {
+          "v": 0,
+          "n": 1048640,
+          "U": 12287,
+          "p12": 0,
+          "p13": 1,
+          "p14": 0,
+          "u12": 4095
+        },
+        "2": {
+          "v": 0,
+          "n": 1048576,
+          "U": 16381,
+          "p12": 1,
+          "p13": 1,
+          "p14": 0,
+          "u12": 4096
+        }
+      }
+    }
+  ],
+  "accuracy_change": "None: the direct initializer exactly replaces rows j9,j10,j11 using their proved signs.",
+  "full_gate": "Normalization and full lifecycle integration are separate parent obligations.",
+  "seconds": 3.3760061930079246,
+  "peak_rss_kib": 27708
+}

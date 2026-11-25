@@ -1,0 +1,93 @@
+{
+  "native_sha256": "464e66b39bc22513f0b41311e06315690e0c0b008ae4f08dc238ca44b0a31d27",
+  "synthesized_cases": [
+    {
+      "draw": "s2",
+      "exact_symbols": true,
+      "expected_phase": false,
+      "index": 45440,
+      "numerator_denominator_degrees": [
+        30,
+        31
+      ],
+      "weight": 31
+    },
+    {
+      "draw": "s2",
+      "exact_symbols": true,
+      "expected_phase": true,
+      "index": 45439,
+      "numerator_denominator_degrees": [
+        33,
+        34
+      ],
+      "weight": 34
+    },
+    {
+      "draw": "s6",
+      "exact_symbols": true,
+      "expected_phase": false,
+      "index": 13238,
+      "numerator_denominator_degrees": [
+        31,
+        32
+      ],
+      "weight": 32
+    },
+    {
+      "draw": "s6",
+      "exact_symbols": true,
+      "expected_phase": false,
+      "index": 13237,
+      "numerator_denominator_degrees": [
+        31,
+        32
+      ],
+      "weight": 32
+    },
+    {
+      "draw": "s6",
+      "exact_symbols": true,
+      "expected_phase": true,
+      "index": 74119,
+      "numerator_denominator_degrees": [
+        32,
+        33
+      ],
+      "weight": 29
+    },
+    {
+      "draw": "s6",
+      "exact_symbols": true,
+      "expected_phase": false,
+      "index": 74118,
+      "numerator_denominator_degrees": [
+        34,
+        35
+      ],
+      "weight": 31
+    },
+    {
+      "draw": "s7",
+      "exact_symbols": true,
+      "expected_phase": false,
+      "index": 46728,
+      "numerator_denominator_degrees": [
+        32,
+        33
+      ],
+      "weight": 29
+    },
+    {
+      "draw": "s7",
+      "exact_symbols": true,
+      "expected_phase": false,
+      "index": 46727,
+      "numerator_denominator_degrees": [
+        33,
+        34
+      ],
+      "weight": 26
+    }
+  ]
+}

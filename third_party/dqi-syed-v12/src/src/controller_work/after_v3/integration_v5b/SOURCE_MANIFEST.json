@@ -1,0 +1,113 @@
+{
+  "component_plan_sha256": "a456fd4a9cc229ecc5b2c36612e0777c890e49019db2a348d02e81d6ab44b617",
+  "component_plan_source_pins": 78,
+  "files": {
+    "COMPONENT_GATE_PLAN.json": {
+      "bytes": 24469,
+      "sha256": "a456fd4a9cc229ecc5b2c36612e0777c890e49019db2a348d02e81d6ab44b617"
+    },
+    "COMPONENT_VALIDATOR_DERIVATION.json": {
+      "bytes": 6083,
+      "sha256": "f2fd0398b6daaea01d1171ffa7e5b6d275f59633bb09a2853b6db55aec77960f"
+    },
+    "DOMAIN_TRANSFER_ARGUMENT.md": {
+      "bytes": 7465,
+      "sha256": "9a89f28329c0218424361098d98a377cdfc3f03e344d4a95049d169a626db2c9"
+    },
+    "INITIAL_SOURCE_COPIES.json": {
+      "bytes": 3143,
+      "sha256": "392ec208e2c8795163c331e7a70485659814d1cd67e085d1c88b3e005f0f2fec"
+    },
+    "README.md": {
+      "bytes": 8713,
+      "sha256": "6369033bc0314345b875b0f45180b87643405dfa7d5191c45074eaf4f5f081b2"
+    },
+    "SOURCE_DERIVATION.json": {
+      "bytes": 4492,
+      "sha256": "c9980ba92d99c5551b26067e3b0fcef10c81e32a29f92421695ab27464c236fd"
+    },
+    "SOURCE_MODEL_LEDGER.json": {
+      "bytes": 2557,
+      "sha256": "6ec92fadb7976376464d2742dcdcdd57bcf7d4b85d9f27f1357d62dac5181a25"
+    },
+    "SOURCE_PREPARATION_ATTEMPT1.json": {
+      "bytes": 454,
+      "sha256": "13cc53387ab13bdf5a083d013f49b8cf5dbbbb9d63834e19e1ad41293827e28a"
+    },
+    "SOURCE_PREPARATION_ATTEMPT2.json": {
+      "bytes": 355,
+      "sha256": "125d43a867a81d5cb2a331a50bd86a1c8ee52f1100062e13f8443ce1de2288cd"
+    },
+    "SOURCE_PREPARATION_CHECKS.json": {
+      "bytes": 1976,
+      "sha256": "1f96523ffcd03da169eb3c7c0e2ef828ef051fd0aec10cfe92ffbdbcda565d3e"
+    },
+    "WIDTH_COMPATIBILITY.md": {
+      "bytes": 1919,
+      "sha256": "7944a54ea3f4f3a5fbb47b2a7e8b84e2ff219c444627e9e6019a53d4aa1fefc4"
+    },
+    "build_v5b.py": {
+      "bytes": 4417,
+      "sha256": "b0df43c57fd8138a37b37f00086ad88c4acd34d0f9e90ca2ace65a42c98d77c3"
+    },
+    "check_build_equality.py": {
+      "bytes": 4383,
+      "sha256": "39df1fefc6a8029b9398a8f69ea46e5c1ca411ebe552dd819639b8dd4286648e"
+    },
+    "check_candidate.py": {
+      "bytes": 4138,
+      "sha256": "c266336dd3f8bb82c05831784b34f6d1a63a6e9c78f0cc173ce02dc25e11ca78"
+    },
+    "check_key_boundary.py": {
+      "bytes": 8469,
+      "sha256": "b4422fe7ac38ce5d73bd13acc48dd24bcd0003ee90a2d93649bb6890d56497c2"
+    },
+    "gen_dqi.py": {
+      "bytes": 1766,
+      "sha256": "ba324c9d5e901710f6ecaec6894e59db58e5ca11d9356ce2c8f6d78810bc61fd"
+    },
+    "prepare_component_gates.py": {
+      "bytes": 44417,
+      "sha256": "064711f96902297c9c1cfcc579bb7afed73a27e10113e7bd9bc54d69bd425b6d"
+    },
+    "v5b_binding.py": {
+      "bytes": 15219,
+      "sha256": "e50cbe2372a99c5b954a4b94e9a213d773f9d939ab1fea0bd0b2613a83b72126"
+    },
+    "v5b_events.py": {
+      "bytes": 3791,
+      "sha256": "f30e2d2ecd75bc9ac1559ca056d9fdf2205ff20d4137d020c46d7a2c93c67795"
+    },
+    "v5b_paths.py": {
+      "bytes": 808,
+      "sha256": "88f08ee397533c102d789016ce9627fdd0bd7f65082c6e418045c84694cedffc"
+    },
+    "v5b_pipeline.py": {
+      "bytes": 12454,
+      "sha256": "14bb85846d910eaf9ea9300bb604c818d28421ac7b48df8f8fa325091abf5b5e"
+    }
+  },
+  "format": "DQI_FIXED_V5B_SOURCE_PREPARATION_PACKET_V1",
+  "independent_reviews": {
+    "controller_work/after_v3/blocks/v5/V5B_MATCHED_AND_CUBIC62_BINDING_REVIEW.md": "d96a5ef3de97f64591d69ecba5f1d291fd34ff28b86caa77c52681bc28104289",
+    "controller_work/after_v3/k24/V5B_COMPONENT_GATE_SOURCE_REVIEW.md": "49f93e2ef778c28bf32373bb2a1c8263062bc0fbd4845e16bacb9a29192e0450"
+  },
+  "initial_v5_source_manifest_sha256": "6c347cbd1bd5c836d9e56f272f20a44f805103db85b7e72b945e42825be7f9ba",
+  "measured_mean_T": null,
+  "native_jobs_run_by_preparer": 0,
+  "native_manifest_present_at_snapshot": false,
+  "new_admitted_event": false,
+  "new_sampler_draws": 0,
+  "official_price": null,
+  "required_new_component_gates": 9,
+  "scope": "Source preparation and independent source review only. Actual nine full component gates, complete joined tape, portable equality and four fresh original official salts remain separate.",
+  "selected_width_compatibility": {
+    "future_width_merge_requires_new_lifetime_gate": true,
+    "prior_quotient63_helpers": 18,
+    "quotient62_helpers": 22
+  },
+  "source_model_Q": 889,
+  "source_model_expected_T_exact": "13168164570771213/34359738368",
+  "source_model_static_T": 384047,
+  "status": "SOURCE_REVIEWED_NEW_NATIVE_GATES_PENDING"
+}

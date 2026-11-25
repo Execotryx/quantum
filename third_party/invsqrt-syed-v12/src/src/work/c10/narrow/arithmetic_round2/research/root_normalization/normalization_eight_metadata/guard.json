@@ -1,0 +1,89 @@
+{
+  "status": "COMPLETED",
+  "work_window_sha256": "18a44534df9aaa46f4ab3bcaeb452e46cad3a7bd317a0edf798ee37ecde622fe",
+  "work_window_path": "/workspace/scratch/40c9505bd2bc/narrow/arithmetic_round2/WORK_WINDOW.json",
+  "source_helpers_sha256": "6795b9ac76c889da1aa311ae59da5d1f1a6000a5c0cfbeec142185091943b202",
+  "cgroup_counters": "UNAVAILABLE_IN_EXEC_SANDBOX_NOT_CLAIMED_CHECKED",
+  "substitute_envelope": "Hard RLIMIT_AS plus lower aggregate RSS cap, current host headroom, bounded descendants and shared lock",
+  "limits": {
+    "per_process_hard_address_bytes": 536870912,
+    "aggregate_RSS_stop_bytes": 805306368,
+    "minimum_host_available_bytes": 4294967296,
+    "live_process_cap": 8
+  },
+  "command": [
+    "/usr/bin/python3.13",
+    "narrow/arithmetic_round2/research/root_normalization/normalization_eight_metadata/study_v2.py"
+  ],
+  "timeout_seconds": 30.0,
+  "automatic_workload_retries": 0,
+  "peak_aggregate_rss_bytes": 64978944,
+  "peak_process_count": 1,
+  "minimum_host_available_bytes": 8705871872,
+  "started_unix": 1794459534.5498667,
+  "samples": [
+    {
+      "elapsed_seconds": 0.23654745898966212,
+      "aggregate_rss_bytes": 13815808,
+      "live_processes": 1,
+      "host_available_bytes": 8786993152
+    },
+    {
+      "elapsed_seconds": 0.44954462398891337,
+      "aggregate_rss_bytes": 35446784,
+      "live_processes": 1,
+      "host_available_bytes": 8773906432
+    },
+    {
+      "elapsed_seconds": 0.6512227810017066,
+      "aggregate_rss_bytes": 61136896,
+      "live_processes": 1,
+      "host_available_bytes": 8714149888
+    },
+    {
+      "elapsed_seconds": 0.85412940599781,
+      "aggregate_rss_bytes": 64978944,
+      "live_processes": 1,
+      "host_available_bytes": 8711901184
+    },
+    {
+      "elapsed_seconds": 1.0553968979947967,
+      "aggregate_rss_bytes": 57102336,
+      "live_processes": 1,
+      "host_available_bytes": 8716058624
+    },
+    {
+      "elapsed_seconds": 1.2448562270001275,
+      "aggregate_rss_bytes": 23683072,
+      "live_processes": 1,
+      "host_available_bytes": 8705871872
+    },
+    {
+      "elapsed_seconds": 1.2642021659994498,
+      "aggregate_rss_bytes": 0,
+      "live_processes": 0,
+      "host_available_bytes": 8712544256
+    }
+  ],
+  "child_cleanup": {
+    "term_sent_pids": [],
+    "kill_sent_pids": [],
+    "reaped_pids": [],
+    "remaining_pids": [],
+    "zombie_pids": [],
+    "dead_pids": [],
+    "remaining_states": {},
+    "complete": true
+  },
+  "queue_wait_seconds": 0.00020320099429227412,
+  "preflight_host": {
+    "total_bytes": 10451427328,
+    "available_bytes": 8815415296
+  },
+  "elapsed_seconds": 1.2777556349901715,
+  "subreaper_enabled": true,
+  "child_pid": 5,
+  "stop_reason": "completed",
+  "returncode": 0,
+  "output_bytes": 3475
+}

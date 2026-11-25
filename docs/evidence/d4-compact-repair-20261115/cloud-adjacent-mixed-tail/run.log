@@ -1,0 +1,10 @@
+launch.sh: OK
+source.tar.gz: OK
+Mon Nov 16 00:09:35 UTC 2026
+shared D4 adjacent_outer=False seed=761 qubits=1011 mean_gates=495129.17647058825
+shared D4 adjacent_outer=False seed=762 qubits=1011 mean_gates=495120.4117647059
+.shared D4 adjacent_outer=True seed=761 qubits=1240 mean_gates=540341.6
+shared D4 adjacent_outer=True seed=762 qubits=1240 mean_gates=540441.0
+.
+2 passed, 53 deselected in 365.33s (0:06:05)
+Mon Nov 16 00:15:42 UTC 2026

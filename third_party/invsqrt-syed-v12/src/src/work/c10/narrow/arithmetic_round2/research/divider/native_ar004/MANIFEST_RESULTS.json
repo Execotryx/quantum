@@ -1,0 +1,111 @@
+{
+  "status": "FROZEN_NATIVE_AR004_COMPONENT_PASS_NOT_OFFICIAL",
+  "source_ready_sha256": "6b33c3b0e619d90bd5bc4674fdc075a91b7170475816ac787b7da8a9f4c6dcfe",
+  "files": [
+    {
+      "path": "AUDIT.json",
+      "bytes": 984,
+      "sha256": "c2a3453295d6bd1675640897d86162d046bcbba4f5837801f12be13596a0b3a7"
+    },
+    {
+      "path": "AUDIT_CHUNKS.json",
+      "bytes": 380,
+      "sha256": "7a2ef09670f27eaddc14c4370f073d6d6f096a47a91af00d7b97d94a17816500"
+    },
+    {
+      "path": "CHECKER_COPY.json",
+      "bytes": 458,
+      "sha256": "e7531166ce08baa4efd674566e2e91556057092229cd80ad8109ed10399ec5d4"
+    },
+    {
+      "path": "INDEPENDENT_REVIEW_ROOT.json",
+      "bytes": 3146,
+      "sha256": "c01221f83c59d480f7735dea6168967ed97887cf70ada1fb700e19cc408c5cea"
+    },
+    {
+      "path": "INPUTS.json",
+      "bytes": 61433,
+      "sha256": "89ca5d0a650e132b92f56c26e4d0c4e14d1d4aecca9224471577bc6906350aed"
+    },
+    {
+      "path": "NATIVE_PROOF.json",
+      "bytes": 57021,
+      "sha256": "b1e9bf4f4696a25a92512d9f0cba394b8e65be616a368cd506a8a9676907699f"
+    },
+    {
+      "path": "PLAN.md",
+      "bytes": 2554,
+      "sha256": "38b48732febee405dec59dcd6d9e3d87414a2bda1bf88e2194027be8f4435355"
+    },
+    {
+      "path": "RESULT.md",
+      "bytes": 4022,
+      "sha256": "a07e46e6f92a7eca4d06c84995c65bbea62dd822e4128a125f97c0a0594da354"
+    },
+    {
+      "path": "SOURCE_READY.json",
+      "bytes": 1372,
+      "sha256": "6b33c3b0e619d90bd5bc4674fdc075a91b7170475816ac787b7da8a9f4c6dcfe"
+    },
+    {
+      "path": "adapter.py",
+      "bytes": 2952,
+      "sha256": "9b2f24691a337dfe27f9f47477fbb97f671075dfe313e5a360f5c8ec8635b493"
+    },
+    {
+      "path": "all_inputs.partial.json",
+      "bytes": 48480,
+      "sha256": "2af44362961dfc77c9340f76f4065c2213a485509a469b145ca1a8b2da00b628"
+    },
+    {
+      "path": "checker31.py",
+      "bytes": 11080,
+      "sha256": "665952a09d594b0912257c6ee8175c9092d94006600314f3a0c9fa00ca1bef6c"
+    },
+    {
+      "path": "divider_roundtrip.kmb",
+      "bytes": 76043,
+      "sha256": "a3061154341f4f52f318132815758cc7042a5d7cb1c4ca40acdfc898253dfe91"
+    },
+    {
+      "path": "divider_roundtrip.kmx",
+      "bytes": 102504,
+      "sha256": "92eac7b70271fc6687a55317db88f0451a29a7568442c8a970da0f78bd78abc9"
+    },
+    {
+      "path": "forward_endpoint.kmb",
+      "bytes": 27105,
+      "sha256": "f2af43e88ecb0d95d8527e371e9946aba309fa3900144c5a73c63157deb595f3"
+    },
+    {
+      "path": "forward_endpoint.kmx",
+      "bytes": 33188,
+      "sha256": "de8a4fb3e332db0283ec527f88bef248d2b69aaa2c71fe243205239a5234b2d5"
+    },
+    {
+      "path": "native.guard.json",
+      "bytes": 7482,
+      "sha256": "b287a438f15a21bcdc92c1e8df85973855eded5ef1f43aaa7234dcd903649889"
+    },
+    {
+      "path": "native.log",
+      "bytes": 6073,
+      "sha256": "9a00861e645b651441633ac79458f1c9fddcca7c0407ff666bed62b7f82b3db8"
+    },
+    {
+      "path": "negative_original_carry.kmx",
+      "bytes": 102498,
+      "sha256": "8c6ab15d34da6774858cc3f98519e20be58307fc2188969b28a618ec8b36bc78"
+    },
+    {
+      "path": "negative_retirement.kmx",
+      "bytes": 102493,
+      "sha256": "3d12c7157055e2b27b7dbe4b174ee2b2eeba5fd2511fe9a1993add854cfdad89"
+    },
+    {
+      "path": "prove.py",
+      "bytes": 15241,
+      "sha256": "1d15be0485da70617017dafaed6e3889f009c8b57bd55bd59b2d206800267352"
+    }
+  ]
+}
