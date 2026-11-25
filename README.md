@@ -15,6 +15,8 @@ verification and **26.78303192** on a distinct confirmation salt. Its repaired
 DQI decoder reduced pooled cost by **9.72%** against banked D4.
 [Cloud results and rebuild report](docs/d4-aggregate-independent-rebuild-26-11-2026-02-03-16.md)
 
+[Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
+
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh
 confirmation on Google Cloud. The routed decoder lowered DQI cost by **71.11%**
 from v6. [v8.0 verification and release record](docs/v8.0-release-15-11-2026-15-01-00.md)
@@ -76,8 +78,9 @@ and fresh confirmation with **zero errors in each 102,400-shot run**.
 Its full verifier cost was **7.062 trillion**, **71.11% lower** than the
 retained DQI cost of 24.439 trillion. Conservative pricing was **7.122
 trillion**, below the **12.220-trillion** promotion gate. The routed
-decoder has component verification. The v6 archive uses the retained
-decoder, and a paired archive with routed DQI is pending.
+decoder has component verification. The v6 archive used the retained
+decoder. The later v8.0 archive verified the routed decoder in the complete
+three-task metric.
 [DQI depth decision](docs/dqi-depth-cloud-08-11-2026-23-50-00.md)
 [Full-size DQI comparison](docs/dqi-full-matched-cloud-09-11-2026-01-29-00.md)
 [Full-strength DQI verification](docs/dqi-full-strength-cloud-09-11-2026-02-17-00.md)
