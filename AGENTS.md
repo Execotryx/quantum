@@ -89,6 +89,10 @@
   and nonzero stored leading coefficients. Recover both quotient heads
   before leaving each frame. Match forward, inverse, phase and scratch
   separately on the serialized circuit.
+- The live-degree pad expects descending locator and evaluator banks
+  with an implicit monic head and zero tails. Use root-free quadratics
+  with distinct slopes. Both banks must receive the same factors. The
+  padded projective scan requires a regular derivative chart.
 - A Givens-order change may move a rotation only across disjoint orbital
   pairs. Preserve the matching angle columns, check reconstructed vectors,
   and price the affected XOR transitions before full loader verification.

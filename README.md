@@ -80,6 +80,13 @@ reversing the syndrome recovered three high-weight cases and left the
 lower-weight routing gap open.
 [Chemistry order and DQI chart measurements](docs/aggregate-above-36-chem-order-and-dqi-charts-26-11-2026-20-47-09.md)
 
+Controlled DQI padding now accepts compact locator and evaluator banks
+at every degree from zero through 35. Software gate replay confirmed
+both directions, and the padded derivative chart was regular on **2,043
+of 2,048** sampled inputs. The emitted phase composition still needs
+native verification, a locator producer, and an exceptional-chart route.
+[Degree padding and resource bounds](docs/aggregate-above-36-dqi-degree-padding-26-11-2026-20-57-28.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

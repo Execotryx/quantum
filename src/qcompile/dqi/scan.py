@@ -11,6 +11,7 @@ from typing import Any
 
 from .bilinear import product_tensor
 from .decoder import _add, _divide, _multiply, _trim
+from .degree_padding import pad_reversed_banks
 from .field import GF4096
 from .inplace_evaluator import inplace_evaluator
 from .inverse_action import odd_forney_inplace
@@ -168,6 +169,15 @@ def two_bank_residue_scan(builder: Any, field: Any, modulus: list[Any], omega: l
     odd_forney_inplace(builder, modulus, omega, half_chart, multiply=multiply, projective=projective)
     _scan_evaluations(builder, field, (modulus, omega), masks, _residue_phase, monic=True)
     odd_forney_inplace(builder, modulus, omega, half_chart, adjoint=True, multiply=multiply, projective=projective)
+
+
+def degree_padded_residue_scan(builder: Any, field: Any, locator: list[Any], omega: list[Any],
+                               masks: list[Any], degree: Any, *, multiply: FieldProduct = multiply_xor) -> None:
+    """Phase from compact reversed banks when the padded derivative chart is regular."""
+    pad_reversed_banks(builder, locator, omega, degree)
+    two_bank_residue_scan(builder, field, locator[::-1], omega[::-1], masks, tuple(range(16, -1, -1)),
+                          multiply=multiply, projective=True)
+    pad_reversed_banks(builder, locator, omega, degree, adjoint=True)
 
 
 def two_bank_syndrome_scan(builder: Any, field: Any, modulus: list[Any], syndromes: list[Any],

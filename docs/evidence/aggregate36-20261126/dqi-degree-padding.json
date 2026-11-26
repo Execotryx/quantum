@@ -1,0 +1,444 @@
+{
+  "cause": "varied quadratic slopes reduce correlated chart failures from equal slopes",
+  "charged_controlled_products_per_pad": 13464,
+  "classification": "classical_chart_and_emitter_cost_screen",
+  "factors": [
+    [
+      1,
+      2048
+    ],
+    [
+      3123,
+      2270
+    ],
+    [
+      3942,
+      2845
+    ],
+    [
+      651,
+      2572
+    ],
+    [
+      3975,
+      1316
+    ],
+    [
+      3008,
+      1679
+    ],
+    [
+      1434,
+      706
+    ],
+    [
+      2102,
+      2936
+    ],
+    [
+      2713,
+      2002
+    ],
+    [
+      1263,
+      3929
+    ],
+    [
+      2240,
+      1625
+    ],
+    [
+      1801,
+      2952
+    ],
+    [
+      1831,
+      2024
+    ],
+    [
+      3729,
+      1164
+    ],
+    [
+      3432,
+      2341
+    ],
+    [
+      1574,
+      1368
+    ],
+    [
+      3298,
+      3071
+    ]
+  ],
+  "field_table": "repository GF(4096) software table",
+  "padding_source_sha256": "f7ebd49045883be778f3b462c080b795e670acf4ee98a2217ec4517dd74a599c",
+  "panels": [
+    {
+      "counts_by_weight": {
+        "21": {
+          "shots": 1,
+          "unit_slopes_regular": 1,
+          "varied_slopes_regular": 1
+        },
+        "24": {
+          "shots": 2,
+          "unit_slopes_regular": 2,
+          "varied_slopes_regular": 2
+        },
+        "25": {
+          "shots": 6,
+          "unit_slopes_regular": 6,
+          "varied_slopes_regular": 6
+        },
+        "26": {
+          "shots": 22,
+          "unit_slopes_regular": 21,
+          "varied_slopes_regular": 22
+        },
+        "27": {
+          "shots": 34,
+          "unit_slopes_regular": 34,
+          "varied_slopes_regular": 34
+        },
+        "28": {
+          "shots": 79,
+          "unit_slopes_regular": 79,
+          "varied_slopes_regular": 79
+        },
+        "29": {
+          "shots": 83,
+          "unit_slopes_regular": 83,
+          "varied_slopes_regular": 83
+        },
+        "30": {
+          "shots": 152,
+          "unit_slopes_regular": 150,
+          "varied_slopes_regular": 152
+        },
+        "31": {
+          "shots": 187,
+          "unit_slopes_regular": 186,
+          "varied_slopes_regular": 187
+        },
+        "32": {
+          "shots": 177,
+          "unit_slopes_regular": 176,
+          "varied_slopes_regular": 176
+        },
+        "33": {
+          "shots": 168,
+          "unit_slopes_regular": 168,
+          "varied_slopes_regular": 168
+        },
+        "34": {
+          "shots": 87,
+          "unit_slopes_regular": 87,
+          "varied_slopes_regular": 87
+        },
+        "35": {
+          "shots": 26,
+          "unit_slopes_regular": 26,
+          "varied_slopes_regular": 26
+        }
+      },
+      "seed": 36209
+    },
+    {
+      "counts_by_weight": {
+        "22": {
+          "shots": 1,
+          "unit_slopes_regular": 1,
+          "varied_slopes_regular": 1
+        },
+        "23": {
+          "shots": 1,
+          "unit_slopes_regular": 1,
+          "varied_slopes_regular": 1
+        },
+        "24": {
+          "shots": 2,
+          "unit_slopes_regular": 2,
+          "varied_slopes_regular": 2
+        },
+        "25": {
+          "shots": 5,
+          "unit_slopes_regular": 5,
+          "varied_slopes_regular": 5
+        },
+        "26": {
+          "shots": 13,
+          "unit_slopes_regular": 13,
+          "varied_slopes_regular": 13
+        },
+        "27": {
+          "shots": 36,
+          "unit_slopes_regular": 36,
+          "varied_slopes_regular": 36
+        },
+        "28": {
+          "shots": 69,
+          "unit_slopes_regular": 69,
+          "varied_slopes_regular": 69
+        },
+        "29": {
+          "shots": 98,
+          "unit_slopes_regular": 98,
+          "varied_slopes_regular": 98
+        },
+        "30": {
+          "shots": 152,
+          "unit_slopes_regular": 152,
+          "varied_slopes_regular": 152
+        },
+        "31": {
+          "shots": 162,
+          "unit_slopes_regular": 162,
+          "varied_slopes_regular": 161
+        },
+        "32": {
+          "shots": 180,
+          "unit_slopes_regular": 179,
+          "varied_slopes_regular": 179
+        },
+        "33": {
+          "shots": 162,
+          "unit_slopes_regular": 160,
+          "varied_slopes_regular": 160
+        },
+        "34": {
+          "shots": 101,
+          "unit_slopes_regular": 101,
+          "varied_slopes_regular": 101
+        },
+        "35": {
+          "shots": 42,
+          "unit_slopes_regular": 42,
+          "varied_slopes_regular": 42
+        }
+      },
+      "seed": 36217
+    }
+  ],
+  "sampler_sha256": "f14274bc0943fb9769ddb01131be6063191a15009fe1caf1d4bdd9fd25194e65",
+  "stratified_counts": [
+    {
+      "degree": 0,
+      "shots": 32,
+      "unit_slopes_regular": 0,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 1,
+      "shots": 32,
+      "unit_slopes_regular": 0,
+      "varied_slopes_regular": 31
+    },
+    {
+      "degree": 2,
+      "shots": 32,
+      "unit_slopes_regular": 0,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 3,
+      "shots": 32,
+      "unit_slopes_regular": 0,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 4,
+      "shots": 32,
+      "unit_slopes_regular": 0,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 5,
+      "shots": 32,
+      "unit_slopes_regular": 0,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 6,
+      "shots": 32,
+      "unit_slopes_regular": 0,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 7,
+      "shots": 32,
+      "unit_slopes_regular": 0,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 8,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 9,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 10,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 11,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 12,
+      "shots": 32,
+      "unit_slopes_regular": 31,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 13,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 14,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 15,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 16,
+      "shots": 32,
+      "unit_slopes_regular": 31,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 17,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 18,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 19,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 20,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 21,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 22,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 23,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 24,
+      "shots": 32,
+      "unit_slopes_regular": 31,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 25,
+      "shots": 32,
+      "unit_slopes_regular": 31,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 26,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 27,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 28,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 29,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 31
+    },
+    {
+      "degree": 30,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 31,
+      "shots": 32,
+      "unit_slopes_regular": 31,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 32,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 33,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 34,
+      "shots": 32,
+      "unit_slopes_regular": 32,
+      "varied_slopes_regular": 32
+    },
+    {
+      "degree": 35,
+      "shots": 32,
+      "unit_slopes_regular": 31,
+      "varied_slopes_regular": 31
+    }
+  ],
+  "stratified_seed": 36307
+}
