@@ -1,0 +1,13 @@
+submission.zip: OK
+registration.json: OK
+launch.sh: OK
+source.tar.gz: OK
+Thu Nov 26 00:22:21 UTC 2026
+Traceback (most recent call last):
+  File "/dev/shm/d4-aggregate34-public-20261126/source/tools/measure_portfolio_reference.py", line 51, in <module>
+    measure(**vars(parser.parse_args()))
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/dev/shm/d4-aggregate34-public-20261126/source/tools/measure_portfolio_reference.py", line 35, in measure
+    raise ValueError("Comparison did not complete full verification")
+ValueError: Comparison did not complete full verification
+tar: .: file changed as we read it

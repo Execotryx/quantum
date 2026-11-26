@@ -58,6 +58,9 @@
   derive the number of ANGLE loaders from the emitted layout. Preserve the
   legacy certificate schema. A reset-delimited width screen can reuse a
   scratch slot only after an unconditional reset.
+- A chemistry angle gauge may change quantized words when the ordered Givens
+  tree preserves each prepared projector. Propagate signs backward through
+  quarter turns and check the decoded residuals, gap and native gate cost.
 - Symbolic liveness may release a wire when it proves zero across all
   measurement outcomes. Fix the first and last intervals of named input
   wires. ANGLE product substitutions must agree on both complete legal

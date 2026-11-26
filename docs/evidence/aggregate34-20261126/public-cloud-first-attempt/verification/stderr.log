@@ -1,0 +1,29 @@
+Traceback (most recent call last):
+  File "/var/tmp/quantum/vendor/metric/google-quantum-ai-metric.ipynb", line 242, in generate_standard_submission
+  File "/var/tmp/quantum/vendor/metric/google-quantum-ai-metric.ipynb", line 231, in <lambda>
+  File "/dev/shm/d4-aggregate34-public-20261126/source/src/qcompile/worker.py", line 184, in observe
+    actual = _original(*args, **kwargs)
+  File "/var/tmp/quantum/vendor/official/verifiers/dfthcsos/verify.py", line 655, in verify
+    result = evaluate_circuits(
+        inputs, family, edges, shots_per_address=shots_per_address, seed=seed, salt=salt
+    )
+  File "/var/tmp/quantum/vendor/official/verifiers/dfthcsos/verify.py", line 583, in evaluate_circuits
+    digest = submission_sha256(circuits, inputs.factorization_file or inputs.params, tree_edges)
+  File "/var/tmp/quantum/vendor/official/verifiers/dfthcsos/scoreinfra/circuits.py", line 265, in submission_sha256
+    circuit.to_file(buf, format="kmb")
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+ValueError: Failed to write to file.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 203, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/dev/shm/d4-aggregate34-public-20261126/source/src/qcompile/worker.py", line 236, in <module>
+    main()
+    ~~~~^^
+  File "/dev/shm/d4-aggregate34-public-20261126/source/src/qcompile/worker.py", line 208, in main
+    scope["generate_standard_submission"](str(submission))
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/var/tmp/quantum/vendor/metric/google-quantum-ai-metric.ipynb", line 246, in generate_standard_submission
+qcompile_pinned_official_metric.ParticipantVisibleError: The dfthcsos submission failed verification: Failed to write to file.
