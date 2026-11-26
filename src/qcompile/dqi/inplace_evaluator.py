@@ -3,12 +3,12 @@
 from collections.abc import Sequence
 from typing import Any
 
-from .subtower import inverse_xor
+from .quotient import FieldProduct, _truncate_inplace
 from .tower import multiply_xor
 
 
 def inplace_evaluator(builder: Any, locator: Sequence[Any], syndromes: Sequence[Any],
-                      *, adjoint: bool = False) -> None:
+                      *, adjoint: bool = False, multiply: FieldProduct = multiply_xor) -> None:
     """Replace a syndrome prefix with the truncated locator convolution.
 
     The locator constant must be nonzero, and all input words must be
@@ -20,22 +20,5 @@ def inplace_evaluator(builder: Any, locator: Sequence[Any], syndromes: Sequence[
         raise ValueError("expected a syndrome prefix and its locator coefficients")
     if any(len(word) != 12 for word in (*locator, *syndromes)):
         raise ValueError("the evaluator requires 12-bit field words")
-    inverse = builder.alloc_qubits(12)
-    work = builder.alloc_qubits(12)
-    inverse_xor(builder, locator[0], inverse)
-    for i in (range(count) if adjoint else reversed(range(count))):
-        target = syndromes[i]
-        if adjoint:
-            for j in range(1, i + 1):
-                multiply_xor(builder, locator[j], syndromes[i - j], target)
-        scale, clear = (inverse, locator[0]) if adjoint else (locator[0], inverse)
-        multiply_xor(builder, scale, target, work)
-        multiply_xor(builder, clear, work, target)
-        for a, b in zip(target, work, strict=True):
-            builder.swap(a, b)
-        if not adjoint:
-            for j in range(1, i + 1):
-                multiply_xor(builder, locator[j], syndromes[i - j], target)
-    inverse_xor(builder, locator[0], inverse)
-    builder.free(work)
-    builder.free(inverse)
+    _truncate_inplace(builder, list(syndromes), list(locator[:count]), multiply,
+                      adjoint=adjoint, compact=True)

@@ -1,0 +1,36 @@
+{
+  "attempts": 32,
+  "backend_sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+  "checked_shots": 32,
+  "circuit_sha256": "aca8f32ea12ff9eca11cfaef089f37c0667a90408ab6cab294b6cfcd1ac1c375",
+  "degree": 7,
+  "half_chart": [
+    2,
+    1,
+    0
+  ],
+  "operations": {
+    "BIT_STORE0": 1368,
+    "CCX": 11433,
+    "CX": 344210,
+    "CZ": 44995,
+    "HMR": 12801,
+    "INFO_TAG": 3024,
+    "POP_CONDITION": 1368,
+    "PUSH_CONDITION": 1368,
+    "R": 11433,
+    "SWAP": 5214,
+    "X": 3768
+  },
+  "panel_seed": 36114,
+  "phase_restoration_and_cleanup": "pass",
+  "positions": 63,
+  "qubits": 207,
+  "scope": "two-bank fixed chart with syndrome prefix",
+  "seed": 36107,
+  "support_weight_counts": {
+    "7": 32
+  },
+  "tensor_sha256": "19ee4259f4d20a779d2484b3dea635d2e0efd23fce39c859e70228f668e53093",
+  "toffoli_like": 11433
+}

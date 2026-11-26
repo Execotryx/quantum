@@ -75,6 +75,10 @@
   source basis after borrowing a scale-factor register for field inversion.
   Keep each recursive result in reversed, modulus-normalized series form
   until the outer polynomial conversion. Extend only the new suffix.
+- The compact evaluator assumes a nonzero locator constant. Keep the
+  constant's inverse live only during leaf scaling and restore the source
+  basis before a cross product. The fixed-chart syndrome scan expects the
+  locator to have already been constructed.
 - Before a full portfolio run, exercise native ANGLE serialization on its
   temporary filesystem. Keep prior raw receipts and the original salts
   when a public development comparison needs an infrastructure retry.

@@ -12,6 +12,7 @@ from typing import Any
 from .bilinear import product_tensor
 from .decoder import _add, _divide, _multiply, _trim
 from .field import GF4096
+from .inplace_evaluator import inplace_evaluator
 from .inverse_action import odd_forney_inplace
 from .quotient import FieldProduct, quotient_prepare
 from .tower import inverse_xor, multiply_xor
@@ -167,6 +168,17 @@ def two_bank_residue_scan(builder: Any, field: Any, modulus: list[Any], omega: l
     odd_forney_inplace(builder, modulus, omega, half_chart, multiply=multiply)
     _scan_evaluations(builder, field, (modulus, omega), masks, _residue_phase, monic=True)
     odd_forney_inplace(builder, modulus, omega, half_chart, adjoint=True, multiply=multiply)
+
+
+def two_bank_syndrome_scan(builder: Any, field: Any, modulus: list[Any], syndromes: list[Any],
+                            masks: list[Any], half_chart: tuple[int, ...], *,
+                            multiply: FieldProduct = multiply_xor) -> None:
+    """Phase a supplied fixed-chart locator and syndrome prefix with nonzero locator constant."""
+    if len(modulus) != len(syndromes):
+        raise ValueError("locator and syndrome banks must have the same degree")
+    inplace_evaluator(builder, modulus, syndromes, multiply=multiply)
+    two_bank_residue_scan(builder, field, modulus, syndromes, masks, half_chart, multiply=multiply)
+    inplace_evaluator(builder, modulus, syndromes, adjoint=True, multiply=multiply)
 
 
 def _scan_evaluations(builder: Any, field: Any, groups: tuple[list[Any], ...],

@@ -13,7 +13,8 @@ from qcompile.dqi.field import GF4096
 
 @pytest.mark.official
 @pytest.mark.parametrize(("m", "n"), [(63, 4), (127, 12), (70, 70)])
-def test_native_direct_forney_all_weights(project_root, monkeypatch, tmp_path, m, n):
+@pytest.mark.parametrize("inplace", [False, True], ids=["separate-evaluator", "in-place-evaluator"])
+def test_native_direct_forney_all_weights(project_root, monkeypatch, tmp_path, m, n, inplace):
     if not sys.platform.startswith("linux") or not (project_root / "vendor/backend.json").is_file():
         pytest.skip("pinned native Linux backend required")
     monkeypatch.syspath_prepend(str(project_root / "vendor/official/kickmix"))
@@ -21,10 +22,11 @@ def test_native_direct_forney_all_weights(project_root, monkeypatch, tmp_path, m
     km = import_module("kickmix")
     tool = import_module("dqi_direct_forney")
     output = tmp_path / "scan"
-    tool.build(project_root / "vendor/backend.json", output, m=m, n=n)
+    tool.build(project_root / "vendor/backend.json", output, m=m, n=n, inplace=inplace)
     circuit = km.Circuit.from_file(str(output / "direct-forney.kmb"))
     t = n // 2
-    assert circuit.operation_statistics().num_toffoli_like == 108 * t * (t + 1) // 2 + 227 * m
+    if not inplace:
+        assert circuit.operation_statistics().num_toffoli_like == 108 * t * (t + 1) // 2 + 227 * m
     shots = t + 1
     rng = random.Random(5920 + n)
     field = GF4096()

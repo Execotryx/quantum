@@ -44,6 +44,9 @@ scale-factor register to its original basis. Keep recursive results in
 modulus-normalized series form until the outer conversion. Use
 `Ubuntu-Quantum-E` for local WSL runs on the Windows checkout where it is
 registered.
+The compact evaluator keeps the locator constant's inverse live only
+during leaf scaling. Require a nonzero constant and a prepared locator
+before entering the fixed-chart syndrome scan.
 Keep raw receipts and the original salt when retrying a public comparison.
 Propagate chemistry angle-gauge signs backward through the ordered Givens
 tree. Verify the prepared projectors, decoded metrics and native loader cost.

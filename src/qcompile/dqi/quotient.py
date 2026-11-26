@@ -144,13 +144,20 @@ def quotient_multiply_xor(builder: Any, left: list[Any], right: list[Any],
 
 
 def _series_inplace(builder: Any, words: list[Any], tail: Sequence[Any], multiply: FieldProduct,
-                    *, adjoint: bool, scales: tuple[Any, Any] | None = None) -> None:
-    """Multiply by a truncated series or invert it. No scales means unit constant."""
+                    *, adjoint: bool, scales: tuple[Any, Any] | None = None,
+                    deferred_constant: Any = None) -> None:
+    """Multiply by a truncated series or invert it, borrowing inverse space only at leaves."""
     def apply(bank: list[Any]) -> None:
         size = len(bank)
         split = _reduction_split(size)[1] if size <= 35 else size // 2
         if not split:
-            work = builder.alloc_qubits(12) if scales is not None else None
+            leaf_scales = scales
+            reciprocal = None
+            if deferred_constant is not None:
+                reciprocal = builder.alloc_qubits(12)
+                inverse_xor(builder, deferred_constant, reciprocal, borrow_source=True)
+                leaf_scales = (reciprocal, deferred_constant) if adjoint else (deferred_constant, reciprocal)
+            work = builder.alloc_qubits(12) if leaf_scales is not None else None
             order = range(size) if adjoint else range(size - 1, -1, -1)
             for i in order:
                 word = bank[i]
@@ -160,9 +167,9 @@ def _series_inplace(builder: Any, words: list[Any], tail: Sequence[Any], multipl
                         factor = tail[i - j - 1]
                         if factor is not None:
                             multiply(builder, bank[j], factor, word)
-                if scales is not None and work is not None:
-                    multiply(builder, scales[0], word, work)
-                    erase_product(builder, scales[1], work, word)
+                if leaf_scales is not None and work is not None:
+                    multiply(builder, leaf_scales[0], word, work)
+                    erase_product(builder, leaf_scales[1], work, word)
                     builder.swap(word, work)
                 if not adjoint:
                     for j in sources:
@@ -171,6 +178,9 @@ def _series_inplace(builder: Any, words: list[Any], tail: Sequence[Any], multipl
                             multiply(builder, bank[j], factor, word)
             if work is not None:
                 builder.free(work)
+            if reciprocal is not None:
+                inverse_xor(builder, deferred_constant, reciprocal, borrow_source=True)
+                builder.free(reciprocal)
             return
         mid = size - split
         low, upper = bank[:mid], bank[mid:]
@@ -184,7 +194,10 @@ def _series_inplace(builder: Any, words: list[Any], tail: Sequence[Any], multipl
 
 
 def _truncate_inplace(builder: Any, words: list[Any], modulus: list[Any], multiply: FieldProduct,
-                      *, adjoint: bool) -> None:
+                      *, adjoint: bool, compact: bool = False) -> None:
+    if compact:
+        _series_inplace(builder, words, modulus[1:], multiply, adjoint=adjoint, deferred_constant=modulus[0])
+        return
     inverse = builder.alloc_qubits(12)
     inverse_xor(builder, modulus[0], inverse)
     scales = (inverse, modulus[0]) if adjoint else (modulus[0], inverse)

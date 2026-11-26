@@ -44,8 +44,14 @@ The fixed-chart two-bank degree-35 circuit now prepares, phases, and
 uncomputes the residue across all 4,095 positions at **879 qubits** and
 **197,937 Toffoli-like gates**. The forward and inverse transform charges
 each fell from **153,768** to **76,446**. A complete decoder still needs
-locator and evaluator construction plus runtime chart routing.
+locator construction and runtime chart routing.
 [Two-bank scan and gate comparison](docs/aggregate-above-36-dqi-series-scan-26-11-2026-08-26-30.md)
+
+The in-place evaluator now takes **12,228 charged gates per direction**,
+down from **36,114**. The degree-35 stage from a supplied locator and
+syndrome prefix through phase and restoration uses **879 qubits** and
+**222,393 charged gates**.
+[Evaluator comparison and native restoration](docs/aggregate-above-36-dqi-evaluator-26-11-2026-08-35-31.md)
 
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 

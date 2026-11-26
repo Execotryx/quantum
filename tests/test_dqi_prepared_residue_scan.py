@@ -9,17 +9,21 @@ import pytest
 
 from qcompile.dqi.decoder import _divide, bm_locator, syndrome
 from qcompile.dqi.field import GF4096
-from qcompile.dqi.scan import derivative_reciprocal, evaluator, prepared_residue_scan, two_bank_residue_scan
+from qcompile.dqi.scan import (
+    derivative_reciprocal, evaluator, prepared_residue_scan, two_bank_residue_scan, two_bank_syndrome_scan,
+)
 from qcompile.io import read_json, sha256, write_json
 from qcompile.official import validate_backend
 
 
 @pytest.mark.official
-@pytest.mark.parametrize(("positions", "degree", "two_bank"), [
-    (63, 3, False), (63, 3, True), pytest.param(4095, 35, False, marks=pytest.mark.slow),
-    pytest.param(4095, 35, True, marks=pytest.mark.slow),
+@pytest.mark.parametrize(("positions", "degree", "mode"), [
+    (63, 3, "supplied"), (63, 3, "residue"), (63, 7, "syndrome"),
+    pytest.param(4095, 35, "supplied", marks=pytest.mark.slow),
+    pytest.param(4095, 35, "residue", marks=pytest.mark.slow),
+    pytest.param(4095, 35, "syndrome", marks=pytest.mark.slow),
 ])
-def test_coherent_residue_scan(project_root, monkeypatch, tmp_path, positions, degree, two_bank):
+def test_coherent_residue_scan(project_root, monkeypatch, tmp_path, positions, degree, mode):
     backend = project_root / "vendor/backend.json"
     if not sys.platform.startswith("linux") or not backend.is_file():
         pytest.skip("pinned native Linux backend required")
@@ -32,11 +36,14 @@ def test_coherent_residue_scan(project_root, monkeypatch, tmp_path, positions, d
     subprocess.run([sys.executable, "-B", str(generator), str(tensor)], check=True)
     multiply, tensor_hash = import_module("dqi_quotient").load_field_product(tensor)
     builder = km.CircuitBuilder()
-    names = ("sigma", "omega") if two_bank else ("sigma", "omega", "psi")
+    names = {"supplied": ("sigma", "omega", "psi"), "residue": ("sigma", "omega"),
+             "syndrome": ("sigma", "S")}[mode]
     groups = [[builder.create_quantum_register(12, f"{name}_{i}") for i in range(degree)] for name in names]
     masks = [builder.create_classical_register(12, f"mask_{i}") for i in range(positions)]
     half_chart = tuple(range(degree // 2 - 1, -1, -1))
-    if two_bank:
+    if mode == "syndrome":
+        two_bank_syndrome_scan(builder, km.GF2Field(12), groups[0], groups[1], masks, half_chart, multiply=multiply)
+    elif mode == "residue":
         two_bank_residue_scan(builder, km.GF2Field(12), groups[0], groups[1], masks, half_chart, multiply=multiply)
     else:
         prepared_residue_scan(builder, km.GF2Field(12), groups[0], groups[1], groups[2], masks, multiply=multiply)
@@ -52,7 +59,7 @@ def test_coherent_residue_scan(project_root, monkeypatch, tmp_path, positions, d
     weights: dict[int, int] = {}
     attempts = 0
     for attempts in range(1, 2 * shots + 1):
-        weight = degree - (shot % 2 if two_bank else 0)
+        weight = degree - (shot % 2 if mode == "residue" else 0)
         support = rng.choice(positions, weight, replace=False)
         if attempts == 1:
             support = np.array([0, positions - 1, *range(1, degree - 1)], dtype=np.int64)
@@ -62,8 +69,9 @@ def test_coherent_residue_scan(project_root, monkeypatch, tmp_path, positions, d
         locator = [field.div(v, locator[-1]) for v in locator]
         if weight < degree:
             locator = [0, *locator]  # The zero root is outside the scan.
-        coefficients_by_register = [("sigma", locator[:-1]), ("omega", evaluator(syndromes, locator, field))]
-        if two_bank:
+        payload = ("S", syndromes[:degree]) if mode == "syndrome" else ("omega", evaluator(syndromes, locator, field))
+        coefficients_by_register = [("sigma", locator[:-1]), payload]
+        if mode != "supplied":
             a, d = locator, [locator[i + 1] if i % 2 == 0 else 0 for i in range(degree)]
             observed = []
             while d != [0]:
@@ -102,13 +110,14 @@ def test_coherent_residue_scan(project_root, monkeypatch, tmp_path, positions, d
     charged = circuit.operation_statistics().num_toffoli_like
     assert sim.operation_statistics().num_toffoli_like == charged * shots
     if degree == 35:
-        assert charged < (280_000 if two_bank else 23 * positions)
-        assert circuit.num_qubits <= (888 if two_bank else 1_731)
+        assert charged < {"supplied": 23 * positions, "residue": 280_000, "syndrome": 225_000}[mode]
+        assert circuit.num_qubits <= (1_731 if mode == "supplied" else 888)
     write_json(tmp_path / "composition.json", {
-        "scope": "two-bank fixed chart" if two_bank else "lower monic locator coefficients and derivative reciprocal supplied",
+        "scope": {"supplied": "lower monic locator coefficients and derivative reciprocal supplied",
+                  "residue": "two-bank fixed chart", "syndrome": "two-bank fixed chart with syndrome prefix"}[mode],
         "circuit_sha256": sha256(artifact), "backend_sha256": sha256(backend), "tensor_sha256": tensor_hash,
         "positions": positions, "degree": degree, "support_weight_counts": {str(k): v for k, v in weights.items()},
-        "checked_shots": shots, "half_chart": half_chart if two_bank else None, "attempts": attempts,
+        "checked_shots": shots, "half_chart": half_chart if mode != "supplied" else None, "attempts": attempts,
         "seed": seed, "panel_seed": seed + degree, "qubits": circuit.num_qubits,
         "toffoli_like": charged, "operations": dict(circuit.operation_statistics()),
         "phase_restoration_and_cleanup": "pass",
