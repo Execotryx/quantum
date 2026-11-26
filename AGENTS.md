@@ -262,6 +262,9 @@
   Run the control first and preserve the exact emitted KMB for confirmation.
 - Use the calibrated direct cost model only for its supported uniform
   dyadic architecture. Unseen formats need fresh phase and native gates.
+- The coarse-curvature screen prices its sampled integer fit against
+  the full input domain. Charge each coefficient load and measurement
+  cleanup at the declared peak before estimating a streamed circuit.
 - Keep tower-field DQI development receipts scoped to their actual code
   dimensions. Run the chemistry continuous residual gate before emitting
   decoded words or ANGLE circuits.

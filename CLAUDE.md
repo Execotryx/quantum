@@ -90,6 +90,9 @@ to produce the complementary numerator. Restore the residual's scale
 squared before applying another reciprocal.
 Prove affine ANGLE products on both endpoint directions. Exclude the
 target from the controls and preserve each classical phase guard.
+The coarse-curvature inverse-square-root fit is a numerical oracle.
+Reuse its signed-word and rounding conventions when pricing native
+coefficient loading, multiplication, and phase cleanup.
 Use `portfolio-v5` for the inclusive score-35 floor. `portfolio-v4` retains
 strict above-35 semantics. Derive the degree-35 gate budget from the pinned
 companion costs and the applicable failure count.

@@ -227,6 +227,13 @@ Each of the four smallest rotations failed the removal screen even after
 refitting the others within the registered bounds.
 [Exact phase-margin certificates](docs/evidence/aggregate36-20261126/invsqrt-fixed-predicate-margin.json)
 
+A 192-interval fixed-point quadratic used at most **68.85%** of the
+allowed error across all inverse-square-root inputs. Native slices
+priced the three coefficient loads and their cleanup. The measured
+layouts point to a streamed implementation that avoids keeping all
+coefficients live together.
+[Inverse-square-root research and lookup measurements](docs/degree35-invsqrt-source-research-27-11-2026-01-39-29.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

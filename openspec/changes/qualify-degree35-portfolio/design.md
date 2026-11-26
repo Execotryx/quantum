@@ -35,6 +35,19 @@ angle words. Both limits support screening gate count as well as
 width on complete components.
 [Chemistry replay and exact cost limits](../../../docs/degree35-chemistry-affine-27-11-2026-01-27-18.md)
 
+## Inverse-square-root source screen
+
+Freeze the native 39-qubit control and the passing 192-interval
+quadratic model. Price two dependent product stages with the
+coefficient and local-input lifetimes visible. Keep the first
+product's signed rounding and the original input reconstruction.
+Compare a fused or streamed lookup against the measured joint and
+three-pass layouts at its actual declared width. Include exponent
+alignment, phase repairs, uncomputation and the final rotation
+charge before selecting a complete candidate. With the source
+companion costs, the single-component cutoff is about 52,119.68.
+[Source research and measured slices](../../../docs/degree35-invsqrt-source-research-27-11-2026-01-39-29.md)
+
 ## Verification and delivery
 
 Register a `portfolio-v5` archive with `--at-least-35` after qualifying a full

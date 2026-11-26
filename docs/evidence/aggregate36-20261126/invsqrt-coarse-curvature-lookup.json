@@ -1,0 +1,88 @@
+{
+  "addresses": 192,
+  "cases": {
+    "constant": {
+      "coefficient_widths": [
+        29
+      ],
+      "native": {
+        "load": {
+          "qubits": 58,
+          "sha256": "f57920e46fd443ad285e9ad3a518d92e7d3cf8ffe43988d6c67df1dc5c248e67",
+          "toffoli": 191
+        },
+        "roundtrip": {
+          "qubits": 65,
+          "sha256": "72580d2699f277079ba5b34914b936041cf6ad0a83dcf87f328d20d9dc6140b6",
+          "toffoli": 213
+        }
+      }
+    },
+    "curvature": {
+      "coefficient_widths": [
+        16
+      ],
+      "native": {
+        "load": {
+          "qubits": 45,
+          "sha256": "0a6a2878bddecda87fcde6b77a5130355aa98c109e85593cd8061d9fbdd226db",
+          "toffoli": 191
+        },
+        "roundtrip": {
+          "qubits": 52,
+          "sha256": "a337842d7faacb50bbbcfb1b00510aae576ddae9f551908f5972edf149a1e170",
+          "toffoli": 213
+        }
+      }
+    },
+    "joint": {
+      "coefficient_widths": [
+        29,
+        23,
+        16
+      ],
+      "native": {
+        "load": {
+          "qubits": 97,
+          "sha256": "20cd7be3b0bd212dcbbd92238d18814a55e24d49523d03e849163b9c1b0aeea1",
+          "toffoli": 191
+        },
+        "roundtrip": {
+          "qubits": 104,
+          "sha256": "ffc58814f7b521761ca48d774168db0ccad6b6f373c324551b91813823115fb4",
+          "toffoli": 213
+        }
+      }
+    },
+    "slope": {
+      "coefficient_widths": [
+        23
+      ],
+      "native": {
+        "load": {
+          "qubits": 52,
+          "sha256": "05212f7a1925ad0555986fedc37b5104590d2ad4288fbcb95652c38f196e21bc",
+          "toffoli": 191
+        },
+        "roundtrip": {
+          "qubits": 59,
+          "sha256": "815b77e9933ffa920110d71880afd014b4d31fae70ef1264b92fa2d4ec792559",
+          "toffoli": 213
+        }
+      }
+    }
+  },
+  "official_margins": {
+    "above_90_percent": 0,
+    "failed_inputs": 0,
+    "first_failed_inputs": [],
+    "input_count": 3133452,
+    "minimum_margin_phase64": 333845430,
+    "minimum_margin_x": 1052475,
+    "nonpositive_margins": 0,
+    "worst_tolerance_fraction": 0.688504696322743,
+    "worst_x": 1052475
+  },
+  "registration_sha256": "cdacf221a2108c8e227e72ad176e8723c4c63db3ef7d70960e033ee119c82259",
+  "shots_per_address": 8
+}
