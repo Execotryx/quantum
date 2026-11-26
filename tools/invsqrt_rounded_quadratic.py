@@ -24,7 +24,7 @@ GUARD = (1, 2, 3, 4, 6)
 SEED = 37109
 
 
-def values(normalized: Words, affine: Words, curvature: Words, guards: tuple[int, int]
+def values(normalized: Words, affine: Words, curvature: Words, guards: tuple[int, int], *, signed_digits: bool = False
            ) -> tuple[Words, Words, Words]:
     inner, outer = guards
     address = (normalized >> LOCAL) - (1 << ADDRESS)
@@ -32,9 +32,9 @@ def values(normalized: Words, affine: Words, curvature: Words, guards: tuple[int
     c0, c1 = affine[address].T
     c2 = curvature[address]
     slope = (-c1 << inner) + (1 << (inner - 1)) - 1
-    slope -= row_sum(c2, local >> (LOCAL - TAIL), TAIL, inner)
+    slope -= row_sum(c2, local >> (LOCAL - TAIL), TAIL, inner, signed_digits=signed_digits)
     result = (c0 << outer) + (1 << (outer - 1))
-    result -= row_sum(slope >> inner, local, LOCAL, outer)
+    result -= row_sum(slope >> inner, local, LOCAL, outer, signed_digits=signed_digits)
     correction = (result >> outer) - c0
     if np.any((slope < 0) | (slope >= 1 << (22 + inner)) | (result < 0) | (result >= 1 << (30 + outer))):
         raise ValueError("The fused product exceeds its registered accumulator width")
@@ -43,16 +43,18 @@ def values(normalized: Words, affine: Words, curvature: Words, guards: tuple[int
     return c2, slope, result
 
 
-def phase_model(xs: Words, affine: Words, curvature: Words, guards: tuple[int, int]) -> NDArray[np.uint64]:
+def phase_model(xs: Words, affine: Words, curvature: Words, guards: tuple[int, int], *,
+                signed_digits: bool = False) -> NDArray[np.uint64]:
     exponent = np.searchsorted([4**k for k in range(11)], xs, side="right") - 1
     normalized = xs << (NORMALIZED_BITS - 2 * exponent)
-    _, _, result = values(normalized, affine, curvature, guards)
+    _, _, result = values(normalized, affine, curvature, guards, signed_digits=signed_digits)
     return (result >> guards[1]).astype(np.uint64) << (64 - PRECISION - exponent).astype(np.uint64)
 
 
 def native(km: Any, affine: Words, curvature: Words, guards: tuple[int, int],
            output: Path, *, measured_rows: bool, roundtrip: bool,
-           correction: bool = False, borrowed_carry: bool = False, dirty_upper: bool = False) -> dict:
+           correction: bool = False, borrowed_carry: bool = False, dirty_upper: bool = False,
+           signed_digits: bool = False) -> dict:
     inner, outer = guards
     builder = km.CircuitBuilder()
     x = builder.create_quantum_register(22, "x")
@@ -61,7 +63,8 @@ def native(km: Any, affine: Words, curvature: Words, guards: tuple[int, int],
     result = builder.create_quantum_register((22 if correction else 30) + outer, "result")
     work = builder.alloc_qubits(22) if measured_rows else None
     carry = builder.alloc_qubits(2) if borrowed_carry else None
-    options = {"negate": True, "scratch": work, "carry": carry, "dirty": x if dirty_upper else None}
+    options = {"negate": True, "scratch": work, "carry": carry, "dirty": x if dirty_upper else None,
+               "signed_digits": signed_digits}
     builder.x(x[LOCAL - 1])
     rounded_product(builder, c2, x[LOCAL - TAIL:LOCAL], slope, inner,
                     round_before_negation=True, **options)
@@ -84,7 +87,7 @@ def native(km: Any, affine: Words, curvature: Words, guards: tuple[int, int],
     normalized = (addresses << LOCAL) + offsets.ravel()
     base, gradient = affine[addresses - 64].T
     supplied = (normalized, curvature[addresses - 64], -gradient << inner, base << outer)
-    _, expected_slope, expected_result = values(normalized, affine, curvature, guards)
+    _, expected_slope, expected_result = values(normalized, affine, curvature, guards, signed_digits=signed_digits)
     if correction:
         expected_result -= supplied[-1]
         supplied = (*supplied[:3], np.zeros_like(base))
@@ -109,7 +112,7 @@ def native(km: Any, affine: Words, curvature: Words, guards: tuple[int, int],
         "executed_mean": sim.operation_statistics().num_toffoli_like / len(normalized),
         "fixtures": len(normalized), "measured_rows": measured_rows, "roundtrip": roundtrip,
         "guards": guards, "separate_correction": correction, "borrowed_carry": borrowed_carry,
-        "dirty_upper": dirty_upper,
+        "dirty_upper": dirty_upper, "signed_digits": signed_digits,
     }
 
 
@@ -131,7 +134,7 @@ def run(output: Path) -> None:
         "product_sha256": sha256(ROOT / "src/qcompile/invsqrt/rounded_product.py"),
         "guard_pairs": (EXACT, *((guard, guard) for guard in GUARD)),
         "layouts": ["base_accumulator", "separate_correction"],
-        "row_adders": ["native_controlled", "measured_products", "borrowed_carry", "dirty_upper"],
+        "row_adders": ["native_controlled", "measured_products", "borrowed_carry", "dirty_upper", "signed_digits"],
     })
     margins = []
     pairs = (EXACT, *((guard, guard) for guard in GUARD))
@@ -142,8 +145,16 @@ def run(output: Path) -> None:
             raise ValueError("The exact guard model failed to reproduce the frozen phase screen")
         margins.append({"guards": pair, "margins": result})
     selected = next((row["guards"] for row in margins[1:] if not row["margins"]["above_90_percent"]), EXACT)
+    digit_margins = []
+    for guard in GUARD:
+        pair = (guard, guard)
+        model = partial(phase_model, affine=affine, curvature=curvature, guards=pair, signed_digits=True)
+        result = scan_phase(model, MAX_X, partial(official.reference_values, spec))
+        digit_margins.append({"guards": pair, "margins": result})
+    digits_selected = next(row["guards"] for row in digit_margins if not row["margins"]["above_90_percent"])
     write_json(output / "screen.json", {
         "registration_sha256": sha256(registration), "margins": margins, "selected_guards": selected,
+        "signed_digit_margins": digit_margins, "signed_digit_guards": digits_selected,
     })
     runs = {}
     for label, guards in (("exact", EXACT), ("selected", selected)):
@@ -160,6 +171,11 @@ def run(output: Path) -> None:
                 runs[name] = native(km, affine, curvature, selected, output / f"{name}.kmb",
                                     measured_rows=measured_rows, roundtrip=roundtrip,
                                     correction=True, borrowed_carry=scope != "correction", dirty_upper=scope == "dirty")
+        for roundtrip in (False, True):
+            name = f"{scope}-digits-{'roundtrip' if roundtrip else 'forward'}"
+            runs[name] = native(km, affine, curvature, digits_selected, output / f"{name}.kmb",
+                                measured_rows=False, roundtrip=roundtrip, correction=True,
+                                borrowed_carry=scope != "correction", dirty_upper=scope == "dirty", signed_digits=True)
     write_json(output / "native.json", {"screen_sha256": sha256(output / "screen.json"), "runs": runs})
 
 

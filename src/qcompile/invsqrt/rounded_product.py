@@ -79,21 +79,25 @@ def add_with_borrowed_carry(builder: Any, source: Any, target: Any, scratch: Any
         builder.x(target)
 
 
-def row_sum(magnitude: Words, signed: Words, bits: int, guard: int) -> Words:
+def row_sum(magnitude: Words, signed: Words, bits: int, guard: int, *, signed_digits: bool = False) -> Words:
     """Accumulate binary rows at guard-bit precision."""
     total = np.zeros_like(magnitude)
     for bit in range(bits):
-        shift = guard + bit - bits
+        shift = guard + bit - bits - int(signed_digits)
         row = magnitude << shift if shift >= 0 else magnitude >> -shift
         if bit == bits - 1:
             row = -row
-        total += ((signed >> bit) & 1) * row
+        digit = (signed >> bit) & 1
+        total += (2 * digit - 1 if signed_digits else digit) * row
+    if signed_digits:
+        total -= magnitude >> (bits + 1 - guard)
     return total
 
 
 def rounded_product(builder: Any, magnitude: Any, signed: Any, accumulator: Any, guard: int,
                     *, negate: bool = False, round_before_negation: bool = False,
-                    adjoint: bool = False, scratch: Any = None, carry: Any = None, dirty: Any = None) -> None:
+                    adjoint: bool = False, scratch: Any = None, carry: Any = None, dirty: Any = None,
+                    signed_digits: bool = False) -> None:
     """Add a rounded product to the high accumulator bits, retaining the guards.
 
     The signed input is a fractional two's-complement word. The other input
@@ -103,6 +107,8 @@ def rounded_product(builder: Any, magnitude: Any, signed: Any, accumulator: Any,
     Carry scratch opts into the source-borrowing ripple. The dirty pool
     may include other multiplier bits, and is disjoint from the accumulator
     and magnitude. The selected row control is excluded before borrowing.
+    Signed-digit rows use unconditional adders. A fixed negative half-row
+    removes the midpoint bias introduced by the signed digits.
     """
     if not len(magnitude) or not len(signed) or not 1 <= guard < len(accumulator):
         raise ValueError("rounded product requires operands, guard bits, and a high accumulator")
@@ -110,24 +116,42 @@ def rounded_product(builder: Any, magnitude: Any, signed: Any, accumulator: Any,
         raise ValueError("partial-product scratch must fit the magnitude")
     if dirty is not None and carry is None:
         raise ValueError("dirty upper workspace requires the borrowed-carry adder")
+    if signed_digits and (scratch is not None or guard > len(signed) + 1):
+        raise ValueError("signed digits require an unmeasured row and guard within the signed width plus one")
     bias = (1 << (guard - 1)) - int(negate and round_before_negation)
     if not adjoint:
         builder.gf2_iadd(bias, target=accumulator[:guard])
-    order = range(len(signed) - 1, -1, -1) if adjoint else range(len(signed))
+    rows = range(-int(signed_digits), len(signed))
+    order = reversed(rows) if adjoint else rows
     for bit in order:
-        shift = bit + guard - len(signed)
+        shift = max(bit, 0) + guard - len(signed) - int(signed_digits)
         target = accumulator[max(0, shift):]
         start = max(0, -shift)
         row = magnitude[start:start + len(target)]
         if not len(row):
             continue
-        control = signed[bit]
-        upper = None if dirty is None else [wire for wire in dirty if wire.id != control.id]
-        subtract = negate ^ adjoint ^ (bit == len(signed) - 1)
+        control = signed[bit] if bit >= 0 else None
+        upper = None if dirty is None else [wire for wire in dirty if control is None or wire.id != control.id]
+        subtract = negate ^ adjoint ^ (bit in (-1, len(signed) - 1))
         apply = builder.isub if subtract else builder.iadd
-        if scratch is None:
+        if signed_digits and control is not None:
+            # Complementing the target conjugates addition into subtraction.
+            if not subtract:
+                builder.x(target)
+            builder.cx(control, target)
             if carry is None:
-                apply(row, target=target, control=control)
+                builder.iadd(row, target=target)
+            else:
+                add_with_borrowed_carry(builder, row, target, carry, dirty=upper)
+            builder.cx(control, target)
+            if not subtract:
+                builder.x(target)
+        elif scratch is None:
+            if carry is None:
+                if control is None:
+                    apply(row, target=target)
+                else:
+                    apply(row, target=target, control=control)
             else:
                 add_with_borrowed_carry(builder, row, target, carry, control=control, subtract=subtract, dirty=upper)
         else:

@@ -1,0 +1,80 @@
+{
+  "assembly_sha256": "27ccb62d03bcba70353d382bb94c5dc636acd00b250c83f976df8d1176842146",
+  "buckets": {
+    "after_fine_rotations": {
+      "executed_means": [
+        657.88232421875,
+        0.0,
+        0.0
+      ],
+      "executed_totals": [
+        5389372,
+        0,
+        0
+      ],
+      "first_line": 10339,
+      "last_line": 24410,
+      "static": [
+        770,
+        0,
+        0
+      ]
+    },
+    "before_fine_rotations": {
+      "executed_means": [
+        611.0,
+        0.0,
+        0.0
+      ],
+      "executed_totals": [
+        5005312,
+        0,
+        0
+      ],
+      "first_line": 1,
+      "last_line": 9862,
+      "static": [
+        611,
+        0,
+        0
+      ]
+    },
+    "rotation_window": {
+      "executed_means": [
+        71.0,
+        1.0,
+        33.0
+      ],
+      "executed_totals": [
+        581632,
+        8192,
+        270336
+      ],
+      "first_line": 9863,
+      "last_line": 10338,
+      "static": [
+        71,
+        1,
+        33
+      ]
+    }
+  },
+  "classification": "matched_native_development_phase_window_profile",
+  "complete_totals": [
+    10976316,
+    8192,
+    270336
+  ],
+  "input_seed": 20261127,
+  "inputs": 8192,
+  "kmb_sha256": "68eb8c13ebc75c5e443ed5a8c6357c2c77e6676c499ed1324108bf025faf1489",
+  "measurement_seed": 37109,
+  "num_qubits": 39,
+  "scope": "cut by first and last fine rotation; arithmetic row semantics not assigned",
+  "units_in_stat_arrays": [
+    "toffoli_like",
+    "t_like",
+    "fine_rotations"
+  ],
+  "whole_vs_fragments": "same executed totals, phase, original input and clean scratch"
+}

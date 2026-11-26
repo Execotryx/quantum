@@ -71,3 +71,46 @@ def test_borrowed_carry_native_all_small_inputs(monkeypatch, project_root, sourc
         space = km.array([km.q(i) for i in range(circuit.num_qubits) if i not in live])
         assert not sim.read_across_shots(space).any()
         assert not sim.read_phase_flipped_across_shots().any()
+
+
+@pytest.mark.official
+@pytest.mark.parametrize("guard", [1, 4])
+def test_signed_digit_product_native(monkeypatch, project_root, guard):
+    pytest.importorskip("resource")
+    monkeypatch.syspath_prepend(str(project_root / "tools"))
+    tool = import_module("invsqrt_opportunity")
+    from qcompile.invsqrt.rounded_product import rounded_product, row_sum
+
+    km, _, _ = tool.backend()
+    combinations = np.tile(np.arange(512, dtype=np.int64), 8)
+    magnitude = combinations & 15
+    signed_word = (combinations >> 4) & 7
+    initial = (combinations >> 7) << guard
+    delta = row_sum(magnitude, signed_word, 3, guard, signed_digits=True)
+    if guard == 4:
+        np.testing.assert_array_equal(delta, 2 * magnitude * ((signed_word ^ 4) - 4))
+    for negate in (False, True):
+        for adjoint in (False, True):
+            builder = km.CircuitBuilder()
+            operand = builder.create_quantum_register(4, "operand")
+            signed = builder.create_quantum_register(3, "signed")
+            target = builder.create_quantum_register(guard + 3, "target")
+            rounded_product(builder, operand, signed, target, guard, signed_digits=True, negate=negate,
+                            round_before_negation=True, adjoint=adjoint)
+            circuit = builder.finish_circuit()
+            sim = km.Simulator(batch_size=len(combinations), seed=37117)
+            sim.use_same_registers_as(circuit)
+            bias = (1 << (guard - 1)) - int(negate)
+            forward = (initial ^ bias) + (-delta if negate else delta)
+            for wires, supplied in ((operand, magnitude), (signed, signed_word),
+                                    (target, forward if adjoint else initial)):
+                shifts = np.arange(len(wires))[:, None]
+                sim.write_across_shots(wires, ((supplied >> shifts) & 1).astype(bool))
+            sim.do(circuit)
+            for wires, expected in ((operand, magnitude), (signed, signed_word),
+                                    (target, initial if adjoint else forward)):
+                shifts = np.arange(len(wires))[:, None]
+                np.testing.assert_array_equal(sim.read_across_shots(wires), (expected >> shifts) & 1)
+            scratch = km.array([km.q(i) for i in range(len(operand) + len(signed) + len(target), circuit.num_qubits)])
+            assert not sim.read_across_shots(scratch).any()
+            assert not sim.read_phase_flipped_across_shots().any()

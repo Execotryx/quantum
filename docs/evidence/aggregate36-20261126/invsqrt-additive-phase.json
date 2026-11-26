@@ -1,0 +1,60 @@
+{
+  "classification": "structure_specific_phase_approximation_screen",
+  "driver_sha256": "b993dddb154aa723052ccea7bcf3d46580ffa646c1568bf900ebc06226d15750",
+  "input_range_inclusive": [
+    1048576,
+    2097151
+  ],
+  "parity_rotations": {
+    "conservative_fine_rotation_count": 700,
+    "domain": "one unwrapped phase sum with one elementary rotation per input parity",
+    "numerical_rms_minimum_nonconstant_terms": 722,
+    "rms_over_limit_at_700_terms": 1.0976529001455546,
+    "rotation_only_cost_floor_at_input_width": 110525.18550196818,
+    "truncated_series": [
+      {
+        "nonconstant_terms": 512,
+        "worst_tolerance_fraction": 53.21578082814813
+      },
+      {
+        "nonconstant_terms": 1024,
+        "worst_tolerance_fraction": 6.271962178871036
+      },
+      {
+        "nonconstant_terms": 2048,
+        "worst_tolerance_fraction": 0.5687182266265154
+      }
+    ]
+  },
+  "relative_tolerance": 5.960464477539063e-08,
+  "two_additive_tables": {
+    "best_four_corner_bound_with_at_most_16384_entries": {
+      "lower_bits": 7,
+      "minimum_tolerance_fraction": 5.81577395022768,
+      "prefix_bits": 6,
+      "rectangular_table_entries": 16384,
+      "upper_bits": 7,
+      "witness_inputs": [
+        1048576,
+        1064832,
+        1048703,
+        1064959
+      ]
+    },
+    "domain": "one contiguous upper/lower split per common prefix, with no mixed term",
+    "smallest_layout_not_excluded_by_four_corners": {
+      "lower_bits": 6,
+      "minimum_tolerance_fraction": 0.7239186281343137,
+      "prefix_bits": 8,
+      "rectangular_table_entries": 32768,
+      "upper_bits": 6,
+      "witness_inputs": [
+        1048576,
+        1052608,
+        1048639,
+        1052671
+      ]
+    },
+    "splits": 190
+  }
+}

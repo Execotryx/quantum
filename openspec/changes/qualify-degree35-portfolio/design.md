@@ -56,6 +56,22 @@ competing schedule needs a different multiplier, phase construction,
 or companion allocation before a complete verifier run.
 [Native arithmetic comparison](../../../docs/degree35-invsqrt-borrowed-carry-27-11-2026-01-57-09.md)
 
+Controlled add/subtract rows with a fixed half-row correction reduce
+the measured arithmetic-only product to 107 times 1,696. Their
+one-guard phase model passes the full legal domain. Direct unwrapped
+parity rotations and two additive tables fail the scoped resource
+screens. For a complete incumbent-based rewrite, measure live width
+and the unconditional carry and routing cost together. At 35 qubits
+the single-component budget is about 1,489 charged equivalents per
+input compared with about 1,582 at the source control. Removing the
+estimated 61.87 classically guarded gates alone would leave a gap.
+The native replay splits the control at its first and last fine rotations
+into 611, 71, and 657.88 mean Toffoli-like gates. Bind the corresponding
+forward and inverse addition rows to explicit signed update contracts
+before estimating a Litinski-style substitution. A one-third reduction
+at the existing width requires about 737 eligible gates across both paths.
+[Signed-digit measurements and phase screens](../../../docs/degree35-invsqrt-signed-digits-27-11-2026-02-13-17.md)
+
 ## Verification and delivery
 
 Register a `portfolio-v5` archive with `--at-least-35` after qualifying a full

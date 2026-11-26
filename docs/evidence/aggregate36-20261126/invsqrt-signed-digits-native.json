@@ -1,0 +1,447 @@
+{
+  "runs": {
+    "borrowed-controlled-forward": {
+      "borrowed_carry": true,
+      "dirty_upper": false,
+      "executed_mean": 1330.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "14e05e143a11e64fd0e556df995b1d7cea6c0e21a93f25e40df79bf3fb0ac395",
+      "measured_rows": false,
+      "qubits": 103,
+      "roundtrip": false,
+      "separate_correction": true,
+      "signed_digits": false,
+      "toffoli_like": 1330
+    },
+    "borrowed-controlled-roundtrip": {
+      "borrowed_carry": true,
+      "dirty_upper": false,
+      "executed_mean": 2660.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "4000a5ca228ca7fd81c3fda89904628b396289fd92d22b393858d591573924a7",
+      "measured_rows": false,
+      "qubits": 103,
+      "roundtrip": true,
+      "separate_correction": true,
+      "signed_digits": false,
+      "toffoli_like": 2660
+    },
+    "borrowed-digits-forward": {
+      "borrowed_carry": true,
+      "dirty_upper": false,
+      "executed_mean": 997.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "8ebf92231c187b33384caeeaa58084aa1863bdf7a910ef416ebbfdd25366d03e",
+      "measured_rows": false,
+      "qubits": 104,
+      "roundtrip": false,
+      "separate_correction": true,
+      "signed_digits": true,
+      "toffoli_like": 997
+    },
+    "borrowed-digits-roundtrip": {
+      "borrowed_carry": true,
+      "dirty_upper": false,
+      "executed_mean": 1994.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "43f1f4a8810c72fade29b0978ffd412e19fcb068eb74283eae914ecea8b40f2e",
+      "measured_rows": false,
+      "qubits": 104,
+      "roundtrip": true,
+      "separate_correction": true,
+      "signed_digits": true,
+      "toffoli_like": 1994
+    },
+    "borrowed-products-forward": {
+      "borrowed_carry": true,
+      "dirty_upper": false,
+      "executed_mean": 1304.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "66306acdf9e2d60bdae9391bdd8e670b90a0319b0887ffd04cd78bf0a6a01a28",
+      "measured_rows": true,
+      "qubits": 125,
+      "roundtrip": false,
+      "separate_correction": true,
+      "signed_digits": false,
+      "toffoli_like": 1304
+    },
+    "borrowed-products-roundtrip": {
+      "borrowed_carry": true,
+      "dirty_upper": false,
+      "executed_mean": 2608.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "e58fefdfdd0422017df153f9cbdd12c0ab8afaad2ca137dc67d7b21658f84ff6",
+      "measured_rows": true,
+      "qubits": 125,
+      "roundtrip": true,
+      "separate_correction": true,
+      "signed_digits": false,
+      "toffoli_like": 2608
+    },
+    "correction-controlled-forward": {
+      "borrowed_carry": false,
+      "dirty_upper": false,
+      "executed_mean": 1428.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "97452bf44c93a9d5cbc3d16a7a5f96d35718e93b506965babe78962dcf38cda8",
+      "measured_rows": false,
+      "qubits": 107,
+      "roundtrip": false,
+      "separate_correction": true,
+      "signed_digits": false,
+      "toffoli_like": 1428
+    },
+    "correction-controlled-roundtrip": {
+      "borrowed_carry": false,
+      "dirty_upper": false,
+      "executed_mean": 2856.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "ea6b4514da28934faee9116138b9b2978fb5cb37ca6ede09b3b1dbc370602523",
+      "measured_rows": false,
+      "qubits": 107,
+      "roundtrip": true,
+      "separate_correction": true,
+      "signed_digits": false,
+      "toffoli_like": 2856
+    },
+    "correction-digits-forward": {
+      "borrowed_carry": false,
+      "dirty_upper": false,
+      "executed_mean": 848.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "f5e062b583a240d6265143fcc9d5bb90d3ff6068a506119d7c09a33edb301aad",
+      "measured_rows": false,
+      "qubits": 107,
+      "roundtrip": false,
+      "separate_correction": true,
+      "signed_digits": true,
+      "toffoli_like": 848
+    },
+    "correction-digits-roundtrip": {
+      "borrowed_carry": false,
+      "dirty_upper": false,
+      "executed_mean": 1696.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "eb3fab2930be29398f8e100533827f12c7dc03910cda6854d9c61f504c7367e1",
+      "measured_rows": false,
+      "qubits": 107,
+      "roundtrip": true,
+      "separate_correction": true,
+      "signed_digits": true,
+      "toffoli_like": 1696
+    },
+    "correction-products-forward": {
+      "borrowed_carry": false,
+      "dirty_upper": false,
+      "executed_mean": 1095.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "88f481c5c529d1c38de7d4d7203987ece0be14d9848b4194b367b3d0084c028d",
+      "measured_rows": true,
+      "qubits": 129,
+      "roundtrip": false,
+      "separate_correction": true,
+      "signed_digits": false,
+      "toffoli_like": 1095
+    },
+    "correction-products-roundtrip": {
+      "borrowed_carry": false,
+      "dirty_upper": false,
+      "executed_mean": 2190.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "55343b33d4c7495c3a71f21249f60a4860afc24d184428cf13d0f67e1e1354cb",
+      "measured_rows": true,
+      "qubits": 129,
+      "roundtrip": true,
+      "separate_correction": true,
+      "signed_digits": false,
+      "toffoli_like": 2190
+    },
+    "dirty-controlled-forward": {
+      "borrowed_carry": true,
+      "dirty_upper": true,
+      "executed_mean": 1971.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "298e39f62c1a06481626ec3f3c234f4b0011f139409617e2c0f631b0611b88b4",
+      "measured_rows": false,
+      "qubits": 86,
+      "roundtrip": false,
+      "separate_correction": true,
+      "signed_digits": false,
+      "toffoli_like": 1971
+    },
+    "dirty-controlled-roundtrip": {
+      "borrowed_carry": true,
+      "dirty_upper": true,
+      "executed_mean": 3942.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "8a3490f81ac1f81714b4e35cc3d65ee447b8e35dc5620b4e7c2d0a607959e192",
+      "measured_rows": false,
+      "qubits": 86,
+      "roundtrip": true,
+      "separate_correction": true,
+      "signed_digits": false,
+      "toffoli_like": 3942
+    },
+    "dirty-digits-forward": {
+      "borrowed_carry": true,
+      "dirty_upper": true,
+      "executed_mean": 1806.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "4a9eefac351bc26bfb366fec1ea7c67e52fcff5f31e067e817b1d5171ac17a35",
+      "measured_rows": false,
+      "qubits": 86,
+      "roundtrip": false,
+      "separate_correction": true,
+      "signed_digits": true,
+      "toffoli_like": 1806
+    },
+    "dirty-digits-roundtrip": {
+      "borrowed_carry": true,
+      "dirty_upper": true,
+      "executed_mean": 3612.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "151018a1416381d852ae9404d50dfa39c55549d466f21307ae818988e46a09a6",
+      "measured_rows": false,
+      "qubits": 86,
+      "roundtrip": true,
+      "separate_correction": true,
+      "signed_digits": true,
+      "toffoli_like": 3612
+    },
+    "dirty-products-forward": {
+      "borrowed_carry": true,
+      "dirty_upper": true,
+      "executed_mean": 1945.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "edb95ab6f159eee1b5e799098087b3da0ab4c9fc7731af414d5bcb976b1b0152",
+      "measured_rows": true,
+      "qubits": 108,
+      "roundtrip": false,
+      "separate_correction": true,
+      "signed_digits": false,
+      "toffoli_like": 1945
+    },
+    "dirty-products-roundtrip": {
+      "borrowed_carry": true,
+      "dirty_upper": true,
+      "executed_mean": 3890.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "030e3aeaf6f659874dab196dde3af7a6d5e36c819edb01678fb81e72f15c115a",
+      "measured_rows": true,
+      "qubits": 108,
+      "roundtrip": true,
+      "separate_correction": true,
+      "signed_digits": false,
+      "toffoli_like": 3890
+    },
+    "exact-controlled-forward": {
+      "borrowed_carry": false,
+      "dirty_upper": false,
+      "executed_mean": 2075.0,
+      "fixtures": 1536,
+      "guards": [
+        12,
+        14
+      ],
+      "kmb_sha256": "ae9520e675ea18e1008165330d4223390866f6f89103222e31f3afdb3c8c8a0b",
+      "measured_rows": false,
+      "qubits": 160,
+      "roundtrip": false,
+      "separate_correction": false,
+      "signed_digits": false,
+      "toffoli_like": 2075
+    },
+    "exact-controlled-roundtrip": {
+      "borrowed_carry": false,
+      "dirty_upper": false,
+      "executed_mean": 4150.0,
+      "fixtures": 1536,
+      "guards": [
+        12,
+        14
+      ],
+      "kmb_sha256": "dafee7f31ef5f6174fb5bee44657feaa2784e881be58e503d1e79cc0f490fdfe",
+      "measured_rows": false,
+      "qubits": 160,
+      "roundtrip": true,
+      "separate_correction": false,
+      "signed_digits": false,
+      "toffoli_like": 4150
+    },
+    "exact-products-forward": {
+      "borrowed_carry": false,
+      "dirty_upper": false,
+      "executed_mean": 1630.0,
+      "fixtures": 1536,
+      "guards": [
+        12,
+        14
+      ],
+      "kmb_sha256": "d0e4b75a5eacc50be0d05e48e32f1e9063477fdfb94eac73e82f416c7b556376",
+      "measured_rows": true,
+      "qubits": 182,
+      "roundtrip": false,
+      "separate_correction": false,
+      "signed_digits": false,
+      "toffoli_like": 1630
+    },
+    "exact-products-roundtrip": {
+      "borrowed_carry": false,
+      "dirty_upper": false,
+      "executed_mean": 3260.0,
+      "fixtures": 1536,
+      "guards": [
+        12,
+        14
+      ],
+      "kmb_sha256": "f8af06405edea7257f2c9a6da0f04424d054899b096974c19a7d90fc7c8ca425",
+      "measured_rows": true,
+      "qubits": 182,
+      "roundtrip": true,
+      "separate_correction": false,
+      "signed_digits": false,
+      "toffoli_like": 3260
+    },
+    "selected-controlled-forward": {
+      "borrowed_carry": false,
+      "dirty_upper": false,
+      "executed_mean": 1761.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "41abcda6ef6789daef0d2380ee25c738cef92fcbed64ee6e631535deefbc2526",
+      "measured_rows": false,
+      "qubits": 123,
+      "roundtrip": false,
+      "separate_correction": false,
+      "signed_digits": false,
+      "toffoli_like": 1761
+    },
+    "selected-controlled-roundtrip": {
+      "borrowed_carry": false,
+      "dirty_upper": false,
+      "executed_mean": 3522.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "17b8a937bbf079d92551e60b5e50fcdf79a7266ec74f347a5fd9e7df808019d3",
+      "measured_rows": false,
+      "qubits": 123,
+      "roundtrip": true,
+      "separate_correction": false,
+      "signed_digits": false,
+      "toffoli_like": 3522
+    },
+    "selected-products-forward": {
+      "borrowed_carry": false,
+      "dirty_upper": false,
+      "executed_mean": 1316.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "a7dad7541e2d561cacac9538bb78fd7f41ffcb2f931d1d84401588889d813e30",
+      "measured_rows": true,
+      "qubits": 145,
+      "roundtrip": false,
+      "separate_correction": false,
+      "signed_digits": false,
+      "toffoli_like": 1316
+    },
+    "selected-products-roundtrip": {
+      "borrowed_carry": false,
+      "dirty_upper": false,
+      "executed_mean": 2632.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "3e7897f3646bede754651485bf8d004d6693cd37dfd6275605b32d695e5396ea",
+      "measured_rows": true,
+      "qubits": 145,
+      "roundtrip": true,
+      "separate_correction": false,
+      "signed_digits": false,
+      "toffoli_like": 2632
+    }
+  },
+  "screen_sha256": "b22935abbb1fd368dcbd766a102e4fe24257f8ab310f4f36859f5217d71fdbd4"
+}

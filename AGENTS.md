@@ -268,6 +268,10 @@
 - In guarded rounded products, keep the residue bits until the inverse.
   Distinguish rounding before negation from rounding the negative
   product at ties. Bind each compact guard choice to a full-domain scan.
+- In signed-digit products, truncate the unsigned row before applying
+  the digit sign. Subtract the fixed half-row, and reverse it with the
+  same guard residue. Keep the native arithmetic slice separate from the
+  cost of the complete phasing circuit.
 - The source-borrowing ripple restores each operand before reusing it.
   Exclude the active multiplier control from the dirty increment pool
   and repay the same dirty word before leaving the upper lane.

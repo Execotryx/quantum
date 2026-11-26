@@ -243,6 +243,13 @@ loading, normalization, or phase.
 [Native rounded products](docs/degree35-invsqrt-rounded-products-27-11-2026-01-47-52.md)
 · [Borrowed-carry comparison](docs/degree35-invsqrt-borrowed-carry-27-11-2026-01-57-09.md)
 
+Signed add/subtract rows reduced the best arithmetic-only cost product
+by **33.8%**, to **107 qubits and 1,696 Toffolis**. Their one-guard phase
+model used at most **80.71%** of the allowed error over all **3,133,452**
+inputs. The slice exceeds the complete inverse-square-root budget of
+**52,119.68** with the current source-built companions.
+[Source research and signed-digit comparison](docs/degree35-invsqrt-signed-digits-27-11-2026-02-13-17.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh
