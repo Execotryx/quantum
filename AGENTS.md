@@ -89,6 +89,9 @@
   and nonzero stored leading coefficients. Recover both quotient heads
   before leaving each frame. Match forward, inverse, phase and scratch
   separately on the serialized circuit.
+- A Givens-order change may move a rotation only across disjoint orbital
+  pairs. Preserve the matching angle columns, check reconstructed vectors,
+  and price the affected XOR transitions before full loader verification.
 - Before a full portfolio run, exercise native ANGLE serialization on its
   temporary filesystem. Keep prior raw receipts and the original salts
   when a public development comparison needs an infrastructure retry.

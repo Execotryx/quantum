@@ -54,6 +54,8 @@ Keep cross-block product sources below the entire destination block.
 The transposed middle product uses the two shortest coefficient ranges.
 The projective derivative action requires unit Euclidean degree drops
 and restores the two quotient heads after each recursive solve.
+Preserve angle columns when commuting disjoint Givens rotations.
+Price both adjacent XOR transitions before promoting a new loader order.
 Keep raw receipts and the original salt when retrying a public comparison.
 Propagate chemistry angle-gauge signs backward through the ordered Givens
 tree. Verify the prepared projectors, decoded metrics and native loader cost.

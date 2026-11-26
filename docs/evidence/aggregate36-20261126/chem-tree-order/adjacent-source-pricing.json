@@ -1,0 +1,823 @@
+{
+  "baseline_slot_toffolis": [
+    272,
+    268,
+    231,
+    230,
+    230,
+    267,
+    230,
+    268,
+    226,
+    230,
+    230,
+    267,
+    230,
+    226,
+    229
+  ],
+  "batch": 5,
+  "brot": 7,
+  "classification": "compiler_local_order_search",
+  "compiler_seed": 534,
+  "compiler_sha256": "b183352b347455bd121c2e3cd5587f72b82ebfb1c94b0ccce494c5c16465f04f",
+  "effort": 4,
+  "factorization_sha256": "9f472ae472b2eae95940a55cf899fb000861c624a294feb021a4d6ffd6340d67",
+  "low_bits": 4,
+  "minimum": {
+    "costs": [
+      272,
+      269
+    ],
+    "delta": 1,
+    "index": 1,
+    "slots": [
+      0,
+      1
+    ]
+  },
+  "observations": [
+    {
+      "costs": [
+        272,
+        269
+      ],
+      "delta": 1,
+      "index": 1,
+      "slots": [
+        0,
+        1
+      ]
+    },
+    {
+      "costs": [
+        273,
+        269
+      ],
+      "delta": 2,
+      "index": 3,
+      "slots": [
+        0,
+        1
+      ]
+    },
+    {
+      "costs": [
+        272,
+        269,
+        243
+      ],
+      "delta": 13,
+      "index": 4,
+      "slots": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "costs": [
+        270,
+        237
+      ],
+      "delta": 8,
+      "index": 6,
+      "slots": [
+        1,
+        2
+      ]
+    },
+    {
+      "costs": [
+        269,
+        237
+      ],
+      "delta": 7,
+      "index": 7,
+      "slots": [
+        1,
+        2
+      ]
+    },
+    {
+      "costs": [
+        269,
+        237,
+        243
+      ],
+      "delta": 20,
+      "index": 9,
+      "slots": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "costs": [
+        237,
+        237
+      ],
+      "delta": 13,
+      "index": 12,
+      "slots": [
+        2,
+        3
+      ]
+    },
+    {
+      "costs": [
+        237,
+        237
+      ],
+      "delta": 13,
+      "index": 13,
+      "slots": [
+        2,
+        3
+      ]
+    },
+    {
+      "costs": [
+        243,
+        237,
+        243
+      ],
+      "delta": 32,
+      "index": 14,
+      "slots": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "costs": [
+        237,
+        237
+      ],
+      "delta": 14,
+      "index": 15,
+      "slots": [
+        3,
+        4
+      ]
+    },
+    {
+      "costs": [
+        237,
+        237
+      ],
+      "delta": 14,
+      "index": 16,
+      "slots": [
+        3,
+        4
+      ]
+    },
+    {
+      "costs": [
+        237,
+        237
+      ],
+      "delta": 14,
+      "index": 17,
+      "slots": [
+        3,
+        4
+      ]
+    },
+    {
+      "costs": [
+        237,
+        237
+      ],
+      "delta": 14,
+      "index": 18,
+      "slots": [
+        3,
+        4
+      ]
+    },
+    {
+      "costs": [
+        243,
+        237,
+        268
+      ],
+      "delta": 21,
+      "index": 19,
+      "slots": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "costs": [
+        237,
+        269
+      ],
+      "delta": 9,
+      "index": 20,
+      "slots": [
+        4,
+        5
+      ]
+    },
+    {
+      "costs": [
+        237,
+        269
+      ],
+      "delta": 9,
+      "index": 21,
+      "slots": [
+        4,
+        5
+      ]
+    },
+    {
+      "costs": [
+        237,
+        269
+      ],
+      "delta": 9,
+      "index": 22,
+      "slots": [
+        4,
+        5
+      ]
+    },
+    {
+      "costs": [
+        237,
+        269
+      ],
+      "delta": 9,
+      "index": 23,
+      "slots": [
+        4,
+        5
+      ]
+    },
+    {
+      "costs": [
+        243,
+        269,
+        243
+      ],
+      "delta": 28,
+      "index": 24,
+      "slots": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "costs": [
+        270,
+        237
+      ],
+      "delta": 10,
+      "index": 25,
+      "slots": [
+        5,
+        6
+      ]
+    },
+    {
+      "costs": [
+        270,
+        237
+      ],
+      "delta": 10,
+      "index": 27,
+      "slots": [
+        5,
+        6
+      ]
+    },
+    {
+      "costs": [
+        270,
+        237
+      ],
+      "delta": 10,
+      "index": 28,
+      "slots": [
+        5,
+        6
+      ]
+    },
+    {
+      "costs": [
+        237,
+        270
+      ],
+      "delta": 9,
+      "index": 31,
+      "slots": [
+        6,
+        7
+      ]
+    },
+    {
+      "costs": [
+        237,
+        269
+      ],
+      "delta": 8,
+      "index": 32,
+      "slots": [
+        6,
+        7
+      ]
+    },
+    {
+      "costs": [
+        237,
+        269
+      ],
+      "delta": 8,
+      "index": 33,
+      "slots": [
+        6,
+        7
+      ]
+    },
+    {
+      "costs": [
+        243,
+        269,
+        236
+      ],
+      "delta": 24,
+      "index": 34,
+      "slots": [
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "costs": [
+        269,
+        237
+      ],
+      "delta": 12,
+      "index": 35,
+      "slots": [
+        7,
+        8
+      ]
+    },
+    {
+      "costs": [
+        269,
+        237
+      ],
+      "delta": 12,
+      "index": 36,
+      "slots": [
+        7,
+        8
+      ]
+    },
+    {
+      "costs": [
+        269,
+        237
+      ],
+      "delta": 12,
+      "index": 37,
+      "slots": [
+        7,
+        8
+      ]
+    },
+    {
+      "costs": [
+        269,
+        237
+      ],
+      "delta": 12,
+      "index": 38,
+      "slots": [
+        7,
+        8
+      ]
+    },
+    {
+      "costs": [
+        269,
+        233,
+        243
+      ],
+      "delta": 21,
+      "index": 39,
+      "slots": [
+        7,
+        8,
+        9
+      ]
+    },
+    {
+      "costs": [
+        237,
+        237
+      ],
+      "delta": 18,
+      "index": 40,
+      "slots": [
+        8,
+        9
+      ]
+    },
+    {
+      "costs": [
+        237,
+        237
+      ],
+      "delta": 18,
+      "index": 41,
+      "slots": [
+        8,
+        9
+      ]
+    },
+    {
+      "costs": [
+        237,
+        237
+      ],
+      "delta": 18,
+      "index": 42,
+      "slots": [
+        8,
+        9
+      ]
+    },
+    {
+      "costs": [
+        237,
+        237
+      ],
+      "delta": 18,
+      "index": 43,
+      "slots": [
+        8,
+        9
+      ]
+    },
+    {
+      "costs": [
+        236,
+        237,
+        243
+      ],
+      "delta": 30,
+      "index": 44,
+      "slots": [
+        8,
+        9,
+        10
+      ]
+    },
+    {
+      "costs": [
+        237,
+        237
+      ],
+      "delta": 14,
+      "index": 45,
+      "slots": [
+        9,
+        10
+      ]
+    },
+    {
+      "costs": [
+        237,
+        237
+      ],
+      "delta": 14,
+      "index": 46,
+      "slots": [
+        9,
+        10
+      ]
+    },
+    {
+      "costs": [
+        237,
+        237
+      ],
+      "delta": 14,
+      "index": 47,
+      "slots": [
+        9,
+        10
+      ]
+    },
+    {
+      "costs": [
+        237,
+        237
+      ],
+      "delta": 14,
+      "index": 48,
+      "slots": [
+        9,
+        10
+      ]
+    },
+    {
+      "costs": [
+        243,
+        237,
+        268
+      ],
+      "delta": 21,
+      "index": 49,
+      "slots": [
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "costs": [
+        237,
+        269
+      ],
+      "delta": 9,
+      "index": 50,
+      "slots": [
+        10,
+        11
+      ]
+    },
+    {
+      "costs": [
+        237,
+        269
+      ],
+      "delta": 9,
+      "index": 51,
+      "slots": [
+        10,
+        11
+      ]
+    },
+    {
+      "costs": [
+        237,
+        269
+      ],
+      "delta": 9,
+      "index": 52,
+      "slots": [
+        10,
+        11
+      ]
+    },
+    {
+      "costs": [
+        237,
+        270
+      ],
+      "delta": 10,
+      "index": 53,
+      "slots": [
+        10,
+        11
+      ]
+    },
+    {
+      "costs": [
+        243,
+        269,
+        243
+      ],
+      "delta": 28,
+      "index": 54,
+      "slots": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "costs": [
+        269,
+        237
+      ],
+      "delta": 9,
+      "index": 55,
+      "slots": [
+        11,
+        12
+      ]
+    },
+    {
+      "costs": [
+        269,
+        237
+      ],
+      "delta": 9,
+      "index": 56,
+      "slots": [
+        11,
+        12
+      ]
+    },
+    {
+      "costs": [
+        269,
+        237
+      ],
+      "delta": 9,
+      "index": 57,
+      "slots": [
+        11,
+        12
+      ]
+    },
+    {
+      "costs": [
+        270,
+        237
+      ],
+      "delta": 10,
+      "index": 58,
+      "slots": [
+        11,
+        12
+      ]
+    },
+    {
+      "costs": [
+        237,
+        237
+      ],
+      "delta": 18,
+      "index": 60,
+      "slots": [
+        12,
+        13
+      ]
+    },
+    {
+      "costs": [
+        237,
+        237
+      ],
+      "delta": 18,
+      "index": 61,
+      "slots": [
+        12,
+        13
+      ]
+    },
+    {
+      "costs": [
+        237,
+        237
+      ],
+      "delta": 18,
+      "index": 62,
+      "slots": [
+        12,
+        13
+      ]
+    },
+    {
+      "costs": [
+        237,
+        237
+      ],
+      "delta": 18,
+      "index": 63,
+      "slots": [
+        12,
+        13
+      ]
+    },
+    {
+      "costs": [
+        243,
+        232,
+        236
+      ],
+      "delta": 26,
+      "index": 64,
+      "slots": [
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "costs": [
+        237,
+        232
+      ],
+      "delta": 14,
+      "index": 65,
+      "slots": [
+        13,
+        14
+      ]
+    },
+    {
+      "costs": [
+        237,
+        237
+      ],
+      "delta": 19,
+      "index": 66,
+      "slots": [
+        13,
+        14
+      ]
+    },
+    {
+      "costs": [
+        237,
+        237
+      ],
+      "delta": 19,
+      "index": 67,
+      "slots": [
+        13,
+        14
+      ]
+    },
+    {
+      "costs": [
+        237,
+        232
+      ],
+      "delta": 14,
+      "index": 68,
+      "slots": [
+        13,
+        14
+      ]
+    },
+    {
+      "costs": [
+        236,
+        237
+      ],
+      "delta": 18,
+      "index": 69,
+      "slots": [
+        13,
+        14
+      ]
+    },
+    {
+      "costs": [
+        232
+      ],
+      "delta": 3,
+      "index": 70,
+      "slots": [
+        14
+      ]
+    },
+    {
+      "costs": [
+        237
+      ],
+      "delta": 8,
+      "index": 71,
+      "slots": [
+        14
+      ]
+    },
+    {
+      "costs": [
+        237
+      ],
+      "delta": 8,
+      "index": 72,
+      "slots": [
+        14
+      ]
+    },
+    {
+      "costs": [
+        232
+      ],
+      "delta": 3,
+      "index": 73,
+      "slots": [
+        14
+      ]
+    }
+  ]
+}

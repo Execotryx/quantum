@@ -1,0 +1,99 @@
+{
+  "classification": "classical_chart_development",
+  "field_table": "repository GF(4096) software table",
+  "panels": [
+    {
+      "counts": {
+        "derivative": {
+          "FF": 911,
+          "PF": 1,
+          "PP": 112
+        },
+        "joint": {
+          "FF": 911,
+          "FP": 2,
+          "PF": 3,
+          "PP": 108
+        },
+        "joint_weight34": {
+          "FP": 2,
+          "PF": 3,
+          "PP": 82
+        },
+        "joint_weight35": {
+          "PP": 26
+        },
+        "locator": {
+          "FP": 9,
+          "PF": 9,
+          "PP": 1006
+        }
+      },
+      "seed": 36209,
+      "shots": 1024,
+      "weights": {
+        "21": 1,
+        "24": 2,
+        "25": 6,
+        "26": 22,
+        "27": 34,
+        "28": 79,
+        "29": 83,
+        "30": 152,
+        "31": 187,
+        "32": 177,
+        "33": 168,
+        "34": 87,
+        "35": 26
+      }
+    },
+    {
+      "counts": {
+        "derivative": {
+          "FF": 881,
+          "PP": 143
+        },
+        "joint": {
+          "FF": 881,
+          "FP": 1,
+          "PF": 2,
+          "PP": 140
+        },
+        "joint_weight34": {
+          "FP": 1,
+          "PF": 2,
+          "PP": 98
+        },
+        "joint_weight35": {
+          "PP": 42
+        },
+        "locator": {
+          "FP": 9,
+          "PF": 10,
+          "PP": 1005
+        }
+      },
+      "seed": 36217,
+      "shots": 1024,
+      "weights": {
+        "22": 1,
+        "23": 1,
+        "24": 2,
+        "25": 5,
+        "26": 13,
+        "27": 36,
+        "28": 69,
+        "29": 98,
+        "30": 152,
+        "31": 162,
+        "32": 180,
+        "33": 162,
+        "34": 101,
+        "35": 42
+      }
+    }
+  ],
+  "runtime": "Windows Python, no native circuit execution",
+  "sampler_sha256": "f14274bc0943fb9769ddb01131be6063191a15009fe1caf1d4bdd9fd25194e65",
+  "weight34_padding": "one zero root after orientation"
+}

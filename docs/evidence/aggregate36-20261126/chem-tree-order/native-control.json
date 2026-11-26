@@ -1,0 +1,161 @@
+{
+  "factorization_sha256": "9f472ae472b2eae95940a55cf899fb000861c624a294feb021a4d6ffd6340d67",
+  "slots": [
+    {
+      "kmb_sha256": "2b41367ba350ffe1936ee28665fbbadc2531c2356d6f5555772aa056253ac489",
+      "qubits": 126,
+      "sha256": "a2ac7a6660a5f958666ac2da27b0c996c5cd48453f3b3bf6b9d423612e259b3d",
+      "slot": 0,
+      "toffoli": 272
+    },
+    {
+      "kmb_sha256": "4b52e14e4278240a7ad27d66c0bfbc57c0d5822cb72ea55417be8c9b9a4728e0",
+      "qubits": 121,
+      "sha256": "f6d45cd6e6575a15bd73668645c7e08543f4c0d15c696c4548f5c19d4360bbb5",
+      "slot": 1,
+      "toffoli": 268
+    },
+    {
+      "kmb_sha256": "fa31aae437b70f022849d9b9c8b5edc65d739e4d759953f1a538da367c006d6c",
+      "qubits": 121,
+      "sha256": "06be353e88e0cc30b95fd999745810b0d29478dbbc59c0cff2f9a22c455b42f6",
+      "slot": 2,
+      "toffoli": 231
+    },
+    {
+      "kmb_sha256": "b7e1f8bed89944616c643bfe6fd8f91d21ed76d0d7ce2152d3445611ed4d684d",
+      "qubits": 121,
+      "sha256": "9fb946c6263149c882b5ca684573f507fa8b35bc757d1ca6cb5ff60985d3c2a4",
+      "slot": 3,
+      "toffoli": 230
+    },
+    {
+      "kmb_sha256": "fdac0dbfec06e77dc52fe7b197a173993460c55a2edb25fec1df1fcedcadef9c",
+      "qubits": 121,
+      "sha256": "9be8e18347779108f858aefe9d046834dbf9587d00d579931c984b647674ba0b",
+      "slot": 4,
+      "toffoli": 230
+    },
+    {
+      "kmb_sha256": "cc09e63687646846d9ae7a8221fccf2ae81b116bc7ac9ba5ab298a596c4b0e53",
+      "qubits": 121,
+      "sha256": "b7cc79ce155f06f2bb0f4666743ecf6a5d916636df006d0bd08d4f2a5b6e0979",
+      "slot": 5,
+      "toffoli": 267
+    },
+    {
+      "kmb_sha256": "8c36d81156acf913dc91e6feba60fe7e3dfc6f4d79cbb2f9da3e1d8138cb5add",
+      "qubits": 121,
+      "sha256": "a7b778db3de9c836e28fd01e28e51b3bd9d7327b7986a250cd38884a2d844419",
+      "slot": 6,
+      "toffoli": 230
+    },
+    {
+      "kmb_sha256": "a9dc8c9d17b35326cc0c7daf7ce0dbe2f4d51b8d17d4dcdceb43d2e7417759af",
+      "qubits": 121,
+      "sha256": "830ae84ab52a13a6f6b8a5165b36fd5f5f81ca918dfab82ed04047d61e646dfb",
+      "slot": 7,
+      "toffoli": 268
+    },
+    {
+      "kmb_sha256": "edc7df67376d4e184a9bc5e509cc41e5ce9403c6308ab4871a9fe797d0c15a6b",
+      "qubits": 121,
+      "sha256": "c6b1398116055d70123eb2ae69793210896d52fabebe4b4400b5ec4d673a9a18",
+      "slot": 8,
+      "toffoli": 226
+    },
+    {
+      "kmb_sha256": "e9c5135f1d855cddfe891c75eb9ee10dc43b10b698f594d4b7f60327164f3c5d",
+      "qubits": 121,
+      "sha256": "25ea639819759e836430636880d66934d5469924aa308dcf556a08cf2c451f34",
+      "slot": 9,
+      "toffoli": 230
+    },
+    {
+      "kmb_sha256": "4a8191e539e18c1efed1f731b1f75b7962bbc670e2bd1dfb62ad42fa6eca585d",
+      "qubits": 121,
+      "sha256": "585ff11cca86f3ea799375d6f46e9f183602d9556b76eed863f2b3820663bee1",
+      "slot": 10,
+      "toffoli": 230
+    },
+    {
+      "kmb_sha256": "3a34ed9f1b08e5cf38860f3f7b7bf9e76425a4ce66dccb86f3e067165b57c06d",
+      "qubits": 121,
+      "sha256": "a07ae1c01536b35647198f525d58b12cdea002546b544b85f6ea10e747fe56a4",
+      "slot": 11,
+      "toffoli": 267
+    },
+    {
+      "kmb_sha256": "288e85f515bfed9587c6799897f18b46bd0524f7aee9a211fc199da569bbb160",
+      "qubits": 121,
+      "sha256": "ffe8ff5c2f480e730daf55f4f14c0262f1700dc0fa78a4a8dff066b3d440db4d",
+      "slot": 12,
+      "toffoli": 230
+    },
+    {
+      "kmb_sha256": "b4d7dfb3b7662b5cf8e4ef923ad55aaec53ad6128fbd010b54547f42fdae2874",
+      "qubits": 121,
+      "sha256": "dbf47cf0048b8e06d5becbc9d8261a8e03725bee8e96fd423996822358610913",
+      "slot": 13,
+      "toffoli": 226
+    },
+    {
+      "kmb_sha256": "7b8db82a6fc3dd50ce3dab25036a4f70973dbc8be103b3a971adf27cc3462b5c",
+      "qubits": 121,
+      "sha256": "2e34cc73ae80b05b567089af17d1caafb854191f1ad846c2831b884afee2804c",
+      "slot": 14,
+      "toffoli": 229
+    }
+  ],
+  "verified": {
+    "batch_size": 5,
+    "brot": 7,
+    "lambda_eff": 46.91430370584927,
+    "metrics": {
+      "E_SOS": -22144.188248000017,
+      "E_gap": 3.914898000017274,
+      "Lambda": 283.0569683482715,
+      "error_1": 0.01999999988010883,
+      "error_2": 0.019999999880538532,
+      "gap_in_domain": true,
+      "lambda_eff": 46.91430370584927
+    },
+    "num_circuits": 15,
+    "num_ops": 494277,
+    "num_qubits": 405,
+    "reaction_depth": 165,
+    "resources": {
+      "angles_persistent_qubits": 35,
+      "angles_qubits": 126,
+      "angles_selection_qubits": 11,
+      "angles_temporary_qubits": 80,
+      "angles_toffoli": 7268.0,
+      "angles_toffoli_per_pass": 3634.0,
+      "angles_within_cap": true,
+      "brot": 7,
+      "givens_rotations_toffoli": 1950,
+      "heuristic_persistent_qubits": 83,
+      "heuristic_qubits": 370,
+      "heuristic_temporary_qubits": 287,
+      "heuristic_toffoli": 6500,
+      "inner_state_prep_persistent_qubits": 43,
+      "inner_state_prep_qubits": 330,
+      "inner_state_prep_temporary_qubits": 287,
+      "inner_state_prep_toffoli": 4213,
+      "keep_bits": 10,
+      "outer_state_prep_persistent_qubits": 40,
+      "outer_state_prep_qubits": 130,
+      "outer_state_prep_temporary_qubits": 90,
+      "outer_state_prep_toffoli": 337,
+      "persistent_qubits": 118,
+      "qubits": 405,
+      "temporary_qubits": 287,
+      "toffoli": 13768.0
+    },
+    "score": 261596034.0359638,
+    "status": "PASS",
+    "submission_sha256": "33b41443bd54809e732864c0bb2b43b53c88da769f848e492083a89256bfa4b7",
+    "toffoli_count": 13768.0,
+    "verified_shots": 78016
+  }
+}

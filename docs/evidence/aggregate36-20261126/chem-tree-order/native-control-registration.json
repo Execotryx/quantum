@@ -1,0 +1,20 @@
+{
+  "batch": 5,
+  "brot": 7,
+  "compiler_effort": 4,
+  "compiler_engine": "groups",
+  "compiler_seed": 534,
+  "compiler_sha256": "b183352b347455bd121c2e3cd5587f72b82ebfb1c94b0ccce494c5c16465f04f",
+  "driver_sha256": "0bf728af5f763e3b7945a0aaae5d573d8d84f1608f837d411357a134ba9dec26",
+  "factorization_sha256": "9f472ae472b2eae95940a55cf899fb000861c624a294feb021a4d6ffd6340d67",
+  "low_bits": 4,
+  "metric_sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+  "proposals_per_seed": 1600,
+  "reference_sha256": "bdcdf90a52d677ca26f143435383cfd4fdd763f66f722a2b5b8faedeadb4967e",
+  "salt": "chem-angle-tree-order-36191",
+  "search_sha256": "f4632805c1af5f6dee35d319201f9cf0b5a85082a221e64703d6ed99b445f4cd",
+  "seeds": [
+    36191,
+    36197
+  ]
+}

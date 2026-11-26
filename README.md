@@ -73,6 +73,13 @@ from **194,493** to **179,589 gates** at **879 qubits**. The full decoder
 still needs locator construction and routing for exceptional charts.
 [Projective derivative action](docs/aggregate-above-36-dqi-projective-forney-26-11-2026-17-10-36.md)
 
+Commuting changes to the Givens order preserved the chemistry geometry
+and tied the rank estimate. All 64 eligible adjacent swaps increased
+the source-priced loader cost. A separate DQI chart screen found that
+reversing the syndrome recovered three high-weight cases and left the
+lower-weight routing gap open.
+[Chemistry order and DQI chart measurements](docs/aggregate-above-36-chem-order-and-dqi-charts-26-11-2026-20-47-09.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh
