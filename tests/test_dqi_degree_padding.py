@@ -14,7 +14,7 @@ import pytest
 from qcompile.dqi.decoder import _divide, _multiply, syndrome
 from qcompile.dqi.degree_padding import pad_reversed_banks, padding_factors
 from qcompile.dqi.field import GF4096
-from qcompile.dqi.scan import degree_padded_residue_scan, derivative_reciprocal, evaluator
+from qcompile.dqi.scan import degree_padded_chart_xor, degree_padded_residue_scan, derivative_reciprocal, evaluator
 from qcompile.io import read_json, sha256, write_json
 from qcompile.official import validate_backend
 
@@ -290,6 +290,34 @@ def test_padded_residues_recover_exact_support():
         assert roots.tolist() == sorted(support)
         recovered = all_evaluations(residue)
         assert {int(j): int(recovered[j]) for j in roots} == support
+
+
+@pytest.mark.slow
+def test_chart_decision_without_evaluator(project_root, monkeypatch, tmp_path):
+    multiply, tensor_hash = _field_product(project_root, monkeypatch, tmp_path)
+    cases = _phase_cases(True)
+    target = 846
+    initial = [row[0] + [i % 2] for i, row in enumerate(cases)]
+    words = [range(i * 12, (i + 1) * 12) for i in range(35)]
+    degree = range(840, 846)
+    builder = _PhaseBuilder(initial, 36401)
+    original = builder.data.copy()
+    expected = sum(int(_regular_chart(row[1])) << i for i, row in enumerate(cases))
+    degree_padded_chart_xor(builder, words, degree, target, multiply=multiply)
+    assert builder.data[target] == original[target] ^ expected
+    assert builder.data[:target] == original[:target] and not any(builder.data[target + 1:])
+    assert builder.phase == 0 and not builder.bits
+    one_probe = {"explicit_products": builder.charged_ands, "equality_calls": builder.equality_calls,
+                 "software_allocated_qubits": len(builder.data)}
+    degree_padded_chart_xor(builder, words, degree, target, multiply=multiply)
+    assert builder.data[:target + 1] == original and not any(builder.data[target + 1:])
+    assert builder.phase == 0 and not builder.bits
+    assert builder.chart_flags == [expected, expected]
+    write_json(tmp_path / "padded-chart-only.json", {
+        "scope": "coherent chart XOR from compact locator and live degree",
+        "tensor_sha256": tensor_hash, "checked_shots": len(cases), "regular_shots": expected.bit_count(),
+        "probe": one_probe,
+    })
 
 
 @pytest.mark.slow

@@ -1,0 +1,11 @@
+{
+  "checked_shots": 40,
+  "probe": {
+    "equality_calls": 107,
+    "explicit_products": 30396,
+    "software_allocated_qubits": 887
+  },
+  "regular_shots": 36,
+  "scope": "coherent chart XOR from compact locator and live degree",
+  "tensor_sha256": "19ee4259f4d20a779d2484b3dea635d2e0efd23fce39c859e70228f668e53093"
+}

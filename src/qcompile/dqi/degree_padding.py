@@ -87,19 +87,10 @@ def _toggle_count(builder: Any, degree: Any, count: Any) -> None:
     builder.flip_if_equal(half[1:4], 0, target=count[4])
 
 
-def pad_reversed_banks(builder: Any, locator: list[Any], evaluator: list[Any], degree: Any,
-                       *, adjoint: bool = False) -> None:
-    """Lift a degree-0..35 pair to degree 35 and undo it on the same wires.
-
-    Locator words start below the implicit monic head, and evaluator words
-    start at degree w-1, both in descending order with zero tails in the
-    original pair. The six-bit degree is unchanged. At fixed output size
-    a factor x is implicit for even w. All other factors are root-free in
-    the field. The routine preserves the physical layout.
-    """
-    if len(locator) != 35 or len(evaluator) != 35 or len(degree) != 6:
-        raise ValueError("fixed-width padding requires two 35-word banks and six degree bits")
-    if any(len(word) != 12 for bank in (locator, evaluator) for word in bank):
+def _pad_reversed(builder: Any, banks: tuple[tuple[list[Any], bool], ...], degree: Any, *, adjoint: bool) -> None:
+    if len(degree) != 6 or any(len(bank) != 35 for bank, _ in banks):
+        raise ValueError("fixed-width padding requires 35-word banks and six degree bits")
+    if any(len(word) != 12 for bank, _ in banks for word in bank):
         raise ValueError("padding requires 12-bit field words")
     # For F_k the product of the first k factors, let T_k(g) =
     # F_k(z) g(alpha**(137*k) z). Then T_i T_j = T_(i+j).
@@ -119,10 +110,27 @@ def pad_reversed_banks(builder: Any, locator: list[Any], evaluator: list[Any], d
         # With this bit enabled, at least size factors remain before the
         # block. The preceding reversed prefix has at most 35-2*size words.
         capacity = 35 - 2 * size
-        _controlled_block(builder, locator, prefix, shift, capacity, flag, work,
-                          leading_one=True, adjoint=adjoint)
-        _controlled_block(builder, evaluator, prefix, shift, capacity, flag, work,
-                          leading_one=False, adjoint=adjoint)
+        for bank, leading_one in banks:
+            _controlled_block(builder, bank, prefix, shift, capacity, flag, work,
+                              leading_one=leading_one, adjoint=adjoint)
     builder.free(work)
     _toggle_count(builder, degree, count)
     builder.free(count)
+
+
+def pad_reversed_locator(builder: Any, locator: list[Any], degree: Any, *, adjoint: bool = False) -> None:
+    """Pad the compact monic locator alone for a chart test."""
+    _pad_reversed(builder, ((locator, True),), degree, adjoint=adjoint)
+
+
+def pad_reversed_banks(builder: Any, locator: list[Any], evaluator: list[Any], degree: Any,
+                       *, adjoint: bool = False) -> None:
+    """Lift a degree-0..35 pair to degree 35 and undo it on the same wires.
+
+    Locator words start below the implicit monic head, and evaluator words
+    start at degree w-1, both in descending order with zero tails in the
+    original pair. The six-bit degree is unchanged. At fixed output size
+    a factor x is implicit for even w. All other factors are root-free in
+    the field. The routine preserves the physical layout.
+    """
+    _pad_reversed(builder, ((locator, True), (evaluator, False)), degree, adjoint=adjoint)

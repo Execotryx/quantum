@@ -11,10 +11,10 @@ from typing import Any
 
 from .bilinear import product_tensor
 from .decoder import _add, _divide, _multiply, _trim
-from .degree_padding import pad_reversed_banks
+from .degree_padding import pad_reversed_banks, pad_reversed_locator
 from .field import GF4096
 from .inplace_evaluator import inplace_evaluator
-from .inverse_action import odd_forney_inplace
+from .inverse_action import odd_forney_inplace, projective_chart_xor
 from .quotient import FieldProduct, quotient_prepare
 from .tower import inverse_xor, multiply_xor
 
@@ -213,6 +213,14 @@ def two_bank_residue_scan(builder: Any, field: Any, modulus: list[Any], omega: l
                        projective=projective, validity=validity)
     if validity is not None:
         builder.free(validity)
+
+
+def degree_padded_chart_xor(builder: Any, locator: list[Any], degree: Any, validity: Any, *,
+                             multiply: FieldProduct = multiply_xor) -> None:
+    """Toggle padded chart validity while retaining the compact locator and degree."""
+    pad_reversed_locator(builder, locator, degree)
+    projective_chart_xor(builder, locator[::-1], validity, multiply=multiply)
+    pad_reversed_locator(builder, locator, degree, adjoint=True)
 
 
 def degree_padded_residue_scan(builder: Any, field: Any, locator: list[Any], omega: list[Any],

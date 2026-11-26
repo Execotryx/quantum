@@ -103,6 +103,9 @@
   extension during reciprocal scaling. Compute chart validity from
   the retained divisor heads before they are restored and erase it
   on the adjoint visit. A suppressed phase still needs a fallback.
+- Price a standalone chart decision both when it is set and when it
+  is cleared. The locator-only probe must preserve the compact
+  locator, live degree, and evaluator bank.
 - A Givens-order change may move a rotation only across disjoint orbital
   pairs. Preserve the matching angle columns, check reconstructed vectors,
   and price the affected XOR transitions before full loader verification.

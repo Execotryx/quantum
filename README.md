@@ -99,6 +99,12 @@ fallback decoding, and locator construction remain open.
 [Orientation and full-position replay](docs/aggregate-above-36-dqi-orientation-26-11-2026-21-14-38.md)
 · [Chart guard measurements](docs/aggregate-above-36-dqi-chart-guard-26-11-2026-21-22-13.md)
 
+The standalone locator-only chart test used **30,396 controlled
+products** per call in software replay. Setting and clearing an
+orientation decision with this test leaves at most **22,261 gates**
+for the locator and reversal in the guarded design.
+[Chart-selection budget](docs/aggregate-above-36-dqi-chart-probe-26-11-2026-21-28-00.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

@@ -64,6 +64,8 @@ field value and leaves its orientation bit unchanged.
 The chart guard tests retained Euclidean heads at the deepest
 frame and clears its flag on the inverse traversal. Preserve
 nonregular input values while suppressing their phase.
+Include both applications of a standalone chart XOR when costing
+an orientation switch that must leave its decision bit clean.
 Preserve angle columns when commuting disjoint Givens rotations.
 Price both adjacent XOR transitions before promoting a new loader order.
 Keep raw receipts and the original salt when retrying a public comparison.

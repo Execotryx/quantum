@@ -209,10 +209,11 @@ def _projective_action(builder: Any, modulus: list[Any], divisor: list[Any], ban
         if guarded:
             _toggle_regular(builder, heads, validity)
         scalars = [words[0] for words in banks]
-        _scale(builder, modulus[-1], [], scalars, multiply, undo=adjoint, extend_zero=guarded)
-        _scale(builder, divisor[-1], [], scalars, multiply, undo=adjoint, extend_zero=guarded)
+        if scalars:
+            _scale(builder, modulus[-1], [], scalars, multiply, undo=adjoint, extend_zero=guarded)
+            _scale(builder, divisor[-1], [], scalars, multiply, undo=adjoint, extend_zero=guarded)
         return
-    if adjoint:
+    if banks and adjoint:
         _projective_extend(builder, modulus, divisor, banks, multiply, adjoint=True, extend_zero=guarded)
     _projective_remainder(builder, modulus, divisor, [] if adjoint else banks, multiply,
                           adjoint=False, extend_zero=guarded)
@@ -220,8 +221,24 @@ def _projective_action(builder: Any, modulus: list[Any], divisor: list[Any], ban
                        adjoint=adjoint, validity=validity, heads=heads)
     _projective_remainder(builder, modulus, divisor, banks if adjoint else [], multiply,
                           adjoint=True, extend_zero=guarded)
-    if not adjoint:
+    if banks and not adjoint:
         _projective_extend(builder, modulus, divisor, banks, multiply, adjoint=False, extend_zero=guarded)
+
+
+def _toggle_half_remainder(builder: Any, even: list[Any], odd: list[Any], multiply: FieldProduct) -> None:
+    for coefficient, target in zip(odd, even[:-1], strict=True):
+        multiply(builder, even[-1], coefficient, target)
+
+
+def projective_chart_xor(builder: Any, locator: list[Any], validity: Any, *,
+                         multiply: FieldProduct = multiply_xor) -> None:
+    """Toggle validity using only locator coefficients, restoring them on return."""
+    if len(locator) < 3 or not len(locator) % 2 or any(len(word) != 12 for word in locator):
+        raise ValueError("projective chart test requires a monic odd-degree locator")
+    even, odd = locator[::2], locator[1::2]
+    _toggle_half_remainder(builder, even, odd, multiply)
+    _projective_action(builder, [*odd, None], even[:-1], [], multiply, adjoint=False, validity=validity)
+    _toggle_half_remainder(builder, even, odd, multiply)
 
 
 def inverse_action(builder: Any, modulus: list[Any], divisor: list[Any], words: list[Any],
@@ -323,8 +340,7 @@ def odd_forney_inplace(builder: Any, locator: list[Any], words: list[Any], half_
 
     # E mod D is one monic reduction. The even and odd locator slots already
     # hold its mutable remainder and the half-degree divisor, respectively.
-    for coefficient, target in zip(dh, even[:-1], strict=True):
-        multiply(builder, even[-1], coefficient, target)
+    _toggle_half_remainder(builder, even, dh, multiply)
     r = half_chart[0]
     payloads = [words[:-1:2], words[1::2]]
     remainder, factor = even[:r], even[r]
@@ -339,8 +355,7 @@ def odd_forney_inplace(builder: Any, locator: list[Any], words: list[Any], half_
         else:
             _polynomial_basis(builder, dh, payloads, multiply, to_polynomial=adjoint)
         _scale(builder, factor, remainder, payload if adjoint else [], multiply, undo=True)
-    for coefficient, target in zip(dh, even[:-1], strict=True):
-        multiply(builder, even[-1], coefficient, target)
+    _toggle_half_remainder(builder, even, dh, multiply)
 
     if adjoint:
         for i, coefficient in enumerate(dh):
