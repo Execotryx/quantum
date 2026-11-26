@@ -215,6 +215,12 @@ the sequential estimate for those nine pairs. Even this smaller block
 exceeds the budget before the remaining pairs or exceptional routing.
 [Native raw-syndrome extraction](docs/degree35-blocked-extraction-27-11-2026-01-15-15.md)
 
+The full chemistry endpoint screen found no affine replacement for
+any of the **3,307** charged loader gates in the public comparison.
+All 15 loader binaries rebuilt byte-for-byte and the pinned verifier
+reproduced **249.170M** over **78,016** trajectories.
+[Chemistry replay and 35-point resource limits](docs/degree35-chemistry-affine-27-11-2026-01-27-18.md)
+
 A full-input replay of Tony Li's 39-qubit inverse-square-root control
 bounded the possible margin gain from refitting its existing rotations.
 Each of the four smallest rotations failed the removal screen even after

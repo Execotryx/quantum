@@ -1,0 +1,290 @@
+{
+  "registration_sha256": "800fc022fb0cbe0c1407a21f5e8bef14ddfa7ee06e1c702d04397faf5043b263",
+  "rows": [
+    {
+      "affine_span": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0,
+        "screened_products": 245
+      },
+      "output_assembly_sha256": "c4d96f2df2bc70ec1c928204dfd458eb8e4993cd6fbae3445cc68bc7b8643579",
+      "output_kmb_sha256": "f2004c1f1d12f4a0028252aa3febd713856d246ff21134ca91a92348c4bf2994",
+      "qubits": 128,
+      "same_as_control": true,
+      "single_wire": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0
+      },
+      "slot": 0,
+      "static_toffoli": 245
+    },
+    {
+      "affine_span": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0,
+        "screened_products": 240
+      },
+      "output_assembly_sha256": "75234c97962fa60084cd100bebaa1a3215dadaeb059409349438a8f8e164d961",
+      "output_kmb_sha256": "136b8bdeb7526a72afa7cb7d6f573e7cb54e481c8cf6ba6f769e7e0850895b4e",
+      "qubits": 128,
+      "same_as_control": true,
+      "single_wire": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0
+      },
+      "slot": 1,
+      "static_toffoli": 240
+    },
+    {
+      "affine_span": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0,
+        "screened_products": 214
+      },
+      "output_assembly_sha256": "4159a9bff40edc39ac596c99b650665fee7e0e59907c3a49b4da65ba0d58b76e",
+      "output_kmb_sha256": "d9c98fbad79d10965bacaa58cca9e9f1c485b2d95a918ee9a7e0ccb831bc038c",
+      "qubits": 128,
+      "same_as_control": true,
+      "single_wire": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0
+      },
+      "slot": 2,
+      "static_toffoli": 214
+    },
+    {
+      "affine_span": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0,
+        "screened_products": 212
+      },
+      "output_assembly_sha256": "c8425f84a6404384d7dea9e62c025c773ab9b8f231d62aee857db2755aee2af4",
+      "output_kmb_sha256": "5bc52c05e7de219ea9b1c1a030658e0123ad79985979a0f2153990c51dab93ae",
+      "qubits": 128,
+      "same_as_control": true,
+      "single_wire": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0
+      },
+      "slot": 3,
+      "static_toffoli": 212
+    },
+    {
+      "affine_span": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0,
+        "screened_products": 213
+      },
+      "output_assembly_sha256": "0c8487a5284fb8468a33113e8133843ccc381e1a68dff938c15a726aa97b5880",
+      "output_kmb_sha256": "156f529d0c9fe1db5d984116956322cf76241994f1f1141755b492f8f53b48f9",
+      "qubits": 128,
+      "same_as_control": true,
+      "single_wire": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0
+      },
+      "slot": 4,
+      "static_toffoli": 213
+    },
+    {
+      "affine_span": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0,
+        "screened_products": 240
+      },
+      "output_assembly_sha256": "3e45566dfc6e2d99a899f969dab1cfdcc80ceaae8f8f7ff5acc34906d78bbc1d",
+      "output_kmb_sha256": "e20c07df8b86f5c5752eaf38bc3f9e8e5e4ca3f12abe36272a5542d534ffaad6",
+      "qubits": 128,
+      "same_as_control": true,
+      "single_wire": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0
+      },
+      "slot": 5,
+      "static_toffoli": 240
+    },
+    {
+      "affine_span": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0,
+        "screened_products": 213
+      },
+      "output_assembly_sha256": "ea25b257ce9c56486a9a61c1fd786ee7227ba143ad02338e8938307368301281",
+      "output_kmb_sha256": "64da73de9dca109b59eb4176ee3d98c7e7a3ad43886a134a6f69539d16cdc393",
+      "qubits": 128,
+      "same_as_control": true,
+      "single_wire": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0
+      },
+      "slot": 6,
+      "static_toffoli": 213
+    },
+    {
+      "affine_span": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0,
+        "screened_products": 240
+      },
+      "output_assembly_sha256": "edf9cfc4adf4d8596b575d1c0234420fbf538e729f14253c7343dfaeb94f65ce",
+      "output_kmb_sha256": "62e9155e046ee690008bca5e0b4d8895f4955a77614d5a59fe68fb2d27eb13d1",
+      "qubits": 128,
+      "same_as_control": true,
+      "single_wire": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0
+      },
+      "slot": 7,
+      "static_toffoli": 240
+    },
+    {
+      "affine_span": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0,
+        "screened_products": 205
+      },
+      "output_assembly_sha256": "0b3f640141adccb54bdbd407f80e36140719c9476601e891f299ee0ae94a7756",
+      "output_kmb_sha256": "d24ddafdf6ceacf743b3555eea02af6261bdb8e75edabd319bf4a42749c4412e",
+      "qubits": 128,
+      "same_as_control": true,
+      "single_wire": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0
+      },
+      "slot": 8,
+      "static_toffoli": 205
+    },
+    {
+      "affine_span": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0,
+        "screened_products": 212
+      },
+      "output_assembly_sha256": "11bc2fcec3e15d89d9bd23c5999b86f4e00caaa3d6170f3fe4c9abe0eef9f950",
+      "output_kmb_sha256": "2f38d7c06cf95b17a47284dd1fe824eaadb0349fb1eb7bf31b41bf9d478d9805",
+      "qubits": 128,
+      "same_as_control": true,
+      "single_wire": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0
+      },
+      "slot": 9,
+      "static_toffoli": 212
+    },
+    {
+      "affine_span": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0,
+        "screened_products": 212
+      },
+      "output_assembly_sha256": "6a0703c1ac18c70dcb5bd520ea29d255c1ea6e0bf850b0e02d4aea7d97e4c399",
+      "output_kmb_sha256": "59ee5ed9f0c42a176b3ae2d85aea3fe871473c9d5fecdbc5c15617511fc08bfb",
+      "qubits": 128,
+      "same_as_control": true,
+      "single_wire": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0
+      },
+      "slot": 10,
+      "static_toffoli": 212
+    },
+    {
+      "affine_span": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0,
+        "screened_products": 240
+      },
+      "output_assembly_sha256": "abba51e2e64dcb40ae5e6549a2a35fcd1b6b6bb31c6ad13f51a011e028a5e28c",
+      "output_kmb_sha256": "8b5f5c5942d0b4748388cec7ad0135a8668dfe859d179c262a5effd82432b28c",
+      "qubits": 128,
+      "same_as_control": true,
+      "single_wire": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0
+      },
+      "slot": 11,
+      "static_toffoli": 240
+    },
+    {
+      "affine_span": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0,
+        "screened_products": 209
+      },
+      "output_assembly_sha256": "b69e1d2b9cb33223e0ea26fffa86cc9b0cb249f87bc8a1d9fed08f064a14b3b2",
+      "output_kmb_sha256": "edf8ba4028da728179528ddac5c84823d223f7304069fdad6c07a8eef9138061",
+      "qubits": 128,
+      "same_as_control": true,
+      "single_wire": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0
+      },
+      "slot": 12,
+      "static_toffoli": 209
+    },
+    {
+      "affine_span": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0,
+        "screened_products": 206
+      },
+      "output_assembly_sha256": "d66f02eca5e311aa0fa0d112f5e90873c9f926d07f95ad0cbd50aaa725da93f3",
+      "output_kmb_sha256": "7d66ccb79fae746629c432ba4de9bd54161ac68019f26717c2223cde97525aa9",
+      "qubits": 128,
+      "same_as_control": true,
+      "single_wire": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0
+      },
+      "slot": 13,
+      "static_toffoli": 206
+    },
+    {
+      "affine_span": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0,
+        "screened_products": 206
+      },
+      "output_assembly_sha256": "e2a384b6d45239be17d363a7050a49f1a5a4ae241705eaa4b69f6f09059dfde6",
+      "output_kmb_sha256": "a67a45fa8772da8537e66fdff9ca8667bbed601f2a5dec3494ffe6182e173bc8",
+      "qubits": 128,
+      "same_as_control": true,
+      "single_wire": {
+        "eliminated": 0,
+        "endpoint_rows": 2438,
+        "replaced_by_clifford": 0
+      },
+      "slot": 14,
+      "static_toffoli": 206
+    }
+  ]
+}

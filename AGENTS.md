@@ -153,6 +153,9 @@
   measurement outcomes. Fix the first and last intervals of named input
   wires. ANGLE product substitutions must agree on both complete legal
   endpoint families and retain measurement and phase behavior.
+- An affine ANGLE replacement excludes its target from the value
+  controls. A phase replacement may restrict the identity to rows
+  where the target is one, and must retain the original measurement guard.
 - A speculative D4 synthesis route must preserve rejected inputs. Require
   the live chart, degree, layout and absence of clipped pivots before
   applying its residual scan. Account for the shared projection phase

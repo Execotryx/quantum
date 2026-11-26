@@ -27,6 +27,14 @@ composition of that block with the current supplied-tape phase within
 the selected companions' 35-point allocation.
 [Raw block results](../../../docs/degree35-blocked-extraction-27-11-2026-01-15-15.md)
 
+At the measured public portfolio costs, a single-component change
+needs a 14.61% cost reduction. The DQI width-only break-even is below
+its 840 input qubits. At fixed seven-bit chemistry precision and
+factorization, the heuristic uses 370 qubits before any persistent
+angle words. Both limits support screening gate count as well as
+width on complete components.
+[Chemistry replay and exact cost limits](../../../docs/degree35-chemistry-affine-27-11-2026-01-27-18.md)
+
 ## Verification and delivery
 
 Register a `portfolio-v5` archive with `--at-least-35` after qualifying a full
