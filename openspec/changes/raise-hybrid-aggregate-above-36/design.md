@@ -30,6 +30,10 @@ software replay includes both orientations and accounts for one extra
 controlled product per scan position. Coherent selection of the
 orientation and the full locator producer remain required.
 [Orientation screen](../../../docs/aggregate-above-36-dqi-orientation-26-11-2026-21-14-38.md)
+An integrated guard now computes regularity from retained heads and
+preserves rejected inputs. A suppressed phase still requires a recovery
+route, and the guarded emitter needs native validation.
+[Chart guard](../../../docs/aggregate-above-36-dqi-chart-guard-26-11-2026-21-22-13.md)
 
 1. Profile the exact source parent through locator forward, quotient or converter, phase scan, and return. Recover the inherited assembly's semantic cutpoints against its algebraic control within a registered cap. Use explicit shared syndrome panels and classical records at every boundary, pin the simulator seed and account for differing measurement order. Reconcile static and executed counts with a monolithic run. Include maximum live words and serialized width. A target of 888 qubits and 280,000 mean gates needs about 36,123 fewer mean gates than the 900-qubit public comparison. The exposed D16 substitutions total just 616 static Toffolis and cannot fund that reduction alone.
 2. Emit separate storage and arithmetic ablations. Test field-word aliasing across a real stage boundary, a paired quotient schedule, and a source-level trace or residue phase computation. At width 888 and a 280B budget, the permitted mean is about 296,712 at one error or 290,336 at eight. Before full resynthesis, reconcile the needed net gain with disjoint execution-weighted estimates that include forward and cleanup work. Prove the trace-dual map for every unit mask at every relevant root and preserve classical mask dependence, branch phases, and the gauge correction. Account for the inverse's reconstruction state and retain any word that a later stage needs. A two-bank layout and a full implicit-trace replay at every address each need an explicit resource justification.

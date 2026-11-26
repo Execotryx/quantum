@@ -63,10 +63,14 @@ def _polynomial_basis(builder: Any, modulus: list[Any], banks: list[list[Any]],
 
 
 @contextmanager
-def _reciprocal(builder: Any, factor: Any) -> Iterator[Any]:
+def _reciprocal(builder: Any, factor: Any, *, extend_zero: bool = False) -> Iterator[Any]:
     if factor is None:
         yield None
         return
+    flag = builder.alloc_qubits(1)[0] if extend_zero else None
+    if flag is not None:
+        builder.flip_if_equal(factor, 0, target=flag)
+        builder.cx(flag, factor[0])
     reciprocal = builder.alloc_qubits(12)
     inverse_xor(builder, factor, reciprocal, borrow_source=True)
     try:
@@ -74,6 +78,10 @@ def _reciprocal(builder: Any, factor: Any) -> Iterator[Any]:
     finally:
         inverse_xor(builder, factor, reciprocal, borrow_source=True)
         builder.free(reciprocal)
+        if flag is not None:
+            builder.cx(flag, factor[0])
+            builder.flip_if_equal(factor, 0, target=flag)
+            builder.free(flag)
 
 
 def _scale_words(builder: Any, words: list[Any], scale: Any, clear: Any, multiply: FieldProduct) -> None:
@@ -88,14 +96,15 @@ def _scale_words(builder: Any, words: list[Any], scale: Any, clear: Any, multipl
 
 
 def _scale(builder: Any, factor: Any, normal: list[Any], data: list[Any], multiply: FieldProduct,
-           *, undo: bool) -> None:
-    with _reciprocal(builder, factor) as inverse:
+           *, undo: bool, extend_zero: bool = False) -> None:
+    with _reciprocal(builder, factor, extend_zero=extend_zero) as inverse:
         scale, clear = (factor, inverse) if undo else (inverse, factor)
         _scale_words(builder, normal + data, scale, clear, multiply)
 
 
 def _projective_remainder(builder: Any, modulus: list[Any], divisor: list[Any],
-                          reduce_banks: list[list[Any]], multiply: FieldProduct, *, adjoint: bool) -> None:
+                          reduce_banks: list[list[Any]], multiply: FieldProduct, *,
+                          adjoint: bool, extend_zero: bool) -> None:
     """Keep a linear quotient in the top two slots and the remainder below."""
     a_head, d_head = modulus[-1], divisor[-1]
     lead, constant = modulus[-2], divisor[-2]
@@ -106,7 +115,7 @@ def _projective_remainder(builder: Any, modulus: list[Any], divisor: list[Any],
     # When A is monic, the quotient slope is the inverse itself. Use scalar
     # products on this outer level to leave the interpolation workspace free.
     if a_head is None:
-        with _reciprocal(builder, d_head) as slope:
+        with _reciprocal(builder, d_head, extend_zero=extend_zero) as slope:
             def update_monically() -> None:
                 for i, word in enumerate(modulus[:-2]):
                     multiply(builder, lead, divisor[i], word)
@@ -128,7 +137,7 @@ def _projective_remainder(builder: Any, modulus: list[Any], divisor: list[Any],
 
     if adjoint:
         update_lower()
-    with _reciprocal(builder, d_head) as inverse:
+    with _reciprocal(builder, d_head, extend_zero=extend_zero) as inverse:
         if adjoint:
             _scale_words(builder, [lead], d_head, inverse, multiply)
         else:
@@ -158,9 +167,9 @@ def _projective_reduce(builder: Any, divisor: list[Any], banks: list[list[Any]],
 
 
 def _projective_extend(builder: Any, modulus: list[Any], divisor: list[Any], banks: list[list[Any]],
-                       multiply: FieldProduct, *, adjoint: bool) -> None:
+                       multiply: FieldProduct, *, adjoint: bool, extend_zero: bool) -> None:
     def scale_tails(head: Any) -> None:
-        with _reciprocal(builder, head) as inverse:
+        with _reciprocal(builder, head, extend_zero=extend_zero) as inverse:
             scale, clear = (head, inverse) if adjoint else (inverse, head)
             _scale_words(builder, [words[-1] for words in banks], scale, clear, multiply)
 
@@ -177,21 +186,42 @@ def _projective_extend(builder: Any, modulus: list[Any], divisor: list[Any], ban
             _rotate(builder, words, len(words) - 1)
 
 
+def _toggle_regular(builder: Any, heads: tuple[Any, ...], validity: Any) -> None:
+    zeros = builder.alloc_qubits(len(heads))
+    for head, flag in zip(heads, zeros, strict=True):
+        builder.flip_if_equal(head, 0, target=flag)
+    builder.flip_if_equal(zeros, 0, target=validity)
+    for head, flag in zip(heads, zeros, strict=True):
+        builder.flip_if_equal(head, 0, target=flag)
+    builder.free(zeros)
+
+
 def _projective_action(builder: Any, modulus: list[Any], divisor: list[Any], banks: list[list[Any]],
-                       multiply: FieldProduct, *, adjoint: bool) -> None:
+                       multiply: FieldProduct, *, adjoint: bool, validity: Any = None,
+                       heads: tuple[Any, ...] = ()) -> None:
     """Regular chart with a stored nonzero divisor lead and optional monic modulus lead."""
+    guarded = validity is not None
+    if guarded:
+        # The modulus head becomes a quotient slope by a nonzero scale.
+        # Every prior divisor head therefore retains its zero predicate.
+        heads = (*heads, divisor[-1])
     if len(divisor) == 1:
+        if guarded:
+            _toggle_regular(builder, heads, validity)
         scalars = [words[0] for words in banks]
-        _scale(builder, modulus[-1], [], scalars, multiply, undo=adjoint)
-        _scale(builder, divisor[-1], [], scalars, multiply, undo=adjoint)
+        _scale(builder, modulus[-1], [], scalars, multiply, undo=adjoint, extend_zero=guarded)
+        _scale(builder, divisor[-1], [], scalars, multiply, undo=adjoint, extend_zero=guarded)
         return
     if adjoint:
-        _projective_extend(builder, modulus, divisor, banks, multiply, adjoint=True)
-    _projective_remainder(builder, modulus, divisor, [] if adjoint else banks, multiply, adjoint=False)
-    _projective_action(builder, divisor, modulus[:-2], [words[:-1] for words in banks], multiply, adjoint=adjoint)
-    _projective_remainder(builder, modulus, divisor, banks if adjoint else [], multiply, adjoint=True)
+        _projective_extend(builder, modulus, divisor, banks, multiply, adjoint=True, extend_zero=guarded)
+    _projective_remainder(builder, modulus, divisor, [] if adjoint else banks, multiply,
+                          adjoint=False, extend_zero=guarded)
+    _projective_action(builder, divisor, modulus[:-2], [words[:-1] for words in banks], multiply,
+                       adjoint=adjoint, validity=validity, heads=heads)
+    _projective_remainder(builder, modulus, divisor, banks if adjoint else [], multiply,
+                          adjoint=True, extend_zero=guarded)
     if not adjoint:
-        _projective_extend(builder, modulus, divisor, banks, multiply, adjoint=False)
+        _projective_extend(builder, modulus, divisor, banks, multiply, adjoint=False, extend_zero=guarded)
 
 
 def inverse_action(builder: Any, modulus: list[Any], divisor: list[Any], words: list[Any],
@@ -261,7 +291,7 @@ def _inverse_actions(builder: Any, modulus: list[Any], divisor: list[Any], banks
 
 def odd_forney_inplace(builder: Any, locator: list[Any], words: list[Any], half_chart: tuple[int, ...],
                        *, adjoint: bool = False, multiply: FieldProduct = multiply_xor,
-                       projective: bool = False) -> None:
+                       projective: bool = False, validity: Any = None) -> None:
     """Apply the derivative inverse using only the monic locator and evaluator banks.
 
     This fixed odd-degree chart receives the degrees of E mod D and its
@@ -277,6 +307,8 @@ def odd_forney_inplace(builder: Any, locator: list[Any], words: list[Any], half_
         raise ValueError("invalid half-degree Euclidean chart")
     if projective and half_chart != tuple(range(half - 1, -1, -1)):
         raise ValueError("projective action requires all half-degree drops to be one")
+    if validity is not None and not projective:
+        raise ValueError("live chart validation requires the projective action")
     if any(len(word) != 12 for word in (*locator, *words)):
         raise ValueError("in-place Forney requires 12-bit words")
 
@@ -297,7 +329,8 @@ def odd_forney_inplace(builder: Any, locator: list[Any], words: list[Any], half_
     payloads = [words[:-1:2], words[1::2]]
     remainder, factor = even[:r], even[r]
     if projective:
-        _projective_action(builder, [*dh, None], [*remainder, factor], payloads, multiply, adjoint=adjoint)
+        _projective_action(builder, [*dh, None], [*remainder, factor], payloads, multiply,
+                           adjoint=adjoint, validity=validity)
     else:
         payload = words[:-1]
         _scale(builder, factor, remainder, [] if adjoint else payload, multiply, undo=False)

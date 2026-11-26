@@ -87,14 +87,18 @@ def _phase_columns() -> tuple[tuple[tuple[int, int], ...], ...]:
 
 
 @contextmanager
-def _root_flag(builder: Any, sigma: Any) -> Iterator[Any]:
-    flags = builder.alloc_qubits(11)
+def _root_flag(builder: Any, sigma: Any, validity: Any = None) -> Iterator[Any]:
+    flags = builder.alloc_qubits(11 + int(validity is not None))
     builder.x(sigma)
     builder.init_and(sigma[0], sigma[1], flags[0])
     for index in range(2, 12):
         builder.init_and(flags[index - 2], sigma[index], flags[index - 1])
     builder.x(sigma)
+    if validity is not None:
+        builder.init_and(flags[10], validity, flags[11])
     yield flags[-1]
+    if validity is not None:
+        builder.del_and(flags[10], validity, flags[11])
     builder.x(sigma)
     for index in range(11, 1, -1):
         builder.del_and(flags[index - 2], sigma[index], flags[index - 1])
@@ -165,21 +169,31 @@ def prepared_residue_scan(builder: Any, field: Any, modulus: list[Any], omega: l
 def two_bank_residue_scan(builder: Any, field: Any, modulus: list[Any], omega: list[Any],
                           masks: list[Any], half_chart: tuple[int, ...], *,
                           multiply: FieldProduct = multiply_xor, projective: bool = False,
-                          orientation: Any = None) -> None:
-    """Phase and restore a fixed odd-degree chart using the locator and evaluator."""
-    kernel = _residue_phase
+                          orientation: Any = None, guarded: bool = False) -> None:
+    """Phase a fixed odd-degree chart and restore it.
+
+    Guarded projective execution suppresses phase on nonregular inputs
+    and restores their banks as well. It does not decode those inputs.
+    """
     if orientation is not None:
         if len(masks) != 4095:
             raise ValueError("reciprocal orientation requires the full mask domain")
+    if guarded and not projective:
+        raise ValueError("the chart guard requires the projective action")
+    validity = builder.alloc_qubits(1)[0] if guarded else None
+    kernel = _residue_phase
+    if orientation is not None or guarded:
         powers = GF4096().exp
-        positions = iter(range(4095))
+        positions = iter(range(len(masks)))
 
-        def reciprocal_phase(builder: Any, sigma: Any, residue: Any, mask: Any) -> None:
-            # Reversing S1..S70 changes e at x into e*x**71 at 1/x.
+        def routed_phase(builder: Any, sigma: Any, residue: Any, mask: Any) -> None:
             position = next(positions)
-            scale = powers[71 * position % 4095]
-            with _root_flag(builder, sigma) as root:
+            with _root_flag(builder, sigma, validity) as root:
                 builder.ccz(root, residue, mask)
+                if orientation is None:
+                    return
+                # Reversing S1..S70 changes e at x into e*x**71 at 1/x.
+                scale = powers[71 * position % 4095]
                 # On the reciprocal branch, cancel the first phase and
                 # use the original position and unscaled error value.
                 selected = builder.alloc_qubits(1)[0]
@@ -191,19 +205,23 @@ def two_bank_residue_scan(builder: Any, field: Any, modulus: list[Any], omega: l
                 builder.del_and(root, orientation, selected)
                 builder.free(selected)
 
-        kernel = reciprocal_phase
-    odd_forney_inplace(builder, modulus, omega, half_chart, multiply=multiply, projective=projective)
+        kernel = routed_phase
+    odd_forney_inplace(builder, modulus, omega, half_chart, multiply=multiply,
+                       projective=projective, validity=validity)
     _scan_evaluations(builder, field, (modulus, omega), masks, kernel, monic=True)
-    odd_forney_inplace(builder, modulus, omega, half_chart, adjoint=True, multiply=multiply, projective=projective)
+    odd_forney_inplace(builder, modulus, omega, half_chart, adjoint=True, multiply=multiply,
+                       projective=projective, validity=validity)
+    if validity is not None:
+        builder.free(validity)
 
 
 def degree_padded_residue_scan(builder: Any, field: Any, locator: list[Any], omega: list[Any],
                                masks: list[Any], degree: Any, *, multiply: FieldProduct = multiply_xor,
-                               orientation: Any = None) -> None:
+                               orientation: Any = None, guarded: bool = False) -> None:
     """Phase from regular padded banks with an optional live reciprocal-orientation bit."""
     pad_reversed_banks(builder, locator, omega, degree)
     two_bank_residue_scan(builder, field, locator[::-1], omega[::-1], masks, tuple(range(16, -1, -1)),
-                          multiply=multiply, projective=True, orientation=orientation)
+                          multiply=multiply, projective=True, orientation=orientation, guarded=guarded)
     pad_reversed_banks(builder, locator, omega, degree, adjoint=True)
 
 

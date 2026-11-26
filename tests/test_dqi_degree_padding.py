@@ -27,37 +27,63 @@ def _reverse(poly, degree):
     return (poly + [0] * (degree - len(poly)))[::-1] + [0] * (35 - degree)
 
 
+def _case(support):
+    weight = len(support)
+    locator = [1]
+    for position in support:
+        locator = _multiply(locator, [FIELD.exp[-position % 4095], 1], FIELD)
+    omega = evaluator(syndrome(support, FIELD), locator, FIELD) if weight else []
+    factor = [1] if weight % 2 else [0, 1]
+    for linear, constant in padding_factors()[:(35 - weight) // 2]:
+        factor = _multiply(factor, [constant, linear, 1], FIELD)
+    modulus = _multiply(locator, factor, FIELD)
+    padded_omega = _multiply(omega, factor, FIELD) if omega else []
+    return (_reverse(locator[:-1], weight) + _reverse(omega, weight) + [weight],
+            _reverse(modulus[:-1], 35) + _reverse(padded_omega, 35) + [weight], support)
+
+
+def _regular_chart(padded: list[int]) -> bool:
+    a = padded[:35][::-1] + [1]
+    b = [a[i + 1] if i % 2 == 0 else 0 for i in range(35)]
+    for expected in CHART:
+        _, remainder = _divide(a, b, FIELD)
+        if remainder == [0] or len(remainder) - 1 != 2 * expected:
+            return False
+        a, b = b, remainder
+    return True
+
+
 def _cases(*, regular_only=False):
     rng = Random(36317)
     rows = []
     for weight in range(36):
         for _ in range(32 if regular_only else 2):
             support = {j: rng.randrange(1, 4096) for j in rng.sample(range(4095), weight)}
-            locator = [1]
-            for position in support:
-                locator = _multiply(locator, [FIELD.exp[-position % 4095], 1], FIELD)
-            values = syndrome(support, FIELD)
-            omega = evaluator(values, locator, FIELD) if weight else []
-            factor = [1] if weight % 2 else [0, 1]
-            for linear, constant in padding_factors()[:(35 - weight) // 2]:
-                factor = _multiply(factor, [constant, linear, 1], FIELD)
-            modulus = _multiply(locator, factor, FIELD)
-            padded_omega = _multiply(omega, factor, FIELD) if omega else []
-            if regular_only:
-                a, b = modulus, [modulus[i + 1] if i % 2 == 0 else 0 for i in range(35)]
-                observed = []
-                while b != [0]:
-                    _, remainder = _divide(a, b, FIELD)
-                    a, b = b, remainder
-                    if b != [0]:
-                        observed.append((len(b) - 1) // 2)
-                if tuple(observed) != CHART:
-                    continue
-            rows.append((_reverse(locator[:-1], weight) + _reverse(omega, weight) + [weight],
-                         _reverse(modulus[:-1], 35) + _reverse(padded_omega, 35) + [weight], support))
+            case = _case(support)
+            if regular_only and not _regular_chart(case[1]):
+                continue
+            rows.append(case)
             if regular_only:
                 break
     return rows
+
+
+def _phase_cases(guarded: bool):
+    cases = _cases(regular_only=True)
+    assert [row[0][-1] for row in cases] == list(range(36))
+    if guarded:
+        rng = Random(36391)
+        # Use genuine full-radius syndromes with a nonregular padded chart.
+        for i in range(2_048):
+            weight = 32 + i % 4
+            support = {j: rng.randrange(1, 4096) for j in rng.sample(range(4095), weight)}
+            case = _case(support)
+            if not _regular_chart(case[1]):
+                cases.append(case)
+            if len(cases) == 40:
+                break
+        assert len(cases) == 40
+    return cases
 
 
 class _BasisBuilder:
@@ -132,6 +158,8 @@ class _PhaseBuilder(_BasisBuilder):
         self.available: list[int] = []
         self.bits: dict[int, int] = {}
         self.first_bit = 0
+        self.equality_calls = 0
+        self.chart_flags: list[int] = []
 
     def alloc_qubits(self, size: int):
         reused = self.available[-size:]
@@ -160,6 +188,13 @@ class _PhaseBuilder(_BasisBuilder):
         else:
             for wire in target:
                 super().x(wire)
+
+    def flip_if_equal(self, word, value, *, target):
+        self.equality_calls += 1
+        before = self.data[target]
+        super().flip_if_equal(word, value, target=target)
+        if len(word) == len(CHART):
+            self.chart_flags.append(before ^ self.data[target])
 
     def hmr(self, words, outcomes):
         for wire, bit in zip(words, outcomes, strict=True):
@@ -258,16 +293,16 @@ def test_padded_residues_recover_exact_support():
 
 
 @pytest.mark.slow
-@pytest.mark.parametrize("reciprocal", [False, True])
-def test_padded_phase_software_replay(project_root, monkeypatch, tmp_path, reciprocal):
+@pytest.mark.parametrize(("reciprocal", "guarded"), [(False, False), (True, False), (True, True)])
+def test_padded_phase_software_replay(project_root, monkeypatch, tmp_path, reciprocal, guarded):
     multiply, tensor_hash = _field_product(project_root, monkeypatch, tmp_path)
-    cases = _cases(regular_only=True)
-    assert [row[0][-1] for row in cases] == list(range(36))
+    cases = _phase_cases(guarded)
     words = [range(i * 12, (i + 1) * 12) for i in range(70)]
     degree = range(840, 846)
     orientations = [i % 2 if reciprocal else 0 for i in range(len(cases))]
     initial = [row[0] + ([bit] if reciprocal else []) for row, bit in zip(cases, orientations, strict=True)]
     live = 847 if reciprocal else 846
+    regular = [_regular_chart(row[1]) for row in cases]
     masks = np.random.default_rng(36323).integers(0, 4096, size=(len(cases), 4095))
     results = []
     for seed in (36319, 36329):
@@ -279,29 +314,34 @@ def test_padded_phase_software_replay(project_root, monkeypatch, tmp_path, recip
                 builder.bits[wire] = sum(((word >> bit) & 1) << i for i, word in enumerate(column))
         mask_input = builder.bits.copy()
         degree_padded_residue_scan(builder, None, words[:35], words[35:], wires, degree,
-                                   multiply=multiply, orientation=846 if reciprocal else None)
+                                   multiply=multiply, orientation=846 if reciprocal else None, guarded=guarded)
         expected = 0
         for i, (_, _, support) in enumerate(cases):
+            if guarded and not regular[i]:
+                continue
             support = _original_support(support, bool(orientations[i]))
             parity = sum((int(masks[i, position]) & value).bit_count() for position, value in support.items()) % 2
             expected |= parity << i
         assert builder.phase == expected
         assert builder.data[:live] == values and not any(builder.data[live:])
         assert builder.bits == mask_input and builder.controls == [builder.full]
+        assert builder.chart_flags == [sum(int(ok) << i for i, ok in enumerate(regular))] * (2 if guarded else 0)
         assert len(builder.data) <= 888
         results.append({"seed": seed, "software_allocated_qubits": len(builder.data),
-                        "init_and_calls": builder.charged_ands})
+                        "init_and_calls": builder.charged_ands, "equality_calls": builder.equality_calls})
     write_json(tmp_path / "degree-padding-software.json", {
         "scope": "phase replay with supplied locator, evaluator and degree on regular padded charts",
         "tensor_sha256": tensor_hash, "tested_weights": list(range(36)), "positions": 4095,
-        "mask_seed": 36323, "reciprocal_orientation": reciprocal, "observations": results,
+        "mask_seed": 36323, "reciprocal_orientation": reciprocal, "guarded": guarded,
+        "irregular_weights": [row[0][-1] for row in cases if not _regular_chart(row[1])],
+        "observations": results,
     })
 
 
 @pytest.mark.official
 @pytest.mark.slow
-@pytest.mark.parametrize("reciprocal", [False, True])
-def test_native_degree_padding_and_phase(project_root, monkeypatch, tmp_path, reciprocal):
+@pytest.mark.parametrize(("reciprocal", "guarded"), [(False, False), (True, False), (True, True)])
+def test_native_degree_padding_and_phase(project_root, monkeypatch, tmp_path, reciprocal, guarded):
     backend = project_root / "vendor/backend.json"
     if not sys.platform.startswith("linux") or not backend.is_file():
         pytest.skip("pinned native Linux backend required")
@@ -309,8 +349,7 @@ def test_native_degree_padding_and_phase(project_root, monkeypatch, tmp_path, re
     monkeypatch.syspath_prepend(str(project_root / "vendor/official/kickmix"))
     km = import_module("kickmix")
     multiply, tensor_hash = _field_product(project_root, monkeypatch, tmp_path)
-    cases = _cases(regular_only=True)
-    assert [row[0][-1] for row in cases] == list(range(36))
+    cases = _phase_cases(guarded)
 
     builder = km.CircuitBuilder()
     loc, omega = [[builder.create_quantum_register(12, f"{name}{i}") for i in range(35)]
@@ -319,7 +358,7 @@ def test_native_degree_padding_and_phase(project_root, monkeypatch, tmp_path, re
     flip = builder.create_quantum_register(1, "orientation") if reciprocal else []
     masks = [builder.create_classical_register(12, f"E{i}") for i in range(4095)]
     degree_padded_residue_scan(builder, km.GF2Field(12), loc, omega, masks, deg, multiply=multiply,
-                               orientation=flip[0] if reciprocal else None)
+                               orientation=flip[0] if reciprocal else None, guarded=guarded)
     artifact = tmp_path / "padded-scan.kmb"
     builder.finish_circuit().to_file(artifact, format="kmb")
     circuit = km.Circuit.from_file(artifact, format="kmb")
@@ -338,6 +377,7 @@ def test_native_degree_padding_and_phase(project_root, monkeypatch, tmp_path, re
                                       (column[None, :] >> np.arange(len(wires))[:, None]) & 1)
     phase = [sum((value & int(masks_array[i, pos])).bit_count()
                  for pos, value in _original_support(row[2], bool(orientations[i])).items()) % 2
+             if not guarded or _regular_chart(row[1]) else 0
              for i, row in enumerate(cases)]
     np.testing.assert_array_equal(sim.read_phase_flipped_across_shots(), phase)
     live = {q.id for wires in [*loc, *omega, deg, *([flip] if reciprocal else [])] for q in wires}
@@ -350,5 +390,5 @@ def test_native_degree_padding_and_phase(project_root, monkeypatch, tmp_path, re
         "scope": "supplied compact locator, evaluator and live degree on regular padded chart",
         "tested_weights": [row[0][-1] for row in cases],
         "backend_sha256": sha256(backend), "tensor_sha256": tensor_hash, "circuit_sha256": sha256(artifact),
-        "qubits": circuit.num_qubits, "toffoli_like": charge, "reciprocal_orientation": reciprocal,
+        "qubits": circuit.num_qubits, "toffoli_like": charge, "reciprocal_orientation": reciprocal, "guarded": guarded,
     })

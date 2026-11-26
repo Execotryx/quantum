@@ -99,6 +99,10 @@
 - A reciprocal DQI orientation must repay phase at the original
   mask address and original field value. Preserve the live orientation
   bit and evaluate mixed orientations in one composed circuit.
+- Keep zero divisor words reversible by using a temporary unit
+  extension during reciprocal scaling. Compute chart validity from
+  the retained divisor heads before they are restored and erase it
+  on the adjoint visit. A suppressed phase still needs a fallback.
 - A Givens-order change may move a rotation only across disjoint orbital
   pairs. Preserve the matching angle columns, check reconstructed vectors,
   and price the affected XOR transitions before full loader verification.

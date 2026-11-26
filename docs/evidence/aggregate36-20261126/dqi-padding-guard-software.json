@@ -1,0 +1,66 @@
+{
+  "guarded": true,
+  "irregular_weights": [
+    33,
+    32,
+    34,
+    33
+  ],
+  "mask_seed": 36323,
+  "observations": [
+    {
+      "equality_calls": 338,
+      "init_and_calls": 196947,
+      "seed": 36319,
+      "software_allocated_qubits": 888
+    },
+    {
+      "equality_calls": 338,
+      "init_and_calls": 196947,
+      "seed": 36329,
+      "software_allocated_qubits": 888
+    }
+  ],
+  "positions": 4095,
+  "reciprocal_orientation": true,
+  "scope": "phase replay with supplied locator, evaluator and degree on regular padded charts",
+  "tensor_sha256": "19ee4259f4d20a779d2484b3dea635d2e0efd23fce39c859e70228f668e53093",
+  "tested_weights": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35
+  ]
+}

@@ -93,9 +93,11 @@ producer, and an exceptional-chart route.
 The padded phase stage now accepts a live orientation bit and pays
 the original mask phase for either order of the syndrome. Reversal
 covered all 26 primary derivative-chart failures in a 6,144-input
-classical screen. Coherent chart selection and locator construction
-remain open.
+classical screen. A coherent chart guard now preserves nonregular
+inputs and suppresses their phase. Automatic orientation selection,
+fallback decoding, and locator construction remain open.
 [Orientation and full-position replay](docs/aggregate-above-36-dqi-orientation-26-11-2026-21-14-38.md)
+· [Chart guard measurements](docs/aggregate-above-36-dqi-chart-guard-26-11-2026-21-22-13.md)
 
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
