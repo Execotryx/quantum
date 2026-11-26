@@ -12,12 +12,13 @@ The inclusive score-35 cost-product ceiling is about `3.9723446102471964e24`.
 At 888 qubits and zero failures, the published and source-backed companion
 costs permit about 278,593.94 and 274,327.64 mean DQI gates, respectively.
 Use the role's measured failure counts for its actual repetition factor.
-The supplied-tape circuit uses 256,285 Toffoli-like gates after native
-comparison lowering. This leaves about 18,043 gates with the source-backed
-companions for raw-syndrome extraction and exceptional-chart recovery.
+The supplied-tape circuit uses 248,941 native Toffoli-like gates with
+measurement-assisted inner reciprocal cleanup. This leaves about 25,387
+gates with the source-backed companions for raw-syndrome extraction and
+exceptional-chart recovery.
 The two measured suffix transforms exceed that allowance together.
 [Degree-35 budget and hashes](../../../docs/evidence/aggregate36-20261126/degree35-above35-controls.json)
-· [Native handoff](../../../docs/evidence/aggregate36-20261126/degree35-projective-handoff-native.json)
+· [Optimized native handoff](../../../docs/evidence/aggregate36-20261126/degree35-subtower-phase-native.json)
 
 ## Verification and delivery
 

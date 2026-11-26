@@ -122,6 +122,9 @@
   entering top payload by the child modulus lead. Multiply by the packed
   quotient slope during reduction, and undo the child's scale before the
   inverse reduction. Test zero-head paths through both directions.
+- Clear the GF(64) reciprocal in its GF(8) coordinates with its two live
+  factors. Remove the GF(8) inverse's linear term before measuring its
+  quadratic part. Check phase and scratch for every field input.
 - Borrow a quotient constant for interpolation only when its weight is
   one at every evaluation point and its wires are disjoint from the other
   input and output banks. Restore it before leaving the divisor reciprocal.

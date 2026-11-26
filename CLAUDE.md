@@ -76,6 +76,9 @@ The Chien scan can borrow the constant terms and restore them at each root.
 The shared reciprocal schedule predivides each child's top payload by
 its modulus lead. The packed slope recovers the reduction quotient.
 The final extension divides by the divisor after adding the dot product.
+Keep the GF(8) norm inverse and conjugate live until the GF(64)
+reciprocal is cleared. Restore its two GF(8) coordinates before
+measurement and erase the remaining quadratic inverse with phase repair.
 The outer monic remainder can use its quotient constant as the left
 interpolation word. Require unit weights and disjoint banks, and restore
 the constant before leaving the reciprocal scope.

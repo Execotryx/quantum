@@ -5,6 +5,8 @@ All coordinates are internal to this implementation; inputs and outputs use the
 pinned 0x1053 polynomial basis.
 """
 
+from collections.abc import Iterator
+from contextlib import contextmanager
 from dataclasses import dataclass
 from functools import cache
 from typing import Any
@@ -105,8 +107,10 @@ def inverse8_xor(builder: Any, source: Any, target: Any, maps: Subtower) -> None
     builder.free(scratch)
 
 
-def inverse64_xor(builder: Any, source: Any, target: Any, maps: Subtower, *, borrow_source: bool = False) -> None:
-    """XOR the GF(64) inverse in the original six-bit tower coordinates."""
+@contextmanager
+def _inverse64_factors(builder: Any, source: Any, maps: Subtower, *,
+                       borrow_source: bool) -> Iterator[tuple[Any, Any, Any]]:
+    """Keep the conjugate and inverse norm live for products in the subfield."""
     ab = source if borrow_source else builder.alloc_qubits(6)
     a, b = ab[:3], ab[3:]
     norm = builder.alloc_qubits(3)
@@ -120,11 +124,13 @@ def inverse64_xor(builder: Any, source: Any, target: Any, maps: Subtower, *, bor
     _product_xor(builder, a, b, norm, maps.product8)
     inverse8_xor(builder, norm, inv, maps)
     _xor_map(builder, b, a, (1, 2, 4))
-    for factor, columns in ((a, maps.low_output), (b, maps.high_output)):
-        terms = tuple((x, y, linear(columns, word)) for x, y, word in maps.product8)
-        _product_xor(builder, factor, inv, target, terms)
+    yield a, b, inv
     _xor_map(builder, b, a, (1, 2, 4))
-    inverse8_xor(builder, norm, inv, maps)
+    _xor_map(builder, norm, inv, maps.inverse8_linear)
+    # What remains in inv is quadratic in the three norm bits. The only
+    # nonzero entries are off-diagonal, so the operands can share a register.
+    quadratic = tuple((1 << i, 1 << j, word) for i, j, word in maps.inverse8_quadratic)
+    erase_bilinear(builder, norm, norm, inv, quadratic)
     _xor_map(builder, a, norm, maps.square8)
     _xor_map(builder, b, norm, maps.square_norm8)
     erase_bilinear(builder, a, b, norm, maps.product8)
@@ -136,6 +142,29 @@ def inverse64_xor(builder: Any, source: Any, target: Any, maps: Subtower, *, bor
     builder.free(norm)
     if not borrow_source:
         builder.free(ab)
+
+
+def inverse64_xor(builder: Any, source: Any, target: Any, maps: Subtower, *, borrow_source: bool = False) -> None:
+    """XOR the GF(64) inverse in the original six-bit tower coordinates."""
+    with _inverse64_factors(builder, source, maps, borrow_source=borrow_source) as (a, b, inv):
+        for factor, columns in ((a, maps.low_output), (b, maps.high_output)):
+            terms = tuple((x, y, linear(columns, word)) for x, y, word in maps.product8)
+            _product_xor(builder, factor, inv, target, terms)
+
+
+@contextmanager
+def _reciprocal64(builder: Any, source: Any, maps: Subtower, *, borrow_source: bool) -> Iterator[Any]:
+    """Prepare and erase a clean GF(64) reciprocal using its two live factors."""
+    inverse = builder.alloc_qubits(6)
+    with _inverse64_factors(builder, source, maps, borrow_source=borrow_source) as (a, b, inv):
+        _product_xor(builder, a, inv, inverse[:3], maps.product8)
+        _product_xor(builder, b, inv, inverse[3:], maps.product8)
+        _change_basis(builder, inverse, maps.to_subtower, undo=True)
+        yield inverse
+        _change_basis(builder, inverse, maps.to_subtower, undo=False)
+        erase_bilinear(builder, a, inv, inverse[:3], maps.product8)
+        erase_bilinear(builder, b, inv, inverse[3:], maps.product8)
+    builder.free(inverse)
 
 
 @cache
@@ -180,7 +209,6 @@ def inverse_xor(builder: Any, source: Any, target: Any, *,
     ab = source if borrow_source else builder.alloc_qubits(12)
     a, b = ab[:6], ab[6:]
     norm = builder.alloc_qubits(6)
-    inv = builder.alloc_qubits(6)
     if borrow_source:
         _change_basis(builder, ab, outer.coordinates, undo=False)
     else:
@@ -188,13 +216,12 @@ def inverse_xor(builder: Any, source: Any, target: Any, *,
     _xor_map(builder, a, norm, square)
     _xor_map(builder, b, norm, square_norm)
     _product_xor(builder, a, b, norm, outer.subfield_terms)
-    inverse64_xor(builder, norm, inv, maps, borrow_source=compact_inner)
-    _xor_map(builder, b, a, tuple(1 << i for i in range(6)))
-    for factor, columns in ((a, low_basis), (b, high_basis)):
-        terms = tuple((x, y, linear(columns, word)) for x, y, word in outer.subfield_terms)
-        _product_xor(builder, factor, inv, target, terms)
-    _xor_map(builder, b, a, tuple(1 << i for i in range(6)))
-    inverse64_xor(builder, norm, inv, maps, borrow_source=compact_inner)
+    with _reciprocal64(builder, norm, maps, borrow_source=compact_inner) as inv:
+        _xor_map(builder, b, a, tuple(1 << i for i in range(6)))
+        for factor, columns in ((a, low_basis), (b, high_basis)):
+            terms = tuple((x, y, linear(columns, word)) for x, y, word in outer.subfield_terms)
+            _product_xor(builder, factor, inv, target, terms)
+        _xor_map(builder, b, a, tuple(1 << i for i in range(6)))
     _xor_map(builder, a, norm, square)
     _xor_map(builder, b, norm, square_norm)
     erase_bilinear(builder, a, b, norm, outer.subfield_terms)
@@ -202,7 +229,6 @@ def inverse_xor(builder: Any, source: Any, target: Any, *,
         _change_basis(builder, ab, outer.coordinates, undo=True)
     else:
         _xor_map(builder, source, ab, outer.coordinates)
-    for register in (inv, norm):
-        builder.free(register)
+    builder.free(norm)
     if not borrow_source:
         builder.free(ab)

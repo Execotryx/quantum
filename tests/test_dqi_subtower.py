@@ -7,7 +7,7 @@ import numpy as np
 import pytest
 
 from qcompile.dqi.field import GF4096
-from qcompile.dqi.subtower import erase_bilinear, subtower
+from qcompile.dqi.subtower import erase_bilinear, inverse_xor, subtower
 from qcompile.dqi.tower import _product_xor, linear, tower
 from qcompile.reference import field as polynomial
 
@@ -74,16 +74,26 @@ def test_subtower_product_erasure_native(project_root, monkeypatch, width, mutat
 
 
 @pytest.mark.official
-def test_native_subtower_inverse_exhaustive(project_root, monkeypatch, tmp_path):
+@pytest.mark.parametrize("compact", [False, True])
+def test_native_subtower_inverse_exhaustive(project_root, monkeypatch, tmp_path, compact):
     if not sys.platform.startswith("linux") or not (project_root / "vendor/backend.json").is_file():
         pytest.skip("pinned native Linux backend required")
     monkeypatch.syspath_prepend(str(project_root / "vendor/official/kickmix"))
     monkeypatch.syspath_prepend(str(project_root / "tools"))
     km = import_module("kickmix")
-    tool = import_module("dqi_prototype")
-    tool.build("subtower-inverse", project_root / "vendor/backend.json", tmp_path / "inverse")
-    circuit = km.Circuit.from_file(str(tmp_path / "inverse" / "subtower-inverse.kmb"))
-    assert circuit.operation_statistics().num_toffoli_like <= 110
+    if compact:
+        builder = km.CircuitBuilder()
+        source = builder.create_quantum_register(12, "source")
+        target = builder.create_quantum_register(12, "target")
+        inverse_xor(builder, source, target, borrow_source=True, compact_inner=True)
+        path = tmp_path / "compact-inverse.kmb"
+        builder.finish_circuit().to_file(path, format="kmb")
+    else:
+        tool = import_module("dqi_prototype")
+        tool.build("subtower-inverse", project_root / "vendor/backend.json", tmp_path / "inverse")
+        path = tmp_path / "inverse" / "subtower-inverse.kmb"
+    circuit = km.Circuit.from_file(str(path))
+    assert circuit.operation_statistics().num_toffoli_like == 75
     source = circuit.register_data["source"]
     target = circuit.register_data["target"]
     shots = 4096
