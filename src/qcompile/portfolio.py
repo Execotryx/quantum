@@ -11,7 +11,8 @@ from .io import read_json, sha256
 
 ABOVE_34 = "portfolio-v2"
 ABOVE_36 = "portfolio-v3"
-VERSIONED_FORMATS = {34: ABOVE_34, 36: ABOVE_36}
+ABOVE_35 = "portfolio-v4"
+VERSIONED_FORMATS = {34: ABOVE_34, 35: ABOVE_35, 36: ABOVE_36}
 
 
 def is_digest(value: object) -> bool:
@@ -22,7 +23,7 @@ def clears_target(score: float, target: int, baselines: dict, costs: dict) -> bo
     """Check the exact cost-product inequality after the numeric score calculation."""
     if score <= target:
         return False
-    if target != 36:
+    if target not in (35, 36):
         return True
     return prod(map(Fraction, baselines.values())) > target**3 * prod(map(Fraction, costs.values()))
 

@@ -164,6 +164,8 @@ def main() -> None:
     targets = build.add_mutually_exclusive_group()
     targets.add_argument("--above-34", dest="minimum_score", action="store_const", const=34, default=20,
                          help="Register a version-2 portfolio with a strict score target of 34")
+    targets.add_argument("--above-35", dest="minimum_score", action="store_const", const=35,
+                         help="Register a version-4 portfolio with a strict score target of 35")
     targets.add_argument("--above-36", dest="minimum_score", action="store_const", const=36,
                          help="Register a version-3 portfolio with a strict score target of 36")
     verify = commands.add_parser("measure")

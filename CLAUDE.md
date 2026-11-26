@@ -82,6 +82,8 @@ the constant before leaving the reciprocal scope.
 Raw-suffix prefolding borrows the supplied prefix numerator in its reversed
 polynomial basis. Restore it after applying the advanced numerator and
 track the normalized residual before handing off to another block.
+Use `portfolio-v4` for strict above-35 registration. Derive the degree-35
+gate budget from the pinned companion costs and the applicable failure count.
 The blocked suffix accepts a prefolded residual and normalized
 denominators. Its shifted unit inverse keeps the first two
 coefficients implicit.

@@ -195,6 +195,14 @@ measured handoff and blocked suffix transform together exceed the
 current gate allowance for locator construction and cleanup.
 [Raw syndrome suffix handoff](docs/aggregate-above-36-dqi-raw-suffix-prefold-26-11-2026-22-24-45.md)
 
+The degree-35 development lane now uses the selected open controls and a
+strict **above-35** portfolio gate. The source-backed companion costs allow
+fewer than **274,327.64 mean DQI gates** at 888 qubits and zero failures.
+The current supplied-tape phase leaves at most **20,476.64 gates** before
+native equality lowering, raw-syndrome extraction, and recovery. The
+submission archive requires both full cloud verifier roles to clear 35.
+[Degree-35 control selection and budget](docs/degree35-above35-26-11-2026-22-39-51.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

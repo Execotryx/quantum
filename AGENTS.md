@@ -129,6 +129,9 @@
   Restore its numerator after advancing it by twice the prefix degree.
   To bind the next transform, check the complementary denominator's
   determinant and the residual's common scale.
+- The degree-35 portfolio uses `portfolio-v4` for strict above-35
+  verification. Keep the decoder's physical degree separate from the
+  aggregate threshold and use exact cost products in both verifier roles.
 - A Givens-order change may move a rotation only across disjoint orbital
   pairs. Preserve the matching angle columns, check reconstructed vectors,
   and price the affected XOR transitions before full loader verification.

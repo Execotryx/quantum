@@ -1,12 +1,13 @@
 from copy import deepcopy
 from importlib import import_module
+from math import nextafter
 from types import SimpleNamespace
 
 import pytest
 
 from qcompile.component_confirmations import BENCHMARKS, HYBRID_COVERAGE, component_hashes
 from qcompile.io import sha256, write_json
-from qcompile.portfolio import ABOVE_34, ABOVE_36, bind_lineage, portfolio_target
+from qcompile.portfolio import ABOVE_34, ABOVE_35, ABOVE_36, bind_lineage, clears_target, portfolio_target
 
 
 def test_portfolio_binds_two_builds_and_each_component(tmp_path):
@@ -37,11 +38,12 @@ def test_portfolio_binds_two_builds_and_each_component(tmp_path):
     assert portfolio_target(record) == 34
     assert len(record["components"]["dfthcsos"]["members"]) == 20
 
-    successor = {"artifact_hashes": members, **bind_lineage(lineage, members, minimum_score=36)}
-    assert successor["format"] == ABOVE_36
-    assert portfolio_target(successor) == 36
+    for target, version in ((35, ABOVE_35), (36, ABOVE_36)):
+        successor = {"artifact_hashes": members, **bind_lineage(lineage, members, minimum_score=target)}
+        assert successor["format"] == version
+        assert portfolio_target(successor) == target
 
-    for key, value in (("minimum_score", 20), ("minimum_score", 36),
+    for key, value in (("minimum_score", 20), ("minimum_score", 35), ("minimum_score", 36),
                        ("format", "portfolio-v999"), ("components", {})):
         altered = {**record, key: value}
         with pytest.raises(ValueError):
@@ -60,6 +62,12 @@ def test_portfolio_binds_two_builds_and_each_component(tmp_path):
 
 def test_portfolio_legacy_registration_promotes_above_twenty():
     assert portfolio_target({"archive_sha256": "a" * 64}) == 20
+
+
+def test_above_35_rejects_exact_break_even_despite_rounded_score():
+    baselines = dict.fromkeys(BENCHMARKS, 35)
+    costs = dict.fromkeys(BENCHMARKS, 1)
+    assert not clears_target(nextafter(35, float("inf")), 35, baselines, costs)
 
 
 def test_portfolio_preflight_reports_native_serialization_failure(project_root, tmp_path, monkeypatch):
@@ -84,7 +92,7 @@ def test_portfolio_preflight_reports_native_serialization_failure(project_root, 
     assert calls == ["angle_k_14.kmb"]
 
 
-@pytest.mark.parametrize("minimum_score,version", [(34, ABOVE_34), (36, ABOVE_36)])
+@pytest.mark.parametrize("minimum_score,version", [(34, ABOVE_34), (35, ABOVE_35), (36, ABOVE_36)])
 @pytest.mark.parametrize("margin", [0, 1])
 def test_certificate_requires_both_role_scores_strictly_above_target(
     project_root, tmp_path, monkeypatch, minimum_score, version, margin

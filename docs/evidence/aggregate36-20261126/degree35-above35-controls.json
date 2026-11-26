@@ -1,0 +1,148 @@
+{
+  "classification": "degree35_development_budget",
+  "controls": {
+    "dqi": "4b5721411adc239f61fc11c773a2358b75dfe7cb15586efae4f0459c77d77e52",
+    "performance_chemistry": "f2ebad6b82f63d43d1b410445db742f7e699b4edbe0e9337824049417733cf23",
+    "performance_chemistry_factorization": "25cab2c621e78711480aa975f42a8386414f1f2e1466c3d1f01d5be3e31cae20",
+    "performance_invsqrt": "6b59214530108d8c49c648f96c53b963d9b8477f8813db1edcf478bf45f6cf03",
+    "source_chemistry_family": "053242eb7979c5362135b66e14c239d2b223e58e983c2703fc936c25b55a712a",
+    "source_invsqrt": "68eb8c13ebc75c5e443ed5a8c6357c2c77e6676c499ed1324108bf025faf1489"
+  },
+  "input_sha256": {
+    "baseline": "bdcdf90a52d677ca26f143435383cfd4fdd763f66f722a2b5b8faedeadb4967e",
+    "blocked_suffix": "0eec56288df2a202ba8d71e768a1cbb4265c0cf80236dc69e22bd35666625c07",
+    "degree35_phase": "14da6aa412bffba4d917c6ba600d6973e8195ed121ab61171a229f06dcb68bad",
+    "raw_suffix_prefold": "0b1fbe997d785490501a2e5c935976c138a93e3b31027cf96676cc524591c375",
+    "shortlist": "391388a908af48f2daf05a6b5d1d7b99047f49f5936441342e38a6bd9d0b0cf2"
+  },
+  "measured_distinct_software_scopes": {
+    "blocked_suffix_roundtrip_products": 70476,
+    "raw_suffix_prefold_roundtrip_ands": 56604,
+    "supplied_tape_ands": 253851,
+    "supplied_tape_equalities": 202,
+    "supplied_tape_qubits": 888
+  },
+  "official_dqi_draw_coverage": 102400,
+  "performance_companion_limits": {
+    "chemistry_cost": 249131639.59982783,
+    "control_portfolio_projection": 33.229450296051205,
+    "invsqrt_cost": 60927.54794503887,
+    "strict_dqi_cost_limit": 261700366700.51816,
+    "width_limits": {
+      "879": [
+        {
+          "failures": 0,
+          "repetition_factor": 1.1912604648115832,
+          "strict_mean_gate_ceiling": 284328.1453922636
+        },
+        {
+          "failures": 1,
+          "repetition_factor": 1.1967314991687568,
+          "strict_mean_gate_ceiling": 283028.29738689814
+        },
+        {
+          "failures": 8,
+          "repetition_factor": 1.2230139975925944,
+          "strict_mean_gate_ceiling": 276946.036027163
+        }
+      ],
+      "888": [
+        {
+          "failures": 0,
+          "repetition_factor": 1.1912604648115832,
+          "strict_mean_gate_ceiling": 278593.9435009637
+        },
+        {
+          "failures": 1,
+          "repetition_factor": 1.1967314991687568,
+          "strict_mean_gate_ceiling": 277320.31024433684
+        },
+        {
+          "failures": 8,
+          "repetition_factor": 1.2230139975925944,
+          "strict_mean_gate_ceiling": 271360.7131904666
+        }
+      ],
+      "900": [
+        {
+          "failures": 0,
+          "repetition_factor": 1.1912604648115832,
+          "strict_mean_gate_ceiling": 271214.2994864493
+        },
+        {
+          "failures": 1,
+          "repetition_factor": 1.1967314991687568,
+          "strict_mean_gate_ceiling": 269974.40335964237
+        },
+        {
+          "failures": 8,
+          "repetition_factor": 1.2230139975925944,
+          "strict_mean_gate_ceiling": 264172.66940995463
+        }
+      ]
+    }
+  },
+  "physical_locator_degree": 35,
+  "portfolio_target_exclusive": 35,
+  "source_backed_companion_limits": {
+    "chemistry_cost": 249853852.96142676,
+    "control_portfolio_projection": 33.05895512586062,
+    "invsqrt_cost": 61696.23146663024,
+    "strict_dqi_cost_limit": 257692767268.429,
+    "width_limits": {
+      "879": [
+        {
+          "failures": 0,
+          "repetition_factor": 1.1912604648115832,
+          "strict_mean_gate_ceiling": 279974.0310730239
+        },
+        {
+          "failures": 1,
+          "repetition_factor": 1.1967314991687568,
+          "strict_mean_gate_ceiling": 278694.0885427397
+        },
+        {
+          "failures": 8,
+          "repetition_factor": 1.2230139975925944,
+          "strict_mean_gate_ceiling": 272704.96907454415
+        }
+      ],
+      "888": [
+        {
+          "failures": 0,
+          "repetition_factor": 1.1912604648115832,
+          "strict_mean_gate_ceiling": 274327.6409969415
+        },
+        {
+          "failures": 1,
+          "repetition_factor": 1.1967314991687568,
+          "strict_mean_gate_ceiling": 273073.5117707457
+        },
+        {
+          "failures": 8,
+          "repetition_factor": 1.2230139975925944,
+          "strict_mean_gate_ceiling": 267205.17816472496
+        }
+      ],
+      "900": [
+        {
+          "failures": 0,
+          "repetition_factor": 1.1912604648115832,
+          "strict_mean_gate_ceiling": 267061.0065954225
+        },
+        {
+          "failures": 1,
+          "repetition_factor": 1.1967314991687568,
+          "strict_mean_gate_ceiling": 265840.0978589517
+        },
+        {
+          "failures": 8,
+          "repetition_factor": 1.2230139975925944,
+          "strict_mean_gate_ceiling": 260127.20988978376
+        }
+      ]
+    }
+  },
+  "strict_cost_product_ceiling": 3.9723446102471964e+24,
+  "two_suffix_stages_alone_exceed_zero_failure_headroom": true
+}
