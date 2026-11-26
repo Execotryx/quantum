@@ -67,6 +67,12 @@ combination at **33.25742**. Keeping its inverse-square-root and chemistry
 costs would require a DQI cost below **240.49B** to exceed 36.
 [Public circuit cost screen](docs/aggregate-above-36-public-frontier-26-11-2026-17-01-05.md)
 
+On the regular derivative chart, carrying the Euclidean leading
+coefficients through the solve reduced the 4,095-position phase stage
+from **194,493** to **179,589 gates** at **879 qubits**. The full decoder
+still needs locator construction and routing for exceptional charts.
+[Projective derivative action](docs/aggregate-above-36-dqi-projective-forney-26-11-2026-17-10-36.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

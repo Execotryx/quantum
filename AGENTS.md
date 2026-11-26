@@ -85,6 +85,10 @@
 - In the blocked locator reciprocal, finish the descending overlapping
   updates before interpolating cross-block terms from untouched lower words.
   Transpose the coefficient pairing when the requested band is shorter.
+- The projective derivative action requires unit Euclidean degree drops
+  and nonzero stored leading coefficients. Recover both quotient heads
+  before leaving each frame. Match forward, inverse, phase and scratch
+  separately on the serialized circuit.
 - Before a full portfolio run, exercise native ANGLE serialization on its
   temporary filesystem. Keep prior raw receipts and the original salts
   when a public development comparison needs an infrastructure retry.

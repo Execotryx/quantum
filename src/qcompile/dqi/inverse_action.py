@@ -1,5 +1,7 @@
 """Fixed-degree Euclidean inverse action on a polynomial register."""
 
+from collections.abc import Iterator
+from contextlib import contextmanager
 from typing import Any
 
 from .bilinear import erase_product
@@ -60,19 +62,136 @@ def _polynomial_basis(builder: Any, modulus: list[Any], banks: list[list[Any]],
         _series_inplace(builder, words[::-1], modulus[::-1], multiply, adjoint=not to_polynomial)
 
 
-def _scale(builder: Any, factor: Any, normal: list[Any], data: list[Any], multiply: FieldProduct,
-           *, undo: bool) -> None:
+@contextmanager
+def _reciprocal(builder: Any, factor: Any) -> Iterator[Any]:
+    if factor is None:
+        yield None
+        return
     reciprocal = builder.alloc_qubits(12)
     inverse_xor(builder, factor, reciprocal, borrow_source=True)
-    scale, clear = (factor, reciprocal) if undo else (reciprocal, factor)
+    try:
+        yield reciprocal
+    finally:
+        inverse_xor(builder, factor, reciprocal, borrow_source=True)
+        builder.free(reciprocal)
+
+
+def _scale_words(builder: Any, words: list[Any], scale: Any, clear: Any, multiply: FieldProduct) -> None:
+    if scale is None or not words:
+        return
     work = builder.alloc_qubits(12)
-    for word in (*normal, *data):
+    for word in words:
         multiply(builder, scale, word, work)
         erase_product(builder, clear, work, word)
         builder.swap(word, work)
     builder.free(work)
-    inverse_xor(builder, factor, reciprocal, borrow_source=True)
-    builder.free(reciprocal)
+
+
+def _scale(builder: Any, factor: Any, normal: list[Any], data: list[Any], multiply: FieldProduct,
+           *, undo: bool) -> None:
+    with _reciprocal(builder, factor) as inverse:
+        scale, clear = (factor, inverse) if undo else (inverse, factor)
+        _scale_words(builder, normal + data, scale, clear, multiply)
+
+
+def _projective_remainder(builder: Any, modulus: list[Any], divisor: list[Any],
+                          reduce_banks: list[list[Any]], multiply: FieldProduct, *, adjoint: bool) -> None:
+    """Keep a linear quotient in the top two slots and the remainder below."""
+    a_head, d_head = modulus[-1], divisor[-1]
+    lead, constant = modulus[-2], divisor[-2]
+
+    def update_lower() -> None:
+        _product_range(builder, [lead, a_head], divisor[:-1], modulus[:-2], 0, multiply)
+
+    # When A is monic, the quotient slope is the inverse itself. Use scalar
+    # products on this outer level to leave the interpolation workspace free.
+    if a_head is None:
+        with _reciprocal(builder, d_head) as slope:
+            def update_monically() -> None:
+                for i, word in enumerate(modulus[:-2]):
+                    multiply(builder, lead, divisor[i], word)
+                    if i:
+                        multiply(builder, slope, divisor[i - 1], word)
+
+            if adjoint:
+                update_monically()
+                _scale_words(builder, [lead], d_head, slope, multiply)
+            else:
+                _projective_reduce(builder, divisor, reduce_banks, slope, multiply)
+            multiply(builder, slope, constant, lead)
+            if not adjoint:
+                _scale_words(builder, [lead], slope, d_head, multiply)
+                update_monically()
+            else:
+                _projective_reduce(builder, divisor, reduce_banks, slope, multiply)
+        return
+
+    if adjoint:
+        update_lower()
+    with _reciprocal(builder, d_head) as inverse:
+        if adjoint:
+            _scale_words(builder, [lead], d_head, inverse, multiply)
+        else:
+            _projective_reduce(builder, divisor, reduce_banks, inverse, multiply)
+            _scale_words(builder, [a_head], inverse, d_head, multiply)
+        multiply(builder, a_head, constant, lead)
+        if adjoint:
+            _scale_words(builder, [a_head], d_head, inverse, multiply)
+            _projective_reduce(builder, divisor, reduce_banks, inverse, multiply)
+        else:
+            _scale_words(builder, [lead], inverse, d_head, multiply)
+    if not adjoint:
+        update_lower()
+
+
+def _projective_reduce(builder: Any, divisor: list[Any], banks: list[list[Any]],
+                       inverse: Any, multiply: FieldProduct) -> None:
+    """Add the divisor reduction into each bank without replacing its top word."""
+    for words in banks:
+        top = words[-1]
+        quotient = builder.alloc_qubits(12)
+        multiply(builder, inverse, top, quotient)
+        for factor, target in zip(divisor[:-1], words[:-1], strict=True):
+            multiply(builder, quotient, factor, target)
+        erase_product(builder, inverse, top, quotient)
+        builder.free(quotient)
+
+
+def _projective_extend(builder: Any, modulus: list[Any], divisor: list[Any], banks: list[list[Any]],
+                       multiply: FieldProduct, *, adjoint: bool) -> None:
+    def scale_tails(head: Any) -> None:
+        with _reciprocal(builder, head) as inverse:
+            scale, clear = (head, inverse) if adjoint else (inverse, head)
+            _scale_words(builder, [words[-1] for words in banks], scale, clear, multiply)
+
+    if adjoint:
+        for words in banks:
+            _rotate(builder, words, 1)
+    scale_tails(divisor[-1] if adjoint else modulus[-1])
+    for words in banks:
+        for coefficient, value in zip(divisor[:-1], words[-2::-1], strict=True):
+            multiply(builder, coefficient, value, words[-1])
+    scale_tails(modulus[-1] if adjoint else divisor[-1])
+    if not adjoint:
+        for words in banks:
+            _rotate(builder, words, len(words) - 1)
+
+
+def _projective_action(builder: Any, modulus: list[Any], divisor: list[Any], banks: list[list[Any]],
+                       multiply: FieldProduct, *, adjoint: bool) -> None:
+    """Regular chart with a stored nonzero divisor lead and optional monic modulus lead."""
+    if len(divisor) == 1:
+        scalars = [words[0] for words in banks]
+        _scale(builder, modulus[-1], [], scalars, multiply, undo=adjoint)
+        _scale(builder, divisor[-1], [], scalars, multiply, undo=adjoint)
+        return
+    if adjoint:
+        _projective_extend(builder, modulus, divisor, banks, multiply, adjoint=True)
+    _projective_remainder(builder, modulus, divisor, [] if adjoint else banks, multiply, adjoint=False)
+    _projective_action(builder, divisor, modulus[:-2], [words[:-1] for words in banks], multiply, adjoint=adjoint)
+    _projective_remainder(builder, modulus, divisor, banks if adjoint else [], multiply, adjoint=True)
+    if not adjoint:
+        _projective_extend(builder, modulus, divisor, banks, multiply, adjoint=False)
 
 
 def inverse_action(builder: Any, modulus: list[Any], divisor: list[Any], words: list[Any],
@@ -141,7 +260,8 @@ def _inverse_actions(builder: Any, modulus: list[Any], divisor: list[Any], banks
 
 
 def odd_forney_inplace(builder: Any, locator: list[Any], words: list[Any], half_chart: tuple[int, ...],
-                       *, adjoint: bool = False, multiply: FieldProduct = multiply_xor) -> None:
+                       *, adjoint: bool = False, multiply: FieldProduct = multiply_xor,
+                       projective: bool = False) -> None:
     """Apply the derivative inverse using only the monic locator and evaluator banks.
 
     This fixed odd-degree chart receives the degrees of E mod D and its
@@ -155,6 +275,8 @@ def odd_forney_inplace(builder: Any, locator: list[Any], words: list[Any], half_
     chart = (half, *half_chart)
     if chart[-1] != 0 or any(not 0 <= b < a for a, b in zip(chart, chart[1:])):
         raise ValueError("invalid half-degree Euclidean chart")
+    if projective and half_chart != tuple(range(half - 1, -1, -1)):
+        raise ValueError("projective action requires all half-degree drops to be one")
     if any(len(word) != 12 for word in (*locator, *words)):
         raise ValueError("in-place Forney requires 12-bit words")
 
@@ -173,14 +295,17 @@ def odd_forney_inplace(builder: Any, locator: list[Any], words: list[Any], half_
         multiply(builder, even[-1], coefficient, target)
     r = half_chart[0]
     payloads = [words[:-1:2], words[1::2]]
-    payload = words[:-1]
     remainder, factor = even[:r], even[r]
-    _scale(builder, factor, remainder, [] if adjoint else payload, multiply, undo=False)
-    if r:
-        _inverse_actions(builder, dh, remainder, payloads, half_chart[1:], multiply, adjoint=adjoint)
+    if projective:
+        _projective_action(builder, [*dh, None], [*remainder, factor], payloads, multiply, adjoint=adjoint)
     else:
-        _polynomial_basis(builder, dh, payloads, multiply, to_polynomial=adjoint)
-    _scale(builder, factor, remainder, payload if adjoint else [], multiply, undo=True)
+        payload = words[:-1]
+        _scale(builder, factor, remainder, [] if adjoint else payload, multiply, undo=False)
+        if r:
+            _inverse_actions(builder, dh, remainder, payloads, half_chart[1:], multiply, adjoint=adjoint)
+        else:
+            _polynomial_basis(builder, dh, payloads, multiply, to_polynomial=adjoint)
+        _scale(builder, factor, remainder, payload if adjoint else [], multiply, undo=True)
     for coefficient, target in zip(dh, even[:-1], strict=True):
         multiply(builder, even[-1], coefficient, target)
 

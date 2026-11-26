@@ -163,11 +163,11 @@ def prepared_residue_scan(builder: Any, field: Any, modulus: list[Any], omega: l
 
 def two_bank_residue_scan(builder: Any, field: Any, modulus: list[Any], omega: list[Any],
                           masks: list[Any], half_chart: tuple[int, ...], *,
-                          multiply: FieldProduct = multiply_xor) -> None:
+                          multiply: FieldProduct = multiply_xor, projective: bool = False) -> None:
     """Phase and restore a fixed odd-degree chart using the locator and evaluator."""
-    odd_forney_inplace(builder, modulus, omega, half_chart, multiply=multiply)
+    odd_forney_inplace(builder, modulus, omega, half_chart, multiply=multiply, projective=projective)
     _scan_evaluations(builder, field, (modulus, omega), masks, _residue_phase, monic=True)
-    odd_forney_inplace(builder, modulus, omega, half_chart, adjoint=True, multiply=multiply)
+    odd_forney_inplace(builder, modulus, omega, half_chart, adjoint=True, multiply=multiply, projective=projective)
 
 
 def two_bank_syndrome_scan(builder: Any, field: Any, modulus: list[Any], syndromes: list[Any],

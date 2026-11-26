@@ -31,12 +31,14 @@ def _inverse_and_chart(modulus, divisor, field):
 
 
 @pytest.mark.official
-@pytest.mark.parametrize(("degree", "divisor_degree", "compact", "skip_to_constant"),
-                         [(3, 2, False, False), (9, 2, False, False), (7, 6, False, False),
-                          (9, 4, False, True), (3, 2, True, False), (7, 6, True, False),
-                          pytest.param(35, 34, True, False, marks=pytest.mark.slow)])
+@pytest.mark.parametrize(("degree", "divisor_degree", "compact", "skip_to_constant", "projective"),
+                         [(3, 2, False, False, False), (9, 2, False, False, False), (7, 6, False, False, False),
+                          (9, 4, False, True, False), (3, 2, True, False, False), (7, 6, True, False, False),
+                          (3, 2, True, False, True), (7, 6, True, False, True),
+                          pytest.param(35, 34, True, False, False, marks=pytest.mark.slow),
+                          pytest.param(35, 34, True, False, True, marks=pytest.mark.slow)])
 def test_euclidean_inverse_action(project_root, monkeypatch, tmp_path, degree, divisor_degree, compact,
-                                  skip_to_constant):
+                                  skip_to_constant, projective):
     backend = project_root / "vendor/backend.json"
     if not sys.platform.startswith("linux") or not backend.is_file():
         pytest.skip("pinned native backend required")
@@ -70,6 +72,8 @@ def test_euclidean_inverse_action(project_root, monkeypatch, tmp_path, degree, d
         if result is None:
             continue
         reciprocal, observed_chart = result
+        if projective and observed_chart != tuple(range(divisor_degree - 2, -1, -2)):
+            continue
         if chart is None:
             chart = observed_chart
         if observed_chart != chart:
@@ -92,7 +96,7 @@ def test_euclidean_inverse_action(project_root, monkeypatch, tmp_path, degree, d
         a, x = [[builder.create_quantum_register(12, f"{label}_{i}") for i in range(degree)]
                 for label in ("a", "x")]
         if compact:
-            odd_forney_inplace(builder, a, x, chart, adjoint=adjoint, multiply=multiply)
+            odd_forney_inplace(builder, a, x, chart, adjoint=adjoint, multiply=multiply, projective=projective)
         else:
             d = [builder.create_quantum_register(12, f"d_{i}") for i in range(divisor_degree)]
             inverse_action(builder, a, d, x, chart, adjoint=adjoint, multiply=multiply)
@@ -138,6 +142,7 @@ def test_euclidean_inverse_action(project_root, monkeypatch, tmp_path, degree, d
     write_json(tmp_path / "inverse-action.json", {
         "scope": "implicit derivative" if compact else "supplied monic divisor",
         "degree": degree, "divisor_degree": divisor_degree, "degree_chart": chart,
+        "projective": projective,
         "shots": len(samples), "sample_seed": seed, "native_seed": 36139, "backend_sha256": sha256(backend),
         "tensor_sha256": tensor_sha, "observations": records,
     })

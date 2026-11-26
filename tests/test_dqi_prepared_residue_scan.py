@@ -17,13 +17,14 @@ from qcompile.official import validate_backend
 
 
 @pytest.mark.official
-@pytest.mark.parametrize(("positions", "degree", "mode"), [
-    (63, 3, "supplied"), (63, 3, "residue"), (63, 7, "syndrome"),
-    pytest.param(4095, 35, "supplied", marks=pytest.mark.slow),
-    pytest.param(4095, 35, "residue", marks=pytest.mark.slow),
-    pytest.param(4095, 35, "syndrome", marks=pytest.mark.slow),
+@pytest.mark.parametrize(("positions", "degree", "mode", "projective"), [
+    (63, 3, "supplied", False), (63, 3, "residue", False), (63, 7, "syndrome", False),
+    pytest.param(4095, 35, "supplied", False, marks=pytest.mark.slow),
+    pytest.param(4095, 35, "residue", False, marks=pytest.mark.slow),
+    pytest.param(4095, 35, "residue", True, marks=pytest.mark.slow),
+    pytest.param(4095, 35, "syndrome", False, marks=pytest.mark.slow),
 ])
-def test_coherent_residue_scan(project_root, monkeypatch, tmp_path, positions, degree, mode):
+def test_coherent_residue_scan(project_root, monkeypatch, tmp_path, positions, degree, mode, projective):
     backend = project_root / "vendor/backend.json"
     if not sys.platform.startswith("linux") or not backend.is_file():
         pytest.skip("pinned native Linux backend required")
@@ -44,7 +45,8 @@ def test_coherent_residue_scan(project_root, monkeypatch, tmp_path, positions, d
     if mode == "syndrome":
         two_bank_syndrome_scan(builder, km.GF2Field(12), groups[0], groups[1], masks, half_chart, multiply=multiply)
     elif mode == "residue":
-        two_bank_residue_scan(builder, km.GF2Field(12), groups[0], groups[1], masks, half_chart, multiply=multiply)
+        two_bank_residue_scan(builder, km.GF2Field(12), groups[0], groups[1], masks, half_chart,
+                              multiply=multiply, projective=projective)
     else:
         prepared_residue_scan(builder, km.GF2Field(12), groups[0], groups[1], groups[2], masks, multiply=multiply)
     artifact = tmp_path / "prep-scan.kmb"
@@ -117,6 +119,7 @@ def test_coherent_residue_scan(project_root, monkeypatch, tmp_path, positions, d
                   "residue": "two-bank fixed chart", "syndrome": "two-bank fixed chart with syndrome prefix"}[mode],
         "circuit_sha256": sha256(artifact), "backend_sha256": sha256(backend), "tensor_sha256": tensor_hash,
         "positions": positions, "degree": degree, "support_weight_counts": {str(k): v for k, v in weights.items()},
+        "projective": projective,
         "checked_shots": shots, "half_chart": half_chart if mode != "supplied" else None, "attempts": attempts,
         "seed": seed, "panel_seed": seed + degree, "qubits": circuit.num_qubits,
         "toffoli_like": charged, "operations": dict(circuit.operation_statistics()),

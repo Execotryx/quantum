@@ -9,9 +9,9 @@ The strict cost-product ceiling for 36 is 3.650425993748897 × 10²⁴. The pref
 The version-218 public catalog screen projects 33.25742 even at its
 zero-failure DQI cost. With the catalog's cheapest measured companions,
 a DQI-only route must cost below 240.492B. At 879 qubits, the official
-zero-failure repetition factor leaves fewer than 66,794 mean gates after
-the measured supplied-evaluator stage. The staged sequential reciprocal
-already exceeds that remainder on its first round trip. Retain the
+zero-failure repetition factor leaves about 81,697 mean gates after
+the latest measured projective phase stage. The first three sequential
+locator reciprocal pairs already exceed that remainder. Retain the
 balanced allocation for genuine companion improvements. The catalog
 projection and published leaderboard snapshot do not qualify an archive.
 [Screen and stage budgets](../../../docs/aggregate-above-36-public-frontier-26-11-2026-17-01-05.md)
