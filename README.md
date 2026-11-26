@@ -280,6 +280,12 @@ checks at **627.25** mean Toffoli-like gates. It leaves about **467.07**
 charged equivalents for new arithmetic at the incumbent's rotation price.
 [Measured checkpoint return](docs/degree35-invsqrt-checkpoint-return-27-11-2026-03-24-19.md)
 
+At the divider checkpoint, a fixed-point model with three coefficients
+per root and a 10-bit quadratic term passed all **3,133,452** legal
+inputs at **85.14%** worst tolerance use. Reversible emission and
+the complete gate cost remain open.
+[Joint checkpoint phase model](docs/degree35-invsqrt-checkpoint-joint-27-11-2026-03-35-49.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

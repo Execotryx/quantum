@@ -287,6 +287,9 @@
 - A divider checkpoint splice must match quantum values after its bridge
   and preserve all classical bits read by the retained suffix. Use the
   zero-phase replay to price the return before testing a replacement phase.
+- Bind joint checkpoint models to the actual root, exponent, and remainder
+  wire order and frozen coefficients. Preserve rare checkpoint patterns in
+  fitting and check integer rounding across every legal input.
 - The source-borrowing ripple restores each operand before reusing it.
   Exclude the active multiplier control from the dirty increment pool
   and repay the same dirty word before leaving the upper lane.

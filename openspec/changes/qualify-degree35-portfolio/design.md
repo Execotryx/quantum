@@ -108,6 +108,15 @@ emitted circuit before selecting it for the aggregate campaign.
 [Checkpoint phase screen](../../../docs/degree35-invsqrt-checkpoint-phase-27-11-2026-03-16-43.md)
 · [Measured checkpoint return](../../../docs/degree35-invsqrt-checkpoint-return-27-11-2026-03-24-19.md)
 
+A joint fixed-point model restores numerical accuracy at the registered
+cut. It uses a root-dependent intercept, a scaled 19-wire word and a
+scaled square of its registered 10-bit remainder proxy. Freeze the
+three-coefficient table as the numerical control. Screen reduced
+precision across all inputs, then prototype coefficient access and
+arithmetic in the eight clean checkpoint wires. Use the measured return
+and complete rotation cost before proceeding to aggregate verification.
+[Passing joint checkpoint model](../../../docs/degree35-invsqrt-checkpoint-joint-27-11-2026-03-35-49.md)
+
 ## Verification and delivery
 
 Register a `portfolio-v5` archive with `--at-least-35` after qualifying a full

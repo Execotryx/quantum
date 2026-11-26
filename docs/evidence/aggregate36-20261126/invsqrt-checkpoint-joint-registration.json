@@ -1,0 +1,156 @@
+{
+  "additional_low_wires": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    25,
+    26,
+    27,
+    28
+  ],
+  "affine_wires": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    25,
+    26,
+    27,
+    28
+  ],
+  "assembly_sha256": "27ccb62d03bcba70353d382bb94c5dc636acd00b250c83f976df8d1176842146",
+  "coefficient_fraction_bits": 40,
+  "combined_word_lsb_first_with_lsb_complemented_then_subtract_one": [
+    28,
+    27,
+    26,
+    25,
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "driver_sha256": "16a5c0c0a1933e3062af744bb74f82b456effdf9ad28f2c4af6b7feb9d38b8ac",
+  "exponent_wires_lsb_first": [
+    23,
+    24,
+    34,
+    35
+  ],
+  "fit": "least squares over all distinct normalized input and affine-bit pairs",
+  "legal_inputs": 3133452,
+  "mode_degree_and_remainder_bits": [
+    [
+      "bits",
+      2,
+      8
+    ],
+    [
+      "bits",
+      2,
+      9
+    ],
+    [
+      "bits",
+      2,
+      11
+    ],
+    [
+      "bits",
+      3,
+      13
+    ],
+    [
+      "word",
+      2,
+      9
+    ],
+    [
+      "word",
+      2,
+      10
+    ],
+    [
+      "word",
+      2,
+      11
+    ],
+    [
+      "word",
+      2,
+      12
+    ],
+    [
+      "word",
+      2,
+      13
+    ],
+    [
+      "word",
+      3,
+      13
+    ],
+    [
+      "word-and-low",
+      2,
+      9
+    ],
+    [
+      "word-and-low",
+      2,
+      13
+    ]
+  ],
+  "prefix_end": 5856,
+  "remainder_wires_lsb_first": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "root_wires_lsb_first_with_low_bit_inverted": [
+    22,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "simulator_sha256": "2ee284839765dcbd33fa93d7b0c04456674c90c7fa04571bea5dffe7df3bf2a8"
+}

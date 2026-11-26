@@ -1,0 +1,15 @@
+{
+  "assembly_sha256": "27ccb62d03bcba70353d382bb94c5dc636acd00b250c83f976df8d1176842146",
+  "checkpoint_values_match_across_seeds": true,
+  "coefficients_sha256": "b030ae5b716ffea3131e4df1db35322aa8e45c13f66d020765d06f93521eac40",
+  "measurement_seeds": [
+    37109,
+    37111
+  ],
+  "modeled_phase_over_native_bits_passes": true,
+  "native_bits_model_worst_tolerance_fraction": 0.8513628828833051,
+  "native_inputs_per_seed": 2816,
+  "official_target_and_tolerance_arrays_equal_for_legal_inputs": 3133452,
+  "root_and_exponent_match": true,
+  "screen_sha256": "ed6677df7a5eef8755a0f2ba15d29ecf8291cd4778b0d98e1cce1bbb46fd65a2"
+}
