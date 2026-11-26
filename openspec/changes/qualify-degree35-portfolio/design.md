@@ -89,6 +89,13 @@ requires 39 qubits. For the next width comparison, account for all peak
 windows in one schedule and measure the total recomputation charge.
 [Rotation-loan comparison](../../../docs/degree35-invsqrt-rotation-loan-27-11-2026-02-52-43.md)
 
+Single-product recomputation at idle endpoints covers up to 1,065 of
+4,221 symbolic peak sites under the registered interval screen. The
+best disjoint selection at 46 extra Toffolis covers 727 sites and
+emits 39 qubits. Retarget the source carry and routing layout across
+peak sites outside these intervals before assembling a cloud candidate.
+[Idle-wire recomputation screen](../../../docs/degree35-invsqrt-idle-recompute-27-11-2026-03-10-19.md)
+
 ## Verification and delivery
 
 Register a `portfolio-v5` archive with `--at-least-35` after qualifying a full

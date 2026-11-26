@@ -278,6 +278,9 @@
 - A rotation may borrow a nonlinear product only after checking its
   value across the legal domain and proving independence from prior
   measurement outcomes. Restore it before either factor is erased.
+- Prove both endpoints before clearing an idle nonlinear value. If two
+  intervals overlap, check that each endpoint can still access every
+  operand. Include the endpoint operations in complete width and cost.
 - The source-borrowing ripple restores each operand before reusing it.
   Exclude the active multiplier control from the dirty increment pool
   and repay the same dirty word before leaving the upper lane.

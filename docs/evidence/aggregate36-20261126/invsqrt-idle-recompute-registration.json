@@ -1,0 +1,13 @@
+{
+  "batch_size": 292,
+  "driver_sha256": "a213c1ccb752e939ec110f8a17c39104f7e219b23adea88b930342010590ae71",
+  "extra_toffoli_budget": 46,
+  "minimum_idle_instructions": 8,
+  "salts": {
+    "control": "idle-recompute-control-20261127-dev",
+    "recompute": "idle-recompute-20261127-dev"
+  },
+  "scope": "development idle-wire recomputation",
+  "shots_per_x": 1,
+  "source_sha256": "27ccb62d03bcba70353d382bb94c5dc636acd00b250c83f976df8d1176842146"
+}
