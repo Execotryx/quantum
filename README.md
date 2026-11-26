@@ -293,6 +293,15 @@ reciprocal-only schedules exceeded the complete component budget through
 rotation count or lookup gates.
 [Coefficient precision and native reciprocal lookup](docs/degree35-invsqrt-checkpoint-precision-27-11-2026-03-48-23.md)
 
+Directly dividing the corrected numerator passes all **3,133,452**
+legal inputs in the 28-bit numerical model at **90.37%** worst tolerance
+use. The native reciprocal-only divider used **49 qubits**, **1,740**
+Toffoli-like gates and **29** fine rotations. Its gate cost alone is
+**85,260**, beyond the complete inverse-square-root cutoff of **52,119.68**.
+The narrowed divider recurrence passes the full numerical domain, and
+both available source row layouts exceed the width or gate allowance.
+[Reciprocal research and native measurements](docs/degree35-invsqrt-reciprocal-research-27-11-2026-04-04-28.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

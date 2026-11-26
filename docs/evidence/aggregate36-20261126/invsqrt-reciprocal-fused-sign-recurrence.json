@@ -1,0 +1,20 @@
+{
+  "assembly_sha256": "27ccb62d03bcba70353d382bb94c5dc636acd00b250c83f976df8d1176842146",
+  "coefficients_sha256": "6f85dc06f21231a5aad2c30c5568bdfdd05675728b4200ea66255a7adf16cef6",
+  "input_count": 3133452,
+  "output_fraction_bits": 28,
+  "phase_scan": {
+    "above_90_percent": 1,
+    "failed_inputs": 0,
+    "first_failed_inputs": [],
+    "input_count": 3133452,
+    "minimum_margin_phase64": 94779329,
+    "minimum_margin_x": 1249115,
+    "nonpositive_margins": 0,
+    "worst_tolerance_fraction": 0.9036581424912787,
+    "worst_x": 1249115
+  },
+  "scope": "classical row mapping, inverse and nearest-rounded output under all checkpoint inputs; no native row cost",
+  "simulator_sha256": "2ee284839765dcbd33fa93d7b0c04456674c90c7fa04571bea5dffe7df3bf2a8",
+  "updates_per_input": 29
+}

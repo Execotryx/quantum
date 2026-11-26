@@ -1,0 +1,29 @@
+{
+  "cases": [
+    {
+      "complete_fixture_toffoli_like": 1782.0,
+      "fixtures": 4096,
+      "kmb_sha256": "e6e3d2ad9d149a9de82ec96be6513d674db0a98a1d54d3a651726217e00062ec",
+      "loading_fixture_toffoli_like": 1764,
+      "omitted_phase_term": false,
+      "phase_mismatches": 0,
+      "phase_repair_extra_wires": 7,
+      "phase_repair_toffoli_like": 18.0,
+      "qubits": 39
+    },
+    {
+      "complete_fixture_toffoli_like": 1782.0,
+      "fixtures": 4096,
+      "kmb_sha256": "32f8e1c645ba73992fc7733e040809180edeb7a271106ea26c8429c58a078a81",
+      "loading_fixture_toffoli_like": 1764,
+      "omitted_phase_term": true,
+      "phase_mismatches": 132,
+      "phase_repair_extra_wires": 7,
+      "phase_repair_toffoli_like": 18.0,
+      "qubits": 39
+    }
+  ],
+  "coefficients_sha256": "6f85dc06f21231a5aad2c30c5568bdfdd05675728b4200ea66255a7adf16cef6",
+  "scope": "synthetic reciprocal-row history and address-only cleanup; the loader is for testing and this is not a divider",
+  "seed": 61309
+}

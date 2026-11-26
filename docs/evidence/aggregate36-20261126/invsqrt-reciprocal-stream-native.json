@@ -1,0 +1,10 @@
+{
+  "declared_width": 49,
+  "divisors": 128,
+  "fine_rotations": 29.0,
+  "fixtures": 1024,
+  "roundtrip_toffoli_like": 1740.0,
+  "routed_remainder_and_flag_qubits": 10,
+  "scope": "reciprocal phase at fixed exponent, supplied threshold",
+  "threshold": "(D+1)/2 supplied live with 22 spectators"
+}

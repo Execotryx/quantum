@@ -1,0 +1,69 @@
+{
+  "assembly_sha256": "27ccb62d03bcba70353d382bb94c5dc636acd00b250c83f976df8d1176842146",
+  "coefficients_sha256": "6f85dc06f21231a5aad2c30c5568bdfdd05675728b4200ea66255a7adf16cef6",
+  "legal_inputs": 3133452,
+  "results": {
+    "26": {
+      "above_90_percent": 44,
+      "failed_inputs": 0,
+      "first_failed_inputs": [],
+      "input_count": 3133452,
+      "minimum_margin_phase64": 24463066,
+      "minimum_margin_x": 1177199,
+      "nonpositive_margins": 0,
+      "projected_remaining_at_39q_33rot_1T": 467.215462212238,
+      "worst_tolerance_fraction": 0.9758600701832102,
+      "worst_x": 1177199
+    },
+    "27": {
+      "above_90_percent": 7,
+      "failed_inputs": 0,
+      "first_failed_inputs": [],
+      "input_count": 3133452,
+      "minimum_margin_phase64": 61350936,
+      "minimum_margin_x": 1263628,
+      "nonpositive_margins": 0,
+      "projected_remaining_at_39q_33rot_1T": 473.34380038401844,
+      "worst_tolerance_fraction": 0.9372763985006329,
+      "worst_x": 1263628
+    },
+    "28": {
+      "above_90_percent": 1,
+      "failed_inputs": 0,
+      "first_failed_inputs": [],
+      "input_count": 3133452,
+      "minimum_margin_phase64": 94779329,
+      "minimum_margin_x": 1249115,
+      "nonpositive_margins": 0,
+      "projected_remaining_at_39q_33rot_1T": 476.24279075265713,
+      "worst_tolerance_fraction": 0.9036581424912787,
+      "worst_x": 1249115
+    },
+    "29": {
+      "above_90_percent": 3,
+      "failed_inputs": 0,
+      "first_failed_inputs": [],
+      "input_count": 3133452,
+      "minimum_margin_phase64": 94779329,
+      "minimum_margin_x": 1249115,
+      "nonpositive_margins": 0,
+      "projected_remaining_at_39q_33rot_1T": 476.24279075265713,
+      "worst_tolerance_fraction": 0.9036581424912787,
+      "worst_x": 1249115
+    },
+    "30": {
+      "above_90_percent": 0,
+      "failed_inputs": 0,
+      "first_failed_inputs": [],
+      "input_count": 3133452,
+      "minimum_margin_phase64": 111556545,
+      "minimum_margin_x": 1249115,
+      "nonpositive_margins": 0,
+      "projected_remaining_at_39q_33rot_1T": 477.32909507767425,
+      "worst_tolerance_fraction": 0.8866043379294736,
+      "worst_x": 1249115
+    }
+  },
+  "scope": "numerical only, same Q28 numerator, one rounded division",
+  "simulator_sha256": "2ee284839765dcbd33fa93d7b0c04456674c90c7fa04571bea5dffe7df3bf2a8"
+}
