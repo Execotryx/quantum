@@ -1,0 +1,72 @@
+{
+  "assembly_hash": "27ccb62d03bcba70353d382bb94c5dc636acd00b250c83f976df8d1176842146",
+  "input_hash": "cc6ae6ed5b04196215949102ed0e673f4c74a63d952964da123541da7be5b748",
+  "input_seed": 192227,
+  "inputs_per_octave": 128,
+  "mode": "all measurement outcomes zero",
+  "windows": [
+    {
+      "first_line": 1,
+      "last_line": 9862,
+      "native_results": [
+        {
+          "matches_zero_outcome_model": true,
+          "planes_sha256": "860d0539fbdd0c364b85aee3ce2b3576fecd46cd18cddd7ef69c47e5913cff6e",
+          "rank_modulo_constant": 39,
+          "seed": 37109
+        },
+        {
+          "matches_zero_outcome_model": true,
+          "planes_sha256": "860d0539fbdd0c364b85aee3ce2b3576fecd46cd18cddd7ef69c47e5913cff6e",
+          "rank_modulo_constant": 39,
+          "seed": 37111
+        }
+      ],
+      "planes_sha256": "860d0539fbdd0c364b85aee3ce2b3576fecd46cd18cddd7ef69c47e5913cff6e",
+      "rank": 39,
+      "witness_after_line": 5948
+    },
+    {
+      "first_line": 9863,
+      "last_line": 10338,
+      "native_results": [
+        {
+          "matches_zero_outcome_model": true,
+          "planes_sha256": "ab905af12aa7b5d660919d77e93be98b36c1a76f30ec7f8b2a3b51e212fde4b3",
+          "rank_modulo_constant": 39,
+          "seed": 37109
+        },
+        {
+          "matches_zero_outcome_model": true,
+          "planes_sha256": "ab905af12aa7b5d660919d77e93be98b36c1a76f30ec7f8b2a3b51e212fde4b3",
+          "rank_modulo_constant": 39,
+          "seed": 37111
+        }
+      ],
+      "planes_sha256": "ab905af12aa7b5d660919d77e93be98b36c1a76f30ec7f8b2a3b51e212fde4b3",
+      "rank": 39,
+      "witness_after_line": 9871
+    },
+    {
+      "first_line": 10339,
+      "last_line": 24410,
+      "native_results": [
+        {
+          "matches_zero_outcome_model": true,
+          "planes_sha256": "90a4afe24dd7353e444586de7a7d6bb46d766e0c23863bdae709a209b9bf6ecc",
+          "rank_modulo_constant": 39,
+          "seed": 37109
+        },
+        {
+          "matches_zero_outcome_model": true,
+          "planes_sha256": "90a4afe24dd7353e444586de7a7d6bb46d766e0c23863bdae709a209b9bf6ecc",
+          "rank_modulo_constant": 39,
+          "seed": 37111
+        }
+      ],
+      "planes_sha256": "90a4afe24dd7353e444586de7a7d6bb46d766e0c23863bdae709a209b9bf6ecc",
+      "rank": 39,
+      "witness_after_line": 10438
+    }
+  ]
+}

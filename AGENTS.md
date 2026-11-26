@@ -272,6 +272,9 @@
   the digit sign. Subtract the fixed half-row, and reverse it with the
   same guard residue. Keep the native arithmetic slice separate from the
   cost of the complete phasing circuit.
+- An incumbent signed-row splice requires its full sign frame and local
+  measurement phase repairs. Prove the incoming carry and source are
+  restored. Recheck the complete width after lowering the row workspace.
 - The source-borrowing ripple restores each operand before reusing it.
   Exclude the active multiplier control from the dirty increment pool
   and repay the same dirty word before leaving the upper lane.

@@ -1,0 +1,34 @@
+{
+  "carry_in_wire": 15,
+  "charged_toffolis_control": 7,
+  "charged_toffolis_rewrite": 13,
+  "checked": "source, incoming carry, sign, eight-bit target, clean scratch, zero phase",
+  "classification": "exhaustive_signed_row_basis_inputs_with_sampled_measurements",
+  "first_line_with_sign_frame": 1506,
+  "inputs_per_seed": 65536,
+  "last_line_with_sign_frame": 1637,
+  "measurement_seeds": [
+    37109,
+    37111
+  ],
+  "screen_sha256": "6f751b959a8e97d7bad851e4b75c0f463f756b9d03ac827b0d0217ccf8c2e42f",
+  "sign_wire": 22,
+  "source_wires": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21
+  ],
+  "target_wires": [
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ]
+}

@@ -72,6 +72,17 @@ before estimating a Litinski-style substitution. A one-third reduction
 at the existing width requires about 737 eligible gates across both paths.
 [Signed-digit measurements and phase screens](../../../docs/degree35-invsqrt-signed-digits-27-11-2026-02-13-17.md)
 
+The incumbent carries 629 unconditional one-Toffoli majority cells and
+149 unconditional controlled swaps. At 39 qubits a one-third saving
+limited to the remaining gates cannot close the gap. The exact source
+splice verifies twelve existing add/subtract rows and their preserved
+sign frames. The borrowed-carry versions add 72 Toffolis and leave the
+peak at 39 qubits. Compare new schedules at the live-width peaks in
+the phasing cleanup before a complete cloud campaign. Native witnesses
+have affine rank 39 at source lines 5,948, 9,871, and 10,438, so test
+changes to which values are retained or recomputed across those cuts.
+[Incumbent carry census and source replay](../../../docs/degree35-invsqrt-incumbent-rows-27-11-2026-02-25-56.md)
+
 ## Verification and delivery
 
 Register a `portfolio-v5` archive with `--at-least-35` after qualifying a full

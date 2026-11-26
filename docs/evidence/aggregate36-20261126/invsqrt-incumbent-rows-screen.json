@@ -1,0 +1,91 @@
+{
+  "assembly_sha256": "27ccb62d03bcba70353d382bb94c5dc636acd00b250c83f976df8d1176842146",
+  "candidate_assembly_sha256": "7b24f097ce1017984db86ac70b894ce3072399c83dfa613b543d368eb7917111",
+  "classification": "source_signed_row_rewrite_and_width_screen",
+  "driver_sha256": "ede41ef3de00262131be8c3d1f259539d0ec6b14fd655eae94d8921d0bf2470a",
+  "majority_cells_by_phase_window": {
+    "after_fine_rotations": 218,
+    "before_fine_rotations": 411,
+    "rotation_window": 0
+  },
+  "signed_row_splices": [
+    {
+      "first_line": 1522,
+      "last_line": 1621,
+      "original_toffolis": 7,
+      "replacement_toffolis": 13
+    },
+    {
+      "first_line": 1654,
+      "last_line": 1753,
+      "original_toffolis": 7,
+      "replacement_toffolis": 13
+    },
+    {
+      "first_line": 1786,
+      "last_line": 1885,
+      "original_toffolis": 7,
+      "replacement_toffolis": 13
+    },
+    {
+      "first_line": 1918,
+      "last_line": 2017,
+      "original_toffolis": 7,
+      "replacement_toffolis": 13
+    },
+    {
+      "first_line": 2050,
+      "last_line": 2149,
+      "original_toffolis": 7,
+      "replacement_toffolis": 13
+    },
+    {
+      "first_line": 2182,
+      "last_line": 2281,
+      "original_toffolis": 7,
+      "replacement_toffolis": 13
+    },
+    {
+      "first_line": 2314,
+      "last_line": 2413,
+      "original_toffolis": 7,
+      "replacement_toffolis": 13
+    },
+    {
+      "first_line": 2446,
+      "last_line": 2545,
+      "original_toffolis": 7,
+      "replacement_toffolis": 13
+    },
+    {
+      "first_line": 2578,
+      "last_line": 2677,
+      "original_toffolis": 7,
+      "replacement_toffolis": 13
+    },
+    {
+      "first_line": 2710,
+      "last_line": 2809,
+      "original_toffolis": 7,
+      "replacement_toffolis": 13
+    },
+    {
+      "first_line": 2842,
+      "last_line": 2941,
+      "original_toffolis": 7,
+      "replacement_toffolis": 13
+    },
+    {
+      "first_line": 2974,
+      "last_line": 3073,
+      "original_toffolis": 7,
+      "replacement_toffolis": 13
+    }
+  ],
+  "unconditional_majority_cells": 629,
+  "width": {
+    "interval_peak": 39,
+    "lent_input_segments": 1,
+    "width": 39
+  }
+}

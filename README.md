@@ -250,6 +250,12 @@ inputs. The slice exceeds the complete inverse-square-root budget of
 **52,119.68** with the current source-built companions.
 [Source research and signed-digit comparison](docs/degree35-invsqrt-signed-digits-27-11-2026-02-13-17.md)
 
+In the 39-qubit source control, twelve matched addition rows already use
+the signed add/subtract structure. Re-emitting those rows with borrowed
+carries passed one trajectory for every legal input. The complete circuit
+used 39 qubits and cost **64,504.29** versus **61,696.30** for the control.
+[Source carry census and native comparison](docs/degree35-invsqrt-incumbent-rows-27-11-2026-02-25-56.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

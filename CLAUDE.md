@@ -97,6 +97,8 @@ Retain rounded-product guard bits for the inverse and check both
 rounding orders when a signed product is negated.
 Truncate signed-digit row magnitudes before applying their sign. Retain
 the fixed midpoint correction and the guard residue through the adjoint.
+Bind incumbent carry substitutions to their complete sign frames and
+measurement repairs. Recheck the full serialized width after the splice.
 Restore the borrowed source after every ripple and exclude the row
 control when temporarily using other input wires for an increment.
 Use `portfolio-v5` for the inclusive score-35 floor. `portfolio-v4` retains
