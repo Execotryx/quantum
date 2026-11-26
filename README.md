@@ -105,6 +105,13 @@ orientation decision with this test leaves at most **22,261 gates**
 for the locator and reversal in the guarded design.
 [Chart-selection budget](docs/aggregate-above-36-dqi-chart-probe-26-11-2026-21-28-00.md)
 
+A blocked locator suffix transform matched 17 sequential reciprocal
+steps on 12 degree-35 inputs. With its summary supplied, it used
+**35,238 controlled products per direction** at **879 qubits** in
+software replay. Prefix generation and the final locator fold remain
+outside that measurement.
+[Blocked locator suffix](docs/aggregate-above-36-dqi-blocked-suffix-26-11-2026-21-36-16.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

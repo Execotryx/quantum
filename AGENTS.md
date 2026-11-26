@@ -106,6 +106,10 @@
 - Price a standalone chart decision both when it is set and when it
   is cleared. The locator-only probe must preserve the compact
   locator, live degree, and evaluator bank.
+- The blocked locator suffix uses a prefolded suffix and two
+  normalized denominator banks. Keep its virtual leading unit and
+  zero implicit, and price summary generation and the final fold
+  separately from the supplied-summary transform.
 - A Givens-order change may move a rotation only across disjoint orbital
   pairs. Preserve the matching angle columns, check reconstructed vectors,
   and price the affected XOR transitions before full loader verification.

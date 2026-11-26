@@ -5,7 +5,7 @@ from typing import Any, NamedTuple
 
 from .field import GF4096
 from .inverse_action import _scale
-from .quotient import FieldProduct, _interpolated_product_range, _interpolation_width
+from .quotient import FieldProduct, _interpolated_product_range, _interpolation_width, _series_inplace, _truncate_inplace
 from .subtower import inverse_xor
 from .tower import _xor_map, multiply_xor
 
@@ -48,14 +48,14 @@ class _ProductBand(NamedTuple):
     first: int
 
 
-def _product_bands(low: int, high: int, stride: int) -> tuple[dict[int, _ProductBand], int]:
+def _product_bands(low: int, high: int, stride: int, first: int) -> tuple[dict[int, _ProductBand], int]:
     """Find profitable convolution bands whose sources lie below this block."""
     bands = {}
     savings = 0
     for residue in range(min(stride, high - low)):
         pairs = [(j - stride * i, i, j)
                  for j in range(low + residue, high, stride)
-                 for i in range(max(1, (j - low) // stride + 1), min(low, (j - 1) // stride + 1))]
+                 for i in range(max(first, (j - low) // stride + 1), min(low, (j - first) // stride + 1))]
         if not pairs:
             continue
         left, right, output = zip(*pairs, strict=True)
@@ -70,37 +70,38 @@ def _product_bands(low: int, high: int, stride: int) -> tuple[dict[int, _Product
 
 
 @cache
-def _power_blocks(length: int, stride: int) -> tuple[tuple[int, int, dict[int, _ProductBand]], ...]:
+def _power_blocks(length: int, stride: int, first: int) -> tuple[tuple[int, int, dict[int, _ProductBand]], ...]:
     # Maximize the savings over scalar products by splitting into contiguous blocks.
     best = [0] * (length + 1)
     cuts = [0] * (length + 1)
     for high in range(1, length + 1):
         for low in range(high):
-            _, savings = _product_bands(low, high, stride)
+            _, savings = _product_bands(low, high, stride, first)
             if best[low] + savings > best[high]:
                 best[high], cuts[high] = best[low] + savings, low
     blocks = []
     high = length
     while high:
         low = cuts[high]
-        bands, _ = _product_bands(low, high, stride)
+        bands, _ = _product_bands(low, high, stride, first)
         blocks.append((low, high, bands))
         high = low
     return tuple(blocks)
 
 
-def _invert_unit_tail(builder: Any, words: list[Any], multiply: FieldProduct) -> None:
-    strides = _inverse_powers(len(words))
+def _invert_unit_tail(builder: Any, words: list[Any], multiply: FieldProduct, *, first: int = 1) -> None:
+    """Invert a unit series whose nonconstant coefficients start at first."""
+    strides = _inverse_powers((len(words) - 1) // first + 1)
     if not strides:
         return
     for stride in strides:
         columns = _frobenius(stride)
-        for low, high, bands in _power_blocks(len(words), stride):
+        for low, high, bands in _power_blocks(len(words), stride, first):
             squared = builder.alloc_qubits(12)
             # Descend through overlapping terms before the cross-block update.
             # Each interpolated band reads only words below the output block.
-            for j in range(high - 1, max(low, stride) - 1, -1):
-                for i in range(1, (j - 1) // stride + 1):
+            for j in range(high - 1, max(low, first * stride) - 1, -1):
+                for i in range(first, (j - first) // stride + 1):
                     source = j - stride * i
                     if source < low and i < low and j % stride in bands:
                         continue
@@ -111,9 +112,9 @@ def _invert_unit_tail(builder: Any, words: list[Any], multiply: FieldProduct) ->
                     i = j // stride
                     _xor_map(builder, words[i], words[j], columns)
             builder.free(squared)
-            for left, right, output, first in bands.values():
+            for left, right, output, coefficient in bands.values():
                 _interpolated_product_range(builder, [words[i] for i in left], [words[i] for i in right],
-                                            [words[i] for i in output], first, multiply, right_columns=columns)
+                                            [words[i] for i in output], coefficient, multiply, right_columns=columns)
 
 
 def _series_inverse(builder: Any, words: list[Any], multiply: FieldProduct) -> None:
@@ -125,6 +126,28 @@ def _series_inverse(builder: Any, words: list[Any], multiply: FieldProduct) -> N
     if tail:
         _scale(builder, constant, [], tail, multiply, undo=False)
     _invert_word(builder, constant)
+
+
+def blocked_suffix_inplace(builder: Any, words: list[Any], previous: list[Any], current: list[Any],
+                           *, adjoint: bool = False, multiply: FieldProduct = multiply_xor) -> None:
+    """Map G to D*G/(1+t²*E*G) on the supplied regular prefix chart.
+
+    The disjoint ascending coefficient banks supply E, whose constant is
+    nonzero, and the positive-degree coefficients of D, whose constant
+    is one. The entire prefolded suffix G is overwritten and the summary
+    banks are preserved.
+    """
+    if not words or not previous or any(len(word) != 12 for word in (*words, *previous, *current)):
+        raise ValueError("blocked suffix requires 12-bit field words and a nonempty previous denominator")
+    if adjoint:
+        _series_inplace(builder, words, current, multiply, adjoint=True)
+    _truncate_inplace(builder, words, previous, multiply, adjoint=False, compact=True)
+    # Invert 1+t²*Z, with Z=E*G. Its constant and linear coefficient
+    # stay one and zero, so neither occupies a field register.
+    _invert_unit_tail(builder, [None, None, *words], multiply, first=2)
+    _truncate_inplace(builder, words, previous, multiply, adjoint=True, compact=True)
+    if not adjoint:
+        _series_inplace(builder, words, current, multiply, adjoint=False)
 
 
 def _continuant_layout(words: list[Any]) -> list[tuple[Any, Any, list[Any], list[Any]]]:

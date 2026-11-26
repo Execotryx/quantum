@@ -11,9 +11,10 @@ import sys
 import numpy as np
 import pytest
 
-from qcompile.dqi.decoder import _divide, _multiply, syndrome
+from qcompile.dqi.decoder import _add, _divide, _multiply, syndrome
 from qcompile.dqi.degree_padding import pad_reversed_banks, padding_factors
 from qcompile.dqi.field import GF4096
+from qcompile.dqi.locator_fraction import blocked_suffix_inplace
 from qcompile.dqi.scan import degree_padded_chart_xor, degree_padded_residue_scan, derivative_reciprocal, evaluator
 from qcompile.io import read_json, sha256, write_json
 from qcompile.official import validate_backend
@@ -89,9 +90,10 @@ def _phase_cases(guarded: bool):
 class _BasisBuilder:
     """Packed value-only gate replay of the emitted reversible pad."""
 
-    def __init__(self, rows):
+    def __init__(self, rows, widths: Sequence[int] | None = None):
         self.data = []
-        widths = [12] * 70 + [6] + [1] * (len(rows[0]) - 71)
+        if widths is None:
+            widths = [12] * 70 + [6] + [1] * (len(rows[0]) - 71)
         for column, width in zip(zip(*rows, strict=True), widths, strict=True):
             for bit in range(width):
                 self.data.append(sum(((word >> bit) & 1) << i for i, word in enumerate(column)))
@@ -149,8 +151,8 @@ def _field_columns(scale: int) -> tuple[int, ...]:
 class _PhaseBuilder(_BasisBuilder):
     """Replay the padding and phase emitters as packed classical trajectories."""
 
-    def __init__(self, rows, seed: int):
-        super().__init__(rows)
+    def __init__(self, rows, seed: int, widths: Sequence[int] | None = None):
+        super().__init__(rows, widths)
         self.shots = len(rows)
         self.phase = 0
         self.controls = [self.full]
@@ -253,6 +255,32 @@ def _original_support(support: dict[int, int], reciprocal: bool) -> dict[int, in
     return recovered
 
 
+def _blocked_case(series: list[int], steps: int):
+    a, b, c, d = [1], [0], [0], [1]
+    residual = series
+    for _ in range(steps):
+        if not residual[0]:
+            return None
+        inverse = [FIELD.inv(residual[0])]
+        for k in range(1, len(residual)):
+            value = 0
+            for i in range(1, k + 1):
+                value ^= FIELD.mul(residual[i], inverse[k - i])
+            inverse.append(FIELD.mul(value, inverse[0]))
+        q, residual = inverse[:2], inverse[2:]
+        a, b, c, d = [0, 0, *b], _add(a, _multiply(b, q, FIELD)), [0, 0, *d], _add(c, _multiply(d, q, FIELD))
+    combined = _add(_multiply(d, series, FIELD), b)
+    combined += [0] * max(0, len(series) - len(combined))
+    assert not any(combined[:2 * steps])
+    lead = d[0]
+    previous = [FIELD.div(value, lead) for value in c[2:]]
+    current = [FIELD.div(value, lead) for value in d[1:]]
+    previous += [0] * (steps - len(previous))
+    current += [0] * (steps - len(current))
+    prefolded = [FIELD.mul(value, lead) for value in combined[2 * steps:len(series)]]
+    return [*previous, *current, *prefolded], [*previous, *current, *residual]
+
+
 def test_reversed_padding_covers_all_value_degrees():
     cases = _cases()
     assert len(cases) == 72
@@ -290,6 +318,39 @@ def test_padded_residues_recover_exact_support():
         assert roots.tolist() == sorted(support)
         recovered = all_evaluations(residue)
         assert {int(j): int(recovered[j]) for j in roots} == support
+
+
+@pytest.mark.slow
+@pytest.mark.parametrize(("degree", "steps"), [(3, 1), (35, 17)])
+def test_blocked_locator_suffix(project_root, monkeypatch, tmp_path, degree, steps):
+    multiply, tensor_hash = _field_product(project_root, monkeypatch, tmp_path)
+    rng = Random(36427)
+    cases = []
+    for _ in range(24):
+        support = {j: rng.randrange(1, 4096) for j in rng.sample(range(4095), degree)}
+        case = _blocked_case(syndrome(support, FIELD)[:2 * degree], steps)
+        if case is not None:
+            cases.append(case)
+        if len(cases) == 12:
+            break
+    assert len(cases) == 12
+    words = [range(i * 12, (i + 1) * 12) for i in range(2 * degree)]
+    widths = [12] * len(words)
+    observed = {}
+    for adjoint in (False, True):
+        builder = _PhaseBuilder([case[int(adjoint)] for case in cases], 36439, widths)
+        expected = _BasisBuilder([case[int(not adjoint)] for case in cases], widths).data
+        blocked_suffix_inplace(builder, words[2 * steps:], words[:steps], words[steps:2 * steps],
+                               adjoint=adjoint, multiply=multiply)
+        assert builder.data[:len(expected)] == expected and not any(builder.data[len(expected):])
+        assert builder.phase == 0 and not builder.bits
+        observed["inverse" if adjoint else "forward"] = {
+            "qubits": len(builder.data), "controlled_products": builder.charged_ands,
+        }
+    write_json(tmp_path / "blocked-locator-suffix.json", {
+        "scope": "software suffix transformation with supplied normalized denominator summary and prefolded suffix",
+        "degree": degree, "steps": steps, "shots": len(cases), "tensor_sha256": tensor_hash, "observed": observed,
+    })
 
 
 @pytest.mark.slow

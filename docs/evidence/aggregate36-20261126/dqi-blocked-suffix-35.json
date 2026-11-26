@@ -1,0 +1,17 @@
+{
+  "degree": 35,
+  "observed": {
+    "forward": {
+      "controlled_products": 35238,
+      "qubits": 879
+    },
+    "inverse": {
+      "controlled_products": 35238,
+      "qubits": 879
+    }
+  },
+  "scope": "software suffix transformation with supplied normalized denominator summary and prefolded suffix",
+  "shots": 12,
+  "steps": 17,
+  "tensor_sha256": "19ee4259f4d20a779d2484b3dea635d2e0efd23fce39c859e70228f668e53093"
+}
