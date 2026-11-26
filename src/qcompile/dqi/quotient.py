@@ -53,7 +53,8 @@ def _product_range(builder: Any, left: Sequence[Any], right: Sequence[Any],
         return
     stop = first + len(target)
     pairs = [(i, j) for i in range(len(left))
-             for j in range(max(0, first - i), min(len(right), stop - i))]
+             for j in range(max(0, first - i), min(len(right), stop - i))
+             if left[i] is not None and right[j] is not None]
     length = len(left) + len(right) - 1
     if len(pairs) <= length or length > _FIELD.order:
         for i, j in pairs:
@@ -66,7 +67,8 @@ def _product_range(builder: Any, left: Sequence[Any], right: Sequence[Any],
             for words, destination in ((left, a), (right, b)):
                 scale = 1
                 for word in words:
-                    _scaled_xor(builder, word, destination, scale)
+                    if word is not None:
+                        _scaled_xor(builder, word, destination, scale)
                     scale = _FIELD.mul(scale, point)
 
         evaluate()
@@ -94,11 +96,11 @@ def _high_reduce(builder: Any, high: Sequence[Any], modulus: Sequence[Any], mult
                  *, adjoint: bool) -> None:
     """Turn the high product words into the quotient in-place, or undo it."""
     size, degree = len(high), len(modulus)
-    mid = _reduction_split(size)[1] if size <= 34 else size // 2
+    mid = _reduction_split(size)[1] if size <= min(34, degree + 1) else 0
     if not mid:
         order = range(size) if adjoint else range(size - 1, -1, -1)
         for i in order:
-            for j in range(i):
+            for j in range(max(0, i - degree), i):
                 multiply(builder, high[i], modulus[degree + j - i], high[j])
         return
 
@@ -141,40 +143,52 @@ def quotient_multiply_xor(builder: Any, left: list[Any], right: list[Any],
         builder.free(word)
 
 
-def _truncate_inplace(builder: Any, words: list[Any], modulus: list[Any], multiply: FieldProduct,
-                      *, adjoint: bool) -> None:
-    """Multiply by the modulus's low polynomial modulo z**len(words)."""
-    inverse = builder.alloc_qubits(12)
-    inverse_xor(builder, modulus[0], inverse)
-    scale, clear = (inverse, modulus[0]) if adjoint else (modulus[0], inverse)
-
+def _series_inplace(builder: Any, words: list[Any], tail: Sequence[Any], multiply: FieldProduct,
+                    *, adjoint: bool, scales: tuple[Any, Any] | None = None) -> None:
+    """Multiply by a truncated series or invert it. No scales means unit constant."""
     def apply(bank: list[Any]) -> None:
         size = len(bank)
         split = _reduction_split(size)[1] if size <= 35 else size // 2
         if not split:
-            work = builder.alloc_qubits(12)
+            work = builder.alloc_qubits(12) if scales is not None else None
             order = range(size) if adjoint else range(size - 1, -1, -1)
             for i in order:
                 word = bank[i]
+                sources = range(max(0, i - len(tail)), i)
                 if adjoint:
-                    for j in range(i):
-                        multiply(builder, bank[j], modulus[i - j], word)
-                multiply(builder, scale, word, work)
-                erase_product(builder, clear, work, word)
-                builder.swap(word, work)
+                    for j in sources:
+                        factor = tail[i - j - 1]
+                        if factor is not None:
+                            multiply(builder, bank[j], factor, word)
+                if scales is not None and work is not None:
+                    multiply(builder, scales[0], word, work)
+                    erase_product(builder, scales[1], work, word)
+                    builder.swap(word, work)
                 if not adjoint:
-                    for j in range(i):
-                        multiply(builder, bank[j], modulus[i - j], word)
-            builder.free(work)
+                    for j in sources:
+                        factor = tail[i - j - 1]
+                        if factor is not None:
+                            multiply(builder, bank[j], factor, word)
+            if work is not None:
+                builder.free(work)
             return
         mid = size - split
         low, upper = bank[:mid], bank[mid:]
         first, last = (low, upper) if adjoint else (upper, low)
         apply(first)
-        _product_range(builder, low, modulus[1:size], upper, mid - 1, multiply)
+        # Only the lower coefficients of the replicated cross product fit the bank.
+        _product_range(builder, low, tail[:size - 1], upper[:len(tail)], mid - 1, multiply)
         apply(last)
 
     apply(words)
+
+
+def _truncate_inplace(builder: Any, words: list[Any], modulus: list[Any], multiply: FieldProduct,
+                      *, adjoint: bool) -> None:
+    inverse = builder.alloc_qubits(12)
+    inverse_xor(builder, modulus[0], inverse)
+    scales = (inverse, modulus[0]) if adjoint else (modulus[0], inverse)
+    _series_inplace(builder, words, modulus[1:], multiply, adjoint=adjoint, scales=scales)
     inverse_xor(builder, modulus[0], inverse)
     builder.free(inverse)
 

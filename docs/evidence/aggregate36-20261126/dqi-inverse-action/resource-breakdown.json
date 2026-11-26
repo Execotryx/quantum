@@ -1,0 +1,30 @@
+{
+  "classification": "compiler_resource_attribution_cross_checked_with_native_totals",
+  "observations": [
+    {
+      "adjoint": false,
+      "exit_live": 840,
+      "modeled_gates": 153768,
+      "modeled_qubits": 879,
+      "stages": {
+        "_packed_divide": 22848,
+        "_reconstruct": 97566,
+        "_scale": 31212,
+        "outer_fold": 2142
+      }
+    },
+    {
+      "adjoint": true,
+      "exit_live": 840,
+      "modeled_gates": 153768,
+      "modeled_qubits": 879,
+      "stages": {
+        "_packed_divide": 22848,
+        "_reconstruct": 97566,
+        "_scale": 31212,
+        "outer_fold": 2142
+      }
+    }
+  ],
+  "source_sha256": "d6fec5fa4c2809b8973e0d96ff24d647c2fc277888c51372d8523fef58f63916"
+}

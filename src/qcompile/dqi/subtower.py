@@ -130,7 +130,34 @@ def inverse64_xor(builder: Any, source: Any, target: Any, maps: Subtower) -> Non
         builder.free(register)
 
 
-def inverse_xor(builder: Any, source: Any, target: Any) -> None:
+@cache
+def _basis_elimination(columns: tuple[int, ...]) -> tuple[tuple[int, int, bool], ...]:
+    """Reversible row operations reducing the coordinate map to identity."""
+    rows = [sum((column >> i & 1) << j for j, column in enumerate(columns))
+            for i in range(len(columns))]
+    gates = []
+    for i in range(len(rows)):
+        pivot = next(j for j in range(i, len(rows)) if rows[j] >> i & 1)
+        if pivot != i:
+            rows[i], rows[pivot] = rows[pivot], rows[i]
+            gates.append((i, pivot, True))
+        for j, row in enumerate(rows):
+            if j != i and row >> i & 1:
+                rows[j] ^= rows[i]
+                gates.append((i, j, False))
+    return tuple(gates)
+
+
+def _change_basis(builder: Any, words: Any, columns: tuple[int, ...], *, undo: bool) -> None:
+    gates = _basis_elimination(columns)
+    for i, j, exchange in (gates if undo else reversed(gates)):
+        if exchange:
+            builder.swap(words[i], words[j])
+        else:
+            builder.cx(words[i], words[j])
+
+
+def inverse_xor(builder: Any, source: Any, target: Any, *, borrow_source: bool = False) -> None:
     """XOR the GF(4096) inverse on disjoint registers, with clean scratch."""
     if len(source) != 12 or len(target) != 12:
         raise ValueError("subtower inversion requires two 12-bit registers")
@@ -141,11 +168,14 @@ def inverse_xor(builder: Any, source: Any, target: Any) -> None:
     square = tuple(linear(outer.coordinates, field.mul(v, v)) for v in low_basis)
     square_norm = tuple(linear(outer.coordinates, field.mul(outer.quadratic_norm, field.mul(v, v)))
                         for v in low_basis)
-    ab = builder.alloc_qubits(12)
+    ab = source if borrow_source else builder.alloc_qubits(12)
     a, b = ab[:6], ab[6:]
     norm = builder.alloc_qubits(6)
     inv = builder.alloc_qubits(6)
-    _xor_map(builder, source, ab, outer.coordinates)
+    if borrow_source:
+        _change_basis(builder, ab, outer.coordinates, undo=False)
+    else:
+        _xor_map(builder, source, ab, outer.coordinates)
     _xor_map(builder, a, norm, square)
     _xor_map(builder, b, norm, square_norm)
     _product_xor(builder, a, b, norm, outer.subfield_terms)
@@ -159,6 +189,11 @@ def inverse_xor(builder: Any, source: Any, target: Any) -> None:
     _xor_map(builder, a, norm, square)
     _xor_map(builder, b, norm, square_norm)
     erase_bilinear(builder, a, b, norm, outer.subfield_terms)
-    _xor_map(builder, source, ab, outer.coordinates)
-    for register in (inv, norm, ab):
+    if borrow_source:
+        _change_basis(builder, ab, outer.coordinates, undo=True)
+    else:
+        _xor_map(builder, source, ab, outer.coordinates)
+    for register in (inv, norm):
         builder.free(register)
+    if not borrow_source:
+        builder.free(ab)

@@ -70,6 +70,9 @@
   and the exact prepared product on inverse entry. Repay each measured
   product using the live factors before overwriting either factor. Keep the
   fixed-degree prepared scan separate from a degree-routed decoder.
+- The two-bank Forney transform assumes its fixed half-degree Euclidean chart.
+  Preserve the high quotient words through reconstruction and restore the
+  source basis after borrowing a scale-factor register for field inversion.
 - Before a full portfolio run, exercise native ANGLE serialization on its
   temporary filesystem. Keep prior raw receipts and the original salts
   when a public development comparison needs an infrastructure retry.
@@ -246,6 +249,8 @@
   Preserve unresolved measured gates until complete actual verifier results exist.
 - DQI failure counts are the sum of disjoint `value_errors` and `phase_errors`.
   Backend confirmation mappings may use a list of distinct source counter paths.
+- Use `Ubuntu-Quantum-E` for WSL runs on the Windows checkout where it is
+  registered. Keep large temporary artifacts on its E-backed disk.
 - Run Pyright on changed Python files and run relevant tests in Ubuntu WSL with
   Python 3.13 for the supplied Linux kickmix binary. Use the frozen dependency lock.
   For the isolated environment, pass `--pythonpath vendor/linux-env/bin/python`
