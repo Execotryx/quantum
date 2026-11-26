@@ -93,6 +93,9 @@
   with an implicit monic head and zero tails. Use root-free quadratics
   with distinct slopes. Both banks must receive the same factors. The
   padded projective scan requires a regular derivative chart.
+- The binary pad composes the geometric factor blocks with their
+  matching coefficient dilations. Before erasing a controlled product,
+  temporarily recover the source coordinates that created it.
 - A Givens-order change may move a rotation only across disjoint orbital
   pairs. Preserve the matching angle columns, check reconstructed vectors,
   and price the affected XOR transitions before full loader verification.

@@ -83,9 +83,12 @@ lower-weight routing gap open.
 Controlled DQI padding now accepts compact locator and evaluator banks
 at every degree from zero through 35. Software gate replay confirmed
 both directions, and the padded derivative chart was regular on **2,043
-of 2,048** sampled inputs. The emitted phase composition still needs
-native verification, a locator producer, and an exceptional-chart route.
+of 2,048** sampled inputs. A binary padding schedule reduced the
+controlled products per direction from **13,464** to **4,584**. The
+emitted phase composition still needs native verification, a locator
+producer, and an exceptional-chart route.
 [Degree padding and resource bounds](docs/aggregate-above-36-dqi-degree-padding-26-11-2026-20-57-28.md)
+· [Binary padding comparison](docs/aggregate-above-36-dqi-binary-padding-26-11-2026-21-04-08.md)
 
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 

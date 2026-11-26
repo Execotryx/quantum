@@ -3,50 +3,88 @@
 from functools import cache
 from typing import Any
 
+from .decoder import _multiply
 from .field import GF4096
 from .quotient import _scaled_xor
+from .subtower import _change_basis
+
+
+_FIELD = GF4096()
+_DILATION = 137
 
 
 @cache
 def padding_factors() -> tuple[tuple[int, int], ...]:
     """Choose 17 distinct dilations of one monic irreducible quadratic."""
-    field = GF4096()
-    image = {field.mul(value, value) ^ value for value in range(4096)}
+    image = {_FIELD.mul(value, value) ^ value for value in range(4096)}
     constant = next(value for value in range(4096) if value not in image)
-    slopes = field.exp[:17 * 137:137]
-    return tuple((slope, field.mul(constant, field.mul(slope, slope))) for slope in slopes)
+    slopes = _FIELD.exp[:17 * _DILATION:_DILATION]
+    return tuple((slope, _FIELD.mul(constant, _FIELD.mul(slope, slope))) for slope in slopes)
 
 
-def _toggle_below(builder: Any, word: Any, stop: int, target: Any) -> None:
-    """XOR the comparison using the disjoint binary prefixes below stop."""
-    for bit in range(len(word)):
-        if stop & (1 << bit):
-            builder.flip_if_equal(word[bit:], (stop >> bit) - 1, target=target)
+@cache
+def _blocks() -> tuple[tuple[int, ...], ...]:
+    blocks = []
+    prefix = [1]
+    for count, (linear, constant) in enumerate(padding_factors()[:16], 1):
+        prefix = _multiply(prefix, [1, linear, constant], _FIELD)
+        if count & (count - 1) == 0:
+            blocks.append(tuple(prefix))
+    return tuple(blocks)
 
 
-def _multiply_reversed(builder: Any, bank: list[Any], linear: int, constant: int, control: Any,
-                       work: Any, *, leading_one: bool, adjoint: bool) -> None:
+@cache
+def _coordinates(scale: int) -> tuple[int, ...]:
+    return tuple(_FIELD.fixed_map(scale))
+
+
+def _controlled_block(builder: Any, bank: list[Any], prefix: tuple[int, ...], shift: int,
+                      source_count: int, control: Any, work: Any, *,
+                      leading_one: bool, adjoint: bool) -> None:
+    """Apply F(z) g(alpha**shift z), with a possibly implicit leading unit."""
     def add_lead() -> None:
-        for word, coefficient in ((bank[0], linear), (bank[1], constant)):
+        for word, coefficient in zip(bank, prefix[1:]):
             for bit, target in enumerate(word):
                 if coefficient >> bit & 1:
                     builder.cx(control, target)
 
     if leading_one and adjoint:
         add_lead()
-    # An enabled step starts at degree at most 33. Both high reversed
-    # tail slots are zero on that branch and have no outgoing products.
-    order = range(len(bank) - 2) if adjoint else range(len(bank) - 3, -1, -1)
+    order = range(source_count) if adjoint else range(source_count - 1, -1, -1)
     for index in order:
+        exponent = shift * (index + int(leading_one))
+        scale = _FIELD.exp[exponent % 4095]
+        diagonal = _FIELD.exp[-exponent % 4095] if adjoint else scale
+        if diagonal == 1 and len(prefix) == 1:
+            continue
         source = bank[index]
         for bit, helper in zip(source, work, strict=True):
             builder.init_and(control, bit, helper)
-        _scaled_xor(builder, work, bank[index + 1], linear)
-        _scaled_xor(builder, work, bank[index + 2], constant)
+        for target, coefficient in zip(bank[index + 1:], prefix[1:]):
+            _scaled_xor(builder, work, target, coefficient if adjoint else _FIELD.mul(scale, coefficient))
+        if diagonal != 1:
+            _scaled_xor(builder, work, source, diagonal ^ 1)
+            # Erase the product in its original basis. The temporary
+            # basis change also cancels when the control is zero.
+            _change_basis(builder, source, _coordinates(diagonal), undo=True)
         for bit, helper in zip(source, work, strict=True):
             builder.del_and(control, bit, helper)
+        if diagonal != 1:
+            _change_basis(builder, source, _coordinates(diagonal), undo=False)
     if leading_one and not adjoint:
         add_lead()
+
+
+def _toggle_count(builder: Any, degree: Any, count: Any) -> None:
+    half = degree[1:]
+    # Subtract from binary 10001. The borrows into bits 2, 3, 4
+    # are the ORs of the intervening bits starting at bit 1.
+    builder.cx(half, count)
+    builder.x(count[0])
+    builder.cx(half[1], count[2])
+    builder.x(count[3])
+    builder.flip_if_equal(half[1:3], 0, target=count[3])
+    builder.flip_if_equal(half[1:4], 0, target=count[4])
 
 
 def pad_reversed_banks(builder: Any, locator: list[Any], evaluator: list[Any], degree: Any,
@@ -63,16 +101,28 @@ def pad_reversed_banks(builder: Any, locator: list[Any], evaluator: list[Any], d
         raise ValueError("fixed-width padding requires two 35-word banks and six degree bits")
     if any(len(word) != 12 for bank in (locator, evaluator) for word in bank):
         raise ValueError("padding requires 12-bit field words")
-    # Multiplying by a quadratic does not change parity. Only the five
-    # high degree bits choose how many quadratics to apply.
-    half_degree = degree[1:]
-    indexed = tuple(enumerate(padding_factors()))
-    flag = builder.alloc_qubits(1)[0]
+    # For F_k the product of the first k factors, let T_k(g) =
+    # F_k(z) g(alpha**(137*k) z). Then T_i T_j = T_(i+j).
+    # Pre-scaling by the inverse dilation leaves exactly F_k(z) g(z).
+    count = builder.alloc_qubits(5)
+    _toggle_count(builder, degree, count)
     work = builder.alloc_qubits(12)
-    for index, (linear, constant) in reversed(indexed) if adjoint else indexed:
-        _toggle_below(builder, half_degree, 17 - index, flag)
-        _multiply_reversed(builder, locator, linear, constant, flag, work, leading_one=True, adjoint=adjoint)
-        _multiply_reversed(builder, evaluator, linear, constant, flag, work, leading_one=False, adjoint=adjoint)
-        _toggle_below(builder, half_degree, 17 - index, flag)
+    powers = [(flag, 1 << bit, prefix) for bit, (flag, prefix) in enumerate(zip(count, _blocks(), strict=True))]
+    stages: list[tuple[Any, int, tuple[int, ...], int]] = [
+        (flag, size, (1,), -size * _DILATION) for flag, size, _ in powers[1:]
+    ]
+    # Cancel the first block's pre-scaling against its dilation.
+    flag, size, prefix = powers[0]
+    stages.append((flag, size, prefix, 0))
+    stages += [(flag, size, prefix, size * _DILATION) for flag, size, prefix in powers[1:]]
+    for flag, size, prefix, shift in reversed(stages) if adjoint else stages:
+        # With this bit enabled, at least size factors remain before the
+        # block. The preceding reversed prefix has at most 35-2*size words.
+        capacity = 35 - 2 * size
+        _controlled_block(builder, locator, prefix, shift, capacity, flag, work,
+                          leading_one=True, adjoint=adjoint)
+        _controlled_block(builder, evaluator, prefix, shift, capacity, flag, work,
+                          leading_one=False, adjoint=adjoint)
     builder.free(work)
-    builder.free(flag)
+    _toggle_count(builder, degree, count)
+    builder.free(count)

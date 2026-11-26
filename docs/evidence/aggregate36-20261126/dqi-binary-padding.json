@@ -1,0 +1,61 @@
+{
+  "candidate_source_sha256": "cb46dec27b886d7e5675428ed2863ff3d0ea371818caf277e87b73a0d50c1ff5",
+  "classification": "matched_value_replay_and_emitter_instruction_count",
+  "control_source_sha256": "f7ebd49045883be778f3b462c080b795e670acf4ee98a2217ec4517dd74a599c",
+  "degrees": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35
+  ],
+  "observations": {
+    "binary": {
+      "comparators_forward": 4,
+      "comparison_scratch_excluded_from_value_model": true,
+      "controlled_products_forward": 4584,
+      "explicit_cnot_bits_forward": 173090,
+      "explicit_swap_calls_forward": 2620
+    },
+    "sequential": {
+      "comparators_forward": 70,
+      "comparison_scratch_excluded_from_value_model": true,
+      "controlled_products_forward": 13464,
+      "explicit_cnot_bits_forward": 163413,
+      "explicit_swap_calls_forward": 0
+    }
+  },
+  "phase": "not simulated by the value replay",
+  "shots": 72
+}

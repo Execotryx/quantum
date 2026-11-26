@@ -92,6 +92,12 @@ class _BasisBuilder:
             for left, right in zip(source, target, strict=True):
                 self.cx(left, right)
 
+    def x(self, target):
+        self.data[target] ^= self.full
+
+    def swap(self, left, right):
+        self.data[left], self.data[right] = self.data[right], self.data[left]
+
     def init_and(self, left, right, target):
         assert self.data[target] == 0
         self.data[target] = self.data[left] & self.data[right]
@@ -113,7 +119,7 @@ def test_reversed_padding_covers_all_value_degrees():
     degree = range(840, 846)
     pad_reversed_banks(builder, words[:35], words[35:], degree)
     assert builder.data[:size] == _BasisBuilder(padded).data
-    assert builder.charged_ands == 17 * 33 * 24
+    assert builder.charged_ands == 4_584
     pad_reversed_banks(builder, words[:35], words[35:], degree, adjoint=True)
     assert builder.data[:size] == _BasisBuilder(orig).data
     assert not any(builder.data[size:])

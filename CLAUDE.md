@@ -57,6 +57,8 @@ and restores the two quotient heads after each recursive solve.
 The controlled pad expects compact reversed coefficients and zero
 tails. Use the same root-free factors for locator and evaluator and
 restore both banks and the degree after the scan.
+The binary pad pairs each geometric factor block with its dilation.
+Erase its product while the original source coordinates are recoverable.
 Preserve angle columns when commuting disjoint Givens rotations.
 Price both adjacent XOR transitions before promoting a new loader order.
 Keep raw receipts and the original salt when retrying a public comparison.
