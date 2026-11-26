@@ -7,7 +7,7 @@ import pytest
 
 from qcompile.component_confirmations import BENCHMARKS, HYBRID_COVERAGE, component_hashes
 from qcompile.io import sha256, write_json
-from qcompile.portfolio import ABOVE_34, ABOVE_35, ABOVE_36, bind_lineage, clears_target, portfolio_target
+from qcompile.portfolio import ABOVE_34, ABOVE_35, ABOVE_36, AT_LEAST_35, bind_lineage, clears_target, portfolio_target
 
 
 def test_portfolio_binds_two_builds_and_each_component(tmp_path):
@@ -42,6 +42,11 @@ def test_portfolio_binds_two_builds_and_each_component(tmp_path):
         successor = {"artifact_hashes": members, **bind_lineage(lineage, members, minimum_score=target)}
         assert successor["format"] == version
         assert portfolio_target(successor) == target
+    inclusive = {"artifact_hashes": members, **bind_lineage(lineage, members, minimum_score=35, inclusive=True)}
+    assert inclusive["format"] == AT_LEAST_35
+    assert portfolio_target(inclusive) == 35
+    with pytest.raises(ValueError, match="score target"):
+        portfolio_target({**inclusive, "minimum_score": 36})
 
     for key, value in (("minimum_score", 20), ("minimum_score", 35), ("minimum_score", 36),
                        ("format", "portfolio-v999"), ("components", {})):
@@ -70,6 +75,14 @@ def test_above_35_rejects_exact_break_even_despite_rounded_score():
     assert not clears_target(nextafter(35, float("inf")), 35, baselines, costs)
 
 
+def test_inclusive_35_accepts_exact_boundary_and_rejects_shortfall():
+    baselines = dict.fromkeys(BENCHMARKS, 35)
+    costs = dict.fromkeys(BENCHMARKS, 1.0)
+    assert clears_target(nextafter(35, 0), 35, baselines, costs, inclusive=True)
+    costs["dqi"] = nextafter(1, float("inf"))
+    assert not clears_target(nextafter(35, float("inf")), 35, baselines, costs, inclusive=True)
+
+
 def test_portfolio_preflight_reports_native_serialization_failure(project_root, tmp_path, monkeypatch):
     monkeypatch.syspath_prepend(str(project_root / "tools"))
     angle_summary = import_module("hybrid_preflight").angle_summary
@@ -92,9 +105,9 @@ def test_portfolio_preflight_reports_native_serialization_failure(project_root, 
     assert calls == ["angle_k_14.kmb"]
 
 
-@pytest.mark.parametrize("minimum_score,version", [(34, ABOVE_34), (35, ABOVE_35), (36, ABOVE_36)])
-@pytest.mark.parametrize("margin", [0, 1])
-def test_certificate_requires_both_role_scores_strictly_above_target(
+@pytest.mark.parametrize("minimum_score,version", [(34, ABOVE_34), (35, ABOVE_35), (36, ABOVE_36), (35, AT_LEAST_35)])
+@pytest.mark.parametrize("margin", [-1, 0, 1])
+def test_certificate_requires_both_role_scores_to_meet_registered_target(
     project_root, tmp_path, monkeypatch, minimum_score, version, margin
 ):
     monkeypatch.syspath_prepend(str(project_root / "tools"))
@@ -150,10 +163,13 @@ def test_certificate_requires_both_role_scores_strictly_above_target(
             "status": "go", "aggregate": score, "costs": costs,
         })
     certificate = tmp_path / "certificate.json"
-    if margin == 0:
-        with pytest.raises(ValueError, match=f"confirmation.*above {minimum_score}"):
+    inclusive = version == AT_LEAST_35
+    if margin < 0 or (margin == 0 and not inclusive):
+        criterion = "at least" if inclusive else "above"
+        with pytest.raises(ValueError, match=f"confirmation.*{criterion} {minimum_score}"):
             audit(registration, archive, preflight, tmp_path, certificate)
         assert not certificate.exists()
     else:
         audit(registration, archive, preflight, tmp_path, certificate)
-        assert f"verified_above_{minimum_score}" in certificate.read_text()
+        expected = "verified_at_least_35" if inclusive else f"verified_above_{minimum_score}"
+        assert expected in certificate.read_text()

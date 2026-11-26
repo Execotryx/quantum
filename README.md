@@ -195,13 +195,20 @@ measured handoff and blocked suffix transform together exceed the
 current gate allowance for locator construction and cleanup.
 [Raw syndrome suffix handoff](docs/aggregate-above-36-dqi-raw-suffix-prefold-26-11-2026-22-24-45.md)
 
-The degree-35 development lane now uses the selected open controls and a
-strict **above-35** portfolio gate. The source-backed companion costs allow
-fewer than **274,327.64 mean DQI gates** at 888 qubits and zero failures.
+The degree-35 development lane uses the selected open controls and an
+inclusive **35-point** portfolio gate. The source-backed companion costs
+allow about **274,327.64 mean DQI gates** at 888 qubits and zero failures.
 The current supplied-tape phase leaves at most **20,476.64 gates** before
 native equality lowering, raw-syndrome extraction, and recovery. The
-submission archive requires both full cloud verifier roles to clear 35.
-[Degree-35 control selection and budget](docs/degree35-above35-26-11-2026-22-39-51.md)
+submission archive requires both full cloud verifier roles to reach at
+least 35. The highest complete cloud comparison is **33.20483975**.
+[Degree-35 controls, acceptance, and remaining work](docs/degree35-inclusive-27-11-2026-00-48-55.md)
+
+A full-input replay of Tony Li's 39-qubit inverse-square-root control
+bounded the possible margin gain from refitting its existing rotations.
+Each of the four smallest rotations failed the removal screen even after
+refitting the others within the registered bounds.
+[Exact phase-margin certificates](docs/evidence/aggregate36-20261126/invsqrt-fixed-predicate-margin.json)
 
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 

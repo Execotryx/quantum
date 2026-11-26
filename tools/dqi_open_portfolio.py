@@ -14,7 +14,7 @@ from qcompile.contract import load_contract
 from qcompile.experiments import record_lock
 from qcompile.io import identity, read_json, sha256, write_json
 from qcompile.official import validate_backend, verify_candidate
-from qcompile.portfolio import bind_lineage, clears_target, portfolio_target
+from qcompile.portfolio import AT_LEAST_35, bind_lineage, clears_target, portfolio_target
 from qcompile.reference.scoring import aggregate
 
 CONTRACT = Path("contracts/contract.json")
@@ -26,7 +26,9 @@ MEMBERS = ("invsqrt.kmb", "dfthcsos/submission.npz", *(f"dfthcsos/angle_k_{i}.km
 
 
 def prepare(member: Path, publisher: Path, roots: tuple[Path, Path], backend: Path,
-            ledger: Path, output: Path, *, minimum_score: int = 20) -> None:
+            ledger: Path, output: Path, *, minimum_score: int = 20, inclusive: bool = False) -> None:
+    if inclusive and minimum_score != 35:
+        raise ValueError("The inclusive portfolio tier requires a score floor of 35")
     settings = read_json(backend)
     validate_backend(settings)
     dqi = read_json(member)
@@ -44,7 +46,7 @@ def prepare(member: Path, publisher: Path, roots: tuple[Path, Path], backend: Pa
         if ({name: item["sha256"] for name, item in second.items()} != expected
                 or expected.get("dqi.kmb") != dqi["sha256"]):
             raise ValueError("Independent builds differ or DQI is not campaign-qualified")
-        bindings = bind_lineage(publisher, expected, minimum_score=minimum_score)
+        bindings = bind_lineage(publisher, expected, minimum_score=minimum_score, inclusive=inclusive)
         builds = [{name: Path(item["path"]) for name, item in build.items()} for build in (first, second)]
         source_pin = {"lineage_manifest_sha256": sha256(publisher)}
     else:
@@ -146,7 +148,9 @@ def measure(registration: Path, archive: Path, backend: Path, output: Path, role
                 and has_full_hybrid_coverage(report, candidate_coverage(artifacts)))
     costs = report["official_results"]["costs"] if complete else None
     score = aggregate(record["baseline_costs"], costs) if costs else None
-    passed = costs is not None and score is not None and clears_target(score, target, record["baseline_costs"], costs)
+    passed = costs is not None and score is not None and clears_target(
+        score, target, record["baseline_costs"], costs, inclusive=record.get("format") == AT_LEAST_35,
+    )
     write_json(output / "decision.json", {
         "status": "go" if passed else "no_go",
         "registration_sha256": sha256(registration), "archive_sha256": record["archive_sha256"],
@@ -166,6 +170,8 @@ def main() -> None:
                          help="Register a version-2 portfolio with a strict score target of 34")
     targets.add_argument("--above-35", dest="minimum_score", action="store_const", const=35,
                          help="Register a version-4 portfolio with a strict score target of 35")
+    targets.add_argument("--at-least-35", action="store_true",
+                         help="Register a version-5 portfolio with an inclusive score floor of 35")
     targets.add_argument("--above-36", dest="minimum_score", action="store_const", const=36,
                          help="Register a version-3 portfolio with a strict score target of 36")
     verify = commands.add_parser("measure")
@@ -175,7 +181,7 @@ def main() -> None:
     args = parser.parse_args()
     if args.action == "prepare":
         prepare(args.member, args.publisher, (args.first, args.second), args.backend, args.ledger,
-                args.output, minimum_score=args.minimum_score)
+                args.output, minimum_score=35 if args.at_least_35 else args.minimum_score, inclusive=args.at_least_35)
     else:
         measure(args.registration, args.archive, args.backend, args.output, args.role)
 

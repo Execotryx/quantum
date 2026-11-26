@@ -7,13 +7,14 @@ from pathlib import Path
 from qcompile.artifacts import hashes
 from qcompile.component_confirmations import HYBRID_COVERAGE
 from qcompile.io import read_json, sha256, write_json
-from qcompile.portfolio import clears_target, portfolio_target
+from qcompile.portfolio import AT_LEAST_35, clears_target, portfolio_target
 from qcompile.reference.scoring import aggregate
 
 
 def audit(registration: Path, archive: Path, structural: Path, evidence: Path, output: Path) -> None:
     record = read_json(registration)
     target = portfolio_target(record)
+    inclusive = record.get("format") == AT_LEAST_35
     archive_hash, registration_hash = sha256(archive), sha256(registration)
     shape = read_json(structural)
     coverage = shape["expected_full_coverage"]
@@ -62,16 +63,18 @@ def audit(registration: Path, archive: Path, structural: Path, evidence: Path, o
         ):
             raise ValueError(f"{role} is not a complete full metric result for this archive")
         score = aggregate(record["baseline_costs"], worker["costs"])
-        if (decision["status"] != "go" or not clears_target(score, target, record["baseline_costs"], worker["costs"])
+        if (decision["status"] != "go" or not clears_target(
+                score, target, record["baseline_costs"], worker["costs"], inclusive=inclusive)
                 or worker["costs"] != decision["costs"]
                 or not isclose(score, decision["aggregate"], rel_tol=1e-12)):
-            raise ValueError(f"{role} did not independently establish an aggregate above {target}")
+            criterion = "at least" if inclusive else "above"
+            raise ValueError(f"{role} did not independently establish an aggregate {criterion} {target}")
         verified[role] = {
             "aggregate": score, "costs": worker["costs"], "coverage": worker["coverage_counts"],
             "verification_sha256": sha256(verification_path), "decision_sha256": sha256(decision_path),
         }
     certificate = {
-        "status": f"verified_above_{target}",
+        "status": "verified_at_least_35" if inclusive else f"verified_above_{target}",
         "archive_sha256": archive_hash,
         "archive_bytes": archive.stat().st_size,
         "registration_sha256": registration_hash,
