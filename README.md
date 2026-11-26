@@ -120,6 +120,14 @@ generation, normalization for the phase stage, and exceptional routing
 remain outside the measurement.
 [Projective locator fold](docs/aggregate-above-36-dqi-projective-continuant-26-11-2026-21-45-40.md)
 
+The supplied degree-35 quotient tape now composes with the guarded phase
+scan and restores the tape at **888 qubits** in software replay. The full
+composition uses **269,259 explicit ANDs** before comparison lowering.
+That exceeds the strict **256,016.70-gate** DQI ceiling at the public
+companion costs. Raw-syndrome extraction and nonregular-chart recovery
+still need to fit the complete portfolio.
+[Degree-35 phase handoff](docs/aggregate-above-36-dqi-projective-handoff-26-11-2026-21-53-44.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

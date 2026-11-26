@@ -114,6 +114,10 @@
   nonzero quotient slopes. Use projected interpolation and borrow the inner
   subtower norm only on the opted-in path. Price both directions and the
   leading-coefficient handoff before claiming a complete locator.
+- A degree-35 projective pair hands its reversed polynomial banks to the
+  phase scan under the actual locator leading coefficient. Restore the
+  scale and borrowed scan constants before applying the tape inverse.
+  The tape fixture starts after quotient generation.
 - A Givens-order change may move a rotation only across disjoint orbital
   pairs. Preserve the matching angle columns, check reconstructed vectors,
   and price the affected XOR transitions before full loader verification.

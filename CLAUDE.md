@@ -70,6 +70,9 @@ The projective continuant starts with a clean extra word and nonzero linear
 slopes. Track both the explicit leading coefficient and its handoff to the
 phase stage. Keep projected rank-one outputs and borrowed subtower scratch
 opt-in to preserve earlier circuit identities.
+The degree-35 phase handoff normalizes the shared coefficient on the
+reversed locator and evaluator, then restores it before tape cleanup.
+The Chien scan can borrow the constant terms and restore them at each root.
 The blocked suffix accepts a prefolded residual and normalized
 denominators. Its shifted unit inverse keeps the first two
 coefficients implicit.

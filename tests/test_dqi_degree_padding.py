@@ -16,7 +16,9 @@ from qcompile.dqi.degree_padding import pad_reversed_banks, padding_factors
 from qcompile.dqi.field import GF4096
 from qcompile.dqi.locator_fraction import blocked_suffix_inplace, projective_continuant
 from qcompile.dqi.quotient import _product_range
-from qcompile.dqi.scan import degree_padded_chart_xor, degree_padded_residue_scan, derivative_reciprocal, evaluator
+from qcompile.dqi.scan import (
+    degree_padded_chart_xor, degree_padded_residue_scan, derivative_reciprocal, evaluator, projective_pair_residue_scan,
+)
 from qcompile.dqi.tower import ProjectedFieldProduct
 from qcompile.io import read_json, sha256, write_json
 from qcompile.official import validate_backend
@@ -283,6 +285,17 @@ def _blocked_case(series: list[int], steps: int):
     return [*previous, *current, *prefolded], [*previous, *current, *residual]
 
 
+def _regular_quotients(denominator: list[int], numerator: list[int]) -> list[int]:
+    tape = []
+    while numerator != [0]:
+        quotient, remainder = _divide(denominator, numerator, FIELD)
+        if len(quotient) != 2:
+            return []
+        tape.extend(reversed(quotient))
+        denominator, numerator = numerator, remainder
+    return tape
+
+
 def test_reversed_padding_covers_all_value_degrees():
     cases = _cases()
     assert len(cases) == 72
@@ -360,13 +373,7 @@ def test_projective_locator_continuant(project_root, monkeypatch, tmp_path, degr
         omega = evaluator(values, locator, FIELD)
         reference = locator[::-1] + (omega + [0] * (degree - len(omega)))[::-1]
         denominator, numerator = reference[:degree + 1], reference[degree + 1:]
-        tape = []
-        while numerator != [0]:
-            quotient, remainder = _divide(denominator, numerator, FIELD)
-            if len(quotient) != 2:
-                break
-            tape.extend(reversed(quotient))
-            denominator, numerator = numerator, remainder
+        tape = _regular_quotients(denominator, numerator)
         if len(tape) == 2 * degree:
             tapes.append(tape)
             references.append(reference)
@@ -402,6 +409,121 @@ def test_projective_locator_continuant(project_root, monkeypatch, tmp_path, degr
         "scope": "software continuant on a supplied regular quotient tape with an extra unit word",
         "degree": degree, "shots": len(tapes), "syndrome_derived_tapes": len(references), "tensor_sha256": tensor_hash,
         "qubits": len(builder.data), "controlled_products_per_direction": forward,
+    })
+
+
+def _projective_phase_fixture():
+    rng = Random(36541)
+    degree = 35
+    cases = []
+    quotas = {True: 12, False: 2}
+    for _ in range(4096):
+        support = {j: rng.randrange(1, 4096) for j in rng.sample(range(4095), degree)}
+        compact, padded, _ = _case(support)
+        regular = _regular_chart(padded)
+        if not quotas[regular]:
+            continue
+        tape = _regular_quotients([1, *compact[:degree]], compact[degree:2 * degree])
+        if len(tape) != 2 * degree:
+            continue
+        orientation = quotas[regular] % 2
+        cases.append((tape, regular, _original_support(support, bool(orientation)), orientation))
+        quotas[regular] -= 1
+        if not any(quotas.values()):
+            break
+    assert not any(quotas.values())
+    masks = np.random.default_rng(36563).integers(0, 4096, size=(len(cases), 4095))
+    phases = [sum((int(mask[position]) & value).bit_count() for position, value in support.items()) % 2
+              if regular else 0 for (_, regular, support, _), mask in zip(cases, masks, strict=True)]
+    rows = [tape + [0, orientation] for tape, _, _, orientation in cases]
+    return rows, [regular for _, regular, _, _ in cases], masks, phases
+
+
+@pytest.mark.slow
+def test_full_degree_projective_continuant_phase(project_root, monkeypatch, tmp_path):
+    multiply, tensor_hash = _field_product(project_root, monkeypatch, tmp_path, projected=True)
+    assert isinstance(multiply, ProjectedFieldProduct)
+    rows, charts, masks, phases = _projective_phase_fixture()
+    degree = 35
+    widths = [12] * (2 * degree + 1) + [1]
+    size = sum(widths)
+    words = [range(i * 12, (i + 1) * 12) for i in range(2 * degree + 1)]
+    builder = _PhaseBuilder(rows, 36571, widths)
+    registers = [builder.alloc_bits(12) for _ in range(4095)]
+    for register, column in zip(registers, masks.T.tolist(), strict=True):
+        for bit, wire in enumerate(register):
+            builder.bits[wire] = sum(((word >> bit) & 1) << i for i, word in enumerate(column))
+    mask_input = builder.bits.copy()
+    initial = builder.data.copy()
+    denominator, numerator = projective_continuant(builder, words[:-1], words[-1], multiply=multiply)
+    fold_charge = builder.charged_ands
+    projective_pair_residue_scan(builder, None, denominator[::-1], numerator[::-1], registers,
+                                 multiply=multiply, orientation=size - 1)
+    handoff_phase_charge = builder.charged_ands - fold_charge
+    projective_continuant(builder, words[:-1], words[-1], adjoint=True, multiply=multiply)
+
+    assert builder.phase == sum(phase << i for i, phase in enumerate(phases))
+    assert builder.data[:size] == initial and not any(builder.data[size:])
+    assert builder.bits == mask_input and builder.controls == [builder.full]
+    assert builder.chart_flags == [sum(int(regular) << i for i, regular in enumerate(charts))] * 2
+    assert len(builder.data) <= 888
+    write_json(tmp_path / "projective-continuant-phase.json", {
+        "scope": "software fold, normalized projective handoff, guarded phase, and inverse from supplied degree-35 tape",
+        "tensor_sha256": tensor_hash, "qubits": len(builder.data), "positions": 4095, "shots": len(rows),
+        "fixture_seed": 36541, "mask_seed": 36563, "replay_seed": 36571,
+        "regular": sum(charts), "fold_init_and_calls_per_direction": fold_charge,
+        "handoff_phase_init_and_calls": handoff_phase_charge, "total_init_and_calls": builder.charged_ands,
+        "equality_calls": builder.equality_calls,
+    })
+
+
+@pytest.mark.official
+@pytest.mark.slow
+def test_native_projective_continuant_phase(project_root, monkeypatch, tmp_path):
+    backend = project_root / "vendor/backend.json"
+    if not sys.platform.startswith("linux") or not backend.is_file():
+        pytest.skip("pinned native Linux backend required")
+    validate_backend(read_json(backend))
+    monkeypatch.syspath_prepend(str(project_root / "vendor/official/kickmix"))
+    km = import_module("kickmix")
+    multiply, tensor_hash = _field_product(project_root, monkeypatch, tmp_path, projected=True)
+    assert isinstance(multiply, ProjectedFieldProduct)
+    rows, charts, masks, phases = _projective_phase_fixture()
+
+    builder = km.CircuitBuilder()
+    tape = [builder.create_quantum_register(12, f"Q{i}") for i in range(70)]
+    unit = builder.create_quantum_register(12, "unit")
+    orientation = builder.create_quantum_register(1, "orientation")
+    mask_registers = [builder.create_classical_register(12, f"E{i}") for i in range(4095)]
+    denominator, numerator = projective_continuant(builder, tape, unit, multiply=multiply)
+    projective_pair_residue_scan(builder, km.GF2Field(12), denominator[::-1], numerator[::-1], mask_registers,
+                                 multiply=multiply, orientation=orientation[0])
+    projective_continuant(builder, tape, unit, adjoint=True, multiply=multiply)
+    artifact = tmp_path / "projective-continuant-phase.kmb"
+    builder.finish_circuit().to_file(artifact, format="kmb")
+    circuit = km.Circuit.from_file(artifact, format="kmb")
+    sim = km.Simulator(batch_size=len(rows), seed=36571, counting_operations=True)
+    sim.use_same_registers_as(circuit)
+    registers = [*tape, unit, orientation, *mask_registers]
+    values = [((column[None, :] >> np.arange(len(wires))[:, None]) & 1).astype(bool)
+              for wires, column in zip(registers, np.concatenate((rows, masks), axis=1).T, strict=True)]
+    for wires, column in zip(registers, values, strict=True):
+        sim.write_across_shots(wires, column)
+    sim.do(circuit)
+    for wires, column in zip(registers, values, strict=True):
+        np.testing.assert_array_equal(sim.read_across_shots(wires), column)
+    np.testing.assert_array_equal(sim.read_phase_flipped_across_shots(), phases)
+    live = {q.id for wires in [*tape, unit, orientation] for q in wires}
+    scratch = km.array([km.q(i) for i in range(circuit.num_qubits) if i not in live])
+    assert not sim.read_across_shots(scratch).any()
+    charge = circuit.operation_statistics().num_toffoli_like
+    assert sim.operation_statistics().num_toffoli_like == charge * len(rows)
+    assert circuit.num_qubits <= 888
+    write_json(tmp_path / "projective-continuant-phase-native.json", {
+        "scope": "native supplied degree-35 tape through guarded phase and full restoration",
+        "backend_sha256": sha256(backend), "tensor_sha256": tensor_hash, "circuit_sha256": sha256(artifact),
+        "qubits": circuit.num_qubits, "toffoli_like": charge, "positions": 4095, "shots": len(rows),
+        "regular": sum(charts), "fixture_seed": 36541, "mask_seed": 36563, "native_seed": 36571,
     })
 
 

@@ -14,9 +14,9 @@ from .decoder import _add, _divide, _multiply, _trim
 from .degree_padding import pad_reversed_banks, pad_reversed_locator
 from .field import GF4096
 from .inplace_evaluator import inplace_evaluator
-from .inverse_action import odd_forney_inplace, projective_chart_xor
+from .inverse_action import _scale, odd_forney_inplace, projective_chart_xor
 from .quotient import FieldProduct, quotient_prepare
-from .tower import inverse_xor, multiply_xor
+from .tower import ProjectedFieldProduct, inverse_xor, multiply_xor
 
 
 def evaluator(syndromes: list[int], locator: list[int], field: GF4096) -> list[int]:
@@ -208,11 +208,30 @@ def two_bank_residue_scan(builder: Any, field: Any, modulus: list[Any], omega: l
         kernel = routed_phase
     odd_forney_inplace(builder, modulus, omega, half_chart, multiply=multiply,
                        projective=projective, validity=validity)
-    _scan_evaluations(builder, field, (modulus, omega), masks, kernel, monic=True)
+    _scan_evaluations(builder, field, (modulus, omega), masks, kernel, monic=True,
+                      borrow_constants=isinstance(multiply, ProjectedFieldProduct))
     odd_forney_inplace(builder, modulus, omega, half_chart, adjoint=True, multiply=multiply,
                        projective=projective, validity=validity)
     if validity is not None:
         builder.free(validity)
+
+
+def projective_pair_residue_scan(builder: Any, field: Any, locator: list[Any], omega: list[Any], masks: list[Any],
+                                 *, multiply: ProjectedFieldProduct, orientation: Any = None) -> None:
+    """Phase an odd-degree ascending pair with the same nonzero leading scale.
+
+    The locator includes its leading coefficient. The evaluator has one
+    fewer word. Nonregular derivative charts restore the pair with no phase.
+    """
+    if len(locator) < 4 or len(locator) % 2 or len(omega) != len(locator) - 1:
+        raise ValueError("projective scan requires an odd-degree locator and matching evaluator")
+    if any(len(word) != 12 for word in (*locator, *omega)):
+        raise ValueError("projective scan requires 12-bit words")
+    head, modulus = locator[-1], locator[:-1]
+    _scale(builder, head, modulus, omega, multiply, undo=False)
+    two_bank_residue_scan(builder, field, modulus, omega, masks, tuple(range(len(modulus) // 2 - 1, -1, -1)),
+                          multiply=multiply, projective=True, orientation=orientation, guarded=True)
+    _scale(builder, head, modulus, omega, multiply, undo=True)
 
 
 def degree_padded_chart_xor(builder: Any, locator: list[Any], degree: Any, validity: Any, *,
@@ -245,16 +264,22 @@ def two_bank_syndrome_scan(builder: Any, field: Any, modulus: list[Any], syndrom
 
 
 def _scan_evaluations(builder: Any, field: Any, groups: tuple[list[Any], ...],
-                      masks: list[Any], kernel: Callable[..., None], *, monic: bool = False) -> None:
+                      masks: list[Any], kernel: Callable[..., None], *, monic: bool = False,
+                      borrow_constants: bool = False) -> None:
     if not 1 <= len(masks) <= 4095:
         raise ValueError("phase scan requires between 1 and 4095 positions")
     if any(len(word) != 12 for group in (*groups, masks) for word in group):
         raise ValueError("phase scan requires 12-bit words")
-    evaluations = [builder.alloc_qubits(12) for _ in groups]
+    # Chien shifts leave each constant coefficient fixed. Use it as the
+    # evaluation target and XOR the other terms away after the phase.
+    evaluations = [coefficients[0] for coefficients in groups] if borrow_constants else [
+        builder.alloc_qubits(12) for _ in groups
+    ]
+    sources = [coefficients[1:] for coefficients in groups] if borrow_constants else groups
     powers = GF4096().exp
 
     def evaluate(position: int) -> None:
-        for coefficients, target in zip(groups, evaluations, strict=True):
+        for coefficients, target in zip(sources, evaluations, strict=True):
             for coefficient in coefficients:
                 builder.cx(coefficient, target)
         if monic:
@@ -272,5 +297,6 @@ def _scan_evaluations(builder: Any, field: Any, groups: tuple[list[Any], ...],
     for coefficients in groups:
         for index, coefficient in enumerate(coefficients[1:], 1):
             builder.gf2_idiv(powers[-index * (len(masks) - 1) % 4095], target=coefficient, field=field)
-    for register in evaluations:
-        builder.free(register)
+    if not borrow_constants:
+        for register in evaluations:
+            builder.free(register)

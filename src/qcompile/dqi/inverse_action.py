@@ -7,7 +7,7 @@ from typing import Any
 from .bilinear import erase_product
 from .quotient import FieldProduct, _high_reduce, _product_range, _series_inplace
 from .subtower import inverse_xor
-from .tower import multiply_xor
+from .tower import ProjectedFieldProduct, multiply_xor
 
 
 def _packed_divide(builder: Any, words: list[Any], divisor: list[Any], multiply: FieldProduct,
@@ -98,7 +98,8 @@ def _scale_words(builder: Any, words: list[Any], scale: Any, clear: Any, multipl
 
 def _scale(builder: Any, factor: Any, normal: list[Any], data: list[Any], multiply: FieldProduct,
            *, undo: bool, extend_zero: bool = False) -> None:
-    with _reciprocal(builder, factor, extend_zero=extend_zero) as inverse:
+    with _reciprocal(builder, factor, extend_zero=extend_zero,
+                     compact_inner=isinstance(multiply, ProjectedFieldProduct)) as inverse:
         scale, clear = (factor, inverse) if undo else (inverse, factor)
         _scale_words(builder, normal + data, scale, clear, multiply)
 
@@ -109,6 +110,7 @@ def _projective_remainder(builder: Any, modulus: list[Any], divisor: list[Any],
     """Keep a linear quotient in the top two slots and the remainder below."""
     a_head, d_head = modulus[-1], divisor[-1]
     lead, constant = modulus[-2], divisor[-2]
+    compact_inner = isinstance(multiply, ProjectedFieldProduct)
 
     def update_lower() -> None:
         _product_range(builder, [lead, a_head], divisor[:-1], modulus[:-2], 0, multiply)
@@ -116,7 +118,7 @@ def _projective_remainder(builder: Any, modulus: list[Any], divisor: list[Any],
     # When A is monic, the quotient slope is the inverse itself. Use scalar
     # products on this outer level to leave the interpolation workspace free.
     if a_head is None:
-        with _reciprocal(builder, d_head, extend_zero=extend_zero) as slope:
+        with _reciprocal(builder, d_head, extend_zero=extend_zero, compact_inner=compact_inner) as slope:
             def update_monically() -> None:
                 for i, word in enumerate(modulus[:-2]):
                     multiply(builder, lead, divisor[i], word)
@@ -138,7 +140,7 @@ def _projective_remainder(builder: Any, modulus: list[Any], divisor: list[Any],
 
     if adjoint:
         update_lower()
-    with _reciprocal(builder, d_head, extend_zero=extend_zero) as inverse:
+    with _reciprocal(builder, d_head, extend_zero=extend_zero, compact_inner=compact_inner) as inverse:
         if adjoint:
             _scale_words(builder, [lead], d_head, inverse, multiply)
         else:
@@ -170,7 +172,8 @@ def _projective_reduce(builder: Any, divisor: list[Any], banks: list[list[Any]],
 def _projective_extend(builder: Any, modulus: list[Any], divisor: list[Any], banks: list[list[Any]],
                        multiply: FieldProduct, *, adjoint: bool, extend_zero: bool) -> None:
     def scale_tails(head: Any) -> None:
-        with _reciprocal(builder, head, extend_zero=extend_zero) as inverse:
+        with _reciprocal(builder, head, extend_zero=extend_zero,
+                         compact_inner=isinstance(multiply, ProjectedFieldProduct)) as inverse:
             scale, clear = (head, inverse) if adjoint else (inverse, head)
             _scale_words(builder, [words[-1] for words in banks], scale, clear, multiply)
 
