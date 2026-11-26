@@ -12,6 +12,7 @@ from typing import Any
 from .bilinear import product_tensor
 from .decoder import _add, _divide, _multiply, _trim
 from .field import GF4096
+from .quotient import FieldProduct, quotient_prepare
 from .tower import inverse_xor, multiply_xor
 
 
@@ -141,8 +142,25 @@ def residue_scan(builder: Any, field: Any, locator: list[Any], residue: list[Any
     _scan_evaluations(builder, field, (locator, residue), masks, _residue_phase)
 
 
+def prepared_residue_scan(builder: Any, field: Any, modulus: list[Any], omega: list[Any],
+                          reciprocal: list[Any], masks: list[Any], *,
+                          multiply: FieldProduct = multiply_xor) -> None:
+    """Prepare the residue, phase it, and restore a supplied monic locator and reciprocal.
+
+    The active degree is fixed by the register layout. The implicit leading locator
+    coefficient is one, its constant is nonzero, and reciprocal is the
+    derivative inverse modulo the locator.
+    """
+    residue = [builder.alloc_qubits(12) for _ in omega]
+    quotient_prepare(builder, omega, reciprocal, modulus, residue, multiply=multiply)
+    _scan_evaluations(builder, field, (modulus, residue), masks, _residue_phase, monic=True)
+    quotient_prepare(builder, omega, reciprocal, modulus, residue, adjoint=True, multiply=multiply)
+    for word in residue:
+        builder.free(word)
+
+
 def _scan_evaluations(builder: Any, field: Any, groups: tuple[list[Any], ...],
-                      masks: list[Any], kernel: Callable[..., None]) -> None:
+                      masks: list[Any], kernel: Callable[..., None], *, monic: bool = False) -> None:
     if not 1 <= len(masks) <= 4095:
         raise ValueError("phase scan requires between 1 and 4095 positions")
     if any(len(word) != 12 for group in (*groups, masks) for word in group):
@@ -150,15 +168,18 @@ def _scan_evaluations(builder: Any, field: Any, groups: tuple[list[Any], ...],
     evaluations = [builder.alloc_qubits(12) for _ in groups]
     powers = GF4096().exp
 
-    def evaluate() -> None:
+    def evaluate(position: int) -> None:
         for coefficients, target in zip(groups, evaluations, strict=True):
             for coefficient in coefficients:
                 builder.cx(coefficient, target)
+        if monic:
+            leading = powers[-len(groups[0]) * position % 4095]
+            builder.x([wire for bit, wire in enumerate(evaluations[0]) if leading >> bit & 1])
 
     for position, mask in enumerate(masks):
-        evaluate()
+        evaluate(position)
         kernel(builder, *evaluations, mask)
-        evaluate()
+        evaluate(position)
         if position + 1 < len(masks):
             for coefficients in groups:
                 for index, coefficient in enumerate(coefficients[1:], 1):

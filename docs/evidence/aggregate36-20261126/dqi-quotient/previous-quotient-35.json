@@ -1,0 +1,14 @@
+{
+  "classification": "native_emission_control",
+  "commit": "093cb3f9cf7555e82ce489a5d67bb240399346f7",
+  "degree": 35,
+  "operations": {
+    "CCX": 260820,
+    "CX": 7578690,
+    "CZ": 260820,
+    "HMR": 260820,
+    "R": 260820
+  },
+  "qubits": 2511,
+  "toffoli_like": 260820
+}

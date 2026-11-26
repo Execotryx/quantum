@@ -35,6 +35,9 @@ native circuit and extracted archive verification.
 The phase kernel may lend one locator bit while the retained root flag
 guarantees its initial value. Restore the bit before erasing the flag.
 Charge residue preparation and cleanup separately from a supplied-residue scan.
+The clean-output quotient uses a nonzero modulus constant. Its inverse takes
+the prepared product. Preserve the factors through measurement phase repair
+and keep fixed-degree stage evidence separate from routed-decoder pricing.
 Keep raw receipts and the original salt when retrying a public comparison.
 Propagate chemistry angle-gauge signs backward through the ordered Givens
 tree. Verify the prepared projectors, decoded metrics and native loader cost.

@@ -66,6 +66,10 @@
   zero flag guarantees it was zero on active roots. Restore the bit before
   erasing the flag. Price a supplied residue scan separately from coherent
   residue preparation and its inverse.
+- The clean-output quotient schedule requires a nonzero modulus constant
+  and the exact prepared product on inverse entry. Repay each measured
+  product using the live factors before overwriting either factor. Keep the
+  fixed-degree prepared scan separate from a degree-routed decoder.
 - Before a full portfolio run, exercise native ANGLE serialization on its
   temporary filesystem. Keep prior raw receipts and the original salts
   when a public development comparison needs an infrastructure retry.

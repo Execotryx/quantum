@@ -33,9 +33,12 @@ identified three stages that account for about 87% of executed Toffolis.
 
 The DQI phase-scan primitive now uses **12 fewer qubits** at the same
 charged gate count. A separate supplied-residue scan used **887 qubits**
-and **45,045 Toffoli-like gates**. Its full-decoder cost still depends on
-reversible residue preparation and cleanup.
+and **45,045 Toffoli-like gates**. A native stage that prepares, phases,
+and uncomputes the residue used **91,569 Toffoli-like gates** across all
+4,095 positions. It still needs a compact layout and a coherent source
+for the derivative reciprocal before full-decoder pricing.
 [Native DQI scan comparison](docs/aggregate-above-36-dqi-residue-scan-26-11-2026-07-46-21.md)
+[Native quotient and phase composition](docs/aggregate-above-36-dqi-quotient-26-11-2026-08-00-34.md)
 
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
