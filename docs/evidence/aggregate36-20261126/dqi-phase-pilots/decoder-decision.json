@@ -1,0 +1,66 @@
+{
+  "classification": "matched_development_panels",
+  "executed_gate_savings": [
+    0.0,
+    0.0
+  ],
+  "observed": {
+    "control": {
+      "panels": [
+        {
+          "dirty_offsets": [],
+          "mask_offsets": [],
+          "mean_toffoli_like": 316102.19140625,
+          "phase_offsets": [],
+          "value_offsets": []
+        },
+        {
+          "dirty_offsets": [],
+          "mask_offsets": [],
+          "mean_toffoli_like": 316137.33203125,
+          "phase_offsets": [],
+          "value_offsets": []
+        }
+      ],
+      "qubits": 900,
+      "sha256": "4b5721411adc239f61fc11c773a2358b75dfe7cb15586efae4f0459c77d77e52",
+      "static_toffoli_like": 318972
+    },
+    "rewrite": {
+      "panels": [
+        {
+          "dirty_offsets": [],
+          "mask_offsets": [],
+          "mean_toffoli_like": 316102.19140625,
+          "phase_offsets": [],
+          "value_offsets": []
+        },
+        {
+          "dirty_offsets": [],
+          "mask_offsets": [],
+          "mean_toffoli_like": 316137.33203125,
+          "phase_offsets": [],
+          "value_offsets": []
+        }
+      ],
+      "qubits": 900,
+      "sha256": "4b5721411adc239f61fc11c773a2358b75dfe7cb15586efae4f0459c77d77e52",
+      "static_toffoli_like": 318972
+    }
+  },
+  "registration_sha256": "0d372dfa6a425b045119375fcadbee9c2f85adcefe2c15c96fb8cebb594f3be8",
+  "semantic_error_parity": true,
+  "stages": {
+    "decoder_return": {
+      "disjoint_repeated_product_pairs": 2,
+      "product_gates": 109515,
+      "repeated_products": 11
+    },
+    "field_2_to_root_1330_phase": {
+      "product_gates": 77036
+    },
+    "quantum_decoder_to_field_1": {
+      "product_gates": 90766
+    }
+  }
+}

@@ -101,27 +101,28 @@ def test_native_position_kernel(project_root, monkeypatch, mutation):
     class Mutation:
         def __init__(self, wrapped):
             self.wrapped = wrapped
-            self.conditions = 0
+            self.phase_emitted = False
             self.dropped = False
 
         def __getattr__(self, name):
             return getattr(self.wrapped, name)
 
-        def push_condition(self, control):
-            self.conditions += 1
-            self.wrapped.push_condition(control)
+        def ccz(self, *args):
+            self.phase_emitted = True
+            self.wrapped.ccz(*args)
 
-        def cx(self, source, target):
-            if mutation == "skip_transform_reversal" and self.conditions > 12 and not self.dropped:
+        def ccx(self, first, second, target):
+            if mutation == "skip_transform_reversal" and self.phase_emitted and not self.dropped:
                 self.dropped = True
             else:
-                self.wrapped.cx(source, target)
+                self.wrapped.ccx(first, second, target)
 
     if mutation != "skip_position":
         phase_at_position(Mutation(builder), sigma, omega, psi, mask)
     circuit = builder.finish_circuit()
     if mutation == "none":
         assert circuit.operation_statistics().num_toffoli_like == 23
+        assert circuit.num_qubits == 47
     shots = 512
     rng = np.random.default_rng(343)
     words = {
@@ -141,7 +142,8 @@ def test_native_position_kernel(project_root, monkeypatch, mutation):
         sim.write_across_shots(reg, ((values[None, :] >> bits) & 1).astype(bool))
     sim.do(circuit)
     for name, reg in (("sigma", sigma), ("omega", omega), ("psi", psi)):
-        np.testing.assert_array_equal(sim.read_across_shots(reg), ((words[name][None, :] >> bits) & 1).astype(bool))
+        if name != "sigma" or mutation != "skip_transform_reversal":
+            np.testing.assert_array_equal(sim.read_across_shots(reg), ((words[name][None, :] >> bits) & 1).astype(bool))
     live = {q.id for reg in circuit.register_data.values() for q in reg if isinstance(q, km.q)}
     scratch = km.array([km.q(i) for i in range(circuit.num_qubits) if i not in live])
     dirty = bool(len(scratch) and sim.read_across_shots(scratch).any())
@@ -155,23 +157,27 @@ def test_native_position_kernel(project_root, monkeypatch, mutation):
     if mutation == "none":
         assert not dirty and not wrong_phase
     elif mutation == "skip_transform_reversal":
-        assert dirty
+        assert np.any(sim.read_across_shots(sigma) != ((words["sigma"][None, :] >> bits) & 1))
     else:
         assert wrong_phase
 
 
 @pytest.mark.official
 @pytest.mark.parametrize(("m", "n"), [(63, 4), (127, 12), pytest.param(4095, 70, marks=pytest.mark.slow)])
-def test_native_full_scan(project_root, monkeypatch, tmp_path, m, n):
+@pytest.mark.parametrize("residue", [False, True], ids=["bilinear", "residue"])
+def test_native_full_scan(project_root, monkeypatch, tmp_path, m, n, residue):
     if not sys.platform.startswith("linux") or not (project_root / "vendor/backend.json").is_file():
         pytest.skip("pinned native Linux backend required")
     monkeypatch.syspath_prepend(str(project_root / "vendor/official/kickmix"))
     monkeypatch.syspath_prepend(str(project_root / "tools"))
     km = import_module("kickmix")
     tool = import_module("dqi_prototype")
-    tool.build_scan(project_root / "vendor/backend.json", tmp_path / "scan", m=m, n=n)
-    circuit = km.Circuit.from_file(str(tmp_path / "scan" / "phase-scan.kmb"))
-    assert circuit.operation_statistics().num_toffoli_like == 23 * m
+    tool.build_scan(project_root / "vendor/backend.json", tmp_path / "scan", m=m, n=n, residue=residue)
+    kind = "residue-scan" if residue else "phase-scan"
+    circuit = km.Circuit.from_file(str(tmp_path / "scan" / f"{kind}.kmb"))
+    assert circuit.operation_statistics().num_toffoli_like == (11 if residue else 23) * m
+    groups = 2 if residue else 3
+    assert circuit.num_qubits == 12 * (groups * (n // 2 + 1) + 1) + 11
     shots = 2 * (n // 2 + 1)
     rng = random.Random(780 + n)
     field = GF4096()
@@ -182,8 +188,14 @@ def test_native_full_scan(project_root, monkeypatch, tmp_path, m, n):
         errors = {j: rng.randrange(1, 4096) for j in rng.sample(range(m), weight)}
         syndromes = syndrome(errors, field)
         locator = bm_locator(syndromes, field)
-        for prefix, polynomial in (("sigma", locator), ("omega", evaluator(syndromes, locator, field)),
-                                   ("psi", derivative_reciprocal(locator, field))):
+        omega = evaluator(syndromes, locator, field)
+        reciprocal = derivative_reciprocal(locator, field)
+        if residue:
+            remainder = _divide(_multiply(omega, reciprocal, field), locator, field)[1]
+            polynomials = (("sigma", locator), ("residue", remainder))
+        else:
+            polynomials = (("sigma", locator), ("omega", omega), ("psi", reciprocal))
+        for prefix, polynomial in polynomials:
             for index, word in enumerate(polynomial):
                 if f"{prefix}_{index}" in values:
                     values[f"{prefix}_{index}"][shot] = word

@@ -31,6 +31,12 @@ identified three stages that account for about 87% of executed Toffolis.
 [Above-36 implementation and results](docs/aggregate-above-36-implementation-26-11-2026-07-19-40.md)
 [Variable-basis chemistry results](docs/aggregate-above-36-chemistry-pilots-26-11-2026-07-29-00.md)
 
+The DQI phase-scan primitive now uses **12 fewer qubits** at the same
+charged gate count. A separate supplied-residue scan used **887 qubits**
+and **45,045 Toffoli-like gates**. Its full-decoder cost still depends on
+reversible residue preparation and cleanup.
+[Native DQI scan comparison](docs/aggregate-above-36-dqi-residue-scan-26-11-2026-07-46-21.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

@@ -62,6 +62,10 @@
   Reconcile DQI stage counters against the same complete circuit and inputs.
   Keep numerical phase models, native carry rewrites and decoded chemistry
   pilots scoped to the evidence they actually cover.
+- The DQI phase kernel lends the low locator bit only while the retained
+  zero flag guarantees it was zero on active roots. Restore the bit before
+  erasing the flag. Price a supplied residue scan separately from coherent
+  residue preparation and its inverse.
 - Before a full portfolio run, exercise native ANGLE serialization on its
   temporary filesystem. Keep prior raw receipts and the original salts
   when a public development comparison needs an infrastructure retry.

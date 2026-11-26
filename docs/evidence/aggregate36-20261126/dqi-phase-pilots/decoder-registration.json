@@ -1,0 +1,18 @@
+{
+  "backend_sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+  "baseline_assembly_sha256": "1d5e4bfbedd0f33859331765b1cb293ef374da206184e4d2c4cc6d7fc8e3da8e",
+  "baseline_circuit_sha256": "4b5721411adc239f61fc11c773a2358b75dfe7cb15586efae4f0459c77d77e52",
+  "batch_size": 256,
+  "driver_sha256": "4a823ffc8e0c46ff6e52500b5196474f0611b3811693769cd16612ffa183b279",
+  "rewrite_sha256": "3d35bd5aad9d4d5db4f65867edd55e62902169f76f4363ccf6d257987d904cbe",
+  "seeds": [
+    36071,
+    36073
+  ],
+  "stages": [
+    "decoder_return",
+    "field_2_to_root_1330_phase",
+    "quantum_decoder_to_field_1"
+  ],
+  "symbolic_interval": 8192
+}

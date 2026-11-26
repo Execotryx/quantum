@@ -4,6 +4,9 @@ The polynomial routines are an oracle for development, not a circuit emitter.
 The native kernel consumes already evaluated sigma, omega and reciprocal words.
 """
 
+from collections.abc import Callable, Iterator
+from contextlib import contextmanager
+from functools import cache
 from typing import Any
 
 from .bilinear import product_tensor
@@ -72,43 +75,51 @@ def quadratic_reciprocal_xor(builder: Any, locator: list[Any], reciprocal: list[
     inverse_xor(builder, locator[1], reciprocal[0])
 
 
-def phase_at_position(builder: Any, sigma: Any, omega: Any, reciprocal: Any, mask: Any) -> None:
-    """Apply the exact mask phase for evaluated words, then clear scratch.
+@cache
+def _phase_columns() -> tuple[tuple[tuple[int, int], ...], ...]:
+    tensor = product_tensor()
+    return tuple(tuple((i, bit) for i, row in enumerate(tensor) for bit in range(12) if row[j] >> bit & 1)
+                 for j in range(12))
 
-    Applies (-1)**parity(mask & (omega * reciprocal)) iff sigma is zero.
-    Inputs are disjoint 12-bit registers and mask is a classical 12-bit word.
-    """
-    if any(len(reg) != 12 for reg in (sigma, omega, reciprocal, mask)):
-        raise ValueError("phase kernel requires four 12-bit words")
+
+@contextmanager
+def _root_flag(builder: Any, sigma: Any) -> Iterator[Any]:
     flags = builder.alloc_qubits(11)
-    transformed = builder.alloc_qubits(12)
     builder.x(sigma)
     builder.init_and(sigma[0], sigma[1], flags[0])
     for index in range(2, 12):
         builder.init_and(flags[index - 2], sigma[index], flags[index - 1])
     builder.x(sigma)
-
-    tensor = product_tensor()
-    def transform() -> None:
-        for bit, control in enumerate(mask):
-            builder.push_condition(control)
-            for i, row in enumerate(tensor):
-                for j, word in enumerate(row):
-                    if word >> bit & 1:
-                        builder.cx(omega[i], transformed[j])
-            builder.pop_condition()
-
-    transform()
-    for i in range(12):
-        builder.ccz(flags[-1], transformed[i], reciprocal[i])
-    transform()
+    yield flags[-1]
     builder.x(sigma)
     for index in range(11, 1, -1):
         builder.del_and(flags[index - 2], sigma[index], flags[index - 1])
     builder.del_and(sigma[0], sigma[1], flags[0])
     builder.x(sigma)
-    builder.free(transformed)
     builder.free(flags)
+
+
+def phase_at_position(builder: Any, sigma: Any, omega: Any, reciprocal: Any, mask: Any) -> None:
+    """Apply the mask phase of omega * reciprocal iff sigma is zero."""
+    if any(len(reg) != 12 for reg in (sigma, omega, reciprocal, mask)):
+        raise ValueError("phase kernel requires four 12-bit words")
+
+    # The root flag implies sigma[0] is zero when the phase is enabled.
+    # XOR one parity column into that bit and restore it before the next column.
+    # A classical control makes each ccx call emit only conditional CNOTs.
+    with _root_flag(builder, sigma) as root:
+        parity = sigma[0]
+        for j, column in enumerate(_phase_columns()):
+            controls = [mask[bit] for _, bit in column]
+            sources = [omega[i] for i, _ in column]
+            builder.ccx(controls, sources, parity)
+            builder.ccz(root, parity, reciprocal[j])
+            builder.ccx(controls, sources, parity)
+
+
+def _residue_phase(builder: Any, sigma: Any, residue: Any, mask: Any) -> None:
+    with _root_flag(builder, sigma) as root:
+        builder.ccz(root, residue, mask)
 
 
 def phase_scan(builder: Any, field: Any, locator: list[Any], omega: list[Any],
@@ -120,12 +131,23 @@ def phase_scan(builder: Any, field: Any, locator: list[Any], omega: list[Any],
     """
     if not locator or len(omega) != len(locator) - 1 or len(reciprocal) != len(omega):
         raise ValueError("invalid phase-scan coefficient shapes")
+    _scan_evaluations(builder, field, (locator, omega, reciprocal), masks, phase_at_position)
+
+
+def residue_scan(builder: Any, field: Any, locator: list[Any], residue: list[Any], masks: list[Any]) -> None:
+    """Phase a supplied (omega / locator') mod locator and restore both inputs."""
+    if not locator or len(residue) != len(locator) - 1:
+        raise ValueError("invalid residue-scan coefficient shapes")
+    _scan_evaluations(builder, field, (locator, residue), masks, _residue_phase)
+
+
+def _scan_evaluations(builder: Any, field: Any, groups: tuple[list[Any], ...],
+                      masks: list[Any], kernel: Callable[..., None]) -> None:
     if not 1 <= len(masks) <= 4095:
         raise ValueError("phase scan requires between 1 and 4095 positions")
-    if any(len(word) != 12 for word in (*locator, *omega, *reciprocal, *masks)):
+    if any(len(word) != 12 for group in (*groups, masks) for word in group):
         raise ValueError("phase scan requires 12-bit words")
-    evaluations = [builder.alloc_qubits(12) for _ in range(3)]
-    groups = (locator, omega, reciprocal)
+    evaluations = [builder.alloc_qubits(12) for _ in groups]
     powers = GF4096().exp
 
     def evaluate() -> None:
@@ -135,7 +157,7 @@ def phase_scan(builder: Any, field: Any, locator: list[Any], omega: list[Any],
 
     for position, mask in enumerate(masks):
         evaluate()
-        phase_at_position(builder, evaluations[0], evaluations[1], evaluations[2], mask)
+        kernel(builder, *evaluations, mask)
         evaluate()
         if position + 1 < len(masks):
             for coefficients in groups:

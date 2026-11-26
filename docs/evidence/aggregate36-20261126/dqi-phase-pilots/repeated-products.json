@@ -1,0 +1,29 @@
+{
+  "classification": "static_exact_live_product_screen",
+  "fragments": [
+    {
+      "counts": {
+        "product_gates": 90766
+      },
+      "fragment": "quantum_decoder_to_field_1.kmx.xz",
+      "sha256": "d8572b0756f03fa4ccb5066dfcd04c9f019b915e428135838f837d50fd46a32c"
+    },
+    {
+      "counts": {
+        "product_gates": 77036
+      },
+      "fragment": "field_2_to_root_1330_phase.kmx.xz",
+      "sha256": "cc6817aca653d1a7c8e7b416dc41a8b15047fb04b61bae1d61915a2af6253733"
+    },
+    {
+      "counts": {
+        "disjoint_repeated_product_pairs": 2,
+        "product_gates": 109515,
+        "repeated_products": 11
+      },
+      "fragment": "decoder_return.kmx.xz",
+      "sha256": "b2da55202f6b574ee9af452f25f34772c2a0e90bfc5ce102129c0861faaf1fcf"
+    }
+  ],
+  "symbolic_interval": 8192
+}

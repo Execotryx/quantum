@@ -15,12 +15,12 @@ from qcompile.dqi.reversible import (
     multiply_xor,
     phase_for_position,
 )
-from qcompile.dqi.scan import phase_scan
+from qcompile.dqi.scan import phase_scan, residue_scan
 from qcompile.io import read_json, sha256, write_json
 from qcompile.official import validate_backend
 
 
-def build_scan(backend_path: Path, output: Path, *, m: int, n: int) -> None:
+def build_scan(backend_path: Path, output: Path, *, m: int, n: int, residue: bool = False) -> None:
     """Emit a standalone scan with precomputed polynomial coefficient inputs."""
     if not 2 <= n <= min(m, 70) or n % 2 or m > 4095:
         raise ValueError("require even syndrome count in [2, 70] and n <= m <= 4095")
@@ -31,16 +31,21 @@ def build_scan(backend_path: Path, output: Path, *, m: int, n: int) -> None:
     builder = km.CircuitBuilder()
     t = n // 2
     locator = [builder.create_quantum_register(12, f"sigma_{i}") for i in range(t + 1)]
-    omega = [builder.create_quantum_register(12, f"omega_{i}") for i in range(t)]
-    reciprocal = [builder.create_quantum_register(12, f"psi_{i}") for i in range(t)]
+    names = ("residue",) if residue else ("omega", "psi")
+    coefficients = [[builder.create_quantum_register(12, f"{name}_{i}") for i in range(t)] for name in names]
     masks = [builder.create_classical_register(12, f"mask_{i}") for i in range(m)]
-    phase_scan(builder, km.GF2Field(12), locator, omega, reciprocal, masks)
+    field = km.GF2Field(12)
+    kind = "residue-scan" if residue else "phase-scan"
+    if residue:
+        residue_scan(builder, field, locator, coefficients[0], masks)
+    else:
+        phase_scan(builder, field, locator, coefficients[0], coefficients[1], masks)
     circuit = builder.finish_circuit()
     output.mkdir(parents=True, exist_ok=False)
-    path = output / "phase-scan.kmb"
+    path = output / f"{kind}.kmb"
     circuit.to_file(str(path), format="kmb")
     write_json(output / "slice.json", {
-        "kind": "phase-scan", "m": m, "n": n, "sha256": sha256(path), "backend": backend,
+        "kind": kind, "m": m, "n": n, "sha256": sha256(path), "backend": backend,
         "qubits": circuit.num_qubits, "bits": circuit.num_bits,
         "toffoli_like": circuit.operation_statistics().num_toffoli_like,
         "operations": dict(circuit.operation_statistics()), "role": "primitive_fixture",
@@ -116,7 +121,7 @@ if __name__ == "__main__":
     parser.add_argument("kind", choices=(
         "multiply", "tower-multiply", "inverse", "native-inverse", "tower-inverse", "subtower-inverse",
         "phase", "eea", "bm", "routed-bm",
-        "phase-scan",
+        "phase-scan", "residue-scan",
     ))
     parser.add_argument("backend", type=Path)
     parser.add_argument("output", type=Path)
@@ -124,9 +129,9 @@ if __name__ == "__main__":
     parser.add_argument("--m", type=int, default=63)
     parser.add_argument("--n", type=int, default=4)
     args = parser.parse_args()
-    if args.kind == "phase-scan":
+    if args.kind in ("phase-scan", "residue-scan"):
         if args.adjoint:
-            parser.error("phase-scan is self-inverse and does not accept --adjoint")
-        build_scan(args.backend, args.output, m=args.m, n=args.n)
+            parser.error("phase scans are self-inverse and do not accept --adjoint")
+        build_scan(args.backend, args.output, m=args.m, n=args.n, residue=args.kind == "residue-scan")
     else:
         build(args.kind, args.backend, args.output, adjoint=args.adjoint)

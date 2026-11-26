@@ -32,6 +32,9 @@ Above-36 releases require the strict cost product in two complete roles.
 Reconcile DQI stage counts with the unsplit circuit on matched inputs.
 Keep numerical phase models and decoded chemistry pilots separate from
 native circuit and extracted archive verification.
+The phase kernel may lend one locator bit while the retained root flag
+guarantees its initial value. Restore the bit before erasing the flag.
+Charge residue preparation and cleanup separately from a supplied-residue scan.
 Keep raw receipts and the original salt when retrying a public comparison.
 Propagate chemistry angle-gauge signs backward through the ordered Givens
 tree. Verify the prepared projectors, decoded metrics and native loader cost.
