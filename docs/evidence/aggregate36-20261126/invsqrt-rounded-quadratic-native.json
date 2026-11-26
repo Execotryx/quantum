@@ -1,0 +1,173 @@
+{
+  "runs": {
+    "correction-controlled-forward": {
+      "executed_mean": 1428.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "97452bf44c93a9d5cbc3d16a7a5f96d35718e93b506965babe78962dcf38cda8",
+      "measured_rows": false,
+      "qubits": 107,
+      "roundtrip": false,
+      "separate_correction": true,
+      "toffoli_like": 1428
+    },
+    "correction-controlled-roundtrip": {
+      "executed_mean": 2856.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "ea6b4514da28934faee9116138b9b2978fb5cb37ca6ede09b3b1dbc370602523",
+      "measured_rows": false,
+      "qubits": 107,
+      "roundtrip": true,
+      "separate_correction": true,
+      "toffoli_like": 2856
+    },
+    "correction-products-forward": {
+      "executed_mean": 1095.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "88f481c5c529d1c38de7d4d7203987ece0be14d9848b4194b367b3d0084c028d",
+      "measured_rows": true,
+      "qubits": 129,
+      "roundtrip": false,
+      "separate_correction": true,
+      "toffoli_like": 1095
+    },
+    "correction-products-roundtrip": {
+      "executed_mean": 2190.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "55343b33d4c7495c3a71f21249f60a4860afc24d184428cf13d0f67e1e1354cb",
+      "measured_rows": true,
+      "qubits": 129,
+      "roundtrip": true,
+      "separate_correction": true,
+      "toffoli_like": 2190
+    },
+    "exact-controlled-forward": {
+      "executed_mean": 2075.0,
+      "fixtures": 1536,
+      "guards": [
+        12,
+        14
+      ],
+      "kmb_sha256": "ae9520e675ea18e1008165330d4223390866f6f89103222e31f3afdb3c8c8a0b",
+      "measured_rows": false,
+      "qubits": 160,
+      "roundtrip": false,
+      "separate_correction": false,
+      "toffoli_like": 2075
+    },
+    "exact-controlled-roundtrip": {
+      "executed_mean": 4150.0,
+      "fixtures": 1536,
+      "guards": [
+        12,
+        14
+      ],
+      "kmb_sha256": "dafee7f31ef5f6174fb5bee44657feaa2784e881be58e503d1e79cc0f490fdfe",
+      "measured_rows": false,
+      "qubits": 160,
+      "roundtrip": true,
+      "separate_correction": false,
+      "toffoli_like": 4150
+    },
+    "exact-products-forward": {
+      "executed_mean": 1630.0,
+      "fixtures": 1536,
+      "guards": [
+        12,
+        14
+      ],
+      "kmb_sha256": "d0e4b75a5eacc50be0d05e48e32f1e9063477fdfb94eac73e82f416c7b556376",
+      "measured_rows": true,
+      "qubits": 182,
+      "roundtrip": false,
+      "separate_correction": false,
+      "toffoli_like": 1630
+    },
+    "exact-products-roundtrip": {
+      "executed_mean": 3260.0,
+      "fixtures": 1536,
+      "guards": [
+        12,
+        14
+      ],
+      "kmb_sha256": "f8af06405edea7257f2c9a6da0f04424d054899b096974c19a7d90fc7c8ca425",
+      "measured_rows": true,
+      "qubits": 182,
+      "roundtrip": true,
+      "separate_correction": false,
+      "toffoli_like": 3260
+    },
+    "selected-controlled-forward": {
+      "executed_mean": 1761.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "41abcda6ef6789daef0d2380ee25c738cef92fcbed64ee6e631535deefbc2526",
+      "measured_rows": false,
+      "qubits": 123,
+      "roundtrip": false,
+      "separate_correction": false,
+      "toffoli_like": 1761
+    },
+    "selected-controlled-roundtrip": {
+      "executed_mean": 3522.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "17b8a937bbf079d92551e60b5e50fcdf79a7266ec74f347a5fd9e7df808019d3",
+      "measured_rows": false,
+      "qubits": 123,
+      "roundtrip": true,
+      "separate_correction": false,
+      "toffoli_like": 3522
+    },
+    "selected-products-forward": {
+      "executed_mean": 1316.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "a7dad7541e2d561cacac9538bb78fd7f41ffcb2f931d1d84401588889d813e30",
+      "measured_rows": true,
+      "qubits": 145,
+      "roundtrip": false,
+      "separate_correction": false,
+      "toffoli_like": 1316
+    },
+    "selected-products-roundtrip": {
+      "executed_mean": 2632.0,
+      "fixtures": 1536,
+      "guards": [
+        1,
+        1
+      ],
+      "kmb_sha256": "3e7897f3646bede754651485bf8d004d6693cd37dfd6275605b32d695e5396ea",
+      "measured_rows": true,
+      "qubits": 145,
+      "roundtrip": true,
+      "separate_correction": false,
+      "toffoli_like": 2632
+    }
+  },
+  "screen_sha256": "a374898d65307d62983ef466856b86f68a770ffb924d658beebbf3d858bad57a"
+}

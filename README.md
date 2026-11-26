@@ -234,6 +234,14 @@ layouts point to a streamed implementation that avoids keeping all
 coefficients live together.
 [Inverse-square-root research and lookup measurements](docs/degree35-invsqrt-source-research-27-11-2026-01-39-29.md)
 
+The fused row-add implementation retained one guard bit per product
+and passed the full phase model at **81.60%** worst tolerance use.
+Its lowest measured arithmetic cost product still required
+**129 qubits and 2,190 Toffolis** for computation and cleanup before
+loading, normalization, or phase. This excludes the tested schedule
+under the current 35-point budget.
+[Native rounded products and comparisons](docs/degree35-invsqrt-rounded-products-27-11-2026-01-47-52.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

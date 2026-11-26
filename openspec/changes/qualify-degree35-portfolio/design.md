@@ -48,6 +48,13 @@ charge before selecting a complete candidate. With the source
 companion costs, the single-component cutoff is about 52,119.68.
 [Source research and measured slices](../../../docs/degree35-invsqrt-source-research-27-11-2026-01-39-29.md)
 
+The fused row-add comparison reduced precision to one retained guard
+per product and separated the outer correction from the constant.
+The lowest arithmetic-only cost product was 129 times 2,190. A
+competing schedule needs a different multiplier, phase construction,
+or companion allocation before a complete verifier run.
+[Native arithmetic comparison](../../../docs/degree35-invsqrt-rounded-products-27-11-2026-01-47-52.md)
+
 ## Verification and delivery
 
 Register a `portfolio-v5` archive with `--at-least-35` after qualifying a full

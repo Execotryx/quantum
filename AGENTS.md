@@ -265,6 +265,9 @@
 - The coarse-curvature screen prices its sampled integer fit against
   the full input domain. Charge each coefficient load and measurement
   cleanup at the declared peak before estimating a streamed circuit.
+- In guarded rounded products, keep the residue bits until the inverse.
+  Distinguish rounding before negation from rounding the negative
+  product at ties. Bind each compact guard choice to a full-domain scan.
 - Keep tower-field DQI development receipts scoped to their actual code
   dimensions. Run the chemistry continuous residual gate before emitting
   decoded words or ANGLE circuits.

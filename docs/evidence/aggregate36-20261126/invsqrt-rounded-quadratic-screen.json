@@ -1,0 +1,111 @@
+{
+  "margins": [
+    {
+      "guards": [
+        12,
+        14
+      ],
+      "margins": {
+        "above_90_percent": 0,
+        "failed_inputs": 0,
+        "first_failed_inputs": [],
+        "input_count": 3133452,
+        "minimum_margin_phase64": 333845430,
+        "minimum_margin_x": 1052475,
+        "nonpositive_margins": 0,
+        "worst_tolerance_fraction": 0.688504696322743,
+        "worst_x": 1052475
+      }
+    },
+    {
+      "guards": [
+        1,
+        1
+      ],
+      "margins": {
+        "above_90_percent": 0,
+        "failed_inputs": 0,
+        "first_failed_inputs": [],
+        "input_count": 3133452,
+        "minimum_margin_phase64": 197180211,
+        "minimum_margin_x": 1052535,
+        "nonpositive_margins": 0,
+        "worst_tolerance_fraction": 0.8160152724590366,
+        "worst_x": 1052535
+      }
+    },
+    {
+      "guards": [
+        2,
+        2
+      ],
+      "margins": {
+        "above_90_percent": 0,
+        "failed_inputs": 0,
+        "first_failed_inputs": [],
+        "input_count": 3133452,
+        "minimum_margin_phase64": 271837371,
+        "minimum_margin_x": 1052143,
+        "nonpositive_margins": 0,
+        "worst_tolerance_fraction": 0.7464014768801355,
+        "worst_x": 1052143
+      }
+    },
+    {
+      "guards": [
+        3,
+        3
+      ],
+      "margins": {
+        "above_90_percent": 0,
+        "failed_inputs": 0,
+        "first_failed_inputs": [],
+        "input_count": 3133452,
+        "minimum_margin_phase64": 307617798,
+        "minimum_margin_x": 1052627,
+        "nonpositive_margins": 0,
+        "worst_tolerance_fraction": 0.7129557276380755,
+        "worst_x": 1052627
+      }
+    },
+    {
+      "guards": [
+        4,
+        4
+      ],
+      "margins": {
+        "above_90_percent": 0,
+        "failed_inputs": 0,
+        "first_failed_inputs": [],
+        "input_count": 3133452,
+        "minimum_margin_phase64": 322030939,
+        "minimum_margin_x": 1052455,
+        "nonpositive_margins": 0,
+        "worst_tolerance_fraction": 0.6995310911911671,
+        "worst_x": 1052455
+      }
+    },
+    {
+      "guards": [
+        6,
+        6
+      ],
+      "margins": {
+        "above_90_percent": 0,
+        "failed_inputs": 0,
+        "first_failed_inputs": [],
+        "input_count": 3133452,
+        "minimum_margin_phase64": 332011827,
+        "minimum_margin_x": 1052783,
+        "nonpositive_margins": 0,
+        "worst_tolerance_fraction": 0.6901702189813536,
+        "worst_x": 1052783
+      }
+    }
+  ],
+  "registration_sha256": "42794865d6167bd96e7545a99810fc0fbed76d4dc491ffcf63b3dbd58794c077",
+  "selected_guards": [
+    1,
+    1
+  ]
+}
