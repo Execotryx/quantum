@@ -96,6 +96,9 @@
 - The binary pad composes the geometric factor blocks with their
   matching coefficient dilations. Before erasing a controlled product,
   temporarily recover the source coordinates that created it.
+- A reciprocal DQI orientation must repay phase at the original
+  mask address and original field value. Preserve the live orientation
+  bit and evaluate mixed orientations in one composed circuit.
 - A Givens-order change may move a rotation only across disjoint orbital
   pairs. Preserve the matching angle columns, check reconstructed vectors,
   and price the affected XOR transitions before full loader verification.

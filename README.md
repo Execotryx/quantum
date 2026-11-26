@@ -90,6 +90,13 @@ producer, and an exceptional-chart route.
 [Degree padding and resource bounds](docs/aggregate-above-36-dqi-degree-padding-26-11-2026-20-57-28.md)
 · [Binary padding comparison](docs/aggregate-above-36-dqi-binary-padding-26-11-2026-21-04-08.md)
 
+The padded phase stage now accepts a live orientation bit and pays
+the original mask phase for either order of the syndrome. Reversal
+covered all 26 primary derivative-chart failures in a 6,144-input
+classical screen. Coherent chart selection and locator construction
+remain open.
+[Orientation and full-position replay](docs/aggregate-above-36-dqi-orientation-26-11-2026-21-14-38.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

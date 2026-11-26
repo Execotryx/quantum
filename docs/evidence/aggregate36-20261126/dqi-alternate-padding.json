@@ -1,0 +1,210 @@
+{
+  "alternate_dilation_exponent": 149,
+  "classification": "classical_alternate_factor_screen",
+  "field_table": "repository GF(4096) software table",
+  "panels": [
+    {
+      "primary_failures": [
+        {
+          "alternate_failed_expected_half_degree": 13,
+          "index": 699,
+          "primary_failed_expected_half_degree": 13,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 32
+        }
+      ],
+      "seed": 36209,
+      "shots": 1024
+    },
+    {
+      "primary_failures": [
+        {
+          "alternate_failed_expected_half_degree": 16,
+          "index": 78,
+          "primary_failed_expected_half_degree": 16,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 32
+        },
+        {
+          "alternate_failed_expected_half_degree": null,
+          "index": 135,
+          "primary_failed_expected_half_degree": 13,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 31
+        },
+        {
+          "alternate_failed_expected_half_degree": 8,
+          "index": 205,
+          "primary_failed_expected_half_degree": 8,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 33
+        },
+        {
+          "alternate_failed_expected_half_degree": 12,
+          "index": 915,
+          "primary_failed_expected_half_degree": 12,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 33
+        }
+      ],
+      "seed": 36217,
+      "shots": 1024
+    },
+    {
+      "primary_failures": [
+        {
+          "alternate_failed_expected_half_degree": null,
+          "index": 28,
+          "primary_failed_expected_half_degree": 1,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 30
+        },
+        {
+          "alternate_failed_expected_half_degree": null,
+          "index": 173,
+          "primary_failed_expected_half_degree": 6,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 29
+        },
+        {
+          "alternate_failed_expected_half_degree": 11,
+          "index": 249,
+          "primary_failed_expected_half_degree": 11,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 33
+        },
+        {
+          "alternate_failed_expected_half_degree": 10,
+          "index": 413,
+          "primary_failed_expected_half_degree": 10,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 33
+        },
+        {
+          "alternate_failed_expected_half_degree": 9,
+          "index": 541,
+          "primary_failed_expected_half_degree": 9,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 34
+        },
+        {
+          "alternate_failed_expected_half_degree": null,
+          "index": 643,
+          "primary_failed_expected_half_degree": 1,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 27
+        },
+        {
+          "alternate_failed_expected_half_degree": null,
+          "index": 908,
+          "primary_failed_expected_half_degree": 11,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 31
+        },
+        {
+          "alternate_failed_expected_half_degree": 15,
+          "index": 1149,
+          "primary_failed_expected_half_degree": 15,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 33
+        },
+        {
+          "alternate_failed_expected_half_degree": null,
+          "index": 1455,
+          "primary_failed_expected_half_degree": 8,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 31
+        },
+        {
+          "alternate_failed_expected_half_degree": null,
+          "index": 1711,
+          "primary_failed_expected_half_degree": 10,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 30
+        },
+        {
+          "alternate_failed_expected_half_degree": null,
+          "index": 1994,
+          "primary_failed_expected_half_degree": 13,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 30
+        },
+        {
+          "alternate_failed_expected_half_degree": 13,
+          "index": 2148,
+          "primary_failed_expected_half_degree": 13,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 33
+        },
+        {
+          "alternate_failed_expected_half_degree": 11,
+          "index": 2290,
+          "primary_failed_expected_half_degree": 11,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 34
+        },
+        {
+          "alternate_failed_expected_half_degree": null,
+          "index": 2615,
+          "primary_failed_expected_half_degree": 2,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 30
+        },
+        {
+          "alternate_failed_expected_half_degree": 16,
+          "index": 2927,
+          "primary_failed_expected_half_degree": 16,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 35
+        },
+        {
+          "alternate_failed_expected_half_degree": null,
+          "index": 3100,
+          "primary_failed_expected_half_degree": 13,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 28
+        },
+        {
+          "alternate_failed_expected_half_degree": null,
+          "index": 3335,
+          "primary_failed_expected_half_degree": 11,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 31
+        },
+        {
+          "alternate_failed_expected_half_degree": null,
+          "index": 3489,
+          "primary_failed_expected_half_degree": 10,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 30
+        },
+        {
+          "alternate_failed_expected_half_degree": 10,
+          "index": 3537,
+          "primary_failed_expected_half_degree": 10,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 32
+        },
+        {
+          "alternate_failed_expected_half_degree": 15,
+          "index": 3831,
+          "primary_failed_expected_half_degree": 15,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 32
+        },
+        {
+          "alternate_failed_expected_half_degree": null,
+          "index": 3909,
+          "primary_failed_expected_half_degree": 12,
+          "reverse_primary_failed_expected_half_degree": null,
+          "weight": 31
+        }
+      ],
+      "seed": 36337,
+      "shots": 4096
+    }
+  ],
+  "primary_dilation_exponent": 137,
+  "routing_emitted": false,
+  "sampler_sha256": "f14274bc0943fb9769ddb01131be6063191a15009fe1caf1d4bdd9fd25194e65"
+}

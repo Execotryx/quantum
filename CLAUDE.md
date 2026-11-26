@@ -59,6 +59,8 @@ tails. Use the same root-free factors for locator and evaluator and
 restore both banks and the degree after the scan.
 The binary pad pairs each geometric factor block with its dilation.
 Erase its product while the original source coordinates are recoverable.
+The reciprocal phase branch restores the original mask address and
+field value and leaves its orientation bit unchanged.
 Preserve angle columns when commuting disjoint Givens rotations.
 Price both adjacent XOR transitions before promoting a new loader order.
 Keep raw receipts and the original salt when retrying a public comparison.

@@ -164,19 +164,46 @@ def prepared_residue_scan(builder: Any, field: Any, modulus: list[Any], omega: l
 
 def two_bank_residue_scan(builder: Any, field: Any, modulus: list[Any], omega: list[Any],
                           masks: list[Any], half_chart: tuple[int, ...], *,
-                          multiply: FieldProduct = multiply_xor, projective: bool = False) -> None:
+                          multiply: FieldProduct = multiply_xor, projective: bool = False,
+                          orientation: Any = None) -> None:
     """Phase and restore a fixed odd-degree chart using the locator and evaluator."""
+    kernel = _residue_phase
+    if orientation is not None:
+        if len(masks) != 4095:
+            raise ValueError("reciprocal orientation requires the full mask domain")
+        powers = GF4096().exp
+        positions = iter(range(4095))
+
+        def reciprocal_phase(builder: Any, sigma: Any, residue: Any, mask: Any) -> None:
+            # Reversing S1..S70 changes e at x into e*x**71 at 1/x.
+            position = next(positions)
+            scale = powers[71 * position % 4095]
+            with _root_flag(builder, sigma) as root:
+                builder.ccz(root, residue, mask)
+                # On the reciprocal branch, cancel the first phase and
+                # use the original position and unscaled error value.
+                selected = builder.alloc_qubits(1)[0]
+                builder.init_and(root, orientation, selected)
+                builder.ccz(selected, residue, mask)
+                builder.gf2_imul(scale, target=residue, field=field)
+                builder.ccz(selected, residue, masks[-position % 4095])
+                builder.gf2_idiv(scale, target=residue, field=field)
+                builder.del_and(root, orientation, selected)
+                builder.free(selected)
+
+        kernel = reciprocal_phase
     odd_forney_inplace(builder, modulus, omega, half_chart, multiply=multiply, projective=projective)
-    _scan_evaluations(builder, field, (modulus, omega), masks, _residue_phase, monic=True)
+    _scan_evaluations(builder, field, (modulus, omega), masks, kernel, monic=True)
     odd_forney_inplace(builder, modulus, omega, half_chart, adjoint=True, multiply=multiply, projective=projective)
 
 
 def degree_padded_residue_scan(builder: Any, field: Any, locator: list[Any], omega: list[Any],
-                               masks: list[Any], degree: Any, *, multiply: FieldProduct = multiply_xor) -> None:
-    """Phase from compact reversed banks when the padded derivative chart is regular."""
+                               masks: list[Any], degree: Any, *, multiply: FieldProduct = multiply_xor,
+                               orientation: Any = None) -> None:
+    """Phase from regular padded banks with an optional live reciprocal-orientation bit."""
     pad_reversed_banks(builder, locator, omega, degree)
     two_bank_residue_scan(builder, field, locator[::-1], omega[::-1], masks, tuple(range(16, -1, -1)),
-                          multiply=multiply, projective=True)
+                          multiply=multiply, projective=True, orientation=orientation)
     pad_reversed_banks(builder, locator, omega, degree, adjoint=True)
 
 
