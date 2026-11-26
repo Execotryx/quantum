@@ -27,8 +27,10 @@ def _ordinary_reciprocal(words: list[int], field: GF4096) -> list[int]:
 
 
 @pytest.mark.official
-@pytest.mark.parametrize("degree", [3, 7, pytest.param(35, marks=pytest.mark.slow)])
-def test_native_regular_locator(project_root, monkeypatch, tmp_path, degree):
+@pytest.mark.parametrize(("degree", "reciprocal_steps"),
+                         [(3, 0), (7, 0), pytest.param(35, 1, marks=pytest.mark.slow),
+                          pytest.param(35, 3, marks=pytest.mark.slow)])
+def test_native_regular_locator(project_root, monkeypatch, tmp_path, degree, reciprocal_steps):
     backend = project_root / "vendor/backend.json"
     if not sys.platform.startswith("linux") or not backend.is_file():
         pytest.skip("pinned native backend required")
@@ -70,15 +72,19 @@ def test_native_regular_locator(project_root, monkeypatch, tmp_path, degree):
             break
     assert len(inputs) == shots
 
-    first_only = degree == 35
-    if first_only:
-        outputs = [_ordinary_reciprocal(row, field) for row in inputs]
+    offsets = tuple(range(0, 2 * reciprocal_steps, 2))
+    if offsets:
+        outputs = [row[:] for row in inputs]
+        for row in outputs:
+            for offset in offsets:
+                row[offset:] = _ordinary_reciprocal(row[offset:], field)
     receipts = {}
     for reverse in (False, True):
         builder = km.CircuitBuilder()
         words = [builder.create_quantum_register(12, f"S{i}") for i in range(2 * degree)]
-        if first_only:
-            _series_inverse(builder, words, multiply)
+        if offsets:
+            for offset in reversed(offsets) if reverse else offsets:
+                _series_inverse(builder, words[offset:], multiply)
             output_order = words
         else:
             locator_wires, evaluator_wires = regular_locator_evaluator(builder, words, adjoint=reverse,
@@ -104,8 +110,8 @@ def test_native_regular_locator(project_root, monkeypatch, tmp_path, degree):
         assert not sim.read_phase_flipped_across_shots().any()
         charge = int(circuit.operation_statistics().num_toffoli_like)
         assert sim.operation_statistics().num_toffoli_like == shots * charge
-        if first_only:
-            assert charge > 57_607 // 2
+        if offsets:
+            assert charge <= 36_354 * reciprocal_steps
             assert circuit.num_qubits <= 888
         receipts[label] = {"sha256": sha256(artifact), "qubits": circuit.num_qubits, "toffoli_like": charge}
     if degree == 3:
@@ -135,7 +141,8 @@ def test_native_regular_locator(project_root, monkeypatch, tmp_path, degree):
         receipts["composed"] = {"sha256": sha256(artifact), "qubits": circuit.num_qubits, "positions": positions,
                                 "toffoli_like": int(circuit.operation_statistics().num_toffoli_like)}
     write_json(tmp_path / "locator.json", {
-        "scope": "first reciprocal only" if first_only else "complete regular locator and evaluator",
-        "degree": degree, "shots": shots, "sample_seed": seed, "native_seed": 36161,
+        "scope": "initial reciprocals" if offsets else "complete regular locator and evaluator",
+        "degree": degree, "reciprocal_steps": reciprocal_steps, "shots": shots,
+        "sample_seed": seed, "native_seed": 36161,
         "backend_sha256": sha256(backend), "tensor_sha256": tensor_sha, "observations": receipts,
     })

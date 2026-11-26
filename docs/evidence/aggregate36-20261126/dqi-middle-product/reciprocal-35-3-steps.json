@@ -1,0 +1,22 @@
+{
+  "backend_sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+  "degree": 35,
+  "native_seed": 36161,
+  "observations": {
+    "forward": {
+      "qubits": 879,
+      "sha256": "5daf47ba6518fb840e3f1c5ec46869cefb0caa0b32e4b7b8829a981adac51b0b",
+      "toffoli_like": 104274
+    },
+    "inverse": {
+      "qubits": 879,
+      "sha256": "0f2a33b8225bface9115c810f2b80041b68ba95cb14b3d66a2cc8ccfd0e31c5c",
+      "toffoli_like": 104274
+    }
+  },
+  "reciprocal_steps": 3,
+  "sample_seed": 36186,
+  "scope": "initial reciprocals",
+  "shots": 12,
+  "tensor_sha256": "19ee4259f4d20a779d2484b3dea635d2e0efd23fce39c859e70228f668e53093"
+}

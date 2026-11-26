@@ -81,7 +81,10 @@
   locator to have already been constructed.
 - The in-place continued-fraction locator assumes nonzero linear Euclidean
   quotients and a nonzero denominator constant. Keep reduced complete
-  composition evidence separate from the degree-35 first reciprocal.
+  composition evidence separate from the degree-35 reciprocal prefixes.
+- In the blocked locator reciprocal, finish the descending overlapping
+  updates before interpolating cross-block terms from untouched lower words.
+  Transpose the coefficient pairing when the requested band is shorter.
 - Before a full portfolio run, exercise native ANGLE serialization on its
   temporary filesystem. Keep prior raw receipts and the original salts
   when a public development comparison needs an infrastructure retry.

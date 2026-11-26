@@ -49,7 +49,9 @@ during leaf scaling. Require a nonzero constant and a prepared locator
 before entering the fixed-chart syndrome scan.
 The in-place continued-fraction locator requires nonzero linear Euclidean
 quotients and a nonzero denominator constant. Its degree-35 receipt covers
-the first reciprocal, while reduced fixtures cover complete composition.
+reciprocal prefixes, while reduced fixtures cover complete composition.
+Keep cross-block product sources below the entire destination block.
+The transposed middle product uses the two shortest coefficient ranges.
 Keep raw receipts and the original salt when retrying a public comparison.
 Propagate chemistry angle-gauge signs backward through the ordered Givens
 tree. Verify the prepared projectors, decoded metrics and native loader cost.

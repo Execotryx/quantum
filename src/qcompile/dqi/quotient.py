@@ -11,7 +11,7 @@ from .bilinear import erase_product
 from .decoder import _divide, _multiply
 from .field import GF4096
 from .subtower import inverse_xor
-from .tower import multiply_xor
+from .tower import _xor_map, multiply_xor
 
 _FIELD = GF4096()
 FieldProduct = Callable[[Any, Sequence[Any], Sequence[Any], Sequence[Any]], None]
@@ -55,25 +55,68 @@ def _product_range(builder: Any, left: Sequence[Any], right: Sequence[Any],
     pairs = [(i, j) for i in range(len(left))
              for j in range(max(0, first - i), min(len(right), stop - i))
              if left[i] is not None and right[j] is not None]
-    length = len(left) + len(right) - 1
+    length = _interpolation_width(len(left), len(right), len(target))
     if len(pairs) <= length or length > _FIELD.order:
         for i, j in pairs:
             multiply(builder, left[i], right[j], target[i + j - first])
         return
 
+    _interpolated_product_range(builder, left, right, target, first, multiply)
+
+
+@cache
+def _scaled_columns(scale: int, columns: tuple[int, ...]) -> tuple[int, ...]:
+    return tuple(_FIELD.mul(scale, column) for column in columns)
+
+
+def _interpolation_width(left: int, right: int, target: int) -> int:
+    """Use the two shortest coefficient ranges in the trilinear pairing."""
+    return left + right + target - max(left, right, target) - 1
+
+
+@cache
+def _product_weights(left: int, right: int, target: int, first: int
+                     ) -> tuple[tuple[tuple[int, ...], tuple[int, ...], tuple[int, ...]], ...]:
+    width = _interpolation_width(left, right, target)
+    rows = []
+    for point, column in _interpolation(width):
+        powers = [1]
+        for _ in range(1, width):
+            powers.append(_FIELD.mul(powers[-1], point))
+
+        def band(size: int, start: int) -> tuple[int, ...]:
+            return tuple(column[i] if 0 <= i < width else 0 for i in range(start, start + size))
+
+        # Pair the requested product coefficients with formal weights u.
+        # Transposing onto a longer input convolves u with the other
+        # input in reverse coefficient order.
+        if width == left + right - 1:
+            rows.append((tuple(powers[:left]), tuple(powers[:right]), band(target, first)))
+        elif width == right + target - 1:
+            rows.append((band(left, right - 1 - first), tuple(powers[:right][::-1]), tuple(powers[:target])))
+        else:
+            rows.append((tuple(powers[:left][::-1]), band(right, left - 1 - first), tuple(powers[:target])))
+    return tuple(rows)
+
+
+def _interpolated_product_range(builder: Any, left: Sequence[Any], right: Sequence[Any],
+                                target: Sequence[Any], first: int, multiply: FieldProduct,
+                                *, right_columns: tuple[int, ...] = ()) -> None:
+    """Evaluate a product, optionally mapping the coefficients of the right input."""
     a, b, product = [builder.alloc_qubits(12) for _ in range(3)]
-    for point, weights in _interpolation(length):
+    for left_weights, right_weights, output_weights in _product_weights(len(left), len(right), len(target), first):
         def evaluate() -> None:
-            for words, destination in ((left, a), (right, b)):
-                scale = 1
-                for word in words:
-                    if word is not None:
-                        _scaled_xor(builder, word, destination, scale)
-                    scale = _FIELD.mul(scale, point)
+            for words, destination, weights in ((left, a, left_weights), (right, b, right_weights)):
+                for word, scale in zip(words, weights, strict=True):
+                    if word is not None and scale:
+                        if destination is b and right_columns:
+                            _xor_map(builder, word, b, _scaled_columns(scale, right_columns))
+                        else:
+                            _scaled_xor(builder, word, destination, scale)
 
         evaluate()
         multiply(builder, a, b, product)
-        for word, scale in zip(target, weights[first:stop], strict=True):
+        for word, scale in zip(target, output_weights, strict=True):
             _scaled_xor(builder, product, word, scale)
         erase_product(builder, a, b, product)
         evaluate()

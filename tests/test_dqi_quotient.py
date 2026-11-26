@@ -43,7 +43,7 @@ def test_native_quotient_product_and_cleanup(project_root, monkeypatch, tmp_path
             assert charged < 25_000
             assert circuit.num_qubits <= 1_743
         else:
-            assert charged == 574 * rank
+            assert charged <= 498 * rank
             assert circuit.num_qubits <= 2_127
     shots = 64
     rng = np.random.default_rng(785 + degree)

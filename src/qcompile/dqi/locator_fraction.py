@@ -1,11 +1,11 @@
 """In-place locator and evaluator on the regular linear-quotient chart."""
 
 from functools import cache
-from typing import Any
+from typing import Any, NamedTuple
 
 from .field import GF4096
 from .inverse_action import _scale
-from .quotient import FieldProduct
+from .quotient import FieldProduct, _interpolated_product_range, _interpolation_width
 from .subtower import inverse_xor
 from .tower import _xor_map, multiply_xor
 
@@ -41,25 +41,79 @@ def _invert_word(builder: Any, word: Any) -> None:
     builder.free(inverse)
 
 
+class _ProductBand(NamedTuple):
+    left: range
+    right: range
+    output: range
+    first: int
+
+
+def _product_bands(low: int, high: int, stride: int) -> tuple[dict[int, _ProductBand], int]:
+    """Find profitable convolution bands whose sources lie below this block."""
+    bands = {}
+    savings = 0
+    for residue in range(min(stride, high - low)):
+        pairs = [(j - stride * i, i, j)
+                 for j in range(low + residue, high, stride)
+                 for i in range(max(1, (j - low) // stride + 1), min(low, (j - 1) // stride + 1))]
+        if not pairs:
+            continue
+        left, right, output = zip(*pairs, strict=True)
+        a = range(min(left), max(left) + 1, stride)
+        b = range(min(right), max(right) + 1)
+        out = range(min(output), max(output) + 1, stride)
+        length = _interpolation_width(len(a), len(b), len(out))
+        if length < len(pairs):
+            bands[output[0] % stride] = _ProductBand(a, b, out, (out.start - a.start) // stride - b.start)
+            savings += len(pairs) - length
+    return bands, savings
+
+
+@cache
+def _power_blocks(length: int, stride: int) -> tuple[tuple[int, int, dict[int, _ProductBand]], ...]:
+    # Maximize the savings over scalar products by splitting into contiguous blocks.
+    best = [0] * (length + 1)
+    cuts = [0] * (length + 1)
+    for high in range(1, length + 1):
+        for low in range(high):
+            _, savings = _product_bands(low, high, stride)
+            if best[low] + savings > best[high]:
+                best[high], cuts[high] = best[low] + savings, low
+    blocks = []
+    high = length
+    while high:
+        low = cuts[high]
+        bands, _ = _product_bands(low, high, stride)
+        blocks.append((low, high, bands))
+        high = low
+    return tuple(blocks)
+
+
 def _invert_unit_tail(builder: Any, words: list[Any], multiply: FieldProduct) -> None:
     strides = _inverse_powers(len(words))
     if not strides:
         return
-    squared = builder.alloc_qubits(12)
     for stride in strides:
         columns = _frobenius(stride)
-        # Every source index is below the destination. Descending updates
-        # preserve the coefficients of the input to this power map.
-        for j in range(len(words) - 1, stride - 1, -1):
-            for i in range(1, j // stride + 1):
-                source = j - stride * i
-                if source == 0:
-                    _xor_map(builder, words[i], words[j], columns)
-                else:
+        for low, high, bands in _power_blocks(len(words), stride):
+            squared = builder.alloc_qubits(12)
+            # Descend through overlapping terms before the cross-block update.
+            # Each interpolated band reads only words below the output block.
+            for j in range(high - 1, max(low, stride) - 1, -1):
+                for i in range(1, (j - 1) // stride + 1):
+                    source = j - stride * i
+                    if source < low and i < low and j % stride in bands:
+                        continue
                     _xor_map(builder, words[i], squared, columns)
                     multiply(builder, words[source], squared, words[j])
                     _xor_map(builder, words[i], squared, columns)
-    builder.free(squared)
+                if j % stride == 0:
+                    i = j // stride
+                    _xor_map(builder, words[i], words[j], columns)
+            builder.free(squared)
+            for left, right, output, first in bands.values():
+                _interpolated_product_range(builder, [words[i] for i in left], [words[i] for i in right],
+                                            [words[i] for i in output], first, multiply, right_columns=columns)
 
 
 def _series_inverse(builder: Any, words: list[Any], multiply: FieldProduct) -> None:
