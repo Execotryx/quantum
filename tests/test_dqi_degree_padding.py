@@ -11,11 +11,13 @@ import sys
 import numpy as np
 import pytest
 
-from qcompile.dqi.decoder import _add, _divide, _multiply, syndrome
+from qcompile.dqi.decoder import _add, _divide, _multiply, bm_locator, syndrome
 from qcompile.dqi.degree_padding import pad_reversed_banks, padding_factors
 from qcompile.dqi.field import GF4096
-from qcompile.dqi.locator_fraction import blocked_suffix_inplace
+from qcompile.dqi.locator_fraction import blocked_suffix_inplace, projective_continuant
+from qcompile.dqi.quotient import _product_range
 from qcompile.dqi.scan import degree_padded_chart_xor, degree_padded_residue_scan, derivative_reciprocal, evaluator
+from qcompile.dqi.tower import ProjectedFieldProduct
 from qcompile.io import read_json, sha256, write_json
 from qcompile.official import validate_backend
 
@@ -236,14 +238,14 @@ class _PhaseBuilder(_BasisBuilder):
         self.gf2_imul(FIELD.inv(scale), target=target, field=field)
 
 
-def _field_product(project_root: Path, monkeypatch, tmp_path: Path):
+def _field_product(project_root: Path, monkeypatch, tmp_path: Path, *, projected: bool = False):
     monkeypatch.syspath_prepend(str(project_root / "tools"))
     tensor = tmp_path / "scheme42.txt"
     generator = project_root / "third_party/dqi-scheme42/src/scheme42.py"
     subprocess.run([sys.executable, "-B", str(generator), str(tensor)], check=True)
     # The published text digest uses LF. The generator writes native endings.
     tensor.write_bytes(tensor.read_bytes().replace(b"\r\n", b"\n"))
-    return import_module("dqi_quotient").load_field_product(tensor)
+    return import_module("dqi_quotient").load_field_product(tensor, projected=projected)
 
 
 def _original_support(support: dict[int, int], reciprocal: bool) -> dict[int, int]:
@@ -318,6 +320,89 @@ def test_padded_residues_recover_exact_support():
         assert roots.tolist() == sorted(support)
         recovered = all_evaluations(residue)
         assert {int(j): int(recovered[j]) for j in roots} == support
+
+
+@pytest.mark.slow
+def test_projected_interpolation_xors_dirty_outputs(project_root, monkeypatch, tmp_path):
+    multiply, _ = _field_product(project_root, monkeypatch, tmp_path, projected=True)
+    rng = Random(36479)
+    widths = [12] * 29
+    size = sum(widths)
+    rows = [[rng.randrange(4096) for _ in widths] for _ in range(12)]
+    expected = [row[:18] + [a ^ b for a, b in zip(row[18:], _multiply(row[:7], row[7:18], FIELD)[3:14], strict=True)]
+                for row in rows]
+    words = [range(i * 12, (i + 1) * 12) for i in range(len(widths))]
+    measured = []
+    for emit in (multiply, multiply.__call__):
+        builder = _PhaseBuilder(rows, 36491, widths)
+        _product_range(builder, words[:7], words[7:18], words[18:], 3, emit)
+        assert builder.data[:size] == _BasisBuilder(expected, widths).data
+        measured.append((builder.charged_ands, len(builder.data) - size))
+        _product_range(builder, words[:7], words[7:18], words[18:], 3, emit)
+        assert builder.data[:size] == _BasisBuilder(rows, widths).data
+        assert not any(builder.data[size:]) and builder.phase == 0 and not builder.bits
+    assert measured == [(714, 27), (714, 39)]
+
+
+@pytest.mark.slow
+@pytest.mark.parametrize("degree", [1, 5, 35])
+def test_projective_locator_continuant(project_root, monkeypatch, tmp_path, degree):
+    multiply, tensor_hash = _field_product(project_root, monkeypatch, tmp_path, projected=True)
+    assert isinstance(multiply, ProjectedFieldProduct)
+    rng = Random(36527)
+    tapes = [[value for _ in range(degree) for value in (rng.randrange(1, 4096), rng.randrange(4096))]
+             for _ in range(12)]
+    references = []
+    for _ in range(24):
+        support = {j: rng.randrange(1, 4096) for j in rng.sample(range(4095), degree)}
+        values = syndrome(support, FIELD)
+        locator = bm_locator(values, FIELD)
+        omega = evaluator(values, locator, FIELD)
+        reference = locator[::-1] + (omega + [0] * (degree - len(omega)))[::-1]
+        denominator, numerator = reference[:degree + 1], reference[degree + 1:]
+        tape = []
+        while numerator != [0]:
+            quotient, remainder = _divide(denominator, numerator, FIELD)
+            if len(quotient) != 2:
+                break
+            tape.extend(reversed(quotient))
+            denominator, numerator = numerator, remainder
+        if len(tape) == 2 * degree:
+            tapes.append(tape)
+            references.append(reference)
+        if len(references) == 12:
+            break
+    assert len(references) == 12
+    widths = [12] * (2 * degree + 1)
+    words = [range(i * 12, (i + 1) * 12) for i in range(len(widths))]
+    expected_pairs = []
+    for tape in tapes:
+        denominator, numerator = [1], [0]
+        for i in range(len(tape) - 2, -1, -2):
+            a, b = tape[i:i + 2]
+            next_denominator = _add(_multiply([b, a], denominator, FIELD), numerator)
+            numerator, denominator = denominator, next_denominator
+        expected_pairs.append([*denominator, *numerator])
+    for pair, reference in zip(expected_pairs[-len(references):], references, strict=True):
+        assert [FIELD.div(value, pair[-degree - 1]) for value in pair] == reference
+    builder = _PhaseBuilder([tape + [0] for tape in tapes], 36529, widths)
+    initial = builder.data.copy()
+    denominator, numerator = projective_continuant(builder, words[:-1], words[-1], multiply=multiply)
+    output = [builder.data[wire] for word in denominator + numerator for wire in word]
+    assert output == _BasisBuilder(expected_pairs, widths).data
+    size = len(initial)
+    assert not any(builder.data[size:]) and builder.phase == 0 and not builder.bits
+    forward = builder.charged_ands
+    projective_continuant(builder, words[:-1], words[-1], adjoint=True, multiply=multiply)
+    assert builder.data[:size] == initial
+    assert not any(builder.data[size:]) and builder.phase == 0 and not builder.bits
+    assert builder.charged_ands == 2 * forward
+    assert len(builder.data) <= size + 33
+    write_json(tmp_path / "projective-locator-continuant.json", {
+        "scope": "software continuant on a supplied regular quotient tape with an extra unit word",
+        "degree": degree, "shots": len(tapes), "syndrome_derived_tapes": len(references), "tensor_sha256": tensor_hash,
+        "qubits": len(builder.data), "controlled_products_per_direction": forward,
+    })
 
 
 @pytest.mark.slow

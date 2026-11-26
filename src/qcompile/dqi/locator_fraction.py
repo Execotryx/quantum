@@ -4,10 +4,12 @@ from functools import cache
 from typing import Any, NamedTuple
 
 from .field import GF4096
-from .inverse_action import _scale
-from .quotient import FieldProduct, _interpolated_product_range, _interpolation_width, _series_inplace, _truncate_inplace
+from .inverse_action import _reciprocal, _scale, _scale_words
+from .quotient import (
+    FieldProduct, _interpolated_product_range, _interpolation_width, _product_range, _series_inplace, _truncate_inplace,
+)
 from .subtower import inverse_xor
-from .tower import _xor_map, multiply_xor
+from .tower import ProjectedFieldProduct, _xor_map, multiply_xor
 
 
 @cache
@@ -148,6 +150,50 @@ def blocked_suffix_inplace(builder: Any, words: list[Any], previous: list[Any], 
     _truncate_inplace(builder, words, previous, multiply, adjoint=True, compact=True)
     if not adjoint:
         _series_inplace(builder, words, current, multiply, adjoint=False)
+
+
+def _projective_fold(builder: Any, a: Any, b: Any, denominator: list[Any], numerator: list[Any],
+                     multiply: ProjectedFieldProduct, *, adjoint: bool) -> None:
+    """Replace (D,N,a,b) by ((a*z+b)*D+N,D)."""
+    if not adjoint:
+        _product_range(builder, [b, a], denominator[:-1], numerator, 0, multiply)
+    head = denominator[-1]
+    with _reciprocal(builder, head, compact_inner=True) as reciprocal:
+        if adjoint:
+            _scale_words(builder, [a], reciprocal, head, multiply)
+            multiply(builder, a, denominator[-2], b)
+            _scale_words(builder, [b], reciprocal, head, multiply)
+        else:
+            _scale_words(builder, [b], head, reciprocal, multiply)
+            multiply(builder, a, denominator[-2], b)
+            _scale_words(builder, [a], head, reciprocal, multiply)
+    if adjoint:
+        _product_range(builder, [b, a], denominator[:-1], numerator, 0, multiply)
+
+
+def projective_continuant(builder: Any, words: list[Any], unit: Any, *,
+                          adjoint: bool = False, multiply: ProjectedFieldProduct) -> tuple[list[Any], list[Any]]:
+    """Fold a regular linear-quotient tape to an ascending (D,N) pair.
+
+    Every slope is nonzero. The extra word starts clean in the forward
+    direction and is returned clean by the adjoint. D retains its explicit
+    leading coefficient, and neither polynomial is normalized.
+    """
+    if not words or len(words) % 2 or any(len(word) != 12 for word in (*words, unit)):
+        raise ValueError("projective continuant requires pairs of 12-bit words and a 12-bit unit register")
+    denominator, numerator = [words[-1], words[-2]], [unit]
+    steps = []
+    for index in range(len(words) - 4, -1, -2):
+        a, b = words[index:index + 2]
+        steps.append((a, b, denominator, numerator))
+        denominator, numerator = [*numerator, b, a], denominator
+    if not adjoint:
+        builder.x(unit[0])
+    for a, b, d, n in (reversed(steps) if adjoint else steps):
+        _projective_fold(builder, a, b, d, n, multiply, adjoint=adjoint)
+    if adjoint:
+        builder.x(unit[0])
+    return denominator, numerator
 
 
 def _continuant_layout(words: list[Any]) -> list[tuple[Any, Any, list[Any], list[Any]]]:

@@ -8,6 +8,7 @@ from typing import Any
 from .field import GF4096
 
 BilinearTerm = tuple[int, int, int]
+_FIELD = GF4096()
 
 
 def linear(columns: Sequence[int], value: int) -> int:
@@ -115,6 +116,11 @@ def multiply_xor(builder: Any, left: Sequence[Any], right: Sequence[Any], target
 
 def _product_xor(builder: Any, left: Sequence[Any], right: Sequence[Any], target: Sequence[Any],
                  terms: Sequence[BilinearTerm]) -> None:
+    _product_xor_to(builder, left, right, ((target, 1),), terms)
+
+
+def _product_xor_to(builder: Any, left: Sequence[Any], right: Sequence[Any],
+                    targets: Sequence[tuple[Sequence[Any], int]], terms: Sequence[BilinearTerm]) -> None:
     scratch = builder.alloc_qubits(3)
     a, b, product = scratch
     for left_mask, right_mask, word in terms:
@@ -125,15 +131,31 @@ def _product_xor(builder: Any, left: Sequence[Any], right: Sequence[Any], target
         for wire in r_wires:
             builder.cx(wire, b)
         builder.init_and(a, b, product)
-        for i, wire in enumerate(target):
-            if word >> i & 1:
-                builder.cx(product, wire)
+        for target, scale in targets:
+            output = word if scale == 1 else _FIELD.mul(word, scale)
+            for i, wire in enumerate(target):
+                if output >> i & 1:
+                    builder.cx(product, wire)
         builder.del_and(a, b, product)
         for wire in reversed(r_wires):
             builder.cx(wire, b)
         for wire in reversed(l_wires):
             builder.cx(wire, a)
     builder.free(scratch)
+
+
+@dataclass(frozen=True)
+class ProjectedFieldProduct:
+    """A fixed field tensor whose products can fan out to scaled destinations."""
+
+    terms: tuple[BilinearTerm, ...]
+
+    def __call__(self, builder: Any, left: Sequence[Any], right: Sequence[Any], target: Sequence[Any]) -> None:
+        _product_xor(builder, left, right, target, self.terms)
+
+    def project(self, builder: Any, left: Sequence[Any], right: Sequence[Any],
+                targets: Sequence[tuple[Sequence[Any], int]]) -> None:
+        _product_xor_to(builder, left, right, targets, self.terms)
 
 
 def _xor_map(builder: Any, source: Sequence[Any], target: Sequence[Any], columns: Sequence[int]) -> None:

@@ -66,6 +66,10 @@ frame and clears its flag on the inverse traversal. Preserve
 nonregular input values while suppressing their phase.
 Include both applications of a standalone chart XOR when costing
 an orientation switch that must leave its decision bit clean.
+The projective continuant starts with a clean extra word and nonzero linear
+slopes. Track both the explicit leading coefficient and its handoff to the
+phase stage. Keep projected rank-one outputs and borrowed subtower scratch
+opt-in to preserve earlier circuit identities.
 The blocked suffix accepts a prefolded residual and normalized
 denominators. Its shifted unit inverse keeps the first two
 coefficients implicit.

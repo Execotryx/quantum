@@ -112,6 +112,14 @@ software replay. Prefix generation and the final locator fold remain
 outside that measurement.
 [Blocked locator suffix](docs/aggregate-above-36-dqi-blocked-suffix-26-11-2026-21-36-16.md)
 
+With the linear quotients supplied, a projective degree-35 fold used
+**37,596 controlled products per direction** at **885 qubits** in software
+replay. The previous monic fold had a **76,440-product** lower bound per
+direction. The new fold retains an explicit leading coefficient. Quotient
+generation, normalization for the phase stage, and exceptional routing
+remain outside the measurement.
+[Projective locator fold](docs/aggregate-above-36-dqi-projective-continuant-26-11-2026-21-45-40.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

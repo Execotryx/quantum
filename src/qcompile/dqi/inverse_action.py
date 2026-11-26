@@ -63,7 +63,8 @@ def _polynomial_basis(builder: Any, modulus: list[Any], banks: list[list[Any]],
 
 
 @contextmanager
-def _reciprocal(builder: Any, factor: Any, *, extend_zero: bool = False) -> Iterator[Any]:
+def _reciprocal(builder: Any, factor: Any, *,
+                extend_zero: bool = False, compact_inner: bool = False) -> Iterator[Any]:
     if factor is None:
         yield None
         return
@@ -72,11 +73,11 @@ def _reciprocal(builder: Any, factor: Any, *, extend_zero: bool = False) -> Iter
         builder.flip_if_equal(factor, 0, target=flag)
         builder.cx(flag, factor[0])
     reciprocal = builder.alloc_qubits(12)
-    inverse_xor(builder, factor, reciprocal, borrow_source=True)
+    inverse_xor(builder, factor, reciprocal, borrow_source=True, compact_inner=compact_inner)
     try:
         yield reciprocal
     finally:
-        inverse_xor(builder, factor, reciprocal, borrow_source=True)
+        inverse_xor(builder, factor, reciprocal, borrow_source=True, compact_inner=compact_inner)
         builder.free(reciprocal)
         if flag is not None:
             builder.cx(flag, factor[0])

@@ -110,6 +110,10 @@
   normalized denominator banks. Keep its virtual leading unit and
   zero implicit, and price summary generation and the final fold
   separately from the supplied-summary transform.
+- The projective locator fold retains one extra unit word and requires
+  nonzero quotient slopes. Use projected interpolation and borrow the inner
+  subtower norm only on the opted-in path. Price both directions and the
+  leading-coefficient handoff before claiming a complete locator.
 - A Givens-order change may move a rotation only across disjoint orbital
   pairs. Preserve the matching angle columns, check reconstructed vectors,
   and price the affected XOR transitions before full loader verification.

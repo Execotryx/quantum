@@ -105,13 +105,16 @@ def inverse8_xor(builder: Any, source: Any, target: Any, maps: Subtower) -> None
     builder.free(scratch)
 
 
-def inverse64_xor(builder: Any, source: Any, target: Any, maps: Subtower) -> None:
+def inverse64_xor(builder: Any, source: Any, target: Any, maps: Subtower, *, borrow_source: bool = False) -> None:
     """XOR the GF(64) inverse in the original six-bit tower coordinates."""
-    ab = builder.alloc_qubits(6)
+    ab = source if borrow_source else builder.alloc_qubits(6)
     a, b = ab[:3], ab[3:]
     norm = builder.alloc_qubits(3)
     inv = builder.alloc_qubits(3)
-    _xor_map(builder, source, ab, maps.to_subtower)
+    if borrow_source:
+        _change_basis(builder, ab, maps.to_subtower, undo=False)
+    else:
+        _xor_map(builder, source, ab, maps.to_subtower)
     _xor_map(builder, a, norm, maps.square8)
     _xor_map(builder, b, norm, maps.square_norm8)
     _product_xor(builder, a, b, norm, maps.product8)
@@ -125,9 +128,14 @@ def inverse64_xor(builder: Any, source: Any, target: Any, maps: Subtower) -> Non
     _xor_map(builder, a, norm, maps.square8)
     _xor_map(builder, b, norm, maps.square_norm8)
     erase_bilinear(builder, a, b, norm, maps.product8)
-    _xor_map(builder, source, ab, maps.to_subtower)
-    for register in (inv, norm, ab):
-        builder.free(register)
+    if borrow_source:
+        _change_basis(builder, ab, maps.to_subtower, undo=True)
+    else:
+        _xor_map(builder, source, ab, maps.to_subtower)
+    builder.free(inv)
+    builder.free(norm)
+    if not borrow_source:
+        builder.free(ab)
 
 
 @cache
@@ -157,7 +165,8 @@ def _change_basis(builder: Any, words: Any, columns: tuple[int, ...], *, undo: b
             builder.cx(words[i], words[j])
 
 
-def inverse_xor(builder: Any, source: Any, target: Any, *, borrow_source: bool = False) -> None:
+def inverse_xor(builder: Any, source: Any, target: Any, *,
+                borrow_source: bool = False, compact_inner: bool = False) -> None:
     """XOR the GF(4096) inverse on disjoint registers, with clean scratch."""
     if len(source) != 12 or len(target) != 12:
         raise ValueError("subtower inversion requires two 12-bit registers")
@@ -179,13 +188,13 @@ def inverse_xor(builder: Any, source: Any, target: Any, *, borrow_source: bool =
     _xor_map(builder, a, norm, square)
     _xor_map(builder, b, norm, square_norm)
     _product_xor(builder, a, b, norm, outer.subfield_terms)
-    inverse64_xor(builder, norm, inv, maps)
+    inverse64_xor(builder, norm, inv, maps, borrow_source=compact_inner)
     _xor_map(builder, b, a, tuple(1 << i for i in range(6)))
     for factor, columns in ((a, low_basis), (b, high_basis)):
         terms = tuple((x, y, linear(columns, word)) for x, y, word in outer.subfield_terms)
         _product_xor(builder, factor, inv, target, terms)
     _xor_map(builder, b, a, tuple(1 << i for i in range(6)))
-    inverse64_xor(builder, norm, inv, maps)
+    inverse64_xor(builder, norm, inv, maps, borrow_source=compact_inner)
     _xor_map(builder, a, norm, square)
     _xor_map(builder, b, norm, square_norm)
     erase_bilinear(builder, a, b, norm, outer.subfield_terms)

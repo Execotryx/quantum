@@ -1,0 +1,9 @@
+{
+  "controlled_products_per_direction": 37596,
+  "degree": 35,
+  "qubits": 885,
+  "scope": "software continuant on a supplied regular quotient tape with an extra unit word",
+  "shots": 24,
+  "syndrome_derived_tapes": 12,
+  "tensor_sha256": "19ee4259f4d20a779d2484b3dea635d2e0efd23fce39c859e70228f668e53093"
+}

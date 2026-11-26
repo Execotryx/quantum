@@ -7,13 +7,15 @@ from importlib import import_module
 from pathlib import Path
 
 from qcompile.dqi.quotient import FieldProduct, quotient_multiply_xor, quotient_prepare
-from qcompile.dqi.tower import _product_xor, multiply_xor
+from qcompile.dqi.tower import ProjectedFieldProduct, _product_xor, multiply_xor
 from qcompile.io import read_json, sha256, write_json
 from qcompile.official import validate_backend
 
 
-def load_field_product(tensor42: Path | None) -> tuple[FieldProduct, str | None]:
+def load_field_product(tensor42: Path | None, *, projected: bool = False) -> tuple[FieldProduct, str | None]:
     if tensor42 is None:
+        if projected:
+            raise ValueError("projected field products require a supplied rank-42 tensor")
         return multiply_xor, None
     source = Path(__file__).resolve().parents[1] / "third_party/dqi-scheme42/SOURCE.json"
     tensor_sha256 = sha256(tensor42)
@@ -23,7 +25,10 @@ def load_field_product(tensor42: Path | None) -> tuple[FieldProduct, str | None]
     for row in tensor42.read_text(encoding="ascii").split():
         a, b, word = (int(part, 16) for part in row.split(","))
         terms.append((a, b, word))
-    return partial(_product_xor, terms=tuple(terms)), tensor_sha256
+    tensor = tuple(terms)
+    if projected:
+        return ProjectedFieldProduct(tensor), tensor_sha256
+    return partial(_product_xor, terms=tensor), tensor_sha256
 
 
 def build(backend_path: Path, output: Path, *, degree: int, tensor42: Path | None = None,

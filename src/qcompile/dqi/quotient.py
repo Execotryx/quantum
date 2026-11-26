@@ -11,7 +11,7 @@ from .bilinear import erase_product
 from .decoder import _divide, _multiply
 from .field import GF4096
 from .subtower import inverse_xor
-from .tower import _xor_map, multiply_xor
+from .tower import ProjectedFieldProduct, _xor_map, multiply_xor
 
 _FIELD = GF4096()
 FieldProduct = Callable[[Any, Sequence[Any], Sequence[Any], Sequence[Any]], None]
@@ -103,7 +103,8 @@ def _interpolated_product_range(builder: Any, left: Sequence[Any], right: Sequen
                                 target: Sequence[Any], first: int, multiply: FieldProduct,
                                 *, right_columns: tuple[int, ...] = ()) -> None:
     """Evaluate a product, optionally mapping the coefficients of the right input."""
-    a, b, product = [builder.alloc_qubits(12) for _ in range(3)]
+    a, b = builder.alloc_qubits(12), builder.alloc_qubits(12)
+    product = None if isinstance(multiply, ProjectedFieldProduct) else builder.alloc_qubits(12)
     for left_weights, right_weights, output_weights in _product_weights(len(left), len(right), len(target), first):
         def evaluate() -> None:
             for words, destination, weights in ((left, a, left_weights), (right, b, right_weights)):
@@ -115,13 +116,20 @@ def _interpolated_product_range(builder: Any, left: Sequence[Any], right: Sequen
                             _scaled_xor(builder, word, destination, scale)
 
         evaluate()
-        multiply(builder, a, b, product)
-        for word, scale in zip(target, output_weights, strict=True):
-            _scaled_xor(builder, product, word, scale)
-        erase_product(builder, a, b, product)
+        if product is not None:
+            multiply(builder, a, b, product)
+            for word, scale in zip(target, output_weights, strict=True):
+                _scaled_xor(builder, product, word, scale)
+            erase_product(builder, a, b, product)
+        else:
+            assert isinstance(multiply, ProjectedFieldProduct)
+            multiply.project(builder, a, b, [(word, scale) for word, scale in
+                                             zip(target, output_weights, strict=True) if scale])
         evaluate()
-    for word in (a, b, product):
-        builder.free(word)
+    builder.free(a)
+    builder.free(b)
+    if product is not None:
+        builder.free(product)
 
 
 @cache
