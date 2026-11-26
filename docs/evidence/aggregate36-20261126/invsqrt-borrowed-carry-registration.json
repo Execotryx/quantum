@@ -1,0 +1,44 @@
+{
+  "backend_sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+  "driver_sha256": "2405bec08c60439baac1a7c67ec4b3e35ba8fec5f9cb03e7e8e8383f125e23a7",
+  "guard_pairs": [
+    [
+      12,
+      14
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      6,
+      6
+    ]
+  ],
+  "layouts": [
+    "base_accumulator",
+    "separate_correction"
+  ],
+  "model_sha256": "49f616cedd72907997f2f441ef9ab41bc5580c82f74a2079c23919df754b2d10",
+  "product_sha256": "95ff40710569b2881a242d0e775ecf870740bf54496f59dd48cabd4f8317fe5c",
+  "row_adders": [
+    "native_controlled",
+    "measured_products",
+    "borrowed_carry",
+    "dirty_upper"
+  ],
+  "scope": "native rounded products with supplied normalized input and coefficients",
+  "seed": 37109
+}

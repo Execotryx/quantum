@@ -236,11 +236,12 @@ coefficients live together.
 
 The fused row-add implementation retained one guard bit per product
 and passed the full phase model at **81.60%** worst tolerance use.
-Its lowest measured arithmetic cost product still required
-**129 qubits and 2,190 Toffolis** for computation and cleanup before
-loading, normalization, or phase. This excludes the tested schedule
-under the current 35-point budget.
-[Native rounded products and comparisons](docs/degree35-invsqrt-rounded-products-27-11-2026-01-47-52.md)
+Borrowing the carry reduced the best arithmetic-only cost product
+by **3.0%**, to **103 qubits and 2,660 Toffolis** for computation and
+cleanup. The tested schedule still exceeds the 35-point budget before
+loading, normalization, or phase.
+[Native rounded products](docs/degree35-invsqrt-rounded-products-27-11-2026-01-47-52.md)
+· [Borrowed-carry comparison](docs/degree35-invsqrt-borrowed-carry-27-11-2026-01-57-09.md)
 
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 

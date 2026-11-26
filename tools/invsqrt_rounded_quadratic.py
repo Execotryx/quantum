@@ -51,7 +51,8 @@ def phase_model(xs: Words, affine: Words, curvature: Words, guards: tuple[int, i
 
 
 def native(km: Any, affine: Words, curvature: Words, guards: tuple[int, int],
-           output: Path, *, measured_rows: bool, roundtrip: bool, correction: bool = False) -> dict:
+           output: Path, *, measured_rows: bool, roundtrip: bool,
+           correction: bool = False, borrowed_carry: bool = False, dirty_upper: bool = False) -> dict:
     inner, outer = guards
     builder = km.CircuitBuilder()
     x = builder.create_quantum_register(22, "x")
@@ -59,17 +60,21 @@ def native(km: Any, affine: Words, curvature: Words, guards: tuple[int, int],
     slope = builder.create_quantum_register(22 + inner, "slope")
     result = builder.create_quantum_register((22 if correction else 30) + outer, "result")
     work = builder.alloc_qubits(22) if measured_rows else None
+    carry = builder.alloc_qubits(2) if borrowed_carry else None
+    options = {"negate": True, "scratch": work, "carry": carry, "dirty": x if dirty_upper else None}
     builder.x(x[LOCAL - 1])
     rounded_product(builder, c2, x[LOCAL - TAIL:LOCAL], slope, inner,
-                    negate=True, round_before_negation=True, scratch=work)
-    rounded_product(builder, slope[inner:], x[:LOCAL], result, outer, negate=True, scratch=work)
+                    round_before_negation=True, **options)
+    rounded_product(builder, slope[inner:], x[:LOCAL], result, outer, **options)
     if roundtrip:
-        rounded_product(builder, slope[inner:], x[:LOCAL], result, outer, negate=True, adjoint=True, scratch=work)
+        rounded_product(builder, slope[inner:], x[:LOCAL], result, outer, adjoint=True, **options)
         rounded_product(builder, c2, x[LOCAL - TAIL:LOCAL], slope, inner,
-                        negate=True, round_before_negation=True, adjoint=True, scratch=work)
+                        round_before_negation=True, adjoint=True, **options)
     builder.x(x[LOCAL - 1])
     if work is not None:
         builder.free(work)
+    if carry is not None:
+        builder.free(carry)
     circuit = builder.finish_circuit()
     circuit.to_file(output, format="kmb")
     circuit = km.Circuit.from_file(output, format="kmb")
@@ -103,7 +108,8 @@ def native(km: Any, affine: Words, curvature: Words, guards: tuple[int, int],
         "qubits": circuit.num_qubits, "toffoli_like": toffoli, "kmb_sha256": sha256(output),
         "executed_mean": sim.operation_statistics().num_toffoli_like / len(normalized),
         "fixtures": len(normalized), "measured_rows": measured_rows, "roundtrip": roundtrip,
-        "guards": guards, "separate_correction": correction,
+        "guards": guards, "separate_correction": correction, "borrowed_carry": borrowed_carry,
+        "dirty_upper": dirty_upper,
     }
 
 
@@ -125,7 +131,7 @@ def run(output: Path) -> None:
         "product_sha256": sha256(ROOT / "src/qcompile/invsqrt/rounded_product.py"),
         "guard_pairs": (EXACT, *((guard, guard) for guard in GUARD)),
         "layouts": ["base_accumulator", "separate_correction"],
-        "row_adders": ["native_controlled", "measured_products"],
+        "row_adders": ["native_controlled", "measured_products", "borrowed_carry", "dirty_upper"],
     })
     margins = []
     pairs = (EXACT, *((guard, guard) for guard in GUARD))
@@ -146,11 +152,14 @@ def run(output: Path) -> None:
                 name = f"{label}-{'products' if measured_rows else 'controlled'}-{'roundtrip' if roundtrip else 'forward'}"
                 runs[name] = native(km, affine, curvature, guards, output / f"{name}.kmb",
                                     measured_rows=measured_rows, roundtrip=roundtrip)
-    for measured_rows in (False, True):
-        for roundtrip in (False, True):
-            name = f"correction-{'products' if measured_rows else 'controlled'}-{'roundtrip' if roundtrip else 'forward'}"
-            runs[name] = native(km, affine, curvature, selected, output / f"{name}.kmb",
-                                measured_rows=measured_rows, roundtrip=roundtrip, correction=True)
+    for scope in ("correction", "borrowed", "dirty"):
+        for measured_rows in (False, True):
+            for roundtrip in (False, True):
+                method = "products" if measured_rows else "controlled"
+                name = f"{scope}-{method}-{'roundtrip' if roundtrip else 'forward'}"
+                runs[name] = native(km, affine, curvature, selected, output / f"{name}.kmb",
+                                    measured_rows=measured_rows, roundtrip=roundtrip,
+                                    correction=True, borrowed_carry=scope != "correction", dirty_upper=scope == "dirty")
     write_json(output / "native.json", {"screen_sha256": sha256(output / "screen.json"), "runs": runs})
 
 
