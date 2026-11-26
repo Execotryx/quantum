@@ -14,7 +14,7 @@ from qcompile.contract import load_contract
 from qcompile.experiments import record_lock
 from qcompile.io import identity, read_json, sha256, write_json
 from qcompile.official import validate_backend, verify_candidate
-from qcompile.portfolio import bind_lineage, portfolio_target
+from qcompile.portfolio import bind_lineage, clears_target, portfolio_target
 from qcompile.reference.scoring import aggregate
 
 CONTRACT = Path("contracts/contract.json")
@@ -26,7 +26,7 @@ MEMBERS = ("invsqrt.kmb", "dfthcsos/submission.npz", *(f"dfthcsos/angle_k_{i}.km
 
 
 def prepare(member: Path, publisher: Path, roots: tuple[Path, Path], backend: Path,
-            ledger: Path, output: Path, *, above_34: bool = False) -> None:
+            ledger: Path, output: Path, *, minimum_score: int = 20) -> None:
     settings = read_json(backend)
     validate_backend(settings)
     dqi = read_json(member)
@@ -37,14 +37,14 @@ def prepare(member: Path, publisher: Path, roots: tuple[Path, Path], backend: Pa
         raise ValueError("DQI archive member is not campaign-qualified on this backend")
     if roots[0].resolve() == roots[1].resolve():
         raise ValueError("Independent precursor build directories are required")
-    if above_34:
+    if minimum_score != 20:
         first, second = [manifest(root, origin="generated", provenance="Independent portfolio build")
                          for root in roots]
         expected = {name: item["sha256"] for name, item in first.items()}
         if ({name: item["sha256"] for name, item in second.items()} != expected
                 or expected.get("dqi.kmb") != dqi["sha256"]):
             raise ValueError("Independent builds differ or DQI is not campaign-qualified")
-        bindings = bind_lineage(publisher, expected)
+        bindings = bind_lineage(publisher, expected, minimum_score=minimum_score)
         builds = [{name: Path(item["path"]) for name, item in build.items()} for build in (first, second)]
         source_pin = {"lineage_manifest_sha256": sha256(publisher)}
     else:
@@ -72,7 +72,7 @@ def prepare(member: Path, publisher: Path, roots: tuple[Path, Path], backend: Pa
     digest = sha256(archives[0])
     if sha256(archives[1]) != digest:
         raise ValueError("Independent archives differ")
-    if above_34:
+    if minimum_score != 20:
         preflight(archives[0], backend, output / "structural")
         if read_json(output / "structural/preflight.json")["members"] != expected:
             raise ValueError("Packaged members differ from independent builds")
@@ -146,8 +146,9 @@ def measure(registration: Path, archive: Path, backend: Path, output: Path, role
                 and has_full_hybrid_coverage(report, candidate_coverage(artifacts)))
     costs = report["official_results"]["costs"] if complete else None
     score = aggregate(record["baseline_costs"], costs) if costs else None
+    passed = costs is not None and score is not None and clears_target(score, target, record["baseline_costs"], costs)
     write_json(output / "decision.json", {
-        "status": "go" if score is not None and score > target else "no_go",
+        "status": "go" if passed else "no_go",
         "registration_sha256": sha256(registration), "archive_sha256": record["archive_sha256"],
         "metric_sha256": record["metric_sha256"], "role": role, "aggregate": score,
         "costs": costs, "verification_sha256": sha256(output / "verification/verification.json"),
@@ -160,8 +161,11 @@ def main() -> None:
     build = commands.add_parser("prepare")
     for name in ("member", "publisher", "first", "second", "backend", "ledger", "output"):
         build.add_argument(name, type=Path)
-    build.add_argument("--above-34", action="store_true",
-                       help="Use a lineage declaration in place of the legacy publisher manifest")
+    targets = build.add_mutually_exclusive_group()
+    targets.add_argument("--above-34", dest="minimum_score", action="store_const", const=34, default=20,
+                         help="Register a version-2 portfolio with a strict score target of 34")
+    targets.add_argument("--above-36", dest="minimum_score", action="store_const", const=36,
+                         help="Register a version-3 portfolio with a strict score target of 36")
     verify = commands.add_parser("measure")
     for name in ("registration", "archive", "backend", "output"):
         verify.add_argument(name, type=Path)
@@ -169,7 +173,7 @@ def main() -> None:
     args = parser.parse_args()
     if args.action == "prepare":
         prepare(args.member, args.publisher, (args.first, args.second), args.backend, args.ledger,
-                args.output, above_34=args.above_34)
+                args.output, minimum_score=args.minimum_score)
     else:
         measure(args.registration, args.archive, args.backend, args.output, args.role)
 

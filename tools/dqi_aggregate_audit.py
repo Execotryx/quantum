@@ -7,7 +7,7 @@ from pathlib import Path
 from qcompile.artifacts import hashes
 from qcompile.component_confirmations import HYBRID_COVERAGE
 from qcompile.io import read_json, sha256, write_json
-from qcompile.portfolio import portfolio_target
+from qcompile.portfolio import clears_target, portfolio_target
 from qcompile.reference.scoring import aggregate
 
 
@@ -21,7 +21,7 @@ def audit(registration: Path, archive: Path, structural: Path, evidence: Path, o
             or shape["members"] != record["artifact_hashes"] or shape["metric_sha256"] != record["metric_sha256"]
             or len(set(record["salts"].values())) != 2):
         raise ValueError("Archive, structural preflight or salt identities differ")
-    if target == 34:
+    if target != 20:
         r, b, _ = shape["checks"]["dfthcsos"]["shape"]
         if coverage != {**HYBRID_COVERAGE, "dfthcsos": (76 + r * b) * 64}:
             raise ValueError("Structural evidence does not declare full benchmark coverage")
@@ -41,7 +41,7 @@ def audit(registration: Path, archive: Path, structural: Path, evidence: Path, o
         report = read_json(verification_path)
         request = read_json(request_path)
         worker = report["official_results"]
-        if target == 34 and (
+        if target != 20 and (
             hashes(request["artifacts"]) != record["artifact_hashes"]
             or request["tier"] != "full" or request["expected_coverage"] != coverage
             or request["seed_policy"] != report["seed_policy"]
@@ -62,7 +62,8 @@ def audit(registration: Path, archive: Path, structural: Path, evidence: Path, o
         ):
             raise ValueError(f"{role} is not a complete full metric result for this archive")
         score = aggregate(record["baseline_costs"], worker["costs"])
-        if (decision["status"] != "go" or score <= target or worker["costs"] != decision["costs"]
+        if (decision["status"] != "go" or not clears_target(score, target, record["baseline_costs"], worker["costs"])
+                or worker["costs"] != decision["costs"]
                 or not isclose(score, decision["aggregate"], rel_tol=1e-12)):
             raise ValueError(f"{role} did not independently establish an aggregate above {target}")
         verified[role] = {
@@ -78,7 +79,7 @@ def audit(registration: Path, archive: Path, structural: Path, evidence: Path, o
         "members": record["artifact_hashes"],
         "verifications": verified,
     }
-    if target == 34:
+    if target != 20:
         certificate.update({key: record[key] for key in ("format", "minimum_score", "components")})
     write_json(output, certificate)
 

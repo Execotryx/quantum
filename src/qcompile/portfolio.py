@@ -1,6 +1,8 @@
 """Versioned score and lineage bindings for the complete portfolio."""
 
 import re
+from fractions import Fraction
+from math import prod
 from pathlib import Path
 
 from .artifacts import validate_layout
@@ -8,16 +10,28 @@ from .component_confirmations import BENCHMARKS, component_hashes
 from .io import read_json, sha256
 
 ABOVE_34 = "portfolio-v2"
+ABOVE_36 = "portfolio-v3"
+VERSIONED_FORMATS = {34: ABOVE_34, 36: ABOVE_36}
 
 
 def is_digest(value: object) -> bool:
     return isinstance(value, str) and re.fullmatch("[0-9a-f]{64}", value) is not None
 
 
+def clears_target(score: float, target: int, baselines: dict, costs: dict) -> bool:
+    """Check the exact cost-product inequality after the numeric score calculation."""
+    if score <= target:
+        return False
+    if target != 36:
+        return True
+    return prod(map(Fraction, baselines.values())) > target**3 * prod(map(Fraction, costs.values()))
+
+
 def portfolio_target(record: dict) -> int:
     if "format" not in record and "minimum_score" not in record and "components" not in record:
         return 20
-    if record.get("format") != ABOVE_34 or record.get("minimum_score") != 34:
+    target = record.get("minimum_score")
+    if type(target) is not int or target not in VERSIONED_FORMATS or record.get("format") != VERSIONED_FORMATS[target]:
         raise ValueError("Unsupported portfolio registration or score target")
     components = record.get("components")
     if not isinstance(components, dict) or set(components) != set(BENCHMARKS):
@@ -37,11 +51,13 @@ def portfolio_target(record: dict) -> int:
             or component.get("members") != component_hashes(members, name)
         ):
             raise ValueError(f"Invalid {name} lineage or build receipt binding")
-    return 34
+    return target
 
 
-def bind_lineage(path: Path, members: dict[str, str]) -> dict:
+def bind_lineage(path: Path, members: dict[str, str], *, minimum_score: int = 34) -> dict:
     """Pin reviewed source manifests and build receipts to the supplied member hashes."""
+    if minimum_score not in VERSIONED_FORMATS:
+        raise ValueError("Unsupported portfolio registration or score target")
     declarations = read_json(path)
     if not isinstance(declarations, dict) or set(declarations) != set(BENCHMARKS):
         raise ValueError("Lineage must cover exactly the three benchmarks")
@@ -70,6 +86,6 @@ def bind_lineage(path: Path, members: dict[str, str]) -> dict:
             "build_receipt_sha256": receipts,
             "members": expected,
         }
-    binding = {"format": ABOVE_34, "minimum_score": 34, "components": components}
+    binding = {"format": VERSIONED_FORMATS[minimum_score], "minimum_score": minimum_score, "components": components}
     portfolio_target({**binding, "artifact_hashes": members})
     return binding

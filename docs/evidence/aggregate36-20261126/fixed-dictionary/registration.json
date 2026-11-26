@@ -1,0 +1,22 @@
+{
+  "accepted_iterations_per_start": 200,
+  "brot": 7,
+  "checkpoint_interval": 25,
+  "classification": "fixed_dictionary_channel_continuation",
+  "driver_sha256": "d4d42df2dfcd68db19e263d4cfee31cff7a65053a9d3acff82d2301a89c31b01",
+  "factorization_sha256": "9f472ae472b2eae95940a55cf899fb000861c624a294feb021a4d6ffd6340d67",
+  "initializer": "physical channel truncation, with a deterministic 0.001 RMS weight perturbation for start 2",
+  "metric_sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+  "objective_sha256": "3735545ebfe2d719a9576b9b2dce11716b568c4f2c93b5474430c1272da56355",
+  "reference_registration_sha256": "bdcdf90a52d677ca26f143435383cfd4fdd763f66f722a2b5b8faedeadb4967e",
+  "seeds": [
+    36043,
+    36047
+  ],
+  "stages": [
+    40,
+    36,
+    35
+  ],
+  "wall_seconds_per_start": 300
+}

@@ -1,0 +1,42 @@
+{
+  "candidate_sha256": "eaeb90d1e86fb21a64b096bfa20ca57aa4f39717e13d3f2d4cc4ad368a090eca",
+  "candidate_static_operations": {
+    "BIT_INVERT": 132,
+    "BIT_STORE0": 6,
+    "BIT_STORE1": 5,
+    "CCX": 1290,
+    "CCZ": 13,
+    "CSWAP": 149,
+    "CX": 15965,
+    "CZ": 1086,
+    "HMR": 1163,
+    "NEG": 25,
+    "POP_CONDITION": 332,
+    "PUSH_CONDITION": 332,
+    "X": 3010,
+    "Z": 379,
+    "Z_POW": 35
+  },
+  "classification": "emitted_or_carry_development_candidate",
+  "control_qubits": 39,
+  "control_static_operations": {
+    "BIT_INVERT": 132,
+    "BIT_STORE0": 6,
+    "BIT_STORE1": 5,
+    "CCX": 1290,
+    "CCZ": 13,
+    "CSWAP": 149,
+    "CX": 16244,
+    "CZ": 1179,
+    "HMR": 1256,
+    "NEG": 25,
+    "POP_CONDITION": 332,
+    "PUSH_CONDITION": 332,
+    "X": 3010,
+    "Z": 379,
+    "Z_POW": 35
+  },
+  "input_assembly_sha256": "27ccb62d03bcba70353d382bb94c5dc636acd00b250c83f976df8d1176842146",
+  "qubits": 39,
+  "replaced_gadgets": 93
+}

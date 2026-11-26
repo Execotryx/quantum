@@ -1,0 +1,31 @@
+{
+  "iteration": 100,
+  "observations": [
+    {
+      "accuracy_passed": false,
+      "metrics": {
+        "E_SOS": -22144.392271514847,
+        "E_gap": 4.118921514847898,
+        "Lambda": 475.4475808563249,
+        "error_1": 0.047833612190068396,
+        "error_2": 0.03958277756382492,
+        "gap_in_domain": true,
+        "lambda_eff": 62.44755419948429
+      },
+      "offset_lane": "truncated_offsets"
+    },
+    {
+      "accuracy_passed": false,
+      "metrics": {
+        "E_SOS": -22144.39329422077,
+        "E_gap": 4.119944220768957,
+        "Lambda": 475.28281228466255,
+        "error_1": 0.027712385622749254,
+        "error_2": 0.03958277756382492,
+        "gap_in_domain": true,
+        "lambda_eff": 62.444402559587175
+      },
+      "offset_lane": "restored_contraction"
+    }
+  ]
+}

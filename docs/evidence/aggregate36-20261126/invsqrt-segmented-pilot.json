@@ -1,0 +1,56 @@
+{
+  "classification": "integer_phase_model_only",
+  "fractional_bits": 29,
+  "input_bits": 22,
+  "lanes": [
+    {
+      "address_bits": 4,
+      "coefficient_magnitude_bits": [
+        29,
+        24,
+        20,
+        16,
+        11
+      ],
+      "degree": 4,
+      "intervals": 48,
+      "margins": {
+        "above_90_percent": 0,
+        "failed_inputs": 0,
+        "first_failed_inputs": [],
+        "input_count": 3133452,
+        "minimum_margin_phase64": 582931217,
+        "minimum_margin_x": 3078937,
+        "nonpositive_margins": 0,
+        "worst_tolerance_fraction": 0.133319992078291,
+        "worst_x": 1048761
+      },
+      "table_sha256": "ca6a784ee770bb89ff094cadc613541ba46461a2ab4dffd38453fec879f26eed"
+    },
+    {
+      "address_bits": 5,
+      "coefficient_magnitude_bits": [
+        29,
+        23,
+        18,
+        13
+      ],
+      "degree": 3,
+      "intervals": 96,
+      "margins": {
+        "above_90_percent": 0,
+        "failed_inputs": 0,
+        "first_failed_inputs": [],
+        "input_count": 3133452,
+        "minimum_margin_phase64": 582352843,
+        "minimum_margin_x": 3112244,
+        "nonpositive_margins": 0,
+        "worst_tolerance_fraction": 0.2692555212813471,
+        "worst_x": 1048634
+      },
+      "table_sha256": "5c272f48cdfb574dc4b91abe68c2755d2bdf932fb3a8c76ad174fdc4d0d229b8"
+    }
+  ],
+  "preserved_input_plus_separate_accumulator_qubits": 51,
+  "scope": "Quantized Horner arithmetic with exact normalization and dyadic phase conversion. No reversible implementation or charge for coefficient access, rotations or cleanup."
+}

@@ -1,0 +1,26 @@
+{
+  "native_pricing_pending": false,
+  "stages": [
+    {
+      "accuracy_passed": false,
+      "best_error_1": 0.023374918332881425,
+      "best_metric": 0.028288017688715066,
+      "channels": 40,
+      "checkpoint_sha256": "84cccdef27dc133b70e12d5a0c03d6c0708bbd29cc930233e7667cab34fb7324"
+    },
+    {
+      "accuracy_passed": false,
+      "best_error_1": 0.027926200033254682,
+      "best_metric": 0.03895718830605332,
+      "channels": 36,
+      "checkpoint_sha256": "d5f1efd0a50380d1ba60aaa5f1ed0a96140afd52b7adeeb8c7059d4429c469ac"
+    },
+    {
+      "accuracy_passed": false,
+      "best_error_1": 0.029833633550089816,
+      "best_metric": 0.04239428112744639,
+      "channels": 35,
+      "checkpoint_sha256": "6ca6cdebc28dad8ab14a8d84fe9fcc9b37c8ee25d474307c2d94fd4ab2b99074"
+    }
+  ]
+}

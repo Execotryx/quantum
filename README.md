@@ -23,6 +23,13 @@ respectively. The above-34 release gate still requires a candidate that exceeds
 [Cloud comparison](docs/above-34-cloud-reference-comparison-26-11-2026-06-31-00.md)
 [Implementation and development evidence](docs/aggregate-above-34-implementation-26-11-2026-05-40-22.md)
 
+The above-36 work now has a strict two-run certificate gate and measured
+component screens. The tested fixed-dictionary chemistry fits exceeded the
+accuracy limit, and the source inverse-square-root carry rewrite kept its
+39-qubit width and nearly identical charged cost. The exact DQI trace
+identified three stages that account for about 87% of executed Toffolis.
+[Above-36 implementation and results](docs/aggregate-above-36-implementation-26-11-2026-07-19-40.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

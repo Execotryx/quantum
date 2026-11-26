@@ -1,0 +1,31 @@
+{
+  "best_lambda_eff": 46.91430370584927,
+  "candidate_found": false,
+  "classification": "decoded_channel_gauge_screen",
+  "control": {
+    "E_SOS": -22144.188248000017,
+    "E_gap": 3.914898000017274,
+    "Lambda": 283.0569683482715,
+    "error_1": 0.01999999988010883,
+    "error_2": 0.019999999880538317,
+    "gap_in_domain": true,
+    "lambda_eff": 46.91430370584927
+  },
+  "full_native_run": false,
+  "sweeps": [
+    {
+      "accuracy_passed": true,
+      "metrics": {
+        "E_SOS": -22144.188248000017,
+        "E_gap": 3.914898000017274,
+        "Lambda": 283.0569683482715,
+        "error_1": 0.01999999988010883,
+        "error_2": 0.019999999880538317,
+        "gap_in_domain": true,
+        "lambda_eff": 46.91430370584927
+      },
+      "rotations": 0,
+      "sweep": 1
+    }
+  ]
+}

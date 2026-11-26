@@ -15,7 +15,7 @@
 
 ## 3. Certify and publish
 
-- [ ] 3.1 Implement and test the strict above-36 registration and audit while replaying earlier certificates.
+- [x] 3.1 Implement and test the strict above-36 registration and audit while replaying earlier certificates.
 - [ ] 3.2 Rebuild and pack twice, prove identity and canonical layout, and preregister two fresh verification roles.
 - [ ] 3.3 Run full cloud verification and independent confirmation on fresh extractions. Require both exact-archive scores to exceed 36.
 - [ ] 3.4 Recover and audit the sealed receipts. Publish the run comparison, README, and submission handoff to GitHub.

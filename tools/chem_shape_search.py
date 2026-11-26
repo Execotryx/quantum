@@ -124,6 +124,15 @@ def fit_joint(plan_path: Path, output: Path) -> None:
     cap, wall = plan["max_evaluations"], plan["wall_seconds"]
     if type(cap) is not int or not 1 <= cap <= 20000 or type(wall) not in (int, float) or not 0 < wall <= 86400:
         raise ValueError("invalid registered evaluation or wall cap")
+    brot = plan.get("decoded_brot", 12)
+    checkpoint_interval = plan.get("checkpoint_interval", 500)
+    if type(brot) is not int or not 2 <= brot <= 16:
+        raise ValueError("invalid registered decoded angle precision")
+    if type(checkpoint_interval) is not int or checkpoint_interval <= 0:
+        raise ValueError("invalid registered checkpoint interval")
+    decode_initial = plan.get("decode_initial", False)
+    if type(decode_initial) is not bool:
+        raise ValueError("invalid registered initial checkpoint flag")
     if plan["initializer"] not in ("I1", "I2", "I3", "I4", "I3-resume") or type(plan["seed"]) is not int:
         raise ValueError("expected an I1 through I4 initializer or I3-resume and integer seed")
     parent = continuation_parent(plan) if plan["initializer"] == "I3-resume" else None
@@ -217,14 +226,14 @@ def fit_joint(plan_path: Path, output: Path) -> None:
         params = {**inputs.params, "U": unit, "W": w, "H2_I": w.sum(axis=1)}
         native_w, offsets, _, _ = api.native_inputs(params)
         candidate = replace(inputs, params=params, w=native_w, W=offsets)
-        body = encode_vectors(unit.reshape(r * b, n), params["tree_edges"], 12)
+        body = encode_vectors(unit.reshape(r * b, n), params["tree_edges"], brot)
         words = np.concatenate((np.zeros((n, n - 1), dtype=np.int64), body))
-        _, _, metrics = FixedWordRefit(api, math_api, candidate, words, 12).evaluate(1, 1)
+        _, _, metrics = FixedWordRefit(api, math_api, candidate, words, brot).evaluate(1, 1)
         label = f"{len(history):05}"
         artifact = output / f"continuous-{label}.npz"
         deterministic_npz(artifact, {"U": unit, "W": w})
         write_json(output / f"checkpoint-{label}.json", {
-            "evaluations": len(history), "continuous_residual": exact, "decoded_brot": 12,
+            "evaluations": len(history), "continuous_residual": exact, "decoded_brot": brot,
             "continuous_sha256": sha256(artifact),
             "decoded_metrics": {key: float(value) if np.isfinite(value) else None for key, value in metrics.items()},
         })
@@ -242,7 +251,8 @@ def fit_joint(plan_path: Path, output: Path) -> None:
         if value < best_value:
             best_value, best = value, flat.copy()
         history.append(float(np.sqrt(best_value)))
-        if len(history) % 500 == 0 or history[-1] <= 0.019:
+        if ((decode_initial and len(history) == 1)
+                or len(history) % checkpoint_interval == 0 or history[-1] <= 0.019):
             if checkpoint() <= 0.019:
                 raise StopFit
         return value, np.concatenate((grad_v.ravel(), grad_w.ravel()))

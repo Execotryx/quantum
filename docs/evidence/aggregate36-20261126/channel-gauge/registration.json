@@ -1,0 +1,10 @@
+{
+  "angles": "All entry sign crossings and interior minima of the fixed-sign pair costs",
+  "brot": 7,
+  "driver_sha256": "e80de248cab939ef23c0c893a0c3225dcdbeb1e854544966b17f8f0238a1e9df",
+  "metric_sha256": "df418aff0d6eff16ec341da20150255abb49b252256d6abfb253ef8d2643ac73",
+  "objective": "squared column one-norm of weights and total identity",
+  "reference_factorization_sha256": "9f472ae472b2eae95940a55cf899fb000861c624a294feb021a4d6ffd6340d67",
+  "reference_registration_sha256": "bdcdf90a52d677ca26f143435383cfd4fdd763f66f722a2b5b8faedeadb4967e",
+  "sweeps": 3
+}

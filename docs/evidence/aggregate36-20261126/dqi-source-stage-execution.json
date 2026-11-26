@@ -1,0 +1,206 @@
+{
+  "assembly_sha256": "1d5e4bfbedd0f33859331765b1cb293ef374da206184e4d2c4cc6d7fc8e3da8e",
+  "backend_sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+  "batch_size": 256,
+  "batches": [
+    {
+      "full_executed_toffolis": 80922161,
+      "phase_errors": 0,
+      "seed": 36071,
+      "stages": [
+        {
+          "executed_toffolis": 0,
+          "instructions": 0,
+          "stage": "registers",
+          "static_toffolis": 0
+        },
+        {
+          "executed_toffolis": 0,
+          "instructions": 19845490,
+          "stage": "lambda_selector",
+          "static_toffolis": 0
+        },
+        {
+          "executed_toffolis": 0,
+          "instructions": 138583,
+          "stage": "classical_decoder_entry",
+          "static_toffolis": 0
+        },
+        {
+          "executed_toffolis": 23215753,
+          "instructions": 12419616,
+          "stage": "quantum_decoder_to_field_1",
+          "static_toffolis": 90766
+        },
+        {
+          "executed_toffolis": 50176,
+          "instructions": 52915,
+          "stage": "d16_field_1",
+          "static_toffolis": 196
+        },
+        {
+          "executed_toffolis": 740608,
+          "instructions": 831418,
+          "stage": "field_1_to_field_2",
+          "static_toffolis": 2893
+        },
+        {
+          "executed_toffolis": 64000,
+          "instructions": 69814,
+          "stage": "d16_field_2",
+          "static_toffolis": 250
+        },
+        {
+          "executed_toffolis": 19698215,
+          "instructions": 9093322,
+          "stage": "field_2_to_root_1330_phase",
+          "static_toffolis": 77036
+        },
+        {
+          "executed_toffolis": 0,
+          "instructions": 73,
+          "stage": "lambda_phase",
+          "static_toffolis": 0
+        },
+        {
+          "executed_toffolis": 6104064,
+          "instructions": 4431050,
+          "stage": "root_1330_phase_to_field_3",
+          "static_toffolis": 23844
+        },
+        {
+          "executed_toffolis": 53248,
+          "instructions": 19925,
+          "stage": "d16_field_3",
+          "static_toffolis": 208
+        },
+        {
+          "executed_toffolis": 3591051,
+          "instructions": 3053935,
+          "stage": "field_3_to_field_4",
+          "static_toffolis": 14068
+        },
+        {
+          "executed_toffolis": 50176,
+          "instructions": 21410,
+          "stage": "d16_field_4",
+          "static_toffolis": 196
+        },
+        {
+          "executed_toffolis": 27354870,
+          "instructions": 19804589,
+          "stage": "decoder_return",
+          "static_toffolis": 109515
+        },
+        {
+          "executed_toffolis": 0,
+          "instructions": 48,
+          "stage": "restore_gauges",
+          "static_toffolis": 0
+        }
+      ],
+      "value_errors": 0
+    },
+    {
+      "full_executed_toffolis": 80931157,
+      "phase_errors": 0,
+      "seed": 36073,
+      "stages": [
+        {
+          "executed_toffolis": 0,
+          "instructions": 0,
+          "stage": "registers",
+          "static_toffolis": 0
+        },
+        {
+          "executed_toffolis": 0,
+          "instructions": 19845490,
+          "stage": "lambda_selector",
+          "static_toffolis": 0
+        },
+        {
+          "executed_toffolis": 0,
+          "instructions": 138583,
+          "stage": "classical_decoder_entry",
+          "static_toffolis": 0
+        },
+        {
+          "executed_toffolis": 23215794,
+          "instructions": 12419616,
+          "stage": "quantum_decoder_to_field_1",
+          "static_toffolis": 90766
+        },
+        {
+          "executed_toffolis": 50176,
+          "instructions": 52915,
+          "stage": "d16_field_1",
+          "static_toffolis": 196
+        },
+        {
+          "executed_toffolis": 740608,
+          "instructions": 831418,
+          "stage": "field_1_to_field_2",
+          "static_toffolis": 2893
+        },
+        {
+          "executed_toffolis": 64000,
+          "instructions": 69814,
+          "stage": "d16_field_2",
+          "static_toffolis": 250
+        },
+        {
+          "executed_toffolis": 19698413,
+          "instructions": 9093322,
+          "stage": "field_2_to_root_1330_phase",
+          "static_toffolis": 77036
+        },
+        {
+          "executed_toffolis": 0,
+          "instructions": 73,
+          "stage": "lambda_phase",
+          "static_toffolis": 0
+        },
+        {
+          "executed_toffolis": 6104053,
+          "instructions": 4431050,
+          "stage": "root_1330_phase_to_field_3",
+          "static_toffolis": 23844
+        },
+        {
+          "executed_toffolis": 53248,
+          "instructions": 19925,
+          "stage": "d16_field_3",
+          "static_toffolis": 208
+        },
+        {
+          "executed_toffolis": 3591125,
+          "instructions": 3053935,
+          "stage": "field_3_to_field_4",
+          "static_toffolis": 14068
+        },
+        {
+          "executed_toffolis": 50176,
+          "instructions": 21410,
+          "stage": "d16_field_4",
+          "static_toffolis": 196
+        },
+        {
+          "executed_toffolis": 27363564,
+          "instructions": 19804589,
+          "stage": "decoder_return",
+          "static_toffolis": 109515
+        },
+        {
+          "executed_toffolis": 0,
+          "instructions": 48,
+          "stage": "restore_gauges",
+          "static_toffolis": 0
+        }
+      ],
+      "value_errors": 0
+    }
+  ],
+  "circuit_sha256": "4b5721411adc239f61fc11c773a2358b75dfe7cb15586efae4f0459c77d77e52",
+  "classification": "source_stage_development_profile",
+  "qubits": 900
+}

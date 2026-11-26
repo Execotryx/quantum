@@ -58,6 +58,10 @@
   derive the number of ANGLE loaders from the emitted layout. Preserve the
   legacy certificate schema. A reset-delimited width screen can reuse a
   scratch slot only after an unconditional reset.
+- Use the strict cost product and two complete verification roles for above 36.
+  Reconcile DQI stage counters against the same complete circuit and inputs.
+  Keep numerical phase models, native carry rewrites and decoded chemistry
+  pilots scoped to the evidence they actually cover.
 - Before a full portfolio run, exercise native ANGLE serialization on its
   temporary filesystem. Keep prior raw receipts and the original salts
   when a public development comparison needs an infrastructure retry.

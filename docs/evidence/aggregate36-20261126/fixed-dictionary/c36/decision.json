@@ -1,0 +1,7 @@
+{
+  "accuracy_passed": false,
+  "best_error_1": 0.027926200033254682,
+  "best_metric": 0.03895718830605332,
+  "channels": 36,
+  "checkpoint_sha256": "d5f1efd0a50380d1ba60aaa5f1ed0a96140afd52b7adeeb8c7059d4429c469ac"
+}
