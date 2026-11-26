@@ -1,0 +1,19 @@
+{
+  "degree": 35,
+  "fixture_seed": 36707,
+  "observations": {
+    "forward": {
+      "explicit_ands": 28302,
+      "qubits": 879
+    },
+    "inverse": {
+      "explicit_ands": 28302,
+      "qubits": 879
+    }
+  },
+  "replay_seed": 36709,
+  "scope": "software rational prefold from supplied prefix numerator/denominator and untouched syndrome suffix",
+  "shots": 12,
+  "steps": 17,
+  "tensor_sha256": "19ee4259f4d20a779d2484b3dea635d2e0efd23fce39c859e70228f668e53093"
+}

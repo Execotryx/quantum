@@ -79,6 +79,9 @@ The final extension divides by the divisor after adding the dot product.
 The outer monic remainder can use its quotient constant as the left
 interpolation word. Require unit weights and disjoint banks, and restore
 the constant before leaving the reciprocal scope.
+Raw-suffix prefolding borrows the supplied prefix numerator in its reversed
+polynomial basis. Restore it after applying the advanced numerator and
+track the normalized residual before handing off to another block.
 The blocked suffix accepts a prefolded residual and normalized
 denominators. Its shifted unit inverse keeps the first two
 coefficients implicit.

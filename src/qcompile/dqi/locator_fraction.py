@@ -152,6 +152,47 @@ def blocked_suffix_inplace(builder: Any, words: list[Any], previous: list[Any], 
         _series_inplace(builder, words, current, multiply, adjoint=False)
 
 
+def _advance_numerator_block(builder: Any, numerator: list[Any], denominator_tail: list[Any],
+                             multiply: ProjectedFieldProduct, reciprocal: Any, *, adjoint: bool) -> None:
+    """Advance a rational sequence by one block of denominator degree."""
+    # In the reversed polynomial basis the shift multiplies by x**degree
+    # modulo the locator. The low half of that dividend is zero. Pack the
+    # quotient first, then compute its product with the locator's low half.
+    low = denominator_tail[::-1]
+    if adjoint:
+        _series_inplace(builder, numerator[::-1], low[1:], multiply, adjoint=True, scales=(reciprocal, low[0]))
+    _series_inplace(builder, numerator, denominator_tail, multiply, adjoint=not adjoint)
+    if not adjoint:
+        _series_inplace(builder, numerator[::-1], low[1:], multiply, adjoint=False, scales=(low[0], reciprocal))
+
+
+def prefold_raw_suffix(builder: Any, words: list[Any], numerator: list[Any], denominator_tail: list[Any],
+                      *, adjoint: bool = False, multiply: ProjectedFieldProduct) -> None:
+    """Overwrite raw suffix Y with D*Y + B_shifted, preserving the prefix pair.
+
+    The numerator and the unit-constant denominator's tail have equal
+    physical length k. The denominator lead must be nonzero. B/D matches
+    the first 2*k terms of the original series, and words begins at 2*k.
+    All coefficient lists are ascending and disjoint.
+    """
+    if not words or not numerator or len(numerator) != len(denominator_tail):
+        raise ValueError("raw suffix prefold requires matched prefix polynomials and a nonempty suffix")
+    if any(len(word) != 12 for word in (*words, *numerator, *denominator_tail)):
+        raise ValueError("raw suffix prefold requires 12-bit field words")
+    if not adjoint:
+        _series_inplace(builder, words, denominator_tail, multiply, adjoint=False)
+    correction_length = min(len(numerator), len(words))
+    with _reciprocal(builder, denominator_tail[-1], compact_inner=True) as reciprocal:
+        for _ in range(2):
+            _advance_numerator_block(builder, numerator, denominator_tail, multiply, reciprocal, adjoint=False)
+        for coefficient, target in zip(numerator[:correction_length], words[:correction_length], strict=True):
+            builder.cx(coefficient, target)
+        for _ in range(2):
+            _advance_numerator_block(builder, numerator, denominator_tail, multiply, reciprocal, adjoint=True)
+    if adjoint:
+        _series_inplace(builder, words, denominator_tail, multiply, adjoint=True)
+
+
 def _projective_fold(builder: Any, a: Any, b: Any, denominator: list[Any], numerator: list[Any],
                      multiply: ProjectedFieldProduct, *, adjoint: bool) -> None:
     """Replace (D,N,a,b) by ((a*z+b)*D+N,D)."""

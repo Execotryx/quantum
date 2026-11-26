@@ -15,7 +15,7 @@ from qcompile.dqi.decoder import _add, _divide, _multiply, bm_locator, syndrome
 from qcompile.dqi.degree_padding import pad_reversed_banks, padding_factors
 from qcompile.dqi.field import GF4096
 from qcompile.dqi.inverse_action import odd_forney_inplace
-from qcompile.dqi.locator_fraction import blocked_suffix_inplace, projective_continuant
+from qcompile.dqi.locator_fraction import blocked_suffix_inplace, prefold_raw_suffix, projective_continuant
 from qcompile.dqi.quotient import _product_range
 from qcompile.dqi.scan import (
     degree_padded_chart_xor, degree_padded_residue_scan, derivative_reciprocal, evaluator, projective_pair_residue_scan,
@@ -260,7 +260,7 @@ def _original_support(support: dict[int, int], reciprocal: bool) -> dict[int, in
     return recovered
 
 
-def _blocked_case(series: list[int], steps: int):
+def _prefix_fraction(series: list[int], steps: int):
     a, b, c, d = [1], [0], [0], [1]
     residual = series
     for _ in range(steps):
@@ -274,6 +274,14 @@ def _blocked_case(series: list[int], steps: int):
             inverse.append(FIELD.mul(value, inverse[0]))
         q, residual = inverse[:2], inverse[2:]
         a, b, c, d = [0, 0, *b], _add(a, _multiply(b, q, FIELD)), [0, 0, *d], _add(c, _multiply(d, q, FIELD))
+    return b, c, d, residual
+
+
+def _blocked_case(series: list[int], steps: int):
+    prefix = _prefix_fraction(series, steps)
+    if prefix is None:
+        return None
+    b, c, d, residual = prefix
     combined = _add(_multiply(d, series, FIELD), b)
     combined += [0] * max(0, len(series) - len(combined))
     assert not any(combined[:2 * steps])
@@ -566,6 +574,65 @@ def test_native_projective_continuant_phase(project_root, monkeypatch, tmp_path)
         "backend_sha256": sha256(backend), "tensor_sha256": tensor_hash, "circuit_sha256": sha256(artifact),
         "qubits": circuit.num_qubits, "toffoli_like": charge, "positions": 4095, "shots": len(rows),
         "regular": sum(charts), "fixture_seed": 36541, "mask_seed": 36563, "native_seed": 36571,
+    })
+
+
+@pytest.mark.slow
+@pytest.mark.parametrize(("degree", "steps"), [(3, 1), (35, 17)])
+def test_prefold_raw_syndrome_suffix(project_root, monkeypatch, tmp_path, degree, steps):
+    multiply, tensor_hash = _field_product(project_root, monkeypatch, tmp_path, projected=True)
+    assert isinstance(multiply, ProjectedFieldProduct)
+    rng = Random(36707)
+    inputs, outputs = [], []
+    for _ in range(24):
+        support = {j: rng.randrange(1, 4096) for j in rng.sample(range(4095), degree)}
+        series = syndrome(support, FIELD)[:2 * degree]
+        prefix = _prefix_fraction(series, steps)
+        if prefix is None:
+            continue
+        b, c, d, residual = prefix
+        if len(d) != steps + 1 or not d[-1]:
+            continue
+        lead = d[0]
+        b = [FIELD.div(value, lead) for value in b] + [0] * (steps - len(b))
+        d = [FIELD.div(value, lead) for value in d]
+        combined = _add(_multiply(d, series, FIELD), b)
+        assert not any(combined[:2 * steps])
+        combined += [0] * max(0, len(series) - len(combined))
+        # The complementary transfer row can overwrite this numerator
+        # once its prefold contribution has been applied.
+        e = [FIELD.mul(lead, coefficient) for coefficient in c[2:]]
+        _, determinant = _divide(_add(_multiply(b, e, FIELD), [0] * (2 * steps - 2) + [1]), d, FIELD)
+        assert determinant == [0]
+        g = combined[2 * steps:len(series)]
+        factor = _multiply([0, 0, *e], g, FIELD)
+        factor[0] ^= 1
+        normalized = [FIELD.div(value, FIELD.mul(lead, lead)) for value in residual]
+        difference = _add(_multiply(d, g, FIELD), _multiply(factor, normalized, FIELD))
+        assert not any(difference[:len(g)])
+        inputs.append([*b, *d[1:], *series[2 * steps:]])
+        outputs.append([*b, *d[1:], *g])
+        if len(inputs) == 12:
+            break
+    assert len(inputs) == 12
+    widths = [12] * (2 * degree)
+    size = sum(widths)
+    words = [range(i * 12, (i + 1) * 12) for i in range(len(widths))]
+    observations = {}
+    for adjoint in (False, True):
+        builder = _PhaseBuilder(outputs if adjoint else inputs, 36709, widths)
+        expected = _BasisBuilder(inputs if adjoint else outputs, widths).data
+        prefold_raw_suffix(builder, words[2 * steps:], words[:steps], words[steps:2 * steps],
+                           adjoint=adjoint, multiply=multiply)
+        assert builder.data[:size] == expected and not any(builder.data[size:])
+        assert builder.phase == 0 and not builder.bits
+        observations["inverse" if adjoint else "forward"] = {
+            "qubits": len(builder.data), "explicit_ands": builder.charged_ands,
+        }
+    write_json(tmp_path / "raw-syndrome-prefold.json", {
+        "scope": "software rational prefold from supplied prefix numerator/denominator and untouched syndrome suffix",
+        "degree": degree, "steps": steps, "shots": len(inputs), "tensor_sha256": tensor_hash,
+        "fixture_seed": 36707, "replay_seed": 36709, "observations": observations,
     })
 
 

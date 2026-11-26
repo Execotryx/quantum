@@ -142,6 +142,13 @@ this leaves at most **2,165 gates** before comparison lowering, raw
 syndrome extraction, and recovery for nonregular charts.
 [Borrowed interpolation and root-scan analysis](docs/aggregate-above-36-dqi-borrowed-remainder-26-11-2026-22-13-28.md)
 
+A raw-suffix handoff now takes a supplied 17-step prefix fraction and
+the original 36 untouched moments. It preserves the prefix and uses
+**28,302 explicit ANDs per direction** at **879 software qubits**. The
+measured handoff and blocked suffix transform together exceed the
+current gate allowance for locator construction and cleanup.
+[Raw syndrome suffix handoff](docs/aggregate-above-36-dqi-raw-suffix-prefold-26-11-2026-22-24-45.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

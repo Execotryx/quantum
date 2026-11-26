@@ -68,6 +68,12 @@ The borrowed quotient constant cuts the explicit AND count further to
 its existing circuit. The remaining strict allowance is 2,165.70 gates
 before lowering 202 equality calls or doing any work from the raw syndrome.
 [Borrowed interpolation and root-scan analysis](../../../docs/aggregate-above-36-dqi-borrowed-remainder-26-11-2026-22-13-28.md)
+Starting from the supplied prefix fraction and untouched 36-word suffix,
+the 17-step prefold uses 56,604 explicit ANDs round trip. The existing
+blocked transform adds 70,476 products in its separate fixture. Their
+combined cost rules out this schedule under the remaining DQI allowance
+even if prefix construction and the complementary denominator were free.
+[Raw suffix prefold](../../../docs/aggregate-above-36-dqi-raw-suffix-prefold-26-11-2026-22-24-45.md)
 
 1. Profile the exact source parent through locator forward, quotient or converter, phase scan, and return. Recover the inherited assembly's semantic cutpoints against its algebraic control within a registered cap. Use explicit shared syndrome panels and classical records at every boundary, pin the simulator seed and account for differing measurement order. Reconcile static and executed counts with a monolithic run. Include maximum live words and serialized width. A target of 888 qubits and 280,000 mean gates needs about 36,123 fewer mean gates than the 900-qubit public comparison. The exposed D16 substitutions total just 616 static Toffolis and cannot fund that reduction alone.
 2. Emit separate storage and arithmetic ablations. Test field-word aliasing across a real stage boundary, a paired quotient schedule, and a source-level trace or residue phase computation. At width 888 and a 280B budget, the permitted mean is about 296,712 at one error or 290,336 at eight. Before full resynthesis, reconcile the needed net gain with disjoint execution-weighted estimates that include forward and cleanup work. Prove the trace-dual map for every unit mask at every relevant root and preserve classical mask dependence, branch phases, and the gauge correction. Account for the inverse's reconstruction state and retain any word that a later stage needs. A two-bank layout and a full implicit-trace replay at every address each need an explicit resource justification.

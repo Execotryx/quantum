@@ -125,6 +125,10 @@
 - Borrow a quotient constant for interpolation only when its weight is
   one at every evaluation point and its wires are disjoint from the other
   input and output banks. Restore it before leaving the divisor reciprocal.
+- The raw-suffix prefold uses a supplied unit-constant prefix fraction.
+  Restore its numerator after advancing it by twice the prefix degree.
+  To bind the next transform, check the complementary denominator's
+  determinant and the residual's common scale.
 - A Givens-order change may move a rotation only across disjoint orbital
   pairs. Preserve the matching angle columns, check reconstructed vectors,
   and price the affected XOR transitions before full loader verification.
