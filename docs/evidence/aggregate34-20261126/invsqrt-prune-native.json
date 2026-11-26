@@ -1,0 +1,19 @@
+{
+  "candidate": {
+    "executed_toffoli_like": 5759278,
+    "qubits": 37,
+    "static_toffoli_like": 1552
+  },
+  "candidate_sha256": "276dddabadbe2d18f594aea21fc8223ee579e10b6796d3860f6f8416c7dcd3cc",
+  "classification": "paired_native_smoke",
+  "control": {
+    "executed_toffoli_like": 5759278,
+    "qubits": 37,
+    "static_toffoli_like": 1553
+  },
+  "control_sha256": "6b59214530108d8c49c648f96c53b963d9b8477f8813db1edcf478bf45f6cf03",
+  "matched": true,
+  "phase_and_restoration": "equal",
+  "seed": 99110726,
+  "trajectories": 4096
+}

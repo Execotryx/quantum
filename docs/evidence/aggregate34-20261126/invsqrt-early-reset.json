@@ -1,0 +1,10 @@
+{
+  "advanced_unconditional_resets": 361,
+  "classification": "symbolic_width_screen",
+  "input_assembly_sha256": "b4dd854bf81b9ea52f0462dc16b3b6f8a052ab5972bcc5fd7cea437d37b75be6",
+  "original_width": 37,
+  "output_assembly_sha256": "692088f416a729ccf378c521438a93bb54923328a70dfd2796d030227389e1b0",
+  "pruned_identities": 1474,
+  "released_scratch_intervals": 877,
+  "width": 37
+}

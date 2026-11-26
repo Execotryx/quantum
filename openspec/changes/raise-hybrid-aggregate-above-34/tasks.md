@@ -1,6 +1,6 @@
 ## 1. Freeze the score and references
 
-- [ ] 1.1 Pin the metric, baseline costs, 26.78 certificate, source versions, comparison candidates and score formula before simulation.
+- [x] 1.1 Pin the metric, baseline costs, 26.78 certificate, source versions, comparison candidates and score formula before simulation. [Intake](../../../docs/evidence/aggregate34-20261126/intake.json)
 - [ ] 1.2 Trace each public parent to its complete source and license. Record compiled-only comparisons and independent implementations by lineage. Build eligible references twice and hash exact output files.
 - [ ] 1.3 Measure each eligible reference under the pinned verifier and record its cost, correctness margin and phase/error diagnostics. Compute the product budget and cost limits for an observed 34.5 development projection.
 
@@ -13,6 +13,6 @@
 
 ## 3. Freeze and certify the archive
 
-- [ ] 3.1 Extend the existing portfolio driver and certificate audit to bind a versioned score threshold and the per-component lineage and build receipts. Preserve compatibility with archived registrations.
+- [x] 3.1 Extend the existing portfolio driver and certificate audit to bind a versioned score threshold and the per-component lineage and build receipts. Preserve compatibility with archived registrations.
 - [ ] 3.2 Build and independently pack the chosen members twice. Check all hashes and structure with the existing preflight and reserve two fresh role-specific salts.
 - [ ] 3.3 Run full metric and confirmation on independent extractions using the existing cloud VM. Recover the sealed reports, recompute both scores and verify full benchmark coverage. Require both results to exceed 34 and publish the dated report and archive handoff.

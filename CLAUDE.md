@@ -23,6 +23,13 @@ Guard projected padding exchanges on both remainders. Validate replacement
 factor geometry and clear the predicate only after restoring the pair.
 For the above-20 aggregate, use the confirmed archive and check all three
 official coverages, including the new chemistry shape and retained NPZ.
+Above-34 registrations require two build receipts and exact members for each
+source lineage. Structural preflight derives the ANGLE layout and coverage.
+Keep the above-20 certificate replay intact. A reset-delimited width screen
+releases scratch only at an unconditional reset.
+Symbolic wire reuse requires a zero proof across measurement outcomes and
+fixed input/output register locations. ANGLE product substitutions preserve
+both complete legal endpoint families and their phase behavior.
 For pole fixes, compare the native extraction snapshot with D4's exact
 doubled-node geometry. Keep genuine local poles distinct from termination.
 The D4 repair certifies the reconstructed rational pair against the original

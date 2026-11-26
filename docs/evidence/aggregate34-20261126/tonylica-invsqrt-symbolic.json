@@ -1,0 +1,9 @@
+{
+  "classification": "symbolic_width_screen",
+  "input_assembly_sha256": "27ccb62d03bcba70353d382bb94c5dc636acd00b250c83f976df8d1176842146",
+  "original_width": 39,
+  "output_assembly_sha256": "09683b81830583ca7aaf532ef268ac88cecc0998717014be820a6878d47de0f3",
+  "pruned_identities": 18,
+  "released_scratch_intervals": 1178,
+  "width": 39
+}

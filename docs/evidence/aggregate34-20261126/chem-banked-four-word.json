@@ -1,0 +1,73 @@
+{
+  "classification": "banked_loader_development_control",
+  "factorization_sha256": "9f472ae472b2eae95940a55cf899fb000861c624a294feb021a4d6ffd6340d67",
+  "lambda_eff": 46.91430370584927,
+  "loader_sha256": "fb32a06f75dfad621f072290e52cece5bcbaeacb0ca20af253c5dfd28ead6d6a",
+  "ranked": [
+    {
+      "batch": 5,
+      "modeled_cost": 843993015.098599,
+      "resources": {
+        "angles_persistent_qubits": 35,
+        "angles_qubits": 54,
+        "angles_selection_qubits": 11,
+        "angles_temporary_qubits": 8,
+        "angles_toffoli": 37920.0,
+        "angles_toffoli_per_pass": 18960.0,
+        "angles_within_cap": true,
+        "brot": 7,
+        "givens_rotations_toffoli": 1950,
+        "heuristic_persistent_qubits": 83,
+        "heuristic_qubits": 370,
+        "heuristic_temporary_qubits": 287,
+        "heuristic_toffoli": 6500,
+        "inner_state_prep_persistent_qubits": 43,
+        "inner_state_prep_qubits": 330,
+        "inner_state_prep_temporary_qubits": 287,
+        "inner_state_prep_toffoli": 4213,
+        "keep_bits": 10,
+        "outer_state_prep_persistent_qubits": 40,
+        "outer_state_prep_qubits": 130,
+        "outer_state_prep_temporary_qubits": 90,
+        "outer_state_prep_toffoli": 337,
+        "persistent_qubits": 118,
+        "qubits": 405,
+        "temporary_qubits": 287,
+        "toffoli": 44420.0
+      }
+    },
+    {
+      "batch": 4,
+      "modeled_cost": 1018215662.2555742,
+      "resources": {
+        "angles_persistent_qubits": 28,
+        "angles_qubits": 47,
+        "angles_selection_qubits": 11,
+        "angles_temporary_qubits": 8,
+        "angles_toffoli": 48032.0,
+        "angles_toffoli_per_pass": 24016.0,
+        "angles_within_cap": true,
+        "brot": 7,
+        "givens_rotations_toffoli": 1950,
+        "heuristic_persistent_qubits": 83,
+        "heuristic_qubits": 370,
+        "heuristic_temporary_qubits": 287,
+        "heuristic_toffoli": 6500,
+        "inner_state_prep_persistent_qubits": 43,
+        "inner_state_prep_qubits": 330,
+        "inner_state_prep_temporary_qubits": 287,
+        "inner_state_prep_toffoli": 4213,
+        "keep_bits": 10,
+        "outer_state_prep_persistent_qubits": 40,
+        "outer_state_prep_qubits": 130,
+        "outer_state_prep_temporary_qubits": 90,
+        "outer_state_prep_toffoli": 337,
+        "persistent_qubits": 111,
+        "qubits": 398,
+        "temporary_qubits": 287,
+        "toffoli": 54532.0
+      }
+    }
+  ],
+  "verified_shots": 2438
+}

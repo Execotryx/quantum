@@ -53,6 +53,15 @@
   the same qualified DQI KMB in both archives. Keep the chemistry
   factorization's original NPZ hash and derive its coverage from that
   shape. Bind the complete metric and confirmation to fresh extractions.
+- For above-34 registrations, bind the source and both build receipts for
+  every benchmark to its exact member hashes. Let structural preflight
+  derive the number of ANGLE loaders from the emitted layout. Preserve the
+  legacy certificate schema. A reset-delimited width screen can reuse a
+  scratch slot only after an unconditional reset.
+- Symbolic liveness may release a wire when it proves zero across all
+  measurement outcomes. Fix the first and last intervals of named input
+  wires. ANGLE product substitutions must agree on both complete legal
+  endpoint families and retain measurement and phase behavior.
 - A speculative D4 synthesis route must preserve rejected inputs. Require
   the live chart, degree, layout and absence of clipped pivots before
   applying its residual scan. Account for the shared projection phase

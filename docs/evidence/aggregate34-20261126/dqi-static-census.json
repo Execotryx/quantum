@@ -1,0 +1,244 @@
+{
+  "kind": "source_fragment_static_census",
+  "rebuilt_kmb_sha256": "4b5721411adc239f61fc11c773a2358b75dfe7cb15586efae4f0459c77d77e52",
+  "stage_map_sha256": "1c786c2d2c5f02c4656a761f14025d9305511f9e8eb6649f69dd8f1e7d0c1681",
+  "stages": [
+    {
+      "name": "decoder/registers.kmx.xz",
+      "ops": 54145,
+      "static_total": 0,
+      "toffoli_like": {}
+    },
+    {
+      "kind": "generated",
+      "name": "lambda_selector"
+    },
+    {
+      "name": "decoder/classical_decoder_entry.kmx.xz",
+      "ops": 138583,
+      "static_total": 0,
+      "toffoli_like": {}
+    },
+    {
+      "name": "decoder/quantum_decoder_to_field_1.kmx.xz",
+      "ops": 12419616,
+      "static_total": 90766,
+      "toffoli_like": {
+        "CCX": 90670,
+        "CCZ": 96
+      }
+    },
+    {
+      "name": "d16/field_1_entry.kmx.xz",
+      "ops": 6777,
+      "static_total": 0,
+      "toffoli_like": {}
+    },
+    {
+      "kind": "reversible_product",
+      "name": "d16/field_1_wiring_84.json",
+      "wiring_keys": [
+        "input_forms",
+        "input_wires",
+        "output_forms",
+        "output_wires"
+      ]
+    },
+    {
+      "name": "d16/field_1_between_products.kmx.xz",
+      "ops": 8319,
+      "static_total": 42,
+      "toffoli_like": {
+        "CCX": 42
+      }
+    },
+    {
+      "kind": "reversible_product",
+      "name": "d16/field_1_wiring_70.json",
+      "wiring_keys": [
+        "input_forms",
+        "input_wires",
+        "output_forms",
+        "output_wires"
+      ]
+    },
+    {
+      "name": "d16/field_1_exit.kmx.xz",
+      "ops": 1307,
+      "static_total": 0,
+      "toffoli_like": {}
+    },
+    {
+      "name": "decoder/field_1_to_field_2.kmx.xz",
+      "ops": 831418,
+      "static_total": 2893,
+      "toffoli_like": {
+        "CCX": 2893
+      }
+    },
+    {
+      "name": "d16/field_2_entry.kmx.xz",
+      "ops": 10688,
+      "static_total": 0,
+      "toffoli_like": {}
+    },
+    {
+      "kind": "reversible_product",
+      "name": "d16/field_2_wiring_84.json",
+      "wiring_keys": [
+        "input_forms",
+        "input_wires",
+        "output_forms",
+        "output_wires"
+      ]
+    },
+    {
+      "name": "d16/field_2_between_products.kmx.xz",
+      "ops": 13344,
+      "static_total": 96,
+      "toffoli_like": {
+        "CCX": 96
+      }
+    },
+    {
+      "kind": "reversible_product",
+      "name": "d16/field_2_wiring_70.json",
+      "wiring_keys": [
+        "input_forms",
+        "input_wires",
+        "output_forms",
+        "output_wires"
+      ]
+    },
+    {
+      "name": "d16/field_2_exit.kmx.xz",
+      "ops": 2822,
+      "static_total": 0,
+      "toffoli_like": {}
+    },
+    {
+      "name": "decoder/field_2_to_root_1330_phase.kmx.xz",
+      "ops": 9093322,
+      "static_total": 77036,
+      "toffoli_like": {
+        "CCX": 73010,
+        "CCZ": 4026
+      }
+    },
+    {
+      "kind": "generated",
+      "name": "lambda_phase"
+    },
+    {
+      "name": "decoder/root_1330_phase_to_field_3.kmx.xz",
+      "ops": 4431050,
+      "static_total": 23844,
+      "toffoli_like": {
+        "CCX": 23643,
+        "CCZ": 201
+      }
+    },
+    {
+      "name": "d16/field_3_entry.kmx.xz",
+      "ops": 940,
+      "static_total": 0,
+      "toffoli_like": {}
+    },
+    {
+      "kind": "reversible_product",
+      "name": "d16/field_3_wiring_84.json",
+      "wiring_keys": [
+        "input_forms",
+        "input_wires",
+        "output_forms",
+        "output_wires"
+      ]
+    },
+    {
+      "name": "d16/field_3_between_products.kmx.xz",
+      "ops": 1976,
+      "static_total": 54,
+      "toffoli_like": {
+        "CCX": 54
+      }
+    },
+    {
+      "kind": "reversible_product",
+      "name": "d16/field_3_wiring_70.json",
+      "wiring_keys": [
+        "input_forms",
+        "input_wires",
+        "output_forms",
+        "output_wires"
+      ]
+    },
+    {
+      "name": "d16/field_3_exit.kmx.xz",
+      "ops": 525,
+      "static_total": 0,
+      "toffoli_like": {}
+    },
+    {
+      "name": "decoder/field_3_to_field_4.kmx.xz",
+      "ops": 3053935,
+      "static_total": 14068,
+      "toffoli_like": {
+        "CCX": 13766,
+        "CCZ": 302
+      }
+    },
+    {
+      "name": "d16/field_4_entry.kmx.xz",
+      "ops": 857,
+      "static_total": 0,
+      "toffoli_like": {}
+    },
+    {
+      "kind": "reversible_product",
+      "name": "d16/field_4_wiring_84.json",
+      "wiring_keys": [
+        "input_forms",
+        "input_wires",
+        "output_forms",
+        "output_wires"
+      ]
+    },
+    {
+      "name": "d16/field_4_between_products.kmx.xz",
+      "ops": 2972,
+      "static_total": 42,
+      "toffoli_like": {
+        "CCX": 42
+      }
+    },
+    {
+      "kind": "reversible_product",
+      "name": "d16/field_4_wiring_70.json",
+      "wiring_keys": [
+        "input_forms",
+        "input_wires",
+        "output_forms",
+        "output_wires"
+      ]
+    },
+    {
+      "name": "d16/field_4_exit.kmx.xz",
+      "ops": 461,
+      "static_total": 0,
+      "toffoli_like": {}
+    },
+    {
+      "name": "decoder/decoder_return.kmx.xz",
+      "ops": 19804589,
+      "static_total": 109515,
+      "toffoli_like": {
+        "CCX": 107422,
+        "CCZ": 2093
+      }
+    },
+    {
+      "kind": "generated",
+      "name": "restore_gauges"
+    }
+  ]
+}
