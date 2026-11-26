@@ -275,6 +275,9 @@
 - An incumbent signed-row splice requires its full sign frame and local
   measurement phase repairs. Prove the incoming carry and source are
   restored. Recheck the complete width after lowering the row workspace.
+- An affine value-gate replacement needs proof on every legal input before
+  the first measurement-guarded value operation. A controlled swap may use
+  the two target wires only through their preserved XOR parity.
 - A rotation may borrow a nonlinear product only after checking its
   value across the legal domain and proving independence from prior
   measurement outcomes. Restore it before either factor is erased.

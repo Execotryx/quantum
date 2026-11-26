@@ -126,6 +126,19 @@ fail the complete budget. Evaluate a recurrence or another shared
 loading layout and include the numerator and exponent routing.
 [Precision and reciprocal lookup trial](../../../docs/degree35-invsqrt-checkpoint-precision-27-11-2026-03-48-23.md)
 
+## Joint component cost screen
+
+Recalculate each component's cost budget from the measured candidate
+companions and the inclusive score-35 product. With inverse square root
+at 58,000 and chemistry at 230M, the DQI cap is 297.777B, or 308,769 mean
+gates at 888 declared qubits and eight failures in a full draw. This is
+a development allocation. Check observed counts and the repetition
+factor on each verification role. At 405 chemistry task qubits and the
+v221 effective normalization, 230M permits 2,802 ANGLE gates per pass.
+The verified v221 assembly still uses 3,306. Prioritize changes that can
+close a demonstrated resource gap on serialized components.
+[Joint budgets and catalog comparison](../../../docs/degree35-joint-cost-screen-27-11-2026-04-37-37.md)
+
 ## Verification and delivery
 
 Register a `portfolio-v5` archive with `--at-least-35` after qualifying a full

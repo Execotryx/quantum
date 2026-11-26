@@ -1,0 +1,139 @@
+{
+  "classification": "joint_score35_development_budget",
+  "input_sha256": {
+    "docs/evidence/aggregate36-20261126/degree35-above35-controls.json": "40600203556a0b735f2c1ce8acb701041d9d88d52100d5e08f80f8e382c70cfb",
+    "docs/evidence/aggregate36-20261126/public-frontier-v220.json": "391388a908af48f2daf05a6b5d1d7b99047f49f5936441342e38a6bd9d0b0cf2",
+    "docs/evidence/aggregate34-20261126/public-cloud-audit.json": "c0de19fb94e3e00e9889993c7d32556124dd5f74dbc25d21e57dc871ce4e348a",
+    "docs/evidence/aggregate34-20261126/public-cloud-registration.json": "bdcdf90a52d677ca26f143435383cfd4fdd763f66f722a2b5b8faedeadb4967e",
+    "runs/aggregate36-public-v221/assembly_best.download": "a0bfd396eb39c03279bb6b1a17f445731b29ed107b4e93b22d8372bfe4ced14c"
+  },
+  "cost_product_ceiling": "3972344610247196223281817.75724242071267426999",
+  "catalog_v221_chemistry": {
+    "verified_cost": 249131639.59982783,
+    "qubits": 405,
+    "total_toffoli": 13112.0,
+    "angle_toffoli_per_pass": 3306,
+    "authors": [
+      "goodpjw2008",
+      "maoxin123"
+    ],
+    "assembly_sha256": "a724be4eec649373a7cbe8967a8e57daf0319fa5f96dd7c58b1466ed2e6ec01d",
+    "factorization_sha256": "25cab2c621e78711480aa975f42a8386414f1f2e1466c3d1f01d5be3e31cae20",
+    "slots_by_author": {
+      "goodpjw2008": 14,
+      "maoxin123": 1
+    },
+    "source_companion_score_projection": 33.118307177948076,
+    "cloud_companion_score_projection": 33.20653691937913
+  },
+  "budgets": [
+    {
+      "invsqrt_cost": 56000,
+      "chemistry_cost": 230000000,
+      "dqi_cost_ceiling": "308411848621.676725410079018419442601915704192",
+      "source_control_dqi_score_projection": 35.12842540771898,
+      "maximum_integer_mean_dqi_gates": {
+        "879": {
+          "0": 335078,
+          "1": 333546,
+          "8": 326378
+        },
+        "888": {
+          "0": 328320,
+          "1": 326819,
+          "8": 319796
+        },
+        "900": {
+          "0": 319623,
+          "1": 318162,
+          "8": 311325
+        }
+      },
+      "maximum_integer_chemistry_angle_gates_per_pass": {
+        "398": 2908,
+        "405": 2802
+      }
+    },
+    {
+      "invsqrt_cost": 57000,
+      "chemistry_cost": 235000000,
+      "dqi_cost_ceiling": "296554282213.303189494723236822875753092517357",
+      "source_control_dqi_score_projection": 34.67233300891882,
+      "maximum_integer_mean_dqi_gates": {
+        "879": {
+          "0": 322195,
+          "1": 320722,
+          "8": 313830
+        },
+        "888": {
+          "0": 315697,
+          "1": 314254,
+          "8": 307501
+        },
+        "900": {
+          "0": 307335,
+          "1": 305930,
+          "8": 299355
+        }
+      },
+      "maximum_integer_chemistry_angle_gates_per_pass": {
+        "398": 3042,
+        "405": 2934
+      }
+    },
+    {
+      "invsqrt_cost": 58000,
+      "chemistry_cost": 230000000,
+      "dqi_cost_ceiling": "297776957289.894769361455603991185960470335082",
+      "source_control_dqi_score_projection": 34.71991830420149,
+      "maximum_integer_mean_dqi_gates": {
+        "879": {
+          "0": 323524,
+          "1": 322045,
+          "8": 315124
+        },
+        "888": {
+          "0": 316999,
+          "1": 315550,
+          "8": 308769
+        },
+        "900": {
+          "0": 308602,
+          "1": 307191,
+          "8": 300590
+        }
+      },
+      "maximum_integer_chemistry_angle_gates_per_pass": {
+        "398": 2908,
+        "405": 2802
+      }
+    },
+    {
+      "invsqrt_cost": 58000,
+      "chemistry_cost": 235000000,
+      "dqi_cost_ceiling": "291441277347.556582779296974119033067694370506",
+      "source_control_dqi_score_projection": 34.47191042161158,
+      "maximum_integer_mean_dqi_gates": {
+        "879": {
+          "0": 316640,
+          "1": 315193,
+          "8": 308419
+        },
+        "888": {
+          "0": 310254,
+          "1": 308836,
+          "8": 302199
+        },
+        "900": {
+          "0": 302036,
+          "1": 300655,
+          "8": 294194
+        }
+      },
+      "maximum_integer_chemistry_angle_gates_per_pass": {
+        "398": 3042,
+        "405": 2934
+      }
+    }
+  ]
+}

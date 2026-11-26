@@ -277,3 +277,6 @@ See `docs/baseline-campaign-02-11-2026-01-19-10.md` for measurement definitions.
 - The outer (0,2) pole path uses a six-word band per bank and a
   pivoted tail solve. Preserve the original augmented system,
   repay its tail masks, and guard the slope and high slots.
+- In the inverse-square-root affine routing screen, confirm sampled hits on
+  every legal input before the first measurement-guarded value operation.
+  Exclude target wires from controls except for the preserved swap parity.

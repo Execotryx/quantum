@@ -307,6 +307,13 @@ results on **8,192 fresh trajectories each**. Both circuits restored their
 inputs and scratch exactly. The reciprocal cost matched the local result.
 [Cloud fixture verification](docs/degree35-invsqrt-cloud-reciprocal-27-11-2026-04-32-29.md)
 
+The joint score-35 screen prices inverse square root at **58,000** and
+chemistry at **230M**, leaving **297.777B** for DQI. A Google Cloud screen
+tested affine replacements for 731 inverse-square-root value gates. All
+35 sample matches failed on the full legal input domain.
+[Joint targets](docs/degree35-joint-cost-screen-27-11-2026-04-37-37.md) ·
+[Cloud routing screen](docs/degree35-invsqrt-affine-routing-27-11-2026-04-45-02.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh
