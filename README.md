@@ -198,11 +198,13 @@ current gate allowance for locator construction and cleanup.
 The degree-35 development lane uses the selected open controls and an
 inclusive **35-point** portfolio gate. The source-backed companion costs
 allow about **274,327.64 mean DQI gates** at 888 qubits and zero failures.
-The current supplied-tape phase leaves at most **20,476.64 gates** before
-native equality lowering, raw-syndrome extraction, and recovery. The
-submission archive requires both full cloud verifier roles to reach at
-least 35. The highest complete cloud comparison is **33.20483975**.
-[Degree-35 controls, acceptance, and remaining work](docs/degree35-inclusive-27-11-2026-00-48-55.md)
+The supplied-tape phase used **256,285 Toffoli-like gates** in native
+replay, leaving about **18,043 gates** for raw-syndrome extraction and
+recovery. The submission archive requires both full cloud verifier
+roles to reach at least 35. The highest complete cloud comparison is
+**33.20483975**.
+[Degree-35 controls and acceptance](docs/degree35-inclusive-27-11-2026-00-48-55.md)
+· [Native handoff and remaining budget](docs/degree35-native-handoff-27-11-2026-00-53-57.md)
 
 A full-input replay of Tony Li's 39-qubit inverse-square-root control
 bounded the possible margin gain from refitting its existing rotations.
