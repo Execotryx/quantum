@@ -76,6 +76,9 @@ The Chien scan can borrow the constant terms and restore them at each root.
 The shared reciprocal schedule predivides each child's top payload by
 its modulus lead. The packed slope recovers the reduction quotient.
 The final extension divides by the divisor after adding the dot product.
+The outer monic remainder can use its quotient constant as the left
+interpolation word. Require unit weights and disjoint banks, and restore
+the constant before leaving the reciprocal scope.
 The blocked suffix accepts a prefolded residual and normalized
 denominators. Its shifted unit inverse keeps the first two
 coefficients implicit.

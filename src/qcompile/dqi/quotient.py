@@ -101,13 +101,21 @@ def _product_weights(left: int, right: int, target: int, first: int
 
 def _interpolated_product_range(builder: Any, left: Sequence[Any], right: Sequence[Any],
                                 target: Sequence[Any], first: int, multiply: FieldProduct,
-                                *, right_columns: tuple[int, ...] = ()) -> None:
-    """Evaluate a product, optionally mapping the coefficients of the right input."""
-    a, b = builder.alloc_qubits(12), builder.alloc_qubits(12)
+                                *, right_columns: tuple[int, ...] = (), borrow_left_constant: bool = False) -> None:
+    """Evaluate a product with an optional disjoint, unit-weight left coefficient."""
+    rows = _product_weights(len(left), len(right), len(target), first)
+    if borrow_left_constant and (left[0] is None or any(weights[0] != 1 for weights, _, _ in rows)):
+        raise ValueError("a borrowed interpolation operand must have weight one at every point")
+    a = left[0] if borrow_left_constant else builder.alloc_qubits(12)
+    b = builder.alloc_qubits(12)
+    if borrow_left_constant:
+        left = left[1:]
+    left_start = int(borrow_left_constant)
     product = None if isinstance(multiply, ProjectedFieldProduct) else builder.alloc_qubits(12)
-    for left_weights, right_weights, output_weights in _product_weights(len(left), len(right), len(target), first):
+    for left_weights, right_weights, output_weights in rows:
         def evaluate() -> None:
-            for words, destination, weights in ((left, a, left_weights), (right, b, right_weights)):
+            for words, destination, weights in ((left, a, left_weights[left_start:]),
+                                                 (right, b, right_weights)):
                 for word, scale in zip(words, weights, strict=True):
                     if word is not None and scale:
                         if destination is b and right_columns:
@@ -126,7 +134,8 @@ def _interpolated_product_range(builder: Any, left: Sequence[Any], right: Sequen
             multiply.project(builder, a, b, [(word, scale) for word, scale in
                                              zip(target, output_weights, strict=True) if scale])
         evaluate()
-    builder.free(a)
+    if not borrow_left_constant:
+        builder.free(a)
     builder.free(b)
     if product is not None:
         builder.free(product)

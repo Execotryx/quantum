@@ -122,6 +122,9 @@
   entering top payload by the child modulus lead. Multiply by the packed
   quotient slope during reduction, and undo the child's scale before the
   inverse reduction. Test zero-head paths through both directions.
+- Borrow a quotient constant for interpolation only when its weight is
+  one at every evaluation point and its wires are disjoint from the other
+  input and output banks. Restore it before leaving the divisor reciprocal.
 - A Givens-order change may move a rotation only across disjoint orbital
   pairs. Preserve the matching angle columns, check reconstructed vectors,
   and price the affected XOR transitions before full loader verification.

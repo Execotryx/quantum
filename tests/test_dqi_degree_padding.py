@@ -476,7 +476,9 @@ def test_shared_reciprocals_match_forney_residues(project_root, monkeypatch, tmp
                            projective=True, validity=valid, adjoint=True)
         assert builder.data[:size] == initial and not any(builder.data[size:])
         assert builder.phase == 0 and not builder.bits
-    assert charges[0] - charges[1] == 408 * (degree // 2 - 1)
+    shared_reciprocals = 408 * (degree // 2 - 1)
+    interpolated_remainders = 84 * max(0, degree // 2 - 3)
+    assert charges[0] - charges[1] == shared_reciprocals + interpolated_remainders
 
 
 @pytest.mark.slow

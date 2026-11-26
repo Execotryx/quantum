@@ -5,7 +5,7 @@ from contextlib import contextmanager
 from typing import Any
 
 from .bilinear import erase_product
-from .quotient import FieldProduct, _high_reduce, _product_range, _series_inplace
+from .quotient import FieldProduct, _high_reduce, _interpolated_product_range, _product_range, _series_inplace
 from .subtower import inverse_xor
 from .tower import ProjectedFieldProduct, multiply_xor
 
@@ -141,12 +141,16 @@ def _projective_remainder(builder: Any, modulus: list[Any], divisor: list[Any],
         if adjoint:
             _scale_words(builder, tails, inverse, d_head, multiply)
 
-    # When A is monic, the quotient slope is the inverse itself. Use scalar
-    # products on this outer level to leave the interpolation workspace free.
+    # When A is monic, the quotient slope is the inverse itself. Borrow the
+    # quotient constant at unit weight to fit interpolation beside it.
     if a_head is None:
         with _reciprocal(builder, d_head, extend_zero=extend_zero, compact_inner=fused) as slope:
             extend_payloads(slope)
             def update_monically() -> None:
+                if fused and len(modulus) > 4:
+                    _interpolated_product_range(builder, (lead, slope), divisor[:-1], modulus[:-2], 0, multiply,
+                                                borrow_left_constant=True)
+                    return
                 for i, word in enumerate(modulus[:-2]):
                     multiply(builder, lead, divisor[i], word)
                     if i:

@@ -135,6 +135,13 @@ calls** at **888 qubits** in software replay. This saves **13,056 ANDs** and
 strict public-companion ceiling before quotient generation and recovery.
 [Shared reciprocal measurements](docs/aggregate-above-36-dqi-shared-reciprocals-26-11-2026-22-04-38.md)
 
+Borrowing the quotient constant during interpolation brings the same
+degree-35 composition to **253,851 explicit ANDs** at **888 software
+qubits**, saving another **2,352**. At the measured public companion costs,
+this leaves at most **2,165 gates** before comparison lowering, raw
+syndrome extraction, and recovery for nonregular charts.
+[Borrowed interpolation and root-scan analysis](docs/aggregate-above-36-dqi-borrowed-remainder-26-11-2026-22-13-28.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh
