@@ -9,7 +9,7 @@
 - [ ] 2.2 Build and test separate DQI storage, quotient, and phase ablations, including inverse and exceptional charts.
 - [ ] 2.3 Freeze and build the DQI finalist twice. Qualify its phase, value and cost on eight complete matched development draws.
 - [ ] 2.4 Pilot the two inverse-square-root arithmetic schedules, emit the selected complete schedule, and verify the full input domain, phase branches, and native price.
-- [ ] 2.5 Run the chemistry control and fixed-dictionary channel-count pilots. Use the PSD screen and measured cost gaps to select bounded variable-basis fits.
+- [x] 2.5 Run the chemistry control and fixed-dictionary channel-count pilots. Use the PSD screen and measured cost gaps to select bounded variable-basis fits.
 - [ ] 2.6 Emit and verify the winning chemistry loader family at full coverage, checking both endpoints and the complete cost.
 - [ ] 2.7 Compute conservative portfolio projections against strict break-even. Record the headroom for portfolios below the preferred 36.5 development target or preregister the next correction.
 

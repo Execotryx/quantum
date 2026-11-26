@@ -1,0 +1,15 @@
+{
+  "continuous_residual": 0.041082189834474515,
+  "continuous_sha256": "5029afca533d9f129e2c80ec3a67a583570d2e7adbbb45870dba213c7ded5cc1",
+  "decoded_brot": 7,
+  "decoded_metrics": {
+    "E_SOS": -23097.697092749648,
+    "E_gap": 957.4237427496482,
+    "Lambda": 1519.502620821369,
+    "error_1": 4.549496199977259,
+    "error_2": 0.15796606445644287,
+    "gap_in_domain": 1.0,
+    "lambda_eff": 1411.7207760420065
+  },
+  "evaluations": 500
+}
