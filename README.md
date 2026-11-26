@@ -53,6 +53,13 @@ syndrome prefix through phase and restoration uses **879 qubits** and
 **222,393 charged gates**.
 [Evaluator comparison and native restoration](docs/aggregate-above-36-dqi-evaluator-26-11-2026-08-35-31.md)
 
+A regular-chart locator circuit passed reduced native tests from raw
+syndrome through phase and restoration. Its first degree-35 reciprocal
+alone used **83,394 charged gates per direction**. Even with the cheaper
+supplied-evaluator phase stage, the reciprocal pair exceeds the remaining
+DQI allocation.
+[Locator measurements](docs/aggregate-above-36-dqi-locator-fraction-26-11-2026-08-46-31.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

@@ -47,6 +47,9 @@ registered.
 The compact evaluator keeps the locator constant's inverse live only
 during leaf scaling. Require a nonzero constant and a prepared locator
 before entering the fixed-chart syndrome scan.
+The in-place continued-fraction locator requires nonzero linear Euclidean
+quotients and a nonzero denominator constant. Its degree-35 receipt covers
+the first reciprocal, while reduced fixtures cover complete composition.
 Keep raw receipts and the original salt when retrying a public comparison.
 Propagate chemistry angle-gauge signs backward through the ordered Givens
 tree. Verify the prepared projectors, decoded metrics and native loader cost.

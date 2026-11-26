@@ -79,6 +79,9 @@
   constant's inverse live only during leaf scaling and restore the source
   basis before a cross product. The fixed-chart syndrome scan expects the
   locator to have already been constructed.
+- The in-place continued-fraction locator assumes nonzero linear Euclidean
+  quotients and a nonzero denominator constant. Keep reduced complete
+  composition evidence separate from the degree-35 first reciprocal.
 - Before a full portfolio run, exercise native ANGLE serialization on its
   temporary filesystem. Keep prior raw receipts and the original salts
   when a public development comparison needs an infrastructure retry.
