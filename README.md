@@ -8,6 +8,50 @@ independent mathematical checks, and local verification against pinned evaluator
 qcompile is licensed under Apache 2.0. See the [license](LICENSE), the
 [attribution notice](NOTICE), and the [third-party source policy](third_party/).
 
+### Open circuit credits
+
+The baseline circuits and verifier come from **Google Quantum AI**. Their
+published source identities are recorded separately from project-built
+artifacts. [Reference source and hashes](contracts/sources.lock.json)
+
+- **Agniv Banerjee (SomeJoint)** and the credited contributors supplied
+  the 897-qubit streamed DQI decoder banked as D4. **mrmeows / team
+  selenium** supplied the Q880 DQI candidate built and priced as D5.
+  Their notices credit the upstream work of Ahmed Berat Özer, Alex Chilton,
+  Dmitrii Gluzdov, ViberTeam, manwithacat, and Phuc Thai.
+  [D4 source and credits](third_party/dqi-d4/SOURCE.json) ·
+  [D5 source and credits](third_party/dqi-d5/SOURCE.json)
+- **Syed Asad Ali** and collaborators supplied the v12 DQI, inverse-square-root,
+  and chemistry generators used in the independently rebuilt hybrid. The
+  DQI early-tail and padding-exchange work derives from his decoder.
+  [DQI notice](third_party/dqi-syed-v12/NOTICE) ·
+  [Inverse-square-root notice](third_party/invsqrt-syed-v12/NOTICE) ·
+  [Chemistry notice](third_party/dfthcsos-syed-v12/NOTICE)
+- **Tony Li and Areeb Ali (Entangled Team)** and **team ThemBones** supplied
+  the source-built public portfolio used as an arithmetic and stage control.
+  The inverse-square-root build incorporates divider and carry work credited
+  to **Geremie Yeo** and **jackvd**. We reproduced all 18 published members
+  twice from the v2 source package.
+  [Published generators](https://www.kaggle.com/datasets/tonylica/quantum-ai-32-85306-task-generators/versions/2) ·
+  [Build hashes](docs/evidence/aggregate34-20261126/tonylica-builds.json)
+- **goodpjw2008** assembled the **33.20483975** cloud comparison and supplied
+  its chemistry loader work and DQI zero-test changes. The comparison retains
+  the Entangled Team DQI lineage and **prvsiyan**'s 37-qubit inverse-square-root
+  circuit. [Published comparison and credits](https://www.kaggle.com/code/goodpjw2008/qcc-shorter-chemistry-loaders-lb-33-25226?scriptVersionId=374137004) ·
+  [Inverse-square-root origin](https://www.kaggle.com/code/prvsiyan/verifier-guided-quantum-circuit-optimization) ·
+  [Archive and member hashes](docs/evidence/aggregate34-20261126/public-cloud-registration.json)
+- **Nasir Ali** supplied the rank-42 GF(4096) multiplication tensor used in
+  DQI development. [Tensor generator and license](third_party/dqi-scheme42/SOURCE.json)
+
+The source screens credit **manwithacat** for the circuit catalog and its
+salt-check records. The shortlist names each candidate's original publisher,
+including **Atakan Aldemir**, **Ertuğrul Özer**, **Matt Liston**, and
+**Acceleratorer / Accelra** with their upstream generators. Earlier source
+reviews retain the full credit chains for output-only inverse-square-root
+and chemistry candidates. [Current shortlist](docs/aggregate-above-36-open-circuit-shortlist-26-11-2026-22-34-04.md) ·
+[Earlier inverse-square-root credits](docs/evidence/vendored-invsqrt/admission.md) ·
+[Earlier chemistry credits](docs/vendored-c40-admission-14-11-2026-22-27-00.md)
+
 ## Current state
 
 The independently rebuilt hybrid archive scored **26.78302388** in full cloud
@@ -62,10 +106,12 @@ exceed the full decoder's allocation when combined with the phase stage.
 [Locator baseline](docs/aggregate-above-36-dqi-locator-fraction-26-11-2026-08-46-31.md)
 · [Transposed product results](docs/aggregate-above-36-dqi-middle-product-26-11-2026-16-47-11.md)
 
-A newer public circuit catalog puts its most optimistic three-component
-combination at **33.25742**. Keeping its inverse-square-root and chemistry
-costs would require a DQI cost below **240.49B** to exceed 36.
-[Public circuit cost screen](docs/aggregate-above-36-public-frontier-26-11-2026-17-01-05.md)
+The version-220 catalog's best existing mix projects **33.22945** using the
+48-draw DQI estimate, or **33.25742** under its optimistic zero-failure price.
+Tony Li's source-rebuilt DQI is the selected development control. Keeping
+the catalog's inverse-square-root and chemistry costs would require a DQI
+cost below **240.49B** to exceed 36.
+[Open circuit shortlist and source status](docs/aggregate-above-36-open-circuit-shortlist-26-11-2026-22-34-04.md)
 
 On the regular derivative chart, carrying the Euclidean leading
 coefficients through the solve reduced the 4,095-position phase stage

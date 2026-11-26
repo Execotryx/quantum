@@ -1,0 +1,256 @@
+{
+  "acceleratorer_exp074": {
+    "components": {
+      "dfthcsos": {
+        "num_qubits": 405,
+        "score": 249853852.96142676,
+        "submission_sha256": "053242eb7979c5362135b66e14c239d2b223e58e983c2703fc936c25b55a712a",
+        "verified_shots": 78016
+      },
+      "dqi": {
+        "circuit_sha256": "4b5721411adc239f61fc11c773a2358b75dfe7cb15586efae4f0459c77d77e52",
+        "num_qubits": 900,
+        "phase_errors": 0,
+        "score": 305041647011.3978,
+        "value_errors": 0,
+        "verified_shots": 102400
+      },
+      "invsqrt": {
+        "circuit_sha256": "68eb8c13ebc75c5e443ed5a8c6357c2c77e6676c499ed1324108bf025faf1489",
+        "num_qubits": 39,
+        "score": 61696.23146663024,
+        "verified_shots": 200540928
+      }
+    },
+    "reported_complete_score": 33.08636738729924,
+    "second_chemistry_score": 249853852.96142676,
+    "url": "https://github.com/Acceleratorer/quantum-circuit-compilation-clean/blob/main/evals/2026-11-26-exp074-source-built-v20-chemistry.json"
+  },
+  "catalog": "https://www.kaggle.com/datasets/manwithacat/vqcc-apache-public-circuits/versions/220",
+  "catalog_rows": {
+    "chemistry": 477,
+    "dqi": 161,
+    "invsqrt": 136
+  },
+  "classification": "published_cost_and_source_screen",
+  "input_sha256": {
+    "acceleratorer-exp074.json": "b76a54ac42139e064629428e2c1818d6d895974980dff39cb4cc8afb284d5dba",
+    "manifest.csv": "d0574b3cca4e0ff64562e27e30b0e99f5407da937d7a0bb642148222c9227dbf",
+    "manifest.download": "446fb52afb9e6472bb85476c7bb28414e6c00108ea7f768d6a39b6cbe8289b0f",
+    "public-cloud-audit.json": "c0de19fb94e3e00e9889993c7d32556124dd5f74dbc25d21e57dc871ce4e348a",
+    "public-cloud-registration.json": "bdcdf90a52d677ca26f143435383cfd4fdd763f66f722a2b5b8faedeadb4967e",
+    "tonylica-builds.json": "f67c2d071e471ee42bcb001a00404dfbe1913cdd0e0cef24a91ea7d655d0b17e"
+  },
+  "new_catalog_rows": {
+    "chemistry": 5,
+    "dqi": 0,
+    "invsqrt": 1
+  },
+  "portfolio_projections": {
+    "best_reported_48_draw_dqi": {
+      "cost_product": 4.6417482220891783e+24,
+      "costs": {
+        "dfthcsos": 249131639.59982783,
+        "dqi": 305801064872.01855,
+        "invsqrt": 60927.54794503887
+      },
+      "projected_score": 33.229450296051205,
+      "required_product_reduction": 0.21356656606723545,
+      "strict_cost_limits": {
+        "dfthcsos": 195925450.8317925,
+        "dqi": 240492181547.59766,
+        "invsqrt": 47915.46075152006
+      }
+    },
+    "best_zero_failure_dqi": {
+      "cost_product": 4.6300479603021063e+24,
+      "costs": {
+        "dfthcsos": 249131639.59982783,
+        "dqi": 305030244839.87177,
+        "invsqrt": 60927.54794503887
+      },
+      "projected_score": 33.25741733747657,
+      "required_product_reduction": 0.21157922659818185,
+      "strict_cost_limits": {
+        "dfthcsos": 196420559.97215927,
+        "dqi": 240492181547.59766,
+        "invsqrt": 48036.5444723039
+      }
+    },
+    "liston_dqi_with_catalog_companions": {
+      "cost_product": 4.766754133723614e+24,
+      "costs": {
+        "dfthcsos": 249131639.59982783,
+        "dqi": 314036526828.1827,
+        "invsqrt": 60927.54794503887
+      },
+      "projected_score": 32.93639781663184,
+      "required_product_reduction": 0.23419041734856216,
+      "strict_cost_limits": {
+        "dfthcsos": 190787396.94721258,
+        "dqi": 240492181547.59766,
+        "invsqrt": 46658.900063765686
+      }
+    },
+    "tony_source_and_exp074_chemistry_with_48_draw_dqi": {
+      "cost_product": 4.7139359972290537e+24,
+      "costs": {
+        "dfthcsos": 249853852.96142676,
+        "dqi": 305801064872.01855,
+        "invsqrt": 61696.23146663024
+      },
+      "projected_score": 33.05895512586062,
+      "required_product_reduction": 0.22560976731659255,
+      "strict_cost_limits": {
+        "dfthcsos": 193484383.33164513,
+        "dqi": 236809357781.07623,
+        "invsqrt": 47776.95904113315
+      }
+    }
+  },
+  "project_cloud_comparison": 33.204839753080016,
+  "publication_scope": "exact circuit hashes and third-party costs used for selection; no new metric or confirmation execution",
+  "selected_rows": {
+    "chemistry_goodpjw": {
+      "B": "127",
+      "C": "46",
+      "R": "9",
+      "author": "goodpjw2008",
+      "chosen_cost": 249131639.59982783,
+      "cost_column": "local_task_score",
+      "factorization_sha256": "25cab2c621e78711480aa975f42a8386414f1f2e1466c3d1f01d5be3e31cae20",
+      "licence": "Apache-2.0",
+      "local_report_sha256": "d0c6c7b542f66386f63c45f4b0f88797bdaf6fe8caa48beea1cb0c6a0b7da510",
+      "local_score_tier": "local official verifier, default salt",
+      "local_task_score": "249131639.59982783",
+      "qubits": "405",
+      "sha256": "f2ebad6b82f63d43d1b410445db742f7e699b4edbe0e9337824049417733cf23",
+      "source_kind": "unclassified",
+      "source_notebook_url": "https://www.kaggle.com/code/goodpjw2008/qcc-shorter-chemistry-loaders-lb-33-25737",
+      "source_notebook_version": "26",
+      "task": "chemistry"
+    },
+    "chemistry_ozer": {
+      "B": "127",
+      "C": "46",
+      "R": "9",
+      "author": "Ertu\u011frul \u00d6zer",
+      "chosen_cost": 249131639.59982783,
+      "cost_column": "local_task_score",
+      "factorization_sha256": "e0a100b2d0fba579c0bd45d94f78aa7d9a5c86cfc86d2af1b611238eabe1d470",
+      "licence": "Apache-2.0",
+      "local_report_sha256": "24d07f8b38a2eee975cac155c989e048cb76a3278a6788481dce7c2270bb067a",
+      "local_score_tier": "local official verifier, default salt",
+      "local_task_score": "249131639.59982783",
+      "qubits": "405",
+      "sha256": "3e35ab135c4e9d62a4458885f2edc35ba2e7dda03bdbd3eaeaed43b38531538b",
+      "source_kind": "unclassified",
+      "source_notebook_url": "https://www.kaggle.com/code/ozertuu/google-quantum-ai-vqcc-33-2101-sota-apex",
+      "source_notebook_version": "67",
+      "task": "chemistry"
+    },
+    "dqi_atakan_zero_failure": {
+      "author": "Atakan Aldemir",
+      "chosen_cost": 305030244839.87177,
+      "cost_column": "dqi_zero_failure_cost",
+      "dqi_zero_failure_cost": "305030244839.87177",
+      "licence": "Apache-2.0",
+      "local_report_sha256": "ac63de85de7c3c50fd00d580fb7780e3700cb64e10ccde6614b48d0cd6e0b167",
+      "local_score_tier": "local official verifier, default salt",
+      "local_task_score": "305030244839.87177",
+      "qubits": "900",
+      "sha256": "dbb2ada3a4dade833935ab64cc26ebba05cdf4b27011c3607cee7eb8bddf9e24",
+      "source_kind": "unclassified",
+      "source_notebook_url": "https://www.kaggle.com/code/atakanaldemir/qcc-shared-products-and-controlled-refits",
+      "source_notebook_version": "15",
+      "task": "dqi"
+    },
+    "dqi_liston_source": {
+      "author": "Matt Liston",
+      "chosen_cost": 314036526828.1827,
+      "cost_column": "dqi_expected_cost",
+      "dqi_expected_basis": "48-draw sweep",
+      "dqi_expected_cost": "314036526828.1827",
+      "dqi_zero_failure_cost": "313736311904.3482",
+      "generator_ref": "https://www.kaggle.com/datasets/mliston/vqcc-milestone-generators-32-30740",
+      "licence": "Apache-2.0",
+      "local_report_sha256": "86e4c1fe5a4f39934979e9d585bccf2a3f35ca2a1c6be126f0fa711be81c6a4a",
+      "local_score_tier": "local official verifier, default salt",
+      "local_task_score": "317508715032.3894",
+      "qubits": "889",
+      "rebuild": "byte-exact",
+      "sha256": "3c03fa53dd86be8e2ea3caa5d37597d371bc49426605a57a6ae8d31adc3c2ef3",
+      "source_kind": "generator+pinned",
+      "source_notebook_url": "https://www.kaggle.com/code/mliston/vqcc-verified-three-task-set-32-30740",
+      "source_notebook_version": "5",
+      "task": "dqi"
+    },
+    "dqi_ozer": {
+      "author": "Ertu\u011frul \u00d6zer",
+      "chosen_cost": 309664612576.92535,
+      "cost_column": "dqi_expected_cost",
+      "dqi_expected_basis": "48-draw sweep",
+      "dqi_expected_cost": "309664612576.92535",
+      "dqi_zero_failure_cost": "309313823454.47314",
+      "licence": "Apache-2.0",
+      "local_report_sha256": "d62e144cd125c55e2ffae299104483d651063c68464f3cae6d2cff3fd5adc3d2",
+      "local_score_tier": "local official verifier, default salt",
+      "local_task_score": "310734391504.2451",
+      "qubits": "890",
+      "sha256": "47480efbb7b94b337304ac57acbc4e1b604259b95a6d7402e35ab7c9ba750204",
+      "source_kind": "derived",
+      "source_notebook_url": "https://www.kaggle.com/code/ozertuu/vqcc-milestone-public-score-31-69497",
+      "source_notebook_version": "33",
+      "task": "dqi"
+    },
+    "dqi_tony_source": {
+      "author": "Tony Li (Entangled Team)",
+      "chosen_cost": 305801064872.01855,
+      "cost_column": "dqi_expected_cost",
+      "dqi_expected_basis": "48-draw sweep",
+      "dqi_expected_cost": "305801064872.01855",
+      "dqi_zero_failure_cost": "305041647011.3978",
+      "licence": "Apache-2.0",
+      "local_report_sha256": "f84d162bcbf084a148cc0a8a8e357ebec9fd39356500c338655ff6cf350fd6bc",
+      "local_score_tier": "local official verifier, default salt",
+      "local_task_score": "305041647011.3978",
+      "qubits": "900",
+      "sha256": "4b5721411adc239f61fc11c773a2358b75dfe7cb15586efae4f0459c77d77e52",
+      "source_kind": "outputs-only",
+      "source_notebook_url": "https://www.kaggle.com/code/tonylica/quantum-ai-32-85306-ready",
+      "source_notebook_version": "1",
+      "task": "dqi"
+    },
+    "invsqrt_reference": {
+      "author": "prvsiyan",
+      "chosen_cost": 60927.54794503887,
+      "cost_column": "local_task_score",
+      "licence": "Apache-2.0",
+      "local_report_sha256": "d110e2ccf67d8fa0fabf61c313c946b490a4a637b25fd380ac33ef5b964492f3",
+      "local_score_tier": "local official verifier, default salt",
+      "local_task_score": "60927.54794503887",
+      "qubits": "37",
+      "sha256": "6b59214530108d8c49c648f96c53b963d9b8477f8813db1edcf478bf45f6cf03",
+      "source_kind": "derived",
+      "source_notebook_url": "https://www.kaggle.com/code/prvsiyan/verifier-guided-quantum-circuit-optimization",
+      "source_notebook_version": "60",
+      "task": "invsqrt"
+    },
+    "invsqrt_tony_source": {
+      "author": "Areeb Ali",
+      "chosen_cost": 61696.23146663024,
+      "cost_column": "local_task_score",
+      "licence": "Apache-2.0",
+      "local_report_sha256": "3ecac58acbadc258cf18480aef8309b72c149c75d259ecdb8d80e72eaa4da32d",
+      "local_score_tier": "local official verifier, default salt",
+      "local_task_score": "61696.23146663024",
+      "qubits": "39",
+      "sha256": "68eb8c13ebc75c5e443ed5a8c6357c2c77e6676c499ed1324108bf025faf1489",
+      "source_kind": "outputs-only",
+      "source_notebook_url": "https://www.kaggle.com/code/areebbb/qai-same-gates-better-chemistry-32-87767",
+      "source_notebook_version": "13",
+      "task": "invsqrt"
+    }
+  },
+  "strict_36_cost_product": 3.650425993748897e+24
+}
