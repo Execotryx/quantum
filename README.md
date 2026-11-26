@@ -286,6 +286,13 @@ inputs at **85.14%** worst tolerance use. Reversible emission and
 the complete gate cost remain open.
 [Joint checkpoint phase model](docs/degree35-invsqrt-checkpoint-joint-27-11-2026-03-35-49.md)
 
+The joint phase also passes with a separately rounded 28-bit numerator
+and reciprocal at **90.59%** worst tolerance use. This version uses six
+parity-dependent constants and 128 reciprocal entries. Two serialized
+reciprocal-only schedules exceeded the complete component budget through
+rotation count or lookup gates.
+[Coefficient precision and native reciprocal lookup](docs/degree35-invsqrt-checkpoint-precision-27-11-2026-03-48-23.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

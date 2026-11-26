@@ -1,0 +1,20 @@
+{
+  "lanes": {
+    "direct": {
+      "executed_mean_fine_rotations": 128.0,
+      "executed_mean_toffoli_like": 126.0,
+      "fixtures": 1024,
+      "kmb_sha256": "aa2cb230fdde26762195710264fd78dee2e7b77beaa45dc9fb27af8f326a248d",
+      "qubits": 37
+    },
+    "sliced": {
+      "executed_mean_fine_rotations": 28.0,
+      "executed_mean_toffoli_like": 3528.0,
+      "fixtures": 1024,
+      "kmb_sha256": "02dc13ca2139f95f41f956b0c36e0dafba59c3013b37b25f11c6c237eea9f1f2",
+      "qubits": 39
+    }
+  },
+  "registration_sha256": "de2d0ab43e75c43743cc0ada52e8b4fc720ebc02853cba428494b05ad563302d",
+  "scope": "serialized reciprocal phase only; inverse-square-root numerator and exponent routing excluded"
+}

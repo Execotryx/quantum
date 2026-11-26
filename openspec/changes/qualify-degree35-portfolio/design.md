@@ -117,6 +117,15 @@ arithmetic in the eight clean checkpoint wires. Use the measured return
 and complete rotation cost before proceeding to aggregate verification.
 [Passing joint checkpoint model](../../../docs/degree35-invsqrt-checkpoint-joint-27-11-2026-03-35-49.md)
 
+The 28-bit staged factorization uses six parity constants and 128
+reciprocal rows. It passes the complete numerical phase screen and
+bounds the signed numerator correction to 21 bits. The 37-qubit direct
+reciprocal probe costs 126 Toffolis and 128 rotations. The 39-qubit
+two-bit streaming probe costs 3,528 Toffolis with 28 rotations. Both
+fail the complete budget. Evaluate a recurrence or another shared
+loading layout and include the numerator and exponent routing.
+[Precision and reciprocal lookup trial](../../../docs/degree35-invsqrt-checkpoint-precision-27-11-2026-03-48-23.md)
+
 ## Verification and delivery
 
 Register a `portfolio-v5` archive with `--at-least-35` after qualifying a full

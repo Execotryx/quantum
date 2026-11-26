@@ -290,6 +290,9 @@
 - Bind joint checkpoint models to the actual root, exponent, and remainder
   wire order and frozen coefficients. Preserve rare checkpoint patterns in
   fitting and check integer rounding across every legal input.
+- When factoring a checkpoint phase, round the numerator and reciprocal
+  at their actual stage boundaries. Price lookup and rotation charges
+  with the live checkpoint wires before adding the remaining arithmetic.
 - The source-borrowing ripple restores each operand before reusing it.
   Exclude the active multiplier control from the dirty increment pool
   and repay the same dirty word before leaving the upper lane.

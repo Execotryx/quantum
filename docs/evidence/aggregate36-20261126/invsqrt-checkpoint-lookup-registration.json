@@ -1,0 +1,10 @@
+{
+  "address_bits": 7,
+  "coefficient_sha256": "6f85dc06f21231a5aad2c30c5568bdfdd05675728b4200ea66255a7adf16cef6",
+  "driver_sha256": "298ecf79e13f6b3313221645e636face8230bad64f6e45ca08de906803f60b2c",
+  "live_checkpoint_wires": 31,
+  "normalization_exponent": 0,
+  "precision": 28,
+  "seed": 61309,
+  "slice_width": 2
+}

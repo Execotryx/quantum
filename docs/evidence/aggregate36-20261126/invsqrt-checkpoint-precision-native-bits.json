@@ -1,0 +1,11 @@
+{
+  "coefficient_sha256": "6f85dc06f21231a5aad2c30c5568bdfdd05675728b4200ea66255a7adf16cef6",
+  "inputs_per_seed": 2816,
+  "native_checkpoint_integer_model_phase_passed": true,
+  "screen_sha256": "1d4030a12587e831bb91aef13c42afb85709eb77e6f39fc274887028ebb0fa23",
+  "seeds": [
+    37109,
+    37111
+  ],
+  "worst_tolerance_fraction": 0.9058526209397885
+}

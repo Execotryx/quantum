@@ -109,6 +109,8 @@ Match checkpoint values after the bridge and audit classical suffix inputs.
 Use a zero-phase verifier run to price a retained return before adding phase.
 Pin the joint checkpoint's wire order and coefficients. Check its integer
 phase model across all legal inputs before pricing reversible emission.
+Round staged factors before multiplying them. Include lookup cleanup
+and rotation charges with the live checkpoint wires occupied.
 Restore the borrowed source after every ripple and exclude the row
 control when temporarily using other input wires for an increment.
 Use `portfolio-v5` for the inclusive score-35 floor. `portfolio-v4` retains

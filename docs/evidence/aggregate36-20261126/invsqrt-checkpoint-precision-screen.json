@@ -1,0 +1,571 @@
+{
+  "registration_sha256": "0cd79b7b3ca30f895a39d7b7395716e8acf34236459b1ed5203d10a4b5f83210",
+  "rounded": [
+    {
+      "above_90_percent": 912780,
+      "coefficient_widths": [
+        24,
+        16,
+        9
+      ],
+      "coefficients_sha256": "4d90ffb3eda8181512151eb7d0e1f56de6ab2dd9cc6801efbfc6204bb611abb2",
+      "failed_inputs": 758531,
+      "first_failed_inputs": [
+        15,
+        25,
+        31,
+        34,
+        41,
+        43,
+        51,
+        55,
+        60,
+        61,
+        87,
+        90,
+        93,
+        98,
+        100,
+        106
+      ],
+      "fraction_bits": 24,
+      "input_count": 3133452,
+      "minimum_margin_phase64": -314514661040,
+      "minimum_margin_x": 15,
+      "nonpositive_margins": 758559,
+      "worst_tolerance_fraction": 4.929798156004285,
+      "worst_x": 933206
+    },
+    {
+      "above_90_percent": 143621,
+      "coefficient_widths": [
+        25,
+        17,
+        10
+      ],
+      "coefficients_sha256": "ec0a70fb006b26fd0401f36445a745b3f9a0e347fd237cb0c7f1915f346d343d",
+      "failed_inputs": 84485,
+      "first_failed_inputs": [
+        51,
+        122,
+        204,
+        245,
+        488,
+        510,
+        666,
+        746,
+        775,
+        816,
+        863,
+        867,
+        870,
+        871,
+        883,
+        889
+      ],
+      "fraction_bits": 25,
+      "input_count": 3133452,
+      "minimum_margin_phase64": -32518118122,
+      "minimum_margin_x": 1005,
+      "nonpositive_margins": 84491,
+      "worst_tolerance_fraction": 2.6230785995332746,
+      "worst_x": 785026
+    },
+    {
+      "above_90_percent": 4927,
+      "coefficient_widths": [
+        26,
+        18,
+        11
+      ],
+      "coefficients_sha256": "8d25d5443b5efb81f737a7deb281452d3815789ab8ca38caa25b58db88dffe70",
+      "failed_inputs": 1708,
+      "first_failed_inputs": [
+        3925,
+        9458,
+        14947,
+        15691,
+        15700,
+        15947,
+        15951,
+        15969,
+        15973,
+        16198,
+        16199,
+        37832,
+        39405,
+        40238,
+        49515,
+        50446
+      ],
+      "fraction_bits": 26,
+      "input_count": 3133452,
+      "minimum_margin_phase64": -2833124148,
+      "minimum_margin_x": 15951,
+      "nonpositive_margins": 1708,
+      "worst_tolerance_fraction": 1.7470426563152108,
+      "worst_x": 1020108
+    },
+    {
+      "above_90_percent": 51,
+      "coefficient_widths": [
+        27,
+        19,
+        12
+      ],
+      "coefficients_sha256": "8ec1918007bd298d19cd68fb8bc2108e06be070a8e33151cfbf1e6ab535302ca",
+      "failed_inputs": 9,
+      "first_failed_inputs": [
+        227529,
+        229441,
+        235225,
+        239121,
+        910116,
+        917764,
+        940900,
+        956484,
+        2547275
+      ],
+      "fraction_bits": 27,
+      "input_count": 3133452,
+      "minimum_margin_phase64": -240439120,
+      "minimum_margin_x": 239121,
+      "nonpositive_margins": 9,
+      "worst_tolerance_fraction": 1.1069335937230722,
+      "worst_x": 239121
+    },
+    {
+      "above_90_percent": 0,
+      "available_arithmetic_projection": 476.66316164101454,
+      "coefficient_widths": [
+        28,
+        20,
+        13
+      ],
+      "coefficients_sha256": "3f3c4537981c396cef3b36f3f24737173647c2ca5790795a6694be373d316469",
+      "failed_inputs": 0,
+      "first_failed_inputs": [],
+      "fraction_bits": 28,
+      "input_count": 3133452,
+      "minimum_margin_phase64": 100949497,
+      "minimum_margin_x": 1373700,
+      "nonpositive_margins": 0,
+      "rotation_and_T_projection": 232.48873852973847,
+      "worst_tolerance_fraction": 0.8923905820574024,
+      "worst_x": 1373700
+    },
+    {
+      "above_90_percent": 3,
+      "available_arithmetic_projection": 475.7725215509315,
+      "coefficient_widths": [
+        29,
+        21,
+        14
+      ],
+      "coefficients_sha256": "939419326af94a957b2b51cfe4c7b7264e33201219f9cd713944cae7735eab08",
+      "failed_inputs": 0,
+      "first_failed_inputs": [],
+      "fraction_bits": 29,
+      "input_count": 3133452,
+      "minimum_margin_phase64": 88322596,
+      "minimum_margin_x": 1411872,
+      "nonpositive_margins": 0,
+      "rotation_and_T_projection": 233.3793786198215,
+      "worst_tolerance_fraction": 0.9045513781700999,
+      "worst_x": 1411872
+    },
+    {
+      "above_90_percent": 0,
+      "available_arithmetic_projection": 477.9188430045149,
+      "coefficient_widths": [
+        30,
+        22,
+        15
+      ],
+      "coefficients_sha256": "2cf6f50e1dbb5f29465211769d901ab700e4c5c46ddf4871e6f0117ef2716f4c",
+      "failed_inputs": 0,
+      "first_failed_inputs": [],
+      "fraction_bits": 30,
+      "input_count": 3133452,
+      "minimum_margin_phase64": 121877028,
+      "minimum_margin_x": 1411872,
+      "nonpositive_margins": 0,
+      "rotation_and_T_projection": 231.23305716623813,
+      "worst_tolerance_fraction": 0.8682897142728443,
+      "worst_x": 1411872
+    },
+    {
+      "above_90_percent": 0,
+      "available_arithmetic_projection": 478.7784658487154,
+      "coefficient_widths": [
+        31,
+        23,
+        16
+      ],
+      "coefficients_sha256": "191bc4113ba6377d9473681ee4519abafebaef52af547a641276d8da6fcd1826",
+      "failed_inputs": 0,
+      "first_failed_inputs": [],
+      "fraction_bits": 31,
+      "input_count": 3133452,
+      "minimum_margin_phase64": 138654244,
+      "minimum_margin_x": 1411872,
+      "nonpositive_margins": 0,
+      "rotation_and_T_projection": 230.37343432203764,
+      "worst_tolerance_fraction": 0.8501588823242164,
+      "worst_x": 1411872
+    },
+    {
+      "above_90_percent": 0,
+      "available_arithmetic_projection": 478.9771008827593,
+      "coefficient_widths": [
+        32,
+        24,
+        17
+      ],
+      "coefficients_sha256": "75df3336fec0991012195df5087c67359edd353bb7034124f18e522fdac45ac9",
+      "failed_inputs": 0,
+      "first_failed_inputs": [],
+      "fraction_bits": 32,
+      "input_count": 3133452,
+      "minimum_margin_phase64": 142848548,
+      "minimum_margin_x": 1411872,
+      "nonpositive_margins": 0,
+      "rotation_and_T_projection": 230.17479928799372,
+      "worst_tolerance_fraction": 0.8456261743370596,
+      "worst_x": 1411872
+    },
+    {
+      "above_90_percent": 0,
+      "available_arithmetic_projection": 478.7246930195533,
+      "coefficient_widths": [
+        40,
+        32,
+        25
+      ],
+      "coefficients_sha256": "b030ae5b716ffea3131e4df1db35322aa8e45c13f66d020765d06f93521eac40",
+      "failed_inputs": 0,
+      "first_failed_inputs": [],
+      "fraction_bits": 40,
+      "input_count": 3133452,
+      "minimum_margin_phase64": 137540132,
+      "minimum_margin_x": 1411872,
+      "nonpositive_margins": 0,
+      "rotation_and_T_projection": 230.42720715119975,
+      "worst_tolerance_fraction": 0.8513628828833051,
+      "worst_x": 1411872
+    }
+  ],
+  "scope": "numerical phase only; coefficient production and reversible arithmetic unpriced",
+  "shared_reciprocal": [
+    {
+      "above_90_percent": 3,
+      "available_arithmetic_projection": 475.1962753916368,
+      "coefficient_widths": [
+        40,
+        32,
+        25
+      ],
+      "coefficients_sha256": "fb8bf4c159e888156889cb52e5f22d244c4a2d92858ca91057bfe630ee583a02",
+      "failed_inputs": 0,
+      "first_failed_inputs": [],
+      "fraction_bits": 40,
+      "input_count": 3133452,
+      "minimum_margin_phase64": 81007415,
+      "minimum_margin_x": 1246711,
+      "nonpositive_margins": 0,
+      "normalized_numerator_fits_by_parity": [
+        [
+          [
+            1.0000000180597513,
+            0.0039062027862527705,
+            2.3034627314885052e-05
+          ]
+        ],
+        [
+          [
+            0.9961165805459856,
+            0.003860702253884784,
+            2.275274404976279e-05
+          ]
+        ]
+      ],
+      "numerator_degree": 0,
+      "rotation_and_T_projection": 233.95562477911625,
+      "worst_tolerance_fraction": 0.917736375024263,
+      "worst_x": 1246711
+    },
+    {
+      "above_90_percent": 0,
+      "available_arithmetic_projection": 476.7761250028001,
+      "coefficient_widths": [
+        40,
+        32,
+        25
+      ],
+      "coefficients_sha256": "cdfea07d0ebf0af4c9fdcc11dc0b124a3aaa7035f7168a319c962711268871f4",
+      "failed_inputs": 0,
+      "first_failed_inputs": [],
+      "fraction_bits": 40,
+      "input_count": 3133452,
+      "minimum_margin_phase64": 102674980,
+      "minimum_margin_x": 1411872,
+      "nonpositive_margins": 0,
+      "normalized_numerator_fits_by_parity": [
+        [
+          [
+            1.000000018573723,
+            0.003906195509661517,
+            2.3050961565108724e-05
+          ],
+          [
+            -4.409139403084052e-09,
+            4.2746010031537857e-08,
+            -3.435733125615754e-08
+          ]
+        ],
+        [
+          [
+            0.9961165616223094,
+            0.0038607538095993166,
+            2.2718744208613268e-05
+          ],
+          [
+            -1.42113908145787e-08,
+            -1.0416298351200587e-08,
+            2.4673048637939067e-08
+          ]
+        ]
+      ],
+      "numerator_degree": 1,
+      "rotation_and_T_projection": 232.37577516795295,
+      "worst_tolerance_fraction": 0.8890410180265472,
+      "worst_x": 1411872
+    },
+    {
+      "above_90_percent": 0,
+      "available_arithmetic_projection": 476.7248764481847,
+      "coefficient_widths": [
+        40,
+        32,
+        25
+      ],
+      "coefficients_sha256": "983a1f34f499653630b4229c07af0bfe7c37594d6c8752ad5acfd0fbceabd210",
+      "failed_inputs": 0,
+      "first_failed_inputs": [],
+      "fraction_bits": 40,
+      "input_count": 3133452,
+      "minimum_margin_phase64": 101888548,
+      "minimum_margin_x": 1411872,
+      "nonpositive_margins": 0,
+      "normalized_numerator_fits_by_parity": [
+        [
+          [
+            1.0000000175736052,
+            0.0039062056801347387,
+            2.3038614530915486e-05
+          ],
+          [
+            -5.197181614431147e-09,
+            5.412728666795083e-08,
+            -6.094623701221637e-08
+          ],
+          [
+            2.4110083447943798e-09,
+            -1.9908478093725104e-08,
+            5.564208247149996e-09
+          ]
+        ],
+        [
+          [
+            0.9961165657932318,
+            0.0038607351825191917,
+            2.2733923556250615e-05
+          ],
+          [
+            8.314786977101259e-09,
+            -6.95083102686617e-08,
+            6.251515040176122e-08
+          ],
+          [
+            1.7672341029797978e-08,
+            -1.8761372020943516e-08,
+            4.989365782505362e-10
+          ]
+        ]
+      ],
+      "numerator_degree": 2,
+      "rotation_and_T_projection": 232.42702372256832,
+      "worst_tolerance_fraction": 0.8926696158789387,
+      "worst_x": 1263628
+    },
+    {
+      "above_90_percent": 0,
+      "available_arithmetic_projection": 476.79606979153687,
+      "coefficient_widths": [
+        40,
+        32,
+        25
+      ],
+      "coefficients_sha256": "d79ba354d548625023b16647adc8f65e52b9eee5256d736056b6fa68012503b8",
+      "failed_inputs": 0,
+      "first_failed_inputs": [],
+      "fraction_bits": 40,
+      "input_count": 3133452,
+      "minimum_margin_phase64": 102982680,
+      "minimum_margin_x": 1263628,
+      "nonpositive_margins": 0,
+      "normalized_numerator_fits_by_parity": [
+        [
+          [
+            1.0000000174193997,
+            0.0039062075405722433,
+            2.3035138345837416e-05
+          ],
+          [
+            -4.140304790960399e-09,
+            4.4306114060682807e-08,
+            -5.146763745012906e-08
+          ],
+          [
+            3.071907044710498e-09,
+            -2.8796378015840188e-08,
+            2.4386212319773247e-08
+          ],
+          [
+            -1.377649859100015e-09,
+            1.0495132546882446e-08,
+            -1.2966527573876618e-09
+          ]
+        ],
+        [
+          [
+            0.9961165679547375,
+            0.003860728976330218,
+            2.273816043364945e-05
+          ],
+          [
+            6.873658661135304e-09,
+            -5.596465010997988e-08,
+            4.899687861307459e-08
+          ],
+          [
+            3.972347178624047e-09,
+            1.8268668902296503e-08,
+            -2.368348282083283e-08
+          ],
+          [
+            -9.606753540185222e-09,
+            8.273406260851288e-09,
+            3.159633462556039e-09
+          ]
+        ]
+      ],
+      "numerator_degree": 3,
+      "rotation_and_T_projection": 232.35583037921614,
+      "worst_tolerance_fraction": 0.8947131860929255,
+      "worst_x": 1263628
+    }
+  ],
+  "staged_reciprocal": [
+    {
+      "above_90_percent": 3,
+      "available_arithmetic_projection": 476.0882506040532,
+      "coefficient_sha256": "6f85dc06f21231a5aad2c30c5568bdfdd05675728b4200ea66255a7adf16cef6",
+      "delta_range": [
+        -1040318,
+        1048575
+      ],
+      "failed_inputs": 0,
+      "first_failed_inputs": [],
+      "input_count": 3133452,
+      "minimum_margin_phase64": 92607061,
+      "minimum_margin_x": 1249476,
+      "nonpositive_margins": 0,
+      "numerator_bits": 28,
+      "reciprocal_bits": 28,
+      "rotation_and_T_projection": 233.06364956669984,
+      "worst_tolerance_fraction": 0.9058526209397885,
+      "worst_x": 1249476
+    },
+    {
+      "above_90_percent": 1,
+      "available_arithmetic_projection": 476.24279075265713,
+      "coefficient_sha256": "309dbf6447259b6018e25e8f4b755186740de949e805ac9d7878a31cc7bf6711",
+      "delta_range": [
+        -1040318,
+        1048575
+      ],
+      "failed_inputs": 0,
+      "first_failed_inputs": [],
+      "input_count": 3133452,
+      "minimum_margin_phase64": 94779329,
+      "minimum_margin_x": 1249115,
+      "nonpositive_margins": 0,
+      "numerator_bits": 28,
+      "reciprocal_bits": 30,
+      "rotation_and_T_projection": 232.9091094180959,
+      "worst_tolerance_fraction": 0.9036581424912787,
+      "worst_x": 1249115
+    },
+    {
+      "above_90_percent": 7,
+      "available_arithmetic_projection": 473.24650531107113,
+      "coefficient_sha256": "531942aeb09b1173bc6516dc5917f1e923c1e8f59dbfaa83eafa32a18d6200c5",
+      "delta_range": [
+        -4161274,
+        4194300
+      ],
+      "failed_inputs": 0,
+      "first_failed_inputs": [],
+      "input_count": 3133452,
+      "minimum_margin_phase64": 60461879,
+      "minimum_margin_x": 1246711,
+      "nonpositive_margins": 0,
+      "numerator_bits": 30,
+      "reciprocal_bits": 28,
+      "rotation_and_T_projection": 235.9053948596819,
+      "worst_tolerance_fraction": 0.938600517750327,
+      "worst_x": 1246711
+    },
+    {
+      "above_90_percent": 8,
+      "available_arithmetic_projection": 474.87877646976403,
+      "coefficient_sha256": "d57e10c1b16c6de0e84c8d737bc97407f9d566cf86c48b551e4f336974ce9495",
+      "delta_range": [
+        -4161274,
+        4194300
+      ],
+      "failed_inputs": 0,
+      "first_failed_inputs": [],
+      "input_count": 3133452,
+      "minimum_margin_phase64": 77239095,
+      "minimum_margin_x": 1246711,
+      "nonpositive_margins": 0,
+      "numerator_bits": 30,
+      "reciprocal_bits": 30,
+      "rotation_and_T_projection": 234.273123700989,
+      "worst_tolerance_fraction": 0.9215631316646097,
+      "worst_x": 1246711
+    },
+    {
+      "above_90_percent": 7,
+      "available_arithmetic_projection": 474.87877646976403,
+      "coefficient_sha256": "d0e3586c83cac5e17b4190818b6a5fc52eaa9890e7847169ba21a66d9540074f",
+      "delta_range": [
+        -8322549,
+        8388603
+      ],
+      "failed_inputs": 0,
+      "first_failed_inputs": [],
+      "input_count": 3133452,
+      "minimum_margin_phase64": 77239095,
+      "minimum_margin_x": 1246711,
+      "nonpositive_margins": 0,
+      "numerator_bits": 31,
+      "reciprocal_bits": 31,
+      "rotation_and_T_projection": 234.273123700989,
+      "worst_tolerance_fraction": 0.9215631316646097,
+      "worst_x": 1246711
+    }
+  ]
+}

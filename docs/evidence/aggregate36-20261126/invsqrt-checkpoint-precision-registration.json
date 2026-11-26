@@ -1,0 +1,57 @@
+{
+  "assembly_sha256": "27ccb62d03bcba70353d382bb94c5dc636acd00b250c83f976df8d1176842146",
+  "control_coefficients_sha256": "b030ae5b716ffea3131e4df1db35322aa8e45c13f66d020765d06f93521eac40",
+  "driver_sha256": "9a7af78446a721a4bbf51694dd3964b79b4f8302f01f2905da2d98b820860449",
+  "fit_sample_count": 200000,
+  "legal_inputs": 3133452,
+  "prefix_end": 5856,
+  "reference_for_rotation_projection": {
+    "T_like": 1,
+    "cost_cutoff": 52119.68,
+    "fine_rotations": 33,
+    "qubits": 39,
+    "retained_cost": 627.2501511112984
+  },
+  "rounding_precisions": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    40
+  ],
+  "seed": 61309,
+  "shared_numerator_degrees": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "simulator_sha256": "2ee284839765dcbd33fa93d7b0c04456674c90c7fa04571bea5dffe7df3bf2a8",
+  "staged_numerator_and_reciprocal_precisions": [
+    [
+      28,
+      28
+    ],
+    [
+      28,
+      30
+    ],
+    [
+      30,
+      28
+    ],
+    [
+      30,
+      30
+    ],
+    [
+      31,
+      31
+    ]
+  ]
+}
