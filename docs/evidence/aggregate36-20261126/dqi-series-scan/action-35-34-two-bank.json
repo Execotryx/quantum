@@ -1,0 +1,41 @@
+{
+  "backend_sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+  "degree": 35,
+  "degree_chart": [
+    16,
+    15,
+    14,
+    13,
+    12,
+    11,
+    10,
+    9,
+    8,
+    7,
+    6,
+    5,
+    4,
+    3,
+    2,
+    1,
+    0
+  ],
+  "divisor_degree": 34,
+  "native_seed": 36139,
+  "observations": {
+    "forward": {
+      "qubits": 879,
+      "sha256": "9031bd2b13684f0f3a7cd399482651afb7957cf309c5450f9dc540264a79d5b6",
+      "toffoli_like": 76446
+    },
+    "inverse": {
+      "qubits": 879,
+      "sha256": "ce5c44fb31cb83bbb40aba10ae60839a86a96c74aad43cc0c23b507abb18daf6",
+      "toffoli_like": 76446
+    }
+  },
+  "sample_seed": 36166,
+  "scope": "implicit derivative",
+  "shots": 12,
+  "tensor_sha256": "19ee4259f4d20a779d2484b3dea635d2e0efd23fce39c859e70228f668e53093"
+}

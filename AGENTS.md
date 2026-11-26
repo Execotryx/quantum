@@ -73,6 +73,8 @@
 - The two-bank Forney transform assumes its fixed half-degree Euclidean chart.
   Preserve the high quotient words through reconstruction and restore the
   source basis after borrowing a scale-factor register for field inversion.
+  Keep each recursive result in reversed, modulus-normalized series form
+  until the outer polynomial conversion. Extend only the new suffix.
 - Before a full portfolio run, exercise native ANGLE serialization on its
   temporary filesystem. Keep prior raw receipts and the original salts
   when a public development comparison needs an infrastructure retry.

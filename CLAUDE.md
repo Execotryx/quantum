@@ -40,8 +40,10 @@ the prepared product. Preserve the factors through measurement phase repair
 and keep fixed-degree stage evidence separate from routed-decoder pricing.
 The two-bank Forney transform assumes its fixed half-degree Euclidean chart.
 Preserve the packed quotient during reconstruction and restore a borrowed
-scale-factor register to its original basis. Use `Ubuntu-Quantum-E` for local
-WSL runs on the Windows checkout where it is registered.
+scale-factor register to its original basis. Keep recursive results in
+modulus-normalized series form until the outer conversion. Use
+`Ubuntu-Quantum-E` for local WSL runs on the Windows checkout where it is
+registered.
 Keep raw receipts and the original salt when retrying a public comparison.
 Propagate chemistry angle-gauge signs backward through the ordered Givens
 tree. Verify the prepared projectors, decoded metrics and native loader cost.

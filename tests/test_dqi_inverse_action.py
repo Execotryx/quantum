@@ -31,10 +31,12 @@ def _inverse_and_chart(modulus, divisor, field):
 
 
 @pytest.mark.official
-@pytest.mark.parametrize(("degree", "divisor_degree", "compact"),
-                         [(3, 2, False), (9, 2, False), (7, 6, False), (3, 2, True), (7, 6, True),
-                          pytest.param(35, 34, True, marks=pytest.mark.slow)])
-def test_euclidean_inverse_action(project_root, monkeypatch, tmp_path, degree, divisor_degree, compact):
+@pytest.mark.parametrize(("degree", "divisor_degree", "compact", "skip_to_constant"),
+                         [(3, 2, False, False), (9, 2, False, False), (7, 6, False, False),
+                          (9, 4, False, True), (3, 2, True, False), (7, 6, True, False),
+                          pytest.param(35, 34, True, False, marks=pytest.mark.slow)])
+def test_euclidean_inverse_action(project_root, monkeypatch, tmp_path, degree, divisor_degree, compact,
+                                  skip_to_constant):
     backend = project_root / "vendor/backend.json"
     if not sys.platform.startswith("linux") or not backend.is_file():
         pytest.skip("pinned native backend required")
@@ -57,6 +59,10 @@ def test_euclidean_inverse_action(project_root, monkeypatch, tmp_path, degree, d
             for root in rng.sample(range(1, 4096), degree):
                 modulus = _multiply(modulus, [root, 1], field)
             divisor = [modulus[i + 1] if i % 2 == 0 else 0 for i in range(degree)]
+        elif skip_to_constant:
+            divisor = [rng.randrange(4096) for _ in range(divisor_degree)] + [1]
+            quotient = [rng.randrange(4096) for _ in range(degree - divisor_degree)] + [1]
+            modulus = _add(_multiply(divisor, quotient, field), [rng.randrange(1, 4096)])
         else:
             modulus = [rng.randrange(4096) for _ in range(degree)] + [1]
             divisor = [rng.randrange(4096) for _ in range(divisor_degree)] + [1]
@@ -75,6 +81,8 @@ def test_euclidean_inverse_action(project_root, monkeypatch, tmp_path, degree, d
         if len(samples) == 12:
             break
     assert chart is not None and len(samples) == 12
+    if skip_to_constant:
+        assert chart == (0,)
     if compact:
         assert all(value % 2 == 0 for value in chart)
         chart = tuple(value // 2 for value in chart)

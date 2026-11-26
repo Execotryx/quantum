@@ -40,11 +40,12 @@ for the derivative reciprocal before full-decoder pricing.
 [Native DQI scan comparison](docs/aggregate-above-36-dqi-residue-scan-26-11-2026-07-46-21.md)
 [Native quotient and phase composition](docs/aggregate-above-36-dqi-quotient-26-11-2026-08-00-34.md)
 
-The fixed-chart, two-bank Forney transform derives the reciprocal action
-from the locator and fits in **879 qubits**. Its degree-35 forward and
-inverse circuits each charge **153,768 Toffoli-like gates**, so this route
-still exceeds the DQI budget for a complete decoder.
-[Two-bank width and gate comparison](docs/aggregate-above-36-dqi-inverse-action-26-11-2026-08-18-48.md)
+The fixed-chart two-bank degree-35 circuit now prepares, phases, and
+uncomputes the residue across all 4,095 positions at **879 qubits** and
+**197,937 Toffoli-like gates**. The forward and inverse transform charges
+each fell from **153,768** to **76,446**. A complete decoder still needs
+locator and evaluator construction plus runtime chart routing.
+[Two-bank scan and gate comparison](docs/aggregate-above-36-dqi-series-scan-26-11-2026-08-26-30.md)
 
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 

@@ -31,28 +31,33 @@ def _rotate(builder: Any, words: list[Any], count: int) -> None:
     _reverse(builder, words)
 
 
-def _reconstruct(builder: Any, modulus: list[Any], divisor: list[Any], words: list[Any],
-                 multiply: FieldProduct, *, adjoint: bool) -> None:
-    """Map packed (Q, C) to C + polynomial_part(A*Q/D) without another bank."""
+def _extend_series(builder: Any, modulus: list[Any], divisor: list[Any], words: list[Any],
+                   multiply: FieldProduct, *, adjoint: bool) -> None:
+    """Extend the child's reversed quotient series and add the packed C tail."""
     k = len(divisor)
     if adjoint:
         _rotate(builder, words, len(words) - k)
+    prefix = words[:k][::-1]
     tail = list(reversed(words[k:]))
-    packed = [*reversed(words[:k]), *tail]
     a, d = modulus[::-1], divisor[::-1]
-    # On the reversed coefficients the quotient is a truncated series
-    # action A_rev / D_rev. First counteract that action on the dirty C tail.
-    if adjoint:
-        _series_inplace(builder, packed, d, multiply, adjoint=False)
-        _series_inplace(builder, packed, a, multiply, adjoint=True)
-        _series_inplace(builder, tail, a, multiply, adjoint=False)
-        _series_inplace(builder, tail, d, multiply, adjoint=True)
-    else:
-        _series_inplace(builder, tail, d, multiply, adjoint=False)
+    # The child holds the first k terms of Q_rev / D_rev. The new series
+    # is Q_rev / D_rev + z**k C_rev / A_rev. Multiply the dirty tail by
+    # D_rev so tail division does not propagate its old contents.
+    _series_inplace(builder, tail, d, multiply, adjoint=False)
+    if not adjoint:
         _series_inplace(builder, tail, a, multiply, adjoint=True)
-        _series_inplace(builder, packed, a, multiply, adjoint=False)
-        _series_inplace(builder, packed, d, multiply, adjoint=True)
+    _product_range(builder, prefix, d, tail[:len(d)], k - 1, multiply)
+    if adjoint:
+        _series_inplace(builder, tail, a, multiply, adjoint=False)
+    _series_inplace(builder, tail, d, multiply, adjoint=True)
+    if not adjoint:
         _rotate(builder, words, k)
+
+
+def _polynomial_basis(builder: Any, modulus: list[Any], banks: list[list[Any]],
+                      multiply: FieldProduct, *, to_polynomial: bool) -> None:
+    for words in banks:
+        _series_inplace(builder, words[::-1], modulus[::-1], multiply, adjoint=not to_polynomial)
 
 
 def _scale(builder: Any, factor: Any, normal: list[Any], data: list[Any], multiply: FieldProduct,
@@ -80,11 +85,13 @@ def inverse_action(builder: Any, modulus: list[Any], divisor: list[Any], words: 
     down to the constant gcd. The caller must establish the chart; no
     input-dependent routing is performed here. A and D are restored.
     """
-    _inverse_actions(builder, modulus, divisor, [words], remainder_degrees, multiply, adjoint=adjoint)
+    _inverse_actions(builder, modulus, divisor, [words], remainder_degrees, multiply,
+                     adjoint=adjoint, raw_output=True)
 
 
 def _inverse_actions(builder: Any, modulus: list[Any], divisor: list[Any], banks: list[list[Any]],
-                     remainder_degrees: tuple[int, ...], multiply: FieldProduct, *, adjoint: bool) -> None:
+                     remainder_degrees: tuple[int, ...], multiply: FieldProduct, *,
+                     adjoint: bool, raw_output: bool = False) -> None:
     n, k = len(modulus), len(divisor)
     chart = (n, k, *remainder_degrees)
     if not 0 < k < n or any(len(words) != n for words in banks) or chart[-1] != 0:
@@ -98,7 +105,7 @@ def _inverse_actions(builder: Any, modulus: list[Any], divisor: list[Any], banks
         degree = len(d)
         for x in xs:
             if adjoint:
-                _reconstruct(builder, a, d, x, multiply, adjoint=True)
+                _extend_series(builder, a, d, x, multiply, adjoint=True)
             else:
                 _packed_divide(builder, x, d, multiply, adjoint=False)
 
@@ -113,6 +120,8 @@ def _inverse_actions(builder: Any, modulus: list[Any], divisor: list[Any], banks
         _scale(builder, factor, remainder, [] if adjoint else payload, multiply, undo=False)
         if r:
             apply(d, remainder, payloads, depth + 1)
+        else:
+            _polynomial_basis(builder, d, payloads, multiply, to_polynomial=adjoint)
         _scale(builder, factor, remainder, payload if adjoint else [], multiply, undo=True)
         _packed_divide(builder, a, d, multiply, adjoint=True)
         for source, target in zip(d, a[len(a) - degree:], strict=True):
@@ -122,9 +131,13 @@ def _inverse_actions(builder: Any, modulus: list[Any], divisor: list[Any], banks
             if adjoint:
                 _packed_divide(builder, x, d, multiply, adjoint=True)
             else:
-                _reconstruct(builder, a, d, x, multiply, adjoint=False)
+                _extend_series(builder, a, d, x, multiply, adjoint=False)
 
+    if raw_output and adjoint:
+        _polynomial_basis(builder, modulus, banks, multiply, to_polynomial=False)
     apply(modulus, divisor, banks, 0)
+    if raw_output and not adjoint:
+        _polynomial_basis(builder, modulus, banks, multiply, to_polynomial=True)
 
 
 def odd_forney_inplace(builder: Any, locator: list[Any], words: list[Any], half_chart: tuple[int, ...],
@@ -148,7 +161,8 @@ def odd_forney_inplace(builder: Any, locator: list[Any], words: list[Any], half_
     even, dh = locator[::2], locator[1::2]
     derivative = [word for coefficient in dh for word in (coefficient, None)]
     if adjoint:
-        _reconstruct(builder, locator, derivative, words, multiply, adjoint=True)
+        _polynomial_basis(builder, locator, [words], multiply, to_polynomial=False)
+        _extend_series(builder, locator, derivative, words, multiply, adjoint=True)
     else:
         for i, coefficient in enumerate(dh):
             multiply(builder, words[-1], coefficient, words[2 * i])
@@ -164,6 +178,8 @@ def odd_forney_inplace(builder: Any, locator: list[Any], words: list[Any], half_
     _scale(builder, factor, remainder, [] if adjoint else payload, multiply, undo=False)
     if r:
         _inverse_actions(builder, dh, remainder, payloads, half_chart[1:], multiply, adjoint=adjoint)
+    else:
+        _polynomial_basis(builder, dh, payloads, multiply, to_polynomial=adjoint)
     _scale(builder, factor, remainder, payload if adjoint else [], multiply, undo=True)
     for coefficient, target in zip(dh, even[:-1], strict=True):
         multiply(builder, even[-1], coefficient, target)
@@ -172,4 +188,5 @@ def odd_forney_inplace(builder: Any, locator: list[Any], words: list[Any], half_
         for i, coefficient in enumerate(dh):
             multiply(builder, words[-1], coefficient, words[2 * i])
     else:
-        _reconstruct(builder, locator, derivative, words, multiply, adjoint=False)
+        _extend_series(builder, locator, derivative, words, multiply, adjoint=False)
+        _polynomial_basis(builder, locator, [words], multiply, to_polynomial=True)

@@ -12,6 +12,7 @@ from typing import Any
 from .bilinear import product_tensor
 from .decoder import _add, _divide, _multiply, _trim
 from .field import GF4096
+from .inverse_action import odd_forney_inplace
 from .quotient import FieldProduct, quotient_prepare
 from .tower import inverse_xor, multiply_xor
 
@@ -157,6 +158,15 @@ def prepared_residue_scan(builder: Any, field: Any, modulus: list[Any], omega: l
     quotient_prepare(builder, omega, reciprocal, modulus, residue, adjoint=True, multiply=multiply)
     for word in residue:
         builder.free(word)
+
+
+def two_bank_residue_scan(builder: Any, field: Any, modulus: list[Any], omega: list[Any],
+                          masks: list[Any], half_chart: tuple[int, ...], *,
+                          multiply: FieldProduct = multiply_xor) -> None:
+    """Phase and restore a fixed odd-degree chart using the locator and evaluator."""
+    odd_forney_inplace(builder, modulus, omega, half_chart, multiply=multiply)
+    _scan_evaluations(builder, field, (modulus, omega), masks, _residue_phase, monic=True)
+    odd_forney_inplace(builder, modulus, omega, half_chart, adjoint=True, multiply=multiply)
 
 
 def _scan_evaluations(builder: Any, field: Any, groups: tuple[list[Any], ...],

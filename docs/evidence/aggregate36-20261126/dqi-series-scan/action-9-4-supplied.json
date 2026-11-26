@@ -1,0 +1,25 @@
+{
+  "backend_sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+  "degree": 9,
+  "degree_chart": [
+    0
+  ],
+  "divisor_degree": 4,
+  "native_seed": 36139,
+  "observations": {
+    "forward": {
+      "qubits": 303,
+      "sha256": "23ec2b35fec4f6b8587f4fb42e39ffa629a232a22c5d61582e7a2ec43058bd3d",
+      "toffoli_like": 5490
+    },
+    "inverse": {
+      "qubits": 303,
+      "sha256": "99397ec3e96a218519ba00e69793454f903069d137024bec84e48d688ebcb184",
+      "toffoli_like": 5490
+    }
+  },
+  "sample_seed": 36140,
+  "scope": "supplied monic divisor",
+  "shots": 12,
+  "tensor_sha256": "19ee4259f4d20a779d2484b3dea635d2e0efd23fce39c859e70228f668e53093"
+}

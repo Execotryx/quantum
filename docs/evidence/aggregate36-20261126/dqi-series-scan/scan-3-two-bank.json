@@ -1,0 +1,35 @@
+{
+  "attempts": 32,
+  "backend_sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+  "checked_shots": 32,
+  "circuit_sha256": "c21240eb893f80009d5a9b80cec21f458725ec40a06bd269700b253522ca903f",
+  "degree": 3,
+  "half_chart": [
+    0
+  ],
+  "operations": {
+    "BIT_STORE0": 144,
+    "CCX": 2265,
+    "CX": 46366,
+    "CZ": 5233,
+    "HMR": 2409,
+    "INFO_TAG": 1008,
+    "POP_CONDITION": 144,
+    "PUSH_CONDITION": 144,
+    "R": 2265,
+    "SWAP": 1964,
+    "X": 3764
+  },
+  "panel_seed": 36110,
+  "phase_restoration_and_cleanup": "pass",
+  "positions": 63,
+  "qubits": 111,
+  "scope": "two-bank fixed chart",
+  "seed": 36107,
+  "support_weight_counts": {
+    "2": 16,
+    "3": 16
+  },
+  "tensor_sha256": "19ee4259f4d20a779d2484b3dea635d2e0efd23fce39c859e70228f668e53093",
+  "toffoli_like": 2265
+}
