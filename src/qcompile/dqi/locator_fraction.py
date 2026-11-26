@@ -8,7 +8,7 @@ from .inverse_action import _reciprocal, _scale, _scale_words
 from .quotient import (
     FieldProduct, _interpolated_product_range, _interpolation_width, _product_range, _series_inplace, _truncate_inplace,
 )
-from .subtower import inverse_xor
+from .subtower import _change_basis, inverse_xor
 from .tower import ProjectedFieldProduct, _xor_map, multiply_xor
 
 
@@ -235,6 +235,70 @@ def projective_continuant(builder: Any, words: list[Any], unit: Any, *,
     if adjoint:
         builder.x(unit[0])
     return denominator, numerator
+
+
+def _scale_by_square(builder: Any, words: list[Any], scale: Any, clear: Any,
+                     multiply: FieldProduct) -> None:
+    columns = _frobenius(2)
+    for word in (scale, clear):
+        _change_basis(builder, word, columns, undo=False)
+    _scale_words(builder, words, scale, clear, multiply)
+    for word in (scale, clear):
+        _change_basis(builder, word, columns, undo=True)
+
+
+def _apply_prefix_tape(builder: Any, tape: list[Any], suffix: list[Any],
+                       multiply: ProjectedFieldProduct, *, adjoint: bool) -> None:
+    """Use each off-diagonal continuant on the same prefix wires."""
+    unit = builder.alloc_qubits(12)
+    reverse_tape = [word for pair in range(len(tape) - 2, -1, -2) for word in tape[pair:pair + 2]]
+    for complementary in ((True, False) if adjoint else (False, True)):
+        ordered_tape = reverse_tape if complementary else tape
+        denominator, numerator = projective_continuant(builder, ordered_tape, unit, multiply=multiply)
+        head = denominator[-1]
+        tail, summary = denominator[-2::-1], numerator[::-1]
+        if complementary:
+            # Reversing the symmetric transfer product preserves its
+            # denominator and exchanges its two off-diagonal entries.
+            with _reciprocal(builder, head, compact_inner=True) as inverse:
+                _scale_words(builder, tail, inverse, head, multiply)
+                _scale_words(builder, summary, head, inverse, multiply)
+                if adjoint:
+                    _scale_by_square(builder, suffix, inverse, head, multiply)
+            blocked_suffix_inplace(builder, suffix, summary, tail, adjoint=adjoint, multiply=multiply)
+            with _reciprocal(builder, head, compact_inner=True) as inverse:
+                if not adjoint:
+                    _scale_by_square(builder, suffix, head, inverse, multiply)
+                _scale_words(builder, summary, inverse, head, multiply)
+                _scale_words(builder, tail, head, inverse, multiply)
+        else:
+            _scale(builder, head, tail, summary, multiply, undo=False)
+            prefold_raw_suffix(builder, suffix, summary, tail, adjoint=adjoint, multiply=multiply)
+            _scale(builder, head, tail, summary, multiply, undo=True)
+        projective_continuant(builder, ordered_tape, unit, adjoint=True, multiply=multiply)
+    builder.free(unit)
+
+
+def blocked_quotient_tape(builder: Any, words: list[Any], steps: int, *,
+                          adjoint: bool = False, multiply: ProjectedFieldProduct) -> None:
+    """Extract a regular quotient prefix and advance the remaining raw series.
+
+    The forward output begins with `steps` constant/linear reciprocal pairs
+    and ends with the exact sequential residual. The prefix must have a
+    nonzero pivot at each visit and a degree-`steps` denominator in the
+    series variable. Exceptional charts require separate routing.
+    """
+    boundary = 2 * steps
+    if not 0 < boundary < len(words) or any(len(word) != 12 for word in words):
+        raise ValueError("blocked extraction requires a nonempty prefix and suffix of 12-bit words")
+    tape, suffix = words[:boundary], words[boundary:]
+    offsets = range(0, boundary, 2)
+    if adjoint:
+        _apply_prefix_tape(builder, tape, suffix, multiply, adjoint=True)
+    for offset in (reversed(offsets) if adjoint else offsets):
+        _series_inverse(builder, tape[offset:], multiply)
+    if not adjoint:
+        _apply_prefix_tape(builder, tape, suffix, multiply, adjoint=False)
 
 
 def _continuant_layout(words: list[Any]) -> list[tuple[Any, Any, list[Any], list[Any]]]:

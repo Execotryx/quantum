@@ -208,6 +208,13 @@ is **33.20483975**.
 [Degree-35 controls and acceptance](docs/degree35-inclusive-27-11-2026-00-48-55.md)
 · [Native inversion and phase comparison](docs/degree35-subtower-27-11-2026-01-03-01.md)
 
+A blocked extractor now emits the initial quotient pairs and exact
+residual from the raw syndrome. At degree 35 the nine-pair block used
+**109,428 gates per direction** at **891 qubits**. That is 60% below
+the sequential estimate for those nine pairs. Even this smaller block
+exceeds the budget before the remaining pairs or exceptional routing.
+[Native raw-syndrome extraction](docs/degree35-blocked-extraction-27-11-2026-01-15-15.md)
+
 A full-input replay of Tony Li's 39-qubit inverse-square-root control
 bounded the possible margin gain from refitting its existing rotations.
 Each of the four smallest rotations failed the removal screen even after

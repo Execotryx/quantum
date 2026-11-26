@@ -10,8 +10,9 @@ import pytest
 
 from qcompile.dqi.decoder import _divide, bm_locator, syndrome
 from qcompile.dqi.field import GF4096
-from qcompile.dqi.locator_fraction import _series_inverse, regular_locator_evaluator
+from qcompile.dqi.locator_fraction import _series_inverse, blocked_quotient_tape, regular_locator_evaluator
 from qcompile.dqi.scan import evaluator, two_bank_residue_scan
+from qcompile.dqi.tower import ProjectedFieldProduct
 from qcompile.io import read_json, sha256, write_json
 from qcompile.official import validate_backend
 
@@ -24,6 +25,75 @@ def _ordinary_reciprocal(words: list[int], field: GF4096) -> list[int]:
             accumulated ^= field.mul(words[j], reciprocal[k - j])
         reciprocal.append(field.mul(accumulated, reciprocal[0]))
     return reciprocal
+
+
+@pytest.mark.official
+@pytest.mark.parametrize(("degree", "steps"), [(7, 3), pytest.param(35, 9, marks=pytest.mark.slow),
+                                                pytest.param(35, 17, marks=pytest.mark.slow)])
+def test_native_blocked_quotient_tape(project_root, monkeypatch, tmp_path, degree, steps):
+    backend = project_root / "vendor/backend.json"
+    if not sys.platform.startswith("linux") or not backend.is_file():
+        pytest.skip("pinned native backend required")
+    validate_backend(read_json(backend))
+    monkeypatch.syspath_prepend(str(project_root / "vendor/official/kickmix"))
+    monkeypatch.syspath_prepend(str(project_root / "tools"))
+    km = import_module("kickmix")
+    tensor = tmp_path / "scheme42.txt"
+    generator = project_root / "third_party/dqi-scheme42/src/scheme42.py"
+    subprocess.run([sys.executable, "-B", str(generator), str(tensor)], check=True)
+    multiply, tensor_sha = import_module("dqi_quotient").load_field_product(tensor, projected=True)
+    assert isinstance(multiply, ProjectedFieldProduct)
+    field = GF4096()
+    rng = random.Random(36871)
+    inputs, outputs = [], []
+    for _ in range(24):
+        support = {j: rng.randrange(1, 4096) for j in rng.sample(range(4095), degree)}
+        raw = syndrome(support, field)[:2 * degree]
+        result = raw.copy()
+        for offset in range(0, 2 * steps, 2):
+            if not result[offset]:
+                break
+            result[offset:] = _ordinary_reciprocal(result[offset:], field)
+        else:
+            previous, current = 0, 1
+            for constant in result[1:2 * steps:2]:
+                previous, current = current, field.mul(constant, current) ^ previous
+            if current:
+                inputs.append(raw)
+                outputs.append(result)
+        if len(inputs) == 12:
+            break
+    assert len(inputs) == 12
+    observations = {}
+    for adjoint in (False, True):
+        builder = km.CircuitBuilder()
+        words = [builder.create_quantum_register(12, f"S{i}") for i in range(2 * degree)]
+        blocked_quotient_tape(builder, words, steps, adjoint=adjoint, multiply=multiply)
+        label = "inverse" if adjoint else "forward"
+        artifact = tmp_path / f"{label}.kmb"
+        builder.finish_circuit().to_file(artifact, format="kmb")
+        circuit = km.Circuit.from_file(artifact, format="kmb")
+        sim = km.Simulator(batch_size=len(inputs), seed=36873)
+        sim.use_same_registers_as(circuit)
+        initial, expected = (outputs, inputs) if adjoint else (inputs, outputs)
+        bits = np.arange(12)[:, None]
+        for wires, column in zip(words, np.asarray(initial).T, strict=True):
+            sim.write_across_shots(wires, ((column >> bits) & 1).astype(bool))
+        sim.do(circuit)
+        for wires, column in zip(words, np.asarray(expected).T, strict=True):
+            np.testing.assert_array_equal(sim.read_across_shots(wires), (column >> bits) & 1)
+        live = {q.id for word in words for q in word}
+        scratch = km.array([km.q(i) for i in range(circuit.num_qubits) if i not in live])
+        assert not sim.read_across_shots(scratch).any()
+        assert not sim.read_phase_flipped_across_shots().any()
+        observations[label] = {"qubits": circuit.num_qubits, "sha256": sha256(artifact),
+                               "toffoli_like": circuit.operation_statistics().num_toffoli_like}
+    write_json(tmp_path / "blocked-quotient-tape.json", {
+        "scope": "regular raw prefix quotient generation and remaining residual",
+        "degree": degree, "steps": steps, "shots": len(inputs),
+        "sample_seed": 36871, "native_seed": 36873, "backend_sha256": sha256(backend),
+        "tensor_sha256": tensor_sha, "observations": observations,
+    })
 
 
 @pytest.mark.official

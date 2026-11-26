@@ -85,6 +85,9 @@ the constant before leaving the reciprocal scope.
 Raw-suffix prefolding borrows the supplied prefix numerator in its reversed
 polynomial basis. Restore it after applying the advanced numerator and
 track the normalized residual before handing off to another block.
+The blocked raw extractor reverses quotient pairs on the same prefix wires
+to produce the complementary numerator. Restore the residual's scale
+squared before applying another reciprocal.
 Use `portfolio-v5` for the inclusive score-35 floor. `portfolio-v4` retains
 strict above-35 semantics. Derive the degree-35 gate budget from the pinned
 companion costs and the applicable failure count.

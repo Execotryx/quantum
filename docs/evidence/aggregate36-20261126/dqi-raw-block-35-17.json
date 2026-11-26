@@ -1,0 +1,22 @@
+{
+  "backend_sha256": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+  "degree": 35,
+  "native_seed": 36873,
+  "observations": {
+    "forward": {
+      "qubits": 891,
+      "sha256": "5bf96a5fb1cf03b7634e0306f9e10891a0599f28badff7b6807713198a687908",
+      "toffoli_like": 201582
+    },
+    "inverse": {
+      "qubits": 891,
+      "sha256": "7f9dfd9281fa6d0033dfd0aad8aed6777461027e4080dfa609d828827dc8b960",
+      "toffoli_like": 201582
+    }
+  },
+  "sample_seed": 36871,
+  "scope": "regular raw prefix quotient generation and remaining residual",
+  "shots": 12,
+  "steps": 17,
+  "tensor_sha256": "19ee4259f4d20a779d2484b3dea635d2e0efd23fce39c859e70228f668e53093"
+}

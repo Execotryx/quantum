@@ -132,6 +132,10 @@
   Restore its numerator after advancing it by twice the prefix degree.
   To bind the next transform, check the complementary denominator's
   determinant and the residual's common scale.
+- The blocked raw extractor uses only the first twice-prefix-degree
+  moments to form its quotient tape. Reverse the order of pairs to
+  obtain the complementary numerator. Restore the shared scale
+  squared before decoding the residual.
 - The degree-35 portfolio uses `portfolio-v5` for the inclusive score-35
   floor. `portfolio-v4` retains strict above-35 semantics. Keep the decoder's
   physical degree separate from the aggregate threshold and use exact cost

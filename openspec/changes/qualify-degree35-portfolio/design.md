@@ -20,6 +20,13 @@ The two measured suffix transforms exceed that allowance together.
 [Degree-35 budget and hashes](../../../docs/evidence/aggregate36-20261126/degree35-above35-controls.json)
 · [Optimized native handoff](../../../docs/evidence/aggregate36-20261126/degree35-subtower-phase-native.json)
 
+The regular blocked extractor now constructs both prefix summaries on
+the same wires from the raw syndrome. At 891 qubits its nine-pair block
+alone costs 109,428 gates per direction. This excludes a serial
+composition of that block with the current supplied-tape phase within
+the selected companions' 35-point allocation.
+[Raw block results](../../../docs/degree35-blocked-extraction-27-11-2026-01-15-15.md)
+
 ## Verification and delivery
 
 Register a `portfolio-v5` archive with `--at-least-35` after qualifying a full
