@@ -1,0 +1,51 @@
+{
+  "classification": "exact_local_gate_sharing_screen",
+  "stages": {
+    "decoder/classical_decoder_entry.kmx.xz": {
+      "counts": {},
+      "source_sha256": "5b1b1ca4d384b896c9c274f9cdc9894144ccd6b6ca518e5ecb1388ade0bdc7d7"
+    },
+    "decoder/decoder_return.kmx.xz": {
+      "counts": {
+        "adjacent_under_affine_gates": 102404,
+        "unconditional_ccx": 107045
+      },
+      "source_sha256": "b2da55202f6b574ee9af452f25f34772c2a0e90bfc5ce102129c0861faaf1fcf"
+    },
+    "decoder/field_1_to_field_2.kmx.xz": {
+      "counts": {
+        "adjacent_under_affine_gates": 2872,
+        "unconditional_ccx": 2893
+      },
+      "source_sha256": "f0f6af1d53b5756222d77e5b3e5481514d0bfe5f3e13c41f2017c1e2d1c1991f"
+    },
+    "decoder/field_2_to_root_1330_phase.kmx.xz": {
+      "counts": {
+        "adjacent_under_affine_gates": 68737,
+        "unconditional_ccx": 73010
+      },
+      "source_sha256": "cc6817aca653d1a7c8e7b416dc41a8b15047fb04b61bae1d61915a2af6253733"
+    },
+    "decoder/field_3_to_field_4.kmx.xz": {
+      "counts": {
+        "adjacent_under_affine_gates": 12437,
+        "unconditional_ccx": 13747
+      },
+      "source_sha256": "fb6fc6ee06430378c2a0b2de7dc5cd44118e74efe3de0ad05a02a93477335923"
+    },
+    "decoder/quantum_decoder_to_field_1.kmx.xz": {
+      "counts": {
+        "adjacent_under_affine_gates": 89675,
+        "unconditional_ccx": 90670
+      },
+      "source_sha256": "d8572b0756f03fa4ccb5066dfcd04c9f019b915e428135838f837d50fd46a32c"
+    },
+    "decoder/root_1330_phase_to_field_3.kmx.xz": {
+      "counts": {
+        "adjacent_under_affine_gates": 23254,
+        "unconditional_ccx": 23643
+      },
+      "source_sha256": "07bed4ee82da76ce488d11d5923e0f13be7157829db72f299dbaa2f823bb6bd2"
+    }
+  }
+}
