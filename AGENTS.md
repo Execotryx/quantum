@@ -118,6 +118,10 @@
   phase scan under the actual locator leading coefficient. Restore the
   scale and borrowed scan constants before applying the tape inverse.
   The tape fixture starts after quotient generation.
+- With shared derivative reciprocals, the parent divides the child's
+  entering top payload by the child modulus lead. Multiply by the packed
+  quotient slope during reduction, and undo the child's scale before the
+  inverse reduction. Test zero-head paths through both directions.
 - A Givens-order change may move a rotation only across disjoint orbital
   pairs. Preserve the matching angle columns, check reconstructed vectors,
   and price the affected XOR transitions before full loader verification.

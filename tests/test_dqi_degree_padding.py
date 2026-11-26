@@ -14,6 +14,7 @@ import pytest
 from qcompile.dqi.decoder import _add, _divide, _multiply, bm_locator, syndrome
 from qcompile.dqi.degree_padding import pad_reversed_banks, padding_factors
 from qcompile.dqi.field import GF4096
+from qcompile.dqi.inverse_action import odd_forney_inplace
 from qcompile.dqi.locator_fraction import blocked_suffix_inplace, projective_continuant
 from qcompile.dqi.quotient import _product_range
 from qcompile.dqi.scan import (
@@ -437,6 +438,45 @@ def _projective_phase_fixture():
               if regular else 0 for (_, regular, support, _), mask in zip(cases, masks, strict=True)]
     rows = [tape + [0, orientation] for tape, _, _, orientation in cases]
     return rows, [regular for _, regular, _, _ in cases], masks, phases
+
+
+@pytest.mark.slow
+@pytest.mark.parametrize("degree", [3, 5, 35])
+def test_shared_reciprocals_match_forney_residues(project_root, monkeypatch, tmp_path, degree):
+    multiply, _ = _field_product(project_root, monkeypatch, tmp_path, projected=True)
+    assert isinstance(multiply, ProjectedFieldProduct)
+    rng = Random(36651)
+    widths = [12] * (2 * degree)
+    size = sum(widths)
+    words = [range(i * 12, (i + 1) * 12) for i in range(len(widths))]
+    inputs, expected = [], []
+    chart = tuple(range(degree // 2 - 1, -1, -1))
+    for _ in range(8):
+        compact, _, _ = _case({j: rng.randrange(1, 4096) for j in rng.sample(range(4095), degree)})
+        locator, omega = compact[:degree][::-1], compact[35:35 + degree][::-1]
+        modulus = locator + [1]
+        _, residue = _divide(_multiply(omega, derivative_reciprocal(modulus, FIELD), FIELD), modulus, FIELD)
+        inputs.append(locator + omega)
+        expected.append(locator + residue + [0] * (degree - len(residue)))
+    # The monomial locator forces temporary unit extensions at several depths.
+    inputs.append([0] * degree + [rng.randrange(4096) for _ in range(degree)])
+    regular_bits = (1 << len(expected)) - 1
+    charges = []
+    for emit in (multiply.__call__, multiply):
+        builder = _PhaseBuilder(inputs, 36671, widths)
+        valid = builder.alloc_qubits(1)[0]
+        initial = builder.data[:size]
+        odd_forney_inplace(builder, words[:degree], words[degree:], chart, multiply=emit,
+                           projective=True, validity=valid)
+        assert builder.data[valid] == regular_bits
+        assert [plane & regular_bits for plane in builder.data[:size]] == _BasisBuilder(expected, widths).data
+        assert builder.phase == 0
+        charges.append(builder.charged_ands)
+        odd_forney_inplace(builder, words[:degree], words[degree:], chart, multiply=emit,
+                           projective=True, validity=valid, adjoint=True)
+        assert builder.data[:size] == initial and not any(builder.data[size:])
+        assert builder.phase == 0 and not builder.bits
+    assert charges[0] - charges[1] == 408 * (degree // 2 - 1)
 
 
 @pytest.mark.slow

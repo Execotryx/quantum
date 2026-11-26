@@ -1,6 +1,6 @@
 """Fixed-degree Euclidean inverse action on a polynomial register."""
 
-from collections.abc import Iterator
+from collections.abc import Iterator, Sequence
 from contextlib import contextmanager
 from typing import Any
 
@@ -106,19 +106,46 @@ def _scale(builder: Any, factor: Any, normal: list[Any], data: list[Any], multip
 
 def _projective_remainder(builder: Any, modulus: list[Any], divisor: list[Any],
                           reduce_banks: list[list[Any]], multiply: FieldProduct, *,
-                          adjoint: bool, extend_zero: bool) -> None:
-    """Keep a linear quotient in the top two slots and the remainder below."""
+                          adjoint: bool, extend_zero: bool, extend_banks: Sequence[list[Any]] = ()) -> None:
+    """Pack a linear quotient and optionally share its reciprocal with payload work.
+
+    In the fused schedule each entering payload top is already divided by
+    the modulus lead. When the guard rejects a zero slope, the payload may
+    differ from the legacy extension, but the same operations undo it.
+    """
     a_head, d_head = modulus[-1], divisor[-1]
     lead, constant = modulus[-2], divisor[-2]
-    compact_inner = isinstance(multiply, ProjectedFieldProduct)
+    fused = isinstance(multiply, ProjectedFieldProduct)
 
     def update_lower() -> None:
         _product_range(builder, [lead, a_head], divisor[:-1], modulus[:-2], 0, multiply)
 
+    def reduce_payloads(inverse: Any) -> None:
+        if not fused:
+            _projective_reduce(builder, divisor, reduce_banks, inverse, multiply)
+            return
+        # The parent has already divided the top word by the modulus lead.
+        # Use the packed slope A_lead / D_lead to recover top / D_lead.
+        child_tails = [bank[-2] for bank in reduce_banks]
+        if adjoint:
+            _scale_words(builder, child_tails, d_head, inverse, multiply)
+        _projective_reduce(builder, divisor, reduce_banks, inverse if a_head is None else a_head, multiply)
+        if not adjoint:
+            _scale_words(builder, child_tails, inverse, d_head, multiply)
+
+    def extend_payloads(inverse: Any) -> None:
+        tails = [bank[-1] for bank in extend_banks]
+        if not adjoint:
+            _scale_words(builder, tails, d_head, inverse, multiply)
+        _projective_tail_dot(builder, divisor, extend_banks, multiply)
+        if adjoint:
+            _scale_words(builder, tails, inverse, d_head, multiply)
+
     # When A is monic, the quotient slope is the inverse itself. Use scalar
     # products on this outer level to leave the interpolation workspace free.
     if a_head is None:
-        with _reciprocal(builder, d_head, extend_zero=extend_zero, compact_inner=compact_inner) as slope:
+        with _reciprocal(builder, d_head, extend_zero=extend_zero, compact_inner=fused) as slope:
+            extend_payloads(slope)
             def update_monically() -> None:
                 for i, word in enumerate(modulus[:-2]):
                     multiply(builder, lead, divisor[i], word)
@@ -129,27 +156,34 @@ def _projective_remainder(builder: Any, modulus: list[Any], divisor: list[Any],
                 update_monically()
                 _scale_words(builder, [lead], d_head, slope, multiply)
             else:
-                _projective_reduce(builder, divisor, reduce_banks, slope, multiply)
+                reduce_payloads(slope)
             multiply(builder, slope, constant, lead)
             if not adjoint:
                 _scale_words(builder, [lead], slope, d_head, multiply)
                 update_monically()
             else:
-                _projective_reduce(builder, divisor, reduce_banks, slope, multiply)
+                reduce_payloads(slope)
         return
 
     if adjoint:
         update_lower()
-    with _reciprocal(builder, d_head, extend_zero=extend_zero, compact_inner=compact_inner) as inverse:
+    with _reciprocal(builder, d_head, extend_zero=extend_zero, compact_inner=fused) as inverse:
+        extend_payloads(inverse)
         if adjoint:
             _scale_words(builder, [lead], d_head, inverse, multiply)
         else:
-            _projective_reduce(builder, divisor, reduce_banks, inverse, multiply)
+            if not fused:
+                reduce_payloads(inverse)
             _scale_words(builder, [a_head], inverse, d_head, multiply)
+            if fused:
+                reduce_payloads(inverse)
         multiply(builder, a_head, constant, lead)
         if adjoint:
+            if fused:
+                reduce_payloads(inverse)
             _scale_words(builder, [a_head], d_head, inverse, multiply)
-            _projective_reduce(builder, divisor, reduce_banks, inverse, multiply)
+            if not fused:
+                reduce_payloads(inverse)
         else:
             _scale_words(builder, [lead], inverse, d_head, multiply)
     if not adjoint:
@@ -169,6 +203,13 @@ def _projective_reduce(builder: Any, divisor: list[Any], banks: list[list[Any]],
         builder.free(quotient)
 
 
+def _projective_tail_dot(builder: Any, divisor: list[Any], banks: Sequence[list[Any]],
+                         multiply: FieldProduct) -> None:
+    for words in banks:
+        for coefficient, value in zip(divisor[:-1], words[-2::-1], strict=True):
+            multiply(builder, coefficient, value, words[-1])
+
+
 def _projective_extend(builder: Any, modulus: list[Any], divisor: list[Any], banks: list[list[Any]],
                        multiply: FieldProduct, *, adjoint: bool, extend_zero: bool) -> None:
     def scale_tails(head: Any) -> None:
@@ -181,9 +222,7 @@ def _projective_extend(builder: Any, modulus: list[Any], divisor: list[Any], ban
         for words in banks:
             _rotate(builder, words, 1)
     scale_tails(divisor[-1] if adjoint else modulus[-1])
-    for words in banks:
-        for coefficient, value in zip(divisor[:-1], words[-2::-1], strict=True):
-            multiply(builder, coefficient, value, words[-1])
+    _projective_tail_dot(builder, divisor, banks, multiply)
     scale_tails(modulus[-1] if adjoint else divisor[-1])
     if not adjoint:
         for words in banks:
@@ -209,24 +248,36 @@ def _projective_action(builder: Any, modulus: list[Any], divisor: list[Any], ban
         # The modulus head becomes a quotient slope by a nonzero scale.
         # Every prior divisor head therefore retains its zero predicate.
         heads = (*heads, divisor[-1])
+    fused = bool(banks) and isinstance(multiply, ProjectedFieldProduct)
     if len(divisor) == 1:
         if guarded:
             _toggle_regular(builder, heads, validity)
         scalars = [words[0] for words in banks]
         if scalars:
-            _scale(builder, modulus[-1], [], scalars, multiply, undo=adjoint, extend_zero=guarded)
+            if not fused:
+                _scale(builder, modulus[-1], [], scalars, multiply, undo=adjoint, extend_zero=guarded)
             _scale(builder, divisor[-1], [], scalars, multiply, undo=adjoint, extend_zero=guarded)
         return
+
+    children = [words[:-1] for words in banks]
     if banks and adjoint:
-        _projective_extend(builder, modulus, divisor, banks, multiply, adjoint=True, extend_zero=guarded)
+        if fused:
+            for bank in banks:
+                _rotate(builder, bank, 1)
+        else:
+            _projective_extend(builder, modulus, divisor, banks, multiply, adjoint=True, extend_zero=guarded)
     _projective_remainder(builder, modulus, divisor, [] if adjoint else banks, multiply,
-                          adjoint=False, extend_zero=guarded)
-    _projective_action(builder, divisor, modulus[:-2], [words[:-1] for words in banks], multiply,
+                          adjoint=False, extend_zero=guarded, extend_banks=banks if fused and adjoint else ())
+    _projective_action(builder, divisor, modulus[:-2], children, multiply,
                        adjoint=adjoint, validity=validity, heads=heads)
     _projective_remainder(builder, modulus, divisor, banks if adjoint else [], multiply,
-                          adjoint=True, extend_zero=guarded)
+                          adjoint=True, extend_zero=guarded, extend_banks=banks if fused and not adjoint else ())
     if banks and not adjoint:
-        _projective_extend(builder, modulus, divisor, banks, multiply, adjoint=False, extend_zero=guarded)
+        if fused:
+            for bank in banks:
+                _rotate(builder, bank, len(bank) - 1)
+        else:
+            _projective_extend(builder, modulus, divisor, banks, multiply, adjoint=False, extend_zero=guarded)
 
 
 def _toggle_half_remainder(builder: Any, even: list[Any], odd: list[Any], multiply: FieldProduct) -> None:

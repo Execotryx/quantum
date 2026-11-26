@@ -73,6 +73,9 @@ opt-in to preserve earlier circuit identities.
 The degree-35 phase handoff normalizes the shared coefficient on the
 reversed locator and evaluator, then restores it before tape cleanup.
 The Chien scan can borrow the constant terms and restore them at each root.
+The shared reciprocal schedule predivides each child's top payload by
+its modulus lead. The packed slope recovers the reduction quotient.
+The final extension divides by the divisor after adding the dot product.
 The blocked suffix accepts a prefolded residual and normalized
 denominators. Its shifted unit inverse keeps the first two
 coefficients implicit.

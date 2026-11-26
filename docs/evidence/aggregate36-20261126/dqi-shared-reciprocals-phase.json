@@ -1,0 +1,15 @@
+{
+  "equality_calls": 202,
+  "fixture_seed": 36541,
+  "fold_init_and_calls_per_direction": 37596,
+  "handoff_phase_init_and_calls": 181011,
+  "mask_seed": 36563,
+  "positions": 4095,
+  "qubits": 888,
+  "regular": 12,
+  "replay_seed": 36571,
+  "scope": "software fold, normalized projective handoff, guarded phase, and inverse from supplied degree-35 tape",
+  "shots": 14,
+  "tensor_sha256": "19ee4259f4d20a779d2484b3dea635d2e0efd23fce39c859e70228f668e53093",
+  "total_init_and_calls": 256203
+}

@@ -128,6 +128,13 @@ companion costs. Raw-syndrome extraction and nonregular-chart recovery
 still need to fit the complete portfolio.
 [Degree-35 phase handoff](docs/aggregate-above-36-dqi-projective-handoff-26-11-2026-21-53-44.md)
 
+Sharing field inverses across the derivative recursion brings the same
+degree-35 composition down to **256,203 explicit ANDs** and **202 equality
+calls** at **888 qubits** in software replay. This saves **13,056 ANDs** and
+**128 equality calls**. The supplied-tape composition still exceeds the
+strict public-companion ceiling before quotient generation and recovery.
+[Shared reciprocal measurements](docs/aggregate-above-36-dqi-shared-reciprocals-26-11-2026-22-04-38.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh
