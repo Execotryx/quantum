@@ -1,0 +1,45 @@
+{
+  "backend_inventory_sha256": "bd68ed6223bbba78821192be217cb3dc9a6af5e0ae1c07097361511bb189edd4",
+  "cases": [
+    {
+      "circuit": "reciprocal.kmb",
+      "dirty_scratch_bits": 0,
+      "mean_fine_rotations": 29.0,
+      "mean_toffoli_like": 1740.0,
+      "mutation": false,
+      "phase_failures": 0,
+      "qubits": 49,
+      "sha256": "dfcad3a436ef555b78a9398d95ce9096d2513b1d09e2c8e3ca52ed6157204b03",
+      "shots": 8192,
+      "value_failures": 0
+    },
+    {
+      "circuit": "dirty-phase-repair.kmb",
+      "dirty_scratch_bits": 0,
+      "mean_fine_rotations": 0.0,
+      "mean_toffoli_like": 1782.0,
+      "mutation": false,
+      "phase_failures": 0,
+      "qubits": 39,
+      "sha256": "e6e3d2ad9d149a9de82ec96be6513d674db0a98a1d54d3a651726217e00062ec",
+      "shots": 8192,
+      "value_failures": 0
+    },
+    {
+      "circuit": "dirty-phase-repair-mutation.kmb",
+      "dirty_scratch_bits": 0,
+      "mean_fine_rotations": 0.0,
+      "mean_toffoli_like": 1782.0,
+      "mutation": true,
+      "phase_failures": 251,
+      "qubits": 39,
+      "sha256": "32f8e1c645ba73992fc7733e040809180edeb7a271106ea26c8429c58a078a81",
+      "shots": 8192,
+      "value_failures": 0
+    }
+  ],
+  "classification": "google_cloud_native_reciprocal_component_fixtures",
+  "entrypoint_sha256": "40f1948763e0177be0d6c61a32d25a27dc3072c02fb59ad8eeee3f5506ff8534",
+  "scope": "fixed-exponent reciprocal-only and address-only repair; standalone native fixtures",
+  "seed": 202611270431
+}

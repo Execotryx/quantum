@@ -302,6 +302,11 @@ The narrowed divider recurrence passes the full numerical domain, and
 both available source row layouts exceed the width or gate allowance.
 [Reciprocal research and native measurements](docs/degree35-invsqrt-reciprocal-research-27-11-2026-04-04-28.md)
 
+Google Cloud reproduced the native reciprocal and address-only phase-repair
+results on **8,192 fresh trajectories each**. Both circuits restored their
+inputs and scratch exactly. The reciprocal cost matched the local result.
+[Cloud fixture verification](docs/degree35-invsqrt-cloud-reciprocal-27-11-2026-04-32-29.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh
