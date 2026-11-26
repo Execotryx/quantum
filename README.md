@@ -15,11 +15,12 @@ verification and **26.78303192** on a distinct confirmation salt. Its repaired
 DQI decoder reduced pooled cost by **9.72%** against banked D4.
 [Cloud results and rebuild report](docs/d4-aggregate-independent-rebuild-26-11-2026-02-03-16.md)
 
-The above-34 work added a versioned certification gate and reproduced all 18
-members of an open reference in two isolated builds. The first development
-screens left inverse-square-root and DQI widths unchanged. Four-word chemistry
-batches lowered total width from 405 to 398 qubits, but the banked implementation
-increased executed loader gates. The certified project score remains **26.78302388**.
+The public comparison archive scored **33.20483975** in a full cloud run,
+**23.98% above** the certified project's metric score. Its inverse-square-root,
+DQI and chemistry costs fell by **24.00%**, **17.80%** and **16.00%**,
+respectively. The above-34 release gate still requires a candidate that exceeds
+34 on both full verification and independent confirmation.
+[Cloud comparison](docs/above-34-cloud-reference-comparison-26-11-2026-06-31-00.md)
 [Implementation and development evidence](docs/aggregate-above-34-implementation-26-11-2026-05-40-22.md)
 
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)

@@ -1,5 +1,6 @@
 from copy import deepcopy
 from importlib import import_module
+from types import SimpleNamespace
 
 import pytest
 
@@ -54,6 +55,28 @@ def test_portfolio_binds_two_builds_and_each_component(tmp_path):
 
 def test_portfolio_legacy_registration_promotes_above_twenty():
     assert portfolio_target({"archive_sha256": "a" * 64}) == 20
+
+
+def test_portfolio_preflight_reports_native_serialization_failure(project_root, tmp_path, monkeypatch):
+    monkeypatch.syspath_prepend(str(project_root / "tools"))
+    angle_summary = import_module("hybrid_preflight").angle_summary
+    for index in range(15):
+        (tmp_path / f"angle_k_{index}.kmb").write_bytes(b"0" * (index + 1))
+    layout = SimpleNamespace(batch_size=5, selection=range(11), brot=7)
+    circuits = SimpleNamespace(register_layout=lambda _: layout, _reject_rotations=lambda _: None)
+    chemistry = SimpleNamespace(QUBIT_CAP=128)
+    calls = []
+
+    def read_circuit(path, _cap):
+        def serialize(_stream, **_kwargs):
+            calls.append(path.name)
+            raise ValueError("Failed to write to file.")
+
+        return SimpleNamespace(num_qubits=128, to_file=serialize)
+
+    with pytest.raises(ValueError, match="native ANGLE serialization"):
+        angle_summary(tmp_path, 15, 9, 127, read_circuit, chemistry, circuits, check_serialization=True)
+    assert calls == ["angle_k_14.kmb"]
 
 
 @pytest.mark.parametrize("fresh_score", [34, 35])

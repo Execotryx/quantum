@@ -1,0 +1,17 @@
+{
+  "accept_worst_ratio_at_most": 0.99999,
+  "assembly_sha256": "b4dd854bf81b9ea52f0462dc16b3b6f8a052ab5972bcc5fd7cea437d37b75be6",
+  "classification": "complete_legal_domain_single_branch_phase_refit",
+  "frozen_control_worst_x": 252,
+  "max_offset_in_scaled_units": 20,
+  "max_separation_iterations": 16,
+  "native_validation_salt": "rotation-refit-development-20261126",
+  "phase64_unit_scale": 4294967296,
+  "removed_rotation_lines": [
+    13697,
+    17680,
+    14645
+  ],
+  "solver_sha256": "b8a4723032ee437969aeb0d9bde974ea027a59c1f570485d546f3b07d916acc7",
+  "source_trajectory": "all measurement outcomes zero"
+}

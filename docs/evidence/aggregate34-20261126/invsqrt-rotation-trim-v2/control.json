@@ -1,0 +1,18 @@
+{
+  "circuit_sha256": "6b59214530108d8c49c648f96c53b963d9b8477f8813db1edcf478bf45f6cf03",
+  "max_toffoli_count": 1553,
+  "num_ops": 60766,
+  "num_qubits": 37,
+  "reaction_depth": 1520,
+  "registered_sha256": "6b59214530108d8c49c648f96c53b963d9b8477f8813db1edcf478bf45f6cf03",
+  "rotation_count": 33.0,
+  "rotation_eps": 1.8880574198146154e-13,
+  "score": 60927.64336166376,
+  "status": "PASS",
+  "t_count": 5.5020440715223975,
+  "toffoli_count": 1406.3136416322957,
+  "toffoli_equivalent": 1646.6930638287502,
+  "verified_shots": 3133452,
+  "worst_error_over_tolerance": 0.9994717987127908,
+  "worst_x": 252
+}

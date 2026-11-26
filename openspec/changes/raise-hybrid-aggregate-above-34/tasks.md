@@ -2,7 +2,7 @@
 
 - [x] 1.1 Pin the metric, baseline costs, 26.78 certificate, source versions, comparison candidates and score formula before simulation. [Intake](../../../docs/evidence/aggregate34-20261126/intake.json)
 - [ ] 1.2 Trace each public parent to its complete source and license. Record compiled-only comparisons and independent implementations by lineage. Build eligible references twice and hash exact output files.
-- [ ] 1.3 Measure each eligible reference under the pinned verifier and record its cost, correctness margin and phase/error diagnostics. Compute the product budget and cost limits for an observed 34.5 development projection.
+- [ ] 1.3 Measure each eligible reference under the pinned verifier and record its cost, correctness margin and phase/error diagnostics. Compute the product budget and cost limits for an observed 34.5 development projection. [Full public comparison and measured break-even limits](../../../docs/evidence/aggregate34-20261126/public-cloud-audit.json)
 
 ## 2. Implement and screen the improvements
 

@@ -27,6 +27,8 @@ Above-34 registrations require two build receipts and exact members for each
 source lineage. Structural preflight derives the ANGLE layout and coverage.
 Keep the above-20 certificate replay intact. A reset-delimited width screen
 releases scratch only at an unconditional reset.
+Exercise native ANGLE serialization before a full portfolio verification.
+Keep raw receipts and the original salt when retrying a public comparison.
 Propagate chemistry angle-gauge signs backward through the ordered Givens
 tree. Verify the prepared projectors, decoded metrics and native loader cost.
 Symbolic wire reuse requires a zero proof across measurement outcomes and

@@ -58,6 +58,9 @@
   derive the number of ANGLE loaders from the emitted layout. Preserve the
   legacy certificate schema. A reset-delimited width screen can reuse a
   scratch slot only after an unconditional reset.
+- Before a full portfolio run, exercise native ANGLE serialization on its
+  temporary filesystem. Keep prior raw receipts and the original salts
+  when a public development comparison needs an infrastructure retry.
 - A chemistry angle gauge may change quantized words when the ordered Givens
   tree preserves each prepared projector. Propagate signs backward through
   quarter turns and check the decoded residuals, gap and native gate cost.

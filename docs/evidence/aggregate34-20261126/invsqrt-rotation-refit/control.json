@@ -1,0 +1,6 @@
+{
+  "legal_inputs": 3133452,
+  "phase64_error_sha256": "2ff16d891213b112ad3614ad2407893f0f3e41dbb381ef05ff081ebf4862ac84",
+  "worst_ratio": 0.9994717987127908,
+  "worst_x": 252
+}

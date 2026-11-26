@@ -1,0 +1,14 @@
+{
+  "advanced_resets": 40873,
+  "assembly_sha256": "1d5e4bfbedd0f33859331765b1cb293ef374da206184e4d2c4cc6d7fc8e3da8e",
+  "circuit_sha256": "4b5721411adc239f61fc11c773a2358b75dfe7cb15586efae4f0459c77d77e52",
+  "classification": "conservative_order_preserving_reset_hoisting_screen",
+  "earliest_boundary": {
+    "assembly_line": 20190607,
+    "peak_width": 900
+  },
+  "original": {
+    "assembly_line": 20190607,
+    "peak_width": 900
+  }
+}

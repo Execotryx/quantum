@@ -1,0 +1,51 @@
+{
+  "classification": "full_cloud_development_comparison",
+  "receipts_tar_sha256": "1ab5ef68b607c4421ccf0490467393efb22c1d721de79bb95ef9f18ab9e64537",
+  "archived_comparison_sha256": "58d9e1990c59e28b7d1b1d00dafab4cc3dd606d90f5650d37b7b2c5e83c81c9d",
+  "archive_sha256": "f1f47061167d4a1f03f89387b823ed53c19871f39b40c7a375d4348f3d141c13",
+  "verification_sha256": "3f798f1cad63ee1f3c697befa8872f719c5c961590bc410c829d20e994911f29",
+  "certified_metric": 26.78302387799282,
+  "certified_confirmation": 26.783031917711348,
+  "measured_reference_score": 33.204839753080016,
+  "reference_verification_seconds": 1946.1125102320002,
+  "reference_score_improvement_percent": 23.97718758098819,
+  "measured_costs": {
+    "invsqrt": {
+      "certified": 80162.80854264232,
+      "reference": 60927.609576810864,
+      "coverage": 200540928,
+      "cost_reduction_percent": 23.995165982238966,
+      "benchmark_seconds": 1604.9493357789997
+    },
+    "dqi": {
+      "certified": 372799646414.39325,
+      "reference": 306434223939.9564,
+      "coverage": 102400,
+      "cost_reduction_percent": 17.80190059533129,
+      "benchmark_seconds": 309.1516879179999
+    },
+    "dfthcsos": {
+      "certified": 296635967.5935997,
+      "reference": 249169842.41339546,
+      "coverage": 78016,
+      "cost_reduction_percent": 16.00147330927659,
+      "benchmark_seconds": 20.683621241999845
+    }
+  },
+  "one_component_limits_with_reference_companions": {
+    "34": {
+      "required_product": 4.3332555252480295E+24,
+      "cost_product_reduction_percent": 6.853312534678824,
+      "inverse_square_root": 56752.05007260311,
+      "dqi": 285433328860.1336,
+      "chemistry": 232093454.37063876
+    },
+    "34.5": {
+      "required_product": 4.147570390201755E+24,
+      "cost_product_reduction_percent": 10.844758490343132,
+      "inverse_square_root": 54320.15746426655,
+      "dqi": 273202172421.9109,
+      "chemistry": 222147974.77289417
+    }
+  }
+}

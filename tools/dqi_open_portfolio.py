@@ -131,7 +131,7 @@ def measure(registration: Path, archive: Path, backend: Path, output: Path, role
         raise ValueError("Archive, backend or verification registration differs")
     contract = load_contract(CONTRACT)
     contract.require_ready(Path.cwd())
-    preflight(archive, backend, output)
+    preflight(archive, backend, output, check_serialization=True)
     artifacts = manifest(output / "extracted", origin="generated",
                          provenance=f"Fresh extraction of above-{target} portfolio registration")
     if {name: item["sha256"] for name, item in artifacts.items()} != record["artifact_hashes"]:

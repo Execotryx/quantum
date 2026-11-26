@@ -1,0 +1,12 @@
+{
+  "aggregate": 33.20483975308007,
+  "archive_sha256": "f1f47061167d4a1f03f89387b823ed53c19871f39b40c7a375d4348f3d141c13",
+  "costs": {
+    "dfthcsos": 249169842.41339546,
+    "dqi": 306434223939.9564,
+    "invsqrt": 60927.609576810864
+  },
+  "kind": "full_reference_comparison",
+  "registration_sha256": "bdcdf90a52d677ca26f143435383cfd4fdd763f66f722a2b5b8faedeadb4967e",
+  "verification_sha256": "3f798f1cad63ee1f3c697befa8872f719c5c961590bc410c829d20e994911f29"
+}

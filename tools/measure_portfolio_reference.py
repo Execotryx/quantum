@@ -21,7 +21,7 @@ def measure(registration: Path, archive: Path, backend_path: Path, output: Path)
         raise ValueError("Comparison archive or verifier differs from the registration")
     contract = load_contract(Path("contracts/contract.json"))
     contract.require_ready(Path.cwd())
-    preflight(archive, backend_path, output)
+    preflight(archive, backend_path, output, check_serialization=True)
     members = manifest(output / "extracted", origin="retained_reference", provenance="Versioned public comparison")
     if {name: item["sha256"] for name, item in members.items()} != expected["member_sha256"]:
         raise ValueError("Comparison member hashes differ from the registration")

@@ -3,6 +3,7 @@
 import argparse
 from contextlib import contextmanager
 from importlib import import_module
+from io import BytesIO
 from pathlib import Path
 from zipfile import BadZipFile
 
@@ -42,10 +43,10 @@ def factorization_shape(path, read_npz) -> tuple[int, int, int]:
     return r, b, c
 
 
-def angle_summary(root, angle_count, r, b, read_circuit, chemistry, circuits):
+def angle_summary(root, angle_count, r, b, read_circuit, chemistry, circuits, *, check_serialization=False):
     with boundary("pinned_metric", "ANGLE family"):
-        angles = [read_circuit(root / f"angle_k_{index}.kmb", chemistry.QUBIT_CAP)
-                  for index in range(angle_count)]
+        paths = [root / f"angle_k_{index}.kmb" for index in range(angle_count)]
+        angles = [read_circuit(path, chemistry.QUBIT_CAP) for path in paths]
         layout = circuits.register_layout(angles)
         circuits._reject_rotations(angles)
         max_qubits = max(circuit.num_qubits for circuit in angles)
@@ -56,13 +57,17 @@ def angle_summary(root, angle_count, r, b, read_circuit, chemistry, circuits):
             or len(layout.selection) != (75 + r * b).bit_length()
         ):
             raise ValueError("ANGLE layout does not cover the factorization")
+    if check_serialization:
+        largest = max(range(angle_count), key=lambda index: paths[index].stat().st_size)
+        with boundary("local_guard", "native ANGLE serialization through temporary storage"), BytesIO() as stream:
+            angles[largest].to_file(stream, format="kmb")
     return {
         "angle_count": angle_count, "brot": layout.brot, "batch_size": layout.batch_size,
         "max_angle_qubits": max_qubits,
     }
 
 
-def preflight(archive: Path, backend_path: Path, output: Path) -> None:
+def preflight(archive: Path, backend_path: Path, output: Path, *, check_serialization: bool = False) -> None:
     backend = read_json(backend_path)
     validate_backend(backend)
     output.mkdir(parents=True, exist_ok=False)
@@ -90,7 +95,8 @@ def preflight(archive: Path, backend_path: Path, output: Path) -> None:
     angle_count = len(members) - 3
     summaries["dfthcsos"] = {
         "shape": [r, b, c],
-        **angle_summary(root / "dfthcsos", angle_count, r, b, read_circuit, chemistry, circuits),
+        **angle_summary(root / "dfthcsos", angle_count, r, b, read_circuit, chemistry, circuits,
+                        check_serialization=check_serialization),
     }
     write_json(output / "preflight.json", {
         "archive_sha256": archive_hash, "members": members, "metric_sha256": backend["metric_sha256"],

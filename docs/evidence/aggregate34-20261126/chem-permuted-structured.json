@@ -1,0 +1,26 @@
+{
+  "angle_words_sha256": "3431783b420caa83dea49c62097f4ba4a450065cbeb88dae6c0973f15847d59d",
+  "classification": "basis_permutation_static_loader_screen",
+  "compiled_toffoli_by_loader": [
+    273,
+    267,
+    267,
+    268,
+    267,
+    268,
+    267,
+    267,
+    268,
+    267,
+    267,
+    267,
+    267,
+    267,
+    267
+  ],
+  "compiled_toffoli_per_pass": 4014,
+  "compiler_sha256": "b183352b347455bd121c2e3cd5587f72b82ebfb1c94b0ccce494c5c16465f04f",
+  "control_toffoli_per_pass": 3632,
+  "factorization_sha256": "9f472ae472b2eae95940a55cf899fb000861c624a294feb021a4d6ffd6340d67",
+  "fit_receipt_sha256": "ac00c83f822c8c5f509dbb3dce5b57225741c10b930c6d1e2d81a29a541c5993"
+}
