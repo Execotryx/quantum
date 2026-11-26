@@ -1,0 +1,215 @@
+{
+  "addresses": [
+    {
+      "additional_joint_wires": [],
+      "address_wires": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "sample_address_count": 188,
+      "witness": {
+        "absolute_mixed_difference_phase64": 351248687998,
+        "excludes_family": true,
+        "inputs": [
+          1068425,
+          1073892,
+          1065025,
+          1077292
+        ],
+        "minimum_worst_tolerance_fraction": 82.65679507657927,
+        "packed_checkpoint_values": [
+          205572699,
+          503379686,
+          205585986,
+          503366399
+        ],
+        "sum_tolerance_phase64": 4249483514,
+        "target_phase64": [
+          17846279965565487,
+          17800795828379617,
+          17874743617701147,
+          17772683424931955
+        ],
+        "tolerance_phase64": [
+          1063721177,
+          1061010112,
+          1065417743,
+          1059334482
+        ]
+      }
+    },
+    {
+      "additional_joint_wires": [],
+      "address_wires": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        25,
+        26,
+        27,
+        28
+      ],
+      "sample_address_count": 5970,
+      "witness": {
+        "absolute_mixed_difference_phase64": 42056914968,
+        "excludes_family": true,
+        "inputs": [
+          1544251,
+          1544776,
+          1541500,
+          1547527
+        ],
+        "minimum_worst_tolerance_fraction": 11.884287154198027,
+        "packed_checkpoint_values": [
+          206414535,
+          206413112,
+          206421991,
+          206405656
+        ],
+        "sum_tolerance_phase64": 3538867281,
+        "target_phase64": [
+          14844336029906224,
+          14841813353908402,
+          14857575914782819,
+          14828615525946775
+        ],
+        "tolerance_phase64": [
+          884791375,
+          884641012,
+          885580534,
+          883854360
+        ]
+      }
+    },
+    {
+      "additional_joint_wires": [],
+      "address_wires": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        25,
+        26,
+        27,
+        28
+      ],
+      "sample_address_count": 19054,
+      "witness": {
+        "absolute_mixed_difference_phase64": 2112790830,
+        "excludes_family": false,
+        "inputs": [
+          2338913,
+          2339106,
+          2337875,
+          2340144
+        ],
+        "minimum_worst_tolerance_fraction": 0.7347044310992018,
+        "packed_checkpoint_values": [
+          274708639,
+          274708294,
+          274710494,
+          274706439
+        ],
+        "sum_tolerance_phase64": 2875701766,
+        "target_phase64": [
+          12061815707932038,
+          12061318086521745,
+          12064493091303063,
+          12058642815941550
+        ],
+        "tolerance_phase64": [
+          718940240,
+          718910580,
+          719099825,
+          718751121
+        ]
+      }
+    },
+    {
+      "additional_joint_wires": [
+        7,
+        9,
+        10,
+        12
+      ],
+      "address_wires": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        25,
+        26,
+        27,
+        28
+      ],
+      "sample_address_count": 5970,
+      "witness": {
+        "absolute_mixed_difference_phase64": 30336495110,
+        "excludes_family": true,
+        "inputs": [
+          2950227,
+          2950630,
+          2944699,
+          2956158
+        ],
+        "minimum_worst_tolerance_fraction": 11.848075854986568,
+        "packed_checkpoint_values": [
+          439050496,
+          439049922,
+          439058370,
+          439042048
+        ],
+        "sum_tolerance_phase64": 2560457536,
+        "target_phase64": [
+          10739696433798007,
+          10738962989506976,
+          10749772371110021,
+          10728917388690072
+        ],
+        "tolerance_phase64": [
+          640135790,
+          640092074,
+          640736363,
+          639493309
+        ]
+      }
+    }
+  ],
+  "clean_wires_for_all_legal_inputs": [
+    29,
+    30,
+    31,
+    32,
+    33,
+    36,
+    37,
+    38
+  ],
+  "prefix_unconditional_toffoli_like": 320,
+  "registration_sha256": "3626def58578bc197372642da665b7d69760f10d8077bad5605cc41d85109da8",
+  "sample_sha256": "44b31cce2cb54fe828ca0c666f2228de6f1c592b2b8e86005ae957f45f743ce8"
+}

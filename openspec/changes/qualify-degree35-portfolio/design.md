@@ -96,6 +96,15 @@ emits 39 qubits. Retarget the source carry and routing layout across
 peak sites outside these intervals before assembling a cloud candidate.
 [Idle-wire recomputation screen](../../../docs/degree35-invsqrt-idle-recompute-27-11-2026-03-10-19.md)
 
+The divider checkpoint at line 5,856 has eight clean wires after 320
+Toffoli-like gates. The tested 8-bit and 13-bit table-addressed affine
+families fail exact mixed-difference witnesses. At 39 qubits the
+replacement has a provisional allowance of 454.32 charged equivalents
+under a 320-gate return assumption. Scope follow-up screens to a new
+address or a joint function of the remainder and quotient, and price the
+measured return before accepting a complete candidate.
+[Checkpoint phase screen](../../../docs/degree35-invsqrt-checkpoint-phase-27-11-2026-03-16-43.md)
+
 ## Verification and delivery
 
 Register a `portfolio-v5` archive with `--at-least-35` after qualifying a full

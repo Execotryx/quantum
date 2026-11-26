@@ -1,0 +1,13 @@
+{
+  "classification": "native_checkpoint_witnesses_and_official_target_crosscheck",
+  "listed_inputs_per_seed": 16,
+  "measurement_seeds": [
+    37109,
+    37111
+  ],
+  "native_prefix_phase_quarter_turn_multiple": true,
+  "native_prefix_toffoli_like_per_input": 320,
+  "official_integer_targets_and_tolerances_match": true,
+  "packed_checkpoint_values_match": true,
+  "screen_sha256": "36d287681cbd05d8ce34be46b7c69595c98dcd919a04dc182fe067eb1d961a69"
+}

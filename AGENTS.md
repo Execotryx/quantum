@@ -281,6 +281,9 @@
 - Prove both endpoints before clearing an idle nonlinear value. If two
   intervals overlap, check that each endpoint can still access every
   operand. Include the endpoint operations in complete width and cost.
+- A divider checkpoint phase witness must cancel the registered address,
+  affine, and joint terms. Compare its exact target difference with the
+  four tolerances, accounting for Clifford phases in the prefix and return.
 - The source-borrowing ripple restores each operand before reusing it.
   Exclude the active multiplier control from the dirty increment pool
   and repay the same dirty word before leaving the upper lane.

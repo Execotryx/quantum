@@ -268,6 +268,12 @@ The resulting **39-qubit** circuit passed one local verifier trajectory
 per legal input and cost **63,490.33** versus **61,696.25** for its control.
 [Recomputation coverage and native comparison](docs/degree35-invsqrt-idle-recompute-27-11-2026-03-10-19.md)
 
+The divider checkpoint at line 5,856 has eight clean wires after 320
+Toffoli-like gates. Exact witnesses rule out the tested 8-bit and 13-bit
+affine phase corrections, even when the 13-bit model includes a joint
+term on the next carry cell's four controls.
+[Divider checkpoint phase screen](docs/degree35-invsqrt-checkpoint-phase-27-11-2026-03-16-43.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh
