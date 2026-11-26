@@ -105,6 +105,8 @@ An idle-wire loan needs exact identities at both endpoints and all their
 operands live when used. Measure the emitted circuit including both ends.
 Scope a checkpoint phase rejection to the terms cancelled by its witness.
 Check the exact phase units and the prefix and return Clifford phases.
+Match checkpoint values after the bridge and audit classical suffix inputs.
+Use a zero-phase verifier run to price a retained return before adding phase.
 Restore the borrowed source after every ripple and exclude the row
 control when temporarily using other input wires for an increment.
 Use `portfolio-v5` for the inclusive score-35 floor. `portfolio-v4` retains

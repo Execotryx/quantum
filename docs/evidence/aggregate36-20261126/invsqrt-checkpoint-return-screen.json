@@ -1,0 +1,21 @@
+{
+  "cross_cut_values_match_after_bridge": true,
+  "prefix_toffoli_like": {
+    "guarded": 0,
+    "unconditional": 320
+  },
+  "registration_sha256": "65631f57220dbe7c79cff32fce50d80531ef61e3d2cf8923fdabeab77fe37d14",
+  "return_toffoli_like": {
+    "guarded": 11,
+    "unconditional": 302
+  },
+  "skeleton_assembly_sha256": "60fd1e50257e79273a3b667e227567510a5c508aa33b805cca3ddf20a7a10b60",
+  "suffix_input_bits": [
+    0,
+    1,
+    2,
+    3,
+    12
+  ],
+  "suffix_inputs_written_in_discarded_region": []
+}

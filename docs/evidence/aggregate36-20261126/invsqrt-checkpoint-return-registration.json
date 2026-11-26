@@ -1,0 +1,25 @@
+{
+  "assembly_sha256": "27ccb62d03bcba70353d382bb94c5dc636acd00b250c83f976df8d1176842146",
+  "bridge": "X q28",
+  "driver_sha256": "8dd9aeeec11204629ee982a4f4f477a1ddb5a39cb3d46dcd8d9d32e0ae501121",
+  "legal_inputs": 3133452,
+  "native": {
+    "batch_size": 292,
+    "control_beta": 1,
+    "control_salt": "checkpoint-return-control-20261127-dev",
+    "shots_per_x": 2,
+    "skeleton_beta": 0,
+    "skeleton_salt": "checkpoint-return-zero-20261127-dev"
+  },
+  "prefix_end": 5856,
+  "removed_prefix_rotation_line": 177,
+  "return_after_line": 18900,
+  "simulator_sha256": "2ee284839765dcbd33fa93d7b0c04456674c90c7fa04571bea5dffe7df3bf2a8",
+  "source_replay": {
+    "measurement_modes": [
+      "zero",
+      "rand"
+    ],
+    "seed": 37109
+  }
+}

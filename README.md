@@ -274,6 +274,12 @@ affine phase corrections, even when the 13-bit model includes a joint
 term on the next carry cell's four controls.
 [Divider checkpoint phase screen](docs/degree35-invsqrt-checkpoint-phase-27-11-2026-03-16-43.md)
 
+The divider prefix and its original return can be joined with `X q28`.
+The joined **39-qubit** circuit passed **6,266,904** exact zero-phase
+checks at **627.25** mean Toffoli-like gates. It leaves about **467.07**
+charged equivalents for new arithmetic at the incumbent's rotation price.
+[Measured checkpoint return](docs/degree35-invsqrt-checkpoint-return-27-11-2026-03-24-19.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

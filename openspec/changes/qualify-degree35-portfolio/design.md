@@ -98,12 +98,15 @@ peak sites outside these intervals before assembling a cloud candidate.
 
 The divider checkpoint at line 5,856 has eight clean wires after 320
 Toffoli-like gates. The tested 8-bit and 13-bit table-addressed affine
-families fail exact mixed-difference witnesses. At 39 qubits the
-replacement has a provisional allowance of 454.32 charged equivalents
-under a 320-gate return assumption. Scope follow-up screens to a new
-address or a joint function of the remainder and quotient, and price the
-measured return before accepting a complete candidate.
+families fail exact mixed-difference witnesses. At 39 qubits the joined
+prefix, `X q28` bridge, and retained return use 627.25 executed
+Toffoli-like gates in a full-domain zero-phase replay. At the incumbent
+rotation price this gives the replacement 467.07 charged equivalents.
+Scope follow-up screens to a new address or joint function of the
+remainder and quotient. Verify the new phase and price its complete
+emitted circuit before selecting it for the aggregate campaign.
 [Checkpoint phase screen](../../../docs/degree35-invsqrt-checkpoint-phase-27-11-2026-03-16-43.md)
+· [Measured checkpoint return](../../../docs/degree35-invsqrt-checkpoint-return-27-11-2026-03-24-19.md)
 
 ## Verification and delivery
 

@@ -284,6 +284,9 @@
 - A divider checkpoint phase witness must cancel the registered address,
   affine, and joint terms. Compare its exact target difference with the
   four tolerances, accounting for Clifford phases in the prefix and return.
+- A divider checkpoint splice must match quantum values after its bridge
+  and preserve all classical bits read by the retained suffix. Use the
+  zero-phase replay to price the return before testing a replacement phase.
 - The source-borrowing ripple restores each operand before reusing it.
   Exclude the active multiplier control from the dirty increment pool
   and repay the same dirty word before leaving the upper lane.
