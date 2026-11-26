@@ -62,6 +62,11 @@ exceed the full decoder's allocation when combined with the phase stage.
 [Locator baseline](docs/aggregate-above-36-dqi-locator-fraction-26-11-2026-08-46-31.md)
 · [Transposed product results](docs/aggregate-above-36-dqi-middle-product-26-11-2026-16-47-11.md)
 
+A newer public circuit catalog puts its most optimistic three-component
+combination at **33.25742**. Keeping its inverse-square-root and chemistry
+costs would require a DQI cost below **240.49B** to exceed 36.
+[Public circuit cost screen](docs/aggregate-above-36-public-frontier-26-11-2026-17-01-05.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

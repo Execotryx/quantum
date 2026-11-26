@@ -1,0 +1,177 @@
+{
+  "catalog_zero_failure_projection": {
+    "cost_product": 4.6300479844613784e+24,
+    "required_product_reduction": 0.21157923071210727,
+    "score_projection": 33.257417279631596,
+    "strict_cost_ceilings_with_other_two_fixed": {
+      "dfthcsos": 196420559.97215927,
+      "dqi": 240492180292.72595,
+      "invsqrt": 48036.54422165251
+    }
+  },
+  "chemistry_latest_source": {
+    "dependencies": [
+      "prvsiyan/verifier-guided-quantum-circuit-optimization",
+      "maoxin123/qcc-33-17-3-357-toffoli-chemistry-loaders"
+    ],
+    "ref": "goodpjw2008/qcc-shorter-chemistry-loaders-lb-33-25737",
+    "version": 25
+  },
+  "classification": "dated_public_catalog_screen",
+  "dataset": "manwithacat/vqcc-apache-public-circuits",
+  "dqi_stage": {
+    "phase_gates": 194493,
+    "qubits": 879,
+    "reciprocal_pair_gates": 72708,
+    "zero_failure_remaining_gates": 66793.20477717221
+  },
+  "catalog_rows_by_task": {
+    "chemistry": 472,
+    "dqi": 161,
+    "invsqrt": 135
+  },
+  "hypothetical_dqi_width_limits": [
+    {
+      "hypothetical_failed_shots": 0,
+      "qubits": 879,
+      "repetition_factor": 1.1912604648115832,
+      "strict_mean_gate_ceiling": 261286.2047771722
+    },
+    {
+      "hypothetical_failed_shots": 1,
+      "qubits": 879,
+      "repetition_factor": 1.1967314991687559,
+      "strict_mean_gate_ceiling": 260091.69639798766
+    },
+    {
+      "hypothetical_failed_shots": 8,
+      "qubits": 879,
+      "repetition_factor": 1.2230139975925918,
+      "strict_mean_gate_ceiling": 254502.34123599544
+    },
+    {
+      "hypothetical_failed_shots": 0,
+      "qubits": 888,
+      "repetition_factor": 1.1912604648115832,
+      "strict_mean_gate_ceiling": 256016.70235933457
+    },
+    {
+      "hypothetical_failed_shots": 1,
+      "qubits": 888,
+      "repetition_factor": 1.1967314991687559,
+      "strict_mean_gate_ceiling": 254846.28428678372
+    },
+    {
+      "hypothetical_failed_shots": 8,
+      "qubits": 888,
+      "repetition_factor": 1.2230139975925918,
+      "strict_mean_gate_ceiling": 249369.6527206101
+    },
+    {
+      "hypothetical_failed_shots": 0,
+      "qubits": 900,
+      "repetition_factor": 1.1912604648115832,
+      "strict_mean_gate_ceiling": 249235.10437683843
+    },
+    {
+      "hypothetical_failed_shots": 1,
+      "qubits": 900,
+      "repetition_factor": 1.1967314991687559,
+      "strict_mean_gate_ceiling": 248095.68937856494
+    },
+    {
+      "hypothetical_failed_shots": 8,
+      "qubits": 900,
+      "repetition_factor": 1.2230139975925918,
+      "strict_mean_gate_ceiling": 242764.12769743302
+    }
+  ],
+  "input_sha256": {
+    "backend.json": "4767a68584b091b64d88e96e665930a5bf413fe23625322b86c48d1a40087a49",
+    "chemistry_latest_source_payload": "5fa16c131654eefc1dd8c7588d4e562fec8e65d1ace190f83e7be5bcd81f577d",
+    "dqi_structure_card": "c5f17d0f922947615fa9c667984272f35754976adb6926d43847d521357b80a3",
+    "leaderboard_summary.csv": "19824477268b96f5d3ecfce0343e0e7ec6ed9d7ca3d8fceb7ff876c0e6f4d183",
+    "manifest.csv": "446fb52afb9e6472bb85476c7bb28414e6c00108ea7f768d6a39b6cbe8289b0f",
+    "public_cloud_registration": "bdcdf90a52d677ca26f143435383cfd4fdd763f66f722a2b5b8faedeadb4967e"
+  },
+  "leaderboard_snapshot": {
+    "score_1st": "34.50408",
+    "snapshot_utc": "2026-11-26 08:37:22",
+    "teams": "3762"
+  },
+  "measured_dqi_projection": {
+    "cost_product": 4.641748246309502e+24,
+    "required_product_reduction": 0.21356657017079106,
+    "score_projection": 33.22945023825488,
+    "strict_cost_ceilings_with_other_two_fixed": {
+      "dfthcsos": 195925450.8317925,
+      "dqi": 240492180292.72595,
+      "invsqrt": 47915.46050150049
+    }
+  },
+  "selected_rows": [
+    {
+      "author": "prvsiyan",
+      "cost": 60927.54794503887,
+      "cost_column": "local_task_score",
+      "dqi_expected_basis": "",
+      "generator_ref": "",
+      "licence": "Apache-2.0",
+      "local_report_sha256": "d110e2ccf67d8fa0fabf61c313c946b490a4a637b25fd380ac33ef5b964492f3",
+      "qubits": "37",
+      "sha256": "6b59214530108d8c49c648f96c53b963d9b8477f8813db1edcf478bf45f6cf03",
+      "source_kind": "derived",
+      "source_notebook_url": "https://www.kaggle.com/code/prvsiyan/verifier-guided-quantum-circuit-optimization",
+      "source_notebook_version": "60",
+      "task": "invsqrt"
+    },
+    {
+      "author": "Atakan Aldemir",
+      "cost": 305030244839.87177,
+      "cost_column": "dqi_zero_failure_cost",
+      "dqi_expected_basis": "",
+      "generator_ref": "",
+      "licence": "Apache-2.0",
+      "local_report_sha256": "ac63de85de7c3c50fd00d580fb7780e3700cb64e10ccde6614b48d0cd6e0b167",
+      "qubits": "900",
+      "sha256": "dbb2ada3a4dade833935ab64cc26ebba05cdf4b27011c3607cee7eb8bddf9e24",
+      "source_kind": "unclassified",
+      "source_notebook_url": "https://www.kaggle.com/code/atakanaldemir/qcc-shared-products-and-controlled-refits",
+      "source_notebook_version": "15",
+      "task": "dqi"
+    },
+    {
+      "author": "Tony Li (Entangled Team)",
+      "cost": 305801064872.01855,
+      "cost_column": "dqi_expected_cost",
+      "dqi_expected_basis": "48-draw sweep",
+      "generator_ref": "",
+      "licence": "Apache-2.0",
+      "local_report_sha256": "f84d162bcbf084a148cc0a8a8e357ebec9fd39356500c338655ff6cf350fd6bc",
+      "qubits": "900",
+      "sha256": "4b5721411adc239f61fc11c773a2358b75dfe7cb15586efae4f0459c77d77e52",
+      "source_kind": "outputs-only",
+      "source_notebook_url": "https://www.kaggle.com/code/tonylica/quantum-ai-32-85306-ready",
+      "source_notebook_version": "1",
+      "task": "dqi"
+    },
+    {
+      "author": "goodpjw2008",
+      "cost": 249131640.89977962,
+      "cost_column": "local_task_score",
+      "dqi_expected_basis": "",
+      "generator_ref": "",
+      "licence": "Apache-2.0",
+      "local_report_sha256": "675b99249a47384b7df305a8059b2b04a6a4991479a50b3c88f80a6393a5d7be",
+      "qubits": "405",
+      "sha256": "70bf05a849fef5e55b939e704209b53def2ec5b81e13bdc2de8445721b64929c",
+      "source_kind": "unclassified",
+      "source_notebook_url": "https://www.kaggle.com/code/goodpjw2008/qcc-shorter-chemistry-loaders-lb-33-25737",
+      "source_notebook_version": "24",
+      "task": "chemistry"
+    }
+  ],
+  "stage_card_labels": "no-reference",
+  "strict_36_cost_product": 3.650425993748897e+24,
+  "version": 218
+}

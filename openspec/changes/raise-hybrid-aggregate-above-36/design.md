@@ -6,6 +6,16 @@ The strict cost-product ceiling for 36 is 3.650425993748897 × 10²⁴. The pref
 
 ## DQI experiments
 
+The version-218 public catalog screen projects 33.25742 even at its
+zero-failure DQI cost. With the catalog's cheapest measured companions,
+a DQI-only route must cost below 240.492B. At 879 qubits, the official
+zero-failure repetition factor leaves fewer than 66,794 mean gates after
+the measured supplied-evaluator stage. The staged sequential reciprocal
+already exceeds that remainder on its first round trip. Retain the
+balanced allocation for genuine companion improvements. The catalog
+projection and published leaderboard snapshot do not qualify an archive.
+[Screen and stage budgets](../../../docs/aggregate-above-36-public-frontier-26-11-2026-17-01-05.md)
+
 1. Profile the exact source parent through locator forward, quotient or converter, phase scan, and return. Recover the inherited assembly's semantic cutpoints against its algebraic control within a registered cap. Use explicit shared syndrome panels and classical records at every boundary, pin the simulator seed and account for differing measurement order. Reconcile static and executed counts with a monolithic run. Include maximum live words and serialized width. A target of 888 qubits and 280,000 mean gates needs about 36,123 fewer mean gates than the 900-qubit public comparison. The exposed D16 substitutions total just 616 static Toffolis and cannot fund that reduction alone.
 2. Emit separate storage and arithmetic ablations. Test field-word aliasing across a real stage boundary, a paired quotient schedule, and a source-level trace or residue phase computation. At width 888 and a 280B budget, the permitted mean is about 296,712 at one error or 290,336 at eight. Before full resynthesis, reconcile the needed net gain with disjoint execution-weighted estimates that include forward and cleanup work. Prove the trace-dual map for every unit mask at every relevant root and preserve classical mask dependence, branch phases, and the gauge correction. Account for the inverse's reconstruction state and retain any word that a later stage needs. A two-bank layout and a full implicit-trace replay at every address each need an explicit resource justification.
 3. Retain the historical, adversarial, pole, low-weight and terminated fixtures. Check exact forward and inverse state, named registers, zero scratch, and phase with asymmetric measurement records. Include wrong basis, wrong phase, dirty scratch and loss-of-pole mutations. Stop an ablation before full pricing if exact boundary composition or its measured resource balance fails.
