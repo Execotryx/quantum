@@ -275,6 +275,9 @@
 - An incumbent signed-row splice requires its full sign frame and local
   measurement phase repairs. Prove the incoming carry and source are
   restored. Recheck the complete width after lowering the row workspace.
+- A rotation may borrow a nonlinear product only after checking its
+  value across the legal domain and proving independence from prior
+  measurement outcomes. Restore it before either factor is erased.
 - The source-borrowing ripple restores each operand before reusing it.
   Exclude the active multiplier control from the dirty increment pool
   and repay the same dirty word before leaving the upper lane.

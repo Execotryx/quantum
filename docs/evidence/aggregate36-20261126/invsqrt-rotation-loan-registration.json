@@ -1,0 +1,17 @@
+{
+  "assembly_sha256": "27ccb62d03bcba70353d382bb94c5dc636acd00b250c83f976df8d1176842146",
+  "classification": "development_rotation_wire_loan",
+  "driver_sha256": "c8b75dbdbf1c17473a3937138497cc216d9cd1be28b9007693e721855a0f64de",
+  "first_edited_line": 9871,
+  "legal_inputs": 3133452,
+  "simulator_sha256": "2ee284839765dcbd33fa93d7b0c04456674c90c7fa04571bea5dffe7df3bf2a8",
+  "unconditional_toffoli_delta": 2,
+  "verifier": {
+    "batch_size": 292,
+    "salts": {
+      "control": "rotation-loan-control-20261127-dev",
+      "loan": "rotation-loan-candidate-20261127-dev"
+    },
+    "shots_per_x": 2
+  }
+}

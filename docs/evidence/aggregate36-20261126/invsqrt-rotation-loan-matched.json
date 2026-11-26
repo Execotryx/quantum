@@ -1,0 +1,12 @@
+{
+  "input_count": 2816,
+  "input_restored": true,
+  "input_seed": 192227,
+  "measurement_seeds": [
+    37109,
+    37111
+  ],
+  "phase_matched": true,
+  "scratch_zero": true,
+  "screen_sha256": "11721547d5d8010969037768f5dec515fc317f53775d0d606e798cd452cf8aaf"
+}

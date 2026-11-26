@@ -256,6 +256,13 @@ carries passed one trajectory for every legal input. The complete circuit
 used 39 qubits and cost **64,504.29** versus **61,696.30** for the control.
 [Source carry census and native comparison](docs/degree35-invsqrt-incumbent-rows-27-11-2026-02-25-56.md)
 
+The nonlinear `q19` loan preserved tracked phase in a matched native
+comparison. It frees the original rotation target locally for two extra
+Toffolis. Both **39-qubit** circuits passed **6,266,904** local verifier
+trajectories. The loan cost **61,774.21** versus **61,696.20** for the
+matched-layout control.
+[Rotation-loan comparison](docs/degree35-invsqrt-rotation-loan-27-11-2026-02-52-43.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

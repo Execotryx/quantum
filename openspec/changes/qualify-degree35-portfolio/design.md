@@ -83,6 +83,12 @@ have affine rank 39 at source lines 5,948, 9,871, and 10,438, so test
 changes to which values are retained or recomputed across those cuts.
 [Incumbent carry census and source replay](../../../docs/degree35-invsqrt-incumbent-rows-27-11-2026-02-25-56.md)
 
+A native `q19` loan demonstrates reuse of a nonlinear value through one
+rotation and its measurement repayment. The complete circuit still
+requires 39 qubits. For the next width comparison, account for all peak
+windows in one schedule and measure the total recomputation charge.
+[Rotation-loan comparison](../../../docs/degree35-invsqrt-rotation-loan-27-11-2026-02-52-43.md)
+
 ## Verification and delivery
 
 Register a `portfolio-v5` archive with `--at-least-35` after qualifying a full

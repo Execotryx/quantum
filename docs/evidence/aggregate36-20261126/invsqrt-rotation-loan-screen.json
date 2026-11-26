@@ -1,0 +1,18 @@
+{
+  "prefix_identity": "q19=q20 AND q24; q21=0 for all legal x and outcomes",
+  "registration_sha256": "acd9e42ef124e55da0f7cdc9aabfaa7b584b0cf502d7bbcf0ec10564eac30fa0",
+  "width_screen": {
+    "control": {
+      "assembly_sha256": "d31c6861d22800ba9e3f8fdc7ee02a35361a43228fcf6c11b141ef194fcb831f",
+      "interval_peak": 39,
+      "lent_input_segments": 1,
+      "width": 39
+    },
+    "loan": {
+      "assembly_sha256": "b04edf03b8a83d90c539004fc89d79e2501338ce9eab76bf7bacc4cada209768",
+      "interval_peak": 39,
+      "lent_input_segments": 1,
+      "width": 39
+    }
+  }
+}
