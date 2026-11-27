@@ -139,6 +139,16 @@ The verified v221 assembly still uses 3,306. Prioritize changes that can
 close a demonstrated resource gap on serialized components.
 [Joint budgets and catalog comparison](../../../docs/degree35-joint-cost-screen-27-11-2026-04-37-37.md)
 
+The six-bit fixed-weight screens fail the decoded accuracy gate. The
+fixed-projector span diagnostic puts all three tested tables above the
+two-body tolerance even after relaxing the weights. The seven-bit ten-word
+layout emits 5,046 static ANGLE gates per pass, above its 2,321-gate budget.
+For a new seven-bit loader, identify angles acting on two zero orbital
+coordinates and check the resulting vectors and decoded residuals before
+pricing affected transitions. For the 884-qubit DQI projection at the
+reported companion targets, one failure already reduces the score below 35.
+[Cloud precision and loader screens](../../../docs/degree35-chemistry-precision-and-joint-margin-27-11-2026-05-00-22.md)
+
 ## Verification and delivery
 
 Register a `portfolio-v5` archive with `--at-least-35` after qualifying a full

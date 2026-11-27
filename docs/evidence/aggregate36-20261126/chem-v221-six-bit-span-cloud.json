@@ -1,0 +1,71 @@
+{
+  "backend_inventory_sha256": "bd68ed6223bbba78821192be217cb3dc9a6af5e0ae1c07097361511bb189edd4",
+  "classification": "cloud_fixed_chemistry_projector_span_diagnostic",
+  "driver_sha256": "e6501fb33144b92474119d59b9a433143565e65d94550bdc8fe57cbaf89175ad",
+  "factorization_sha256": "25cab2c621e78711480aa975f42a8386414f1f2e1466c3d1f01d5be3e31cae20",
+  "packing_source_sha256": "be26844d7e6772d848e5e4ee40733eab4e4018eded749158f82899737a5ad360",
+  "results": {
+    "control": {
+      "exact_duplicate_removal": {
+        "basis_columns": 1143,
+        "feature_reconstruction_relative_error": 1.0166976892985717e-15,
+        "orthogonality_error": 2.5953494724365453e-14,
+        "outside_span_residual": 0.012712575985873314
+      },
+      "raw_features": {
+        "basis_columns": 1143,
+        "feature_reconstruction_relative_error": 1.0450218559039883e-15,
+        "orthogonality_error": 2.5995858332949017e-14,
+        "outside_span_residual": 0.01271257598587333
+      },
+      "table_sha256": "373b149f0a4c4245f7f8d93185f86527d51bf0c2f84650532419d0aef92d9604"
+    },
+    "tie_down": {
+      "exact_duplicate_removal": {
+        "basis_columns": 1143,
+        "feature_reconstruction_relative_error": 9.943344556525035e-16,
+        "orthogonality_error": 2.6029650252202858e-14,
+        "outside_span_residual": 0.2879830294285492
+      },
+      "raw_features": {
+        "basis_columns": 1143,
+        "feature_reconstruction_relative_error": 1.0044041261728628e-15,
+        "orthogonality_error": 2.6104786051158756e-14,
+        "outside_span_residual": 0.2879830294285492
+      },
+      "table_sha256": "29dfd5e0231f933f61564a2845dcc96a4b9d965706eb4d1f439b0ef0a7153e97"
+    },
+    "tie_to_even": {
+      "exact_duplicate_removal": {
+        "basis_columns": 1143,
+        "feature_reconstruction_relative_error": 9.770201280283958e-16,
+        "orthogonality_error": 2.620166891245527e-14,
+        "outside_span_residual": 0.3361112223774432
+      },
+      "raw_features": {
+        "basis_columns": 1143,
+        "feature_reconstruction_relative_error": 9.881986690062625e-16,
+        "orthogonality_error": 2.6328505669229402e-14,
+        "outside_span_residual": 0.336125814275404
+      },
+      "table_sha256": "b740a4cef620c0139adf44e87fbe98bdfb2b6665318997a701ed02b8fc5a44e1"
+    },
+    "tie_up": {
+      "exact_duplicate_removal": {
+        "basis_columns": 1143,
+        "feature_reconstruction_relative_error": 9.883418542149604e-16,
+        "orthogonality_error": 2.58745374991407e-14,
+        "outside_span_residual": 0.2875785220681005
+      },
+      "raw_features": {
+        "basis_columns": 1143,
+        "feature_reconstruction_relative_error": 1.002834651837028e-15,
+        "orthogonality_error": 2.5841584563695102e-14,
+        "outside_span_residual": 0.2875785220681005
+      },
+      "table_sha256": "d2a8240f4d320b5669d44ec807315ca0348e70aa1be354147dc9ffbc6e330226"
+    }
+  },
+  "scope": "floating-point outside-span residual, fixed decoded projectors only; no certified bound for variable basis",
+  "target_sha256": "7e72455f4f6e6a476fed9c1626a96cebea775c4fc071145fd056af23d63e8393"
+}

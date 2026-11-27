@@ -1,0 +1,161 @@
+{
+  "backend_inventory_sha256": "bd68ed6223bbba78821192be217cb3dc9a6af5e0ae1c07097361511bb189edd4",
+  "basis_audit": [
+    {
+      "active_bases": 127,
+      "active_channels_or_offsets": 46,
+      "distinct_projector_signatures": 127,
+      "group": 0,
+      "unused_bases": 0
+    },
+    {
+      "active_bases": 127,
+      "active_channels_or_offsets": 46,
+      "distinct_projector_signatures": 127,
+      "group": 1,
+      "unused_bases": 0
+    },
+    {
+      "active_bases": 127,
+      "active_channels_or_offsets": 46,
+      "distinct_projector_signatures": 127,
+      "group": 2,
+      "unused_bases": 0
+    },
+    {
+      "active_bases": 127,
+      "active_channels_or_offsets": 46,
+      "distinct_projector_signatures": 127,
+      "group": 3,
+      "unused_bases": 0
+    },
+    {
+      "active_bases": 127,
+      "active_channels_or_offsets": 46,
+      "distinct_projector_signatures": 127,
+      "group": 4,
+      "unused_bases": 0
+    },
+    {
+      "active_bases": 127,
+      "active_channels_or_offsets": 46,
+      "distinct_projector_signatures": 127,
+      "group": 5,
+      "unused_bases": 0
+    },
+    {
+      "active_bases": 127,
+      "active_channels_or_offsets": 46,
+      "distinct_projector_signatures": 127,
+      "group": 6,
+      "unused_bases": 0
+    },
+    {
+      "active_bases": 127,
+      "active_channels_or_offsets": 46,
+      "distinct_projector_signatures": 127,
+      "group": 7,
+      "unused_bases": 0
+    },
+    {
+      "active_bases": 127,
+      "active_channels_or_offsets": 46,
+      "distinct_projector_signatures": 127,
+      "group": 8,
+      "unused_bases": 0
+    }
+  ],
+  "basis_key": "signed factored trigonometric projector equivalence",
+  "catalog_version": 221,
+  "classification": "cloud_fixed_geometry_decoded_precision_screen",
+  "control": {
+    "E_SOS": -22144.18824800002,
+    "E_gap": 3.914898000020912,
+    "Lambda": 283.05651199487727,
+    "error_1": 0.01999999995999983,
+    "error_2": 0.01999999996192062,
+    "gap_in_domain": true,
+    "lambda_eff": 46.91426562414372
+  },
+  "control_brot": 7,
+  "driver_sha256": "b0de15bfb8b2dc738159d605bb8df7e18c94cd41dd08bca0be29ae7015e406b5",
+  "factorization_sha256": "25cab2c621e78711480aa975f42a8386414f1f2e1466c3d1f01d5be3e31cae20",
+  "heuristic": {
+    "6": {
+      "givens_rotations_toffoli": 1650,
+      "inner_state_prep_persistent_qubits": 43,
+      "inner_state_prep_qubits": 330,
+      "inner_state_prep_temporary_qubits": 287,
+      "inner_state_prep_toffoli": 4213,
+      "outer_state_prep_persistent_qubits": 40,
+      "outer_state_prep_qubits": 130,
+      "outer_state_prep_temporary_qubits": 90,
+      "outer_state_prep_toffoli": 337,
+      "persistent_qubits": 83,
+      "qubits": 370,
+      "temporary_qubits": 287,
+      "toffoli": 6200
+    },
+    "7": {
+      "givens_rotations_toffoli": 1950,
+      "inner_state_prep_persistent_qubits": 43,
+      "inner_state_prep_qubits": 330,
+      "inner_state_prep_temporary_qubits": 287,
+      "inner_state_prep_toffoli": 4213,
+      "outer_state_prep_persistent_qubits": 40,
+      "outer_state_prep_qubits": 130,
+      "outer_state_prep_temporary_qubits": 90,
+      "outer_state_prep_toffoli": 337,
+      "persistent_qubits": 83,
+      "qubits": 370,
+      "temporary_qubits": 287,
+      "toffoli": 6500
+    }
+  },
+  "scope": "official decoded accuracy at fixed weights, and geometry audit; no six-bit ANGLE circuit or native cost",
+  "six_bit": [
+    {
+      "accuracy_passed": false,
+      "metrics": {
+        "E_SOS": -22157.969582621135,
+        "E_gap": 17.696232621136005,
+        "Lambda": 296.83784661599213,
+        "error_1": 4.149872458094197,
+        "error_2": 0.8583109607474502,
+        "gap_in_domain": true,
+        "lambda_eff": 100.95873671934497
+      },
+      "rounding": "tie_down",
+      "words_sha256": "29dfd5e0231f933f61564a2845dcc96a4b9d965706eb4d1f439b0ef0a7153e97"
+    },
+    {
+      "accuracy_passed": false,
+      "metrics": {
+        "E_SOS": -22159.102266882073,
+        "E_gap": 18.828916882073827,
+        "Lambda": 297.97053087692814,
+        "error_1": 4.064959710088433,
+        "error_2": 0.8591074670446386,
+        "gap_in_domain": true,
+        "lambda_eff": 104.24200980135667
+      },
+      "rounding": "tie_up",
+      "words_sha256": "d2a8240f4d320b5669d44ec807315ca0348e70aa1be354147dc9ffbc6e330226"
+    },
+    {
+      "accuracy_passed": false,
+      "metrics": {
+        "E_SOS": -22163.417179320277,
+        "E_gap": 23.14382932027729,
+        "Lambda": 302.285443315133,
+        "error_1": 4.981988948023576,
+        "error_2": 1.0696654216796564,
+        "gap_in_domain": true,
+        "lambda_eff": 116.00193350359925
+      },
+      "rounding": "tie_to_even",
+      "words_sha256": "b740a4cef620c0139adf44e87fbe98bdfb2b6665318997a701ed02b8fc5a44e1"
+    }
+  ],
+  "tested_brot": 6
+}

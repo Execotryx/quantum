@@ -314,6 +314,11 @@ tested affine replacements for 731 inverse-square-root value gates. All
 [Joint targets](docs/degree35-joint-cost-screen-27-11-2026-04-37-37.md) ·
 [Cloud routing screen](docs/degree35-invsqrt-affine-routing-27-11-2026-04-45-02.md)
 
+Cloud chemistry screens rejected all three six-bit tables at fixed weights.
+The original seven-bit table compiled into eight ten-word loaders, priced
+at **342.497M** from static counts versus the verified **249.132M** control.
+[Precision, loader width, and score-35 margin](docs/degree35-chemistry-precision-and-joint-margin-27-11-2026-05-00-22.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh
