@@ -203,6 +203,19 @@ for the pinned stage. With the currently observed companions, the
 Treat the 7,529-gate gap as conditional on the companion gains.
 [Cloud measurement screens](../../../docs/degree35-dqi-return-measurements-27-11-2026-14-49-29.md)
 
+The v222 chemistry update reduces the catalog assembly's charge by two
+gates at unchanged width. The exact augmented-Gram bound caps savings
+from channel rotations at about 16,794 in chemistry cost at this layout.
+The complementary factor `2*Lambda-E_gap` has a lower bound from the
+pinned symmetry shift and reference energy alone. With the strict gap
+floor the derived effective-normalization floor is about 46.78618.
+At the 230M target, screen shapes and loader schedules against a
+`T_total * Q_total` ceiling of approximately 4,915,982 before admitting
+a fit. Normalization-only changes cannot meet this target at 405 qubits
+and 13,110 gates. Preserve residual and decoded checks for resource
+candidates and price both loader directions.
+[Exact chemistry bound and v222 comparison](../../../docs/degree35-chemistry-gram-bound-27-11-2026-15-00-55.md)
+
 ## Verification and delivery
 
 Register a `portfolio-v5` archive with `--at-least-35` after qualifying a full

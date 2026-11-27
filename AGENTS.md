@@ -155,6 +155,10 @@
 - A frozen terminal loader dictionary protects products seen by later gates,
   phase repairs or non-word wires. Free high- and low-address corrections
   relax the feasibility test and give no emitted saving on their own.
+- An augmented chemistry Gram bound fixes the identity coefficient row and
+  physical weight rows together. A physical-weight-only bound allows the
+  identity coefficients to change. Keep the decoded projectors and the
+  verifier's symmetry constants pinned for score projections.
 - For DQI pair-fusion screens, transport controls and output directions in
   the same affine frame. End the screen at phase, measurement or guard
   boundaries and distinguish ceilings from emitted savings.

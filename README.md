@@ -338,6 +338,13 @@ the bank model. [Measurement screens and score budget](docs/degree35-dqi-return-
 The published Berlekamp–Massey alternative exceeds the width and gate
 budgets at its reported layout. [Decoder research comparison](docs/degree35-dqi-berlekamp-massey-research-27-11-2026-05-37-57.md)
 
+The v222 chemistry assembly credits Дворкин Евгений Владимирович,
+goodpjw2008, and maoxin123. Its published component cost projects a full
+score of **33.20823** with the prior measured companions. Exact cloud
+arithmetic caps the normalization savings from channel rotations at about
+**16,794** in chemistry cost at its current layout.
+[Chemistry comparison and bound](docs/degree35-chemistry-gram-bound-27-11-2026-15-00-55.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

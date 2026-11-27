@@ -284,6 +284,8 @@ See `docs/baseline-campaign-02-11-2026-01-19-10.md` for measurement definitions.
   support in tree order and use emitted loader counts for resource comparisons.
 - A DQI measurement displacement ceiling grants repairs for free. Price a
   rewrite only with its outcome map and original guard and bit-write order.
+- Chemistry Gram bounds keep the orbital projectors fixed. Use the augmented
+  Gram for gap invariance and the physical Gram for arbitrary offset screens.
 - Hold terminal loader products fixed when interpreting relaxed deletion
   feasibility. A changed control or cache requires a new emitted comparison.
 - Treat DQI affine transport counts as bounds on the screened stretches.
