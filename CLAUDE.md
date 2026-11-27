@@ -282,6 +282,8 @@ See `docs/baseline-campaign-02-11-2026-01-19-10.md` for measurement definitions.
   Exclude target wires from controls except for the preserved swap parity.
 - When choosing new words for zero-valued Givens rotations, propagate exact
   support in tree order and use emitted loader counts for resource comparisons.
+- A DQI measurement displacement ceiling grants repairs for free. Price a
+  rewrite only with its outcome map and original guard and bit-write order.
 - Hold terminal loader products fixed when interpreting relaxed deletion
   feasibility. A changed control or cache requires a new emitted comparison.
 - Treat DQI affine transport counts as bounds on the screened stretches.

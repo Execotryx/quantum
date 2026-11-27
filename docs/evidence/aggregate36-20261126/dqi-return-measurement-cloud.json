@@ -1,0 +1,11 @@
+{
+  "ccx": 107422,
+  "ccx_savings_ceiling": 0,
+  "driver_sha256": "3b0bde2ccab3ff6bcf5a369f7ab8937b833ec367af7473cec8ab29be1a86c0ab",
+  "largest_suffix": 0,
+  "nontrivial_suffixes": 0,
+  "scope": "unguarded CX and CCX suffixes before existing unguarded HMR; no emitted circuit",
+  "source_sha256": "b2da55202f6b574ee9af452f25f34772c2a0e90bfc5ce102129c0861faaf1fcf",
+  "unconditional_ccx": 102744,
+  "unconditional_measurements": 18460
+}

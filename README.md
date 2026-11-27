@@ -329,9 +329,14 @@ An exact cloud screen of the 206-gate terminal loader found all **124**
 independent products necessary with their truth functions and cache frozen.
 [Terminal product-deletion screen](docs/degree35-terminal-loader-deletion-27-11-2026-05-21-26.md)
 
-The cloud DQI return screen found zero compatible pair fusions across
-**107,045** unconditional Toffolis within the tested phase and measurement
-boundaries. [Affine transport screen](docs/degree35-dqi-return-fusion-screen-27-11-2026-05-32-47.md)
+The cloud DQI return screen found zero compatible pair fusions among
+**107,045** Toffolis without an inline condition, including Toffolis inside
+classical guard blocks. [Affine transport screen](docs/degree35-dqi-return-fusion-screen-27-11-2026-05-32-47.md)
+Two follow-up cloud screens found no deletable CCXs in the tested
+single-wire and measured-bank models, even with free phase repairs in
+the bank model. [Measurement screens and score budget](docs/degree35-dqi-return-measurements-27-11-2026-14-49-29.md)
+The published Berlekamp–Massey alternative exceeds the width and gate
+budgets at its reported layout. [Decoder research comparison](docs/degree35-dqi-berlekamp-massey-research-27-11-2026-05-37-57.md)
 
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 

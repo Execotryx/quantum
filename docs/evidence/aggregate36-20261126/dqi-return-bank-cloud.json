@@ -1,0 +1,11 @@
+{
+  "ccx": 107422,
+  "ccx_savings_ceiling": 0,
+  "driver_sha256": "476a4a7fa9918b220fff607d9d6d5b22bfeba26f93489ee3ae0f8792bac57cc3",
+  "first_opportunity": null,
+  "lines": 19804589,
+  "peak_dimension": 60,
+  "scope": "optimistic deletions through unguarded affine gates and HMR; phase repairs granted; no emitted circuit",
+  "source_sha256": "b2da55202f6b574ee9af452f25f34772c2a0e90bfc5ce102129c0861faaf1fcf",
+  "unguarded_measurements": 18460
+}

@@ -180,6 +180,29 @@ directions also give zero pairs. Repeated-direction groups contain at most
 with a phase proof or choose a different arithmetic construction.
 [Cloud affine transport screen](../../../docs/degree35-dqi-return-fusion-screen-27-11-2026-05-32-47.md)
 
+For measurement-based return cleanup, start with the hash-pinned count of
+unguarded CCX and CX writes to a target that is next consumed by an
+unguarded X-basis measurement. Track both inline conditions and nested
+guard scopes. A broader proposed screen propagates a displacement
+subspace backward through affine gates. At HMR on wire `q`, constrain
+the outgoing displacement on `q` to zero, then add the direction `e_q`.
+For a CCX with target direction in the current subspace, count the gate
+and optimistically omit it. For the other CCXs constrain both control
+displacements to zero. End each frame at guard boundaries or unsupported
+operations. This bounds joint deletions in the fenced model while granting
+phase repairs for free. If its ceiling can cover the registered budget,
+bind one exact source slice and prove its measurement-outcome mapping,
+phase correction, original guard behavior, restored data and scratch
+before emitting a complete candidate.
+[Measurement research](../../../docs/degree35-dqi-berlekamp-massey-research-27-11-2026-05-37-57.md)
+
+Both cloud measurement screens found zero eligible CCXs. The broader
+screen reached 60 displacement dimensions. Retire these fenced rewrites
+for the pinned stage. With the currently observed companions, the
+900-qubit zero-failure allowance requires roughly 48,296 fewer mean gates.
+Treat the 7,529-gate gap as conditional on the companion gains.
+[Cloud measurement screens](../../../docs/degree35-dqi-return-measurements-27-11-2026-14-49-29.md)
+
 ## Verification and delivery
 
 Register a `portfolio-v5` archive with `--at-least-35` after qualifying a full

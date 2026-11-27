@@ -1,6 +1,6 @@
 # Affine transport screen of DQI return products
 
-Google Cloud screened all **107,045** unconditional CCXs in the pinned Tony Li decoder return. The original count of **51,524** disjoint pairs allows arbitrary pairing within stretches of unguarded Clifford and CCX operations. The new screen transports the control rows and output directions through X, CX, and SWAP operations in a common affine frame. Measurement, phase, and guards end each stretch. [Initial census and budget](degree35-dqi-return-fusion-research-27-11-2026-05-25-09.md) · [Cloud result](evidence/aggregate36-20261126/dqi-return-fusion-cloud.json)
+Google Cloud screened all **107,045** CCXs without an inline condition in the pinned Tony Li decoder return. This includes CCXs inside classical guard blocks. The original receipt calls this broader count `unconditional_ccx`. The original count of **51,524** disjoint pairs allows arbitrary pairing within stretches of Clifford and CCX operations without inline conditions. The screen transports the control rows and output directions through X, CX, and SWAP operations in a common affine frame. Measurement, phase, and guard instructions end each stretch. [Initial census and budget](degree35-dqi-return-fusion-research-27-11-2026-05-25-09.md) · [Cloud result](evidence/aggregate36-20261126/dqi-return-fusion-cloud.json)
 
 | Criterion | Static pair ceiling |
 | --- | ---: |

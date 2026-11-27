@@ -158,6 +158,10 @@
 - For DQI pair-fusion screens, transport controls and output directions in
   the same affine frame. End the screen at phase, measurement or guard
   boundaries and distinguish ceilings from emitted savings.
+- In DQI return measurement screens, track nested and inline guards.
+  A measured-bank displacement ceiling grants phase correction for free.
+  Before emitting a rewrite, bind the outcome map, guards and original bit
+  writes to the exact source slice.
 - Symbolic liveness may release a wire when it proves zero across all
   measurement outcomes. Fix the first and last intervals of named input
   wires. ANGLE product substitutions must agree on both complete legal
