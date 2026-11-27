@@ -165,6 +165,14 @@ Any follow-up loader candidate needs new product controls or a new cache
 or packet layout and separate native pricing.
 [Exact terminal deletion result](../../../docs/degree35-terminal-loader-deletion-27-11-2026-05-21-26.md)
 
+For the source DQI decoder return, screen product pairs in stretches split
+by phase, measurement, and guarded operations. Use the same transported
+output direction and require rank two for the combined polar matrix.
+The static pair upper bound is 51,524 before control and direction checks.
+Price only replacements verified on matched execution. The joint 900-qubit
+allocation needs about 7,529 fewer whole-decoder gates at zero failures.
+[DQI return fusion research](../../../docs/degree35-dqi-return-fusion-research-27-11-2026-05-25-09.md)
+
 ## Verification and delivery
 
 Register a `portfolio-v5` archive with `--at-least-35` after qualifying a full
