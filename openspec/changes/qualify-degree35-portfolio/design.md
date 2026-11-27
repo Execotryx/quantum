@@ -216,6 +216,18 @@ and 13,110 gates. Preserve residual and decoded checks for resource
 candidates and price both loader directions.
 [Exact chemistry bound and v222 comparison](../../../docs/degree35-chemistry-gram-bound-27-11-2026-15-00-55.md)
 
+At the seven-bit, five-word layout, `(9,95,46)` saves 892 fixed gates
+relative to v222. It still needs about 40 fewer ANGLE gates per pass at the
+normalization floor. The 63-row variant has a projected budget at the
+current loader charge. The decoded greedy pruning lanes for 119, 95 and
+63 rows all failed the two-body gate before loader synthesis. A relaxed
+single- and pair-omission screen gives a working-precision ceiling of 40
+omissions in the third group. This excludes the 63-row variant in the
+frozen dictionary and leaves the 95-row case open. Require a decoded
+checkpoint with a basis-selection or basis-change witness before pricing
+any replacement family.
+[Shape budget and pruning receipts](../../../docs/degree35-chemistry-shape-resource-27-11-2026-15-12-36.md)
+
 ## Verification and delivery
 
 Register a `portfolio-v5` archive with `--at-least-35` after qualifying a full

@@ -159,6 +159,9 @@
   physical weight rows together. A physical-weight-only bound allows the
   identity coefficients to change. Keep the decoded projectors and the
   verifier's symmetry constants pinned for score projections.
+- For a chemistry shape budget, reproduce the control with the pinned
+  PREPARE model. Keep the loader charge projection separate from decoded
+  accuracy, and scope greedy pruning evidence to its selected subsets.
 - For DQI pair-fusion screens, transport controls and output directions in
   the same affine frame. End the screen at phase, measurement or guard
   boundaries and distinguish ceilings from emitted savings.

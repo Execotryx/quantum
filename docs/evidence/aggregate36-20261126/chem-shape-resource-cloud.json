@@ -1,0 +1,975 @@
+{
+  "chemistry_limits": {
+    "joint": "230000000",
+    "measured_companions": "212762708.586"
+  },
+  "control_duplicate_inventory": [
+    {
+      "duplicate_active_word_rows": 0,
+      "zero_weight_rows": 0
+    },
+    {
+      "duplicate_active_word_rows": 0,
+      "zero_weight_rows": 0
+    },
+    {
+      "duplicate_active_word_rows": 0,
+      "zero_weight_rows": 0
+    },
+    {
+      "duplicate_active_word_rows": 0,
+      "zero_weight_rows": 0
+    },
+    {
+      "duplicate_active_word_rows": 0,
+      "zero_weight_rows": 0
+    },
+    {
+      "duplicate_active_word_rows": 0,
+      "zero_weight_rows": 0
+    },
+    {
+      "duplicate_active_word_rows": 0,
+      "zero_weight_rows": 0
+    },
+    {
+      "duplicate_active_word_rows": 0,
+      "zero_weight_rows": 0
+    },
+    {
+      "duplicate_active_word_rows": 0,
+      "zero_weight_rows": 0
+    }
+  ],
+  "cost_model_sha256": "7f1e190c42fc5325f3e6689fbbef51f95b0cb12f1c828cda92b6c088e72206da",
+  "driver_sha256": "94dad586316e8b543a4a2c9bb1dcdc374000af6fd33429e9cf65ffdb44ad7dad",
+  "factorization_sha256": "92554e09cf2ce4a1ab86c53b4948f8ece503df972fe3e01824b58bb64361b0e0",
+  "normalization_floor": "46.78617",
+  "resource_rows": [
+    {
+      "angle_family_size": 75,
+      "batch": 1,
+      "brot": 7,
+      "fixed_toffolis": 6500,
+      "heuristic_temporary": 287,
+      "legal_addresses": 1219,
+      "max_loader_temporary_under_cap": 110,
+      "minimum_task_qubits": 377,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3269.870889162513,
+        "measured_companions": 2781.2408261270803
+      },
+      "projected_cost_at_v222_loader_charge": 231239241.6399,
+      "selection_qubits": 11,
+      "shape": [
+        9,
+        127,
+        46
+      ]
+    },
+    {
+      "angle_family_size": 25,
+      "batch": 3,
+      "brot": 7,
+      "fixed_toffolis": 6500,
+      "heuristic_temporary": 287,
+      "legal_addresses": 1219,
+      "max_loader_temporary_under_cap": 96,
+      "minimum_task_qubits": 391,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3036.422826634955,
+        "measured_companions": 2565.2884691813533
+      },
+      "projected_cost_at_v222_loader_charge": 239826375.2817,
+      "selection_qubits": 11,
+      "shape": [
+        9,
+        127,
+        46
+      ]
+    },
+    {
+      "angle_family_size": 15,
+      "batch": 5,
+      "brot": 7,
+      "fixed_toffolis": 6500,
+      "heuristic_temporary": 287,
+      "legal_addresses": 1219,
+      "max_loader_temporary_under_cap": 82,
+      "minimum_task_qubits": 405,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 2819.114383245105,
+        "measured_companions": 2364.266151728171
+      },
+      "projected_cost_at_v222_loader_charge": 248413508.9235,
+      "selection_qubits": 11,
+      "shape": [
+        9,
+        127,
+        46
+      ]
+    },
+    {
+      "angle_family_size": 11,
+      "batch": 7,
+      "brot": 7,
+      "fixed_toffolis": 6500,
+      "heuristic_temporary": 287,
+      "legal_addresses": 1219,
+      "max_loader_temporary_under_cap": 68,
+      "minimum_task_qubits": 419,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 2616.3277451414497,
+        "measured_companions": 2176.677306563029
+      },
+      "projected_cost_at_v222_loader_charge": 257000642.5653,
+      "selection_qubits": 11,
+      "shape": [
+        9,
+        127,
+        46
+      ]
+    },
+    {
+      "angle_family_size": 75,
+      "batch": 1,
+      "brot": 7,
+      "fixed_toffolis": 6024,
+      "heuristic_temporary": 287,
+      "legal_addresses": 1219,
+      "max_loader_temporary_under_cap": 110,
+      "minimum_task_qubits": 377,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3507.870889162513,
+        "measured_companions": 3019.2408261270803
+      },
+      "projected_cost_at_v222_loader_charge": 222843369.86106,
+      "selection_qubits": 11,
+      "shape": [
+        9,
+        127,
+        40
+      ]
+    },
+    {
+      "angle_family_size": 25,
+      "batch": 3,
+      "brot": 7,
+      "fixed_toffolis": 6024,
+      "heuristic_temporary": 287,
+      "legal_addresses": 1219,
+      "max_loader_temporary_under_cap": 96,
+      "minimum_task_qubits": 391,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3274.422826634955,
+        "measured_companions": 2803.2884691813533
+      },
+      "projected_cost_at_v222_loader_charge": 231118720.46598,
+      "selection_qubits": 11,
+      "shape": [
+        9,
+        127,
+        40
+      ]
+    },
+    {
+      "angle_family_size": 15,
+      "batch": 5,
+      "brot": 7,
+      "fixed_toffolis": 6024,
+      "heuristic_temporary": 287,
+      "legal_addresses": 1219,
+      "max_loader_temporary_under_cap": 82,
+      "minimum_task_qubits": 405,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3057.114383245105,
+        "measured_companions": 2602.266151728171
+      },
+      "projected_cost_at_v222_loader_charge": 239394071.0709,
+      "selection_qubits": 11,
+      "shape": [
+        9,
+        127,
+        40
+      ]
+    },
+    {
+      "angle_family_size": 11,
+      "batch": 7,
+      "brot": 7,
+      "fixed_toffolis": 6024,
+      "heuristic_temporary": 287,
+      "legal_addresses": 1219,
+      "max_loader_temporary_under_cap": 68,
+      "minimum_task_qubits": 419,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 2854.3277451414497,
+        "measured_companions": 2414.677306563029
+      },
+      "projected_cost_at_v222_loader_charge": 247669421.67582,
+      "selection_qubits": 11,
+      "shape": [
+        9,
+        127,
+        40
+      ]
+    },
+    {
+      "angle_family_size": 75,
+      "batch": 1,
+      "brot": 7,
+      "fixed_toffolis": 6484,
+      "heuristic_temporary": 287,
+      "legal_addresses": 1147,
+      "max_loader_temporary_under_cap": 110,
+      "minimum_task_qubits": 377,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3277.870889162513,
+        "measured_companions": 2789.2408261270803
+      },
+      "projected_cost_at_v222_loader_charge": 230957027.46246,
+      "selection_qubits": 11,
+      "shape": [
+        9,
+        119,
+        46
+      ]
+    },
+    {
+      "angle_family_size": 25,
+      "batch": 3,
+      "brot": 7,
+      "fixed_toffolis": 6484,
+      "heuristic_temporary": 287,
+      "legal_addresses": 1147,
+      "max_loader_temporary_under_cap": 96,
+      "minimum_task_qubits": 391,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3044.422826634955,
+        "measured_companions": 2573.2884691813533
+      },
+      "projected_cost_at_v222_loader_charge": 239533681.00218,
+      "selection_qubits": 11,
+      "shape": [
+        9,
+        119,
+        46
+      ]
+    },
+    {
+      "angle_family_size": 15,
+      "batch": 5,
+      "brot": 7,
+      "fixed_toffolis": 6484,
+      "heuristic_temporary": 287,
+      "legal_addresses": 1147,
+      "max_loader_temporary_under_cap": 82,
+      "minimum_task_qubits": 405,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 2827.114383245105,
+        "measured_companions": 2372.266151728171
+      },
+      "projected_cost_at_v222_loader_charge": 248110334.5419,
+      "selection_qubits": 11,
+      "shape": [
+        9,
+        119,
+        46
+      ]
+    },
+    {
+      "angle_family_size": 11,
+      "batch": 7,
+      "brot": 7,
+      "fixed_toffolis": 6484,
+      "heuristic_temporary": 287,
+      "legal_addresses": 1147,
+      "max_loader_temporary_under_cap": 68,
+      "minimum_task_qubits": 419,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 2624.3277451414497,
+        "measured_companions": 2184.677306563029
+      },
+      "projected_cost_at_v222_loader_charge": 256686988.08162,
+      "selection_qubits": 11,
+      "shape": [
+        9,
+        119,
+        46
+      ]
+    },
+    {
+      "angle_family_size": 75,
+      "batch": 1,
+      "brot": 7,
+      "fixed_toffolis": 6024,
+      "heuristic_temporary": 287,
+      "legal_addresses": 940,
+      "max_loader_temporary_under_cap": 111,
+      "minimum_task_qubits": 377,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3507.870889162513,
+        "measured_companions": 3019.2408261270803
+      },
+      "projected_cost_at_v222_loader_charge": 222843369.86106,
+      "selection_qubits": 10,
+      "shape": [
+        9,
+        96,
+        46
+      ]
+    },
+    {
+      "angle_family_size": 25,
+      "batch": 3,
+      "brot": 7,
+      "fixed_toffolis": 6024,
+      "heuristic_temporary": 287,
+      "legal_addresses": 940,
+      "max_loader_temporary_under_cap": 97,
+      "minimum_task_qubits": 391,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3274.422826634955,
+        "measured_companions": 2803.2884691813533
+      },
+      "projected_cost_at_v222_loader_charge": 231118720.46598,
+      "selection_qubits": 10,
+      "shape": [
+        9,
+        96,
+        46
+      ]
+    },
+    {
+      "angle_family_size": 15,
+      "batch": 5,
+      "brot": 7,
+      "fixed_toffolis": 6024,
+      "heuristic_temporary": 287,
+      "legal_addresses": 940,
+      "max_loader_temporary_under_cap": 83,
+      "minimum_task_qubits": 405,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3057.114383245105,
+        "measured_companions": 2602.266151728171
+      },
+      "projected_cost_at_v222_loader_charge": 239394071.0709,
+      "selection_qubits": 10,
+      "shape": [
+        9,
+        96,
+        46
+      ]
+    },
+    {
+      "angle_family_size": 11,
+      "batch": 7,
+      "brot": 7,
+      "fixed_toffolis": 6024,
+      "heuristic_temporary": 287,
+      "legal_addresses": 940,
+      "max_loader_temporary_under_cap": 69,
+      "minimum_task_qubits": 419,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 2854.3277451414497,
+        "measured_companions": 2414.677306563029
+      },
+      "projected_cost_at_v222_loader_charge": 247669421.67582,
+      "selection_qubits": 10,
+      "shape": [
+        9,
+        96,
+        46
+      ]
+    },
+    {
+      "angle_family_size": 75,
+      "batch": 1,
+      "brot": 7,
+      "fixed_toffolis": 5608,
+      "heuristic_temporary": 287,
+      "legal_addresses": 931,
+      "max_loader_temporary_under_cap": 111,
+      "minimum_task_qubits": 377,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3715.870889162513,
+        "measured_companions": 3227.2408261270803
+      },
+      "projected_cost_at_v222_loader_charge": 215505801.24762,
+      "selection_qubits": 10,
+      "shape": [
+        9,
+        95,
+        46
+      ]
+    },
+    {
+      "angle_family_size": 25,
+      "batch": 3,
+      "brot": 7,
+      "fixed_toffolis": 5608,
+      "heuristic_temporary": 287,
+      "legal_addresses": 931,
+      "max_loader_temporary_under_cap": 97,
+      "minimum_task_qubits": 391,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3482.422826634955,
+        "measured_companions": 3011.2884691813533
+      },
+      "projected_cost_at_v222_loader_charge": 223508669.19846,
+      "selection_qubits": 10,
+      "shape": [
+        9,
+        95,
+        46
+      ]
+    },
+    {
+      "angle_family_size": 15,
+      "batch": 5,
+      "brot": 7,
+      "fixed_toffolis": 5608,
+      "heuristic_temporary": 287,
+      "legal_addresses": 931,
+      "max_loader_temporary_under_cap": 83,
+      "minimum_task_qubits": 405,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3265.114383245105,
+        "measured_companions": 2810.266151728171
+      },
+      "projected_cost_at_v222_loader_charge": 231511537.1493,
+      "selection_qubits": 10,
+      "shape": [
+        9,
+        95,
+        46
+      ]
+    },
+    {
+      "angle_family_size": 11,
+      "batch": 7,
+      "brot": 7,
+      "fixed_toffolis": 5608,
+      "heuristic_temporary": 287,
+      "legal_addresses": 931,
+      "max_loader_temporary_under_cap": 69,
+      "minimum_task_qubits": 419,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3062.3277451414497,
+        "measured_companions": 2622.677306563029
+      },
+      "projected_cost_at_v222_loader_charge": 239514405.10014,
+      "selection_qubits": 10,
+      "shape": [
+        9,
+        95,
+        46
+      ]
+    },
+    {
+      "angle_family_size": 75,
+      "batch": 1,
+      "brot": 7,
+      "fixed_toffolis": 4691,
+      "heuristic_temporary": 270,
+      "legal_addresses": 643,
+      "max_loader_temporary_under_cap": 111,
+      "minimum_task_qubits": 358,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 4520.397556464434,
+        "measured_companions": 4005.834612988573
+      },
+      "projected_cost_at_v222_loader_charge": 189285521.56686,
+      "selection_qubits": 10,
+      "shape": [
+        9,
+        63,
+        46
+      ]
+    },
+    {
+      "angle_family_size": 25,
+      "batch": 3,
+      "brot": 7,
+      "fixed_toffolis": 4691,
+      "heuristic_temporary": 270,
+      "legal_addresses": 643,
+      "max_loader_temporary_under_cap": 97,
+      "minimum_task_qubits": 372,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 4262.003562403945,
+        "measured_companions": 3766.8058909943798
+      },
+      "projected_cost_at_v222_loader_charge": 196687748.66724,
+      "selection_qubits": 10,
+      "shape": [
+        9,
+        63,
+        46
+      ]
+    },
+    {
+      "angle_family_size": 15,
+      "batch": 5,
+      "brot": 7,
+      "fixed_toffolis": 4691,
+      "heuristic_temporary": 270,
+      "legal_addresses": 643,
+      "max_loader_temporary_under_cap": 83,
+      "minimum_task_qubits": 386,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 4022.3531741302263,
+        "measured_companions": 3545.1160400256717
+      },
+      "projected_cost_at_v222_loader_charge": 204089975.76762,
+      "selection_qubits": 10,
+      "shape": [
+        9,
+        63,
+        46
+      ]
+    },
+    {
+      "angle_family_size": 11,
+      "batch": 7,
+      "brot": 7,
+      "fixed_toffolis": 4691,
+      "heuristic_temporary": 270,
+      "legal_addresses": 643,
+      "max_loader_temporary_under_cap": 69,
+      "minimum_task_qubits": 400,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3799.4783130356686,
+        "measured_companions": 3338.944478624773
+      },
+      "projected_cost_at_v222_loader_charge": 211492202.868,
+      "selection_qubits": 10,
+      "shape": [
+        9,
+        63,
+        46
+      ]
+    },
+    {
+      "angle_family_size": 75,
+      "batch": 1,
+      "brot": 7,
+      "fixed_toffolis": 5812,
+      "heuristic_temporary": 287,
+      "legal_addresses": 1092,
+      "max_loader_temporary_under_cap": 110,
+      "minimum_task_qubits": 376,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3631.210971314541,
+        "measured_companions": 3141.28136023912
+      },
+      "projected_cost_at_v222_loader_charge": 218522854.20624,
+      "selection_qubits": 11,
+      "shape": [
+        8,
+        127,
+        42
+      ]
+    },
+    {
+      "angle_family_size": 25,
+      "batch": 3,
+      "brot": 7,
+      "fixed_toffolis": 5812,
+      "heuristic_temporary": 287,
+      "legal_addresses": 1092,
+      "max_loader_temporary_under_cap": 96,
+      "minimum_task_qubits": 390,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3396.5418595237625,
+        "measured_companions": 2924.1994652561775
+      },
+      "projected_cost_at_v222_loader_charge": 226659343.4586,
+      "selection_qubits": 11,
+      "shape": [
+        8,
+        127,
+        42
+      ]
+    },
+    {
+      "angle_family_size": 15,
+      "batch": 5,
+      "brot": 7,
+      "fixed_toffolis": 5812,
+      "heuristic_temporary": 287,
+      "legal_addresses": 1092,
+      "max_loader_temporary_under_cap": 82,
+      "minimum_task_qubits": 404,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3178.1369435996717,
+        "measured_companions": 2722.1628501235377
+      },
+      "projected_cost_at_v222_loader_charge": 234795832.71096,
+      "selection_qubits": 11,
+      "shape": [
+        8,
+        127,
+        42
+      ]
+    },
+    {
+      "angle_family_size": 11,
+      "batch": 7,
+      "brot": 7,
+      "fixed_toffolis": 5812,
+      "heuristic_temporary": 287,
+      "legal_addresses": 1092,
+      "max_loader_temporary_under_cap": 68,
+      "minimum_task_qubits": 418,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 2974.362022043702,
+        "measured_companions": 2533.6597881576777
+      },
+      "projected_cost_at_v222_loader_charge": 242932321.96332,
+      "selection_qubits": 11,
+      "shape": [
+        8,
+        127,
+        42
+      ]
+    },
+    {
+      "angle_family_size": 75,
+      "batch": 1,
+      "brot": 7,
+      "fixed_toffolis": 5657,
+      "heuristic_temporary": 287,
+      "legal_addresses": 1036,
+      "max_loader_temporary_under_cap": 110,
+      "minimum_task_qubits": 376,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3708.710971314541,
+        "measured_companions": 3218.78136023912
+      },
+      "projected_cost_at_v222_loader_charge": 215796156.21864,
+      "selection_qubits": 11,
+      "shape": [
+        8,
+        120,
+        40
+      ]
+    },
+    {
+      "angle_family_size": 25,
+      "batch": 3,
+      "brot": 7,
+      "fixed_toffolis": 5657,
+      "heuristic_temporary": 287,
+      "legal_addresses": 1036,
+      "max_loader_temporary_under_cap": 96,
+      "minimum_task_qubits": 390,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3474.0418595237625,
+        "measured_companions": 3001.6994652561775
+      },
+      "projected_cost_at_v222_loader_charge": 223831119.4821,
+      "selection_qubits": 11,
+      "shape": [
+        8,
+        120,
+        40
+      ]
+    },
+    {
+      "angle_family_size": 15,
+      "batch": 5,
+      "brot": 7,
+      "fixed_toffolis": 5657,
+      "heuristic_temporary": 287,
+      "legal_addresses": 1036,
+      "max_loader_temporary_under_cap": 82,
+      "minimum_task_qubits": 404,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3255.6369435996717,
+        "measured_companions": 2799.6628501235377
+      },
+      "projected_cost_at_v222_loader_charge": 231866082.74556,
+      "selection_qubits": 11,
+      "shape": [
+        8,
+        120,
+        40
+      ]
+    },
+    {
+      "angle_family_size": 11,
+      "batch": 7,
+      "brot": 7,
+      "fixed_toffolis": 5657,
+      "heuristic_temporary": 287,
+      "legal_addresses": 1036,
+      "max_loader_temporary_under_cap": 68,
+      "minimum_task_qubits": 418,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3051.862022043702,
+        "measured_companions": 2611.1597881576777
+      },
+      "projected_cost_at_v222_loader_charge": 239901046.00902,
+      "selection_qubits": 11,
+      "shape": [
+        8,
+        120,
+        40
+      ]
+    },
+    {
+      "angle_family_size": 75,
+      "batch": 1,
+      "brot": 7,
+      "fixed_toffolis": 6441,
+      "heuristic_temporary": 303,
+      "legal_addresses": 1363,
+      "max_loader_temporary_under_cap": 110,
+      "minimum_task_qubits": 395,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3002.2628486437147,
+        "measured_companions": 2535.8994720250867
+      },
+      "projected_cost_at_v222_loader_charge": 241189490.34465,
+      "selection_qubits": 11,
+      "shape": [
+        9,
+        143,
+        40
+      ]
+    },
+    {
+      "angle_family_size": 25,
+      "batch": 3,
+      "brot": 7,
+      "fixed_toffolis": 6441,
+      "heuristic_temporary": 303,
+      "legal_addresses": 1363,
+      "max_loader_temporary_under_cap": 96,
+      "minimum_task_qubits": 409,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 2789.258741355177,
+        "measured_companions": 2338.8589033005114
+      },
+      "projected_cost_at_v222_loader_charge": 249737978.61003,
+      "selection_qubits": 11,
+      "shape": [
+        9,
+        143,
+        40
+      ]
+    },
+    {
+      "angle_family_size": 15,
+      "batch": 5,
+      "brot": 7,
+      "fixed_toffolis": 6441,
+      "heuristic_temporary": 303,
+      "legal_addresses": 1363,
+      "max_loader_temporary_under_cap": 82,
+      "minimum_task_qubits": 423,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 2590.3541967240362,
+        "measured_companions": 2154.86120910144
+      },
+      "projected_cost_at_v222_loader_charge": 258286466.87541,
+      "selection_qubits": 11,
+      "shape": [
+        9,
+        143,
+        40
+      ]
+    },
+    {
+      "angle_family_size": 11,
+      "batch": 7,
+      "brot": 7,
+      "fixed_toffolis": 6441,
+      "heuristic_temporary": 303,
+      "legal_addresses": 1363,
+      "max_loader_temporary_under_cap": 68,
+      "minimum_task_qubits": 437,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 2404.194108041802,
+        "measured_companions": 1982.6528408464742
+      },
+      "projected_cost_at_v222_loader_charge": 266834955.14079,
+      "selection_qubits": 11,
+      "shape": [
+        9,
+        143,
+        40
+      ]
+    },
+    {
+      "angle_family_size": 75,
+      "batch": 1,
+      "brot": 7,
+      "fixed_toffolis": 6413,
+      "heuristic_temporary": 303,
+      "legal_addresses": 1237,
+      "max_loader_temporary_under_cap": 110,
+      "minimum_task_qubits": 395,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 3016.2628486437147,
+        "measured_companions": 2549.8994720250867
+      },
+      "projected_cost_at_v222_loader_charge": 240672035.30445,
+      "selection_qubits": 11,
+      "shape": [
+        9,
+        129,
+        40
+      ]
+    },
+    {
+      "angle_family_size": 25,
+      "batch": 3,
+      "brot": 7,
+      "fixed_toffolis": 6413,
+      "heuristic_temporary": 303,
+      "legal_addresses": 1237,
+      "max_loader_temporary_under_cap": 96,
+      "minimum_task_qubits": 409,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 2803.258741355177,
+        "measured_companions": 2352.8589033005114
+      },
+      "projected_cost_at_v222_loader_charge": 249202183.39119,
+      "selection_qubits": 11,
+      "shape": [
+        9,
+        129,
+        40
+      ]
+    },
+    {
+      "angle_family_size": 15,
+      "batch": 5,
+      "brot": 7,
+      "fixed_toffolis": 6413,
+      "heuristic_temporary": 303,
+      "legal_addresses": 1237,
+      "max_loader_temporary_under_cap": 82,
+      "minimum_task_qubits": 423,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 2604.3541967240362,
+        "measured_companions": 2168.86120910144
+      },
+      "projected_cost_at_v222_loader_charge": 257732331.47793,
+      "selection_qubits": 11,
+      "shape": [
+        9,
+        129,
+        40
+      ]
+    },
+    {
+      "angle_family_size": 11,
+      "batch": 7,
+      "brot": 7,
+      "fixed_toffolis": 6413,
+      "heuristic_temporary": 303,
+      "legal_addresses": 1237,
+      "max_loader_temporary_under_cap": 68,
+      "minimum_task_qubits": 437,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 2418.194108041802,
+        "measured_companions": 1996.6528408464742
+      },
+      "projected_cost_at_v222_loader_charge": 266262479.56467,
+      "selection_qubits": 11,
+      "shape": [
+        9,
+        129,
+        40
+      ]
+    },
+    {
+      "angle_family_size": 75,
+      "batch": 1,
+      "brot": 7,
+      "fixed_toffolis": 6805,
+      "heuristic_temporary": 303,
+      "legal_addresses": 1366,
+      "max_loader_temporary_under_cap": 110,
+      "minimum_task_qubits": 395,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 2820.2628486437147,
+        "measured_companions": 2353.8994720250867
+      },
+      "projected_cost_at_v222_loader_charge": 247916405.86725,
+      "selection_qubits": 11,
+      "shape": [
+        10,
+        129,
+        40
+      ]
+    },
+    {
+      "angle_family_size": 25,
+      "batch": 3,
+      "brot": 7,
+      "fixed_toffolis": 6805,
+      "heuristic_temporary": 303,
+      "legal_addresses": 1366,
+      "max_loader_temporary_under_cap": 96,
+      "minimum_task_qubits": 409,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 2607.258741355177,
+        "measured_companions": 2156.8589033005114
+      },
+      "projected_cost_at_v222_loader_charge": 256703316.45495,
+      "selection_qubits": 11,
+      "shape": [
+        10,
+        129,
+        40
+      ]
+    },
+    {
+      "angle_family_size": 15,
+      "batch": 5,
+      "brot": 7,
+      "fixed_toffolis": 6805,
+      "heuristic_temporary": 303,
+      "legal_addresses": 1366,
+      "max_loader_temporary_under_cap": 82,
+      "minimum_task_qubits": 423,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 2408.3541967240362,
+        "measured_companions": 1972.8612091014402
+      },
+      "projected_cost_at_v222_loader_charge": 265490227.04265,
+      "selection_qubits": 11,
+      "shape": [
+        10,
+        129,
+        40
+      ]
+    },
+    {
+      "angle_family_size": 11,
+      "batch": 7,
+      "brot": 7,
+      "fixed_toffolis": 6805,
+      "heuristic_temporary": 303,
+      "legal_addresses": 1366,
+      "max_loader_temporary_under_cap": 68,
+      "minimum_task_qubits": 437,
+      "optimistic_angle_toffolis_per_pass": {
+        "joint": 2222.194108041802,
+        "measured_companions": 1800.6528408464742
+      },
+      "projected_cost_at_v222_loader_charge": 274277137.63035,
+      "selection_qubits": 11,
+      "shape": [
+        10,
+        129,
+        40
+      ]
+    }
+  ],
+  "scope": "optimistic PREPARE and ANGLE budget, plus exact zero-weight or identical-word inventory"
+}

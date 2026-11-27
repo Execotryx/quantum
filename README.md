@@ -345,6 +345,11 @@ arithmetic caps the normalization savings from channel rotations at about
 **16,794** in chemistry cost at its current layout.
 [Chemistry comparison and bound](docs/degree35-chemistry-gram-bound-27-11-2026-15-00-55.md)
 
+The cloud resource screen identifies a 416-gate PREPARE step at 95 basis
+rows per chemistry group. The fixed-dictionary pruning trial reached
+**0.72864 Ha** there against the **0.020 Ha** two-body limit.
+[Shape budgets and decoded results](docs/degree35-chemistry-shape-resource-27-11-2026-15-12-36.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

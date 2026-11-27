@@ -286,6 +286,8 @@ See `docs/baseline-campaign-02-11-2026-01-19-10.md` for measurement definitions.
   rewrite only with its outcome map and original guard and bit-write order.
 - Chemistry Gram bounds keep the orbital projectors fixed. Use the augmented
   Gram for gap invariance and the physical Gram for arbitrary offset screens.
+- Reprice chemistry shapes at the pinned resource discontinuities. Test
+  pruned decoded subsets before using them for loader synthesis.
 - Hold terminal loader products fixed when interpreting relaxed deletion
   feasibility. A changed control or cache requires a new emitted comparison.
 - Treat DQI affine transport counts as bounds on the screened stretches.
