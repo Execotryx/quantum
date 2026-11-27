@@ -280,3 +280,5 @@ See `docs/baseline-campaign-02-11-2026-01-19-10.md` for measurement definitions.
 - In the inverse-square-root affine routing screen, confirm sampled hits on
   every legal input before the first measurement-guarded value operation.
   Exclude target wires from controls except for the preserved swap parity.
+- When choosing new words for zero-valued Givens rotations, propagate exact
+  support in tree order and use emitted loader counts for resource comparisons.

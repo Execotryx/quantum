@@ -319,6 +319,12 @@ The original seven-bit table compiled into eight ten-word loaders, priced
 at **342.497M** from static counts versus the verified **249.132M** control.
 [Precision, loader width, and score-35 margin](docs/degree35-chemistry-precision-and-joint-margin-27-11-2026-05-00-22.md)
 
+The cloud screen found **2,400** freely assignable seven-bit Givens words.
+All three tested assignments preserved decoded accuracy. The best toggle
+reduction was **2.64%**, and the same assignment increased the mixed-rank
+proxy from **5,805** to **6,741**.
+[Zero-angle loader research](docs/degree35-zero-angle-loader-research-27-11-2026-05-12-36.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

@@ -149,6 +149,15 @@ pricing affected transitions. For the 884-qubit DQI projection at the
 reported companion targets, one failure already reduces the score below 35.
 [Cloud precision and loader screens](../../../docs/degree35-chemistry-precision-and-joint-margin-27-11-2026-05-00-22.md)
 
+The cloud zero-angle screen finds 2,400 free words and preserves decoded
+accuracy in three assignments. The original has lower mixed rank in the
+aggregate. For the final five-word packet, screen deletion of an emitted
+product by solving the constrained output truth columns over GF(2) with
+the cache and carrier endpoints fixed. A feasible deletion needs native
+replay and a lower cost than the corresponding v221 slot. An interior
+packet must price the two transitions sharing its changed word table.
+[Zero-angle research and exact deletion design](../../../docs/degree35-zero-angle-loader-research-27-11-2026-05-12-36.md)
+
 ## Verification and delivery
 
 Register a `portfolio-v5` archive with `--at-least-35` after qualifying a full

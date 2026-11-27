@@ -149,6 +149,9 @@
 - A chemistry angle gauge may change quantized words when the ordered Givens
   tree preserves each prepared projector. Propagate signs backward through
   quarter turns and check the decoded residuals, gap and native gate cost.
+- An unused Givens angle arises when the parent is exactly zero and the
+  ordered tree has yet to visit the child. Check the decoded vector and both
+  loader endpoints after assigning new words to those cells.
 - Symbolic liveness may release a wire when it proves zero across all
   measurement outcomes. Fix the first and last intervals of named input
   wires. ANGLE product substitutions must agree on both complete legal
