@@ -173,6 +173,13 @@ Price only replacements verified on matched execution. The joint 900-qubit
 allocation needs about 7,529 fewer whole-decoder gates at zero failures.
 [DQI return fusion research](../../../docs/degree35-dqi-return-fusion-research-27-11-2026-05-25-09.md)
 
+The cloud replay tightens the same-direction ceiling to 135 pairs and the
+compatible pair ceiling to zero. Equal control planes on different output
+directions also give zero pairs. Repeated-direction groups contain at most
+405 CCXs under these boundaries. Continue at a larger structural boundary
+with a phase proof or choose a different arithmetic construction.
+[Cloud affine transport screen](../../../docs/degree35-dqi-return-fusion-screen-27-11-2026-05-32-47.md)
+
 ## Verification and delivery
 
 Register a `portfolio-v5` archive with `--at-least-35` after qualifying a full

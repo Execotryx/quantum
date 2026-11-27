@@ -155,6 +155,9 @@
 - A frozen terminal loader dictionary protects products seen by later gates,
   phase repairs or non-word wires. Free high- and low-address corrections
   relax the feasibility test and give no emitted saving on their own.
+- For DQI pair-fusion screens, transport controls and output directions in
+  the same affine frame. End the screen at phase, measurement or guard
+  boundaries and distinguish ceilings from emitted savings.
 - Symbolic liveness may release a wire when it proves zero across all
   measurement outcomes. Fix the first and last intervals of named input
   wires. ANGLE product substitutions must agree on both complete legal

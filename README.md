@@ -329,6 +329,10 @@ An exact cloud screen of the 206-gate terminal loader found all **124**
 independent products necessary with their truth functions and cache frozen.
 [Terminal product-deletion screen](docs/degree35-terminal-loader-deletion-27-11-2026-05-21-26.md)
 
+The cloud DQI return screen found zero compatible pair fusions across
+**107,045** unconditional Toffolis within the tested phase and measurement
+boundaries. [Affine transport screen](docs/degree35-dqi-return-fusion-screen-27-11-2026-05-32-47.md)
+
 [Research index and branch audit](docs/research-and-branch-audit-26-11-2026-03-03-28.md)
 
 The v8.0 archive scored **2.6228156034** in both the full metric and fresh

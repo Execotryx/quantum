@@ -1,0 +1,15 @@
+{
+  "adjacent_fusible_pairs": 0,
+  "adjacent_gate_savings": 0,
+  "combined_gate_savings_ceiling": 0,
+  "different_direction_equal_plane_pair_ceiling": 0,
+  "disjoint_adjacent_fusions": 0,
+  "driver_sha256": "2a4f42b91c16b58523eeea40f2fc825785e4b7e97413690a54d6d4398e0de5f5",
+  "extra_savings_from_equal_planes_ceiling": 0,
+  "same_direction_pair_ceiling": 135,
+  "same_direction_rank_pair_ceiling": 0,
+  "scope": "static bounds and adjacent algebraic opportunities; no emitted circuit",
+  "source_sha256": "b2da55202f6b574ee9af452f25f34772c2a0e90bfc5ce102129c0861faaf1fcf",
+  "unconditional_ccx": 107045,
+  "unrestricted_pair_ceiling": 51524
+}
