@@ -158,6 +158,13 @@ replay and a lower cost than the corresponding v221 slot. An interior
 packet must price the two transitions sharing its changed word table.
 [Zero-angle research and exact deletion design](../../../docs/degree35-zero-angle-loader-research-27-11-2026-05-12-36.md)
 
+The completed terminal-slot cloud screen finds all 124 independent
+products indispensable under the frozen product dictionary, including
+when arbitrary pure high- and low-address corrections are allowed.
+Any follow-up loader candidate needs new product controls or a new cache
+or packet layout and separate native pricing.
+[Exact terminal deletion result](../../../docs/degree35-terminal-loader-deletion-27-11-2026-05-21-26.md)
+
 ## Verification and delivery
 
 Register a `portfolio-v5` archive with `--at-least-35` after qualifying a full

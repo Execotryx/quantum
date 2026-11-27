@@ -152,6 +152,9 @@
 - An unused Givens angle arises when the parent is exactly zero and the
   ordered tree has yet to visit the child. Check the decoded vector and both
   loader endpoints after assigning new words to those cells.
+- A frozen terminal loader dictionary protects products seen by later gates,
+  phase repairs or non-word wires. Free high- and low-address corrections
+  relax the feasibility test and give no emitted saving on their own.
 - Symbolic liveness may release a wire when it proves zero across all
   measurement outcomes. Fix the first and last intervals of named input
   wires. ANGLE product substitutions must agree on both complete legal

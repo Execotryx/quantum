@@ -1,0 +1,16 @@
+{
+  "addresses": 1219,
+  "assembly_sha256": "e2a384b6d45239be17d363a7050a49f1a5a4ae241705eaa4b69f6f09059dfde6",
+  "charged_products": 206,
+  "driver_sha256": "341069d64f21c1c11b4ab4b98476c35578b9f8861738e6cb0d344ab0a0655edd",
+  "factorization_sha256": "25cab2c621e78711480aa975f42a8386414f1f2e1466c3d1f01d5be3e31cae20",
+  "free_words": 285,
+  "independent_products": 124,
+  "indispensable_independent_products": 124,
+  "products_with_equal_endpoint_functions": 124,
+  "protected_products": 82,
+  "pure_address_indicators": 93,
+  "relaxed_deletion_lines": [],
+  "scope": "forward relaxed deletion feasibility; frozen product controls and cache",
+  "slot": 14
+}
